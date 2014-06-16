@@ -1,0 +1,23 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            botbotbot
+tagline:          "'s blog"
+description:      "botbotbot's blog"
+url:              http://lanyon.getpoole.com
+paginate:         5
+
+author:
+  name:           botbotbot
+  url:            http://ibotdotout.github.io
+
+# Custom vars
+version:          0.0.1
+
+github:
+  repo:           https://github.com/ibotdotout
