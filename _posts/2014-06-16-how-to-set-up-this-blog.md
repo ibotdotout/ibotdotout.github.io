@@ -2,7 +2,7 @@
 layout: post
 title: How to set up this blog
 #permalink: "hello-world"
-tags: [Jekyll]
+tags: [jekyll]
 ---
 
 This blog created by [Jekyll](http://jekyllrb.com) that is ruby scripts to transforms plain text into static html website and blogs and hosted on [Github
