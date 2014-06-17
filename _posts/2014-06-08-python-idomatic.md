@@ -20,4 +20,5 @@ If you wanna be Pythonic try to look at this references.
 4. [Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 5. [PEP8](http://legacy.python.org/dev/peps/pep-0008/)
 6. [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/)
+7. [Python Koans](http://github.com/gregmalcolm/python_koans)
 
