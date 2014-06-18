@@ -12,6 +12,10 @@ If you wanna be Pythonic try to look at this references.
   ```sh
   python -m unittest discover <tests_module>
   ```
+* Zen of Python :: run this command in python console
+  ```python
+  import this
+  ```
 
 ## Reference:
 1. [What is Pythonic?](http://blog.startifact.com/posts/older/what-is-pythonic.html)
