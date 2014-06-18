@@ -3,5 +3,8 @@ layout: page
 title: About
 ---
 
-Hi, I'm botbotbot.
-See my github on [http://github/ibotdotout](http://github.com/ibotdotout).
+Hi, I'm botbotbot.  
+
+### Profiles:
+* [My Github](http://github.com/ibotdotout)  
+* [My HackerRank](https://www.hackerrank.com/ibotdotout)  
