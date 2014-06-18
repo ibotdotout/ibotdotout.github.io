@@ -13,6 +13,7 @@ If you wanna be Pythonic try to look at this references.
   python -m unittest discover <tests_module>
   ```
 * Zen of Python :: run this command in python console
+
   ```python
   import this
   ```
