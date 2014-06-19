@@ -27,4 +27,5 @@ If you wanna be Pythonic try to look at this references.
 6. [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/)
 7. [Python Koans](http://github.com/gregmalcolm/python_koans)
 8. [Python Patterns](https://github.com/faif/python-patterns)
+9. [New Coder Python](http://newcoder.io)
 
