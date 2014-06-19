@@ -2,7 +2,7 @@
 layout: post
 title: "Idiomatic Python"
 tags: python
-permanantlnk: python
+permalink: python
 ---
 
 If you wanna be Pythonic try to look at this references.
