@@ -18,6 +18,11 @@ If you wanna be Pythonic try to look at this references.
   ```python
   import this
   ```
+* Virtualenv with system package
+
+  ```sh
+   virtualenv --system-site-packages <env_name>
+  ```
 
 ## Reference:
 1. [What is Pythonic?](http://blog.startifact.com/posts/older/what-is-pythonic.html)
