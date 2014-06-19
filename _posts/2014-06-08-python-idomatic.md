@@ -26,6 +26,7 @@ If you wanna be Pythonic try to look at this references.
 5. [PEP8](http://legacy.python.org/dev/peps/pep-0008/)
 6. [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/)
 7. [Python Koans](http://github.com/gregmalcolm/python_koans)
+
 ## Reading:
 8. [Python Patterns](https://github.com/faif/python-patterns)
 9. [New Coder Python](http://newcoder.io)
