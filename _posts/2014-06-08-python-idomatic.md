@@ -23,6 +23,41 @@ If you wanna be Pythonic try to look at this references.
   ```sh
    virtualenv --system-site-packages <env_name>
   ```
+## Tools:
+* Unittests: [Nosetests](https://nose.readthedocs.org), [Rednose](https://pypi.python.org/pypi/rednose), [Coverage](https://pypi.python.org/pypi/coverage)
+
+  ```sh
+  pip install nose rednose coverage
+  ```
+* [Virtualenv](http://virtualenv.readthedocs.org)
+
+  ```sh
+  pip install virtualenv
+  ```
+
+  Or
+
+  ```sh
+  brew install pyenv-virtualenv
+  ```
+* [VirtualenvWrapper](http://virtualenvwrapper.readthedocs.org)
+
+  ```sh
+  pip install virtualenvwrapper
+  ```
+  add this into your .bashrc/.zshrc
+
+  ```sh
+  export WORKON_HOME=<env_path>
+  source /usr/local/bin/virtualenvwrapper.sh
+  ```
+* [Observr (Ruby)](https://github.com/kevinburke/observr)  
+  For OS X
+
+  ```sh
+  gem install observr
+  gem install ruby-fsevent
+  ```
 
 ## Reference:
 1. [What is Pythonic?](http://blog.startifact.com/posts/older/what-is-pythonic.html)
