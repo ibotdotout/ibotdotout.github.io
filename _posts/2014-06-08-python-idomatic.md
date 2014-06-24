@@ -23,6 +23,17 @@ If you wanna be Pythonic try to look at this references.
   ```sh
    virtualenv --system-site-packages <env_name>
   ```
+* Install py package into python2
+
+  ```sh
+  pip install <package>
+  ```
+* Install py package into python3
+
+  ```sh
+  pip3 install <package>
+  ```
+
 ## Tools:
 * Unittests: [Nosetests](https://nose.readthedocs.org), [Rednose](https://pypi.python.org/pypi/rednose), [Coverage](https://pypi.python.org/pypi/coverage)
 
