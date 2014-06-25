@@ -8,6 +8,14 @@ permalink: python
 If you wanna be Pythonic try to look at this references.
 
 ### Tips:
+* Flattened list of list
+
+  ```python
+  >>> l = [[1,5,6], [4,5,9,7] ,[] ,[] ,[9]]
+  [[1, 5, 6], [4, 5, 9, 7], [], [], [9]]
+  >>> sum(l, [])
+  [1, 5, 6, 4, 5, 9, 7, 9]
+  ```
 * Run All untidiest in folder:
 
   ```sh
