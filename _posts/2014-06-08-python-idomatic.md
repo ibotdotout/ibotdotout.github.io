@@ -8,7 +8,7 @@ permalink: python
 If you wanna be Pythonic try to look at this references.
 
 ### Tips:
-* Run All untidiest in folder:  
+* Run All untidiest in folder:
 
   ```sh
   python -m unittest discover <tests_module>
@@ -23,6 +23,18 @@ If you wanna be Pythonic try to look at this references.
   ```sh
    virtualenv --system-site-packages <env_name>
   ```
+* Virtualenv with python3
+
+  ```sh
+  virtualenv --python=/usr/bin/python3 <env_name>
+  ```
+* Virtualenv can't move. You must edit environment path in
+
+  ```sh
+  <your_env>/bin/activate
+  <your_env>/bin/activate.csh
+  <your_env>/bin/activate.finsh
+  ```
 * Install py package into python2
 
   ```sh
@@ -32,6 +44,13 @@ If you wanna be Pythonic try to look at this references.
 
   ```sh
   pip3 install <package>
+  ```
+* Run nosetests with python3.  
+  Install nose into python3 package with pip3 then you can run nosetests with python3 via nosetests-3.x ex. nosetests-3.4 if your python3 is version 3.4
+
+  ```sh
+  pip3 install nose
+  nosetests-3.x
   ```
 
 ## Tools:
