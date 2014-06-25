@@ -45,6 +45,19 @@ If you wanna be Pythonic try to look at this references.
   ```sh
   pip3 install <package>
   ```
+* Pip upgrade
+
+  ```sh
+  pip install <package> --upgrade
+  ```
+
+  or you can use [pip-tool](https://github.com/nvie/pip-tools) to review all pip-package to upgrade
+
+  ```sh
+  pip install pip-tools
+  pip-review
+  pip-dump
+  ```
 * Run nosetests with python3.  
   Install nose into python3 package with pip3 then you can run nosetests with python3 via nosetests-3.x ex. nosetests-3.4 if your python3 is version 3.4
 
