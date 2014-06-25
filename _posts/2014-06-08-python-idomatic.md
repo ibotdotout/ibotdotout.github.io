@@ -26,7 +26,7 @@ If you wanna be Pythonic try to look at this references.
 * Virtualenv with python3
 
   ```sh
-  virtualenv --python=/usr/bin/python3 <env_name>
+  virtualenv --python=$(which python3) <env_name>
   ```
 * Virtualenv can't move. You must edit environment path in
 
