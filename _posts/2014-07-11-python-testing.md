@@ -1,0 +1,124 @@
+---
+layout: post
+title: "Python Testing"
+tags: python
+permalink: python-testing
+---
+
+There are difference between 'building it right' and 'building the right thing'. -Python Testing Cookbook by Greg L. Turnquist
+
+
+##Good Test Habits
+* A few test is better than nothing  
+* Coverage isn't everything  
+  - make working software not a 100% coverage
+* Capturing a bug in an automated test  
+  1. Write Tests for the bug  
+  2. Add it to your test suite  
+  3. Fix the bug  
+  4. Veriry test suite passed  
+
+
+## Tips:
+* Run All unittest in module:
+
+  ```sh
+  python -m unittest discover <test_module>
+  ```
+* Run nosetests with python3.  
+  - Install nose into python3 package with pip3 then you can run nosetests with python3 via nosetests-3.x ex. nosetests-3.4 if your python3 is version 3.4
+
+  ```sh
+  pip3 install nose
+  nosetests-3.x
+  ```
+
+
+##Test Coverage
+
+Stmts - statements  
+Miss - statements that not executed  
+Cover - (Stmts - Miss)/Stmts * 100  
+
+* Coverage html  
+  - Generate an Pretty HTML report  
+  - powerful way to visually inspect the code and see the lines that missing  
+
+  ```sh
+  nosetests --with-coverage --cover-html 
+  ```
+* Coverage erase
+
+  ```sh
+  coverage erase
+  coverage -e
+  nosetests --with-coverage --cover-erase
+  ```
+* Coverage with filter Third-party Libraries out
+
+  ```sh
+  nosetests --with-coverage --cover-package=<package,package2>
+  nosetests --with-coverage --cover-package=$(ls | grep '.py$' | sed 's/[.]py$//' | xargs | sed 's/[\ ]/,/g')
+  ```
+
+
+## Mock
+
+* mocking pattern  
+  1.record/replay pattern  
+  2.action/assert pattern 
+* mock tests behavior  
+* stubs tests state  
+
+
+##Behavior Driven Development
+
+* BDD - Given, When, and Then
+* BDD Stroy  
+  -Feature  
+  -- Scenario  
+  --- steps  
+
+* TDD vs BDD  
+  - setUp   ==  Given  
+  - call unit ==  Then  
+  - assert    ==   When  
+
+* [Lettuce](http://lettuce.it) is a Cucumber-like BDD tool built for Python.
+
+
+## Robot Framework - Acceptance Testing 
+* Acceptance testing is block box testing
+* Customers are usually more interested in what the software does, not how it does it.  
+* Robot Framework uses keywords to define tests, test steps, variables, and other testing components and need to maps Robot Framework keywords to our Python code  
+* Robot Framework uses data-driven test suite  
+
+
+## Jekin(Java) - Continuous Integration
+* nosetests --with-xunit
+* tests upon commit(trigger),when scheduled
+
+
+## Tools:
+  * Unittests: [Nosetests](https://nose.readthedocs.org), [Rednose](https://pypi.python.org/pypi/rednose), [Coverage](https://pypi.python.org/pypi/coverage)
+
+  ```sh
+  pip install nose rednose coverage
+  ```
+
+  * [Observr (Ruby)](https://github.com/kevinburke/observr)  
+  For OS X
+
+  ```sh
+  gem install observr
+  gem install ruby-fsevent
+  ```
+
+## Testing Python
+1. [Python Testing Start Here](http://pythontesting.net/start-here/)
+2. [Testing in Python: using nose & mocks](http://techblog.appnexus.com/2012/testing-in-python-using-nose-mocks/)
+3. [Mock - Mocking and Testing Library](http://www.voidspace.org.uk/python/mock/)
+4. [An Introduction to Mocking in Python](http://www.toptal.com/python/an-introduction-to-mocking-in-python)
+5. [INTRODUCING BDD](http://dannorth.net/introducing-bdd./)
+
+
