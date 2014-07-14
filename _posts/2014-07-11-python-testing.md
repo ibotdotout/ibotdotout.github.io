@@ -68,7 +68,9 @@ Cover - (Stmts - Miss)/Stmts * 100
   1.record/replay pattern  
   2.action/assert pattern 
 * mock tests behavior  
+  - test the method was called or not called by assert_called_with(), etc.  
 * stubs tests state  
+  - recording method class and its result  
 
 
 ##Behavior Driven Development
