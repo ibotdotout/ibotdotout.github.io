@@ -122,5 +122,6 @@ Cover - (Stmts - Miss)/Stmts * 100
 3. [Mock - Mocking and Testing Library](http://www.voidspace.org.uk/python/mock/)
 4. [An Introduction to Mocking in Python](http://www.toptal.com/python/an-introduction-to-mocking-in-python)
 5. [INTRODUCING BDD](http://dannorth.net/introducing-bdd./)
+6. [Mock Like a Boss](http://slidedeck.io/oxtopus/mocklikeaboss)
 
 
