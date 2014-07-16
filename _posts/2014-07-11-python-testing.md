@@ -123,5 +123,8 @@ Cover - (Stmts - Miss)/Stmts * 100
 4. [An Introduction to Mocking in Python](http://www.toptal.com/python/an-introduction-to-mocking-in-python)
 5. [INTRODUCING BDD](http://dannorth.net/introducing-bdd./)
 6. [Mock Like a Boss](http://slidedeck.io/oxtopus/mocklikeaboss)
+7. [Beginning Test-Driven Development in Python](http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137)
+8. [Behavior-Driven Development in Python](http://code.tutsplus.com/tutorials/behavior-driven-development-in-python--net-26547)
+9. [Testing with mock](http://pyvideo.org/video/392/pycon-2011--testing-with-mock)
 
 
