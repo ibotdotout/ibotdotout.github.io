@@ -1,0 +1,135 @@
+---
+layout: post
+title: Continuos Integrations
+tags: CI
+permalink: CI
+---
+# [Drone.io](https://drone.io) - Simple CI Server
+1. [Drone.io Quickstart](http://docs.drone.io/quickstart.html)
+2. [Drone.io Building Python Projects](http://docs.drone.io/python.html)
+
+
+
+# [Jenkins-CI](http://jenkins-ci.org)
+
+## Jenkins Job Workspace::
+1. look jenkins home directory in Manage Jenkins > Configure System > Home directory  
+2. In Home directory clicks Adanced... Buttons.  
+3. look Workspace Root Directory. Normally it is "workspace".  
+4. your job workspace is < jenkins home directory > /jobs/< your jobs > / < workspace >  
+
+
+
+## Jenkins backup and Import Configure::
+###Backup Job Configure  
+1. look jenkins home directory in Manage Jenkins > Configure System > Home directory  
+2. go to < jenkins home directory >/jobs  
+3. go to < your jobs directory >  
+4. backup config.xml  
+
+###Import Job Configure  
+1. go to < you job directory >  
+2. replace your backup config.xml with config.xml  
+3. reload jenkins with  
+
+  ```sh
+  http://yourjenkinsserver/reload
+  ```
+
+
+## Jenkins Trigger via git hook::
+### Setup Configure  
+1. Install [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)  
+2. In Job Configure > Source Code Management > Select Git  
+3. add your git repository url to Repository URL  
+4. Select Poll SCM in Build Triggers and you can leave Schedule as blank  
+5. Save Configure  
+
+### [Git Hook to trigger Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository)
+1. If you use linux you have to install curl. That was installed osx.
+
+  ```sh
+  $ sudo apt-get install curl
+  ```
+2. You can trigger jenkins with this url
+
+  ```sh
+  http://yourserver/jenkins/git/notifyCommit?url=<URL of the Git repository>
+  ```
+
+3. You can trigger jenkins after git push by
+
+  ```sh
+  # git don't have post-push hook
+  $ git push && curl http://yourserver/jenkins/git/notifyCommit?url=<URL of the Git repository>
+  ```
+
+4. You can use git alias to make short cmd by edit .git/config in your git repository
+
+  ```sh
+    [alias]
+      trig-jenkins = !curl http://yourserver/jenkins/git/notifyCommit?url=<URL of the Git repository>
+      push-wt = !git push && git trig-jenkins
+  ```
+
+  call your alias by
+
+  ```sh
+  $ git trig-jenkins
+  $ git push-wt
+  ```
+
+
+
+## Jenkins with Python::
+###Setup
+1. Install [ShiningPanda Plugin](https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin)  
+2. In Manage Jenkins > Configure System > Python clicks "Python installations" button.  
+3. Config your python environments  
+4. Save  
+
+###Configure Job to run with python
+1. In Job Configure > Build > Add build step > {Python Builder, VirtualEnv Builder}  
+2. Select your Python version  
+3. Nature select shell  
+4. In command add your run script  
+
+  ```sh
+  # example
+  export LANG=en_US.UTF-8
+  python setup.py develop
+  nosetests --with-coverage --cover-erase --cover-package=core,bin --cover-html --with-xunit
+  ```
+5. (Optional) Publish Test Result Report 
+  5.1 Use nosetests to generate xml result in xunit format  
+
+    ```sh
+     $ nosetests --with-xunit  # nosetests.xml is default name of xml
+    ```
+  5.2 Add post-build action > Publish JUnit test result report  
+  5.3 Add "nosetests.xml" in Test report XMLs  
+6. (Optional) Publish coverage.py HTML reports  
+  6.1 Use nosetests to run coverage.py  
+
+  ```sh
+    $ nosetests --with-coveage --cover-html
+  ```
+  6.2 Add post-build action > Publish coverage.py HTML reports  
+7. (Options) Publish your product  
+  7.1 Add post-build action > Archive the artifacts  
+  7.2 Add your file name  
+
+
+
+## Jenkins References::
+1. [Installing Jenkins on
+   Ubuntu](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu)
+2. [Jenkins Debian packages](http://pkg.jenkins-ci.org/debian/)
+3. [Jenkins and
+   Python](http://www.alexconrad.org/2011/10/jenkins-and-python.html)
+
+
+### Jenkins Plugins::
+1. [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)
+2. [ShiningPanda Plugin - Python support to
+   Jenkkins](https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin)
