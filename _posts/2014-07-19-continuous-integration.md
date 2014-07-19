@@ -72,15 +72,16 @@ Original From [Setting up an Apache Proxy for port 80 -> 8080](https://wiki.jenk
 
 ## Jenkins backup and Import Configure::
 ###Backup Job Configure  
+  ```sh
+  http://yourjenkinsserver/job/<project name>/config.xml
+  ```
+
+###Import Job Configure  
 1. look jenkins home directory in Manage Jenkins > Configure System > Home directory  
 2. go to < jenkins home directory >/jobs  
 3. go to < your jobs directory >  
-4. backup config.xml  
-
-###Import Job Configure  
-1. go to < you job directory >  
-2. replace your backup config.xml with config.xml  
-3. reload jenkins with  
+4. replace your backup config.xml with config.xml  
+5. reload jenkins with  
 
   ```sh
   http://yourjenkinsserver/reload
