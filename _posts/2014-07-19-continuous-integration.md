@@ -12,6 +12,56 @@ permalink: CI
 
 # [Jenkins-CI](http://jenkins-ci.org)
 
+## Install Jenkins::
+### Debian
+  ```sh
+  # Don't use only apt-get install jenkins that old version
+  $ wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+  $ sudo vim /etc/apt/sources.list
+  # add the following entry
+  # deb http://pkg.jenkins-ci.org/debian binary/
+  $ sudo apt-get update
+  $ sudo apt-get install jenkins
+  ```
+
+### OSX
+  ```sh
+  brew update
+  brew install jenkins
+  ```
+### Allow others to access jenkins
+Original From [Setting up an Apache Proxy for port 80 -> 8080](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu) but it use old version of apache2
+
+  ```sh
+    $ sudo apt-getinstall apache2
+    $ sudo a2enmod proxy
+    $ sudo a2enmod proxy_http
+    $ sudo a2dissite 000-default.conf
+  ```
+
+  Create "jenfins.conf" in /etc/apache2/sites-available
+
+  ```sh
+  <VirtualHost *:80>
+      ServerAdmin webmaster@localhost
+      ServerName ci.company.com
+      ServerAlias ci
+      ProxyRequests Off
+      <Proxy *>
+            Order deny,Alloww
+            Allow from all
+      </Proxy>
+      ProxyPreserveHost on
+      ProxyPass / http://Proxylocalhost:8080/
+  </VirtualHost>
+  ```
+
+  ```sh
+  $ sudo a2ensite jenkins
+  $ sudo service apache2 restart
+  ```
+
+
 ## Jenkins Job Workspace::
 1. look jenkins home directory in Manage Jenkins > Configure System > Home directory  
 2. In Home directory clicks Adanced... Buttons.  
