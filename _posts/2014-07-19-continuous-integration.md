@@ -33,7 +33,7 @@ permalink: CI
 Original From [Setting up an Apache Proxy for port 80 -> 8080](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu) but it use old version of apache2
 
   ```sh
-    $ sudo apt-getinstall apache2
+    $ sudo apt-get install apache2
     $ sudo a2enmod proxy
     $ sudo a2enmod proxy_http
     $ sudo a2dissite 000-default.conf
