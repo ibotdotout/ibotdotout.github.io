@@ -107,13 +107,11 @@ Cover - (Stmts - Miss)/Stmts * 100
   ```sh
   pip install nose rednose coverage
   ```
-
-  * [Observr (Ruby)](https://github.com/kevinburke/observr)  
-  For OS X
+  * [Watchdog](https://github.com/gorakhargosh/watchdog) - 
+  [Watching a directory for file changes](http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html)  
 
   ```sh
-  gem install observr
-  gem install ruby-fsevent
+  pip install watchdog
   ```
 
 ## Testing Python

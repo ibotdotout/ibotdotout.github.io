@@ -5,12 +5,28 @@ tags: CI
 permalink: CI
 ---
 # [Drone.io](https://drone.io) - Simple CI Server
+## Private Configuration:
+1. upload your configuration into gist with secret
+2. get url of your raw configuration
+3. add your configuration url in "Environment Variable"
+
+  ```sh
+  # Example
+  CONFIG_URL="<your_configuration_url>"
+  ```
+4. in "Commands" download your configurations via wget without display result
+
+  ```sh
+  wget $CONFIG_URL -O <config_name> &> /dev/null
+  ```
+
+## References:
 1. [Drone.io Quickstart](http://docs.drone.io/quickstart.html)
 2. [Drone.io Building Python Projects](http://docs.drone.io/python.html)
 
 
 
-# [Jenkins-CI](http://jenkins-ci.org)
+# [Jenkins-CI](http://jenkins-ci.org) - Extendable CI Server
 
 ## Install Jenkins::
 ### Debian
