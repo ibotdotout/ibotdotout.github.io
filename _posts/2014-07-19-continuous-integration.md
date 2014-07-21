@@ -6,6 +6,7 @@ permalink: CI
 ---
 # [Drone.io](https://drone.io) - Simple CI Server
 ## Private Configuration:
+### Can run shell command
 1. upload your configuration into gist with secret
 2. get url of your raw configuration
 3. add your configuration url in "Environment Variable"
@@ -17,12 +18,50 @@ permalink: CI
 4. in "Commands" download your configurations via wget without display result
 
   ```sh
+  #!/bin/sh
   wget $CONFIG_URL -O <config_name> &> /dev/null
   ```
+
+### Keep Variables in Environment
+
+```sh
+# Example
+#!/bin/sh
+export CLIENT_ID=<your id>
+export TAGS=<your tags>
+```
+
+```python
+#!/usr/bin/env python
+import os
+client_id = os.environ.get('CLIENT_ID',<default value>)
+tags = os.environ.get('TAGS',<default value>)
+```
+
+### Dynamic Solution
+
+```python
+#!/usr/bin/env python
+import os
+
+# Configuration from Environment Variables if can't load config.ini
+# you can make you own configuration from config.ini.sample
+
+if os.path.isfile("config.ini"):
+    import configparser
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    client_id = config.get('DEFAULT', 'client_id')
+else:
+    client_id = os.environ.get('CLIENT_ID', <default value>)
+```
+
 
 ## References:
 1. [Drone.io Quickstart](http://docs.drone.io/quickstart.html)
 2. [Drone.io Building Python Projects](http://docs.drone.io/python.html)
+3. [Hosting Your Open Source Project on Heroku with Private Configuration](http://buddylindsey.com/hosting-your-open-source-project-on-heroku-with-private-configuration/)
+4. [How to hide connection string, user name, pw when using source control?](http://stackoverflow.com/questions/3176918/how-to-hide-connection-string-user-name-pw-when-using-source-control)
 
 
 
