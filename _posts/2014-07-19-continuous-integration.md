@@ -233,9 +233,15 @@ Original From [Setting up an Apache Proxy for port 80 -> 8080](https://wiki.jenk
 2. [Jenkins Debian packages](http://pkg.jenkins-ci.org/debian/)
 3. [Jenkins and
    Python](http://www.alexconrad.org/2011/10/jenkins-and-python.html)
+4. [Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557](http://www.somkiat.cc/jenkins-popular-plugins/)
+
 
 
 ### Jenkins Plugins::
 1. [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)
 2. [ShiningPanda Plugin - Python support to
    Jenkkins](https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin)
+3. [Green Balls](https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls)
+4. [Build Pipeline Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin)
+5. [Build Monitor Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Build+Monitor+Plugin)
+6. [Jenkins Sounds plugin](https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Sounds+plugin)
