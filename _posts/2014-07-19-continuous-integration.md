@@ -225,17 +225,16 @@ Original From [Setting up an Apache Proxy for port 80 -> 8080](https://wiki.jenk
   7.1 Add post-build action > Archive the artifacts  
   7.2 Add your file name  
 
+## Start/Stop Jenkins that installed via Homebrew
 
-
-## Jenkins References::
-1. [Installing Jenkins on
-   Ubuntu](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu)
-2. [Jenkins Debian packages](http://pkg.jenkins-ci.org/debian/)
-3. [Jenkins and
-   Python](http://www.alexconrad.org/2011/10/jenkins-and-python.html)
-4. [Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557](http://www.somkiat.cc/jenkins-popular-plugins/)
-
-
+```sh
+# launchd start jenkins at login:
+$ ln -sfv /usr/local/opt/jenkins/*.plist ~/Library/LaunchAgents
+# start jenkins
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+# stop jenkins:
+$ launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+```
 
 ### Jenkins Plugins::
 1. [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)
@@ -245,3 +244,13 @@ Original From [Setting up an Apache Proxy for port 80 -> 8080](https://wiki.jenk
 4. [Build Pipeline Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin)
 5. [Build Monitor Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Build+Monitor+Plugin)
 6. [Jenkins Sounds plugin](https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Sounds+plugin)
+
+
+## Jenkins References::
+1. [Installing Jenkins on
+   Ubuntu](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu)
+2. [Jenkins Debian packages](http://pkg.jenkins-ci.org/debian/)
+3. [Jenkins and
+   Python](http://www.alexconrad.org/2011/10/jenkins-and-python.html)
+4. [Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557](http://www.somkiat.cc/jenkins-popular-plugins/)
+5. [Jenkins Setup on Os X server](http://oemden.com/?p=205)
