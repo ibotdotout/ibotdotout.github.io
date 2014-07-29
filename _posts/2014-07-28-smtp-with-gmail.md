@@ -1,6 +1,6 @@
 ---
 layout: post
-title: smtp with gmail
+title: Smtp with gmail
 tags: smtp
 permalink: smtp
 ---
