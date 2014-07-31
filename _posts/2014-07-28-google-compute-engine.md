@@ -57,3 +57,6 @@ $ sudo apt-get install <your package>
 7. In firewalls section, Go to Create New.
 8. Create your rule, in this case "Protocols & Ports" would be "tcp:9090" i guess.
 9. Save.
+
+
+## [Attach Disk](https://developers.google.com/compute/docs/disks#attachdiskcreation)
