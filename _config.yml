@@ -11,6 +11,8 @@ tagline:          "'s blog"
 description:      "botbotbot's blog"
 url:              http://ibotdotout.github.io
 paginate:         5
+baseurl: /
+
 
 author:
   name:           botbotbot
