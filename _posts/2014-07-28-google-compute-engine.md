@@ -52,6 +52,7 @@ edit your nginx.conf
 ### Ref::
 1. [How to enable file browser mode in Nginx?](http://techglimpse.com/enable-directory-listing-mode-nginx/)
 2. [How To Set Up HTTP Authentication With Nginx On Ubuntu 12.10](https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10)
+3. [วิธี setup Nginx ให้บริการ HTTPS](http://www.techsuii.com/2014/08/03/how-to-setup-https-for-nginx/)
 
 
 ## Install locals to support many languages
