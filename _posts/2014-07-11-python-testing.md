@@ -125,5 +125,4 @@ Cover - (Stmts - Miss)/Stmts * 100
 8. [Behavior-Driven Development in Python](http://code.tutsplus.com/tutorials/behavior-driven-development-in-python--net-26547)
 9. [Testing with mock](http://pyvideo.org/video/392/pycon-2011--testing-with-mock)
 10. [Unit testing best practices](http://www.slideshare.net/nickokiss/unit-testing-best-practices)
-
-
+11. [Software Testing Course](https://www.udacity.com/course/cs258)
