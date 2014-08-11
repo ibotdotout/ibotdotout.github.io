@@ -35,5 +35,9 @@ If you mock some thing, it can't be runnable. Don't forget it just mock object.
 3  
 ```
 
+### my_mock.mock_calls
+
 ### Reference:
 1. [The Mock Class](http://www.voidspace.org.uk/python/mock/mock.html)
+2. [enhancing-python-unit-tests-with-more-decorators](http://melp.nl/2011/02/enhancing-python-unit-tests-with-more-decorators/)
+3. [python-decorators-with-parameters](http://stackoverflow.com/questions/5929107/python-decorators-with-parameters)
