@@ -126,3 +126,4 @@ Cover - (Stmts - Miss)/Stmts * 100
 9. [Testing with mock](http://pyvideo.org/video/392/pycon-2011--testing-with-mock)
 10. [Unit testing best practices](http://www.slideshare.net/nickokiss/unit-testing-best-practices)
 11. [Software Testing Course](https://www.udacity.com/course/cs258)
+12. [Patching Mocks in Python](http://www.drdobbs.com/architecture-and-design/patching-mocks-in-python/240168924)
