@@ -106,12 +106,19 @@ Cover - (Stmts - Miss)/Stmts * 100
 
   ```sh
   pip install nose rednose coverage
+  echo "export NOSE_REDNOSE=1" >> .zshrc #enable rednose
   ```
   * [Watchdog](https://github.com/gorakhargosh/watchdog) - 
   [Watching a directory for file changes](http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html)  
 
   ```sh
   pip install watchdog
+  ```
+  
+  * [Tox](https://testrun.org/tox/latest/) - multiple environments testing
+
+  ```sh
+  pip install tox
   ```
 
 ## Testing Python
