@@ -248,6 +248,10 @@ $ launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 $ sudo service jenkins restart
 ```
 
+### Jenkins with Docker.io
+1. [Move fast and don’t break things! Testing with Jenkins, Ansible and Docker](https://developer.rackspace.com/blog/move-fast-and-dont-break-things-testing-with-jenkins-ansible-and-docker/)
+2. [jenkins-docker-sample](https://github.com/orangain/jenkins-docker-sample)
+
 ### Jenkins Plugins::
 1. [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)
 2. [ShiningPanda Plugin - Python support to
