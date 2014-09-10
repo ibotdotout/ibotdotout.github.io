@@ -240,8 +240,8 @@ $ launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 1. Go to Jenkins Home Path     
     (debian) /var/lib/jenkins  
 2. Edit config.xml  
-3. Set <userSecurity> tag to false  
-4. Delete <authorizationStrategy> and <securityRealm> tags  
+3. Set < userSecurity> tag to false  
+4. Delete < authorizationStrategy> and < securityRealm> tags  
 5. Restart Jenkins  
 
 ```sh
