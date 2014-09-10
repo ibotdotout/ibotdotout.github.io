@@ -257,6 +257,11 @@ $ ssh-keygen -t rsa -C "your_email@example.com"
 $ cat ~/.ssh/id_rsa.pub
 ```
 
+### [Jekins git pulling timeout after 10 min](http://stackoverflow.com/questions/22013217/on-building-jenkins-project-timeout-after-10-minute-error-happens)
+
+1. Edit job configuration, In git plugion section
+2. Click Add > Advanced clone behaviours > Set Timeout
+
 
 ### Jenkins with Docker.io
 1. [Move fast and don’t break things! Testing with Jenkins, Ansible and Docker](https://developer.rackspace.com/blog/move-fast-and-dont-break-things-testing-with-jenkins-ansible-and-docker/)
