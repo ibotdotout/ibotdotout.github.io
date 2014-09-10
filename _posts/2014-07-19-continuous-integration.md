@@ -237,12 +237,12 @@ $ launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 ```
 
 ### [Jekins Reset Password](https://gist.github.com/gmhawash/4043232)
-1.Go to Jenkins Home Path   
-  (debian) /var/lib/jenkins
-2.Edit config.xml
-3.Set <userSecurity> tag to false
-4.Delete <authorizationStrategy> and <securityRealm> tags
-5.Restart Jenkins
+1.Go to Jenkins Home Path     
+  (debian) /var/lib/jenkins  
+2.Edit config.xml  
+3.Set <userSecurity> tag to false  
+4.Delete <authorizationStrategy> and <securityRealm> tags  
+5.Restart Jenkins  
 
 ```sh
 $ sudo service jenkins restart
