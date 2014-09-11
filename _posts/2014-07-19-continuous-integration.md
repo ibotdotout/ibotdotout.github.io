@@ -160,21 +160,21 @@ Original From [Setting up an Apache Proxy for port 80 -> 8080](https://wiki.jenk
 2. You can trigger jenkins with this url
 
   ```sh
-  http://yourserver/jenkins/git/notifyCommit?url=<URL of the Git repository>
+  http://yourjenkinsserver/git/notifyCommit?url=<URL of the Git repository>
   ```
 
 3. You can trigger jenkins after git push by
 
   ```sh
   # git don't have post-push hook
-  $ git push && curl http://yourserver/jenkins/git/notifyCommit?url=<URL of the Git repository>
+  $ git push && curl http://yourjenkinsserver/git/notifyCommit?url=<URL of the Git repository>
   ```
 
 4. You can use git alias to make short cmd by edit .git/config in your git repository
 
   ```sh
     [alias]
-      trig-jenkins = !curl http://yourserver/jenkins/git/notifyCommit?url=<URL of the Git repository>
+      trig-jenkins = !curl http://yourjenkinsservergit/notifyCommit?url=<URL of the Git repository>
       push-wt = !git push && git trig-jenkins
   ```
 
