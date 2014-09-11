@@ -294,3 +294,4 @@ $ sudo service jenkins restart
    Python](http://www.alexconrad.org/2011/10/jenkins-and-python.html)
 4. [Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557](http://www.somkiat.cc/jenkins-popular-plugins/)
 5. [Jenkins Setup on Os X server](http://oemden.com/?p=205)
+6. [Jenkins and Python](http://www.alexconrad.org/2011/10/jenkins-and-python.html)
