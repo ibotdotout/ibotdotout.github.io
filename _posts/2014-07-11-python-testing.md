@@ -17,6 +17,10 @@ There are difference between 'building it right' and 'building the right thing'.
   2. Add it to your test suite  
   3. Fix the bug  
   4. Veriry test suite passed  
+  
+* Testing Concept
+  1. AAA - Arrange Act Assert  
+  2. BDD - Give When Then  
 
 
 ## Tips:
