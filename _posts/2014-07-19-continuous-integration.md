@@ -266,6 +266,14 @@ $ cat ~/.ssh/id_rsa.pub
 ### Jenkins with Docker.io
 1. [Move fast and don’t break things! Testing with Jenkins, Ansible and Docker](https://developer.rackspace.com/blog/move-fast-and-dont-break-things-testing-with-jenkins-ansible-and-docker/)
 2. [jenkins-docker-sample](https://github.com/orangain/jenkins-docker-sample)
+3. [Use Docker + Jenkins to run GitHub tests](http://www.therightcode.net/use-docker-jenkins-to-run-github-tests/)
+
+```sh
+# add jenkins to docker group
+$ sudo gpasswd -a jenkins docker # or sudo adduser jenkins docker
+$ sudo service docker.io restart
+$ sudo service jenkins restart
+```
 
 ### Jenkins Plugins::
 1. [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)
