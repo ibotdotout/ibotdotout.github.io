@@ -275,7 +275,7 @@ $ sudo service docker.io restart
 $ sudo service jenkins restart
 ```
 
-### Jenkins Plugins::
+### Jenkins Plugins - [Install via Terminal](http://stackoverflow.com/questions/7709993/how-can-i-update-jenkins-plugins-from-the-terminal)::
 1. [Git Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)
 2. [ShiningPanda Plugin - Python support to
    Jenkkins](https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin)
