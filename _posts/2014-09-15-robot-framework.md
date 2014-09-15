@@ -18,6 +18,7 @@ permalink: robot-framework
 Documentation     <document>
 Library           <Library>
 Library           <python pakcage>  WITH NAME  <ref name>
+Resource          <file>
 
 Suite Setup       <keyword>
 Suite Teardown    <keyword>
