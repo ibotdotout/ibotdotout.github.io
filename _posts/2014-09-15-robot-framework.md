@@ -12,6 +12,14 @@ permalink: robot-framework
 -  2 space - between command and argument
 
 
+### [Integer Variables (Default is String)](http://stackoverflow.com/questions/24007245/different-type-of-input-data-between-robot-framework-file-and-python/24007809#24007809)
+
+```python
+${THRESHOLD}      ${65} # 65 is integer
+${THRESHOLD}      65    # 65 is string
+```
+
+
 ## Robot Framework Template
 ```python
 *** Settings ***
