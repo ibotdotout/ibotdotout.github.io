@@ -25,6 +25,8 @@ Test Setup Test <keyword>
 Test Teardown Test <keyword>
 
 *** Test Cases ***
+<test name>
+  <command> or <keyword>
 
 *** Keywords ***
 <command>
