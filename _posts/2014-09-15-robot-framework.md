@@ -19,10 +19,11 @@ Documentation     <document>
 Library           <Library>
 Library           <python pakcage>  WITH NAME  <ref name>
 
-Suite Setup <keyword>
-Suite Teardown <keyword>
-Test Setup Test <keyword>
-Test Teardown Test <keyword>
+Suite Setup       <keyword>
+Suite Teardown    <keyword>
+
+Test Setup        <keyword>
+Test Teardown     <keyword>
 
 *** Test Cases ***
 <test name>
@@ -43,3 +44,4 @@ Test Teardown Test <keyword>
 5. [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 6. [Creating user keywords](http://code.google.com/p/robotframework/source/browse/doc/userguide/src/CreatingTestData/CreatingUserKeywords.txt?r=e35c4cf7591986d212a6f1c015f2f77598fb7ea2)
 7. [Getting started with Robot Framework and plone.app.testing](http://datakurre.pandala.org/2012/09/getting-started-with-robotframework-and.html)
+8. [HowToWriteGoodTestCases](https://code.google.com/p/robotframework/wiki/HowToWriteGoodTestCases)
