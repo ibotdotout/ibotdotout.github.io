@@ -79,6 +79,28 @@ ${None}   - python None
 --suite example-??    #select suite
 ```
 
+## [Tagging test cases](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#tagging-test-cases)
+
+```python
+*** Settings ***
+Force Tags FunctionalTest
+Default Tags ValidTest
+
+*** Test Cases ***
+invalid login
+  [Tags]  InvalidTest
+```
+
+```sh
+# Tag select
+
+$ pybot -i InvalidTest login_tests.txt
+$ pybot --include InvalidTest login_tests.html
+
+$ pybot -e InvalidTest login_tests.txt
+$ pybot --exclude InvalidTest login_tests.html
+```
+
 
 ## Robot Framework Template
 ```python
