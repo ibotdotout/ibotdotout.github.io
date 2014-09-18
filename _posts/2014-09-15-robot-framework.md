@@ -5,18 +5,59 @@ tags: robot-framework
 permalink: robot-framework
 ---
 
-## [Robot Framework](http://robotframework.org/) - [Github Repo](https://github.com/robotframework/robotframework)
+## [Robot Framework(RF)](http://robotframework.org/) - [Github Repo](https://github.com/robotframework/robotframework)
 
-## Space
+## [Handling whitespace - Plain text format](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#rules-for-parsing-the-data)
+-  1 tab   = 2 space
 -  1 space - between command
--  2 space - between command and argument
+-  2+ space - between command and argument (recommend 4 space)
+
+-  Newlines, carriage returns, and tabs are converted to spaces.
+
+### [Special characters need Escaping special characters](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#rules-for-parsing-the-data)
+-  Newlines             - \n
+-  carriage returns     - \r
+-  tabs                 - \t
+-  non-breaking spaces  - \xA0
+
+### Continue line the previous line
+
+```python
+# use ellipsis (...) to continue the previous line
+Default Tags	a	b	c
+...	          d	e	f
+```
+
+## [Test templates - keyword-driven test cases into data-driven tests](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-templates)
 
 
-### [Integer Variables (Default is String)](http://stackoverflow.com/questions/24007245/different-type-of-input-data-between-robot-framework-file-and-python/24007809#24007809)
+## RF file formats:
+- HTML format
+- TSV format
+- Plain text format
+- reStructuredText format
+
+support only .html, .xhtml, .htm, .tsv, .txt, .rst, or .rest file in dir
+
+
+## Test case styles:
+- Keyword-driven style
+- Data-driven style
+- Behavior-driven style ( Give When Then )
+
+
+## [Integer Variables (Default is String)](http://stackoverflow.com/questions/24007245/different-type-of-input-data-between-robot-framework-file-and-python/24007809#24007809)
 
 ```python
 ${THRESHOLD}      ${65} # 65 is integer
 ${THRESHOLD}      65    # 65 is string
+```
+
+## [Selecting test cases](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#selecting-test-cases)
+
+```sh
+--test example*       #select test
+--suite example-??    #select suite
 ```
 
 
@@ -49,9 +90,9 @@ Test Teardown     <keyword>
 1. [Vim plugins for development with Robot framework](https://github.com/mfukar/robotframework-vim)
 
 ## Documents:
-1.[Robot Framework Quick Start Guide](http://robotframework.googlecode.com/hg/doc/quickstart/quickstart.html)
-2.[RobotFramework Overview](http://www.virtuousprogrammer.com/?p=264)
-3.[Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
+1. [Robot Framework Quick Start Guide](http://robotframework.googlecode.com/hg/doc/quickstart/quickstart.html)
+2. [RobotFramework Overview](http://www.virtuousprogrammer.com/?p=264)
+3. [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 4. [HowToWriteGoodTestCases](https://code.google.com/p/robotframework/wiki/HowToWriteGoodTestCases)
 
 ## Demo:
