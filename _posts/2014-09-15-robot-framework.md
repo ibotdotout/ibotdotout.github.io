@@ -137,6 +137,13 @@ __init__.txt  - init test suite file
 $ pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
 ```
 
+## [For loops](http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html#for-loops) - [Tutorial](https://blog.codecentric.de/en/2013/05/robot-framework-tutorial-loops-conditional-execution-and-more/)
+
+```python
+:FOR    ${elem}   IN    @{list}
+\    LOG     ${elem}
+```
+
 ## Plugin:
 1. [Vim plugins for development with Robot framework](https://github.com/mfukar/robotframework-vim)
 
@@ -158,4 +165,4 @@ $ pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
 6. [Creating user keywords](http://code.google.com/p/robotframework/source/browse/doc/userguide/src/CreatingTestData/CreatingUserKeywords.txt?r=e35c4cf7591986d212a6f1c015f2f77598fb7ea2)
 7. [Getting started with Robot Framework and plone.app.testing](http://datakurre.pandala.org/2012/09/getting-started-with-robotframework-and.html)
 9. [RobotFramework with the Selenium Library](http://www.wallix.org/2011/07/26/how-to-use-robotframework-with-the-selenium-library/) - [Part2](http://www.wallix.org/2011/09/06/how-to-use-robotframework-part-2/)
-
+10. [Robot Framework Tutorial – Overview](https://blog.codecentric.de/en/2012/03/robot-framework-tutorial-overview/)
