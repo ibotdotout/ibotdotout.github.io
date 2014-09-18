@@ -46,11 +46,30 @@ support only .html, .xhtml, .htm, .tsv, .txt, .rst, or .rest file in dir
 - Behavior-driven style ( Give When Then )
 
 
-## [Integer Variables (Default is String)](http://stackoverflow.com/questions/24007245/different-type-of-input-data-between-robot-framework-file-and-python/24007809#24007809)
+## RF Variable
+- scalars               - ${SCALAR} 
+- lists                 - @{LIST}
+- environment variables - %{VARIABLE}
+
+- all capital letters with global variables -  ${VAR}
+- small letters with local variables        -  ${my_var}  
+
+
+
+### [Number variables](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#number-variables)
 
 ```python
-${THRESHOLD}      ${65} # 65 is integer
-${THRESHOLD}      65    # 65 is string
+${THRESHOLD}      ${65}     # 65 is integer
+${THRESHOLD}      ${67.25}  # 67.25 is float
+${THRESHOLD}      65        # 65 is string
+```
+
+### [Boolean and None/null variables](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#boolean-and-none-null-variables)
+
+```python
+${true}   - python True
+${false}  - python False
+${None}   - python None
 ```
 
 ## [Selecting test cases](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#selecting-test-cases)
