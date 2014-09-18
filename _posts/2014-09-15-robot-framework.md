@@ -7,6 +7,31 @@ permalink: robot-framework
 
 ## [Robot Framework(RF)](http://robotframework.org/) - [Github Repo](https://github.com/robotframework/robotframework)
 
+## Robot Framework Template
+```python
+*** Settings ***
+Documentation     <document>
+Library           <Library>
+Library           <python pakcage>  WITH NAME  <ref name>
+Resource          <file>
+
+Suite Setup       <keyword>
+Suite Teardown    <keyword>
+
+Test Setup        <keyword>
+Test Teardown     <keyword>
+
+*** Test Cases ***
+<test name>
+  <command> or <keyword>
+
+*** Keywords ***
+<command>
+  [Arguments]  ${variable}
+  ${variable} =  <command>  ${variable}
+  [Return]  ${variable}
+```
+
 ## [Handling whitespace - Plain text format](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#rules-for-parsing-the-data)
 -  1 tab   = 2 space
 -  1 space - between command
@@ -101,30 +126,15 @@ $ pybot -e InvalidTest login_tests.txt
 $ pybot --exclude InvalidTest login_tests.html
 ```
 
+## [Test suites](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-suites)
 
-## Robot Framework Template
-```python
-*** Settings ***
-Documentation     <document>
-Library           <Library>
-Library           <python pakcage>  WITH NAME  <ref name>
-Resource          <file>
+__init__.txt  - init test suite file
 
-Suite Setup       <keyword>
-Suite Teardown    <keyword>
 
-Test Setup        <keyword>
-Test Teardown     <keyword>
+## Assgin Variable via CLI
 
-*** Test Cases ***
-<test name>
-  <command> or <keyword>
-
-*** Keywords ***
-<command>
-  [Arguments]  ${variable}
-  ${variable} =  <command>  ${variable}
-  [Return]  ${variable}
+```sh
+$ pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
 ```
 
 ## Plugin:
