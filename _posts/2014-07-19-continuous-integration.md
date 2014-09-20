@@ -292,6 +292,7 @@ $ sudo service jenkins restart
 6. [Jenkins Sounds plugin](https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Sounds+plugin)
 7. [Robot Framework Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Robot+Framework+Plugin)
 8. [Sonar plugin](https://wiki.jenkins-ci.org/display/JENKINS/Sonar+plugin)
+9. [Violations - generates reports static code violation detectors](https://wiki.jenkins-ci.org/display/JENKINS/Violations)
 
 
 ## Jenkins References::
@@ -303,3 +304,4 @@ $ sudo service jenkins restart
 4. [Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557](http://www.somkiat.cc/jenkins-popular-plugins/)
 5. [Jenkins Setup on Os X server](http://oemden.com/?p=205)
 6. [Jenkins and Python](http://www.alexconrad.org/2011/10/jenkins-and-python.html)
+7. [Integration of pylint into jenkins](http://chrigl.de/blogentries/integration-of-pylint-into-jenkins)
