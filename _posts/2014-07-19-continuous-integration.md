@@ -265,8 +265,9 @@ $ cat ~/.ssh/id_rsa.pub
 ## [Jenkins running parallel scripts](http://stackoverflow.com/questions/23062933/jenkins-running-parallel-scripts)
 
 ```sh
-$ script1.sh &   # run in background
-$ script2.sh     # run in foreground
+# wokr in any shell
+$ script1.sh &   # run in background (sub-shell)
+$ script2.sh     # run in foreground (shell)
 ```
 
 
