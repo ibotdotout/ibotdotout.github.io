@@ -36,6 +36,12 @@ There are difference between 'building it right' and 'building the right thing'.
   pip3 install nose
   nosetests-3.x
   ```
+  
+##[Nose Multiprocess](http://nose.readthedocs.org/en/latest/plugins/multiprocess.html)
+1. [Parallel Testing with nose](http://www.ceng.mugla.edu.tr/sharedoc/python-nose-docs-1.1.2/html/doc_tests/test_multiprocess/multiprocess.html)
+2. [Python Nose: Speed up the runner](http://www.metaklass.org/nose-accelerating-the-runner/)
+3. [https://github.com/Ignas/nose_xunitmp](https://github.com/Ignas/nose_xunitmp)
+
 
 
 ##Test Coverage
