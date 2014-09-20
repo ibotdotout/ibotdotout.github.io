@@ -262,6 +262,13 @@ $ cat ~/.ssh/id_rsa.pub
 1. Edit job configuration, In git plugion section
 2. Click Add > Advanced clone behaviours > Set Timeout
 
+## [Jenkins running parallel scripts](http://stackoverflow.com/questions/23062933/jenkins-running-parallel-scripts)
+
+```sh
+$ script1.sh &   # run in background
+$ script2.sh     # run in foreground
+```
+
 
 ### Jenkins with Docker.io
 1. [Move fast and don’t break things! Testing with Jenkins, Ansible and Docker](https://developer.rackspace.com/blog/move-fast-and-dont-break-things-testing-with-jenkins-ansible-and-docker/)
@@ -284,6 +291,7 @@ $ sudo service jenkins restart
 5. [Build Monitor Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Build+Monitor+Plugin)
 6. [Jenkins Sounds plugin](https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Sounds+plugin)
 7. [Robot Framework Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Robot+Framework+Plugin)
+8. [Sonar plugin](https://wiki.jenkins-ci.org/display/JENKINS/Sonar+plugin)
 
 
 ## Jenkins References::
