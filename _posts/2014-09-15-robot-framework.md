@@ -146,6 +146,7 @@ $ pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
 
 ## Plugin:
 1. [Vim plugins for development with Robot framework](https://github.com/mfukar/robotframework-vim)
+2. [Pabot - A parallel executor for Robot Framework tests](https://github.com/mkorpela/pabot)
 
 ## Documents:
 1. [Robot Framework Quick Start Guide](http://robotframework.googlecode.com/hg/doc/quickstart/quickstart.html)
