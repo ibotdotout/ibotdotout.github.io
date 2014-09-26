@@ -48,7 +48,7 @@ In worst case more processeses can make your tests slower depends on your tests.
 $ nosetests --processes=NUMBER_OF_PROCESSORS --process-timeout <sec>
 ```
 
-[Plugin Problem]((http://www.metaklass.org/nose-accelerating-the-runner/):  
+[Plugin Problem](http://www.metaklass.org/nose-accelerating-the-runner/):  
 1. Rednose - disable rednose by remove --rednose option and NOSE_REDNOSE in enviorment variable  
 2. coverage - fix by [nose-cov](https://pypi.python.org/pypi/nose-cov)  
 3. xunit - fix by [nose_xunitmp](https://pypi.python.org/pypi/nose_xunitmp/0.2)  
