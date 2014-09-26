@@ -40,18 +40,18 @@ There are difference between 'building it right' and 'building the right thing'.
 ##[Nose Multiprocess](http://nose.readthedocs.org/en/latest/plugins/multiprocess.html)
 
 You should make unittest run faster with mocking better than using multi processes.  
-There are many problem with nose plugin ex. rednose, coverage, xunit.
+There are many problem with nose plugin ex. rednose, coverage, xunit.  
 
-In worst case more processeses can make your tests slower depends on your tests.
+In worst case more processeses can make your tests slower depends on your tests.  
 
 ```sh
 $ nosetests --processes=NUMBER_OF_PROCESSORS --process-timeout <sec>
 ```
 
-[Plugin Problem]((http://www.metaklass.org/nose-accelerating-the-runner/):
-1. Rednose - disable rednose by remove --rednose option and NOSE_REDNOSE in enviorment variable
-2. coverage - fix by [nose-cov](https://pypi.python.org/pypi/nose-cov)
-3. xunit - fix by [nose_xunitmp](https://pypi.python.org/pypi/nose_xunitmp/0.2)
+[Plugin Problem]((http://www.metaklass.org/nose-accelerating-the-runner/):  
+1. Rednose - disable rednose by remove --rednose option and NOSE_REDNOSE in enviorment variable  
+2. coverage - fix by [nose-cov](https://pypi.python.org/pypi/nose-cov)  
+3. xunit - fix by [nose_xunitmp](https://pypi.python.org/pypi/nose_xunitmp/0.2)  
 
 ##Test Coverage
 
