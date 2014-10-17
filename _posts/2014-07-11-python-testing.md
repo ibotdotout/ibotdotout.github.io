@@ -36,6 +36,9 @@ There are difference between 'building it right' and 'building the right thing'.
   pip3 install nose
   nosetests-3.x
   ```
+* [Problems using nose in a virtualenv](http://stackoverflow.com/questions/864956/problems-using-nose-in-a-virtualenv)
+
+  you can't run nose in system-packages to using packages in virtualenv (sandbox)
   
 ##[Nose Multiprocess](http://nose.readthedocs.org/en/latest/plugins/multiprocess.html)
 
