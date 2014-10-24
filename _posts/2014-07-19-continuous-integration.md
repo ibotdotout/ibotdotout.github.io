@@ -2,7 +2,7 @@
 layout: post
 title: Continuos Integrations
 tags: CI
-permalink: CI
+permalink: ci
 ---
 # [Drone.io](https://drone.io) - Simple CI Server
 ## Private Configuration:
@@ -167,14 +167,14 @@ Original From [Setting up an Apache Proxy for port 80 -> 8080](https://wiki.jenk
 
   ```sh
   # git don't have post-push hook
-  $ git push && curl http://yourjenkinsserver/git/notifyCommit?url=<URL of the Git repository>
+  $ git push && curl http://yourjenkinsserver/git/notifyCommit?url=$(git remote -v | grep -m 1 -oh "git@.*git")
   ```
 
 4. You can use git alias to make short cmd by edit .git/config in your git repository
 
   ```sh
     [alias]
-      trig-jenkins = !curl http://yourjenkinsservergit/notifyCommit?url=<URL of the Git repository>
+      trig-jenkins = !curl http://yourjenkinsservergit/notifyCommit?url=$(git remote -v | grep -m 1 -oh "git@.*git")
       push-wt = !git push && git trig-jenkins
   ```
 
