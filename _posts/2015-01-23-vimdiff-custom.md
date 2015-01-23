@@ -73,7 +73,6 @@ endfunction
 ```
 
 Ref:
-1.[use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram](
-http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html)
-2.[Use patience diff algorithm for vimdiff #1466](https://github.com/neovim/neovim/issues/1466)
-3.[Vim documentation: diff](http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options)
+1.[use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram](http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html)  
+2.[Use patience diff algorithm for vimdiff #1466](https://github.com/neovim/neovim/issues/1466)  
+3.[Vim documentation: diff](http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options)  
