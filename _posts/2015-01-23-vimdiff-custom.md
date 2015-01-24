@@ -7,9 +7,8 @@ permalink: vimdiff
 
 You need to convent result of unix diff to ed style to use in vimdiff.
 
-
-
 a.txt
+
 ```sh
 aaaa
 bbbb
@@ -20,6 +19,7 @@ eeee
 ```
 
 b.txt
+
 ```sh
 aabb
 bbbb
@@ -28,6 +28,7 @@ cccc
 ```
 
 diff a.txt b.txt
+
 ```sh
 diff --git a/aaa b/bbb
 index fc3703c..11629db 100644
@@ -45,6 +46,7 @@ index fc3703c..11629db 100644
 ```
 
 ed style of result diff a.txt b.txt
+
 ```sh
 1c1
 < aaaa
@@ -59,6 +61,7 @@ ed style of result diff a.txt b.txt
 ```
 
 my_diff.py
+
 ```python
 #!/usr/bin/env python
 
@@ -116,6 +119,7 @@ if __name__ == '__main__':
 ```
 
 .vimrc
+
 ```sh
 set diffexpr=MyDiff()
 function MyDiff()
