@@ -5,10 +5,61 @@ tags: vim
 permalink: vimdiff
 ---
 
-vimdiff custom
+You need to convent result of unix diff to ed style to use in vimdiff.
 
+
+
+a.txt
+```sh
+aaaa
+bbbb
+cccc
+eeee
+eeee
+eeee
+```
+
+b.txt
+```sh
+aabb
+bbbb
+dddd
+cccc
+```
+
+diff a.txt b.txt
+```sh
+diff --git a/aaa b/bbb
+index fc3703c..11629db 100644
+--- a/aaa
++++ b/bbb
+@@ -1,6 +1,4 @@
+-aaaa
++aabb
+ bbbb
++dddd
+ cccc
+-eeee
+-eeee
+-eeee
+```
+
+ed style of result diff a.txt b.txt
+```sh
+1c1
+< aaaa
+---
+> aabb
+2a3
+> dddd
+4,6d4
+< eeee
+< eeee
+< eeee
+```
+
+my_diff.py
 ```python
-# my_diff.py
 #!/usr/bin/env python
 
 
@@ -64,8 +115,8 @@ if __name__ == '__main__':
     diff(sys.argv[1], sys.argv[2])
 ```
 
+.vimrc
 ```sh
-".vimrc
 set diffexpr=MyDiff()
 function MyDiff()
     silent execute "!python <your_paht>/my_diff.py " . v:fname_in . " " . v:fname_new . " > " . v:fname_out
