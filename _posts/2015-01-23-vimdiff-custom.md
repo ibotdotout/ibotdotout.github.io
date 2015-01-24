@@ -5,7 +5,9 @@ tags: vim
 permalink: vimdiff
 ---
 
-You need to convent result of unix diff to ed style to use in vimdiff.
+###You need to convent result of unix diff to ed style to use in vimdiff.  
+
+###Example::  
 
 a.txt
 
@@ -59,6 +61,9 @@ ed style of result diff a.txt b.txt
 < eeee
 < eeee
 ```
+
+#Code  
+My line by line diff just only change no add or delete, result in ed style to use in vim diff.  
 
 my_diff.py
 
