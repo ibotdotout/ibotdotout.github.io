@@ -123,6 +123,8 @@ if __name__ == '__main__':
     diff(sys.argv[1], sys.argv[2])
 ```
 
+### Set vimdiff to use result of my diff code
+
 .vimrc
 
 ```sh
