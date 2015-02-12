@@ -157,3 +157,4 @@ Cover - (Stmts - Miss)/Stmts * 100
 11. [Software Testing Course](https://www.udacity.com/course/cs258)
 12. [Patching Mocks in Python](http://www.drdobbs.com/architecture-and-design/patching-mocks-in-python/240168924)
 13. [Python Nose: Speed up the runner](http://www.metaklass.org/nose-accelerating-the-runner/)
+14. [Beginning Test-Driven Development in Python](http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137)
