@@ -24,6 +24,7 @@ There are difference between 'building it right' and 'building the right thing'.
 
 
 ## Tips:
+
 * Run All unittest in module:
 
   ```sh
@@ -39,6 +40,12 @@ There are difference between 'building it right' and 'building the right thing'.
 * [Problems using nose in a virtualenv](http://stackoverflow.com/questions/864956/problems-using-nose-in-a-virtualenv)
 
   you can't run nose in system-packages to using packages in virtualenv (sandbox)
+  
+* Run PDB with nosetest:
+
+  ```python
+  from nose.tools import set_trace; set_trace()
+  ```
   
 ##[Nose Multiprocess](http://nose.readthedocs.org/en/latest/plugins/multiprocess.html)
 
