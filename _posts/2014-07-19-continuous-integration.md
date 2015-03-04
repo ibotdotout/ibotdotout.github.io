@@ -307,3 +307,4 @@ $ sudo service jenkins restart
 5. [Jenkins Setup on Os X server](http://oemden.com/?p=205)
 6. [Jenkins and Python](http://www.alexconrad.org/2011/10/jenkins-and-python.html)
 7. [Integration of pylint into jenkins](http://chrigl.de/blogentries/integration-of-pylint-into-jenkins)
+8. [Running Jenkins in Docker Containers](http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/)
