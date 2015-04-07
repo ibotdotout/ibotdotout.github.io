@@ -6,7 +6,7 @@ tags: osx
 
 ## Automatical Way
   ```
-  http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/
+  http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
   ```
 
 ## Manual Way
@@ -40,3 +40,4 @@ tags: osx
 ### Reference:
 1. [http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/](http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/)
 2. [http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/](http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/)
+3. [วิธีทำให้ Mac อ่านและเขียนไฟล์ NTFS บน Windows ได้](http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/)
