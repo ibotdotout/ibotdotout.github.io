@@ -131,7 +131,7 @@ Cover - (Stmts - Miss)/Stmts * 100
 
 
 ## Tools:
-  * Unittests: [Nosetests](https://nose.readthedocs.org), [Rednose](https://pypi.python.org/pypi/rednose), [Coverage](https://pypi.python.org/pypi/coverage)
+  * Unittests: [Nosetests](https://nose.readthedocs.org), [Rednose](https://pypi.python.org/pypi/rednose), [Coverage](https://pypi.python.org/pypi/coverage), [nose-progressive](https://pypi.python.org/pypi/nose-progressive/)
 
   ```sh
   pip install nose rednose coverage
