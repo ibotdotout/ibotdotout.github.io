@@ -167,3 +167,4 @@ $ pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
 7. [Getting started with Robot Framework and plone.app.testing](http://datakurre.pandala.org/2012/09/getting-started-with-robotframework-and.html)
 9. [RobotFramework with the Selenium Library](http://www.wallix.org/2011/07/26/how-to-use-robotframework-with-the-selenium-library/) - [Part2](http://www.wallix.org/2011/09/06/how-to-use-robotframework-part-2/)
 10. [Robot Framework Tutorial – Overview](https://blog.codecentric.de/en/2012/03/robot-framework-tutorial-overview/)
+11. [Rule, Workflow and Technical Activity on Code Reviews](https://bomb0069.wordpress.com/2014/07/08/atdd-code-reviews/)
