@@ -16,4 +16,6 @@ more?](https://www.quora.com/Why-did-I-lose-my-drive-to-learn-more/answer/Shreya
 * You want people to want more rather than wanting less, because if they
 want less then they’re probably not coming back - [James Maher - 10 Common Mistakes Made by New Photographers](http://digital-photography-school.com/10-common-mistakes-made-by-new-photographers/)
 
-
+* Even perfect code cannot explain its own existence. - [How to name
+things: the hardest problem in
+programming](http://www.slideshare.net/pirhilton/how-to-name-things-the-hardest-problem-in-programming)
