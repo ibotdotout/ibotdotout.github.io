@@ -34,8 +34,10 @@ There are difference between 'building it right' and 'building the right thing'.
   - Install nose into python3 package with pip3 then you can run nosetests with python3 via nosetests-3.x ex. nosetests-3.4 if your python3 is version 3.4
 
   ```sh
-  pip3 install nose
-  nosetests-3.x
+  # ubuntu install python3-pip first
+  # $ sudo apt-get install python3-ip
+  $ pip3 install nose
+  $ nosetests-3.x
   ```
 * [Problems using nose in a virtualenv](http://stackoverflow.com/questions/864956/problems-using-nose-in-a-virtualenv)
 
