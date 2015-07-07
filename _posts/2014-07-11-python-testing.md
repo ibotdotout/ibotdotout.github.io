@@ -152,6 +152,16 @@ Cover - (Stmts - Miss)/Stmts * 100
   pip install tox
   ```
 
+## Testing Story
+1. [The Testing on the Toilet (TotT) series](http://googletesting.blogspot.com/search/label/TotT)
+2. [Testing on the Toilet: Test Behaviors, Not
+   Methods](http://googletesting.blogspot.com/2014/04/testing-on-toilet-test-behaviors-not.html)
+3. [Testing on the Toilet: Test Behavior, Not
+   Implementation](http://googletesting.blogspot.com/2013/08/testing-on-toilet-test-behavior-not.html)
+4. [TotT: Better Stubbing in Python](http://googletesting.blogspot.com/2007/01/better-stubbing-in-python.html)
+5. [Unit testing best practices](http://www.slideshare.net/nickokiss/unit-testing-best-practices)
+
+
 ## Testing Python
 1. [Python Testing Start Here](http://pythontesting.net/start-here/)
 2. [Testing in Python: using nose & mocks](http://techblog.appnexus.com/2012/testing-in-python-using-nose-mocks/)
@@ -162,10 +172,7 @@ Cover - (Stmts - Miss)/Stmts * 100
 7. [Beginning Test-Driven Development in Python](http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137)
 8. [Behavior-Driven Development in Python](http://code.tutsplus.com/tutorials/behavior-driven-development-in-python--net-26547)
 9. [Testing with mock](http://pyvideo.org/video/392/pycon-2011--testing-with-mock)
-10. [Unit testing best practices](http://www.slideshare.net/nickokiss/unit-testing-best-practices)
-11. [Software Testing Course](https://www.udacity.com/course/cs258)
-12. [Patching Mocks in Python](http://www.drdobbs.com/architecture-and-design/patching-mocks-in-python/240168924)
-13. [Python Nose: Speed up the runner](http://www.metaklass.org/nose-accelerating-the-runner/)
-14. [Beginning Test-Driven Development in Python](http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137)
-15. [TotT: Better Stubbing in Python](http://googletesting.blogspot.com/2007/01/better-stubbing-in-python.html)
-16. [The Testing on the Toilet (TotT) series](http://googletesting.blogspot.com/search/label/TotT)
+10. [Software Testing Course](https://www.udacity.com/course/cs258)
+11. [Patching Mocks in Python](http://www.drdobbs.com/architecture-and-design/patching-mocks-in-python/240168924)
+12. [Python Nose: Speed up the runner](http://www.metaklass.org/nose-accelerating-the-runner/)
+13. [Beginning Test-Driven Development in Python](http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137)
