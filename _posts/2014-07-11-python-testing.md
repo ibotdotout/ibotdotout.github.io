@@ -168,3 +168,4 @@ Cover - (Stmts - Miss)/Stmts * 100
 13. [Python Nose: Speed up the runner](http://www.metaklass.org/nose-accelerating-the-runner/)
 14. [Beginning Test-Driven Development in Python](http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137)
 15. [TotT: Better Stubbing in Python](http://googletesting.blogspot.com/2007/01/better-stubbing-in-python.html)
+16. [The Testing on the Toilet (TotT) series](http://googletesting.blogspot.com/search/label/TotT)
