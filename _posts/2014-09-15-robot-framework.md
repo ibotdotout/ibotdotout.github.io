@@ -72,12 +72,12 @@ support only .html, .xhtml, .htm, .tsv, .txt, .rst, or .rest file in dir
 
 
 ## RF Variable
-- scalars               - ${SCALAR} 
+- scalars               - ${SCALAR}
 - lists                 - @{LIST}
 - environment variables - %{VARIABLE}
 
 - all capital letters with global variables -  ${VAR}
-- small letters with local variables        -  ${my_var}  
+- small letters with local variables        -  ${my_var}
 
 
 
@@ -142,6 +142,13 @@ $ pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
 ```python
 :FOR    ${elem}   IN    @{list}
 \    LOG     ${elem}
+```
+
+## Selenium Driver
+
+```sh
+$ brew install chromedriver # chrome driver for osx
+$ apt-get install phatomjs # GUI less driver for ubuntu
 ```
 
 ## Plugin:
