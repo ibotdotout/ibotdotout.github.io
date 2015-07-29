@@ -19,3 +19,9 @@ want less then they’re probably not coming back - [James Maher - 10 Common Mis
 * Even perfect code cannot explain its own existence. - [How to name
 things: the hardest problem in
 programming](http://www.slideshare.net/pirhilton/how-to-name-things-the-hardest-problem-in-programming)
+
+* Read the source, Luke! - [Getting into Linux Kernel Development](https://www.cyphar.com/blog/post/getting-into-linux-kernel-development)
+
+* You can search Google to understand any hot new technology in a few
+minutes, but you can't search Google to balance individual desire -
+[Tech is Not the Problem, People Are](http://www.thoughtworks.com/insights/blog/tech-not-problem-people-are)
