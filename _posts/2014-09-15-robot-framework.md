@@ -148,6 +148,7 @@ $ pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
 
 ```sh
 $ brew install chromedriver # chrome driver for osx
+$ brew install phantomjs # GUI less driver for osx
 $ apt-get install phatomjs # GUI less driver for ubuntu
 ```
 
