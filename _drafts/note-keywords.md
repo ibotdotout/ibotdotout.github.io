@@ -46,3 +46,28 @@ SasS
 * http://agilesg.wingman-sw.com
 * ISTQB
 * Tickur.com, Lookgr.am, Roomidex.com, Searchnwork.com Blockspring.com
+
+## Hakcing
+* msfconsole
+* netcat
+* gcat
+* reverse_tcp (php)
+* iodine
+* ptunnel
+* http-tunnel
+* update-rd.da
+
+## UI testing
+* loadUI
+* SoapUI
+
+## Tex Slide
+* rst2pdf
+* reStructuredText
+
+## Webpage
+* https://developers.google.com/speed/pagespeed/insights/
+* https://developers.google.com/speed/pagespee
+* http://uptimerobot.com
+* pingdom
+* http://newrelic.com
