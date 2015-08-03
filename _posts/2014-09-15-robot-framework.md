@@ -166,6 +166,8 @@ $ apt-get install phatomjs # GUI less driver for ubuntu
 1. [RobotDemo - Python Calculator](https://bitbucket.org/robotframework/robotdemo/src/0f996d178905?at=master)
 2. [Acceptance Test Driven Development with Robot Framework](https://code.google.com/p/atdd-with-robot-framework/)
 3. [Robot Framework Demo](https://bitbucket.org/robotframework)
+4. [Using Robot + Selenium for automatic browser testing](https://www.youtube.com/watch?v=ZPqtGfPHsMA)
+
 
 ## References:
 2. [Robot Framework Keywords](http://stackoverflow.com/questions/19648439/robot-framework-keywords)
@@ -176,3 +178,4 @@ $ apt-get install phatomjs # GUI less driver for ubuntu
 9. [RobotFramework with the Selenium Library](http://www.wallix.org/2011/07/26/how-to-use-robotframework-with-the-selenium-library/) - [Part2](http://www.wallix.org/2011/09/06/how-to-use-robotframework-part-2/)
 10. [Robot Framework Tutorial – Overview](https://blog.codecentric.de/en/2012/03/robot-framework-tutorial-overview/)
 11. [Rule, Workflow and Technical Activity on Code Reviews](https://bomb0069.wordpress.com/2014/07/08/atdd-code-reviews/)
+14. [ATDD by Robot Framework#1 - ATH](http://agilethailand.org/2012/07/14/atdd-by-robot-1/)
