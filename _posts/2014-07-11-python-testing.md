@@ -160,6 +160,10 @@ Cover - (Stmts - Miss)/Stmts * 100
    Implementation](http://googletesting.blogspot.com/2013/08/testing-on-toilet-test-behavior-not.html)
 4. [TotT: Better Stubbing in Python](http://googletesting.blogspot.com/2007/01/better-stubbing-in-python.html)
 5. [Unit testing best practices](http://www.slideshare.net/nickokiss/unit-testing-best-practices)
+6. [Good Test, Bad Test](http://late.am/post/2015/04/20/good-test-bad-test.html)
+7. [TestDouble - Martin Flower](http://www.martinfowler.com/bliki/TestDouble.html)
+8. [Testing on the Toilet: Know Your Test Doubles](http://googletesting.blogspot.com/2013/07/testing-on-toilet-know-your-test-doubles.html)
+9. [Understanding Test Doubles (Mock vs Stub)](https://adamcod.es/2014/05/15/test-doubles-mock-vs-stub.html)
 
 
 ## Testing Python
