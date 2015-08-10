@@ -135,6 +135,7 @@ __init__.txt  - init test suite file
 
 ```sh
 $ pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
+$ pybot  -d /tmp --variable SERVER:"192.168.59.103" --variable BROWSER:chrome tests/acceptance/
 ```
 
 ## [For loops](http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html#for-loops) - [Tutorial](https://blog.codecentric.de/en/2013/05/robot-framework-tutorial-loops-conditional-execution-and-more/)
