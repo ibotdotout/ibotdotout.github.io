@@ -7,10 +7,10 @@ permalink: ci
 
 # Continuos Integrations
 
-#  Own Sever Services
-- [Jeknins CI]({{url}}/jenkins)
+###  Own Sever Services
+- [Jeknins CI]({{url}}/jenkins) - Popular Open Source CI
 
 
-## Online Services
-- [Travis CI]({{url}}/travis-ci)
-- [Drone.io CI]({{url}}/drone-ci)
+### Online Services
+- [Travis CI]({{url}}/travis-ci) - Recommend
+- [Drone.io CI]({{url}}/drone-ci) - Easier than Travis, has few features
