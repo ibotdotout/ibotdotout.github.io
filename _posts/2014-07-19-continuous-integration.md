@@ -5,8 +5,6 @@ tags: CI
 permalink: ci
 ---
 
-# Continuos Integrations
-
 ###  Own Sever Services
 - [Jeknins CI]({{url}}/jenkins) - Popular Open Source CI
 
