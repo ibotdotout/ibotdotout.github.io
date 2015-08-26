@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Continuos Integrations
-tags: continuos integrations
+tags: CI
 permalink: ci
 ---
 
