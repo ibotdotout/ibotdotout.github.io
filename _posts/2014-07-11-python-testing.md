@@ -164,6 +164,7 @@ Cover - (Stmts - Miss)/Stmts * 100
 7. [TestDouble - Martin Flower](http://www.martinfowler.com/bliki/TestDouble.html)
 8. [Testing on the Toilet: Know Your Test Doubles](http://googletesting.blogspot.com/2013/07/testing-on-toilet-know-your-test-doubles.html)
 9. [Understanding Test Doubles (Mock vs Stub)](https://adamcod.es/2014/05/15/test-doubles-mock-vs-stub.html)
+10. [Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html)
 
 
 ## Testing Python
