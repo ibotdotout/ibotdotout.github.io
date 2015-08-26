@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vimdiff Custom"
+title: Vimdiff Custom
 tags: vim
 permalink: vimdiff
 ---

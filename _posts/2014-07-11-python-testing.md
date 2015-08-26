@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python Testing"
+title: Python Testing
 tags: python
 permalink: python-testing
 ---

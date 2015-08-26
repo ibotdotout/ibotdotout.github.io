@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OSX Backup"
+title: OSX Backup
 tags: osx
 permalink: osx-backup
 ---
