@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dev Qutoes
-tags: Qutoes
+tags: qutoes
 permalink: quote
 ---
 
