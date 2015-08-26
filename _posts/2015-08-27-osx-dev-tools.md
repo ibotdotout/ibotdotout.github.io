@@ -51,9 +51,6 @@ $ brew cask install dash
 ```sh
 $ brew cask install spectacle
 ```
-```sh
-
-```
 
 ### Etc
 
