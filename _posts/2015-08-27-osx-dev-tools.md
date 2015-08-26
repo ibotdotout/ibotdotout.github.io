@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Dev Tools
-tags: tools
+title: OSX Dev Tools
+tags: osx
 permalink: dev-tools
 ---
-
-# OSX
 
 ### Package Manager
 
@@ -34,15 +32,17 @@ $ brew tap caskroom/fonts
 ```sh
 $ brew cask install iterm2
 ```
+- [Oh My Zsh - managing your zsh configuration.](http://ohmyz.sh)
+
+```sh
+$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+```
 
 - [Dash - API Documentation Browser](https://kapeli.com/dash)
 
 ```sh
 $ brew cask install dash
 ```
-
-- [OSX Thai Dictionary](http://www.iviewapp.net/2012/12/thai-dictionary-mac-os-x-mountain-lion.html)
-
 
 ### Window Manager
 
@@ -51,8 +51,11 @@ $ brew cask install dash
 ```sh
 $ brew cask install spectacle
 ```
+```sh
 
-# All Platform
+```
+
+### Etc
 
 - [f.lux - warm your display color](https://justgetflux.com)
 
@@ -65,3 +68,6 @@ $ brew cask install flux
 ```sh
 $ brew cask install slack
 ```
+
+- [OSX Thai Dictionary](http://www.iviewapp.net/2012/12/thai-dictionary-mac-os-x-mountain-lion.html)
+- [iTerm2 + oh my zsh + solarized + Meslo powerline font (OSX)](https://gist.github.com/kevin-smets/8568070)
