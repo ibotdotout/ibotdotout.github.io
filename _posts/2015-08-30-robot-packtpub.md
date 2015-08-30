@@ -26,7 +26,7 @@ $ pip install robotframework-xvfb
 ## How to use
 
 ```sh
-# Edit {USER} and {PASSWORD} in config.txt first !!!
+# Edit {USER} and {PASSWORD} first !!!
 $ pybot robot-packtpub.txt
 ```
 
