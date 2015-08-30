@@ -37,4 +37,4 @@ $ pybot robot-packtpub.txt
 
 - We use XBFB Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.
 
-- You can use [Travis-CI](https://travis-ci.org) and [Nightly Builds](https://nightli.es) for run your script everyday
+- You can use [Travis-CI](https://travis-ci.org) and [Nightly Builds](https://nightli.es) to run your script everyday.
