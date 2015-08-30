@@ -35,6 +35,6 @@ $ pybot robot-packtpub.txt
   It may change when Web UI changed (XPath Best Solution that I found).
   You can find XPath by following this video - [Quick Tip: Getting The XPath In Google Chrome](https://www.youtube.com/watch?v=vCNLPHP3E_U).
 
-- We use XBFB Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.
+- We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.
 
 - You can use [Travis-CI](https://travis-ci.org) and [Nightly Builds](https://nightli.es) to run your script everyday.
