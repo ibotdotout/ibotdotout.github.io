@@ -31,8 +31,8 @@ $ pybot robot-packtpub.txt
 ```
 
 ## Note
-- We use XPath to locate where button and input form that not flexible,
-  It may change when Web UI changed (XPath Best Solution that I found).
+- We use XPath to locate where button and input form are that not flexible,
+  It may change when Web UI changed (XPath is Best Solution that I found).
   You can find XPath by following this video - [Quick Tip: Getting The XPath In Google Chrome](https://www.youtube.com/watch?v=vCNLPHP3E_U).
 
 - We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.
