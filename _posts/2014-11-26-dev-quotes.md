@@ -25,3 +25,5 @@ programming](http://www.slideshare.net/pirhilton/how-to-name-things-the-hardest-
 * You can search Google to understand any hot new technology in a few
 minutes, but you can't search Google to balance individual desire -
 [Tech is Not the Problem, People Are](http://www.thoughtworks.com/insights/blog/tech-not-problem-people-are)
+
+* เราไม่ได้เหนื่อยเพราะเรื่องที่จบไปแล้ว แต่เหนื่อยเพราะเรื่องที่ยังเหลือมากกว่า - [เมื่อรู้สึกเหนื่อย …](https://medium.com/life-as-i-feel-it/เมื่อรู้สึกเหนื่อย-c701dac759dc)
