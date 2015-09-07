@@ -40,3 +40,4 @@ Page](http://page.github.com) that free hosting support Jekyll.This blog use [La
 
 ### References:  
   1.  [http://joshualande.com/jekyll-github-pages-poole/](http://joshualande.com/jekyll-github-pages-poole/)
+  2.  [Table not render when use Redcarpet in Jekyll GitHub Pages?](http://stackoverflow.com/questions/16099153/table-not-render-when-use-redcarpet-in-jekyll-github-pages)
