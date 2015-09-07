@@ -32,6 +32,7 @@ permalink: vim-command
 |:e\<file\> | edit/new file|
 |:new\<file\> | new file|
 |:vnew\<file\> | new file in vertical|
+|:w !sudo tee % | [write file with sudo premission](https://www.youtube.com/watch?v=C6xqO4Z1nIo)|
 
 ### Number
 |Command|Description|
