@@ -7,4 +7,4 @@ before_install:
   - docker pull jekyll/jekyll:pages
 
 script:
-  - docker run --rm -volume=$(pwd):/srv/jekyll -t jekyll/jekyll:pages sh -c "bundle install && jekyll build && bundle exec htmlproof ./_site"
+  - docker run --rm -v $pwd:/srv/jekyll jekyll/jekyll:pages sh -c "bundle install && jekyll build && bundle exec htmlproof ./_site"
