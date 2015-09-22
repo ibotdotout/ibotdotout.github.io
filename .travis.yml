@@ -5,4 +5,4 @@ rvm:
 
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproof ./_site
+  - bundle exec htmlproof ./_site --disable-external
