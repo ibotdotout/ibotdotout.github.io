@@ -1,11 +1,10 @@
 FROM ruby:2.2
 MAINTAINER ibotdotout
 
-
-ADD Gemfile /src
 WORKDIR /src
+ADD Gemfile /src/Gemfile
 
-RUN bundle install
+RUN gem install
 
 VOLUME /src
 EXPOSE 4000
