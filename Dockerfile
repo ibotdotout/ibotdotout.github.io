@@ -4,7 +4,7 @@ MAINTAINER ibotdotout
 WORKDIR /src
 ADD Gemfile /src/Gemfile
 
-RUN gem install
+RUN bundle install
 
 VOLUME /src
 EXPOSE 4000
