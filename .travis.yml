@@ -1,4 +1,8 @@
-# http://www.jacobtomlinson.co.uk/jekyll/2015/02/18/test-you-jekyll-blog-with-travis-ci/
+# Jekyll + Travis with Docker not work well - [Error:  Permission denied](https://travis-ci.org/ibotdotout/ibotdotout.github.io/builds/81637869)
+# Travis support docker but not fully permission some dependencies that
+# try to use OS command ex. kill can make your test error or failed.
+
+sudo: false
 
 language: ruby
 
