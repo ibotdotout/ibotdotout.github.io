@@ -2,6 +2,7 @@
 layout: post
 title: Recover lost partition
 tags: testdisk
+permalink: recover-lost-partition
 ---
 
 ## Recover lost partition
