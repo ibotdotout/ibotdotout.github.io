@@ -12,4 +12,4 @@ RUN bundle install
 
 VOLUME /src
 EXPOSE 4000
-CMD ["jekyll"]
+CMD ["jekyll", "serve"]
