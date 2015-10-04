@@ -35,4 +35,8 @@ allowfullscreen></iframe></center>
 เขียนโค๊ด แต่ที่เราทำๆ กันมาจะเป็นแบบ ping pong สลับกันเขียนเทส และ โค๊ด
 ไปคนละเทสเคสแทน
 
-## [Read more about pair programming]({{url}}/coding#pair-programming)
+## Pairing Styles
+1. [driver-navigator]( http://articles.coreyhaines.com/posts/thoughts-on-pair-programming/#driver-navigator)
+2. [ping-pong-pairing](http://articles.coreyhaines.com/posts/thoughts-on-pair-programming/#ping-pong-pairing)
+
+- [Read more about pair programming]({{url}}/coding#pair-programming)
