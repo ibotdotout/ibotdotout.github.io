@@ -5,6 +5,25 @@ tags: coding
 permalink: pair-programming
 ---
 
+> My mind to your mind. My thoughts to your thoughts... -- MrSpock
+
+
+## [All I really need to know about pair programming I learned in kindergarten](http://www.cs.rice.edu/~mgricken/teaching/402/09-spring/readings/Everything.pdf)
+
+> When it comes to programming practices,
+> studies show two heads are almost always better than one.
+
+> The pair can solve problems they couldn’t solve alone and can help
+> improve each other’s skills.
+
+> If you think about something long enough, the brain will consider it a
+> truth.  If you tell yourself something negative, such as “I'm a terrible
+> programmer,” soon your brain will believe you.
+
+
+
+## [Power of Pair Programming](https://www.youtube.com/watch?v=l8W6T5Opfcw)
+
 เพิ่งได้ดู Power of Pair Programming จากงาน [Agile Thailand](https://www.facebook.com/AGTH66) น่าจะของปี 2012
 [พี่รูฟ Twin Panichsombat](https://www.facebook.com/roofimon.class) ได้พูดถึงประสบการ์การนำ pair programming เข้าไปใช้ใน
 [Opendream](https://www.facebook.com/opendream)
@@ -34,6 +53,7 @@ allowfullscreen></iframe></center>
 โดยมี senior เป็น navigator คอยบอกว่าจะทำอะไร ตรงไหน junior เป็นคน
 เขียนโค๊ด แต่ที่เราทำๆ กันมาจะเป็นแบบ ping pong สลับกันเขียนเทส และ โค๊ด
 ไปคนละเทสเคสแทน
+
 
 ## Pairing Styles
 1. [driver-navigator]( http://articles.coreyhaines.com/posts/thoughts-on-pair-programming/#driver-navigator)
