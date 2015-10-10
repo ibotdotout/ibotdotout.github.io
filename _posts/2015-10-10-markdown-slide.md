@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Makrdown Slide
+title: Markdown Slide
 tags: markdown
 permalink: slide
 ---
