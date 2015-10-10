@@ -24,6 +24,8 @@ permalink: slide
 
 ## Helper Tools:
 - [Python Server Auto Reload](https://github.com/lepture/python-livereload)
+- [markdown-live](https://github.com/mobily/markdown-live)
+- [vim-instant-markdown](https://github.com/suan/vim-instant-markdown) - [Video](https://www.youtube.com/watch?v=NqKDUxp5wsA)
 
 ## References:
 1. [Markdown to Slide Presentation](http://caseywatts.github.io/2012/12/12/markdown_to_slide_presentation/)
