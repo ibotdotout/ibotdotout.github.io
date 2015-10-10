@@ -13,14 +13,14 @@ Automate claim [free ebook from packtpub](https://www.packtpub.com/packt/offers/
 ## Package Requirements or [Dockerfile on Robot-packtpub Repo](https://github.com/ibotdotout/robot-packtpub)
 
 ```sh
-# should work on debian/ubuntu
+# ubuntu
 $ apt-get -y update
 $ apt-get -y install python-dev python-pip
-$ apt-get -y install xvfb firefox
+$ apt-get install -y phantomjs libicu52 wget
+$ wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs -O /usr/bin/phantomjs && chmod +x /usr/bin/phantomjs
 
 $ pip install robotframework
 $ pip install robotframework-selenium2library
-$ pip install robotframework-xvfb
 ```
 
 ## How to use
@@ -35,6 +35,6 @@ $ pybot robot-packtpub.txt
   It may change when Web UI changed (XPath is Best Solution that I found).
   You can find XPath by following this video - [Quick Tip: Getting The XPath In Google Chrome](https://www.youtube.com/watch?v=vCNLPHP3E_U).
 
-- We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.
+-  `PhantomJS2.0 fixed this issue` We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.
 
 - You can use [Travis-CI](https://travis-ci.org) and [Nightly Builds](https://nightli.es) to run your script everyday - [See demo here](https://github.com/ibotdotout/robot-packtpub).
