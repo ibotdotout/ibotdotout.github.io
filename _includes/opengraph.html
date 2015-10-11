@@ -1,7 +1,7 @@
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
-<meta property="og:image" content="{% if page.thumbnail %}{{ page.thumbnail | prepend: site.url }}{% else %}{{ author.avatar }}{% endif %}">
+<meta property="og:image" content="{% if page.thumbnail %}{{ page.thumbnail | prepend: site.url }}{% else %}{{ site.author.avatar }}{% endif %}">
 <meta property="og:description" content="{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{{ site.locale }}">
