@@ -12,7 +12,7 @@ title:            botbotbot
 tagline:          "'s blog"
 description:      "botbotbot's blog"
 locale:           th_TH
-url:              http://ibotdotout.github.io
+url:              http://dev.im-bot.com
 paginate:         5
 baseurl: /
 
@@ -20,7 +20,7 @@ baseurl: /
 author:
   name:           botbotbot
   avatar:         https://avatars0.githubusercontent.com/u/686676?v=3&s=460
-  url:            http://ibotdotout.github.io
+  url:            http://dev.im-bot.com
 
 # Custom vars
 version:          0.0.1
