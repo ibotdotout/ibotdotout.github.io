@@ -11,6 +11,7 @@ permalink:        pretty
 title:            botbotbot
 tagline:          "'s blog"
 description:      "botbotbot's blog"
+locale:           th_TH
 url:              http://ibotdotout.github.io
 paginate:         5
 baseurl: /
