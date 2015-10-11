@@ -30,3 +30,6 @@ github:
 
 gems:
     - jekyll-feed
+
+feed:
+    path: atom.xml
