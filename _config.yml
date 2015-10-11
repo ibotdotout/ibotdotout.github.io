@@ -16,7 +16,6 @@ url:              http://dev.im-bot.com
 paginate:         5
 baseurl: /
 
-
 author:
   name:           botbotbot
   avatar:         https://avatars0.githubusercontent.com/u/686676?v=3&s=460
@@ -28,8 +27,7 @@ version:          0.0.1
 github:
   repo:           https://github.com/ibotdotout
 
+google_analytics_id: UA-52133577-1
+
 gems:
     - jekyll-feed
-
-feed:
-    path: atom.xml

@@ -26,7 +26,7 @@
   <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
   <!-- Google Analytic-->
   <script>
@@ -36,6 +36,7 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-52133577-1', 'auto');
+    ga('create', '{{ site.google_analytics_id }}', 'auto');
     ga('send', 'pageview');
 
   </script>
