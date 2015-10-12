@@ -32,3 +32,4 @@ google_analytics_id: UA-52133577-1
 
 gems:
     - jekyll-feed
+    - jekyll-lunr-js-search

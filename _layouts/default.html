@@ -15,9 +15,12 @@
           <h3 class="masthead-title">
             <a href="/" title="Home">{{ site.title }}</a>
             <small>{{ site.tagline }}</small>
+            {% include search-form.html %}
           </h3>
         </div>
       </div>
+
+      {% include search-results.html %}
 
       <div class="container content">
         {{ content }}
@@ -27,4 +30,6 @@
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
   </body>
+
+  {% include search.html %}
 </html>
