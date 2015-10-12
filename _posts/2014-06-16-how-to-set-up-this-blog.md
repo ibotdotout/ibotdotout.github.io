@@ -21,7 +21,7 @@ Page](http://page.github.com) that free hosting support Jekyll.This blog use [La
   ```
     git clone https://github.com/poole/lanyon.git
   ```  
-  3. Configs jekyll in  ``` _config.yml```   
+  3. Configs jekyll in  `_config.yml`   
 
   ```yaml
     #setup
@@ -38,6 +38,16 @@ Page](http://page.github.com) that free hosting support Jekyll.This blog use [La
   ```
   5. Let blog it.
 
+
+### Add Feed in Jekyll
+1. [Jekyll Feed plugin - Recommend](https://github.com/jekyll/jekyll-feed)
+2. [Atom Feed in Jekyll](http://jekyll.tips/tutorials/atom-feed/)
+3. [RSS Feed in Jekyll](http://jekyll.tips/tutorials/rss-feed/)
+4. [RSS for Jekyll blogs](http://joelglovier.com/writing/rss-for-jekyll/)
+
+
 ### References:  
-  1.  [http://joshualande.com/jekyll-github-pages-poole/](http://joshualande.com/jekyll-github-pages-poole/)
-  2.  [Table not render when use Redcarpet in Jekyll GitHub Pages?](http://stackoverflow.com/questions/16099153/table-not-render-when-use-redcarpet-in-jekyll-github-pages)
+  1. [http://joshualande.com/jekyll-github-pages-poole/](http://joshualande.com/jekyll-github-pages-poole/)
+  2. [Table not render when use Redcarpet in Jekyll GitHub Pages?](http://stackoverflow.com/questions/16099153/table-not-render-when-use-redcarpet-in-jekyll-github-pages)
+  3. [Jekyll-Plugins](http://www.jekyll-plugins.com)
+  4. [Jekyll Stater](http://jekyll.tips)
