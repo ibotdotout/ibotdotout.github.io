@@ -13,6 +13,7 @@ tagline:          "'s blog"
 description:      "botbotbot's blog"
 locale:           th_TH
 url:              http://dev.im-bot.com
+logo:             /public/header_logo.png
 paginate:         5
 baseurl: /
 
