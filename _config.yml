@@ -30,6 +30,9 @@ github:
 
 google_analytics_id: UA-52133577-1
 
+lunr_search:
+    excludes: [feed.xml, tags]
+
 gems:
     - jekyll-feed
     - jekyll-lunr-js-search
