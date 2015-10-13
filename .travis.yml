@@ -14,12 +14,12 @@ script:
 after_success:
 - git clone https://github.com/ibotdotout/ibotdotout.github.io.git
 - cd ibotdotout.github.io
+- git pull origin develop
+- git merge develop
 - cp ../_site/js/index.json js/index.json
 - git config user.name "Travis-CI"
 - git config user.email "deploy@travis.com"
 - git commit -am "Generated index.json by Travis CI"
-- git checkout master
-- git merge develop
 - git push -f "https://${DEPLOY_KEY}@${GH_REF}" master
 
 env:
