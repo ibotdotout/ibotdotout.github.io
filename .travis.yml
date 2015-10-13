@@ -12,7 +12,9 @@ script:
 - bundle exec htmlproof ./_site --disable-external
 
 after_success:
-- cp _site/js/index.json js/index.json
+- git clone https://github.com/ibotdotout/ibotdotout.github.io.git
+- cd ibotdotout.github.io
+- cp ../_site/js/index.json js/index.json
 - git config user.name "Travis-CI"
 - git config user.email "deploy@travis.com"
 - git commit -am "Generated index.json by Travis CI"
