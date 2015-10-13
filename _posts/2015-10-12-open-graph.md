@@ -23,6 +23,8 @@ Add this meta data to your `html page` between `<head> ... </head>`
 
 Then using [Open Graph Object Debugger](https://developers.facebook.com/tools/debug/og/object/) to look what it look like when shared.
 
+<!-- more -->
+
 ### Tips:
 - `og:image` always cache in fb server. you should change your image url to force fb reload your image.
 

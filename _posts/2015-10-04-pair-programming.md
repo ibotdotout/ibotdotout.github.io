@@ -20,6 +20,7 @@ permalink: pair-programming
 > truth.  If you tell yourself something negative, such as “I'm a terrible
 > programmer,” soon your brain will believe you.
 
+<!-- more -->
 
 
 ## [Power of Pair Programming](https://www.youtube.com/watch?v=l8W6T5Opfcw)

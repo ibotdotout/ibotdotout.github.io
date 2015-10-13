@@ -22,6 +22,8 @@ permalink: slide
 - [reveal.js - more powerful](https://github.com/hakimel/reveal.js) - [Example](http://lab.hakim.se/reveal-js/)
 - [Cleaver](https://github.com/jdan/cleaver) - [Example](http://jdan.github.io/cleaver)
 
+<!-- more -->
+
 ## Helper Tools:
 - [Python Server Auto Reload](https://github.com/lepture/python-livereload)
 - [markdown-live](https://github.com/mobily/markdown-live)

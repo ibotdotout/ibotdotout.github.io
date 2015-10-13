@@ -8,6 +8,8 @@ permalink: fp-python
 พอดีเพิ่งอ่าน [Oreilly.com FP in python](http://www.oreilly.com/programming/free/files/functional-programming-python.pdf) จบ แบบมึนๆ เนื่องจากยังไม่แน่นใน concept
 ของ FP เลยมาสรุปแปะไว้ก่อน เผื่อใครสนใจอ่าน
 
+<!-- more -->
+
 1. python แค่ยืม concept บางส่วนมาจาก FP
 2. แนวคิดแบบ FP สามารถนำมาประยุกต์ใช้ให้โค๊ดดีขึ้น เช่น
   - list comprehensive / generator expression
