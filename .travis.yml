@@ -1,18 +1,27 @@
-# Jekyll + Travis with Docker not work well - [Error:  Permission denied](https://travis-ci.org/ibotdotout/ibotdotout.github.io/builds/81637869)
-# Travis support docker but not fully permission some dependencies that
-# try to use OS command ex. kill can make your test error or failed.
-
 sudo: false
-
 language: ruby
-
 rvm:
-  - 2.2
+- 2.2
+
+branches:
+  only:
+  - develop
 
 script:
-  - bundle exec jekyll build
-  - bundle exec htmlproof ./_site --disable-external
+- bundle exec jekyll build
+- bundle exec htmlproof ./_site --disable-external
+
+after_success:
+- cp _site/js/index.json js/index.json
+- git config user.name "Travis-CI"
+- git config user.email "deploy@travis.com"
+- git commit -am "Generated index.json by Travis CI"
+- git checkout master
+- git merge develop
+- git push -f "https://${DEPLOY_KEY}@${GH_REF}" master
 
 env:
-    global:
-        - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GH_REF: https://github.com/ibotdotout/ibotdotout.github.io.git
+  - secure: XhG0/MZjThMYdlosJkfRr8wpZLSxuXKf4i/jbuDrhkbwI4aIe46aYKkm3L6TaTYXXYjb8o2begoPKVE9TPTBu6goL5Pjl4TSLf0ARH/Q6Ue6Ukub3G81EF29H+XhV9y/yAWrfHpsk/a0Q3aMX8+EgUDKrdIfvZAZZXJ/puR/POw=
