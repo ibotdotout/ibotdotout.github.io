@@ -14,7 +14,7 @@ script:
 # deploy from devlope bramch to master branch and update index.json for searching
 after_success:
 - git clone https://$GH_REF
-- cd $(basename $GH_REF)
+- cd $(basename ${GH_REF%.git})
 - git pull origin develop
 - cp ../_site/js/index.json js/index.json
 - git config user.name "Travis-CI"
