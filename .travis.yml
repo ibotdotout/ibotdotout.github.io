@@ -23,5 +23,5 @@ after_success:
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GH_REF: https://github.com/ibotdotout/ibotdotout.github.io.git
+  - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - secure: XhG0/MZjThMYdlosJkfRr8wpZLSxuXKf4i/jbuDrhkbwI4aIe46aYKkm3L6TaTYXXYjb8o2begoPKVE9TPTBu6goL5Pjl4TSLf0ARH/Q6Ue6Ukub3G81EF29H+XhV9y/yAWrfHpsk/a0Q3aMX8+EgUDKrdIfvZAZZXJ/puR/POw=
