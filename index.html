@@ -14,12 +14,14 @@ title: botbotbot's blog
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-  {% if post.content contains "<!-- more -->" %}
-    {{ post.content | split:"<!-- more -->" | first % }}
-    <div style="text-align:right;">
-      <a href="{{ post.url }}" style="color:#000;"> Read More </a>
-    </div>
-  {% endif %}
+    {% if post.content contains "<!-- more -->" %}
+      {{ post.content | split:"<!-- more -->" | first % }}
+      <div style="text-align:right;">
+        <a href="{{ post.url }}" style="color:#000;"> Read More </a>
+      </div>
+    {% else %}
+      {{ post.content }}
+    {% endif %}
   {% endfor %}
 </div>
 
