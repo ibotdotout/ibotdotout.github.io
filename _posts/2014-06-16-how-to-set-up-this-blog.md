@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to set up this blog
-#permalink: "hello-world"
+permalink: how-to-setup-this-blog
 tags: [jekyll]
 ---
 
