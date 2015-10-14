@@ -21,4 +21,8 @@
         template: '#search-results-template'  // selector for Mustache.js template
       });
     });
+    $("#close-search-results").click(function(){
+      $('#search-query').val('');
+      $('#search-results').hide();
+    });
   </script>

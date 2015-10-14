@@ -1,5 +1,6 @@
 jekyll:
   build: .
+  command: jekyll serve --safe
   volumes:
    - .:/src
   ports:
