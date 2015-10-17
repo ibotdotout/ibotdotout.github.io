@@ -10,9 +10,9 @@ excerpt: Collection example of text processing in shell
 
 ## Sed
 
-> Trip:
-> `sed` in OSX may not working as example. You should try `gsed`.
-> `gsed` can install via brew and call `gsed` instead of `sed`
+> Trip:  
+> `sed` in OSX may not working as example. You should try `gsed`.  
+> `gsed` can install via brew and call `gsed` instead of `sed`  
 
 ```sh
 $ cat in
@@ -52,10 +52,8 @@ hello dog meow meow dog dog dog love dog
 
 
 Reference:
-- [Sed - An Introduction and Tutorial by Bruce Barnett](http://www.grymoire.com/Unix/Sed.html)
-- [Advanced Bash-Scripting Guide: Sed](http://tldp.org/LDP/abs/html/x23170.html)
-- [Sed Command in Unix and Linux Examples](http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html)
-- [Unix Sed Tutorial: Advanced Sed Substitution
-Examples](http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/)
-- [regular expression in sed for masking credit
-card](http://stackoverflow.com/questions/2232200/regular-expression-in-sed-for-masking-credit-card)
+- [Sed - An Introduction and Tutorial by Bruce Barnett](http://www.grymoire.com/Unix/Sed.html)  
+- [Advanced Bash-Scripting Guide: Sed](http://tldp.org/LDP/abs/html/x23170.html)  
+- [Sed Command in Unix and Linux Examples](http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html)  
+- [Unix Sed Tutorial: Advanced Sed Substitution Examples](http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/)  
+- [regular expression in sed for masking credit card](http://stackoverflow.com/questions/2232200/regular-expression-in-sed-for-masking-credit-card)  
