@@ -51,7 +51,7 @@ hello dog meow meow dog dog dog love dog
 ```
 
 
-Reference:
+Reference:  
 - [Sed - An Introduction and Tutorial by Bruce Barnett](http://www.grymoire.com/Unix/Sed.html)  
 - [Advanced Bash-Scripting Guide: Sed](http://tldp.org/LDP/abs/html/x23170.html)  
 - [Sed Command in Unix and Linux Examples](http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html)  
