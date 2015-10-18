@@ -8,17 +8,18 @@ excerpt: Read more feature on jekyll that working with Github Pages
 ---
 
 > Github Pages Tips:  
-> Github Pages always complie jekyll wiht `--safe` option that will  
+> Github Pages always complie jekyll with `--safe` option that will  
 > disable plugins but some plugin can work with Github Pages.  
 > [List of Jekyll Plguins that working on Github > Pages](https://help.github.com/articles/using-jekyll-plugins-with-github-pages/)  
 
-Just using `truncate` they not checking html tag that make site look
+Just using `truncate` they not checking html tag that make your site look
 terrible and Github Pages not support custom ruby script that place in
 `_plugins`. The better way is using split with custom tags.
 
 Replace `{{ post.content }}` in `index.html` in jekyll directory with
 
 ```ruby
+    {% raw %}
     {% if post.content contains "<!-- more -->" %}
       {{ post.content | split:"<!-- more -->" | first % }}
       <div style="text-align:right;">
@@ -27,6 +28,7 @@ Replace `{{ post.content }}` in `index.html` in jekyll directory with
     {% else %}
       {{ post.content }}
     {% endif %}
+    {% endraw %}
 ```
 
 <!-- more -->
