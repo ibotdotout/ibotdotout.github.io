@@ -10,14 +10,14 @@ Sometime, you download file from Internet specially file that in local language
 which not encode with UTF-8 that unreadable on OSX. Your should guess
 what encode that file using and convert it in to UTF-8.
 
-Ex. Thai language on Windows system normally encode with TIS-620 when
-open it in OSX that will display with some symbol char that unreadable.
-You should convert that file from tis-620 to utf-8 which make it readable on osx.
-
 ```sh
 # convert tis-620 to utf-8 encoding
 $iconv -f tis-620 -t utf-8 source.xml > destination.xml
 ```
+
+Example. Thai language on Windows system normally encode with TIS-620 when
+open it in OSX that will display with some symbol char that unreadable.
+You should convert that file from tis-620 to utf-8 which make it readable on osx.
 
 <!-- more -->
 
