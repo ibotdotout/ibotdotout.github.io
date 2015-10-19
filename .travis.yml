@@ -1,32 +1,27 @@
 sudo: false
-
 language: ruby
-
 rvm:
 - 2.2
-
 branches:
   only:
   - develop
-
 script:
 - rm js/index.json
 - bundle exec jekyll build
 - bundle exec htmlproof ./_site --disable-external
-
 after_success:
 - git clone https://$GH_REF
 - cd $(basename ${GH_REF%.git})
 - git config user.name "Travis-CI"
-- git config user.email "deploy@travis.com"
+- git config user.email ${EMAIL}
 - git fetch --all
 - git reset --hard origin/develop
 - cp ../_site/js/index.json js/index.json
 - git commit -am "Generated index.json by Travis CI"
 - git push -f "https://${DEPLOY_KEY}@${GH_REF}" master > /dev/null 2>&1
-
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - secure: MMVRfrturUGNxfYV40euU9JfAK0mFo/afZ0X3MU5jrjw8DHFcLLC5LnEEbMtqX73VgJOskl49+yYShMVHOrMGx/1tf9ZwsT2GpJBrmoIDpjedQD1wUq/nQxa8Y6hebCi1HXiqqc+JoMdbgHSg8jhTNsv1hcTig8tyj7+bl2fxMU=
+  - secure: Ukt0OY/x3pM3ac09VNQ1sqNWtFjwhPSR1AM8H3CJ9g+yrv2cF/r7XoMs1hiMgM44UpEfnlHFlU1qGAGKfpgF5lcXe/yI4p2wkvH+Y7zQIJoPcAsF44rSxo5awG73CQnVy/GXyfo6VTh/5WDQX15Ki325j4WMsUsqz+J5dMA/r0M=
