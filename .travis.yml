@@ -17,12 +17,11 @@ script:
 after_success:
 - git clone https://$GH_REF
 - cd $(basename ${GH_REF%.git})
-- git pull origin develop
-- cp ../_site/js/index.json js/index.json
 - git config user.name "Travis-CI"
 - git config user.email "deploy@travis.com"
-- git status
-- git add js/index.json
+- git fetch --all
+- git reset --hard origin/develop
+- cp ../_site/js/index.json js/index.json
 - git commit -am "Generated index.json by Travis CI"
 - git push -f "https://${DEPLOY_KEY}@${GH_REF}" master > /dev/null 2>&1
 
