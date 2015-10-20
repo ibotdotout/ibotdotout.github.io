@@ -1,24 +1,29 @@
 sudo: false
+
 language: ruby
+
 rvm:
 - 2.2
+
 branches:
   only:
   - develop
+
 script:
 - rm js/index.json
 - bundle exec jekyll build
 - bundle exec htmlproof ./_site --disable-external
+
 after_success:
 - git clone https://$GH_REF
 - cd $(basename ${GH_REF%.git})
 - git config user.name "Travis-CI"
 - git config user.email ${EMAIL}
-- git fetch --all
-- git reset --hard origin/develop
-- cp ../_site/js/index.json js/index.json
-- git commit -am "Generated index.json by Travis CI"
-- git push -f "https://${DEPLOY_KEY}@${GH_REF}" master > /dev/null 2>&1
+- cp -R ../_site/* .
+- git add -A .
+- git commit -m "Generated Jekyll Site by Travis CI"
+- git push --quient "https://${DEPLOY_KEY}@${GH_REF}" master > /dev/null 2>&1
+
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
