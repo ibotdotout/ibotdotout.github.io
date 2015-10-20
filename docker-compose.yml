@@ -1,6 +1,0 @@
-jekyll:
-  build: .
-  volumes:
-   - .:/src
-  ports:
-   - "80:4000"
