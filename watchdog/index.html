@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <meta property="og:title" content="Watchdog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dev.im-bot.com/watchdog/" />
+<meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
+<meta property="og:description" content="WatchdogPython API and shell utilities to monitor file system events." />
+<meta property="og:site_name" content="botbotbot" />
+<meta property="og:locale" content="th_TH" />
+
+
+  <title>
+    
+      Watchdog &middot; botbotbot
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/searchbox.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+  <!-- Google Analytic-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-52133577-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>botbotbot's blog</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tags/">Tags</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2015. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">botbotbot</a>
+            <small>'s blog</small>
+            <!-- jekyll-lunr-js-search -->
+<span id="search">
+  <form action="/search" method="get" id="searchbox">
+    <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+  </form>
+</span>
+
+          </h3>
+        </div>
+      </div>
+
+      <!-- jekyll-lunr-js-search -->
+<div class="container">
+  <div class="post">
+    <section id="search-results" style="display: none;">
+        <div id="close-search-results">
+          <h1 class="post-title">
+              Search results
+              <i class="fa fa-times" style="font-size: 0.7em"></i>
+          </h1>
+        </div>
+        <div class="entries">
+         </div>
+    </section>
+  </div>
+</div>
+
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Watchdog</h1>
+  <span class="post-date">20 Jul 2014</span>
+  <h3 id="watchdog"><a href="https://github.com/gorakhargosh/watchdog">Watchdog</a></h3>
+
+<p>Python API and shell utilities to monitor file system events.</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">pip install watchdog
+</code></pre></div>
+<h3 id="watching-python-file-changes">Watching python file changes</h3>
+
+<p><noscript><pre>#!/usr/bin/env python
+import os
+import sys
+import time
+from watchdog.observers import Observer
+from watchdog.events import PatternMatchingEventHandler</p>
+
+<p>def when_file_changed(filename):
+    &quot;&quot;&quot;
+        Unittest Monitoring with coverage filtering
+        file - ./&lt;projectname&gt;/&lt;package&gt;/&lt;file&gt;.py
+            ex. ./meow_meow/core/api.py
+        testfile - ./tests/unit/&lt;package&gt;/test_&lt;file&gt;.py
+            ex. ./tests/unit/core/test_api.py
+    &quot;&quot;&quot;
+    def projectname():
+        &quot;&quot;&quot;
+            Projectname from name of current directory (&#39;.&#39;)
+            if there are dash &#39;-&#39; in its name replace to underscore &#39;<em>&#39;
+        &quot;&quot;&quot;
+        return os.path.abspath(&quot;.&quot;).rsplit(&quot;/&quot;, 1)[1].replace(&quot;-&quot;, &quot;</em>&quot;)</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">def package(filename):
+    basename = os.path.basename(filename)
+    if not basename.startswith(&amp;quot;test_&amp;quot;):
+        package = filename.replace(&amp;quot;./&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
+    else:
+        package = filename.replace(&amp;quot;./tests/unit&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
+        package = projectname() + package.replace(&amp;quot;/test_&amp;quot;, &amp;quot;/&amp;quot;)
+    package = package.replace(&amp;quot;/&amp;quot;, &amp;quot;.&amp;quot;)
+    return package
+
+def test_file(filename):
+    basename = os.path.basename(filename)
+    if not basename.startswith(&amp;quot;test_&amp;quot;):
+        filename = filename.replace(projectname(), &amp;quot;tests/unit&amp;quot;)
+        filename = filename.replace(basename, &amp;quot;test_&amp;quot; + basename)
+    return filename
+
+cls()
+print(os.path.abspath(filename))
+args = {&amp;quot;package&amp;quot;: package(filename), &amp;quot;testfile&amp;quot;: test_file(filename)}
+cmd = &amp;quot;nosetests --with-coverage --cover-erase --cover-package={package}&amp;quot; \
+      &amp;quot; -v {testfile}&amp;quot;.format(**args)
+os.system(cmd)
+</code></pre></div>
+<p>def cls():
+    os.system(&#39;cls&#39; if os.name == &#39;nt&#39; else &#39;clear&#39;)</p>
+
+<p>class ModifiedHandler(PatternMatchingEventHandler):
+    patterns = [&quot;*.py&quot;]  # Monitor only matched patterns</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">def on_created(self, event):
+    &amp;quot;&amp;quot;&amp;quot;&amp;quot; For Vim :w - not modify that deleted and created file instead. &amp;quot;&amp;quot;&amp;quot;
+    when_file_changed(event.src_path)
+
+def on_modified(self, event):
+    &amp;quot;&amp;quot;&amp;quot; For other text-editor ex.sublime &amp;quot;&amp;quot;&amp;quot;
+    when_file_changed(event.src_path)
+</code></pre></div>
+<p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:
+    args = sys.argv[1:]
+    event_handler = ModifiedHandler()
+    observer = Observer()
+    observer.schedule(event_handler,
+                      path=args[1] if args else &#39;.&#39;, recursive=True)
+    observer.start()</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">try:
+    while True:
+        time.sleep(1)
+except KeyboardInterrupt:
+    observer.stop()
+observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/ibotdotout/8f42fbc0ee122f89e728.js&quot;&gt; &lt;/script&gt;
+</code></pre></div>
+<h3 id="watchdog-over-docker-vm-via-polling">Watchdog over Docker (VM) via polling -</h3>
+
+<p><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Ref</a></p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">watchdog.observers.polling</span> <span class="kn">import</span> <span class="n">PollingObserver</span> <span class="k">as</span> <span class="n">Observer</span>
+<span class="n">Observer</span><span class="p">()</span> <span class="c">#polling every 1 second</span>
+</code></pre></div>
+<h3 id="references">References:</h3>
+
+<ol>
+<li><a href="https://pythonhosted.org/watchdog/api.html#event-handler-classes">Event Handler Classes</a></li>
+<li><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a><br></li>
+<li><a href="http://ginstrom.com/scribbles/2012/05/10/continuous-integration-in-python-using-watchdog/">Continuous integration in python using watchdog</a></li>
+</ol>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/osx-convert-encoding">
+            Convert File Encoding in OSX
+            <small>19 Oct 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/read-more-jekyll">
+            Read more feature on jekyll
+            <small>18 Oct 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/text-processing">
+            Text Processing in Shell
+            <small>17 Oct 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+
+    <!-- jekyll-lunr-js-search -->
+  <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script id="search-results-template" type="text/mustache">
+    {{#entries}}
+      <article>
+        <h3>
+          {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+          <a href="{{url}}">{{title}}</a>
+        </h3>
+      </article>
+    {{/entries}}
+  </script>
+  
+  <script type="text/javascript">
+    $(function() {
+      $('#search-query').lunrSearch({
+        indexUrl: '/js/index.json',   // Url for the .json file containing search index data
+        results : '#search-results',  // selector for containing search results element
+        entries : '.entries',         // selector for search entries containing element (contained within results above)
+        template: '#search-results-template'  // selector for Mustache.js template
+      });
+    });
+    $("#close-search-results").click(function(){
+      $('#search-query').val('');
+      $('#search-results').hide();
+    });
+  </script>
+
+</html>

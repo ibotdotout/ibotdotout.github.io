@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <meta property="og:title" content="botbotbot's blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dev.im-bot.com/page9//" />
+<meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
+<meta property="og:description" content="botbotbot's blog" />
+<meta property="og:site_name" content="botbotbot" />
+<meta property="og:locale" content="th_TH" />
+
+
+  <title>
+    
+      botbotbot's blog &middot; botbotbot
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/searchbox.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+  <!-- Google Analytic-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-52133577-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>botbotbot's blog</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tags/">Tags</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2015. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">botbotbot</a>
+            <small>'s blog</small>
+            <!-- jekyll-lunr-js-search -->
+<span id="search">
+  <form action="/search" method="get" id="searchbox">
+    <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+  </form>
+</span>
+
+          </h3>
+        </div>
+      </div>
+
+      <!-- jekyll-lunr-js-search -->
+<div class="container">
+  <div class="post">
+    <section id="search-results" style="display: none;">
+        <div id="close-search-results">
+          <h1 class="post-title">
+              Search results
+              <i class="fa fa-times" style="font-size: 0.7em"></i>
+          </h1>
+        </div>
+        <div class="entries">
+         </div>
+    </section>
+  </div>
+</div>
+
+
+      <div class="container content">
+        <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/osx-write-ntfs">
+        Enable NTFS write on OSX
+      </a>
+    </h1>
+
+    <span class="post-date">17 Jun 2014</span>
+
+    
+      <h2 id="automatical-way">Automatical Way</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
+</code></pre></div>
+<h2 id="manual-way">Manual Way</h2>
+
+<ol>
+<li>get UUID form this command<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  diskutil info /Volumes/&lt;drivename&gt; <span class="p">|</span>  grep UUID
+</code></pre></div>
+<ol>
+<li>edit /etc/fstab<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  sudo vim /etc/fstab
+</code></pre></div>
+<ol>
+<li>add this with edit <code>&lt;uuid_drive&gt;</code></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">UUID</span><span class="o">=</span>&lt;uuid_drive&gt; none ntfs rw,auto,nobrowse
+</code></pre></div>
+<ol>
+<li>reject and plug it agian<br></li>
+<li>open hdd with this command<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  open /Volumes
+</code></pre></div>
+<ol>
+<li>If want to remove writable NTFS drive </li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  sudo rm /etc/fstab
+</code></pre></div>
+<h3 id="reference">Reference:</h3>
+
+<ol>
+<li><a href="http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/">http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/</a></li>
+<li><a href="http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/">http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/</a></li>
+<li><a href="http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/">วิธีทำให้ Mac อ่านและเขียนไฟล์ NTFS บน Windows ได้</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/how-to-setup-this-blog">
+        How to set up this blog
+      </a>
+    </h1>
+
+    <span class="post-date">16 Jun 2014</span>
+
+    
+      <p>This blog created by <a href="http://jekyllrb.com">Jekyll</a> that is ruby scripts to transforms plain text into static html website and blogs and hosted on <a href="http://page.github.com">Github
+Page</a> that free hosting support Jekyll.This blog use <a href="http://lanyon.getpoole.com">Lanyon</a> theme that based on
+<a href="http://getpoole.com">Poole</a> a minimal style of Jekyll.</p>
+
+<h3 id="set-up-github-page">Set up github page:</h3>
+
+<ol>
+<li>Follow setup guilde of <a href="https://pages.github.com">Github page</a>
+for more information about jekyll on github look at<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  http://help.github.com/articles/using-jekyll-with-pages
+</code></pre></div>
+<ol>
+<li>Clone project from <a href="http://lanyon.getpoole.com">Lanyon</a><br></li>
+</ol>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    git clone https://github.com/poole/lanyon.git
+</code></pre></div>
+<ol>
+<li>Configs jekyll in  <code>_config.yml</code><br></li>
+</ol>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml">    <span class="c1">#setup</span>
+    <span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span>            <span class="l-Scalar-Plain">botbotbot</span>  
+    <span class="l-Scalar-Plain">tagline</span><span class="p-Indicator">:</span>          <span class="s">&quot;&#39;s</span><span class="nv"> </span><span class="s">blog&quot;</span>  
+    <span class="l-Scalar-Plain">description</span><span class="p-Indicator">:</span>      <span class="s">&quot;botbotbot&#39;s</span><span class="nv"> </span><span class="s">blog&quot;</span>  
+    <span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span>              <span class="l-Scalar-Plain">http://ibotdotout.github.io</span>  
+    <span class="l-Scalar-Plain">paginate</span><span class="p-Indicator">:</span>         <span class="l-Scalar-Plain">5</span>  
+</code></pre></div>
+<ol>
+<li>Make tags.md in root directory copy code from</li>
+</ol>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html
+</code></pre></div>
+<ol>
+<li>Let blog it.</li>
+</ol>
+
+<h3 id="add-feed-in-jekyll">Add Feed in Jekyll</h3>
+
+<ol>
+<li><a href="https://github.com/jekyll/jekyll-feed">Jekyll Feed plugin - Recommend</a></li>
+<li><a href="http://jekyll.tips/tutorials/atom-feed/">Atom Feed in Jekyll</a></li>
+<li><a href="http://jekyll.tips/tutorials/rss-feed/">RSS Feed in Jekyll</a></li>
+<li><a href="http://joelglovier.com/writing/rss-for-jekyll/">RSS for Jekyll blogs</a></li>
+</ol>
+
+<h3 id="references">References:</h3>
+
+<ol>
+<li><a href="http://joshualande.com/jekyll-github-pages-poole/">http://joshualande.com/jekyll-github-pages-poole/</a></li>
+<li><a href="http://stackoverflow.com/questions/16099153/table-not-render-when-use-redcarpet-in-jekyll-github-pages">Table not render when use Redcarpet in Jekyll GitHub Pages?</a></li>
+<li><a href="http://www.jekyll-plugins.com">Jekyll-Plugins</a></li>
+<li><a href="http://jekyll.tips">Jekyll Stater</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/vim">
+        Vim
+      </a>
+    </h1>
+
+    <span class="post-date">09 Jun 2014</span>
+
+    
+      <h2 id="tutorial">Tutorial</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>vimtutor
+</code></pre></div>
+<h2 id="enter-to-vim">Enter to Vim</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  vim . <span class="c"># open with file browse</span>
+  vim -c <span class="s2">&quot;h quickref | only&quot;</span>
+  vim -O &lt; file1 &gt; &lt; file2 &gt; ... <span class="c"># open in verticle</span>
+  vim -o &lt; file1 &gt; &lt; file2 &gt; ... <span class="c"># open in honzital</span>
+</code></pre></div>
+<h2 id="normal-mode">Normal Mode</h2>
+
+<h3 id="save-exit">Save, Exit</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ZZ</td>
+<td>save and quit</td>
+</tr>
+<tr>
+<td>ZQ</td>
+<td>save without quit</td>
+</tr>
+</tbody></table>
+
+<h3 id="movements">Movements</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>w[ord]</td>
+<td>{letters, numbers, underscore}</td>
+</tr>
+<tr>
+<td>W[ORD]</td>
+<td>{non-blank characters}</td>
+</tr>
+<tr>
+<td>g{motion}</td>
+<td>work with display line ex. gj down one line, g$ go to end of display line</td>
+</tr>
+<tr>
+<td>f{char}</td>
+<td>move to next char</td>
+</tr>
+<tr>
+<td>t{char}</td>
+<td>move to before next char</td>
+</tr>
+<tr>
+<td>;</td>
+<td>repeat last search</td>
+</tr>
+<tr>
+<td>,</td>
+<td>repeat last search backward</td>
+</tr>
+</tbody></table>
+
+<h2 id="jump">Jump</h2>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>%</td>
+<td>jump between open/close parentheses</td>
+</tr>
+<tr>
+<td>&lt;C-o&gt;, &lt;C-i&gt;</td>
+<td>toggle jump position</td>
+</tr>
+<tr>
+<td>{num}&#124;(pipe)</td>
+<td>Go to Column</td>
+</tr>
+<tr>
+<td>&lt;number&gt;G</td>
+<td>go to line number</td>
+</tr>
+</tbody></table>
+
+<h3 id="visual">Visual</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>v{motion}</td>
+<td>visual mode select in line</td>
+</tr>
+<tr>
+<td>V{motion}</td>
+<td>visual mode select line</td>
+</tr>
+<tr>
+<td>&lt;C-v&gt;{motion}{cIA}</td>
+<td>change/insert/append in multiple lines</td>
+</tr>
+<tr>
+<td>&lt;C-v&gt;{motion}:</td>
+<td>command with multiple lines</td>
+</tr>
+</tbody></table>
+
+<h3 id="indent">Indent</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>==</td>
+<td>Auto Indent</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Auto Indent in selected on visual mode</td>
+</tr>
+<tr>
+<td>J</td>
+<td>join the current line and next line together</td>
+</tr>
+</tbody></table>
+
+<h3 id="edit">Edit</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cw</td>
+<td>change word</td>
+</tr>
+<tr>
+<td>gu{motion}, gU{motion}</td>
+<td>lower/upper letter</td>
+</tr>
+</tbody></table>
+
+<h3 id="delete">Delete</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>daw</td>
+<td>delete a word</td>
+</tr>
+<tr>
+<td>das</td>
+<td>delete a sentence</td>
+</tr>
+<tr>
+<td>dap</td>
+<td>delete a paragraph</td>
+</tr>
+<tr>
+<td>dW</td>
+<td>delete until space</td>
+</tr>
+<tr>
+<td>dG</td>
+<td>delete until end of file</td>
+</tr>
+<tr>
+<td>d$</td>
+<td>delete until last of line</td>
+</tr>
+<tr>
+<td>dbw , &lt;C-w&gt; in insert mode</td>
+<td>delete back one word</td>
+</tr>
+<tr>
+<td>d^ , &lt;C-u&gt; in insert mode</td>
+<td>delete back to start of line</td>
+</tr>
+</tbody></table>
+
+<h3 id="undo">Undo</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>u</td>
+<td>redo</td>
+</tr>
+<tr>
+<td>&lt;C-r&gt;</td>
+<td>Redo</td>
+</tr>
+</tbody></table>
+
+<h3 id="search">Search</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>\&lt;word&gt;\c</td>
+<td>search word with ignore case</td>
+</tr>
+</tbody></table>
+
+<h3 id="repeat">Repeat</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.</td>
+<td>repeat last action (not include any move action)</td>
+</tr>
+</tbody></table>
+
+<h3 id="etc">ETC</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*</td>
+<td>highlight word</td>
+</tr>
+<tr>
+<td>&lt;C-a&gt;,&lt;C-x&gt;</td>
+<td>addition and subtraction on numbers that also find next number automatically if current cursor not a number</td>
+</tr>
+<tr>
+<td>&lt;C-I&gt;</td>
+<td>Tab</td>
+</tr>
+<tr>
+<td>&lt;C-[&gt;</td>
+<td>Esc</td>
+</tr>
+<tr>
+<td>&lt;C-M&gt;</td>
+<td>Enter</td>
+</tr>
+<tr>
+<td>&lt;C-H&gt;</td>
+<td>Backspace</td>
+</tr>
+</tbody></table>
+
+<h2 id="in-insert-mode">In Insert Mode</h2>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&lt;C-r&gt;=55*10&lt;Cr&gt; in insert mode</td>
+<td>calculate can print it</td>
+</tr>
+</tbody></table>
+
+<h2 id="windows-managements">Windows Managements</h2>
+
+<h3 id="windows-split">Windows Split</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&lt;C-ws&gt;</td>
+<td>Split windows</td>
+</tr>
+<tr>
+<td>&lt;C-wv&gt;</td>
+<td>Split windows vertically</td>
+</tr>
+<tr>
+<td>&lt;C-wq&gt;</td>
+<td>Quit windows</td>
+</tr>
+<tr>
+<td>&lt;C-ww&gt;</td>
+<td>switch between windows</td>
+</tr>
+</tbody></table>
+
+<p>You split navigations with</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;
+  nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;
+  nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;
+  nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
+</code></pre></div>
+<h3 id="tab">Tab</h3>
+
+<table><thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>:tabe[dit] {filename}</td>
+<td>open file in new tab use gt, gT to move to next, previous tab</td>
+</tr>
+<tr>
+<td>:tabc[lose]</td>
+<td>close all tabs</td>
+</tr>
+<tr>
+<td>:tabo[nly]</td>
+<td>keep current tab and closing all others</td>
+</tr>
+</tbody></table>
+
+<h2 id="vim-spell">Vim spell</h2>
+
+<table><thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>:set spell</td>
+<td>enable spell checker</td>
+</tr>
+<tr>
+<td>[s, ]s</td>
+<td>jump to miss spelling work</td>
+</tr>
+<tr>
+<td>z=</td>
+<td>fix miss spelling word</td>
+</tr>
+<tr>
+<td>zg</td>
+<td>add current word into spell dictionary</td>
+</tr>
+<tr>
+<td>zw</td>
+<td>remove current word from spell dictionary</td>
+</tr>
+</tbody></table>
+
+<h2 id="repositioning-the-screen">Repositioning the screen</h2>
+
+<table><thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>zt</td>
+<td>Move current line to top screen</td>
+</tr>
+<tr>
+<td>zz</td>
+<td>Move current line to mid screen</td>
+</tr>
+<tr>
+<td>zb</td>
+<td>Move current line to bottom screen</td>
+</tr>
+</tbody></table>
+
+<h2 id="scroll-screen">Scroll Screen</h2>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&lt;C-f&gt;</td>
+<td>scroll down one screen</td>
+</tr>
+<tr>
+<td>&lt;C-b&gt;</td>
+<td>scroll up one screen</td>
+</tr>
+<tr>
+<td>&lt;C-d&gt;</td>
+<td>scroll down half screen</td>
+</tr>
+<tr>
+<td>&lt;C-u&gt;</td>
+<td>scroll up half screen</td>
+</tr>
+</tbody></table>
+
+<h2 id="text-object-lt-need-to-combine-with-cmd-gt">Text object &lt;need to combine with cmd&gt;</h2>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>iw/aw</td>
+<td>inside/around word</td>
+</tr>
+<tr>
+<td>is/as</td>
+<td>inside/around sentences</td>
+</tr>
+<tr>
+<td>ip/ap</td>
+<td>inside/around paragraph</td>
+</tr>
+<tr>
+<td>it/at</td>
+<td>inside/around tag ex. html tag</td>
+</tr>
+<tr>
+<td>i”</td>
+<td>inside double quote</td>
+</tr>
+<tr>
+<td>i)</td>
+<td>inside parents</td>
+</tr>
+</tbody></table>
+
+<h2 id="register">Register</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># update vim version</span>
+<span class="nv">$ </span>brew install vim
+<span class="nv">$ </span>brew install reattach-to-user-namespace
+</code></pre></div>
+<table><thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>:reg[ister]</td>
+<td>check buffer register</td>
+</tr>
+<tr>
+<td>&quot;&lt;register&gt;p</td>
+<td>paste buffer</td>
+</tr>
+<tr>
+<td>&quot;&lt;register&gt;yy</td>
+<td>yank to buffer</td>
+</tr>
+<tr>
+<td>&quot;*yy</td>
+<td>yank to system clipboard</td>
+</tr>
+</tbody></table>
+
+<h2 id="vim-command"><a href="/vim-command">Vim Command</a></h2>
+
+<h2 id="vim-plugins"><a href="/vim-plugins">Vim Plugins</a></h2>
+
+<h2 id="reference">Reference:</h2>
+
+<ol>
+<li><a href="http://www.danielmiessler.com/study/vim/">A vim Tutorial and Primer</a></li>
+<li><a href="http://www.joinstick.net/howto/vim.html">วิธีใช้ Vi และ Vim</a></li>
+<li><a href="http://tips.webdesign10.com/vim/how-use-vims-spellchecker">How to Use Vim&#39;s Spell checker</a></li>
+<li><a href="http://www.worldtimzone.com/res/vi.html">Vi/Vim Cheat Sheet</a></li>
+<li><a href="https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png">Vim Cheat Sheet Graphical</a></li>
+<li><a href="https://coderwall.com/p/j9wnfw">Vim &amp; Tmux &amp; System Clipboard</a></li>
+<li><a href="https://www.youtube.com/watch?v=k_KSeQgtrb4">vim.rc &amp; vim plugin (video th)</a></li>
+<li><a href="https://www.youtube.com/watch?v=BhwtnCaFTFk">John Crepezzi&#39;s Vim (video)</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/">Vi and Vim Macro Tutorial: How To Record and Play</a></li>
+<li><a href="https://github.com/JoelQ/vim-grammar/blob/master/presentation.md">VIM Grammar-Jaa-LGyagRA</a></li>
+<li><a href="http://www.linux.com/learn/tutorials/442438-vim-tips-folding-fun">Vim tips: Folding fun</a></li>
+<li><a href="http://learnvimscriptthehardway.stevelosh.com">Learn Vimscript the Hard Way</a></li>
+<li><a href="https://github.com/jez/vim-as-an-ide">Vim as an IDE</a></li>
+<li><a href="http://stackoverflow.com/questions/9953082/how-to-jump-directly-to-a-column-number-in-vim">How to jump directly to a column number in Vim</a>
+17.<a href="http://stevelosh.com/blog/2010/09/coming-home-to-vim/">Coming Home to Vim</a></li>
+<li><a href="https://github.com/vim-scripts/LanguageTool">Vim-LanguageTool</a></li>
+<li><a href="http://khonkaenlug.blogspot.com/2015/08/vim-tips.html">Vim Tips (KKLUG)</a></li>
+<li><a href="http://stackoverflow.com/questions/11784408/vim-multiline-editing-like-in-sublimetext">Vim multiline editing like in sublimetext?</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/tmux">
+        Tmux
+      </a>
+    </h1>
+
+    <span class="post-date">09 Jun 2014</span>
+
+    
+      <h3 id="list-binding-key">list binding key</h3>
+
+<p>PREFIX ? - list keys  </p>
+
+<h3 id="leaving-and-coming-back-again">Leaving and Coming Back Again</h3>
+
+<p>PREFIX d - leave  </p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Come Back</span>
+<span class="nv">$ </span>tmux a
+</code></pre></div>
+<h3 id="windows">windows</h3>
+
+<p>PREFIX c - create window<br>
+PREFIX , - rename window<br>
+PREFIX n - next window<br>
+PREFIX p - previous window<br>
+PREFIX {num} - go to {num} window<br>
+PREFIX &amp; - exit window  </p>
+
+<h3 id="panes">panes</h3>
+
+<p>PREFIX % - split pane in vertically<br>
+PREFIX &quot; - split pane in horizontally<br>
+PREFIX o - switch between panes<br>
+PREFIX {arrow} - move around the panes<br>
+PREFIX q - show pane number and its size<br>
+PREFIX x - kill pane<br>
+PREFIX z - toggle pane to be fullscreen<br>
+PREFIX {, } - swap panes<br>
+PREFIX ! - turn pane to window  </p>
+
+<h3 id="copy-amp-paste-to-system-clipboard">Copy &amp; Paste to System Clipboard</h3>
+
+<p><a href="http://blog.joncairns.com/2013/06/copying-between-tmux-buffers-and-the-system-clipboard/">Copying between tmux buffers and the system clipboard</a><br>
+<a href="http://unix.stackexchange.com/questions/131011/use-system-clipboard-in-vi-copy-mode-in-tmux">Share buffer with system clipboard</a><br>
+<a href="http://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future">tmux Copy &amp; Paste on OS X: A Better Future</a><br>
+<a href="https://www.youtube.com/watch?v=OW-lKJDFOzc">Copy Mode - Linux TMUX Video Tutorial</a></p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># .tmux.conf</span>
+setw -g mode-keys vi
+<span class="nb">bind</span>-key -t vi-copy <span class="s1">&#39;v&#39;</span> begin-selection
+<span class="nb">bind</span>-key -t vi-copy <span class="s1">&#39;y&#39;</span> copy-selection
+<span class="nb">bind</span> -t vi-copy y copy-pipe <span class="s1">&#39;xclip -in -selection clipboard&#39;</span>
+</code></pre></div>
+<ul>
+<li><p>Copy to Buffer</p>
+
+<ol>
+<li>PREFIX [ - scroll buffer use arrow key to move around and enter to quit<br></li>
+<li>v - select word<br></li>
+<li>y - copy (yank) word<br></li>
+</ol></li>
+<li><p>Paste from buffer<br>
+PREFIX ]</p></li>
+</ul>
+
+<h3 id="create-custom-layout"><a href="https://www.youtube.com/watch?v=sxw-n5Du600">Create Custom Layout</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#Window: python dev (Prefix - Meta(Alt) + d)</span>
+<span class="c"># -v = split horizontal</span>
+<span class="nb">bind</span>-key M-d split-window -v -p <span class="m">30</span> -t <span class="m">0</span> <span class="se">\;</span> <span class="se">\</span>
+         send-keys <span class="s1">&#39;./watchdog_python.py&#39;</span> <span class="s1">&#39;Enter&#39;</span> <span class="se">\;</span> <span class="se">\</span>
+         <span class="k">select</span>-pane -t 0
+</code></pre></div>
+<h3 id="tmuxinator"><a href="https://github.com/tmuxinator/tmuxinator">tmuxinator</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>gem install tmuxinator
+<span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim
+</code></pre></div>
+<h3 id="wemux"><a href="https://github.com/zolrath/wemux">wemux</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># OSX via Homebrew</span>
+<span class="nv">$ </span>brew install wemux
+</code></pre></div>
+<h3 id="unable-to-use-39-open-39-command-in-osx-tmux"><a href="http://www.elmund.io/osx/2015/07/10/open-command-in-osx-tmux/">Unable to use &#39;open&#39; command in OSX tmux</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">brew update
+brew install reattach-to-user-namespace
+<span class="nb">echo</span> <span class="s2">&quot;set -g default-command \&quot;reattach-to-user-namespace -l ${SHELL}\&quot;&quot;</span> &gt;&gt; ~/.tmux.conf
+</code></pre></div>
+<h2 id="reference">Reference:</h2>
+
+<ol>
+<li><a href="http://www.danielmiessler.com/study/tmux/">A tmux Tutorial and Primer</a></li>
+<li><a href="http://robots.thoughtbot.com/love-hate-tmux">love hate tmux</a></li>
+<li><a href="https://learn.thoughtbot.com/tmux">Thoughtbot tmux</a></li>
+<li><a href="http://www.dayid.org/os/notes/tm.html">screen and tmux</a></li>
+<li><a href="http://myhumblecorner.wordpress.com/2011/08/30/screen-to-tmux-a-humble-quick-start-guide/">screen to tmux: A Humble Quick-start Guide</a></li>
+<li><a href="http://www.sitepoint.com/tmux-a-simple-start/">Tmux: A Simple Start</a></li>
+<li><a href="http://www.youtube.com/watch?v=CKC8Ph-s2F4">Humans Present: tmux</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLtK75qxsQaMJ_DmXk9yZbCBJuG9HRwlGc">tmux tutorial</a></li>
+<li><a href="https://mutelight.org/practical-tmux">Practical Tmux</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/python">
+        All about Python
+      </a>
+    </h1>
+
+    <span class="post-date">08 Jun 2014</span>
+
+    
+      <h3 id="tips">Tips:</h3>
+
+<ul>
+<li>Flattened list of list</li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> <span class="p">,[]</span> <span class="p">,[]</span> <span class="p">,[</span><span class="mi">9</span><span class="p">]]</span>
+  <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">9</span><span class="p">]]</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="p">[])</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+  <span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">]</span>
+  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</code></pre></div>
+<ul>
+<li>Else with for loop</li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="o">&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)):</span>
+  <span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="n">i</span><span class="p">,</span>
+  <span class="o">&gt;&gt;</span> <span class="k">else</span><span class="p">:</span>
+  <span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="mi">10</span>
+  <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
+</code></pre></div>
+<ul>
+<li>Zen of Python :: run this command in python console</li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">this</span>
+</code></pre></div>
+<ul>
+<li>Virtualenv with system package</li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">   virtualenv --system-site-packages &lt;env_name&gt;
+</code></pre></div>
+<ul>
+<li>Virtualenv with python3</li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  virtualenv --python<span class="o">=</span><span class="k">$(</span>which python3<span class="k">)</span> &lt;env_name&gt;
+</code></pre></div>
+<ul>
+<li>Virtualenv can&#39;t move. You must edit environment path in</li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  &lt;your_env&gt;/bin/activate
+  &lt;your_env&gt;/bin/activate.csh
+  &lt;your_env&gt;/bin/activate.finsh
+</code></pre></div>
+<ul>
+<li>Install py package into python2</li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install &lt;package&gt;
+</code></pre></div>
+<ul>
+<li>Install py package into python3</li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip3 install &lt;package&gt;
+</code></pre></div>
+<ul>
+<li>Pip upgrade</li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install &lt;package&gt; --upgrade
+</code></pre></div>
+<p>or you can use <a href="https://github.com/nvie/pip-tools">pip-tool</a> to review all pip-package to upgrade</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install pip-tools
+  pip-review
+  pip-dump
+</code></pre></div>
+<ul>
+<li>Install Project as develop via pip</li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># same as &#39;python setup.py develope&#39;</span>
+  pip install --use-mirrors --editable .
+</code></pre></div>
+<ul>
+<li><a href="http://stackoverflow.com/questions/493386/how-to-print-in-python-without-newline-or-space">Print without newline or spaces</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">sys</span>
+
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+      <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">)</span>
+      <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li><a href="http://stackoverflow.com/questions/1027714/how-to-execute-a-file-within-the-python-interpreter">How to execute a file within the python interpreter?</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="nb">execfile</span><span class="p">(</span><span class="s">&#39;filename.py&#39;</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">X</span>
+<span class="nb">reload</span><span class="p">(</span> <span class="n">X</span> <span class="p">)</span>
+</code></pre></div>
+<ul>
+<li><a href="http://stackoverflow.com/questions/7300321/how-to-use-pythons-pip-to-download-and-keep-the-zipped-files-for-a-package">How to use Python&#39;s pip to download and keep the zipped files for a package?</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>pip install --download-cache<span class="o">=</span><span class="s2">&quot;/pth/to/downloaded/files&quot;</span> package
+</code></pre></div>
+<h2 id="tools">Tools:</h2>
+
+<ul>
+<li><a href="http://virtualenv.readthedocs.org">Virtualenv</a>
+<a href="http://code.tutsplus.com/articles/python-power-tools-virtualenv--net-31560">Python Power Tools: virtualenv</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install virtualenv
+</code></pre></div>
+<p>Or</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  brew install pyenv-virtualenv
+</code></pre></div>
+<ul>
+<li><a href="http://virtualenvwrapper.readthedocs.org">VirtualenvWrapper</a> -  <a href="http://code.tutsplus.com/articles/python-power-tools-virtualenvwrapper--net-31569">Python Power Tools: virtualenvwrapper</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install virtualenvwrapper
+</code></pre></div>
+<p>add this into your .bashrc/.zshrc</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span>&lt;env_path&gt;
+  <span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+</code></pre></div>
+<ul>
+<li><a href="https://github.com/kennethreitz/autoenv">AutoEnv</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  brew install autoenv
+  <span class="nb">echo</span> <span class="s1">&#39;source /usr/local/opt/autoenv/activate.sh&#39;</span> &gt;&gt; ~/.zshrc
+</code></pre></div>
+<ul>
+<li><a href="https://github.com/hhatto/autopep8">AutoPEP8</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># install</span>
+<span class="nv">$ </span>pip install --upgrade autopep8
+<span class="c"># usage</span>
+<span class="nv">$ </span>autopep8 --in-place --aggressive --aggressive &lt;filename&gt;
+</code></pre></div>
+<ul>
+<li><a href="https://www.logilab.org/blogentry/6883">Pyreverse : UML Diagrams for Python</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># install</span>
+<span class="nv">$ </span>pip install pylint
+<span class="nv">$ </span>apt-get install graphviz
+
+<span class="c"># usage</span>
+pyreverse -o png &lt;code&gt;
+</code></pre></div>
+<h2 id="python-project">Python Project</h2>
+
+<ol>
+<li><a href="https://www.quora.com/What-are-good-open-source-projects-in-Python-to-contribute-to-and-start-learning-Python">What are good open source projects in Python to contribute to and start learning Python?</a></li>
+<li><a href="http://openhatch.org/search/?toughness=bitesize&amp;language=Python">OpenHatch find project to contribute</a></li>
+<li><a href="https://news.ycombinator.com/item?id=9896369">Ask HN: Good Python codebases to read?</a></li>
+</ol>
+
+<h2 id="idiomatic-python">Idiomatic Python:</h2>
+
+<ol>
+<li><a href="http://www.cafepy.com/article/be_pythonic/">Be Pythonic</a></li>
+<li><a href="http://blog.startifact.com/posts/older/what-is-pythonic.html">What is Pythonic?</a></li>
+<li><a href="http://courses.cms.caltech.edu/cs11/material/python/misc/python_idioms.html">Python track: python idioms</a></li>
+<li><a href="http://python.net/%7Egoodger/projects/pycon/2007/idiomatic/handout.html">Code Like a Pythonista: Idiomatic Python</a></li>
+<li><a href="http://legacy.python.org/dev/peps/pep-0008/">PEP8</a></li>
+<li><a href="http://docs.python-guide.org/en/latest/">The Hitchhiker’s Guide to Python!</a></li>
+<li><a href="http://legacy.python.org/dev/peps/">Index of Python Enhancement Proposals</a></li>
+<li><a href="http://sahandsaba.com/thirtyMalika-python-language-features-and-tricks-you-may-not-know.html">30 Python Language Features and Tricks You May Not Know About</a></li>
+<li><a href="https://speakerdeck.com/pyconslides/transforming-code-into-beautiful-idiomatic-python-by-raymond-hettinger-1">Transforming code into Beautiful, Idiomatic Python by Raymond Hettinger</a></li>
+<li><a href="http://www.siafoo.net/article/52">Python Tips, Tricks, and Hacks</a></li>
+<li><a href="http://www.jeffknupp.com/blog/2012/10/04/writing-idiomatic-python/">Writing Idiomatic Python</a></li>
+<li><a href="http://python-3-patterns-idioms-test.readthedocs.org/en/latest/">Python 3 Patterns, Recipes and Idioms</a></li>
+<li><a href="https://speakerdeck.com/pycon2014/decorators-a-powerful-weapon-in-your-python-arsenal-by-colton-myers">Decorators: A Powerful Weapon in Your Python Arsenal</a></li>
+<li><a href="http://lignos.org/py_antipatterns/">Anti-Patterns in Python Programming</a></li>
+<li><a href="http://www.reddit.com/r/Python/comments/2e5wb7/best_python_tricks_and_oneliners/">Best python tricks and one-liners</a></li>
+<li><a href="https://www.airpair.com/python/posts/python-tips-and-traps">Python Tips and Traps</a></li>
+<li><a href="http://zokis.github.io/Python--Faster-Way/">Python: faster way Tricks for your code run faster</a></li>
+<li><a href="http://docs.quantifiedcode.com/python-anti-patterns/index.html#">The Little Book of Python Anti-Patterns</a></li>
+</ol>
+
+<h2 id="tutorial-python">Tutorial Python</h2>
+
+<ol>
+<li><a href="http://github.com/gregmalcolm/python_koans">Python Koans</a></li>
+<li><a href="http://newcoder.io">New Coder Python</a></li>
+<li><a href="http://interactivepython.org/runestone/static/pythonds/index.html">Problem Solving with Algorithms and Data Structures Python</a></li>
+<li><a href="http://interactivepython.org/runestone/static/everyday/index.html">Everyday Python Project</a></li>
+<li><a href="https://developers.google.com/edu/python/regular-expressions">Python Regular Expressions</a></li>
+<li><a href="http://anandology.com/python-practice-book/index.html">Python Practice Book</a></li>
+</ol>
+
+<h2 id="functional-programming-in-python">Functional Programming in Python</h2>
+
+<ol>
+<li><a href="http://www.oreilly.com/programming/free/files/functional-programming-python.pdf">O&#39;Reilly Functional Programming in Python</a></li>
+<li><a href="http://kachayev.github.io/talks/uapycon2012/#/">FUNCTIONAL PROGRAMMING WITH PYTHON by BY ALEXEY KACHAYEV, 2012</a></li>
+<li><a href="https://docs.python.org/3.5/howto/functional.html">Functional Programming HOWTO</a></li>
+</ol>
+
+<h2 id="design-patterns-python">Design Patterns Python:</h2>
+
+<ol>
+<li><a href="https://github.com/faif/python-patterns">Python Patterns</a></li>
+<li><a href="http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/">Six GoF design patterns, Python style</a></li>
+<li><a href="http://ginstrom.com/scribbles/2008/11/06/generic-adapter-class-in-python/">Generic adapter class in Python</a></li>
+<li><a href="http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Bridge_Pattern#Python">Bridge Patterns Python</a></li>
+<li><a href="http://stevenloria.com/python-best-practice-patterns-by-vladimir-keleshev-notes/">Python Best Practice Patterns by Vladimir Keleshev</a></li>
+<li><a href="http://www.slideshare.net/DrTrucho/python-solid">Python SOLID</a></li>
+<li><a href="http://pyvideo.org/video/2840/the-clean-architecture-in-python">The Clean Architecture in Python</a></li>
+<li><a href="http://pyvideo.org/video/880/stop-writing-classes">Stop Writing Classes</a></li>
+</ol>
+
+<h2 id="optimization-python">Optimization Python</h2>
+
+<ol>
+<li><a href="http://ianwitham.wordpress.com/2009/12/18/making-python-programs-run-faster/">10 Ways to Make Python Go Faster</a></li>
+<li><a href="http://maxburstein.com/blog/speeding-up-your-python-code/">Speeding Up Your Python Code</a></li>
+<li><a href="https://wiki.python.org/moin/PythonSpeed">PythonSpeed</a></li>
+<li><a href="http://lukauskas.co.uk/articles/2014/02/12/how-to-make-python-faster-without-trying-that-much/">How to Make Python Faster Without Trying That Much</a></li>
+</ol>
+
+<h2 id="python-debugger-pdb">Python Debugger (pdb)</h2>
+
+<ol>
+<li><a href="http://stackoverflow.com/questions/4228637/getting-started-with-the-python-debugger-pdb">Getting started with the Python Debugger pdb</a></li>
+<li><a href="https://gimmebar-assets.s3.amazonaws.com/4fe38b76be0a5.html">Python Debugging Techniques</a></li>
+<li><a href="https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/">Debugging in Python</a></li>
+<li><a href="http://tech.pro/tutorial/1382/getting-started-with-the-python-debugger">Getting Started with the Python Debugger</a></li>
+<li><a href="http://pymotw.com/2/pdb/#temporary-breakpoints">pdb – Interactive Debugger</a></li>
+<li><a href="https://www.youtube.com/watch?v=bZZTeKPRSLQ">Tutorial: Debugging your Python Applications with pdb(Youtube)</a></li>
+<li><a href="https://www.youtube.com/watch?v=vfPtGsSJldg">Introduction to PDB(Youtube)</a></li>
+<li><a href="http://stackoverflow.com/questions/4950637/setting-breakpoints-with-nosetests-pdb-option">setting breakpoints with nosetests --pdb option</a></li>
+</ol>
+
+<h2 id="logging">Logging</h2>
+
+<ol>
+<li><a href="https://www.youtube.com/watch?v=24_4WWkSmNo">Become a logging expert in 30 minutes(Youtube)</a></li>
+</ol>
+
+<h2 id="framework">Framework</h2>
+
+<ol>
+<li><a href="https://github.com/ibotdotout/awesome-python">Awesome Python</a></li>
+</ol>
+
+<h2 id="python-tutorial">Python Tutorial</h2>
+
+<ol>
+<li><a href="https://github.com/s16h/py-must-watch">Must-watch videos about Python</a></li>
+<li><a href="http://pyvideo.org">pyvideo.org</a></li>
+</ol>
+
+<h2 id="python-testing"><a href="/python-testing">Python Testing</a></h2>
+
+<h2 id="etc">ETC.</h2>
+
+<ol>
+<li><a href="http://stackoverflow.com/questions/73663/terminating-a-python-script">Terminating a Python script</a></li>
+<li><a href="http://stackoverflow.com/questions/6908143/should-i-put-shebang-in-python-scripts-and-what-form-should-it-take">Should I put #! (shebang) in Python scripts, and what form should it
+take?</a></li>
+<li><a href="http://stackoverflow.com/questions/15328623/simple-file-server-to-serve-current-directory">Simple file server to serve current directory</a></li>
+<li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported using “from module import *”</a></li>
+</ol>
+
+    
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    
+      <a class="pagination-item newer" href="/page8">Newer</a>
+    
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+
+    <!-- jekyll-lunr-js-search -->
+  <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script id="search-results-template" type="text/mustache">
+    {{#entries}}
+      <article>
+        <h3>
+          {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+          <a href="{{url}}">{{title}}</a>
+        </h3>
+      </article>
+    {{/entries}}
+  </script>
+  
+  <script type="text/javascript">
+    $(function() {
+      $('#search-query').lunrSearch({
+        indexUrl: '/js/index.json',   // Url for the .json file containing search index data
+        results : '#search-results',  // selector for containing search results element
+        entries : '.entries',         // selector for search entries containing element (contained within results above)
+        template: '#search-results-template'  // selector for Mustache.js template
+      });
+    });
+    $("#close-search-results").click(function(){
+      $('#search-query').val('');
+      $('#search-results').hide();
+    });
+  </script>
+
+</html>

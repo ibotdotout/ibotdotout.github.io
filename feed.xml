@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
+<link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
+<link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
+<updated>2015-10-20T15:12:21+00:00</updated>
+<id>http://dev.im-bot.com//</id>
+<subtitle>botbotbot&#39;s blog</subtitle>
+<author>
+<name>botbotbot</name>
+</author>
+<entry>
+<title>Convert File Encoding in OSX</title>
+<link href="http://dev.im-bot.com//osx-convert-encoding" rel="alternate" type="text/html" title="Convert File Encoding in OSX" />
+<published>2015-10-19T00:00:00+00:00</published>
+<updated>2015-10-19T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//osx-convert-encoding</id>
+<content type="html" xml:base="http://dev.im-bot.com//osx-convert-encoding">&lt;p&gt;Sometime, you download file from Internet specially file that in local language
+which not encode with UTF-8 that unreadable on OSX. Your should guess
+what encode that file using and convert it in to UTF-8.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# convert tis-620 to utf-8 encoding&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$iconv&lt;/span&gt; -f tis-620 -t utf-8 source.xml &amp;gt; destination.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Example. Thai language on Windows system normally encode with TIS-620 when
+open it in OSX that will display with some symbol char that unreadable.
+You should convert that file from tis-620 to utf-8 which make it readable on osx.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://superuser.com/questions/151981/converting-the-encoding-of-a-text-file-mac-os-x&quot;&gt;Converting the encoding of a text file (Mac OS X)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://apple.stackexchange.com/questions/81663/is-there-a-mac-os-x-command-line-application-that-can-convert-text-encodings-fro&quot;&gt;Is there a Mac OS X Command Line application that can convert text encodings from one type to another?  &lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+<category term="osx" />
+<summary>Covert file from windows that encoded with TIS-620 to UTF-8 for readable in OSX.</summary>
+</entry>
+<entry>
+<title>Read more feature on jekyll</title>
+<link href="http://dev.im-bot.com//read-more-jekyll" rel="alternate" type="text/html" title="Read more feature on jekyll" />
+<published>2015-10-18T00:00:00+00:00</published>
+<updated>2015-10-18T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//read-more-jekyll</id>
+<content type="html" xml:base="http://dev.im-bot.com//read-more-jekyll">&lt;blockquote&gt;
+&lt;p&gt;Github Pages Tips:&lt;br&gt;
+Github Pages always complie jekyll with &lt;code&gt;--safe&lt;/code&gt; option that will&lt;br&gt;
+disable plugins but some plugin can work with Github Pages.&lt;br&gt;
+&lt;a href=&quot;https://help.github.com/articles/using-jekyll-plugins-with-github-pages/&quot;&gt;List of Jekyll Plguins that working on Github &amp;gt; Pages&lt;/a&gt;  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Just using &lt;code&gt;truncate&lt;/code&gt; they not checking html tag that make your site look
+terrible and Github Pages not support custom ruby script that place in
+&lt;code&gt;_plugins&lt;/code&gt;. The better way is using split with custom tags.&lt;/p&gt;
+
+&lt;p&gt;Replace &lt;code&gt;{{ post.content }}&lt;/code&gt; in &lt;code&gt;index.html&lt;/code&gt; in jekyll directory with&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;sx&quot;&gt;    {% if post.content contains &amp;quot;&amp;lt;!-- more --&amp;gt;&amp;quot; %}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:&amp;quot;&amp;lt;!-- more --&amp;gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;text-align:right;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;{{ post.url }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;color:#000;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Read&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;More&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/a&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;      &amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;sx&quot;&gt;      {{ post.content }&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;sx&quot;&gt;    {% endraw %}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;In your contents add &lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;---
+layout: post
+title: Read more feature on jekyll
+tags: [jekyll]
+---
+Hello, world
+
+&amp;lt;!-- more --&amp;gt;
+
+You can&amp;#39;t see this message via index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://mikeygee.com/blog/truncate.html&quot;&gt;Truncating blog posts in Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://truongtx.me/2013/05/01/jekyll-read-more-feature-without-any-plugin/&quot;&gt;Jekyll - Read More without plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MattHall/truncatehtml&quot;&gt;A Jekyll plugin that truncates HTML while preserving markup structure.&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+<category term="jekyll" />
+<summary>Read more feature on jekyll that working with Github Pages</summary>
+</entry>
+<entry>
+<title>Text Processing in Shell</title>
+<link href="http://dev.im-bot.com//text-processing" rel="alternate" type="text/html" title="Text Processing in Shell" />
+<published>2015-10-17T00:00:00+00:00</published>
+<updated>2015-10-17T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//text-processing</id>
+<content type="html" xml:base="http://dev.im-bot.com//text-processing">&lt;blockquote&gt;
+&lt;p&gt;Most of example come from problem in &lt;a href=&quot;https://www.hackerrank.com/domains/shell/bash&quot;&gt;Linux Shell - Hackerrank&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;sed&quot;&gt;Sed&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Trip:&lt;br&gt;
+&lt;code&gt;sed&lt;/code&gt; in OSX may not working as example. You should try &lt;code&gt;gsed&lt;/code&gt;.&lt;br&gt;
+&lt;code&gt;gsed&lt;/code&gt; can install via brew and call &lt;code&gt;gsed&lt;/code&gt; instead of &lt;code&gt;sed&lt;/code&gt;  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
+&lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5678&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;  
+&lt;span class=&quot;m&quot;&gt;2999&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5178&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2234&lt;/span&gt;  
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sed -re &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/([0-9]{4}\s){3}/**** **** **** /&amp;#39;&lt;/span&gt; in
+**** **** **** &lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;  
+**** **** **** &lt;span class=&quot;m&quot;&gt;2234&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- more --&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
+&lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5678&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;  
+&lt;span class=&quot;m&quot;&gt;2999&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5178&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2234&lt;/span&gt;  
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sed -r &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/([0-9]{4}\s?)([0-9]{4}\s?)([0-9]{4}\s?)([0-9]{4})/\4&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;\3\2\1/&amp;#39;&lt;/span&gt; in
+&lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5678&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;  
+&lt;span class=&quot;m&quot;&gt;2234&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5178&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2999&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
+hello cat meow meow Cat Cat caT love cAt
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sed -e &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/cat/{\0}/gi&amp;#39;&lt;/span&gt; in
+hello &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;cat&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; meow meow &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Cat&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Cat&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;caT&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; love &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;cAt&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
+hello cat meow meow Cat Cat caT love cAt
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sed -e &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/cat/dog/gi&amp;#39;&lt;/span&gt; in
+hello dog meow meow dog dog dog love dog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.grymoire.com/Unix/Sed.html&quot;&gt;Sed - An Introduction and Tutorial by Bruce Barnett&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tldp.org/LDP/abs/html/x23170.html&quot;&gt;Advanced Bash-Scripting Guide: Sed&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html&quot;&gt;Sed Command in Unix and Linux Examples&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/&quot;&gt;Unix Sed Tutorial: Advanced Sed Substitution Examples&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2232200/regular-expression-in-sed-for-masking-credit-card&quot;&gt;regular expression in sed for masking credit card&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/sed/manual/sed.html&quot;&gt;sed, a stream editor&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux&quot;&gt;The Basics of Using the Sed Stream Editor to Manipulate Text in Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/articles/intermediate-sed-manipulating-streams-of-text-in-a-linux-environment&quot;&gt;Intermediate Sed: Manipulating Streams of Text in a Linux Environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tutorialspoint.com/unix/unix-regular-expressions.htm&quot;&gt;Unix - Regular Expressions with SED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2009/11/unix-sed-tutorial-append-insert-replace-and-count-file-lines/&quot;&gt;Unix Sed Tutorial: Append, Insert, Replace, and Count File Lines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.shellhacks.com/en/Add-Character-to-the-Beginning-or-to-the-End-of-Each-Line-using-AWK-and-SED&quot;&gt;Add Character to the Beginning or to the End of Each Line using AWK and SED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/sed/manual/sed.html&quot;&gt;sed, a stream editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docstore.mik.ua/orelly/unix/sedawk/index.htm&quot;&gt;Sed &amp;amp; Awk Book&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;awk&quot;&gt;Awk&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
+A &lt;span class=&quot;m&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;27&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;  
+B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
+C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt;  
+D &lt;span class=&quot;m&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;88&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;76&lt;/span&gt;  
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{ if ($4 ==&amp;quot;&amp;quot;) print &amp;quot;Not all scores are available for&amp;quot;,$1; }&amp;#39;&lt;/span&gt; in
+Not all scores are available &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; B
+Not all scores are available &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; C
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
+B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
+C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;  
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $1,&amp;quot;:&amp;quot;,($4 &amp;gt;= 50 &amp;amp;&amp;amp; $2 &amp;gt;= 50 &amp;amp;&amp;amp; $3 &amp;gt;= 50)?&amp;quot;Pass&amp;quot;:&amp;quot;Fail&amp;quot;}&amp;#39;&lt;/span&gt; in
+B : Fail
+C : Pass
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
+B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
+C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;  
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{ score=($2+$3+$3)/3; \&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;if (score &amp;gt;= 80) grade = &amp;quot;A&amp;quot;; \&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;else if (score &amp;gt;= 60) grade = &amp;quot;B&amp;quot;; \&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;else if(score &amp;gt;= 50) grade= &amp;quot;C&amp;quot;; \&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;else grade = &amp;quot;FAIL &amp;quot;; \&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;print $0,&amp;quot;:&amp;quot;,grade }&amp;#39;&lt;/span&gt;
+B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; : FAIL
+C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt; : B
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
+A &lt;span class=&quot;m&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;27&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;  
+B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
+C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;  
+D &lt;span class=&quot;m&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;88&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;76&lt;/span&gt;  
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;ORS=NR%2?&amp;quot;;&amp;quot;:&amp;quot;\n&amp;quot;&amp;#39;&lt;/span&gt; in
+A &lt;span class=&quot;m&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;27&lt;/span&gt; 50&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
+C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; 80&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;D &lt;span class=&quot;m&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;88&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;76&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://ferd.ca/awk-in-20-minutes.html&quot;&gt;Awk in 20 Minutes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/&quot;&gt;Awk Introduction Tutorial – 7 Awk Print Examples&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2010/02/awk-conditional-statements/&quot;&gt;4 Awk If Statement Examples ( if, if else, if else if, :?)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.linuxnix.com/awk-scripting-how-to-define-awk-variables/&quot;&gt;AWK Scripting: How to define awk variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/&quot;&gt;8 Powerful Awk Built-in Variables – FS, OFS, RS, ORS, NR, NF, FILENAME, FNR&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+<category term="unix" />
+<summary>Collection example of text processing in shell</summary>
+</entry>
+<entry>
+<title>Sharing with Open Graph</title>
+<link href="http://dev.im-bot.com//opengraph" rel="alternate" type="text/html" title="Sharing with Open Graph" />
+<published>2015-10-12T00:00:00+00:00</published>
+<updated>2015-10-12T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//open-graph</id>
+<content type="html" xml:base="http://dev.im-bot.com//opengraph">&lt;p&gt;&lt;img src=&quot;%7B%7Bsite.url%7D%7D/public/img/open-graph-thumbnail.png&quot; alt=&quot;sharing with open graph&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Add this meta data to your &lt;code&gt;html page&lt;/code&gt; between &lt;code&gt;&amp;lt;head&amp;gt; ... &amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:title&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Markdown Slide&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:type&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;article&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:url&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://dev.im-bot.com/slide/&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://dev.im-bot.com/public/opengraph_logo.png&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:description&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Remark.js - easy and simple slide&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:site_name&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;botbotbot&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:locale&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;th_TH&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then using &lt;a href=&quot;https://developers.facebook.com/tools/debug/og/object/&quot;&gt;Open Graph Object Debugger&lt;/a&gt; to look what it look like when shared.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;tips&quot;&gt;Tips:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;og:image&lt;/code&gt; always cache in fb server. you should change your image url to force fb reload your image.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;jekyll-integrate-open-graph&quot;&gt;Jekyll Integrate Open Graph&lt;/h1&gt;
+
+&lt;p&gt;Add this line in your &lt;code&gt;_includes/head.html&lt;/code&gt; between &lt;code&gt;&amp;lt;head&amp;gt; ... &amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% include opengraph.html %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create &lt;code&gt;_includes/opengraph.html&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:title&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:type&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{% if page.title %}article{% else %}website{% endif %}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:url&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ page.url | replace:&amp;#39;index.html&amp;#39;,&amp;#39;&amp;#39; | prepend: site.url | append: &amp;#39;/&amp;#39; }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{% if page.thumbnail %}{{ page.thumbnail | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:description&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:site_name&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ site.title }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:locale&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ site.locale }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Update &lt;code&gt;_config.yml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;logo&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;/public/logo.png&lt;/span&gt;
+&lt;span class=&quot;l-Scalar-Plain&quot;&gt;locale&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;th_TH&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Custom Post&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;----
+excerpt: summary
+thumbnail: /public/thumbnail_for_your_post.png
+----
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/&quot;&gt;Adding Open Graph Tags to Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://danyalzia.com/2015/03/25/integrating-facebook-open-graph-in-jekyll/&quot;&gt;Integrating Facebook Open Graph Meta Tags In Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://milanaryal.com/2015/integrating-social-meta-tags-into-jekyll/&quot;&gt;Integrating social meta tags into Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2950189/facebook-share-doesnt-show-my-description-or-my-thumbnail&quot;&gt;Facebook Share doesn&amp;#39;t show my description or my thumbnail&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ogp.me&quot;&gt;The Open Graph protocol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.facebook.com/docs/sharing/best-practices&quot;&gt;Sharing Best Practices for Websites &amp;amp; Mobile Apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developers.facebook.com/tools/debug/og/object/&quot;&gt;Open Graph Object Debugger&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+<category term="jekyll" />
+<category term="website" />
+<summary>Make your site look pretty when sharing on facebook.</summary>
+</entry>
+<entry>
+<title>Markdown Slide</title>
+<link href="http://dev.im-bot.com//slide" rel="alternate" type="text/html" title="Markdown Slide" />
+<published>2015-10-10T00:00:00+00:00</published>
+<updated>2015-10-10T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//markdown-slide</id>
+<content type="html" xml:base="http://dev.im-bot.com//slide">&lt;h2 id=&quot;remark-js-easy-and-simple-slide-example&quot;&gt;&lt;a href=&quot;https://github.com/gnab/remark&quot;&gt;Remark.js - easy and simple slide&lt;/a&gt; - &lt;a href=&quot;http://remarkjs.com&quot;&gt;Example&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gnab/remark/wiki#getting-started&quot;&gt;Getting started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gnab/remark/issues/236#issuecomment-108211948&quot;&gt;Two-column formatting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gnab/remark/issues/50#issuecomment-112140176&quot;&gt;Export to PDF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/derickfay/key2txt/blob/master/k2remark.applescript&quot;&gt;Keynote to Remark.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. Open a Keynote presentation
+2. Run the script.
+3. Select output destination
+4. Got rough remark.js slide
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;other-markdown-slide&quot;&gt;Other Markdown slide&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/hakimel/reveal.js&quot;&gt;reveal.js - more powerful&lt;/a&gt; - &lt;a href=&quot;http://lab.hakim.se/reveal-js/&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jdan/cleaver&quot;&gt;Cleaver&lt;/a&gt; - &lt;a href=&quot;http://jdan.github.io/cleaver&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;helper-tools&quot;&gt;Helper Tools:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lepture/python-livereload&quot;&gt;Python Server Auto Reload&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mobily/markdown-live&quot;&gt;markdown-live&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/suan/vim-instant-markdown&quot;&gt;vim-instant-markdown&lt;/a&gt; - &lt;a href=&quot;https://www.youtube.com/watch?v=NqKDUxp5wsA&quot;&gt;Video&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://caseywatts.github.io/2012/12/12/markdown_to_slide_presentation/&quot;&gt;Markdown to Slide Presentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tech.graze.com/2015/07/31/easily-create-slideshow-presentations-from-markdown-with-remark-js/&quot;&gt;Easily create slideshow presentations from markdown with remark.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+<category term="markdown" />
+<summary>Remark.js - easy and simple slide - ExampleGetting startedTwo-column formattingExport to PDFKeynote to Remark.js</summary>
+</entry>
+<entry>
+<title>Pair Programming</title>
+<link href="http://dev.im-bot.com//pair-programming" rel="alternate" type="text/html" title="Pair Programming" />
+<published>2015-10-04T00:00:00+00:00</published>
+<updated>2015-10-04T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//pair-programming</id>
+<content type="html" xml:base="http://dev.im-bot.com//pair-programming">&lt;blockquote&gt;
+&lt;p&gt;My mind to your mind. My thoughts to your thoughts... -- MrSpock&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;all-i-really-need-to-know-about-pair-programming-i-learned-in-kindergarten&quot;&gt;&lt;a href=&quot;http://www.cs.rice.edu/%7Emgricken/teaching/402/09-spring/readings/Everything.pdf&quot;&gt;All I really need to know about pair programming I learned in kindergarten&lt;/a&gt;&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;When it comes to programming practices,
+studies show two heads are almost always better than one.&lt;/p&gt;
+
+&lt;p&gt;The pair can solve problems they couldn’t solve alone and can help
+improve each other’s skills.&lt;/p&gt;
+
+&lt;p&gt;If you think about something long enough, the brain will consider it a
+truth.  If you tell yourself something negative, such as “I&amp;#39;m a terrible
+programmer,” soon your brain will believe you.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;power-of-pair-programming&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l8W6T5Opfcw&quot;&gt;Power of Pair Programming&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;เพิ่งได้ดู Power of Pair Programming จากงาน &lt;a href=&quot;https://www.facebook.com/AGTH66&quot;&gt;Agile Thailand&lt;/a&gt; น่าจะของปี 2012
+&lt;a href=&quot;https://www.facebook.com/roofimon.class&quot;&gt;พี่รูฟ Twin Panichsombat&lt;/a&gt; ได้พูดถึงประสบการ์การนำ pair programming เข้าไปใช้ใน
+&lt;a href=&quot;https://www.facebook.com/opendream&quot;&gt;Opendream&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/l8W6T5Opfcw&quot; frameborder=&quot;0&quot;
+allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;โดยส่วนตัวสรุปคร่าวๆ ได้ดังนี้&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;การ pair ทำให้การเขียนโปรแกรมสนุกยิ่งขึ้น แต่ไม่ใช่ทุกคนที่จะแฮปปี้กับมัน&lt;/li&gt;
+&lt;li&gt;เพิ่มการสื่อสารภายในองคร์ pair เป็นการสื่อสารความคิด ความเข้าใจ
+หากแค่นั่งด้วยกันแล้วคอยบอกให้ทำอะไร นั้นไม่ใช่การ pair&lt;/li&gt;
+&lt;li&gt;pair ทำให้การทำงานช้าลงประมาณ 10 % แต่คุณภาพเพิ่มขึ้น 10-20 %
+เนื่องจากมีการ review code ไปในตัว ลดการเกิด bug ได้ระดับนึง&lt;/li&gt;
+&lt;li&gt;มีการกระจาย knowledge ภายในองกรค์ ไม่ขึ้นอยู่กับคนใด คนหนึ่งมากเกินไป&lt;/li&gt;
+&lt;li&gt;ทำให้โปรแกรมเมอร์โฟกัสได้ดีขึ้น เพราะ ไม่สามารถเล่นเฟส ไลท์ บลาๆ ระหว่าง pair ได้&lt;/li&gt;
+&lt;li&gt;อาจจะมีการหมุนเวียนการ pair เพื่อกระจาย knowledge และ ลดการเตี้ยมกันเพื่อเล่นเฟส บลาๆ&lt;/li&gt;
+&lt;li&gt;ทำให้ junior สามารถอัพสกิลได้เร็วขึ้นมาก โดยมี senior คอยดูแล&lt;/li&gt;
+&lt;li&gt;junior pair junior อาจจะทำให้งานช้ากว่าเดิมได้ (หลงป่า ออกทะเล)
+และอาจจะต้องมี senior มา review code ซํ้าอีกครั้งหนึ่ง ซึ่งทำให้เปลืองเวลาของ senior
+มากกว่า การ pair กับ senior ไปเลย&lt;/li&gt;
+&lt;li&gt;การทำ pair ทั้งวัน อาจจะทำให้เครียดมากกว่าเดิมได้ เนื่องจากโฟกัสที่งานตลอดเวลา
+มักนำเทคนิค &lt;a href=&quot;%7B%7Burl%7D%7D/pomodoro&quot;&gt;Pomodoro&lt;/a&gt; มาประยุกต์ใช้ เช่นทำ 45 นาที พัก 15 นาที&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ป.ล. การ pair ภายในคลิปจะใช้การ pair แบบ navigator driver โดยที่ senior คุมเมาส์ junior คุมคีย์บอร์ด
+โดยมี senior เป็น navigator คอยบอกว่าจะทำอะไร ตรงไหน junior เป็นคน
+เขียนโค๊ด แต่ที่เราทำๆ กันมาจะเป็นแบบ ping pong สลับกันเขียนเทส และ โค๊ด
+ไปคนละเทสเคสแทน&lt;/p&gt;
+
+&lt;h2 id=&quot;pairing-styles&quot;&gt;Pairing Styles&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://articles.coreyhaines.com/posts/thoughts-on-pair-programming/#driver-navigator&quot;&gt;driver-navigator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://articles.coreyhaines.com/posts/thoughts-on-pair-programming/#ping-pong-pairing&quot;&gt;ping-pong-pairing&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;%7B%7Burl%7D%7D/coding#pair-programming&quot;&gt;Read more about pair programming&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+<category term="coding" />
+<summary>My mind to your mind. My thoughts to your thoughts... -- MrSpock</summary>
+</entry>
+<entry>
+<title>Functional Programming in Python</title>
+<link href="http://dev.im-bot.com//fp-python" rel="alternate" type="text/html" title="Functional Programming in Python" />
+<published>2015-10-04T00:00:00+00:00</published>
+<updated>2015-10-04T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//fp-in-python</id>
+<content type="html" xml:base="http://dev.im-bot.com//fp-python">&lt;p&gt;พอดีเพิ่งอ่าน &lt;a href=&quot;http://www.oreilly.com/programming/free/files/functional-programming-python.pdf&quot;&gt;Oreilly.com FP in python&lt;/a&gt; จบ แบบมึนๆ เนื่องจากยังไม่แน่นใน concept
+ของ FP เลยมาสรุปแปะไว้ก่อน เผื่อใครสนใจอ่าน&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+&lt;li&gt;python แค่ยืม concept บางส่วนมาจาก FP&lt;/li&gt;
+&lt;li&gt;แนวคิดแบบ FP สามารถนำมาประยุกต์ใช้ให้โค๊ดดีขึ้น เช่น
+
+&lt;ul&gt;
+&lt;li&gt;list comprehensive / generator expression&lt;/li&gt;
+&lt;li&gt;map, reduce, filters (ใช้ list comprehensive จะดีกว่า)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;แนวคิด Pure Functions (no side effect) ของ FP ทำให้โค๊ด test และ debug
+ได้ง่ายขึ้น
+
+&lt;ul&gt;
+&lt;li&gt;ความรู้ที่ต้องการ&lt;/li&gt;
+&lt;li&gt;mathematic เนื่องจากแนวความคิดของ FP มาจาก math เข้าใจ math มีส่วนช่วยให้คิด/เข้าใจได้ง่ายขึ้น&lt;/li&gt;
+&lt;li&gt;Iterators&lt;/li&gt;
+&lt;li&gt;list comprehensive / generator expression&lt;/li&gt;
+&lt;li&gt;build-in function in python&lt;/li&gt;
+&lt;li&gt;python decorator&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;แนะนำให้ดูสไลนี้จะเข้าใจได้ง่ายกว่า
+&lt;a href=&quot;http://kachayev.github.io/talks/uapycon2012/#/&quot;&gt;http://kachayev.github.io/talks/uapycon2012/#/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;เรื่อง build-in functions ที่จำเป็นสามารถดูได้จาก
+&lt;a href=&quot;https://docs.python.org/3.5/howto/functional.html&quot;&gt;https://docs.python.org/3.5/howto/functional.html&lt;/a&gt;&lt;/p&gt;
+</content>
+<category term="python" />
+<summary>พอดีเพิ่งอ่าน Oreilly.com FP in python จบ แบบมึนๆ เนื่องจากยังไม่แน่นใน conceptของ FP เลยมาสรุปแปะไว้ก่อน เผื่อใครสนใจอ่าน</summary>
+</entry>
+<entry>
+<title>Start Up</title>
+<link href="http://dev.im-bot.com//startup" rel="alternate" type="text/html" title="Start Up" />
+<published>2015-10-01T00:00:00+00:00</published>
+<updated>2015-10-01T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//startup</id>
+<content type="html" xml:base="http://dev.im-bot.com//startup">&lt;h2 id=&quot;book&quot;&gt;Book&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.amazon.com/The-Alchemist-Paulo-Coelho/dp/0061122416&quot;&gt;Alchemist Novel&lt;/a&gt; - &lt;a href=&quot;https://www.se-ed.com/product/%E0%B8%82%E0%B8%B8%E0%B8%A1%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%9E%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%9D%E0%B8%B1%E0%B8%99.aspx?no=9786160421701&quot;&gt;ขุมทรัพย์ที่ปลายฝัน&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;series&quot;&gt;Series&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.hbo.com/silicon-valley/about/video/trailer.html&quot;&gt;Silicon Valley (TV series)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;รายการฟาสต์ฟู้ดธุรกิจ ตอน กว่าจะเป็น TV Direct (ทรงพล ชัญมาตรกิจ) - &lt;a href=&quot;https://www.youtube.com/watch?v=9T-dth2hdT8&quot;&gt;ตอนที่ 1&lt;/a&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=wK14QYysBtU&quot;&gt;ตอนที่ 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=c3OA3898wHY&quot;&gt;‘HUBBA’ Hub of Crazy People Chapter 2 : SHIN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.facebook.com/smartsme/videos/557504484399577/&quot;&gt;วิธีการทำเว็บไซต์ขายสินค้าออนไลน์ให้ประสบความสำเร็จ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pNvfML-WhH4&quot;&gt;ลงทุนในอสังหาฯด้วยเงิน0บาท B1.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=RfeVCwE9pkk&quot;&gt;รายการฟาสต์ฟู้ดธุรกิจ ตอน MFEC กับการบริหารองค์กรให้ยั่งยืนแบบไม่ธรรมดา&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+<category term="startup" />
+<summary>BookAlchemist Novel - ขุมทรัพย์ที่ปลายฝัน</summary>
+</entry>
+<entry>
+<title>Jekyll with Continuous Integration</title>
+<link href="http://dev.im-bot.com//jekyll-with-ci" rel="alternate" type="text/html" title="Jekyll with Continuous Integration" />
+<published>2015-09-23T00:00:00+00:00</published>
+<updated>2015-09-23T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//jekyll_with_ci</id>
+<content type="html" xml:base="http://dev.im-bot.com//jekyll-with-ci">&lt;h2 id=&quot;travis-yml&quot;&gt;.travis.yml&lt;/h2&gt;
+
+&lt;p&gt;{% gist 96c3b980cdecef2c7ee4 %}&lt;/p&gt;
+
+&lt;h2 id=&quot;tips&quot;&gt;Tips:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Jekyll + Travis with Docker not work well - &lt;a href=&quot;https://travis-ci.org/ibotdotout/ibotdotout.github.io/builds/81637869&quot;&gt;Error:  Permission denied&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Travis support docker but not fully permission some dependencies that
+try to use OS command ex. kill can make your test error or failed.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;htmlproof external&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;link that not start with http will be claim as internal link&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/continuous-integration/&quot;&gt;Jekyll with Continuous Integration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jacobtomlinson.co.uk/jekyll/2015/02/18/test-you-jekyll-blog-with-travis-ci/&quot;&gt;Test your Jekyll blog with Travis CI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/grahamc/jekyll/&quot;&gt;Simple Docker Container for Jekyll Work&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/28788109/automatic-merge-branch-into-master-on-sucessful-build-in-travis&quot;&gt;Automatic merge branch into master on sucessful build in
+travis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.travis-ci.com/user/deployment/custom/&quot;&gt;TravisCI Custom Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+<category term="jekyll" />
+<summary>.travis.yml</summary>
+</entry>
+<entry>
+<title>Pomodoro Technique</title>
+<link href="http://dev.im-bot.com//pomodoro" rel="alternate" type="text/html" title="Pomodoro Technique" />
+<published>2015-09-14T00:00:00+00:00</published>
+<updated>2015-09-14T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//pomodoro</id>
+<content type="html" xml:base="http://dev.im-bot.com//pomodoro">&lt;h2 id=&quot;benefits&quot;&gt;Benefits&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Focus on your work and make it Flow, eliminate your social that you can do in break.&lt;/li&gt;
+&lt;li&gt;Estimate your work with time, not your feeling that you know how long did you work and how long will be break.&lt;/li&gt;
+&lt;li&gt;Reduce multi-task that has high cost for switching.&lt;/li&gt;
+&lt;li&gt;Keep track of how long you&amp;#39;re spending at your task that make you easier to plan. Normally use pomodoro unit ex. two pomodoros for meeting, four for coding.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;guide&quot;&gt;Guide&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://pomodorotechnique.com/get-started/&quot;&gt;Pomodoro Get Started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730&quot;&gt;Productivity 101: A Primer to The Pomodoro Technique&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.skilllane.com/blog/pomodoro-technique-to-improve-your-productivity&quot;&gt;เทคนิค Pomodoro: วิธีจัดเวลาเพื่อทำงานอย่างฉลาด เพื่อเปลี่ยนเรื่องยากให้เป็นเรื่องง่าย&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://korn4d.com/2014/06/14/pomodoro-%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99-25-%E0%B8%99%E0%B8%B2%E0%B8%97%E0%B8%B5-%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%9E/&quot;&gt;Pomodoro ไม่ใช่ทำงาน 25 นาที แล้วพัก 5 นาที&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;apps&quot;&gt;Apps&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tomighty.org&quot;&gt;Tomighty - Simpler&lt;/a&gt; - &lt;a href=&quot;https://github.com/ccidral/tomighty&quot;&gt;Source&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# osx&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew cask install tomighty
+
+&lt;span class=&quot;c&quot;&gt;# if use dark theme need to build with youself&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# issuse - https://github.com/ccidral/tomighty-osx/pull/16&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# https://github.com/mrknmc/tomighty-osx&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://tomato-timer.com&quot;&gt;TomatoTimer - WebApp&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+<category term="pruductivity" />
+<summary>Benefits</summary>
+</entry>
+</feed>
