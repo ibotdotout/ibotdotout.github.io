@@ -10,7 +10,6 @@ branches:
   - develop
 
 script:
-- rm js/index.json
 - bundle exec jekyll build
 - bundle exec htmlproof ./_site --disable-external
 
@@ -21,7 +20,7 @@ after_success:
 - git config user.email ${EMAIL}
 - cp -R ../_site/* .
 - git add -A .
-- git commit -m "Generated Jekyll Site by Travis CI #$TRAVIS_BUILD_NUMBER"
+- git commit -m "Generated Jekyll Site by Travis CI #${TRAVIS_BUILD_NUMBER}"
 - git push -f "https://${DEPLOY_KEY}@${GH_REF}" master > /dev/null 2>&1
 
 env:
