@@ -23,7 +23,9 @@ after_success:
 - cp -R ../_site/* .
 - git add -A .
 - git commit -m "Generated Jekyll Site by Travis CI"
-- git push -f --quient "https://${DEPLOY_KEY}@${GH_REF}" master > /dev/null 2>&1
+- git status
+# - git push -f --quient "https://${DEPLOY_KEY}@${GH_REF}" master > /dev/null 2>&1
+- git push -f "https://${DEPLOY_KEY}@${GH_REF}" master
 
 env:
   global:
