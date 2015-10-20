@@ -74,12 +74,49 @@ A 25 27 50
 B 35 75  
 C 75 78  
 D 99 88 76  
-$ awk '{ if ($4 =="") print "Not all scores are available for",$1; }'
+$ awk '{ if ($4 =="") print "Not all scores are available for",$1; }' in
 Not all scores are available for B
 Not all scores are available for C
+```
+
+
+```sh
+$ cat in
+B 35 37 75  
+C 75 78 80  
+$ awk '{print $1,":",($4 >= 50 && $2 >= 50 && $3 >= 50)?"Pass":"Fail"}' in
+B : Fail
+C : Pass
+```
+
+```sh
+$ cat in
+B 35 37 75  
+C 75 78 80  
+$ awk '{ score=($2+$3+$3)/3; \
+if (score >= 80) grade = "A"; \
+else if (score >= 60) grade = "B"; \
+else if(score >= 50) grade= "C"; \
+else grade = "FAIL "; \
+print $0,":",grade }'
+B 35 37 75 : FAIL
+C 75 78 80 : B
+```
+
+```sh
+$ cat in
+A 25 27 50  
+B 35 37 75  
+C 75 78 80  
+D 99 88 76  
+$ awk 'ORS=NR%2?";":"\n"' in
+A 25 27 50;B 35 37 75  
+C 75 78 80;D 99 88 76  
 ```
 
 ### Reference:  
 8. [Awk in 20 Minutes](http://ferd.ca/awk-in-20-minutes.html)
 1. [Awk Introduction Tutorial – 7 Awk Print Examples](http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/)
 2. [4 Awk If Statement Examples ( if, if else, if else if, :?)](http://www.thegeekstuff.com/2010/02/awk-conditional-statements/)
+3. [AWK Scripting: How to define awk variables](http://www.linuxnix.com/awk-scripting-how-to-define-awk-variables/)
+4. [8 Powerful Awk Built-in Variables – FS, OFS, RS, ORS, NR, NF, FILENAME, FNR](http://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/)
