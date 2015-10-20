@@ -32,7 +32,7 @@ gems:
 
 # Plugins config
 lunr_search:
-    excludes: [feed.xml, tags]
+    excludes: [feed.xml, tags, search]
 
 # Custom vars
 version:          0.0.1
