@@ -127,6 +127,10 @@
         
       
     
+      
+        
+      
+    
 
   <div class="sidebar-item">
     <p>
@@ -174,6 +178,54 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/mock">
+        Mock
+      </a>
+    </h1>
+
+    <span class="post-date">24 Jul 2014</span>
+
+    
+      <h2 id="mock-mocking-and-testing-library"><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></h2>
+
+<p>If you mock some thing, it can&#39;t be runnable. Don&#39;t forget it just mock object.  </p>
+
+<h3 id="mock-method-that-can-be-runnable">Mock Method that can be runnable</h3>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># side_effect will make mock method can be runable  </span>
+<span class="c"># this can be use to reutrn_value in different arguments</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>  
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>  
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">3</span>
+</code></pre></div>
+<h3 id="patch-module-attribute">Patch Module Attribute</h3>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Using PropertyMock with return_value argument  </span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">&#39;package.module.attribute&#39;</span><span class="p">,</span>  
+                     <span class="n">new_callable</span><span class="o">=</span><span class="n">mock</span><span class="o">.</span><span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+                     <span class="k">as</span> <span class="n">mock_attribute</span><span class="p">:</span>  
+<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">mock_attribte</span><span class="p">)</span>  
+<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span>  
+<span class="mi">3</span>  
+<span class="mi">3</span>  
+</code></pre></div>
+<h3 id="my_mock-mock_calls">my_mock.mock_calls</h3>
+
+<h3 id="reference">Reference:</h3>
+
+<ol>
+<li><a href="http://www.voidspace.org.uk/python/mock/mock.html">The Mock Class</a></li>
+<li><a href="http://melp.nl/2011/02/enhancing-python-unit-tests-with-more-decorators/">enhancing-python-unit-tests-with-more-decorators</a></li>
+<li><a href="http://stackoverflow.com/questions/5929107/python-decorators-with-parameters">python-decorators-with-parameters</a></li>
+</ol>
+
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -742,28 +794,6 @@ waitproc <span class="o">()</span> <span class="o">{</span>
 <li><a href="http://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html">10 examples of paste command usage in Linux</a></li>
 </ol>
 
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/recover-lost-partition">
-        Recover lost partition
-      </a>
-    </h1>
-
-    <span class="post-date">22 Jun 2014</span>
-
-    
-      <h2 id="recover-lost-partition">Recover lost partition</h2>
-
-<p>I used <a href="http://www.cgsecurity.org/wiki/TestDisk">TestDisk</a> to recover my lost NTFS partition that I formatted by accidentally. You can use TestDisk by follow <a href="http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step">TestDisk Step by Step</a>. After recovered I can see my NTFS partition that was formatted but can not access it.</p>
-
-<h2 id="repair-damaged-partition">Repair damaged partition</h2>
-
-<p>I got my lost partition back but can&#39;t access it. So I use &#39;chkdsk /r&#39; command on Windows to repair damaged partition. Finally after 12 hours, I can got lost partition back and accessible it normally.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  chkdsk /r &lt;drive&gt;
-</code></pre></div>
     
   </div>
   

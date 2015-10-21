@@ -3,12 +3,171 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-10-20T16:28:21+00:00</updated>
+<updated>2015-10-21T11:37:18+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
 <name>botbotbot</name>
 </author>
+<entry>
+<title>How to get that job for developer</title>
+<link href="http://dev.im-bot.com//get-job" rel="alternate" type="text/html" title="How to get that job for developer" />
+<published>2015-10-21T00:00:00+00:00</published>
+<updated>2015-10-21T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//get-job</id>
+<content type="html" xml:base="http://dev.im-bot.com//get-job">&lt;h2 id=&quot;ทำไงให้ได้งาน&quot;&gt;ทำไงให้ได้งาน:&lt;/h2&gt;
+
+&lt;p&gt;หลักการง่ายๆ คือทำให้ตัวเองเป็นที่รู้จัก หากคุณเก่งอยู่บ้านคนเดียวโดยที่คนอื่นไม่รู้ก็ยากที่จะมีใครมาจ้างคุณไปทำงาน&lt;/p&gt;
+
+&lt;h2 id=&quot;วิธีการทำให้ตัวเองเป็นที่รู้จัก-online&quot;&gt;วิธีการทำให้ตัวเองเป็นที่รู้จัก Online:&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;มี CV Online และคอยอัพเดทอยู่เสมอๆ เช่น
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://linkedin.com&quot;&gt;http://linkedin.com&lt;/a&gt; ปัจจุบัน HR/Agency หลายคนหาคนไปทำงานจาก linkedin กันมากขึ้น&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.wantedly.com&quot;&gt;https://www.wantedly.com&lt;/a&gt; ฝากโปรไฟล์ไว้บนเว็บเด่นๆ หรือ เฉพาะทาง มีโอกาสให้ บ. มาเชิญไปทำงานได้ง่ายขึ้น&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;มี &lt;a href=&quot;http://github.com&quot;&gt;Github Account&lt;/a&gt; - Recommend
+
+&lt;ul&gt;
+&lt;li&gt;เพื่อแสดงผลงาน code ต่างๆ รวมถึงสกิลในการใช้ Git version control หลาย บ. ให้ส่ง Github Account แทน CV&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;มีผลงานที่ชัดเจนเป็นของตัวเองไม่ใช่ในนามบริษัท
+
+&lt;ul&gt;
+&lt;li&gt;เช่น สาย mobile ก็ควรมีแอพบน store , สาย web / design ก็ควรมี website เป็นของตัวเอง&lt;/li&gt;
+&lt;li&gt;อาจจะเป็น pet project หรือโค๊ดที่เราเรียนรู้สิ่งใหม่ๆ ต่างๆ ไม่จำเป็นต้องเป็นระดับ prodcut เสมอไป&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;เขียน Blog ของตัวเอง - Recommend
+
+&lt;ul&gt;
+&lt;li&gt;เนื่องจากไม่ใช่ทุกคนที่จะ code หรือสามารถมีชิ้นงานเป็นของตัวเองได้&lt;/li&gt;
+&lt;li&gt;แต่ทุกงานมักจะมีปัญหา และ ทำจำเป็นต้องค้นหาวิธีแก้ปัญหาเองบ่อยครั้ง ให้พยายามนำสิ่งเหล่านี้มาเขียน เช่น เจอปัญหา xxx บน wordpress ต้องแก้ยังไง ลองอะไรมาบ้าง work ไหม แต่ละวิธีมีข้อจำกัดเป็นยังไง ตัวอย่าง &lt;a href=&quot;http://www.itpcc.net/tip-and-technic/self-wordpress-update-via-ftp-solvement/&quot;&gt;เส้นผมบังภูเขา : การแก้ปัญหาการอัพเดต WordPress จากตัวระบบเองผ่าน FTP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;เพื่อแสดงให้เห็นว่าเรามีความรู้ ความเข้าใจในเรื่องนั้นระดับหนึ่ง ซึ่งมักเป็นสิ่งที่ไม่สามารถรู้จักกันผ่านการสัมภาษณ์เพียงแค่ไม่อีกชั่วโมงได้&lt;/li&gt;
+&lt;li&gt;นอกจากที่ยังมีประโยชน์เวลาเราเจอปัญหาที่ซํ้าๆยังสามารถกลับมาทบทวนได้อีก ประหยัดเวลาไปนั่งค้นเรื่องเดิมๆ ได้เยอะ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;วิธีการทำให้ตัวเองเป็นที่รู้จัก-offline&quot;&gt;วิธีการทำให้ตัวเองเป็นที่รู้จัก Offline:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;เหมาะกับ กทม ต่างจังหวัดมีิกิจกรรมน้อยมาก&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;โดยทั่วไปงานสัมมนาหรือ meetup จะมีการจัด talks ให้ความรู้ในเรื่องต่างๆ และเปิดรับสมัครงานบ้าง
+เพื่อให้โปรแกรมเมอร์ได้ทำรู้จักกันมากขึ้น เพื่อการแลกเปลี่ยนแบ่งปันความรู้ต่างๆ  &lt;/p&gt;
+
+&lt;p&gt;การที่เราไปสมัครงานในงานสัมมนาเหล่านี้มักจะได้เปรียบกว่าการสมัครงานทั่วๆ ไปเสมอ
+ซึ่งคนที่ไปงานมักมีคุณสมบัติตรงกับที่เปิดรับสมัคร เช่น มีรับสมัคร iOS Dev ที่งาน iOS Meetup
+หรืออย่างน้อยที่สุดคนที่มางานลักษณะนี้มักเป็นคนที่ชอบเรียนรู้อะไรใหม่ สนใจงานด้านนี้อย่างจริงจัง
+ซึ่งมักเป็นอย่างสิ่งที่ผู้ัรับสมัครงานมองหา  &lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;กิจกรรม meetup/สัมมนาต่างๆ มีทั้งแบบฟรีและเสียตังตั้งแต่ระดับร้อยไปถึงพันบาท มีทั้งภาษาไทย / อังกฤษ
+บางงานก็มีอาหารเลี้ยง เช่น พิชช่า เบียร์ แล้วแต่สปอนเซอร์ในการจัดแต่ละครั้ง&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;เข้ารวมงานสัมมนาต่างๆ
+
+&lt;ul&gt;
+&lt;li&gt;มักเป็นงานใหญ่ระดับ 60 คนขึ้นไป มักจัดทุก 3 เดือนครั้ง หรือ ปีละครั้งแล้วงาน&lt;/li&gt;
+&lt;li&gt;เช่น &lt;a href=&quot;https://www.facebook.com/AGTH66&quot;&gt;AgileThailand&lt;/a&gt;, &lt;a href=&quot;https://www.facebook.com/Barcampbangkhen&quot;&gt;BarCamp Bangkhen&lt;/a&gt;, &lt;a href=&quot;http://thaiprogrammer.org/category/activity/&quot;&gt;Code Mania&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;เข้ารวม meetup ต่างๆ ซึ่งสามารถหาได้จาก &lt;a href=&quot;http://www.meetup.com&quot;&gt;http://www.meetup.com&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;งานระดับเล็ก อาจจะมีคนร่วมงานเพียงแค่ 10 - 20 คน แล้วแต่ความเข็มแข็งของงานั้น&lt;/li&gt;
+&lt;li&gt;มักจัดเดือนละครั้ง คนที่มาส่วนใหญ่จะเป็นฝรั่ง มักจะมีการนำเทคโนโลยีต่างๆ มาพูดคุยกัน เช่น &lt;a href=&quot;http://www.meetup.com/bkkhack/events/225060163/&quot;&gt;Hack Night: Code, Make, Teach, or Learn&lt;/a&gt;,
+&lt;a href=&quot;http://www.meetup.com/bkk-web/&quot;&gt;BKK WEB MEETUP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;ขั้นตอนสัมภาษณ์หลักๆ&quot;&gt;ขั้นตอนสัมภาษณ์หลักๆ:&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;แนะนำให้อ่าน &lt;a href=&quot;https://adamcod.es/2013/02/28/how-to-hire-a-developer.html&quot;&gt;How to Hire a Developer&lt;/a&gt;
+เค้าเขียนได้ละเอียดมากเริ่มตั้งแต่กระบวนการเปิดรับสมัคร การคัดกรองเร่ซูเม่ การนัดสัมภาษณ์ ต่างๆ ได้มุมมองของคนสัมภาษณ์ในเชิง Dev ถ้าเจอ HR อาจจะอีกแบบ&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;สัมภาษณ์ทางโทรศัพท์ (Phone Interview)
+
+&lt;ul&gt;
+&lt;li&gt;สอบถามข้อมูลทั่วไปเกี่ยวกับผู้สมัคร บางที่อาจจะเป็นภาษาอังกฤษ เช่น  เรียนหรือทำงาน เขียนภาษาอะไรบ้าง ใช้เทคโนโลยีอะไรบ้างกว้างๆ ทั่วไป&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;สัมภาษณ์ทางเจอตัว (Face to Face Interview)
+
+&lt;ul&gt;
+&lt;li&gt;สอบถามรายละเอียดแบบลงลึกมากขึ้น เพื่อดูทัศนคติ บุคลิก ความสนใจ อารมณ์ สกิลการสื่อสาร ไหวพริบต่างๆ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;สัมภาษณ์ทางเทคนิค (Technical Interview)
+
+&lt;ul&gt;
+&lt;li&gt;สอบถามรายละเอียดทางเทคนิค โดยทั่วไปเน้นดูที่กระบวนการคิดและการแก้ปัญหา บางที่อาจจะลงลึกมากขึ้นอยู่กับ บ. และตำแหน่งที่สมัคร / บางที่อาจจะให้ลองทำ pair-programming เพื่อสัมภาษณ์&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;คำแนะนำอื่นๆ&quot;&gt;คำแนะนำอื่นๆ:&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;อย่าดูที่ตำแหน่งที่เปิดรับ ให้ดูที่รายละเอียดการทำงาน หลายที่เขียนชื่อตำแหน่ง หรือ รายละเอียดเพื่อแค่ให้ดูดี ไม่ได้ต้องการคุณสมบัติมากมายขนาดนั้น&lt;/li&gt;
+&lt;li&gt;บางตำแหน่งไม่ได้จำเป็นต้องมีประสบการณ์มากมาย อาศัยการเรียนรู้งานได้ แต่การมีความรู้พื้นฐานต่างๆ ประสบการณ์ของงานที่ใกล้เคียงจะทำให้เราเรียนรู้ได้เร็วขึ้น&lt;/li&gt;
+&lt;li&gt;การไปสัมภาษณ์งานควรเป็นการทำให้ บ. รู้จักเรา และเรารู้จัก บ. มากขึ้น เช่น ถามเค้ากลับว่าถ้าหากได้งานนี้ เรายังขาดสกิลอะไรบ้าง ได้ไปศึกษาเพิ่ม / มีการทำ OT บ่อยไหม / ทำงานที่บ้านโดยไม่เข้าออฟฟิส ได้ไหม ?&lt;/li&gt;
+&lt;li&gt;พัฒนาตัวเองทุกวัน ไม่ใช่แค่ช่วงหางานใหม่&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;how-to-prepare-for-interview&quot;&gt;How to prepare for interview ?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.khajochi.com/2015/03/7-jobs-interview-tips-for-programmer.html&quot;&gt;7 เทคนิคการสัมภาษณ์งานสำหรับ &amp;quot;โปรแกรมเมอร์&amp;quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://thumbsup.in.th/2014/08/five-non-tech-interview-questions-to-ask-a-developer/&quot;&gt;5 คำถาม non-technical ที่ควรใช้สัมภาษณ์งานตำแหน่งเกี่ยวกับ Developer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sitepoint.com/getting-hired-developer-tips-senior-recruiters/&quot;&gt;Getting Hired as a Developer: Tips from Senior Recruiters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mashable.com/2014/12/10/job-seekers-lacking-qualifications/#GIryioKmk5qU&quot;&gt;How to apply for a job when you don&amp;#39;t meet all the requirements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-are-they-looking&quot;&gt;What are they looking ?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.somkiat.cc/improve-hiring-process/&quot;&gt;มาเปลี่ยนวิธีการสัมภาษณ์ developer กันไหม ?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://adamcod.es/2013/02/28/how-to-hire-a-developer.html&quot;&gt;How to Hire a Developer&lt;/a&gt; - Recommend&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;technical-interview&quot;&gt;Technical Interview&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/kennyyu/workshop&quot;&gt;Technical Interview Workshop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.githubusercontent.com/kennyyu/workshop/master/resources.pdf&quot;&gt;Technical interview tips and strategies&lt;/a&gt; - Recommend&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;good-cv&quot;&gt;Good CV&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.juntima.me/cv-small.pdf&quot;&gt;http://www.juntima.me/cv-small.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://nuuneoi.com/profile&quot;&gt;http://nuuneoi.com/profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://careers.stackoverflow.com/chakrit&quot;&gt;http://careers.stackoverflow.com/chakrit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://carpedm20.github.io&quot;&gt;http://carpedm20.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cv-tools&quot;&gt;CV Tools&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://jsonresume.org&quot;&gt;https://jsonresume.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;etc&quot;&gt;ETC.&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://tanjai.in.th/2015/05/14/apply-at-thoughtworks/&quot;&gt;แบ่งปันประสบการณ์ : สมัครงาน ThoughtWorks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.juntima.me/blog/2015/08/little-intern/&quot;&gt;Little Intern in a Big Company – เด็กฝึกงานตัวเล็กๆในบริษัทใหญ่ๆ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+<category term="jobs" />
+<summary>รวมบทความ เทคนิคต่างๆ เกี่ยวกับการสมัครงาน developer</summary>
+</entry>
 <entry>
 <title>Convert File Encoding in OSX</title>
 <link href="http://dev.im-bot.com//osx-convert-encoding" rel="alternate" type="text/html" title="Convert File Encoding in OSX" />
@@ -500,48 +659,5 @@ travis&lt;/a&gt;&lt;/li&gt;
 </content>
 <category term="jekyll" />
 <summary>.travis.yml</summary>
-</entry>
-<entry>
-<title>Pomodoro Technique</title>
-<link href="http://dev.im-bot.com//pomodoro" rel="alternate" type="text/html" title="Pomodoro Technique" />
-<published>2015-09-14T00:00:00+00:00</published>
-<updated>2015-09-14T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//pomodoro</id>
-<content type="html" xml:base="http://dev.im-bot.com//pomodoro">&lt;h2 id=&quot;benefits&quot;&gt;Benefits&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Focus on your work and make it Flow, eliminate your social that you can do in break.&lt;/li&gt;
-&lt;li&gt;Estimate your work with time, not your feeling that you know how long did you work and how long will be break.&lt;/li&gt;
-&lt;li&gt;Reduce multi-task that has high cost for switching.&lt;/li&gt;
-&lt;li&gt;Keep track of how long you&amp;#39;re spending at your task that make you easier to plan. Normally use pomodoro unit ex. two pomodoros for meeting, four for coding.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;guide&quot;&gt;Guide&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://pomodorotechnique.com/get-started/&quot;&gt;Pomodoro Get Started&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730&quot;&gt;Productivity 101: A Primer to The Pomodoro Technique&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.skilllane.com/blog/pomodoro-technique-to-improve-your-productivity&quot;&gt;เทคนิค Pomodoro: วิธีจัดเวลาเพื่อทำงานอย่างฉลาด เพื่อเปลี่ยนเรื่องยากให้เป็นเรื่องง่าย&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://korn4d.com/2014/06/14/pomodoro-%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99-25-%E0%B8%99%E0%B8%B2%E0%B8%97%E0%B8%B5-%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%9E/&quot;&gt;Pomodoro ไม่ใช่ทำงาน 25 นาที แล้วพัก 5 นาที&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;apps&quot;&gt;Apps&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.tomighty.org&quot;&gt;Tomighty - Simpler&lt;/a&gt; - &lt;a href=&quot;https://github.com/ccidral/tomighty&quot;&gt;Source&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# osx&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew cask install tomighty
-
-&lt;span class=&quot;c&quot;&gt;# if use dark theme need to build with youself&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# issuse - https://github.com/ccidral/tomighty-osx/pull/16&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# https://github.com/mrknmc/tomighty-osx&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://tomato-timer.com&quot;&gt;TomatoTimer - WebApp&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-<category term="pruductivity" />
-<summary>Benefits</summary>
 </entry>
 </feed>
