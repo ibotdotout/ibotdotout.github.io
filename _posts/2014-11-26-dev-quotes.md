@@ -29,3 +29,5 @@ minutes, but you can't search Google to balance individual desire -
 * เราไม่ได้เหนื่อยเพราะเรื่องที่จบไปแล้ว แต่เหนื่อยเพราะเรื่องที่ยังเหลือมากกว่า - [เมื่อรู้สึกเหนื่อย …](https://medium.com/life-as-i-feel-it/เมื่อรู้สึกเหนื่อย-c701dac759dc)
 
 * Like any simple practice, there's lots of devil in the detail - [Continuous Integration Improving Software Quality and Reducing Risk](http://martinfowler.com/books/duvall.html)
+
+*  your goal is not to write software. Your goal is to solve problems, and often software is part of the solution. - [It’s about solving problems](http://sicpers.info/2014/01/its-about-solving-problems/)
