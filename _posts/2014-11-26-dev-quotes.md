@@ -31,3 +31,5 @@ minutes, but you can't search Google to balance individual desire -
 * Like any simple practice, there's lots of devil in the detail - [Continuous Integration Improving Software Quality and Reducing Risk](http://martinfowler.com/books/duvall.html)
 
 *  your goal is not to write software. Your goal is to solve problems, and often software is part of the solution. - [It’s about solving problems](http://sicpers.info/2014/01/its-about-solving-problems/)
+
+* It’s the small things we do everyday that matter most - [Jeff Patton - "How Doing the Little Things Well Makes the Big Things Possible"](https://www.youtube.com/watch?v=iM9FLxico1I)
