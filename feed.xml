@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-10-21T11:41:41+00:00</updated>
+<updated>2015-10-21T11:55:04+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -46,6 +46,12 @@
 &lt;li&gt;แต่ทุกงานมักจะมีปัญหา และ ทำจำเป็นต้องค้นหาวิธีแก้ปัญหาเองบ่อยครั้ง ให้พยายามนำสิ่งเหล่านี้มาเขียน เช่น เจอปัญหา xxx บน wordpress ต้องแก้ยังไง ลองอะไรมาบ้าง work ไหม แต่ละวิธีมีข้อจำกัดเป็นยังไง ตัวอย่าง &lt;a href=&quot;http://www.itpcc.net/tip-and-technic/self-wordpress-update-via-ftp-solvement/&quot;&gt;เส้นผมบังภูเขา : การแก้ปัญหาการอัพเดต WordPress จากตัวระบบเองผ่าน FTP&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;เพื่อแสดงให้เห็นว่าเรามีความรู้ ความเข้าใจในเรื่องนั้นระดับหนึ่ง ซึ่งมักเป็นสิ่งที่ไม่สามารถรู้จักกันผ่านการสัมภาษณ์เพียงแค่ไม่อีกชั่วโมงได้&lt;/li&gt;
 &lt;li&gt;นอกจากที่ยังมีประโยชน์เวลาเราเจอปัญหาที่ซํ้าๆยังสามารถกลับมาทบทวนได้อีก ประหยัดเวลาไปนั่งค้นเรื่องเดิมๆ ได้เยอะ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;เข้าไปตอบคำถามตามบอร์ดต่างๆ
+
+&lt;ul&gt;
+&lt;li&gt;เช่น &lt;a href=&quot;http://stackoverflow.com&quot;&gt;http://stackoverflow.com&lt;/a&gt; เคยได้ยินมาว่าบางที่ถาม StackOverflow Account กันเลยทีเดียว&lt;/li&gt;
+&lt;li&gt;ถ้าไม่ถนัดภาษาอังกฤษอาจจะเป็นกลุ่มของไทยเล็กๆ เฉพาะทางบนเฟส เช่น &lt;a href=&quot;https://www.facebook.com/groups/admin.py.dev/&quot;&gt;Pyhton Thailand&lt;/a&gt;, &lt;a href=&quot;https://www.facebook.com/groups/iosthailand/&quot;&gt;iOS Dev Thailand&lt;/a&gt; เป็นต้น&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
