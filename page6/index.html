@@ -181,6 +181,65 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/Security">
+        All about Security
+      </a>
+    </h1>
+
+    <span class="post-date">05 Feb 2015</span>
+
+    
+      <h3 id="owasp-broken-web-applications-project">OWASP Broken Web Applications Project</h3>
+
+<ul>
+<li>WLAN Security Megaprimer (SecurityTube)<br></li>
+<li>Metasploit Framework Expert (SecurityTube)<br></li>
+<li>Linux Assembly Expert (SecurityTube)<br></li>
+<li>Hack Night (NYU Poly ISIS Lab)<br></li>
+<li>The Life of Binaries (OpenSecurityTraining)<br></li>
+</ul>
+
+<h3 id="recomment-video">Recomment Video:</h3>
+
+<ol>
+<li><a href="https://www.youtube.com/watch?v=BTq0OO8EFeU">OLX.co.th - XSS to Account Take Over</a></li>
+<li><a href="https://www.youtube.com/watch?v=CbqU51yZH-4">ทดสอบแฮกเว็บง่าย ๆ ด้วย OWASP BWA #1</a></li>
+<li><a href="https://www.youtube.com/watch?v=xh45fBIANpc">how to be a web pentester (white hacker)</a></li>
+<li><a href="https://www.youtube.com/watch?v=BgAiMgDnIDY">อธิบายการทำงานของโปรแกรม traceroute (tracert)</a></li>
+<li><a href="https://www.youtube.com/watch?v=-_Hejoa1ESM">สาธิตการใช้งาน Burp Suite เบื้องต้น (package sniffer)</a></li>
+</ol>
+
+<h3 id="youtube-channel">Youtube Channel:</h3>
+
+<ol>
+<li><a href="https://www.youtube.com/user/2600Thailand/videos">2600Thailand Group</a></li>
+<li><a href="https://www.youtube.com/user/pich4ya/videos">Pichaya Morimoto</a></li>
+<li><a href="https://www.youtube.com/user/yannarak/videos">Yannarak Wannasai</a></li>
+<li><a href="https://www.youtube.com/user/opkwin/videos">ตาเล็ก วินโด้</a></li>
+<li><a href="http://www.cybrary.it/course/ethical-hacking/">Penetration Testing and Ethical Hacking</a></li>
+</ol>
+
+<h3 id="tranning">Tranning:</h3>
+
+<ol>
+<li><a href="https://www.hackthissite.org">Hack This Site</a></li>
+<li><a href="https://github.com/isislab/Hack-Night">Hack Night is an open weekly training session run by the ISIS lab</a></li>
+</ol>
+
+<h3 id="penetration-testing-lab">Penetration testing lab</h3>
+
+<ol>
+<li><a href="http://www.amanhardikar.com/mindmaps/Practice.html">PENETRATION TESTING PRACTICE LAB - VULNERABLE APPS / SYSTEMS</a></li>
+<li><a href="https://www.vulnhub.com">Vulnhub</a></li>
+<li><a href="https://lab.pentestit.ru">Pentestit</a></li>
+<li><a href="https://www.pentesterlab.com/exercises/">Pentesterlab exercises</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/vimdiff">
         Vimdiff Custom
       </a>
@@ -724,100 +783,6 @@ $ pip install -U docker-compose
 <li><a href="http://docs.docker.com/installation/mac/#migrate-from-boot2docker">Docker Toolbox - Migrate from Boot2Docker</a></li>
 </ol>
 
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/debian">
-        Debian frist boot
-      </a>
-    </h1>
-
-    <span class="post-date">10 Sep 2014</span>
-
-    
-      <h3 id="make-user-can-use-sudo-command">Make user can use Sudo command</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>su <span class="c"># aceess to root  </span>
-<span class="nv">$ </span>apt-get install sudo  
-<span class="nv">$ </span>adduser &lt;username&gt; sudo  
-<span class="nv">$ </span>reboot <span class="c"># or logout  </span>
-</code></pre></div>
-<p>Ref:<br>
-1. <a href="http://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line">How can I add a new user as sudoer using the command line?</a><br>
-2. <a href="http://www.debianhelp.co.uk/sudo.htm">Sudo Configuration in Debian</a>    </p>
-
-<h3 id="upgrade-debian-to-unstable-sid"><a href="https://www.digitalocean.com/community/tutorials/upgrading-debian-to-unstable">Upgrade Debian to Unstable(Sid)</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo vi /etc/apt/sources.list
-<span class="c"># edit all &#39;squeeze&#39; that&#39;s version codename </span>
-<span class="c"># to &#39;sid&#39; that&#39;s unstable codename</span>
-<span class="c"># ex. deb http://ftp.us.debian.org/debian squeeze main </span>
-<span class="c"># to deb http://ftp.us.debian.org/debian sid main</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get dist-upgrade
-<span class="nv">$ </span>sudo reboot
-</code></pre></div>
-<h3 id="using-lastest-package-on-debian-testing-package">Using Lastest Package on Debian (Testing Package)</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo vim /etc/apt/sources.list
-<span class="c"># add &quot;deb     http://http.debian.net/debian testing         main&quot;</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get install &lt;your package&gt;
-<span class="c"># don&#39;t call sudo apt-get upgrade if your don&#39;t want to upgrade your all system to lastest packages</span>
-</code></pre></div>
-<h3 id="check-version-debian">Check Version Debian</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>lsb_release -a <span class="c">#check debian version</span>
-<span class="nv">$ </span>uname -a <span class="c">#check linux version</span>
-</code></pre></div>
-<h3 id="how-to-switch-between-users-on-one-terminal"><a href="http://unix.stackexchange.com/questions/3568/how-to-switch-between-users-on-one-terminal">How to switch between users on one terminal?</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>su - &lt;user&gt;
-</code></pre></div>
-<h3 id="how-to-find-fastest-mirror-lists-with-‘netselect-apt’-on-debian"><a href="http://www.unixmen.com/how-to-find-fastest-official-mirror-lists-with-netselect-apt-on-debian/">How To Find Fastest Mirror Lists With ‘Netselect-apt’ On Debian</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># choose set your region to your local frist</span>
-<span class="nv">$ </span>sudo apt-get install netselect-apt
-<span class="nv">$ </span>sudo netselect-apt
-</code></pre></div>
-<h3 id="debian-linux-install-openssh-sshd-server"><a href="http://www.cyberciti.biz/faq/debian-linux-install-openssh-sshd-server/">Debian Linux Install OpenSSH SSHD Server</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># install</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get install openssh-server
-
-<span class="c"># control ssh-server</span>
-<span class="nv">$ </span>sudo service ssh stop
-<span class="nv">$ </span>sudo service ssh start
-<span class="nv">$ </span>sudo service ssh restart
-<span class="nv">$ </span>sudo service ssh status
-</code></pre></div>
-<h3 id="set-bash-color-on-ssh"><a href="http://ubuntuforums.org/showthread.php?t=1733664">Set Bash Color on SSH</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># In your ssh server</span>
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;source your .bashrc&quot;</span> &gt;&gt; .bash_profile
-<span class="c"># or you can try this [[ -f ~/.bashrc ]] &amp;&amp; . ~/.bashrc</span>
-</code></pre></div>
-<h3 id="extended-monitor"><a href="http://unix.stackexchange.com/questions/101283/extended-monitor-scroll-right-to-access-left-screen">Extended monitor</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>xrandr --output VGA-1 --auto --primary --output DVI-I-1 --auto --left-of VGA-1
-</code></pre></div>
-<h2 id="install-locals-to-support-many-languages">Install locals to support many languages</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># debian</span>
-<span class="nv">$ </span>sudo apt-get install locales
-<span class="nv">$ </span>sudo dpkg-reconfigure locales
-</code></pre></div>
-<h3 id="clan-uninstall">Clan Uninstall</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo apt-get remove --purge &lt;packagename&gt; <span class="c"># --purge delete all data and config</span>
-<span class="nv">$ </span>sudo apt-get autoremove --purge
-<span class="nv">$ </span>sudo apt-get clean
-<span class="nv">$ </span>locate &lt;packagename&gt; <span class="c"># manual delete</span>
-</code></pre></div>
-<h3 id="show-hidden-file-in-gui"><a href="http://ubuntuforums.org/showthread.php?t=1108528">Show hidden file in GUI</a></h3>
-
-<p>Ctrl + H</p>
-
-<h3 id="keyboard-shortcut-for-pasting-on-the-gnome-terminal"><a href="http://askubuntu.com/questions/202459/keyboard-shortcut-for-pasting-on-the-gnome-terminal">keyboard shortcut for pasting on the Gnome Terminal</a></h3>
-
-<p>Ctrl+Shift+V - paste<br>
-Ctrl+Shift+C - copy  </p>
-
-<h3 id="install-and-mount-an-exfat-partition"><a href="http://askubuntu.com/questions/100278/how-do-i-install-and-mount-an-exfat-partition">install and mount an exFAT partition</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo apt-get install exfat-fuse exfat-utils
-</code></pre></div>
     
   </div>
   

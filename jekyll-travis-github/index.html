@@ -8,18 +8,18 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Read more feature on jekyll" />
+  <meta property="og:title" content="Jekyll build with Travis and deploy to Github Page" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/read-more-jekyll/" />
+<meta property="og:url" content="http://dev.im-bot.com/jekyll-travis-github/" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="Read more feature on jekyll that working with Github Pages" />
+<meta property="og:description" content="Custom build jekyll with Travis for enable plugin and deploy to Github Page" />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Read more feature on jekyll &middot; botbotbot
+      Jekyll build with Travis and deploy to Github Page &middot; botbotbot
     
   </title>
 
@@ -178,8 +178,8 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Read more feature on jekyll</h1>
-  <span class="post-date">18 Oct 2015</span>
+  <h1 class="post-title">Jekyll build with Travis and deploy to Github Page</h1>
+  <span class="post-date">26 Oct 2015</span>
   <blockquote>
 <p>Github Pages Tips:<br>
 Github Pages always complie jekyll with <code>--safe</code> option that will<br>
@@ -187,40 +187,103 @@ disable plugins but some plugin can work with Github Pages.<br>
 <a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a>  </p>
 </blockquote>
 
-<p>Just using <code>truncate</code> they not checking html tag that make your site look
-terrible and Github Pages not support custom ruby script that place in
-<code>_plugins</code>. The better way is using split with custom tags.</p>
+<p>To avoid this <code>--safe</code> option to be powerful jekyll, you need to build your jelyll somewhere else and commit your static page to <code>main</code> or <code>gh-page</code> branch.
+We can automate build jekyll with <a href="https://travis-ci.org">Travis-CI</a>
+that store your jekyll file in <code>jekyll</code> branch when push to github that
+will trig to Travis to build and deploy static page back to your <code>main</code>
+branch to publish your contents. you should read previous <a href="/jekyll-with-ci/">blog about
+jekyll and travis</a></p>
 
-<p>Replace `<code>in</code>index.html` in jekyll directory with</p>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">post</span><span class="o">.</span><span class="n">content</span> <span class="n">contains</span> <span class="s2">&quot;&lt;!-- more --&gt;&quot;</span> <span class="sx">%}</span>
-<span class="sx">      {{ post.content | split:&quot;&lt;!-- more --&gt;&quot; | first % }</span><span class="p">}</span>
-      <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;text-align:right;&quot;</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;{{ post.url }}&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color:#000;&quot;</span><span class="o">&gt;</span> <span class="no">Read</span> <span class="no">More</span> <span class="o">&lt;</span><span class="sr">/a&gt;</span>
-<span class="sr">      &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-    <span class="p">{</span><span class="o">%</span> <span class="k">else</span> <span class="sx">%}</span>
-<span class="sx">      {{ post.content }</span><span class="p">}</span>
-    <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
-</code></pre></div>
 <!-- more -->
 
-<p>In your contents add <code>&lt;!-- more --&gt;</code></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">---
-layout: post
-title: Read more feature on jekyll
-tags: [jekyll]
----
-Hello, world
-
-&lt;!-- more --&gt;
-
-You can&#39;t see this message via index.html
-</code></pre></div>
-<h3 id="references">References:</h3>
+<h2 id="good-to-knows">Good to knows:</h2>
 
 <ol>
-<li><a href="http://mikeygee.com/blog/truncate.html">Truncating blog posts in Jekyll</a></li>
-<li><a href="https://truongtx.me/2013/05/01/jekyll-read-more-feature-without-any-plugin/">Jekyll - Read More without plugin</a></li>
-<li><a href="https://github.com/MattHall/truncatehtml">A Jekyll plugin that truncates HTML while preserving markup structure.</a></li>
+<li>In your <code>.travis.yml</code> always keep <code>&gt; /dev/null 2&gt;&amp;1</code> to avoid your tokens display on logs.</li>
+<li>Github page need <code>verified email</code> for trigger update contents.</li>
+<li>You can check your last build from <code>feed.xml</code> on Jekyll</li>
+<li>If your use Github page as personal page don&#39;t try to change <code>Default
+branch</code> on your Github repository settings that will use your
+<code>Default branch</code> to hosting your page.</li>
+</ol>
+
+<h2 id="how-to">How to:</h2>
+
+<ol>
+<li><p>Create <code>jekyll</code> branch for development</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git branch jekyll
+</code></pre></div></li>
+<li><p>Clear your <code>main</code> or <code>gh-page</code> branch to blank</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git rm *
+</code></pre></div></li>
+<li><p>Enable Travis on your repository on Travis website and turn on <code>Build
+only if .travis.yml is present</code> on your travis repository settings.</p></li>
+<li><p>Checkout <code>jekyll</code> branch and create <code>.travis.yml</code> then edit <code>GH_REF</code>
+and <code>TARGET_BRANCH</code> to your own</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">sudo: false
+
+language: ruby
+
+rvm:
+- 2.2
+
+branches:
+  only:
+  - jekyll
+
+script:
+- bundle exec jekyll build
+- bundle exec htmlproof ./_site --disable-external
+
+after_success:
+- git clone https://$GH_REF
+- cd $(basename ${GH_REF%.git})
+- git config user.name &quot;Travis-CI&quot;
+- git config user.email ${EMAIL}
+- cp -R ../_site/* .
+- git add -A .
+- git commit -m &quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&quot;
+- git push -f &quot;https://${DEPLOY_KEY}@${GH_REF}&quot; ${TARGET_BRANCH} &gt; /dev/null 2&gt;<span class="err">&amp;</span>1
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
+  - TARGET_BRANCH: master
+</code></pre></div></li>
+<li><p>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a></p></li>
+<li><p>Install Travis Gem on your machine for encryption sensitive data</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>gem install travis
+</code></pre></div></li>
+<li><p>Encrypt your <code>EMAIL</code> and <code>DEPLOY_TOKEN</code></p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># --add opton will automated add sescure data to your .travis.yml</span>
+<span class="c"># edit verifiedemail to your github email account</span>
+<span class="nv">$ </span>travis encrypt <span class="nv">EMAIL</span><span class="o">=</span>verifiedemail --add
+<span class="c"># edit githubtoken to your github personal access tokens</span>
+<span class="nv">$ </span>travis encrpy <span class="nv">DEPLOY_TOKEN</span><span class="o">=</span>githubtoken --add
+</code></pre></div></li>
+<li><p>Push to <code>jekyll</code> branch to Github repository and wait</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git push origin jekyll
+<span class="c"># Don&#39;t care warnning about main/gh-page branch that local repository out of date</span>
+</code></pre></div></li>
+<li><p>Look your published site</p></li>
+</ol>
+
+<h2 id="demo-repository"><a href="https://github.com/ibotdotout/ibotdotout.github.io">Demo Repository</a></h2>
+
+<p>I use <code>develop</code> branch as <code>jekyll</code> and I&#39;m lazy to change but I recommend to use <code>jekyll</code> branch should be better.</p>
+
+<h2 id="references">References:</h2>
+
+<ol>
+<li><a href="https://gist.github.com/domenic/ec8b0fc8ab45f39403dd">Auto-deploying built products to gh-pages with Travis</a></li>
+<li><a href="https://medium.com/@nthgergo/publishing-gh-pages-with-travis-ci-53a8270e87db">Publishing gh-pages with Travis-CI</a></li>
+<li><a href="http://eshepelyuk.github.io/2014/10/28/automate-github-pages-travisci.html">Automate GitHub Pages publishing with Jekyll and Travis CI</a></li>
+<li><a href="https://help.github.com/articles/troubleshooting-github-pages-build-failures/">Troubleshooting GitHub Pages build failures</a></li>
+<li><a href="http://docs.travis-ci.com/user/deployment/custom/">Travis Custom Deployment</a></li>
+<li><a href="http://docs.travis-ci.com/user/encryption-keys/">Travis Encryption keys</a></li>
+<li><a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Creating an access token for command-line
+use</a></li>
 </ol>
 
 </div>
@@ -228,15 +291,6 @@ You can&#39;t see this message via index.html
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/jekyll-travis-github">
-            Jekyll build with Travis and deploy to Github Page
-            <small>26 Oct 2015</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -252,6 +306,15 @@ You can&#39;t see this message via index.html
           <a href="/osx-convert-encoding">
             Convert File Encoding in OSX
             <small>19 Oct 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/read-more-jekyll">
+            Read more feature on jekyll
+            <small>18 Oct 2015</small>
           </a>
         </h3>
       </li>
