@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-10-27T15:39:31+00:00</updated>
+<updated>2015-10-27T15:40:49+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -133,6 +133,7 @@ sudo: false&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://docs.travis-ci.com/user/deployment/custom/&quot;&gt;Travis Custom Deployment&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://docs.travis-ci.com/user/encryption-keys/&quot;&gt;Travis Encryption keys&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Creating an access token for command-line use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/blog/572-bypassing-jekyll-on-github-pages&quot;&gt;Bypassing Jekyll on GitHub Pages&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
 <category term="article" />
