@@ -34,7 +34,8 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
 
 
 ## How to:
-> Verified by [Mildronize](http://dev.mildronize.com)
+> Verified by [Mildronize](http://dev.mildronize.com)  
+
 1. Create `jekyll` branch for development
 
     ```sh
@@ -52,6 +53,11 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
 4. Checkout `jekyll` branch and create `.travis.yml` then edit `GH_REF`
    and `TARGET_BRANCH` to your own
 
+    ```sh
+    $ git checkout jekyll
+    ```
+
+    .travis.yml
     ```xml
     sudo: false
 
@@ -84,6 +90,12 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
       - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
       - TARGET_BRANCH: master
     ```
+
+3. Create .nojekyll for avoid jekyll build on Github
+
+  ```sh
+  $ touch .nojekyll
+  ```
 
 5. Create your [Github Personal Access Tokens](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) - check only `repo` that enough.
 5. Install Travis Gem on your machine for encryption sensitive data
