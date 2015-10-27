@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-10-27T15:07:10+00:00</updated>
+<updated>2015-10-27T15:39:31+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -47,14 +47,13 @@ branch&lt;/code&gt; on your Github repository settings that will use your
 &lt;h2 id=&quot;how-to&quot;&gt;How to:&lt;/h2&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Verified by &lt;a href=&quot;http://dev.mildronize.com&quot;&gt;Mildronize&lt;/a&gt;
-1. Create &lt;code&gt;jekyll&lt;/code&gt; branch for development&lt;/p&gt;
+&lt;p&gt;Verified by &lt;a href=&quot;http://dev.mildronize.com&quot;&gt;Mildronize&lt;/a&gt;  &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;```sh
-$ git branch jekyll
-```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Create &lt;code&gt;jekyll&lt;/code&gt; branch for development&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Clear your &lt;code&gt;main&lt;/code&gt; or &lt;code&gt;gh-page&lt;/code&gt; branch to blank&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git rm *
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
@@ -62,38 +61,47 @@ $ git branch jekyll
 only if .travis.yml is present&lt;/code&gt; on your travis repository settings.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Checkout &lt;code&gt;jekyll&lt;/code&gt; branch and create &lt;code&gt;.travis.yml&lt;/code&gt; then edit &lt;code&gt;GH_REF&lt;/code&gt;
 and &lt;code&gt;TARGET_BRANCH&lt;/code&gt; to your own&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;sudo: false
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;.travis.yml
+```xml
+sudo: false&lt;/p&gt;
 
-language: ruby
+&lt;p&gt;language: ruby&lt;/p&gt;
 
-rvm:
-- 2.2
+&lt;p&gt;rvm:
+- 2.2&lt;/p&gt;
 
-branches:
+&lt;p&gt;branches:
   only:
-  - jekyll
+  - jekyll&lt;/p&gt;
 
-script:
+&lt;p&gt;script:
 - bundle exec jekyll build
-- bundle exec htmlproof ./_site --disable-external
+- bundle exec htmlproof ./_site --disable-external&lt;/p&gt;
 
-after_success:
+&lt;p&gt;after_success:
 - git clone https://$GH_REF
 - cd $(basename ${GH_REF%.git})
 - git config user.name &amp;quot;Travis-CI&amp;quot;
 - git config user.email ${EMAIL}
-- cp -R ../_site/* .
+- cp -R ../&lt;em&gt;site/* .
 - git add -A .
-- git commit -m &amp;quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&amp;quot;
-- git push -f &amp;quot;https://${DEPLOY_KEY}@${GH_REF}&amp;quot; ${TARGET_BRANCH} &amp;gt; /dev/null 2&amp;gt;&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;1
+- git commit -m &amp;quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD&lt;/em&gt;NUMBER}&amp;quot;
+- git push -f &amp;quot;https://${DEPLOY_KEY}@${GH_REF}&amp;quot; ${TARGET_BRANCH} &amp;gt; /dev/null 2&amp;gt;&amp;amp;1&lt;/p&gt;
 
-env:
+&lt;p&gt;env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - TARGET_BRANCH: master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Create your &lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Github Personal Access Tokens&lt;/a&gt; - check only &lt;code&gt;repo&lt;/code&gt; that enough.&lt;/p&gt;&lt;/li&gt;
+```&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create .nojekyll for avoid jekyll build on Github&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch .nojekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Create your &lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Github Personal Access Tokens&lt;/a&gt; - check only &lt;code&gt;repo&lt;/code&gt; that enough.&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Install Travis Gem on your machine for encryption sensitive data&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem install travis
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;

@@ -212,14 +212,13 @@ branch</code> on your Github repository settings that will use your
 <h2 id="how-to">How to:</h2>
 
 <blockquote>
-<p>Verified by <a href="http://dev.mildronize.com">Mildronize</a>
-1. Create <code>jekyll</code> branch for development</p>
+<p>Verified by <a href="http://dev.mildronize.com">Mildronize</a>  </p>
 </blockquote>
-<div class="highlight"><pre><code class="language-text" data-lang="text">```sh
-$ git branch jekyll
-```
-</code></pre></div>
+
 <ol>
+<li><p>Create <code>jekyll</code> branch for development</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git branch jekyll
+</code></pre></div></li>
 <li><p>Clear your <code>main</code> or <code>gh-page</code> branch to blank</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git rm *
 </code></pre></div></li>
@@ -227,38 +226,47 @@ $ git branch jekyll
 only if .travis.yml is present</code> on your travis repository settings.</p></li>
 <li><p>Checkout <code>jekyll</code> branch and create <code>.travis.yml</code> then edit <code>GH_REF</code>
 and <code>TARGET_BRANCH</code> to your own</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">sudo: false
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout jekyll
+</code></pre></div>
+<p>.travis.yml
+```xml
+sudo: false</p>
 
-language: ruby
+<p>language: ruby</p>
 
-rvm:
-- 2.2
+<p>rvm:
+- 2.2</p>
 
-branches:
+<p>branches:
   only:
-  - jekyll
+  - jekyll</p>
 
-script:
+<p>script:
 - bundle exec jekyll build
-- bundle exec htmlproof ./_site --disable-external
+- bundle exec htmlproof ./_site --disable-external</p>
 
-after_success:
+<p>after_success:
 - git clone https://$GH_REF
 - cd $(basename ${GH_REF%.git})
 - git config user.name &quot;Travis-CI&quot;
 - git config user.email ${EMAIL}
-- cp -R ../_site/* .
+- cp -R ../<em>site/* .
 - git add -A .
-- git commit -m &quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&quot;
-- git push -f &quot;https://${DEPLOY_KEY}@${GH_REF}&quot; ${TARGET_BRANCH} &gt; /dev/null 2&gt;<span class="err">&amp;</span>1
+- git commit -m &quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD</em>NUMBER}&quot;
+- git push -f &quot;https://${DEPLOY_KEY}@${GH_REF}&quot; ${TARGET_BRANCH} &gt; /dev/null 2&gt;&amp;1</p>
 
-env:
+<p>env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - TARGET_BRANCH: master
-</code></pre></div></li>
-<li><p>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code>repo</code> that enough.</p></li>
+```</p></li>
+<li><p>Create .nojekyll for avoid jekyll build on Github</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>touch .nojekyll
+</code></pre></div>
+<ol>
+<li>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code>repo</code> that enough.</li>
 <li><p>Install Travis Gem on your machine for encryption sensitive data</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>gem install travis
 </code></pre></div></li>
