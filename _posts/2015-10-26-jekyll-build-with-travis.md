@@ -23,7 +23,9 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
 <!-- more -->
 
 ## Good to knows:
-1. In your `.travis.yml` always keep `> /dev/null 2>&1` to avoid your tokens display on logs.
+1. Should backup your repository in somewhere else, this method need to
+   in your local repository and your github repository.
+1. In your `.travis.yml` always keep `> /dev/null 2>&1` to avoid your tokens display on logs or you can remove for debugging git push.
 2. Github page need `verified email` for trigger update contents.
 3. You can check your last build from `feed.xml` on Jekyll
 4. If your use Github page as personal page don't try to change `Default
@@ -32,6 +34,7 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
 
 
 ## How to:
+> Verified by [Mildronize](http://dev.mildronize.com)
 1. Create `jekyll` branch for development
 
     ```sh
@@ -82,21 +85,21 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
       - TARGET_BRANCH: master
     ```
 
-5. Create your [Github Personal Access Tokens](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
+5. Create your [Github Personal Access Tokens](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) - check only `repo` that enough.
 5. Install Travis Gem on your machine for encryption sensitive data
 
     ```sh
     $ gem install travis
     ```
 
-6. Encrypt your `EMAIL` and `DEPLOY_TOKEN`
+6. Encrypt your `EMAIL` and `DEPLOY_KEY`
 
     ```sh
     # --add opton will automated add sescure data to your .travis.yml
     # edit verifiedemail to your github email account
     $ travis encrypt EMAIL=verifiedemail --add
     # edit githubtoken to your github personal access tokens
-    $ travis encrpy DEPLOY_TOKEN=githubtoken --add
+    $ travis encrpy DEPLOY_KEY=githubtoken --add
     ```
 7. Push to `jekyll` branch to Github repository and wait
 
@@ -117,5 +120,4 @@ I use `develop` branch as `jekyll` and I'm lazy to change but I recommend to use
 6. [Troubleshooting GitHub Pages build failures](https://help.github.com/articles/troubleshooting-github-pages-build-failures/)
 3. [Travis Custom Deployment](http://docs.travis-ci.com/user/deployment/custom/)
 4. [Travis Encryption keys](http://docs.travis-ci.com/user/encryption-keys/)
-7. [Creating an access token for command-line
-   use](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
+7. [Creating an access token for command-line use](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
