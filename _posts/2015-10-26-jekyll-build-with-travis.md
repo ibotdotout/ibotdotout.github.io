@@ -58,6 +58,7 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
     ```
 
     .travis.yml
+
     ```xml
     sudo: false
 
@@ -93,9 +94,9 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
 
 3. Create .nojekyll for avoid jekyll build on Github
 
-  ```sh
-  $ touch .nojekyll
-  ```
+    ```sh
+    $ touch .nojekyll
+    ```
 
 5. Create your [Github Personal Access Tokens](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) - check only `repo` that enough.
 5. Install Travis Gem on your machine for encryption sensitive data
