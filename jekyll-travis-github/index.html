@@ -274,6 +274,10 @@ env:
 <span class="c"># edit githubtoken to your github personal access tokens</span>
 <span class="nv">$ </span>travis encrpy <span class="nv">DEPLOY_KEY</span><span class="o">=</span>githubtoken --add
 </code></pre></div></li>
+<li><p>Commit <code>jekyll</code> branch</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git add -A
+<span class="nv">$ </span>git commit -m <span class="s2">&quot;Create Jekyll branch for build jekyll with Travis&quot;</span>
+</code></pre></div></li>
 <li><p>Push to <code>jekyll</code> branch to Github repository and wait</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git push origin jekyll
 <span class="c"># Don&#39;t care warnning about main/gh-page branch that local repository out of date</span>
