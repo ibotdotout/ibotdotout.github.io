@@ -228,45 +228,42 @@ only if .travis.yml is present</code> on your travis repository settings.</p></l
 and <code>TARGET_BRANCH</code> to your own</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git checkout jekyll
 </code></pre></div>
-<p>.travis.yml
-```xml
-sudo: false</p>
+<p>.travis.yml</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">sudo: false
 
-<p>language: ruby</p>
+language: ruby
 
-<p>rvm:
-- 2.2</p>
+rvm:
+- 2.2
 
-<p>branches:
+branches:
   only:
-  - jekyll</p>
+  - jekyll
 
-<p>script:
+script:
 - bundle exec jekyll build
-- bundle exec htmlproof ./_site --disable-external</p>
+- bundle exec htmlproof ./_site --disable-external
 
-<p>after_success:
+after_success:
 - git clone https://$GH_REF
 - cd $(basename ${GH_REF%.git})
 - git config user.name &quot;Travis-CI&quot;
 - git config user.email ${EMAIL}
-- cp -R ../<em>site/* .
+- cp -R ../_site/* .
 - git add -A .
-- git commit -m &quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD</em>NUMBER}&quot;
-- git push -f &quot;https://${DEPLOY_KEY}@${GH_REF}&quot; ${TARGET_BRANCH} &gt; /dev/null 2&gt;&amp;1</p>
+- git commit -m &quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&quot;
+- git push -f &quot;https://${DEPLOY_KEY}@${GH_REF}&quot; ${TARGET_BRANCH} &gt; /dev/null 2&gt;<span class="err">&amp;</span>1
 
-<p>env:
+env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - TARGET_BRANCH: master
-```</p></li>
-<li><p>Create .nojekyll for avoid jekyll build on Github</p></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>touch .nojekyll
-</code></pre></div>
-<ol>
-<li>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code>repo</code> that enough.</li>
+</code></pre></div></li>
+<li><p>Create .nojekyll for avoid jekyll build on Github</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>touch .nojekyll
+</code></pre></div></li>
+<li><p>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code>repo</code> that enough.</p></li>
 <li><p>Install Travis Gem on your machine for encryption sensitive data</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>gem install travis
 </code></pre></div></li>
