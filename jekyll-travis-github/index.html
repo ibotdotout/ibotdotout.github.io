@@ -199,7 +199,9 @@ jekyll and travis</a></p>
 <h2 id="good-to-knows">Good to knows:</h2>
 
 <ol>
-<li>In your <code>.travis.yml</code> always keep <code>&gt; /dev/null 2&gt;&amp;1</code> to avoid your tokens display on logs.</li>
+<li>Should backup your repository in somewhere else, this method need to
+in your local repository and your github repository.</li>
+<li>In your <code>.travis.yml</code> always keep <code>&gt; /dev/null 2&gt;&amp;1</code> to avoid your tokens display on logs or you can remove for debugging git push.</li>
 <li>Github page need <code>verified email</code> for trigger update contents.</li>
 <li>You can check your last build from <code>feed.xml</code> on Jekyll</li>
 <li>If your use Github page as personal page don&#39;t try to change <code>Default
@@ -209,10 +211,15 @@ branch</code> on your Github repository settings that will use your
 
 <h2 id="how-to">How to:</h2>
 
+<blockquote>
+<p>Verified by <a href="http://dev.mildronize.com">Mildronize</a>
+1. Create <code>jekyll</code> branch for development</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-text" data-lang="text">```sh
+$ git branch jekyll
+```
+</code></pre></div>
 <ol>
-<li><p>Create <code>jekyll</code> branch for development</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git branch jekyll
-</code></pre></div></li>
 <li><p>Clear your <code>main</code> or <code>gh-page</code> branch to blank</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git rm *
 </code></pre></div></li>
@@ -251,16 +258,16 @@ env:
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - TARGET_BRANCH: master
 </code></pre></div></li>
-<li><p>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a></p></li>
+<li><p>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code>repo</code> that enough.</p></li>
 <li><p>Install Travis Gem on your machine for encryption sensitive data</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>gem install travis
 </code></pre></div></li>
-<li><p>Encrypt your <code>EMAIL</code> and <code>DEPLOY_TOKEN</code></p>
+<li><p>Encrypt your <code>EMAIL</code> and <code>DEPLOY_KEY</code></p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># --add opton will automated add sescure data to your .travis.yml</span>
 <span class="c"># edit verifiedemail to your github email account</span>
 <span class="nv">$ </span>travis encrypt <span class="nv">EMAIL</span><span class="o">=</span>verifiedemail --add
 <span class="c"># edit githubtoken to your github personal access tokens</span>
-<span class="nv">$ </span>travis encrpy <span class="nv">DEPLOY_TOKEN</span><span class="o">=</span>githubtoken --add
+<span class="nv">$ </span>travis encrpy <span class="nv">DEPLOY_KEY</span><span class="o">=</span>githubtoken --add
 </code></pre></div></li>
 <li><p>Push to <code>jekyll</code> branch to Github repository and wait</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git push origin jekyll
@@ -282,8 +289,7 @@ env:
 <li><a href="https://help.github.com/articles/troubleshooting-github-pages-build-failures/">Troubleshooting GitHub Pages build failures</a></li>
 <li><a href="http://docs.travis-ci.com/user/deployment/custom/">Travis Custom Deployment</a></li>
 <li><a href="http://docs.travis-ci.com/user/encryption-keys/">Travis Encryption keys</a></li>
-<li><a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Creating an access token for command-line
-use</a></li>
+<li><a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Creating an access token for command-line use</a></li>
 </ol>
 
 </div>

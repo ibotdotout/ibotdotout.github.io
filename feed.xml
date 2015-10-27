@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-10-26T13:48:07+00:00</updated>
+<updated>2015-10-27T15:07:10+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -34,7 +34,9 @@ jekyll and travis&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;good-to-knows&quot;&gt;Good to knows:&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;In your &lt;code&gt;.travis.yml&lt;/code&gt; always keep &lt;code&gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1&lt;/code&gt; to avoid your tokens display on logs.&lt;/li&gt;
+&lt;li&gt;Should backup your repository in somewhere else, this method need to
+in your local repository and your github repository.&lt;/li&gt;
+&lt;li&gt;In your &lt;code&gt;.travis.yml&lt;/code&gt; always keep &lt;code&gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1&lt;/code&gt; to avoid your tokens display on logs or you can remove for debugging git push.&lt;/li&gt;
 &lt;li&gt;Github page need &lt;code&gt;verified email&lt;/code&gt; for trigger update contents.&lt;/li&gt;
 &lt;li&gt;You can check your last build from &lt;code&gt;feed.xml&lt;/code&gt; on Jekyll&lt;/li&gt;
 &lt;li&gt;If your use Github page as personal page don&amp;#39;t try to change &lt;code&gt;Default
@@ -44,10 +46,15 @@ branch&lt;/code&gt; on your Github repository settings that will use your
 
 &lt;h2 id=&quot;how-to&quot;&gt;How to:&lt;/h2&gt;
 
+&lt;blockquote&gt;
+&lt;p&gt;Verified by &lt;a href=&quot;http://dev.mildronize.com&quot;&gt;Mildronize&lt;/a&gt;
+1. Create &lt;code&gt;jekyll&lt;/code&gt; branch for development&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;```sh
+$ git branch jekyll
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Create &lt;code&gt;jekyll&lt;/code&gt; branch for development&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch jekyll
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Clear your &lt;code&gt;main&lt;/code&gt; or &lt;code&gt;gh-page&lt;/code&gt; branch to blank&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git rm *
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
@@ -86,16 +93,16 @@ env:
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - TARGET_BRANCH: master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Create your &lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Github Personal Access Tokens&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create your &lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Github Personal Access Tokens&lt;/a&gt; - check only &lt;code&gt;repo&lt;/code&gt; that enough.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Install Travis Gem on your machine for encryption sensitive data&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem install travis
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Encrypt your &lt;code&gt;EMAIL&lt;/code&gt; and &lt;code&gt;DEPLOY_TOKEN&lt;/code&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Encrypt your &lt;code&gt;EMAIL&lt;/code&gt; and &lt;code&gt;DEPLOY_KEY&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# --add opton will automated add sescure data to your .travis.yml&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# edit verifiedemail to your github email account&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;travis encrypt &lt;span class=&quot;nv&quot;&gt;EMAIL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;verifiedemail --add
 &lt;span class=&quot;c&quot;&gt;# edit githubtoken to your github personal access tokens&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;travis encrpy &lt;span class=&quot;nv&quot;&gt;DEPLOY_TOKEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;githubtoken --add
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;travis encrpy &lt;span class=&quot;nv&quot;&gt;DEPLOY_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;githubtoken --add
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Push to &lt;code&gt;jekyll&lt;/code&gt; branch to Github repository and wait&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin jekyll
@@ -117,8 +124,7 @@ env:
 &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/troubleshooting-github-pages-build-failures/&quot;&gt;Troubleshooting GitHub Pages build failures&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://docs.travis-ci.com/user/deployment/custom/&quot;&gt;Travis Custom Deployment&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://docs.travis-ci.com/user/encryption-keys/&quot;&gt;Travis Encryption keys&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Creating an access token for command-line
-use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Creating an access token for command-line use&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
 <category term="article" />
