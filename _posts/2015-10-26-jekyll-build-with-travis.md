@@ -114,6 +114,13 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
     # edit githubtoken to your github personal access tokens
     $ travis encrpy DEPLOY_KEY=githubtoken --add
     ```
+8. Commit `jekyll` branch
+
+    ```sh
+    $ git add -A
+    $ git commit -m "Create Jekyll branch for build jekyll with Travis"
+    ```
+
 7. Push to `jekyll` branch to Github repository and wait
 
     ```sh
