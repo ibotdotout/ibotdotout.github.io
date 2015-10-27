@@ -133,3 +133,4 @@ I use `develop` branch as `jekyll` and I'm lazy to change but I recommend to use
 3. [Travis Custom Deployment](http://docs.travis-ci.com/user/deployment/custom/)
 4. [Travis Encryption keys](http://docs.travis-ci.com/user/encryption-keys/)
 7. [Creating an access token for command-line use](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
+9. [Bypassing Jekyll on GitHub Pages](https://github.com/blog/572-bypassing-jekyll-on-github-pages)
