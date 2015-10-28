@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-10-27T19:01:24+00:00</updated>
+<updated>2015-10-28T03:01:11+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -85,6 +85,7 @@ after_success:
 - git config user.name &amp;quot;Travis-CI&amp;quot;
 - git config user.email ${EMAIL}
 - cp -R ../_site/* .
+- touch _site/.nojekyll
 - git add -A .
 - git commit -m &amp;quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&amp;quot;
 - git push -f &amp;quot;https://${DEPLOY_KEY}@${GH_REF}&amp;quot; ${TARGET_BRANCH} &amp;gt; /dev/null 2&amp;gt;&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;1
@@ -94,9 +95,6 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - TARGET_BRANCH: master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Create .nojekyll for avoid jekyll build on Github&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;touch .nojekyll
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Create your &lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Github Personal Access Tokens&lt;/a&gt; - check only &lt;code&gt;repo&lt;/code&gt; that enough.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Install Travis Gem on your machine for encryption sensitive data&lt;/p&gt;

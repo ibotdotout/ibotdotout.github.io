@@ -250,6 +250,7 @@ after_success:
 - git config user.name &quot;Travis-CI&quot;
 - git config user.email ${EMAIL}
 - cp -R ../_site/* .
+- touch _site/.nojekyll
 - git add -A .
 - git commit -m &quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&quot;
 - git push -f &quot;https://${DEPLOY_KEY}@${GH_REF}&quot; ${TARGET_BRANCH} &gt; /dev/null 2&gt;<span class="err">&amp;</span>1
@@ -259,9 +260,6 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - TARGET_BRANCH: master
-</code></pre></div></li>
-<li><p>Create .nojekyll for avoid jekyll build on Github</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>touch .nojekyll
 </code></pre></div></li>
 <li><p>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code>repo</code> that enough.</p></li>
 <li><p>Install Travis Gem on your machine for encryption sensitive data</p>
