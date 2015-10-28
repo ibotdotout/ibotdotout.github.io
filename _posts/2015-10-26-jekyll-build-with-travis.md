@@ -81,6 +81,7 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
     - git config user.name "Travis-CI"
     - git config user.email ${EMAIL}
     - cp -R ../_site/* .
+    - touch _site/.nojekyll
     - git add -A .
     - git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
     - git push -f "https://${DEPLOY_KEY}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
@@ -90,12 +91,6 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
       - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
       - TARGET_BRANCH: master
-    ```
-
-3. Create .nojekyll for avoid jekyll build on Github
-
-    ```sh
-    $ touch .nojekyll
     ```
 
 5. Create your [Github Personal Access Tokens](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) - check only `repo` that enough.
