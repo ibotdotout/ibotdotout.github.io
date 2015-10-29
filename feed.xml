@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-10-28T03:03:03+00:00</updated>
+<updated>2015-10-29T05:47:26+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -401,7 +401,8 @@ You can&amp;#39;t see this message via index.html
 <updated>2015-10-17T00:00:00+00:00</updated>
 <id>http://dev.im-bot.com//text-processing</id>
 <content type="html" xml:base="http://dev.im-bot.com//text-processing">&lt;blockquote&gt;
-&lt;p&gt;Most of example come from problem in &lt;a href=&quot;https://www.hackerrank.com/domains/shell/bash&quot;&gt;Linux Shell - Hackerrank&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Most of example come from problem in &lt;a href=&quot;https://www.hackerrank.com/domains/shell/bash&quot;&gt;Linux Shell - Hackerrank&lt;/a&gt;
+&lt;a href=&quot;http://tldp.org/LDP/abs/html/textproc.html&quot;&gt;Text Processing Commands&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;sed&quot;&gt;Sed&lt;/h2&gt;
@@ -496,6 +497,15 @@ C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&g
 &lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2010/02/awk-conditional-statements/&quot;&gt;4 Awk If Statement Examples ( if, if else, if else if, :?)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.linuxnix.com/awk-scripting-how-to-define-awk-variables/&quot;&gt;AWK Scripting: How to define awk variables&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/&quot;&gt;8 Powerful Awk Built-in Variables – FS, OFS, RS, ORS, NR, NF, FILENAME, FNR&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;grep&quot;&gt;Grep&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;grep -o text &lt;span class=&quot;c&quot;&gt;# show only match&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/1898578&quot;&gt;Return a regex match in a BASH script, instead of replacing it&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
 <category term="unix" />

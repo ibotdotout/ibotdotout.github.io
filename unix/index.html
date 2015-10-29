@@ -235,38 +235,6 @@ Ctrl-z <span class="c"># Suspend a foreground job</span>
 <span class="c"># run cmd every five minutes</span>
 <span class="nv">$ </span>grep CRON /var/log/syslog <span class="c">#see crontablog (debian)</span>
 </code></pre></div>
-<h3 id="shell-bash-script">Shell/Bash Script</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
-
-<span class="nv">VAR</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$VAR&quot;</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>  <span class="c"># use = to equal string not ==</span>
-  <span class="nb">echo</span> <span class="nv">$VAR</span>
-<span class="k">else</span>
-  <span class="nb">echo</span> <span class="s2">&quot;fasle&quot;</span>
-<span class="k">fi</span>
-</code></pre></div>
-<h4 id="bash-for-loop-array-iterate-through-array-values"><a href="http://www.cyberciti.biz/faq/bash-for-loop-array/">Bash For Loop Array: Iterate Through Array Values</a></h4>
-
-<ol>
-<li><a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">Introduction to if</a></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span>
-<span class="k">do</span>
-    <span class="nb">echo</span> <span class="s2">&quot;hello&quot;</span>
-<span class="k">done</span>
-</code></pre></div>
-<ol>
-<li><a href="http://www.unixcl.com/2009/09/linux-seq-command-format-option-example.html">Linux seq command format option example</a></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
-
-<span class="nv">array</span><span class="o">=(</span> one two three <span class="o">)</span>
-
-<span class="k">for</span> i in <span class="s2">&quot;${array[@]}&quot;</span>
-<span class="k">do</span>
-    <span class="nb">echo</span> <span class="nv">$i</span>
-<span class="k">done</span>
-</code></pre></div>
 <h3 id="zsh-history-expansion">Zsh History expansion</h3>
 
 <p>should also work with bash.</p>
@@ -307,13 +275,50 @@ Esc + t <span class="c"># transpoes two words  </span>
 Meta is your Alt key, normally.
 For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; Preferences &gt; Settings &gt; Keyboard, and <span class="nb">enable </span>Use option as meta key.
 </code></pre></div>
+<h3 id="diff-command"><a href="http://linux.about.com/library/cmd/blcmdl1_diff.htm">Diff Command</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>diff --brief &lt;file1&gt; &lt;file2&gt;
+</code></pre></div>
+<h3 id="howto-find-out-my-linux-distribution-name-and-version"><a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>cat /etc/*-release
+</code></pre></div>
+<h3 id="timezone-setting-in-linux"><a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok date
+</code></pre></div>
+<h3 id="how-to-cycle-through-reverse-i-search-in-bash"><a href="http://unix.stackexchange.com/questions/73498/how-to-cycle-through-reverse-i-search-in-bash">How to cycle through reverse-i-search in BASH?</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>Ctrl+R grep Ctrl+R Ctrl+R
+</code></pre></div>
+<h3 id="safeguard-rm"><a href="https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm">safeguard-rm</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># only zsh</span>
+
+<span class="nv">$ </span>setopt noclobber <span class="c"># prevents overwriting an existing file.</span>
+<span class="nv">$ </span>setopt clobber <span class="c"># disable</span>
+
+<span class="nv">$ </span>unsetopt RM_STAR_SILENT <span class="c"># ask before rm with star (*)</span>
+<span class="nv">$ </span>setopt RM_STAR_WAIT <span class="c"># wait 10 sec before exec rm with star</span>
+</code></pre></div>
+<h3 id="mac-style-copy-paste-for-linux-machines"><a href="https://www.youtube.com/watch?v=fKP0FLp3uW0">Mac style copy/paste for linux machines</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># copy/paste for linux machines (Mac style)</span>
+<span class="c"># sudo apt-get install xclip</span>
+<span class="nv">$ </span><span class="nb">alias </span><span class="nv">pbcopy</span><span class="o">=</span><span class="s1">&#39;xclip -selection clipboard&#39;</span>
+<span class="nv">$ </span><span class="nb">alias </span><span class="nv">pbpaste</span><span class="o">=</span><span class="s1">&#39;xclip -selection clipboard -o&#39;</span>
+<span class="nv">$ </span><span class="nb">alias </span><span class="nv">pbselect</span><span class="o">=</span><span class="s1">&#39;xclip -selection primary -o&#39;</span>
+</code></pre></div>
+<h3 id="bash">Bash</h3>
+
+<h3 id="shell-bash-script">Shell/Bash Script</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
+
+<span class="nv">VAR</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$VAR&quot;</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>  <span class="c"># use = to equal string not ==</span>
+  <span class="nb">echo</span> <span class="nv">$VAR</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&quot;fasle&quot;</span>
+<span class="k">fi</span>
+</code></pre></div>
 <h3 id="run-script-different-ways-to-execute-a-shell-script">Run Script - <a href="http://unix.stackexchange.com/questions/2976/different-ways-to-execute-a-shell-script">Different ways to execute a shell script</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>./script      <span class="c">#run with using shebang(#) in script ex. #!/usr/bin/python</span>
 <span class="nv">$ </span>. script      <span class="c">#run with shell (work in related bash)</span>
 <span class="nv">$ </span><span class="nb">source </span>script <span class="c">#run with shell (work in both bash and csh)</span>
-</code></pre></div>
-<h3 id="diff-command"><a href="http://linux.about.com/library/cmd/blcmdl1_diff.htm">Diff Command</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>diff --brief &lt;file1&gt; &lt;file2&gt;
 </code></pre></div>
 <h3 id="shell-function-passing-argument-to-alias-in-bash">Shell function - <a href="http://stackoverflow.com/questions/4060880/passing-argument-to-alias-in-bash">Passing argument to alias in bash</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;rm() { mkdir -p /tmp/rm; /bin/mv &quot;$@&quot; /tmp/rm; }&#39;</span> &gt;&gt; .zshrc
@@ -354,31 +359,36 @@ waitproc <span class="o">()</span> <span class="o">{</span>
     <span class="nv">jobcnt</span><span class="o">=(</span><span class="k">$(</span>job -p<span class="k">)</span><span class="o">)</span>
   <span class="k">done</span>
 </code></pre></div>
-<h3 id="howto-find-out-my-linux-distribution-name-and-version"><a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>cat /etc/*-release
-</code></pre></div>
-<h3 id="timezone-setting-in-linux"><a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok date
-</code></pre></div>
-<h3 id="how-to-cycle-through-reverse-i-search-in-bash"><a href="http://unix.stackexchange.com/questions/73498/how-to-cycle-through-reverse-i-search-in-bash">How to cycle through reverse-i-search in BASH?</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>Ctrl+R grep Ctrl+R Ctrl+R
-</code></pre></div>
-<h3 id="safeguard-rm"><a href="https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm">safeguard-rm</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># only zsh</span>
+<h4 id="bash-for-loop-array-iterate-through-array-values"><a href="http://www.cyberciti.biz/faq/bash-for-loop-array/">Bash For Loop Array: Iterate Through Array Values</a></h4>
 
-<span class="nv">$ </span>setopt noclobber <span class="c"># prevents overwriting an existing file.</span>
-<span class="nv">$ </span>setopt clobber <span class="c"># disable</span>
+<ol>
+<li><a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">Introduction to if</a></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="s2">&quot;hello&quot;</span>
+<span class="k">done</span>
+</code></pre></div>
+<ol>
+<li><a href="http://www.unixcl.com/2009/09/linux-seq-command-format-option-example.html">Linux seq command format option example</a></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
 
-<span class="nv">$ </span>unsetopt RM_STAR_SILENT <span class="c"># ask before rm with star (*)</span>
-<span class="nv">$ </span>setopt RM_STAR_WAIT <span class="c"># wait 10 sec before exec rm with star</span>
+<span class="nv">array</span><span class="o">=(</span> one two three <span class="o">)</span>
+
+<span class="k">for</span> i in <span class="s2">&quot;${array[@]}&quot;</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="nv">$i</span>
+<span class="k">done</span>
 </code></pre></div>
-<h3 id="mac-style-copy-paste-for-linux-machines"><a href="https://www.youtube.com/watch?v=fKP0FLp3uW0">Mac style copy/paste for linux machines</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># copy/paste for linux machines (Mac style)</span>
-<span class="c"># sudo apt-get install xclip</span>
-<span class="nv">$ </span><span class="nb">alias </span><span class="nv">pbcopy</span><span class="o">=</span><span class="s1">&#39;xclip -selection clipboard&#39;</span>
-<span class="nv">$ </span><span class="nb">alias </span><span class="nv">pbpaste</span><span class="o">=</span><span class="s1">&#39;xclip -selection clipboard -o&#39;</span>
-<span class="nv">$ </span><span class="nb">alias </span><span class="nv">pbselect</span><span class="o">=</span><span class="s1">&#39;xclip -selection primary -o&#39;</span>
-</code></pre></div>
+<h3 id="bash-references">Bash References:</h3>
+
+<ol>
+<li><a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html">Functions</a></li>
+<li><a href="http://blog.sanctum.geek.nz/bash-shell-expansion/">Bash shell expansion</a></li>
+<li><a href="https://speakerdeck.com/nibalizer/bash-tricks">bash-tricks</a></li>
+</ol>
+
 <h2 id="reference">Reference</h2>
 
 <ol>
@@ -389,7 +399,6 @@ waitproc <span class="o">()</span> <span class="o">{</span>
 <li><a href="http://www.sitepoint.com/unix-server-performance/">Checking UNIX Server Performance</a></li>
 <li><a href="http://stackoverflow.com/questions/82256/how-do-i-use-sudo-to-redirect-output-to-a-location-i-dont-have-permission-to-wr">How do I use sudo to redirect output to a location I don&#39;t have permission to write to?</a></li>
 <li><a href="http://www.cyberciti.biz/faq/unix-disk-usage-command-examples/">UNIX Disk Usage Command Examples</a></li>
-<li><a href="http://blog.sanctum.geek.nz/bash-shell-expansion/">Bash shell expansion</a></li>
 <li><a href="http://blog.sanctum.geek.nz/series/unix-as-ide/">Unix as IDE: Introduction</a></li>
 <li><a href="https://leanpub.com/lets_learn_cli_right_now/read">หัดใช้ Command-line Interface เถอะ</a></li>
 <li><a href="http://macfeteria.com/2015/04/18/pimp-my-command-line/">Pimp my command line</a></li>
