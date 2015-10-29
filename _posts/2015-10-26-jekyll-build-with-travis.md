@@ -80,7 +80,7 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
     - cd $(basename ${GH_REF%.git})
     - git config user.name "Travis-CI"
     - git config user.email ${EMAIL}
-    - cp -R ../_site/* .
+    - rsync -az --delete --exclude '.git*' ../_site/ .
     - touch .nojekyll
     - git add -A .
     - git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
