@@ -54,3 +54,8 @@ permalink: vim-command
 |:nohlsearch , :nohls | mute highlight search  |
 |:\<stg\>C-d\<\tab\> | command line completion|
 |:redraw | redraw screen (Ctrl + L)|
+|:messages | show history of messages |
+
+## References:
+1. [How can I view old status messages in Vim?](http://superuser.com/a/547176)
+2. [Make echo seen when it would otherwise disappear and go unseen](http://vim.wikia.com/wiki/Make_echo_seen_when_it_would_otherwise_disappear_and_go_unseen)

@@ -49,6 +49,16 @@ $ ctags -R # generate tags
 |\<C-\]\> | jump to tag  |
 |\<C-t\> | back to original  |
 
+### [VimDeck - Presentation in Vim](https://github.com/tybenz/vimdeck)
+
+```sh
+# osx not support ascii-art
+$ brew install imagemagick
+$ sudo gem install rmagick
+# gem install vimdeck
+$ sudo gem install vimdeck-without-ascii-art
+```
+
 ## Reference:
 4. [Vim Essential Plugins](http://code.tutsplus.com/series/vim-essential-plugins--net-19224)
 9. [vim.rc & vim plugin (video th)](https://www.youtube.com/watch?v=k_KSeQgtrb4)
