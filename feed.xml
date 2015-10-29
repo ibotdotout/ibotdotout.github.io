@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-10-29T05:47:26+00:00</updated>
+<updated>2015-10-29T05:58:52+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -452,6 +452,7 @@ hello dog meow meow dog dog dog love dog
 &lt;li&gt;&lt;a href=&quot;http://www.shellhacks.com/en/Add-Character-to-the-Beginning-or-to-the-End-of-Each-Line-using-AWK-and-SED&quot;&gt;Add Character to the Beginning or to the End of Each Line using AWK and SED&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/sed/manual/sed.html&quot;&gt;sed, a stream editor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://docstore.mik.ua/orelly/unix/sedawk/index.htm&quot;&gt;Sed &amp;amp; Awk Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html&quot;&gt;Overview of Regular Expression Syntax&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;awk&quot;&gt;Awk&lt;/h2&gt;
@@ -506,6 +507,9 @@ C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&g
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/1898578&quot;&gt;Return a regex match in a BASH script, instead of replacing it&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.robelle.com/smugbook/regexpr.html&quot;&gt;Grep and Regex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://unix.stackexchange.com/questions/70933/regular-expression-for-finding-double-characters-in-bash&quot;&gt;Regular Expression for finding double characters in Bash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/&quot;&gt;15 Practical Grep Command Examples In Linux / UNIX&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
 <category term="unix" />
