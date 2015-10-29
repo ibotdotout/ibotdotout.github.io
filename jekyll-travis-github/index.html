@@ -249,7 +249,7 @@ after_success:
 - cd $(basename ${GH_REF%.git})
 - git config user.name &quot;Travis-CI&quot;
 - git config user.email ${EMAIL}
-- cp -R ../_site/* .
+- rsync -az --delete --exclude &#39;.git*&#39; ../_site/ .
 - touch .nojekyll
 - git add -A .
 - git commit -m &quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&quot;
