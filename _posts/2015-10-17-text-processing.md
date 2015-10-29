@@ -7,6 +7,7 @@ excerpt: Collection example of text processing in shell
 ---
 
 > Most of example come from problem in [Linux Shell - Hackerrank](https://www.hackerrank.com/domains/shell/bash)
+> [Text Processing Commands](http://tldp.org/LDP/abs/html/textproc.html)
 
 ## Sed
 
@@ -120,3 +121,12 @@ C 75 78 80;D 99 88 76
 2. [4 Awk If Statement Examples ( if, if else, if else if, :?)](http://www.thegeekstuff.com/2010/02/awk-conditional-statements/)
 3. [AWK Scripting: How to define awk variables](http://www.linuxnix.com/awk-scripting-how-to-define-awk-variables/)
 4. [8 Powerful Awk Built-in Variables – FS, OFS, RS, ORS, NR, NF, FILENAME, FNR](http://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/)
+
+## Grep
+
+```sh
+$ grep -o text # show only match
+```
+
+### Reference:  
+1. [Return a regex match in a BASH script, instead of replacing it](http://stackoverflow.com/a/1898578)
