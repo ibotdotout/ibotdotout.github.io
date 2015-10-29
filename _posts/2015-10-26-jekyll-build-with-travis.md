@@ -81,7 +81,7 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
     - git config user.name "Travis-CI"
     - git config user.email ${EMAIL}
     - cp -R ../_site/* .
-    - touch _site/.nojekyll
+    - touch .nojekyll
     - git add -A .
     - git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
     - git push -f "https://${DEPLOY_KEY}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
