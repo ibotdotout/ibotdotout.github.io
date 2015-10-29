@@ -49,6 +49,12 @@ $ ctags -R # generate tags
 |\<C-\]\> | jump to tag  |
 |\<C-t\> | back to original  |
 
+### [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
+
+```sh
+:FixWhitespace
+```
+
 ### [VimDeck - Presentation in Vim](https://github.com/tybenz/vimdeck)
 
 ```sh
@@ -63,3 +69,4 @@ $ sudo gem install vimdeck-without-ascii-art
 4. [Vim Essential Plugins](http://code.tutsplus.com/series/vim-essential-plugins--net-19224)
 9. [vim.rc & vim plugin (video th)](https://www.youtube.com/watch?v=k_KSeQgtrb4)
 8. [Vim and Ctags](http://andrew.stwrt.ca/posts/vim-ctags)
+3. [How can you automatically remove trailing whitespace in vim](http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim)
