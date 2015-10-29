@@ -37,3 +37,5 @@ minutes, but you can't search Google to balance individual desire -
 * เราจะไม่ทำอะไรก็ได้ เราจะทำอะไรที่เป็นเรา คือถ้าเราปล่อยให้ลูกค้าเอาเรฟเฟอเรนซ์มาให้แล้วบอกว่าจะเอาแบบนี้ Eyedropper Fill คงเป็นได้แค่โปรดักชั่นเฮาส์ ซึ่งไม่ได้อยากเป็นแบบนั้น เราอยากเป็นครีเอทีฟ - [Eyedropper Fill](http://www.fungjaizine.com/art-cover/2015/10/3/-eyedropper-fill)
 
 * "Five minutes" represented "think", not react. - [Give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes)
+
+* ถ้าคุณไม่สามารถเรียนรู้ได้ทั้งหมด ก็ให้เรียนรู้เท่าที่จําเป็นใน ตอนนั้นแทนสิ - <somkiat.cc>
