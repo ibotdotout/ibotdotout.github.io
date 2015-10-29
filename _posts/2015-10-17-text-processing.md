@@ -66,6 +66,7 @@ hello dog meow meow dog dog dog love dog
 5. [Add Character to the Beginning or to the End of Each Line using AWK and SED](http://www.shellhacks.com/en/Add-Character-to-the-Beginning-or-to-the-End-of-Each-Line-using-AWK-and-SED)
 6. [sed, a stream editor](https://www.gnu.org/software/sed/manual/sed.html)
 7. [Sed & Awk Book](http://docstore.mik.ua/orelly/unix/sedawk/index.htm)
+8. [Overview of Regular Expression Syntax](https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html)
 
 ## Awk
 
@@ -130,3 +131,6 @@ $ grep -o text # show only match
 
 ### Reference:  
 1. [Return a regex match in a BASH script, instead of replacing it](http://stackoverflow.com/a/1898578)
+2. [Grep and Regex](http://www.robelle.com/smugbook/regexpr.html)
+3. [Regular Expression for finding double characters in Bash](http://unix.stackexchange.com/questions/70933/regular-expression-for-finding-double-characters-in-bash)
+4. [15 Practical Grep Command Examples In Linux / UNIX](http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
