@@ -2,7 +2,7 @@
 layout: post
 title: Dev Qutoes
 tags: qutoes
-permalink: quote
+permalink: quotes
 ---
 
 * A magical, better time in the future never comes - [Nell Shamrell -
@@ -35,3 +35,5 @@ minutes, but you can't search Google to balance individual desire -
 * It’s the small things we do everyday that matter most - [Jeff Patton - "How Doing the Little Things Well Makes the Big Things Possible"](https://www.youtube.com/watch?v=iM9FLxico1I)
 
 * เราจะไม่ทำอะไรก็ได้ เราจะทำอะไรที่เป็นเรา คือถ้าเราปล่อยให้ลูกค้าเอาเรฟเฟอเรนซ์มาให้แล้วบอกว่าจะเอาแบบนี้ Eyedropper Fill คงเป็นได้แค่โปรดักชั่นเฮาส์ ซึ่งไม่ได้อยากเป็นแบบนั้น เราอยากเป็นครีเอทีฟ - [Eyedropper Fill](http://www.fungjaizine.com/art-cover/2015/10/3/-eyedropper-fill)
+
+* "Five minutes" represented "think", not react. - [Give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes)
