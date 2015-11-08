@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-11-01T11:32:22+00:00</updated>
+<updated>2015-11-08T08:54:18+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -365,6 +365,9 @@ You should convert that file from tis-620 to utf-8 which make it readable on osx
 Github Pages always complie jekyll with &lt;code&gt;--safe&lt;/code&gt; option that will&lt;br&gt;
 disable plugins but some plugin can work with Github Pages.&lt;br&gt;
 &lt;a href=&quot;https://help.github.com/articles/using-jekyll-plugins-with-github-pages/&quot;&gt;List of Jekyll Plguins that working on Github &amp;gt; Pages&lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;Easy ways: using &lt;a href=&quot;http://jekyllrb.com/docs/posts/#post-excerpts&quot;&gt;excerpt option of &amp;gt; jekyll&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll&quot;&gt;Customized excerpt separator in &amp;gt; Jekyll&lt;/a&gt;  &lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Just using &lt;code&gt;truncate&lt;/code&gt; they not checking html tag that make your site look
@@ -643,7 +646,7 @@ thumbnail: /public/thumbnail_for_your_post.png
 &lt;/ol&gt;
 </content>
 <category term="markdown" />
-<summary>Remark.js - easy and simple slide - ExampleGetting startedTwo-column formattingExport to PDFKeynote to Remark.js</summary>
+<summary>Remark.js - easy and simple slide - ExampleGetting startedTwo-column formattingExport to PDFKeynote to Remark.js1. Open a Keynote presentation2. Run the script.3. Select output destination4. Got rough remark.js slideOther Markdown slidereveal.js - more powerful - ExampleCleaver - Example</summary>
 </entry>
 <entry>
 <title>Pair Programming</title>
@@ -717,7 +720,7 @@ allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/ul&gt;
 </content>
 <category term="coding" />
-<summary>My mind to your mind. My thoughts to your thoughts... -- MrSpock</summary>
+<summary>My mind to your mind. My thoughts to your thoughts... -- MrSpockAll I really need to know about pair programming I learned in kindergartenWhen it comes to programming practices,studies show two heads are almost always better than one.The pair can solve problems they couldn’t solve alone and can helpimprove each other’s skills.If you think about something long enough, the brain will consider it atruth.  If you tell yourself something negative, such as “I&amp;#39;m a terribleprogrammer,” soon your brain will believe you.</summary>
 </entry>
 <entry>
 <title>Functional Programming in Python</title>
@@ -791,6 +794,6 @@ allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/ol&gt;
 </content>
 <category term="startup" />
-<summary>BookAlchemist Novel - ขุมทรัพย์ที่ปลายฝัน</summary>
+<summary>BookAlchemist Novel - ขุมทรัพย์ที่ปลายฝันSeriesSilicon Valley (TV series)</summary>
 </entry>
 </feed>
