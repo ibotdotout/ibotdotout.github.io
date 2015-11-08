@@ -12,6 +12,9 @@ excerpt: Read more feature on jekyll that working with Github Pages
 > disable plugins but some plugin can work with Github Pages.  
 > [List of Jekyll Plguins that working on Github > Pages](https://help.github.com/articles/using-jekyll-plugins-with-github-pages/)  
 
+> Easy ways: using [excerpt option of > jekyll](http://jekyllrb.com/docs/posts/#post-excerpts)  
+> [Customized excerpt separator in > Jekyll](http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll)  
+
 Just using `truncate` they not checking html tag that make your site look
 terrible and Github Pages not support custom ruby script that place in
 `_plugins`. The better way is using split with custom tags.
