@@ -128,6 +128,13 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
 ## [Demo Repository](https://github.com/ibotdotout/ibotdotout.github.io)
 I use `develop` branch as `jekyll` and I'm lazy to change but I recommend to use `jekyll` branch should be better.
 
+### Tips:
+
+```sh
+# config local git repo to push only current active branch
+$ git config push.default simple
+```
+
 ## References:
 1. [Auto-deploying built products to gh-pages with Travis](https://gist.github.com/domenic/ec8b0fc8ab45f39403dd)
 2. [Publishing gh-pages with Travis-CI](https://medium.com/@nthgergo/publishing-gh-pages-with-travis-ci-53a8270e87db)
