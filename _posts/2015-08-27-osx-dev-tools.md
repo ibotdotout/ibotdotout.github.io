@@ -30,7 +30,12 @@ $ brew tap caskroom/fonts
 - [iTerm2 - Mac OS Terminal Replacement](http://iterm2.com)
 
 ```sh
+# this is too old version
 $ brew cask install iterm2
+
+# try night build that lastest version
+$ brew tap caskroom/versions
+$ brew cask install iterm2-nightly
 ```
 - [Oh My Zsh - managing your zsh configuration.](http://ohmyz.sh)
 
@@ -68,3 +73,5 @@ $ brew cask install slack
 
 - [OSX Thai Dictionary](http://www.iviewapp.net/2012/12/thai-dictionary-mac-os-x-mountain-lion.html)
 - [iTerm2 + oh my zsh + solarized + Meslo powerline font (OSX)](https://gist.github.com/kevin-smets/8568070)
+- [homebrew-versions](https://github.com/caskroom/homebrew-versions)
+- [Cider - homebrew wrapper](https://github.com/msanders/cider)
