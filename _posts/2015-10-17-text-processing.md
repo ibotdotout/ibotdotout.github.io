@@ -134,3 +134,28 @@ $ grep -o text # show only match
 2. [Grep and Regex](http://www.robelle.com/smugbook/regexpr.html)
 3. [Regular Expression for finding double characters in Bash](http://unix.stackexchange.com/questions/70933/regular-expression-for-finding-double-characters-in-bash)
 4. [15 Practical Grep Command Examples In Linux / UNIX](http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
+
+## Paste
+
+```sh
+$ paste file1 file2
+$ paste -d, file1 file2
+$ paste -s file1
+```
+### Reference:  
+1. [How to join columns of two files in unix system](http://stackoverflow.com/questions/12361977/how-to-join-columns-of-two-files-in-unix-system)
+2. [10 examples of paste command usage in
+   Linux](http://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html)
+3. [paste command: setting (multiple) delimiters](http://unix.stackexchange.com/questions/115754/paste-command-setting-multiple-delimiters)
+
+### Bash Substring
+
+```sh
+# $ {var::-1}
+$ a=123
+$ echo "${a::-1}"
+12
+```
+
+### Reference:  
+1. [Substring in bash](http://unix.stackexchange.com/questions/144298/delete-the-last-character-of-a-string-using-string-manipulation-in-shell-script)
