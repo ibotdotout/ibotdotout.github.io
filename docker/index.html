@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://dev.im-bot.com/docker/" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="Docker Support Only 64-bit SystemDocker try it! - Interactive TutorialInstallInstall on Debian# Debian Jessie 8.0 (64-bit) or unstable packages$ sudo apt-get..." />
+<meta property="og:description" content="Docker Support Only 64-bit Systemdocker-engine not docker.io anymoredocker.io is old nameDocker try it! - Interactive TutorialInstallInstall on Debian# Debia..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -182,14 +182,19 @@
   <span class="post-date">11 Sep 2014</span>
   <h2 id="docker-support-only-64-bit-system">Docker Support Only 64-bit System</h2>
 
+<blockquote>
+<p>docker-engine not docker.io anymore<br>
+docker.io is old name</p>
+</blockquote>
+
 <h3 id="docker-try-it-interactive-tutorial"><a href="https://www.docker.com/tryit/">Docker try it! - Interactive Tutorial</a></h3>
 
 <h3 id="install">Install</h3>
 
-<h4 id="install-on-debian"><a href="https://docs.docker.com/installation/debian/">Install on Debian</a></h4>
+<h4 id="install-on-debian"><a href="https://docs.docker.com/engine/installation/debian/#debian-wheezy-stable-7-x-64-bit">Install on Debian</a></h4>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Debian Jessie 8.0 (64-bit) or unstable packages</span>
 <span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get install docker.io
+<span class="nv">$ </span>sudo apt-get install docker-engine
 </code></pre></div>
 <ul>
 <li><a href="http://linuxconfig.org/package-docker-io-has-no-installation-candidate-debian-jessie">Package &#39;docker.io&#39; has no installation candidate - Debian
@@ -297,6 +302,19 @@ CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o"
 </code></pre></div>
 <h3 id="set-time-zone-in-dockerfile"><a href="http://tedwise.com/2015/05/02/setting-the-timezone-in-a-docker-image">Set time zone in Dockerfile</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;Asia/Bangkok&quot;</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure -f noninteractive tzdata
+</code></pre></div>
+<h3 id="push-docker-to-registry">Push docker to registry</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker login
+<span class="c"># docker tag &lt;image&gt; &lt;username/image:version&gt;</span>
+<span class="nv">$ </span>docker tag viau10-app ibotdotout/viau10-app:latest
+<span class="c"># docker push &lt;username/image&gt;</span>
+<span class="nv">$ </span>docker push ibotdotout/viau10-app
+</code></pre></div>
+<h3 id="force-clean-build-of-an-image-without-cache"><a href="https://github.com/docker/docker/issues/1326">Force clean build of an image (without cache)</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker build --no-cache .
+</code></pre></div>
+<h3 id="graphdriver-prior-storage-driver-quot-aufs-quot-failed-invalid-argument-by-kelindar"><a href="https://github.com/docker/docker/issues/14026">graphdriver prior storage driver &quot;aufs&quot; failed: invalid argument </a> by @Kelindar</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo rm -rf /var/lib/docker/aufs
 </code></pre></div>
 <h3 id="install-docker-compose-aka-fig">Install Docker-compose aka Fig</h3>
 

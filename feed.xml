@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-11-09T07:40:54+00:00</updated>
+<updated>2015-11-12T06:47:17+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -122,6 +122,10 @@ env:
 
 &lt;p&gt;I use &lt;code&gt;develop&lt;/code&gt; branch as &lt;code&gt;jekyll&lt;/code&gt; and I&amp;#39;m lazy to change but I recommend to use &lt;code&gt;jekyll&lt;/code&gt; branch should be better.&lt;/p&gt;
 
+&lt;h3 id=&quot;tips&quot;&gt;Tips:&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# config local git repo to push only current active branch&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config push.default simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
 
 &lt;ol&gt;
@@ -528,6 +532,32 @@ C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&g
 &lt;li&gt;&lt;a href=&quot;http://unix.stackexchange.com/questions/70933/regular-expression-for-finding-double-characters-in-bash&quot;&gt;Regular Expression for finding double characters in Bash&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/&quot;&gt;15 Practical Grep Command Examples In Linux / UNIX&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h2 id=&quot;paste&quot;&gt;Paste&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;paste file1 file2
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;paste -d, file1 file2
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;paste -s file1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/12361977/how-to-join-columns-of-two-files-in-unix-system&quot;&gt;How to join columns of two files in unix system&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html&quot;&gt;10 examples of paste command usage in
+Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://unix.stackexchange.com/questions/115754/paste-command-setting-multiple-delimiters&quot;&gt;paste command: setting (multiple) delimiters&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;bash-substring&quot;&gt;Bash Substring&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# $ {var::-1}&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;123
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;${a::-1}&amp;quot;&lt;/span&gt;
+12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://unix.stackexchange.com/questions/144298/delete-the-last-character-of-a-string-using-string-manipulation-in-shell-script&quot;&gt;Substring in bash&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </content>
 <category term="unix" />
 <summary>Collection example of text processing in shell</summary>
@@ -783,6 +813,18 @@ allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
+&lt;h2 id=&quot;movie&quot;&gt;Movie&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;American dreams in china&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Do not play mahjong with mother-in-law,&lt;br&gt;
+Do not sleep with a woman who is more complicated than you,&lt;br&gt;
+Do not start a company with good friends.  &lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&quot;video&quot;&gt;Video&lt;/h2&gt;
 
 &lt;ol&gt;
@@ -791,7 +833,38 @@ allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.facebook.com/smartsme/videos/557504484399577/&quot;&gt;วิธีการทำเว็บไซต์ขายสินค้าออนไลน์ให้ประสบความสำเร็จ&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pNvfML-WhH4&quot;&gt;ลงทุนในอสังหาฯด้วยเงิน0บาท B1.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=RfeVCwE9pkk&quot;&gt;รายการฟาสต์ฟู้ดธุรกิจ ตอน MFEC กับการบริหารองค์กรให้ยั่งยืนแบบไม่ธรรมดา&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=4au4MBL_G2s&amp;amp;list=PLFNE3s-klEBpsKIn7zU1yyX10ZmS-NlD3&quot;&gt;เจาะใจ : อากี เป็ดพะโล้&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h3 id=&quot;stroy&quot;&gt;Stroy&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://techsauce.co/interviews/special-interview-nir-eyal-hooked/&quot;&gt;สัมภาษณ์พิเศษ Nir Eyal ผู้แต่งหนังสือชื่อดัง Hooked&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Hooked Model” ซึ่งแบ่งเป็น 4 ขั้นตอนคือ Trigger, Action, Variable  Reward และ Investment&lt;br&gt;
+ Product ที่มีโอกาสประสบความสำเร็จต้องมี 3 ข้อคือ Growth, Engagement และ  Monetization หรือเรียกสั้นๆว่า GEMs  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://storylog.co/story/55320188b629ef9bebe59ee3&quot;&gt;พี่ครับ..  เลิกสอนให้ผมรวยได้หรือยัง?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;แต่รู้หรือเปล่าว่า..&lt;br&gt;
+ยิ่งเราฟังเสียงคนอื่นพูดมากเท่าไร&lt;br&gt;
+มันยิ่งกลายเป็นเสียงสะท้อนที่บอกว่า&lt;br&gt;
+... เราคิด (ห่า) อะไรเองไม่เป็นเลย  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://atthaphong.com/2015/11/07/79/&quot;&gt;Hardware Startup Lessons Learnt&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Build a platform and service NOT hardware.&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
 <category term="startup" />
 <summary>BookAlchemist Novel - ขุมทรัพย์ที่ปลายฝันSeriesSilicon Valley (TV series)</summary>
