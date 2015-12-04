@@ -49,6 +49,15 @@ $ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh 
 $ brew cask install dash
 ```
 
+- [vtop](https://github.com/MrRio/vtop) - [Intro](https://parall.ax/vtop)
+
+> htop on osx port from linux that five years ago version. It's very old.
+
+```sh
+# requried nodejs
+$ sudo npm install -g vtop
+```
+
 ### Window Manager
 
 - [Spectacle - Move and resize windows with ease](http://spectacleapp.com)
