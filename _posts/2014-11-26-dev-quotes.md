@@ -39,3 +39,6 @@ minutes, but you can't search Google to balance individual desire -
 * "Five minutes" represented "think", not react. - [Give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes)
 
 * ถ้าคุณไม่สามารถเรียนรู้ได้ทั้งหมด ก็ให้เรียนรู้เท่าที่จําเป็นใน ตอนนั้นแทนสิ - <http://www.somkiat.cc>
+
+* Keep your personal emotions out of it. These people invest in results,
+not dreams. - Rise of the Planet of the Apes
