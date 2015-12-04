@@ -396,6 +396,27 @@ waitproc <span class="o">()</span> <span class="o">{</span>
 <span class="nv">$ </span>basename <span class="s2">&quot;/home/user/dir/file.py&quot;</span>
 file.py
 </code></pre></div>
+<h3 id="how-to-find-out-from-the-logs-what-caused-system-shutdown"><a href="http://unix.stackexchange.com/questions/9819/how-to-find-out-from-the-logs-what-caused-system-shutdown">How to find out from the logs what caused system shutdown?</a></h3>
+
+<ul>
+<li><a href="http://unix.stackexchange.com/questions/107501/shutdown-log-linux-username">Shutdown log Linux UserName</a></li>
+<li><a href="http://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html">Linux last Reboot Time and Date Find Out Command</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">last reboot <span class="p">|</span> less
+last -x<span class="p">|</span>grep shutdown <span class="p">|</span> head -1
+</code></pre></div>
+<h3 id="zsh">Zsh</h3>
+
+<ul>
+<li><a href="http://blog.patshead.com/2011/04/improve-your-oh-my-zsh-startup-time-maybe.html">Improve Your oh-my-zsh Startup Time (Maybe)</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># check start zsh time</span>
+  /usr/bin/time zsh -i -c <span class="nb">exit</span>
+</code></pre></div>
+<ul>
+<li><a href="http://superuser.com/questions/236953/zsh-starts-incredibly-slowly">zsh starts incredibly slowly</a></li>
+</ul>
+
 <h3 id="bash-references">Bash References:</h3>
 
 <ol>
