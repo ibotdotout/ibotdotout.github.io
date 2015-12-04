@@ -274,6 +274,30 @@
 </ul>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>pip install --download-cache<span class="o">=</span><span class="s2">&quot;/pth/to/downloaded/files&quot;</span> package
 </code></pre></div>
+<ul>
+<li><p><a href="http://bhfsteve.blogspot.se/2014/07/embedding-python-in-bash-scripts.html">Embedding python in bash scripts</a></p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/29734394/running-a-python-function-as-a-bash-command">Running a python function as a bash command</a></li>
+<li><a href="https://gist.github.com/jiaaro/5452675">Embed Python in a bash script</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">function</span> line <span class="o">{</span>
+<span class="nv">PYTHON_ARG</span><span class="o">=</span><span class="s2">&quot;$1&quot;</span> python - <span class="s">&lt;&lt;END</span>
+<span class="s">import os</span>
+<span class="s">line_len = int(os.environ[&#39;PYTHON_ARG&#39;])</span>
+<span class="s">print &#39;-&#39; * line_len</span>
+<span class="s">END</span>
+<span class="o">}</span>
+</code></pre></div>
+<ul>
+<li><a href="http://stackoverflow.com/questions/2119702/calling-a-python-function-from-bash-script">Calling a python function from bash script</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">python -c<span class="s1">&#39;import themodule; themodule.thefunction(&quot;boo!&quot;)&#39;</span>
+</code></pre></div></li>
+<li><p><a href="http://stackoverflow.com/questions/5574702/how-to-print-to-stderr-in-python">How to print to stderr in Python?</a></p></li>
+</ul>
+<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#39;word&#39;</span>
+</code></pre></div>
 <h2 id="tools">Tools:</h2>
 
 <ul>
@@ -431,7 +455,8 @@ pyreverse -o png &lt;code&gt;
 <li><a href="http://stackoverflow.com/questions/6908143/should-i-put-shebang-in-python-scripts-and-what-form-should-it-take">Should I put #! (shebang) in Python scripts, and what form should it
 take?</a></li>
 <li><a href="http://stackoverflow.com/questions/15328623/simple-file-server-to-serve-current-directory">Simple file server to serve current directory</a></li>
-<li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported using “from module import *”</a></li>
+<li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported using &quot;from module import *&quot;</a></li>
+<li><a href="https://asmeurer.github.io/python3-presentation/slides.html#1">10 awesome features of Python that you can&#39;t use because you refuse to upgrade to Python 3</a></li>
 </ol>
 
 </div>
