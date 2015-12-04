@@ -25,7 +25,7 @@ author:
   url:            http://dev.im-bot.com
 
 # Prevent File/Dir publish to site
-exclude: [Dockerfile, Gemfile, Gemfile.lock, LICENSE.md, docker-compose.yml]
+exclude: [Dockerfile, Gemfile, Gemfile.lock, LICENSE.md, docker-compose.yml, vendor]
 
 # Jekyll Plugins
 gems:
