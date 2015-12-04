@@ -34,7 +34,7 @@ gems:
 
 # Plugins config
 lunr_search:
-    excludes: [feed.xml, tags, search]
+    excludes: [feed.xml, tags, search, "404"]
 
 # Custom vars
 version:          0.0.1
