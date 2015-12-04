@@ -7,6 +7,7 @@ RUN apt-get update -y && apt-get install -y nodejs python-pygments && apt-get cl
 
 WORKDIR /src
 ADD Gemfile /src/Gemfile
+ADD Gemfile.lock /src/Gemfile.lock
 
 RUN bundle install
 
