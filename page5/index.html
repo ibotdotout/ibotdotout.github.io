@@ -674,25 +674,64 @@ Host &lt;proxy&gt;
 </ol>
 
 <h3 id="command">Command</h3>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\phantom</span><span class="nb">{</span>-<span class="nb">}</span> <span class="c">%hidden character</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">  <span class="k">\phantom</span><span class="nb">{</span>-<span class="nb">}</span> <span class="c">%hidden character</span>
 </code></pre></div>
 <h3 id="tips">Tips</h3>
 
 <ul>
-<li><a href="http://tex.stackexchange.com/questions/124621/can-i-include-the-page-number-when-using-includepdf">Insert Page</a></li>
+<li><a href="http://tex.stackexchange.com/questions/124621/can-i-include-the-page-number-when-using-includepdf">Insert Pdf Page</a></li>
 <li><a href="http://tex.stackexchange.com/questions/185155/is-is-possible-to-not-abbreviate-the-author-name-of-only-one-reference-in-my-bib">Not abbreviate the author name</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">    author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
 </code></pre></div>
 <ul>
 <li><a href="http://ubuntuforums.org/showthread.php?t=1275429">citation treated like one word?</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">    Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
+    # or using <span class="k">\hyphenation</span> to cut all the documents
+    <span class="k">\hyphenation</span><span class="nb">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="nb">}</span>
 </code></pre></div>
 <ul>
 <li>Word Cut</li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  using <span class="k">\-</span> or &lt; space &gt;
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">    using <span class="k">\-</span> or &lt; space &gt;
+</code></pre></div>
+<ul>
+<li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
+<li><a href="https://www.sharelatex.com/learn/Positioning_images_and_tables">Positioning images and tables</a></li>
+<li><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\input</span><span class="nb">{</span>table.tex<span class="nb">}</span>
+</code></pre></div>
+<ul>
+<li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
+<li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
+</ul>
+
+<h3 id="table"><a href="https://www.sharelatex.com/learn/Tables">Table</a></h3>
+
+<ul>
+<li><a href="http://www.tablesgenerator.com">LaTeX Table Generator</a></li>
+<li><a href="http://www.sascha-frank.com/Faq/tables_six.html">LaTeX table fixed width</a></li>
+<li><a href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a></li>
+</ul>
+
+<h3 id="spreadtab-calculatable-table-latex">Spreadtab - Calculatable Table latex</h3>
+
+<ul>
+<li><a href="http://tex.stackexchange.com/questions/30081/how-can-i-sum-two-values-and-store-the-result-in-other-variable">How can I sum two values and store the result in other variable?</a></li>
+<li><a href="http://tex.stackexchange.com/questions/130942/calculations-in-table-using-spreadtab">Calculations in Table using spreadtab</a></li>
+<li><a href="http://ctan.megagod.net/tex-archive/macros/latex/contrib/spreadtab/spreadtab_doc_en.pdf">Spreadtab User’s manual</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">  # read more in document
+  # 2.5 Copy a formula
+
+  <span class="k">\STcopy</span><span class="nb">{</span>&gt;x,vy<span class="nb">}{</span>formula<span class="nb">}</span>
+
+  # 3.2 Number formatting and the fp package
+
+  # foating point numbers are rounded to 2 digits
+  <span class="k">\STautoround</span><span class="nb">{</span>2<span class="nb">}</span>
 </code></pre></div>
 <h3 id="separate-compilation-of-child-documents">Separate compilation of child documents</h3>
 
@@ -720,7 +759,8 @@ Host &lt;proxy&gt;
 <ol>
 <li><a href="http://thaitug.daytag.org/">Thai Latex User Group</a></li>
 <li><a href="https://thailatex.wordpress.com">Thai LaTeX and MATLAB</a></li>
-<li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">latex-clean.sh</a></li>
+<li><a href="https://www.sharelatex.com/blog/latex-guides/beginners-tutorial.html">ShareLaTeX Blog</a></li>
+<li>Latex Online Editor - <a href="https://www.overleaf.com">Overleaf</a> , <a href="https://www.sharelatex.com">ShareLatex</a></li>
 </ol>
 
     
