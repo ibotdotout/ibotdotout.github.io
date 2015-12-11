@@ -181,6 +181,50 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/robot-packtpub">
+        Robot Packtpub
+      </a>
+    </h1>
+
+    <span class="post-date">30 Aug 2015</span>
+
+    
+      <p>Automate claim <a href="https://www.packtpub.com/packt/offers/free-learning">free ebook from packtpub</a> to your packtpub account by robotframework script.</p>
+
+<h2 id="robot-script">Robot Script</h2>
+
+<p><noscript><pre>400: Invalid request
+</pre></noscript><script src="https://gist.github.com/9a567b2c2f90df2d59c5.js"> </script></p>
+
+<h2 id="package-requirements-or-dockerfile-on-robot-packtpub-repo">Package Requirements or <a href="https://github.com/ibotdotout/robot-packtpub">Dockerfile on Robot-packtpub Repo</a></h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># ubuntu</span>
+<span class="nv">$ </span>apt-get -y update
+<span class="nv">$ </span>apt-get -y install python-dev python-pip
+<span class="nv">$ </span>apt-get install -y phantomjs libicu52 wget
+<span class="nv">$ </span>wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs -O /usr/bin/phantomjs <span class="o">&amp;&amp;</span> chmod +x /usr/bin/phantomjs
+
+<span class="nv">$ </span>pip install robotframework
+<span class="nv">$ </span>pip install robotframework-selenium2library
+</code></pre></div>
+<h2 id="how-to-use">How to use</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
+<span class="nv">$ </span>pybot robot-packtpub.txt
+</code></pre></div>
+<h2 id="note">Note</h2>
+
+<ul>
+<li><p>We use XPath to locate where button and input form are that not flexible,
+It may change when Web UI changed (XPath is Best Solution that I found).
+You can find XPath by following this video - <a href="https://www.youtube.com/watch?v=vCNLPHP3E_U">Quick Tip: Getting The XPath In Google Chrome</a>.</p></li>
+<li><p><code>PhantomJS2.0 fixed this issue</code> We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.</p></li>
+<li><p>You can use <a href="https://travis-ci.org">Travis-CI</a> and <a href="https://nightli.es">Nightly Builds</a> to run your script everyday - <a href="https://github.com/ibotdotout/robot-packtpub">See demo here</a>.</p></li>
+</ul>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/dev-tools">
         OSX Dev Tools
       </a>
@@ -616,133 +660,6 @@ Docker</a></li>
 <li><a href="http://docs.drone.io/python.html">Drone.io Building Python Projects</a></li>
 <li><a href="http://buddylindsey.com/hosting-your-open-source-project-on-heroku-with-private-configuration/">Hosting Your Open Source Project on Heroku with Private Configuration</a></li>
 <li><a href="http://stackoverflow.com/questions/3176918/how-to-hide-connection-string-user-name-pw-when-using-source-control">How to hide connection string, user name, pw when using source control?</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/line">
-        Python Line API
-      </a>
-    </h1>
-
-    <span class="post-date">30 Jul 2015</span>
-
-    
-      <h2 id="line-api-requirement-line-api-documentation">Line API requirement - <a href="http://carpedm20.github.io/line/">Line API Documentation</a></h2>
-
-<ul>
-<li><a href="https://github.com/carpedm20/LINE">Line API</a></li>
-<li>Python2 (not 3 because Thrift not support yet)</li>
-<li><a href="https://thrift.apache.org">Apache Thrift</a></li>
-</ul>
-
-<h2 id="install-thrift-on-ubuntu"><a href="http://www.saltycrane.com/blog/2011/06/install-thrift-ubuntu-1010-maverick">Install Thrift on Ubuntu</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>apt-get install -y automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git debhelper cmake
-<span class="nv">$ </span><span class="nb">cd</span> /tmp
-<span class="nv">$ </span>curl http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz <span class="p">|</span> tar zx
-<span class="nv">$ </span><span class="nb">cd</span> /tmp/thrift-0.9.1
-<span class="nv">$ </span>./configure
-<span class="nv">$ </span>make <span class="o">&amp;&amp;</span> make install
-<span class="nv">$ </span>rm -rf /tmp/thrift-0.9.1
-</code></pre></div>
-<h2 id="fix-login-with-email-and-password-failed"><a href="https://www.youtube.com/watch?v=vaB1ZzV7UxY">Fix login with email and password failed</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># installl line and remove first that tricky don&#39;t know why</span>
-<span class="nv">$ </span>pip install line <span class="o">&amp;&amp;</span> pip uninstall -y line
-<span class="nv">$ </span>git clone https://github.com/carpedm20/LINE.git
-<span class="nv">$ </span><span class="nb">cd </span>LINE/line
-<span class="nv">$ </span>wget https://gist.github.com/windows98SE/b739038218b6fe4d423f/raw/5f68cf3d9a2a88576b739810a6bd6fcaa0c5e940/api.py.patch
-<span class="nv">$ </span>patch api.py &lt; api.py.patch
-<span class="nv">$ </span>python config.py
-<span class="nv">$ </span>python setup.py install
-</code></pre></div>
-<h2 id="sample-bot">Sample Bot</h2>
-
-<p><noscript><pre># original: <a href="https://github.com/carpedm20/LINE/blob/master/examples/echobot.py">https://github.com/carpedm20/LINE/blob/master/examples/echobot.py</a></p>
-
-<p>from line import LineClient, LineGroup, LineContact</p>
-
-<p>try:
-   client = LineClient(&quot;ID&quot;, &quot;PASSWORD&quot;)
-   print client.authToken #print authToken before error and use this login again
-   #client = LineClient(authToken=&quot;AUTHTOKEN&quot;)
-except:
-   print &quot;Login Failed&quot;</p>
-
-<p>while True:
-   op_list = []</p>
-
-<p>for op in client.longPoll():
-      op_list.append(op)</p>
-
-<p>for op in op_list:
-      sender   = op[0]
-      receiver = op[1]
-      message  = op[2]</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">  msg = message.text
-  #receiver.sendMessage(&amp;quot;[%s] %s&amp;quot; % (sender.name, msg)) #this send message to ourselft that make infinity loop
-  sender.sendMessage(&amp;quot;[%s] %s&amp;quot; % (sender.name, msg)) #send message back to sender&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/ibotdotout/382369f272b9a2804318.js&quot;&gt; &lt;/script&gt;
-</code></pre></div>
-<h2 id="line-api-patched-dockerfile-on-ubuntu">Line API Patched Dockerfile on Ubuntu</h2>
-
-<p><noscript><pre>FROM dockerfile/python</p>
-
-<p>RUN apt-get update -y &amp;&amp; apt-get dist-upgrade -y</p>
-
-<h1 id="apache-thrift-for-line-support">Apache Thrift for line support</h1>
-
-<h1 id="http-www-saltycrane-com-blog-2011-06-install-thrift-ubuntu-1010-maverick"><a href="http://www.saltycrane.com/blog/2011/06/install-thrift-ubuntu-1010-maverick/">http://www.saltycrane.com/blog/2011/06/install-thrift-ubuntu-1010-maverick/</a></h1>
-
-<p>RUN apt-get install -y automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git \
-    debhelper cmake
-RUN cd /tmp &amp;&amp; curl <a href="http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz">http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz</a> | tar zx
-RUN cd /tmp/thrift-0.9.1 &amp;&amp; ./configure &amp;&amp; make &amp;&amp; make install
-RUN rm -rf /tmp/thrift-0.9.1</p>
-
-<h1 id="line-python-amp-patch-to-support-login-with-email-and-password">LINE python &amp; patch to support login with email and password</h1>
-
-<h1 id="http-dev-program-com-how-to-use-line-api-in-python-lts-work"><a href="http://dev-program.com/how-to-use-line-api-in-python-lts-work/">http://dev-program.com/how-to-use-line-api-in-python-lts-work/</a></h1>
-
-<p>RUN pip install line &amp;&amp; pip uninstall -y line
-RUN cd /tmp &amp;&amp; git clone <a href="https://github.com/carpedm20/LINE.git">https://github.com/carpedm20/LINE.git</a>
-RUN cd /tmp/LINE/line &amp;&amp; \
-    wget <a href="https://gist.github.com/windows98SE/b739038218b6fe4d423f/raw/5f68cf3d9a2a88576b739810a6bd6fcaa0c5e940/api.py.patch">https://gist.github.com/windows98SE/b739038218b6fe4d423f/raw/5f68cf3d9a2a88576b739810a6bd6fcaa0c5e940/api.py.patch</a> &amp;&amp; \
-    patch api.py &lt; api.py.patch
-RUN cd /tmp/LINE &amp;&amp; python config.py
-RUN cd /tmp/LINE &amp;&amp; python setup.py install
-RUN rm -rf /tmp/LINE</p>
-
-<p>CMD [&quot;bash&quot;]</pre></noscript><script src="https://gist.github.com/ibotdotout/7082eae15450fe5de783.js"> </script></p>
-
-<h2 id="line-send-message-by-lineid">Line send message by LineID</h2>
-
-<p><noscript><pre>from line import LineClient, LineGroup, LineContact</p>
-
-<p>try:
-   client = LineClient(&quot;ID&quot;, &quot;PASSWORD&quot;)
-   print client.authToken #print authToken before error and use this login again
-   #client = LineClient(authToken=&quot;AUTHTOKEN&quot;)
-except:
-   print &quot;Login Failed&quot;</p>
-
-<p>lineID = &quot;Enter target LineID&quot;
-try:
-    target = client._client.findContactByUserid(lineID)
-    c = LineContact(client, target)
-    c.sendMessage(&quot;hello&quot;)
-except:
-    print(&quot;cant find LineID or your LineID is private ID&quot;)</pre></noscript><script src="https://gist.github.com/ibotdotout/0a4aabc85c7767cb0679.js"> </script></p>
-
-<h3 id="references">References:</h3>
-
-<ol>
-<li><a href="https://github.com/carpedm20/LINE">Python Line API Repository</a></li>
-<li><a href="http://carpedm20.github.io/line/">Line API Documentation</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLv55tReH1ENzu9z5oaU46VNtU0G9wESTH">StepHack.Com : มาเขียน บอท line ด้วย Python กันเถอะ</a></li>
-<li><a href="http://dev-program.com/how-to-use-line-api-in-python-lts-work/">How to use LINE API in python ( lt’s work)</a></li>
-<li><a href="http://carpedm20.blogspot.kr/2013/09/line-reverse-engineering.html">Line reverse engineering</a></li>
 </ol>
 
     

@@ -8,18 +8,18 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Tmux" />
+  <meta property="og:title" content="Learning Resources" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/tmux/" />
+<meta property="og:url" content="http://dev.im-bot.com/learning/" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="list binding keyPREFIX ? - list keys  Leaving and Coming Back AgainPREFIX d - leave  # Come Back$ tmux awindowsPREFIX c - create windowPREFIX , - rename wind..." />
+<meta property="og:description" content="" />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Tmux &middot; botbotbot
+      Learning Resources &middot; botbotbot
     
   </title>
 
@@ -178,100 +178,38 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Tmux</h1>
-  <span class="post-date">09 Jun 2014</span>
-  <h3 id="list-binding-key">list binding key</h3>
+  <h1 class="post-title">Learning Resources</h1>
+  <span class="post-date">12 Oct 2015</span>
+  <!-- more -->
 
-<p>PREFIX ? - list keys  </p>
+<h3 id="resources-by-up1-http-www-somkiat-cc">Resources by Up1 <a href="http://www.somkiat.cc">http://www.somkiat.cc</a></h3>
 
-<h3 id="leaving-and-coming-back-again">Leaving and Coming Back Again</h3>
+<p><https://github.com/up1/course_php_101 >
+<https://github.com/up1/course-robotframework/tree/master/slide >
+<https://github.com/up1/course-performance-testing/tree/master/slide >
+<https://github.com/up1/workshop_android_automated_test/tree/master/slide >
+<https://github.com/up1/workshop_mongodb/tree/master/slide01 ></p>
 
-<p>PREFIX d - leave  </p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Come Back</span>
-<span class="nv">$ </span>tmux a
-</code></pre></div>
-<h3 id="windows">windows</h3>
+<h3 id="resources-by-suchart-msu">Resources by Suchart@MSU</h3>
 
-<p>PREFIX c - create window<br>
-PREFIX , - rename window<br>
-PREFIX n - next window<br>
-PREFIX p - previous window<br>
-PREFIX {num} - go to {num} window<br>
-PREFIX &amp; - exit window  </p>
+<p><https://isan.msu.ac.th/suchart/NetworkHowTo/NetworkHowTo.pdf >
+<https://isan.msu.ac.th/suchart/NetworkHowTo/Workshop/ >
+<https://isan.msu.ac.th/suchart/NetworkHowTo/LAB/ ></p>
 
-<h3 id="panes">panes</h3>
+<h3 id="code-school-slides"><a href="https://github.com/fishbecat/Code-School-Slides">Code-School-Slides</a></h3>
 
-<p>PREFIX % - split pane in vertically<br>
-PREFIX &quot; - split pane in horizontally<br>
-PREFIX o - switch between panes<br>
-PREFIX {arrow} - move around the panes<br>
-PREFIX q - show pane number and its size<br>
-PREFIX x - kill pane<br>
-PREFIX z - toggle pane to be fullscreen<br>
-PREFIX {, } - swap panes<br>
-PREFIX ! - turn pane to window  </p>
+<h3 id="application-security-learning-resources"><a href="https://github.com/paragonie/awesome-appsec">Application Security Learning Resources</a></h3>
 
-<h3 id="copy-amp-paste-to-system-clipboard">Copy &amp; Paste to System Clipboard</h3>
+<h3 id="resources-by-http-www-coursesquare-co">Resources by <a href="http://www.coursesquare.co/">http://www.coursesquare.co/</a></h3>
 
-<p><a href="http://blog.joncairns.com/2013/06/copying-between-tmux-buffers-and-the-system-clipboard/">Copying between tmux buffers and the system clipboard</a><br>
-<a href="http://unix.stackexchange.com/questions/131011/use-system-clipboard-in-vi-copy-mode-in-tmux">Share buffer with system clipboard</a><br>
-<a href="http://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future">tmux Copy &amp; Paste on OS X: A Better Future</a><br>
-<a href="https://www.youtube.com/watch?v=OW-lKJDFOzc">Copy Mode - Linux TMUX Video Tutorial</a></p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># .tmux.conf</span>
-setw -g mode-keys vi
-<span class="nb">bind</span>-key -t vi-copy <span class="s1">&#39;v&#39;</span> begin-selection
-<span class="nb">bind</span>-key -t vi-copy <span class="s1">&#39;y&#39;</span> copy-selection
-<span class="nb">bind</span> -t vi-copy y copy-pipe <span class="s1">&#39;xclip -in -selection clipboard&#39;</span>
-</code></pre></div>
-<ul>
-<li><p>Copy to Buffer</p>
+<h4 id="ux-talk-enterprise-ux">UX TALK ENTERPRISE UX</h4>
 
-<ol>
-<li>PREFIX [ - scroll buffer use arrow key to move around and enter to quit<br></li>
-<li>v - select word<br></li>
-<li>y - copy (yank) word<br></li>
-</ol></li>
-<li><p>Paste from buffer<br>
-PREFIX ]</p></li>
-</ul>
+<p>&lt; <a href="http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-%E0%B8%95%E0%B8%AD%E0%B8%99-E-Commerce-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%86">http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-ตอน-E-Commerce-แบบไทยๆ</a> &gt;
+&lt; <a href="http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX">http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX</a> &gt;</p>
 
-<h3 id="create-custom-layout"><a href="https://www.youtube.com/watch?v=sxw-n5Du600">Create Custom Layout</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#Window: python dev (Prefix - Meta(Alt) + d)</span>
-<span class="c"># -v = split horizontal</span>
-<span class="nb">bind</span>-key M-d split-window -v -p <span class="m">30</span> -t <span class="m">0</span> <span class="se">\;</span> <span class="se">\</span>
-         send-keys <span class="s1">&#39;./watchdog_python.py&#39;</span> <span class="s1">&#39;Enter&#39;</span> <span class="se">\;</span> <span class="se">\</span>
-         <span class="k">select</span>-pane -t 0
-</code></pre></div>
-<h3 id="tmuxinator"><a href="https://github.com/tmuxinator/tmuxinator">tmuxinator</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>gem install tmuxinator
-<span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim
-</code></pre></div>
-<h3 id="wemux"><a href="https://github.com/zolrath/wemux">wemux</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># OSX via Homebrew</span>
-<span class="nv">$ </span>brew install wemux
-</code></pre></div>
-<h3 id="unable-to-use-39-open-39-command-in-osx-tmux"><a href="http://www.elmund.io/osx/2015/07/10/open-command-in-osx-tmux/">Unable to use &#39;open&#39; command in OSX tmux</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">brew update
-brew install reattach-to-user-namespace
-<span class="nb">echo</span> <span class="s2">&quot;set -g default-command \&quot;reattach-to-user-namespace -l ${SHELL}\&quot;&quot;</span> &gt;&gt; ~/.tmux.conf
-</code></pre></div>
-<h3 id="how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux"><a href="http://superuser.com/questions/493048/how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux">How to convert 2 horizontal panes to vertical panes in tmux?</a></h3>
+<h4 id="introduction-to-mixpanel"><a href="http://www.coursesquare.co/course/courseInfo/Introduction-to-Mixpanel">Introduction to Mixpanel</a></h4>
 
-<p>Prefix + <kbd>space<kbd></p>
-
-<h2 id="reference">Reference:</h2>
-
-<ol>
-<li><a href="http://www.danielmiessler.com/study/tmux/">A tmux Tutorial and Primer</a></li>
-<li><a href="http://robots.thoughtbot.com/love-hate-tmux">love hate tmux</a></li>
-<li><a href="https://learn.thoughtbot.com/tmux">Thoughtbot tmux</a></li>
-<li><a href="http://www.dayid.org/os/notes/tm.html">screen and tmux</a></li>
-<li><a href="http://myhumblecorner.wordpress.com/2011/08/30/screen-to-tmux-a-humble-quick-start-guide/">screen to tmux: A Humble Quick-start Guide</a></li>
-<li><a href="http://www.sitepoint.com/tmux-a-simple-start/">Tmux: A Simple Start</a></li>
-<li><a href="http://www.youtube.com/watch?v=CKC8Ph-s2F4">Humans Present: tmux</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLtK75qxsQaMJ_DmXk9yZbCBJuG9HRwlGc">tmux tutorial</a></li>
-<li><a href="https://mutelight.org/practical-tmux">Practical Tmux</a></li>
-</ol>
+<h3 id="website-performance-tutorials"><a href="https://www.youtube.com/playlist?list=PLLnpHn493BHGpGXukqYsxwQw3ziW3uti6">Website Performance Tutorials</a></h3>
 
 </div>
 

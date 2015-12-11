@@ -181,6 +181,35 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/startup">
+        Start Up
+      </a>
+    </h1>
+
+    <span class="post-date">01 Oct 2015</span>
+
+    
+      <h2 id="book">Book</h2>
+
+<ol>
+<li><a href="http://www.amazon.com/The-Alchemist-Paulo-Coelho/dp/0061122416">Alchemist Novel</a> - <a href="https://www.se-ed.com/product/%E0%B8%82%E0%B8%B8%E0%B8%A1%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%9E%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%9D%E0%B8%B1%E0%B8%99.aspx?no=9786160421701">ขุมทรัพย์ที่ปลายฝัน</a></li>
+</ol>
+
+<h2 id="series">Series</h2>
+
+<ol>
+<li><a href="http://www.hbo.com/silicon-valley/about/video/trailer.html">Silicon Valley (TV series)</a></li>
+</ol>
+
+
+      <div style="text-align:right;">
+        <a href="/startup" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/jekyll-with-ci">
         Jekyll with Continuous Integration
       </a>
@@ -562,50 +591,6 @@ m-&gt;a in NERDTree - create file/folder</p>
 <li><a href="http://superuser.com/a/547176">How can I view old status messages in Vim?</a></li>
 <li><a href="http://vim.wikia.com/wiki/Make_echo_seen_when_it_would_otherwise_disappear_and_go_unseen">Make echo seen when it would otherwise disappear and go unseen</a></li>
 </ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/robot-packtpub">
-        Robot Packtpub
-      </a>
-    </h1>
-
-    <span class="post-date">30 Aug 2015</span>
-
-    
-      <p>Automate claim <a href="https://www.packtpub.com/packt/offers/free-learning">free ebook from packtpub</a> to your packtpub account by robotframework script.</p>
-
-<h2 id="robot-script">Robot Script</h2>
-
-<p><noscript><pre>400: Invalid request
-</pre></noscript><script src="https://gist.github.com/9a567b2c2f90df2d59c5.js"> </script></p>
-
-<h2 id="package-requirements-or-dockerfile-on-robot-packtpub-repo">Package Requirements or <a href="https://github.com/ibotdotout/robot-packtpub">Dockerfile on Robot-packtpub Repo</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># ubuntu</span>
-<span class="nv">$ </span>apt-get -y update
-<span class="nv">$ </span>apt-get -y install python-dev python-pip
-<span class="nv">$ </span>apt-get install -y phantomjs libicu52 wget
-<span class="nv">$ </span>wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs -O /usr/bin/phantomjs <span class="o">&amp;&amp;</span> chmod +x /usr/bin/phantomjs
-
-<span class="nv">$ </span>pip install robotframework
-<span class="nv">$ </span>pip install robotframework-selenium2library
-</code></pre></div>
-<h2 id="how-to-use">How to use</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
-<span class="nv">$ </span>pybot robot-packtpub.txt
-</code></pre></div>
-<h2 id="note">Note</h2>
-
-<ul>
-<li><p>We use XPath to locate where button and input form are that not flexible,
-It may change when Web UI changed (XPath is Best Solution that I found).
-You can find XPath by following this video - <a href="https://www.youtube.com/watch?v=vCNLPHP3E_U">Quick Tip: Getting The XPath In Google Chrome</a>.</p></li>
-<li><p><code>PhantomJS2.0 fixed this issue</code> We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.</p></li>
-<li><p>You can use <a href="https://travis-ci.org">Travis-CI</a> and <a href="https://nightli.es">Nightly Builds</a> to run your script everyday - <a href="https://github.com/ibotdotout/robot-packtpub">See demo here</a>.</p></li>
-</ul>
 
     
   </div>
