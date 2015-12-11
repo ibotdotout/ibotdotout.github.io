@@ -3,12 +3,54 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-12-11T18:20:34+00:00</updated>
+<updated>2015-12-11T18:28:34+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
 <name>botbotbot</name>
 </author>
+<entry>
+<title>Ruby on Rails</title>
+<link href="http://dev.im-bot.com//ror" rel="alternate" type="text/html" title="Ruby on Rails" />
+<published>2015-12-12T00:00:00+00:00</published>
+<updated>2015-12-12T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//ror</id>
+<content type="html" xml:base="http://dev.im-bot.com//ror">&lt;h3 id=&quot;tips&quot;&gt;Tips&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2569501/what-ruby-and-rails-developers-ought-to-know&quot;&gt;What Ruby and Rails Developers Ought To Know?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/styleguide/ruby&quot;&gt;Styleguide Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/bbatsov/ruby-style-guide&quot;&gt;ruby-style-guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;rails-interview&quot;&gt;Rails Interview&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quora.com/How-do-I-prepare-for-an-entry-level-Ruby-on-Rails-developer-interview-What-questions-should-I-expect&quot;&gt;How do I prepare for an entry level Ruby on Rails developer interview?  What questions should I expect?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.reskill.me/ruby-on-rails-interview-questions-that-will-land-you-the-job/&quot;&gt;RUBY ON RAILS INTERVIEW QUESTIONS THAT WILL LAND YOU THE JOB!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://legeek.org/10-best-ruby-and-rails-interview-questions-and-answers/&quot;&gt;10 (best) Ruby (and Rails) interview questions (and answers)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cored.github.io/blog/2014/02/12/jobs-interview-more-ruby/&quot;&gt;Jobs Interview - More Ruby, Rails questions and answers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://documentup.com/afeld/rails_interview_questions&quot;&gt;Rails Interview Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://srikantmahapatra.wordpress.com/2013/11/07/ruby-on-rails-interview-questions-and-answers/&quot;&gt;RUBY ON RAILS INTERVIEW QUESTIONS AND ANSWERS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://anilpunjabi.tumblr.com/post/25948339235/ruby-and-rails-interview-questions-and-answers&quot;&gt;RUBY AND RUBY ON RAILS INTERVIEW QUESTIONS AND ANSWERS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.psteiner.com/2013/02/preparing-for-ruby-on-rails-job.html?m=1&quot;&gt;Preparing for Ruby on Rails job interviews&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.skilledup.com/articles/ruby-on-rails-interview-questions-answers&quot;&gt;19 Ruby &amp;amp; Ruby on Rails Interview Questions and Answers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://career.guru99.com/top-34-ruby-on-rail-interview-questions/&quot;&gt;Top 34 Ruby on Rails Interview Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/ryansobol/5252653&quot;&gt;15 Questions to Ask During a Ruby Interview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;docker&quot;&gt;Docker&lt;/h3&gt;
+
+&lt;p&gt;Bundle install fast on docker
+- &lt;a href=&quot;http://bradgessler.com/articles/docker-bundler/&quot;&gt;http://bradgessler.com/articles/docker-bundler/&lt;/a&gt;
+- &lt;a href=&quot;https://medium.com/@fbzga/how-to-cache-bundle-install-with-docker-7bed453a5800&quot;&gt;https://medium.com/@fbzga/how-to-cache-bundle-install-with-docker-7bed453a5800&lt;/a&gt;
+- &lt;a href=&quot;http://blog.carbonfive.com/2015/03/17/docker-rails-docker-compose-together-in-your-development-workflow/&quot;&gt;http://blog.carbonfive.com/2015/03/17/docker-rails-docker-compose-together-in-your-development-workflow/&lt;/a&gt;&lt;/p&gt;
+</content>
+<category term="ror" />
+<summary>TipsWhat Ruby and Rails Developers Ought To Know?Styleguide Rubyruby-style-guide</summary>
+</entry>
 <entry>
 <title>Learning Resources</title>
 <link href="http://dev.im-bot.com//learning" rel="alternate" type="text/html" title="Learning Resources" />
@@ -19,17 +61,17 @@
 
 &lt;h3 id=&quot;resources-by-up1-http-www-somkiat-cc&quot;&gt;Resources by Up1 &lt;a href=&quot;http://www.somkiat.cc&quot;&gt;http://www.somkiat.cc&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;&lt;https://github.com/up1/course_php_101 &gt;
-&lt;https://github.com/up1/course-robotframework/tree/master/slide &gt;
-&lt;https://github.com/up1/course-performance-testing/tree/master/slide &gt;
-&lt;https://github.com/up1/workshop_android_automated_test/tree/master/slide &gt;
-&lt;https://github.com/up1/workshop_mongodb/tree/master/slide01 &gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/up1/course_php_101&quot;&gt;https://github.com/up1/course_php_101&lt;/a&gt;
+&lt;a href=&quot;https://github.com/up1/course-robotframework/tree/master/slide&quot;&gt;https://github.com/up1/course-robotframework/tree/master/slide&lt;/a&gt;
+&lt;a href=&quot;https://github.com/up1/course-performance-testing/tree/master/slide&quot;&gt;https://github.com/up1/course-performance-testing/tree/master/slide&lt;/a&gt;
+&lt;a href=&quot;https://github.com/up1/workshop_android_automated_test/tree/master/slide&quot;&gt;https://github.com/up1/workshop_android_automated_test/tree/master/slide&lt;/a&gt;
+&lt;a href=&quot;https://github.com/up1/workshop_mongodb/tree/master/slide01&quot;&gt;https://github.com/up1/workshop_mongodb/tree/master/slide01&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;resources-by-suchart-msu&quot;&gt;Resources by Suchart@MSU&lt;/h3&gt;
 
-&lt;p&gt;&lt;https://isan.msu.ac.th/suchart/NetworkHowTo/NetworkHowTo.pdf &gt;
-&lt;https://isan.msu.ac.th/suchart/NetworkHowTo/Workshop/ &gt;
-&lt;https://isan.msu.ac.th/suchart/NetworkHowTo/LAB/ &gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://isan.msu.ac.th/suchart/NetworkHowTo/NetworkHowTo.pdf&quot;&gt;https://isan.msu.ac.th/suchart/NetworkHowTo/NetworkHowTo.pdf&lt;/a&gt;
+&lt;a href=&quot;https://isan.msu.ac.th/suchart/NetworkHowTo/Workshop/&quot;&gt;https://isan.msu.ac.th/suchart/NetworkHowTo/Workshop/&lt;/a&gt;
+&lt;a href=&quot;https://isan.msu.ac.th/suchart/NetworkHowTo/LAB/&quot;&gt;https://isan.msu.ac.th/suchart/NetworkHowTo/LAB/&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;code-school-slides&quot;&gt;&lt;a href=&quot;https://github.com/fishbecat/Code-School-Slides&quot;&gt;Code-School-Slides&lt;/a&gt;&lt;/h3&gt;
 
@@ -39,8 +81,8 @@
 
 &lt;h4 id=&quot;ux-talk-enterprise-ux&quot;&gt;UX TALK ENTERPRISE UX&lt;/h4&gt;
 
-&lt;p&gt;&amp;lt; &lt;a href=&quot;http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-%E0%B8%95%E0%B8%AD%E0%B8%99-E-Commerce-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%86&quot;&gt;http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-ตอน-E-Commerce-แบบไทยๆ&lt;/a&gt; &amp;gt;
-&amp;lt; &lt;a href=&quot;http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX&quot;&gt;http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX&lt;/a&gt; &amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-%E0%B8%95%E0%B8%AD%E0%B8%99-E-Commerce-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%86&quot;&gt;http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-ตอน-E-Commerce-แบบไทยๆ&lt;/a&gt;
+&lt;a href=&quot;http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX&quot;&gt;http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;introduction-to-mixpanel&quot;&gt;&lt;a href=&quot;http://www.coursesquare.co/course/courseInfo/Introduction-to-Mixpanel&quot;&gt;Introduction to Mixpanel&lt;/a&gt;&lt;/h4&gt;
 
@@ -801,46 +843,5 @@ allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
 </content>
 <category term="coding" />
 <summary>My mind to your mind. My thoughts to your thoughts... -- MrSpockAll I really need to know about pair programming I learned in kindergartenWhen it comes to programming practices,studies show two heads are almost always better than one.The pair can solve problems they couldn’t solve alone and can helpimprove each other’s skills.If you think about something long enough, the brain will consider it atruth.  If you tell yourself something negative, such as “I&amp;#39;m a terribleprogrammer,” soon your brain will believe you.</summary>
-</entry>
-<entry>
-<title>Functional Programming in Python</title>
-<link href="http://dev.im-bot.com//fp-python" rel="alternate" type="text/html" title="Functional Programming in Python" />
-<published>2015-10-04T00:00:00+00:00</published>
-<updated>2015-10-04T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//fp-in-python</id>
-<content type="html" xml:base="http://dev.im-bot.com//fp-python">&lt;p&gt;พอดีเพิ่งอ่าน &lt;a href=&quot;http://www.oreilly.com/programming/free/files/functional-programming-python.pdf&quot;&gt;Oreilly.com FP in python&lt;/a&gt; จบ แบบมึนๆ เนื่องจากยังไม่แน่นใน concept
-ของ FP เลยมาสรุปแปะไว้ก่อน เผื่อใครสนใจอ่าน&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ol&gt;
-&lt;li&gt;python แค่ยืม concept บางส่วนมาจาก FP&lt;/li&gt;
-&lt;li&gt;แนวคิดแบบ FP สามารถนำมาประยุกต์ใช้ให้โค๊ดดีขึ้น เช่น
-
-&lt;ul&gt;
-&lt;li&gt;list comprehensive / generator expression&lt;/li&gt;
-&lt;li&gt;map, reduce, filters (ใช้ list comprehensive จะดีกว่า)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;แนวคิด Pure Functions (no side effect) ของ FP ทำให้โค๊ด test และ debug
-ได้ง่ายขึ้น
-
-&lt;ul&gt;
-&lt;li&gt;ความรู้ที่ต้องการ&lt;/li&gt;
-&lt;li&gt;mathematic เนื่องจากแนวความคิดของ FP มาจาก math เข้าใจ math มีส่วนช่วยให้คิด/เข้าใจได้ง่ายขึ้น&lt;/li&gt;
-&lt;li&gt;Iterators&lt;/li&gt;
-&lt;li&gt;list comprehensive / generator expression&lt;/li&gt;
-&lt;li&gt;build-in function in python&lt;/li&gt;
-&lt;li&gt;python decorator&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;แนะนำให้ดูสไลนี้จะเข้าใจได้ง่ายกว่า
-&lt;a href=&quot;http://kachayev.github.io/talks/uapycon2012/#/&quot;&gt;http://kachayev.github.io/talks/uapycon2012/#/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;เรื่อง build-in functions ที่จำเป็นสามารถดูได้จาก
-&lt;a href=&quot;https://docs.python.org/3.5/howto/functional.html&quot;&gt;https://docs.python.org/3.5/howto/functional.html&lt;/a&gt;&lt;/p&gt;
-</content>
-<category term="python" />
-<summary>พอดีเพิ่งอ่าน Oreilly.com FP in python จบ แบบมึนๆ เนื่องจากยังไม่แน่นใน conceptของ FP เลยมาสรุปแปะไว้ก่อน เผื่อใครสนใจอ่าน</summary>
 </entry>
 </feed>

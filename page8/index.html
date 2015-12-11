@@ -181,6 +181,64 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/git">
+        Git
+      </a>
+    </h1>
+
+    <span class="post-date">29 Jul 2014</span>
+
+    
+      <h2 id="fatal-crlf-would-be-replaced-by-lf-in">fatal: CRLF would be replaced by LF in ...</h2>
+
+<p>Because there is differenced end of line in dos and unix.</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># open file that error in vim</span>
+:set noendofline binary
+:wq
+</code></pre></div>
+<h2 id="global-ignore">Global Ignore</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># set where is global gitignore file</span>
+<span class="nv">$ </span>git config --global core.excludesfile ~/.gitignore_global
+<span class="c"># write some ignore file in global gitignore</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;tags&quot;</span> &gt;&gt; ~/.gitignore_global
+</code></pre></div>
+<h2 id="git-stash">Git stash</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git stash
+git stash pop
+git revert
+</code></pre></div>
+<h2 id="git-alis">Git Alis</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git config --global alias.tree <span class="s2">&quot;log --graph --decorate --oneline --abbrev-commit&quot;</span>
+git config --global alias.hist <span class="s2">&quot;log --pretty=format:&#39;%h %ad | %s%d [%an]&#39; --graph --date=short&quot;</span>
+</code></pre></div>
+<h2 id="git-taggin"><a href="http://git-scm.com/book/en/v2/Git-Basics-Tagging">Git Taggin</a></h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git tag -a &lt;tag name&gt; &lt;commit id&gt; -m “desc<span class="err">&quot;</span>
+<span class="nv">$ </span>git push origin —tags
+<span class="nv">$ </span>git pull --tags
+</code></pre></div>
+<h2 id="keep-file-in-a-git-repo-but-don-39-t-track-changes"><a href="http://stackoverflow.com/questions/9794931/keep-file-in-a-git-repo-but-dont-track-changes">Keep file in a Git repo, but don&#39;t track changes</a></h2>
+
+<p>Should keep database.php.example and config.php.example in the repo.
+Then add config.php and database.php to the .gitignore file.</p>
+
+<h2 id="remove-sensitive-files-and-their-commits-from-git-history-github-answered-exactly-that-question-as-an-faq"><a href="http://stackoverflow.com/questions/872565/remove-sensitive-files-and-their-commits-from-git-history">Remove sensitive files and their commits from Git history</a> - <a href="https://help.github.com/articles/remove-sensitive-data">GitHub answered exactly that question as an FAQ</a></h2>
+
+<h2 id="reference">Reference</h2>
+
+<ol>
+<li><a href="http://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf">git replacing LF with CRLF</a></li>
+<li><a href="https://help.github.com/articles/generating-ssh-keys">Generating SSH Keys</a></li>
+<li><a href="https://adamcod.es/2012/07/03/anatomy-of-a-good-commit-message.html">Anatomy Of A Good Commit Message</a></li>
+<li><a href="https://adamcod.es/2014/12/10/git-pull-correct-workflow.html">Stop using <code>git pull</code>: A better workflow</a></li>
+<li><a href="https://gitignore.io/">gitignore.io - Create Useful .gitignore Files For Your Project</a></li>
+<li><a href="http://devahoy.com/2015/08/introduction-to-git-and-github/">Git คืออะไร ? + พร้อมสอนใช้งาน Git และ Github</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/smtp">
         Smtp with gmail
       </a>
@@ -379,34 +437,6 @@ observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.gi
 <li><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a><br></li>
 <li><a href="http://ginstrom.com/scribbles/2012/05/10/continuous-integration-in-python-using-watchdog/">Continuous integration in python using watchdog</a></li>
 </ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/ci">
-        Continuos Integrations
-      </a>
-    </h1>
-
-    <span class="post-date">19 Jul 2014</span>
-
-    
-      <p>Continuous Integrations doesn&#39;t get rid of bugs, but it does make them dramatically easier to find and remove. - <a href="http://martinfowler.com/articles/continuousIntegration.html">Continuous Integration by Martin Fowler</a></p>
-
-<h3 id="own-sever-services">Own Sever Services</h3>
-
-<ul>
-<li><a href="/jenkins">Jeknins CI</a> - Popular Open Source CI</li>
-</ul>
-
-<h3 id="online-services">Online Services</h3>
-
-<ul>
-<li><a href="/travis-ci">Travis CI</a> - Recommend</li>
-<li><a href="/drone-ci">Drone.io CI</a> - Easier than Travis, has few features</li>
-</ul>
 
     
   </div>
