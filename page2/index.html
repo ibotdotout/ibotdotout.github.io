@@ -181,6 +181,42 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/text-processing">
+        Text Processing in Shell
+      </a>
+    </h1>
+
+    <span class="post-date">17 Oct 2015</span>
+
+    
+      <blockquote>
+<p>Most of example come from problem in <a href="https://www.hackerrank.com/domains/shell/bash">Linux Shell - Hackerrank</a>
+<a href="http://tldp.org/LDP/abs/html/textproc.html">Text Processing Commands</a></p>
+</blockquote>
+
+<h2 id="sed">Sed</h2>
+
+<blockquote>
+<p>Trip:<br>
+<code>sed</code> in OSX may not working as example. You should try <code>gsed</code>.<br>
+<code>gsed</code> can install via brew and call <code>gsed</code> instead of <code>sed</code>  </p>
+</blockquote>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>cat in
+<span class="m">1234</span> <span class="m">5678</span> <span class="m">9101</span> <span class="m">1234</span>  
+<span class="m">2999</span> <span class="m">5178</span> <span class="m">9101</span> <span class="m">2234</span>  
+<span class="nv">$ </span>sed -re <span class="s1">&#39;s/([0-9]{4}\s){3}/**** **** **** /&#39;</span> in
+**** **** **** <span class="m">1234</span>  
+**** **** **** <span class="m">2234</span>  
+</code></pre></div>
+
+      <div style="text-align:right;">
+        <a href="/text-processing" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/opengraph">
         Sharing with Open Graph
       </a>
@@ -205,23 +241,6 @@
 
       <div style="text-align:right;">
         <a href="/opengraph" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/learning">
-        Learning Resources
-      </a>
-    </h1>
-
-    <span class="post-date">12 Oct 2015</span>
-
-    
-      
-      <div style="text-align:right;">
-        <a href="/learning" style="color:#000;"> Read More </a>
       </div>
     
   </div>
