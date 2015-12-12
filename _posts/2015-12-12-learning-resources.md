@@ -9,18 +9,17 @@ permalink: learning
 <!-- more -->
 
 ### Resources by Up1 <http://www.somkiat.cc>
-<https://github.com/up1/course_php_101>
-<https://github.com/up1/course-robotframework/tree/master/slide>
-<https://github.com/up1/course-performance-testing/tree/master/slide>
-<https://github.com/up1/workshop_android_automated_test/tree/master/slide>
-<https://github.com/up1/workshop_mongodb/tree/master/slide01>
+- <https://github.com/up1/course_php_101>
+- <https://github.com/up1/course-robotframework/tree/master/slide>
+- <https://github.com/up1/course-performance-testing/tree/master/slide>
+- <https://github.com/up1/workshop_android_automated_test/tree/master/slide>
+- <https://github.com/up1/workshop_mongodb/tree/master/slide01>
 
 ### Resources by Suchart@MSU
 
-<https://isan.msu.ac.th/suchart/NetworkHowTo/NetworkHowTo.pdf>
-<https://isan.msu.ac.th/suchart/NetworkHowTo/Workshop/>
-<https://isan.msu.ac.th/suchart/NetworkHowTo/LAB/>
-
+- <https://isan.msu.ac.th/suchart/NetworkHowTo/NetworkHowTo.pdf>
+- <https://isan.msu.ac.th/suchart/NetworkHowTo/Workshop/>
+- <https://isan.msu.ac.th/suchart/NetworkHowTo/LAB/>
 
 ### [Code-School-Slides](https://github.com/fishbecat/Code-School-Slides)
 
@@ -28,8 +27,8 @@ permalink: learning
 
 ### Resources by <http://www.coursesquare.co/>
 #### UX TALK ENTERPRISE UX
-<http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-ตอน-E-Commerce-แบบไทยๆ>
-<http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX>
+- <http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-ตอน-E-Commerce-แบบไทยๆ>
+- <http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX>
 
 #### [Introduction to Mixpanel](http://www.coursesquare.co/course/courseInfo/Introduction-to-Mixpanel)
 
