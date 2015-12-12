@@ -3,15 +3,15 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-12-12T05:54:37+00:00</updated>
+<updated>2015-12-12T06:06:54+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
 <name>botbotbot</name>
 </author>
 <entry>
-<title>Ruby on Rails</title>
-<link href="http://dev.im-bot.com//ror" rel="alternate" type="text/html" title="Ruby on Rails" />
+<title>All About Ruby and Ruby on Rails</title>
+<link href="http://dev.im-bot.com//ror" rel="alternate" type="text/html" title="All About Ruby and Ruby on Rails" />
 <published>2015-12-12T00:00:00+00:00</published>
 <updated>2015-12-12T00:00:00+00:00</updated>
 <id>http://dev.im-bot.com//ror</id>
@@ -21,6 +21,7 @@
 &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2569501/what-ruby-and-rails-developers-ought-to-know&quot;&gt;What Ruby and Rails Developers Ought To Know?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/styleguide/ruby&quot;&gt;Styleguide Ruby&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/bbatsov/ruby-style-guide&quot;&gt;ruby-style-guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/&quot;&gt;What Is the Difference Between a Block, a Proc, and a Lambda in Ruby?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;!-- more --&gt;
@@ -41,15 +42,36 @@
 &lt;li&gt;&lt;a href=&quot;https://gist.github.com/ryansobol/5252653&quot;&gt;15 Questions to Ask During a Ruby Interview&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h3 id=&quot;setup&quot;&gt;Setup&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gorails.com/setup/osx/10.11-el-capitan&quot;&gt;Setup Ruby On Rails on Mac OS X 10.11 El Capitan&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&quot;docker&quot;&gt;Docker&lt;/h3&gt;
 
-&lt;p&gt;Bundle install fast on docker
-- &lt;a href=&quot;http://bradgessler.com/articles/docker-bundler/&quot;&gt;http://bradgessler.com/articles/docker-bundler/&lt;/a&gt;
-- &lt;a href=&quot;https://medium.com/@fbzga/how-to-cache-bundle-install-with-docker-7bed453a5800&quot;&gt;https://medium.com/@fbzga/how-to-cache-bundle-install-with-docker-7bed453a5800&lt;/a&gt;
-- &lt;a href=&quot;http://blog.carbonfive.com/2015/03/17/docker-rails-docker-compose-together-in-your-development-workflow/&quot;&gt;http://blog.carbonfive.com/2015/03/17/docker-rails-docker-compose-together-in-your-development-workflow/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bundle install fast on docker&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://bradgessler.com/articles/docker-bundler/&quot;&gt;http://bradgessler.com/articles/docker-bundler/&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@fbzga/how-to-cache-bundle-install-with-docker-7bed453a5800&quot;&gt;https://medium.com/@fbzga/how-to-cache-bundle-install-with-docker-7bed453a5800&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.carbonfive.com/2015/03/17/docker-rails-docker-compose-together-in-your-development-workflow/&quot;&gt;http://blog.carbonfive.com/2015/03/17/docker-rails-docker-compose-together-in-your-development-workflow/&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.docker.com/compose/rails/&quot;&gt;https://docs.docker.com/compose/rails/&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.tutum.co/2015/07/07/standing-up-ruby-on-rails-with-docker-and-tutum/&quot;&gt;http://blog.tutum.co/2015/07/07/standing-up-ruby-on-rails-with-docker-and-tutum/&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;learn&quot;&gt;Learn&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sitepoint.com/the-pathway-for-new-rubyists/&quot;&gt;http://www.sitepoint.com/the-pathway-for-new-rubyists/&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sitepoint.com/guide-ruby-collections-part-arrays/&quot;&gt;http://www.sitepoint.com/guide-ruby-collections-part-arrays/&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sitepoint.com/guide-ruby-collections-ii-hashes-sets-ranges/&quot;&gt;http://www.sitepoint.com/guide-ruby-collections-ii-hashes-sets-ranges/&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://rubymonk.com&quot;&gt;https://rubymonk.com&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://rubykoans.com&quot;&gt;http://rubykoans.com&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
 <category term="ror" />
-<summary>TipsWhat Ruby and Rails Developers Ought To Know?Styleguide Rubyruby-style-guide</summary>
+<summary>TipsWhat Ruby and Rails Developers Ought To Know?Styleguide Rubyruby-style-guideWhat Is the Difference Between a Block, a Proc, and a Lambda in Ruby?</summary>
 </entry>
 <entry>
 <title>Learning Resources</title>
