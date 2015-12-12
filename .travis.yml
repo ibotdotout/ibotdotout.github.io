@@ -7,7 +7,7 @@ rvm:
 
 branches:
   only:
-  - develop
+  - jekyll
 
 script:
 - bundle exec jekyll build
