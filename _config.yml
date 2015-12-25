@@ -17,6 +17,11 @@ logo:             /public/opengraph_logo.png
 paginate:         5
 baseurl: /
 
+date_format: '%B %d, %Y'
+
+disqus_shortname: 'im-bot'
+comment: true
+
 excerpt_separator: <!-- more -->
 
 author:

@@ -12,7 +12,17 @@ title: botbotbot's blog
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-date">
+      {{ post.date | date_to_string }}
+      {% if site.disqus_shortname %}
+        &middot;
+        <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>
+        {% if post.update_date %}
+          &middot;
+          Updated {{ post.update_date | date: site.date_format }}
+        {% endif %}
+      {% endif %}
+    </span>
 
     {% if post.content contains  site.excerpt_separator %}
       {{ post.content | split:site.excerpt_separator | first % }}
