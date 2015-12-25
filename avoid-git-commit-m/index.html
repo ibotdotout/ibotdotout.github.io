@@ -8,18 +8,18 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Mock" />
+  <meta property="og:title" content="Avoid git commit -m" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/mock/" />
+<meta property="og:url" content="http://dev.im-bot.com/avoid-git-commit-m/" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="Mock - Mocking and Testing LibraryIf you mock some thing, it can&#39;t be runnable. Don&#39;t forget it just mock object.  Mock Method that can be runnable# ..." />
+<meta property="og:description" content="Most of Git tutorial even Try Git guide youabout git commit with this$ git commit -m &quot;hello world&quot;That&#39;s OK.But It better to use any option wit..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Mock &middot; botbotbot
+      Avoid git commit -m &middot; botbotbot
     
   </title>
 
@@ -178,57 +178,56 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Mock</h1>
-  <span class="post-date">24 Jul 2014</span>
-  <h2 id="mock-mocking-and-testing-library"><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></h2>
-
-<p>If you mock some thing, it can&#39;t be runnable. Don&#39;t forget it just mock object.  </p>
-
-<h3 id="mock-method-that-can-be-runnable">Mock Method that can be runnable</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># side_effect will make mock method can be runable  </span>
-<span class="c"># this can be use to reutrn_value in different arguments</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>  
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>  
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="mi">2</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="mi">3</span>
+  <h1 class="post-title">Avoid git commit -m</h1>
+  <span class="post-date">25 Dec 2015</span>
+  <p>Most of Git tutorial even <a href="http://try.github.io">Try Git</a> guide you
+about git commit with this</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git commit -m <span class="s2">&quot;hello world&quot;</span>
 </code></pre></div>
-<h3 id="patch-module-attribute">Patch Module Attribute</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Using PropertyMock with return_value argument  </span>
+<p>That&#39;s OK.
+But It better to use any option without -m.</p>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">&#39;package.module.attribute&#39;</span><span class="p">,</span>  
-                     <span class="n">new_callable</span><span class="o">=</span><span class="n">mock</span><span class="o">.</span><span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
-                     <span class="k">as</span> <span class="n">mock_attribute</span><span class="p">:</span>  
-<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">mock_attribte</span><span class="p">)</span>  
-<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span>  
-<span class="mi">3</span>  
-<span class="mi">3</span>  
+<!-- more -->
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git commit
+<span class="nv">$ </span>git commit -a
+<span class="nv">$ </span>git commit --amend
 </code></pre></div>
-<h3 id="my_mock-mock_calls">my_mock.mock_calls</h3>
+<p>Without -m, Git will popup your editor to write the commit message like
+this</p>
 
-<h3 id="reference">Reference:</h3>
+<p><img src="/public/img/git-commit-vim.png" alt="git-commit-vim"></p>
 
-<ol>
-<li><a href="http://www.voidspace.org.uk/python/mock/mock.html">The Mock Class</a></li>
-<li><a href="http://melp.nl/2011/02/enhancing-python-unit-tests-with-more-decorators/">enhancing-python-unit-tests-with-more-decorators</a></li>
-<li><a href="http://stackoverflow.com/questions/5929107/python-decorators-with-parameters">python-decorators-with-parameters</a></li>
-</ol>
+<p>It&#39;s more powerful than -m option that limit your commit message to
+one line, without -m you can write commit message with many line.</p>
+
+<p>It also let your know when the first line exceed 50 characters that
+is best practice to write commit message.</p>
+
+<p>It provide a list of files that will be and not be in the commit that
+give your a chance to revise.</p>
+
+<p>If you are Vim fanboy, you should look at
+<a href="https://github.com/tpope/vim-fugitive">fugitive.vim</a>
+the best Git wrapper that make Vim more powerful with Git,
+your can watch screencast with fugitive.vim in <a href="http://vimcasts.org/blog/2011/05/the-fugitive-series/">The Fugitive Series - a
+retrospective</a>.</p>
+
+<h3 id="references">References:</h3>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits">How do I make git use the editor of my choice for commits?</a></li>
+<li><a href="http://thaiprogrammer.org/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99-git-commit-message/">การเขียน Git Commit Message</a></li>
+<li><a href="https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message">5 Useful Tips For A Better Commit Message</a></li>
+<li><a href="http://www.freshconsulting.com/atomic-commits/">Developer Tip: Keep Your Commits “Atomic”</a></li>
+<li><a href="http://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></li>
+<li><a href="https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template">Better Commit Messages with a .gitmessage Template</a></li>
+</ul>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/avoid-git-commit-m">
-            Avoid git commit -m
-            <small>25 Dec 2015</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -244,6 +243,15 @@
           <a href="/learning">
             Learning Resources
             <small>12 Dec 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/jekyll-travis-github">
+            Jekyll build with Travis and deploy to Github Page
+            <small>26 Oct 2015</small>
           </a>
         </h3>
       </li>

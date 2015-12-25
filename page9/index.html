@@ -181,6 +181,112 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/watchdog">
+        Watchdog
+      </a>
+    </h1>
+
+    <span class="post-date">20 Jul 2014</span>
+
+    
+      <h3 id="watchdog"><a href="https://github.com/gorakhargosh/watchdog">Watchdog</a></h3>
+
+<p>Python API and shell utilities to monitor file system events.</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">pip install watchdog
+</code></pre></div>
+<h3 id="watching-python-file-changes">Watching python file changes</h3>
+
+<p><noscript><pre>#!/usr/bin/env python
+import os
+import sys
+import time
+from watchdog.observers import Observer
+from watchdog.events import PatternMatchingEventHandler</p>
+
+<p>def when_file_changed(filename):
+    &quot;&quot;&quot;
+        Unittest Monitoring with coverage filtering
+        file - ./&lt;projectname&gt;/&lt;package&gt;/&lt;file&gt;.py
+            ex. ./meow_meow/core/api.py
+        testfile - ./tests/unit/&lt;package&gt;/test_&lt;file&gt;.py
+            ex. ./tests/unit/core/test_api.py
+    &quot;&quot;&quot;
+    def projectname():
+        &quot;&quot;&quot;
+            Projectname from name of current directory (&#39;.&#39;)
+            if there are dash &#39;-&#39; in its name replace to underscore &#39;<em>&#39;
+        &quot;&quot;&quot;
+        return os.path.abspath(&quot;.&quot;).rsplit(&quot;/&quot;, 1)[1].replace(&quot;-&quot;, &quot;</em>&quot;)</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">def package(filename):
+    basename = os.path.basename(filename)
+    if not basename.startswith(&amp;quot;test_&amp;quot;):
+        package = filename.replace(&amp;quot;./&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
+    else:
+        package = filename.replace(&amp;quot;./tests/unit&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
+        package = projectname() + package.replace(&amp;quot;/test_&amp;quot;, &amp;quot;/&amp;quot;)
+    package = package.replace(&amp;quot;/&amp;quot;, &amp;quot;.&amp;quot;)
+    return package
+
+def test_file(filename):
+    basename = os.path.basename(filename)
+    if not basename.startswith(&amp;quot;test_&amp;quot;):
+        filename = filename.replace(projectname(), &amp;quot;tests/unit&amp;quot;)
+        filename = filename.replace(basename, &amp;quot;test_&amp;quot; + basename)
+    return filename
+
+cls()
+print(os.path.abspath(filename))
+args = {&amp;quot;package&amp;quot;: package(filename), &amp;quot;testfile&amp;quot;: test_file(filename)}
+cmd = &amp;quot;nosetests --with-coverage --cover-erase --cover-package={package}&amp;quot; \
+      &amp;quot; -v {testfile}&amp;quot;.format(**args)
+os.system(cmd)
+</code></pre></div>
+<p>def cls():
+    os.system(&#39;cls&#39; if os.name == &#39;nt&#39; else &#39;clear&#39;)</p>
+
+<p>class ModifiedHandler(PatternMatchingEventHandler):
+    patterns = [&quot;*.py&quot;]  # Monitor only matched patterns</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">def on_created(self, event):
+    &amp;quot;&amp;quot;&amp;quot;&amp;quot; For Vim :w - not modify that deleted and created file instead. &amp;quot;&amp;quot;&amp;quot;
+    when_file_changed(event.src_path)
+
+def on_modified(self, event):
+    &amp;quot;&amp;quot;&amp;quot; For other text-editor ex.sublime &amp;quot;&amp;quot;&amp;quot;
+    when_file_changed(event.src_path)
+</code></pre></div>
+<p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:
+    args = sys.argv[1:]
+    event_handler = ModifiedHandler()
+    observer = Observer()
+    observer.schedule(event_handler,
+                      path=args[1] if args else &#39;.&#39;, recursive=True)
+    observer.start()</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">try:
+    while True:
+        time.sleep(1)
+except KeyboardInterrupt:
+    observer.stop()
+observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/ibotdotout/8f42fbc0ee122f89e728.js&quot;&gt; &lt;/script&gt;
+</code></pre></div>
+<h3 id="watchdog-over-docker-vm-via-polling">Watchdog over Docker (VM) via polling -</h3>
+
+<p><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Ref</a></p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">watchdog.observers.polling</span> <span class="kn">import</span> <span class="n">PollingObserver</span> <span class="k">as</span> <span class="n">Observer</span>
+<span class="n">Observer</span><span class="p">()</span> <span class="c">#polling every 1 second</span>
+</code></pre></div>
+<h3 id="references">References:</h3>
+
+<ol>
+<li><a href="https://pythonhosted.org/watchdog/api.html#event-handler-classes">Event Handler Classes</a></li>
+<li><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a><br></li>
+<li><a href="http://ginstrom.com/scribbles/2012/05/10/continuous-integration-in-python-using-watchdog/">Continuous integration in python using watchdog</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/ci">
         Continuos Integrations
       </a>
@@ -700,58 +806,6 @@ last -x<span class="p">|</span>grep shutdown <span class="p">|</span> head -1
 <p>I got my lost partition back but can&#39;t access it. So I use &#39;chkdsk /r&#39; command on Windows to repair damaged partition. Finally after 12 hours, I can got lost partition back and accessible it normally.</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">  chkdsk /r &lt;drive&gt;
 </code></pre></div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/osx-write-ntfs">
-        Enable NTFS write on OSX
-      </a>
-    </h1>
-
-    <span class="post-date">17 Jun 2014</span>
-
-    
-      <h2 id="automatical-way">Automatical Way</h2>
-<div class="highlight"><pre><code class="language-text" data-lang="text">  http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
-</code></pre></div>
-<h2 id="manual-way">Manual Way</h2>
-
-<ol>
-<li>get UUID form this command<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  diskutil info /Volumes/&lt;drivename&gt; <span class="p">|</span>  grep UUID
-</code></pre></div>
-<ol>
-<li>edit /etc/fstab<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  sudo vim /etc/fstab
-</code></pre></div>
-<ol>
-<li>add this with edit <code>&lt;uuid_drive&gt;</code></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">UUID</span><span class="o">=</span>&lt;uuid_drive&gt; none ntfs rw,auto,nobrowse
-</code></pre></div>
-<ol>
-<li>reject and plug it agian<br></li>
-<li>open hdd with this command<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  open /Volumes
-</code></pre></div>
-<ol>
-<li>If want to remove writable NTFS drive </li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  sudo rm /etc/fstab
-</code></pre></div>
-<h3 id="reference">Reference:</h3>
-
-<ol>
-<li><a href="http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/">http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/</a></li>
-<li><a href="http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/">http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/</a></li>
-<li><a href="http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/">วิธีทำให้ Mac อ่านและเขียนไฟล์ NTFS บน Windows ได้</a></li>
-</ol>
-
     
   </div>
   

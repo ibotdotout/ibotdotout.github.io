@@ -3,12 +3,64 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-12-12T09:19:50+00:00</updated>
+<updated>2015-12-25T06:21:50+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
 <name>botbotbot</name>
 </author>
+<entry>
+<title>Avoid git commit -m</title>
+<link href="http://dev.im-bot.com//avoid-git-commit-m" rel="alternate" type="text/html" title="Avoid git commit -m" />
+<published>2015-12-25T00:00:00+00:00</published>
+<updated>2015-12-25T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//aviod-git-commit-m</id>
+<content type="html" xml:base="http://dev.im-bot.com//avoid-git-commit-m">&lt;p&gt;Most of Git tutorial even &lt;a href=&quot;http://try.github.io&quot;&gt;Try Git&lt;/a&gt; guide you
+about git commit with this&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;hello world&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That&amp;#39;s OK.
+But It better to use any option without -m.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -a
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit --amend
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Without -m, Git will popup your editor to write the commit message like
+this&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;%7B%7Burl%7D%7D/public/img/git-commit-vim.png&quot; alt=&quot;git-commit-vim&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s more powerful than -m option that limit your commit message to
+one line, without -m you can write commit message with many line.&lt;/p&gt;
+
+&lt;p&gt;It also let your know when the first line exceed 50 characters that
+is best practice to write commit message.&lt;/p&gt;
+
+&lt;p&gt;It provide a list of files that will be and not be in the commit that
+give your a chance to revise.&lt;/p&gt;
+
+&lt;p&gt;If you are Vim fanboy, you should look at
+&lt;a href=&quot;https://github.com/tpope/vim-fugitive&quot;&gt;fugitive.vim&lt;/a&gt;
+the best Git wrapper that make Vim more powerful with Git,
+your can watch screencast with fugitive.vim in &lt;a href=&quot;http://vimcasts.org/blog/2011/05/the-fugitive-series/&quot;&gt;The Fugitive Series - a
+retrospective&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits&quot;&gt;How do I make git use the editor of my choice for commits?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://thaiprogrammer.org/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99-git-commit-message/&quot;&gt;การเขียน Git Commit Message&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message&quot;&gt;5 Useful Tips For A Better Commit Message&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.freshconsulting.com/atomic-commits/&quot;&gt;Developer Tip: Keep Your Commits “Atomic”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://chris.beams.io/posts/git-commit/&quot;&gt;How to Write a Git Commit Message&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template&quot;&gt;Better Commit Messages with a .gitmessage Template&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+<category term="git" />
+<summary>Most of Git tutorial even Try Git guide youabout git commit with this$ git commit -m &amp;quot;hello world&amp;quot;That&amp;#39;s OK.But It better to use any option without -m.</summary>
+</entry>
 <entry>
 <title>All About Ruby and Ruby on Rails</title>
 <link href="http://dev.im-bot.com//ror" rel="alternate" type="text/html" title="All About Ruby and Ruby on Rails" />
@@ -797,79 +849,5 @@ thumbnail: /public/thumbnail_for_your_post.png
 </content>
 <category term="markdown" />
 <summary>Remark.js - easy and simple slide - ExampleGetting startedTwo-column formattingExport to PDFKeynote to Remark.js1. Open a Keynote presentation2. Run the script.3. Select output destination4. Got rough remark.js slideOther Markdown slidereveal.js - more powerful - ExampleCleaver - Example</summary>
-</entry>
-<entry>
-<title>Pair Programming</title>
-<link href="http://dev.im-bot.com//pair-programming" rel="alternate" type="text/html" title="Pair Programming" />
-<published>2015-10-04T00:00:00+00:00</published>
-<updated>2015-10-04T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//pair-programming</id>
-<content type="html" xml:base="http://dev.im-bot.com//pair-programming">&lt;blockquote&gt;
-&lt;p&gt;My mind to your mind. My thoughts to your thoughts... -- MrSpock&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;all-i-really-need-to-know-about-pair-programming-i-learned-in-kindergarten&quot;&gt;&lt;a href=&quot;http://www.cs.rice.edu/%7Emgricken/teaching/402/09-spring/readings/Everything.pdf&quot;&gt;All I really need to know about pair programming I learned in kindergarten&lt;/a&gt;&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;When it comes to programming practices,
-studies show two heads are almost always better than one.&lt;/p&gt;
-
-&lt;p&gt;The pair can solve problems they couldn’t solve alone and can help
-improve each other’s skills.&lt;/p&gt;
-
-&lt;p&gt;If you think about something long enough, the brain will consider it a
-truth.  If you tell yourself something negative, such as “I&amp;#39;m a terrible
-programmer,” soon your brain will believe you.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;power-of-pair-programming&quot;&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=l8W6T5Opfcw&quot;&gt;Power of Pair Programming&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;เพิ่งได้ดู Power of Pair Programming จากงาน &lt;a href=&quot;https://www.facebook.com/AGTH66&quot;&gt;Agile Thailand&lt;/a&gt; น่าจะของปี 2012
-&lt;a href=&quot;https://www.facebook.com/roofimon.class&quot;&gt;พี่รูฟ Twin Panichsombat&lt;/a&gt; ได้พูดถึงประสบการ์การนำ pair programming เข้าไปใช้ใน
-&lt;a href=&quot;https://www.facebook.com/opendream&quot;&gt;Opendream&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
-src=&quot;https://www.youtube.com/embed/l8W6T5Opfcw&quot; frameborder=&quot;0&quot;
-allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;โดยส่วนตัวสรุปคร่าวๆ ได้ดังนี้&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;การ pair ทำให้การเขียนโปรแกรมสนุกยิ่งขึ้น แต่ไม่ใช่ทุกคนที่จะแฮปปี้กับมัน&lt;/li&gt;
-&lt;li&gt;เพิ่มการสื่อสารภายในองคร์ pair เป็นการสื่อสารความคิด ความเข้าใจ
-หากแค่นั่งด้วยกันแล้วคอยบอกให้ทำอะไร นั้นไม่ใช่การ pair&lt;/li&gt;
-&lt;li&gt;pair ทำให้การทำงานช้าลงประมาณ 10 % แต่คุณภาพเพิ่มขึ้น 10-20 %
-เนื่องจากมีการ review code ไปในตัว ลดการเกิด bug ได้ระดับนึง&lt;/li&gt;
-&lt;li&gt;มีการกระจาย knowledge ภายในองกรค์ ไม่ขึ้นอยู่กับคนใด คนหนึ่งมากเกินไป&lt;/li&gt;
-&lt;li&gt;ทำให้โปรแกรมเมอร์โฟกัสได้ดีขึ้น เพราะ ไม่สามารถเล่นเฟส ไลท์ บลาๆ ระหว่าง pair ได้&lt;/li&gt;
-&lt;li&gt;อาจจะมีการหมุนเวียนการ pair เพื่อกระจาย knowledge และ ลดการเตี้ยมกันเพื่อเล่นเฟส บลาๆ&lt;/li&gt;
-&lt;li&gt;ทำให้ junior สามารถอัพสกิลได้เร็วขึ้นมาก โดยมี senior คอยดูแล&lt;/li&gt;
-&lt;li&gt;junior pair junior อาจจะทำให้งานช้ากว่าเดิมได้ (หลงป่า ออกทะเล)
-และอาจจะต้องมี senior มา review code ซํ้าอีกครั้งหนึ่ง ซึ่งทำให้เปลืองเวลาของ senior
-มากกว่า การ pair กับ senior ไปเลย&lt;/li&gt;
-&lt;li&gt;การทำ pair ทั้งวัน อาจจะทำให้เครียดมากกว่าเดิมได้ เนื่องจากโฟกัสที่งานตลอดเวลา
-มักนำเทคนิค &lt;a href=&quot;%7B%7Burl%7D%7D/pomodoro&quot;&gt;Pomodoro&lt;/a&gt; มาประยุกต์ใช้ เช่นทำ 45 นาที พัก 15 นาที&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ป.ล. การ pair ภายในคลิปจะใช้การ pair แบบ navigator driver โดยที่ senior คุมเมาส์ junior คุมคีย์บอร์ด
-โดยมี senior เป็น navigator คอยบอกว่าจะทำอะไร ตรงไหน junior เป็นคน
-เขียนโค๊ด แต่ที่เราทำๆ กันมาจะเป็นแบบ ping pong สลับกันเขียนเทส และ โค๊ด
-ไปคนละเทสเคสแทน&lt;/p&gt;
-
-&lt;h2 id=&quot;pairing-styles&quot;&gt;Pairing Styles&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://articles.coreyhaines.com/posts/thoughts-on-pair-programming/#driver-navigator&quot;&gt;driver-navigator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://articles.coreyhaines.com/posts/thoughts-on-pair-programming/#ping-pong-pairing&quot;&gt;ping-pong-pairing&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;%7B%7Burl%7D%7D/coding#pair-programming&quot;&gt;Read more about pair programming&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="coding" />
-<summary>My mind to your mind. My thoughts to your thoughts... -- MrSpockAll I really need to know about pair programming I learned in kindergartenWhen it comes to programming practices,studies show two heads are almost always better than one.The pair can solve problems they couldn’t solve alone and can helpimprove each other’s skills.If you think about something long enough, the brain will consider it atruth.  If you tell yourself something negative, such as “I&amp;#39;m a terribleprogrammer,” soon your brain will believe you.</summary>
 </entry>
 </feed>

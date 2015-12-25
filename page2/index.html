@@ -181,6 +181,33 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/osx-convert-encoding">
+        Convert File Encoding in OSX
+      </a>
+    </h1>
+
+    <span class="post-date">19 Oct 2015</span>
+
+    
+      <p>Sometime, you download file from Internet specially file that in local language
+which not encode with UTF-8 that unreadable on OSX. Your should guess
+what encode that file using and convert it in to UTF-8.</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># convert tis-620 to utf-8 encoding</span>
+<span class="nv">$iconv</span> -f tis-620 -t utf-8 source.xml &gt; destination.xml
+</code></pre></div>
+<p>Example. Thai language on Windows system normally encode with TIS-620 when
+open it in OSX that will display with some symbol char that unreadable.
+You should convert that file from tis-620 to utf-8 which make it readable on osx.</p>
+
+
+      <div style="text-align:right;">
+        <a href="/osx-convert-encoding" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/read-more-jekyll">
         Read more feature on jekyll
       </a>
@@ -319,41 +346,6 @@ terrible and Github Pages not support custom ruby script that place in
 
       <div style="text-align:right;">
         <a href="/slide" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/pair-programming">
-        Pair Programming
-      </a>
-    </h1>
-
-    <span class="post-date">04 Oct 2015</span>
-
-    
-      <blockquote>
-<p>My mind to your mind. My thoughts to your thoughts... -- MrSpock</p>
-</blockquote>
-
-<h2 id="all-i-really-need-to-know-about-pair-programming-i-learned-in-kindergarten"><a href="http://www.cs.rice.edu/%7Emgricken/teaching/402/09-spring/readings/Everything.pdf">All I really need to know about pair programming I learned in kindergarten</a></h2>
-
-<blockquote>
-<p>When it comes to programming practices,
-studies show two heads are almost always better than one.</p>
-
-<p>The pair can solve problems they couldn’t solve alone and can help
-improve each other’s skills.</p>
-
-<p>If you think about something long enough, the brain will consider it a
-truth.  If you tell yourself something negative, such as “I&#39;m a terrible
-programmer,” soon your brain will believe you.</p>
-</blockquote>
-
-
-      <div style="text-align:right;">
-        <a href="/pair-programming" style="color:#000;"> Read More </a>
       </div>
     
   </div>
