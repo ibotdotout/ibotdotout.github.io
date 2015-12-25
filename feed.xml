@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2015-12-25T06:21:50+00:00</updated>
+<updated>2015-12-25T06:32:08+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -38,7 +38,7 @@ one line, without -m you can write commit message with many line.&lt;/p&gt;
 &lt;p&gt;It also let your know when the first line exceed 50 characters that
 is best practice to write commit message.&lt;/p&gt;
 
-&lt;p&gt;It provide a list of files that will be and not be in the commit that
+&lt;p&gt;It provide a list of files which involve in the commit that
 give your a chance to revise.&lt;/p&gt;
 
 &lt;p&gt;If you are Vim fanboy, you should look at
@@ -47,15 +47,20 @@ the best Git wrapper that make Vim more powerful with Git,
 your can watch screencast with fugitive.vim in &lt;a href=&quot;http://vimcasts.org/blog/2011/05/the-fugitive-series/&quot;&gt;The Fugitive Series - a
 retrospective&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+&lt;h3 id=&quot;how-to-write-better-commit-message&quot;&gt;How to write better commit message:&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits&quot;&gt;How do I make git use the editor of my choice for commits?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://thaiprogrammer.org/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99-git-commit-message/&quot;&gt;การเขียน Git Commit Message&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message&quot;&gt;5 Useful Tips For A Better Commit Message&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.freshconsulting.com/atomic-commits/&quot;&gt;Developer Tip: Keep Your Commits “Atomic”&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://chris.beams.io/posts/git-commit/&quot;&gt;How to Write a Git Commit Message&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template&quot;&gt;Better Commit Messages with a .gitmessage Template&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;set-your-git-editor&quot;&gt;Set your git editor&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/2596835&quot;&gt;How do I make git use the editor of my choice for commits?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
 <category term="git" />
