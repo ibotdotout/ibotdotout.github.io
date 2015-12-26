@@ -14,37 +14,40 @@ Page](http://page.github.com) that free hosting support Jekyll.This blog use [La
   1. Follow setup guilde of [Github page](https://pages.github.com)
   for more information about jekyll on github look at  
 
-  ```
-  http://help.github.com/articles/using-jekyll-with-pages
-  ```
+    ```
+    http://help.github.com/articles/using-jekyll-with-pages
+    ```
   2. Clone project from [Lanyon](http://lanyon.getpoole.com)  
 
-  ```
-    git clone https://github.com/poole/lanyon.git
-  ```  
+    ```
+      git clone https://github.com/poole/lanyon.git
+    ```  
+
   3. Configs jekyll in  `_config.yml`   
 
-  ```yaml
-    #setup
-    title:            botbotbot  
-    tagline:          "'s blog"  
-    description:      "botbotbot's blog"  
-    url:              http://ibotdotout.github.io  
-    paginate:         5  
-  ```
+    ```yaml
+      #setup
+      title:            botbotbot  
+      tagline:          "'s blog"  
+      description:      "botbotbot's blog"  
+      url:              http://ibotdotout.github.io  
+      paginate:         5  
+    ```
+
   4. Make tags.md in root directory copy code from
 
-  ```
-  https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html
-  ```
+    ```
+    https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html
+    ```
+
   5. Let blog it.
 
 
 ### Add Feed in Jekyll
-1. [Jekyll Feed plugin - Recommend](https://github.com/jekyll/jekyll-feed)
-2. [Atom Feed in Jekyll](http://jekyll.tips/tutorials/atom-feed/)
-3. [RSS Feed in Jekyll](http://jekyll.tips/tutorials/rss-feed/)
-4. [RSS for Jekyll blogs](http://joelglovier.com/writing/rss-for-jekyll/)
+  1. [Jekyll Feed plugin - Recommend](https://github.com/jekyll/jekyll-feed)
+  2. [Atom Feed in Jekyll](http://jekyll.tips/tutorials/atom-feed/)
+  3. [RSS Feed in Jekyll](http://jekyll.tips/tutorials/rss-feed/)
+  4. [RSS for Jekyll blogs](http://joelglovier.com/writing/rss-for-jekyll/)
 
 
 ### References:  
