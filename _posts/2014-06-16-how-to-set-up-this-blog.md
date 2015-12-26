@@ -3,6 +3,7 @@ layout: post
 title: How to set up this blog
 permalink: how-to-setup-this-blog
 tags: [jekyll]
+update_date: 2015-12-26
 ---
 
 This blog created by [Jekyll](http://jekyllrb.com) that is ruby scripts to transforms plain text into static html website and blogs and hosted on [Github
@@ -51,3 +52,4 @@ Page](http://page.github.com) that free hosting support Jekyll.This blog use [La
   2. [Table not render when use Redcarpet in Jekyll GitHub Pages?](http://stackoverflow.com/questions/16099153/table-not-render-when-use-redcarpet-in-jekyll-github-pages)
   3. [Jekyll-Plugins](http://www.jekyll-plugins.com)
   4. [Jekyll Stater](http://jekyll.tips)
+  5. [Adding Disqus Comment to your Jekyll](http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/)
