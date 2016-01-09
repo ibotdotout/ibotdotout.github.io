@@ -78,6 +78,26 @@ allowfullscreen></iframe></center>
 - [terminal-panel](https://atom.io/packages/terminal-panel)
 
 ### Git Sharing Credit
-- [Project specific git author, without the gas pains](http://www.codeography.com/2011/08/05/project-specific-git-author.html)
-- [Git pairing aliases, prompts and avatars](http://thepugautomatic.com/2013/11/git-pairing/)
-- [“Pairing With Hitch”](http://blog.leshill.org/blog/2009/04/20/pairing-with-hitch.html)
+
+#### Tricks to linking with GitHub Account:
+- [Difference between author and committer in Git?](http://stackoverflow.com/questions/18750808/difference-between-author-and-committer-in-git)
+- [GitHub set author/committer](http://jasonnoble.org/2009/04/github-set-authorcommitter.html)
+- [Setting your email in Git](https://help.github.com/articles/setting-your-email-in-git/)
+
+  ```sh
+  $ export GIT_COMMITTER_EMAIL=your_email@example.com
+  $ export GIT_AUTHOR_EMAIL=your_email@example.com
+  ```
+
+- [Git log - see Author Email/ Commit Email](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+
+  ```sh
+  $ git log --pretty=format:"%h - %ae, %ce"
+  ```
+
+#### Tools  
+just tell email and who not linking with GitHub Account and trick very old.  
+
+* [Project specific git author, without the gas pains](http://www.codeography.com/2011/08/05/project-specific-git-author.html)
+* [Git pairing aliases, prompts and avatars](http://thepugautomatic.com/2013/11/git-pairing/)
+* [“Pairing With Hitch”](http://blog.leshill.org/blog/2009/04/20/pairing-with-hitch.html)
