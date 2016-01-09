@@ -61,3 +61,21 @@ allowfullscreen></iframe></center>
 2. [ping-pong-pairing](http://articles.coreyhaines.com/posts/thoughts-on-pair-programming/#ping-pong-pairing)
 
 - [Read more about pair programming]({{url}}/coding#pair-programming)
+
+## Tools:
+### SSH + Wemux (Recommended)
+- [Pair Programming with Wemux](http://blog.rapin.com/pair-programming-with-wemux-and-vim/)
+- [Pair Programming With Tmux Secure pair programming with wemux and Vim](http://martinbrochhaus.com/pair.html)
+- [Simple Remote Pairing with wemux](http://spin.atomicobject.com/2012/04/04/simple-remote-pairing-with-wemux/)
+- [github-auth - SSH-KEY via GitHub account](https://github.com/chrishunt/github-auth)
+
+### Atom Paring (Easier but paring cant' see its result)
+- [Atom MotePair](https://atom.io/packages/motepair)
+- [AtomPair](https://atom.io/packages/atom-pair)
+- [Atom Runner](https://atom.io/packages/atom-runner)
+- [terminal-panel](https://atom.io/packages/terminal-panel)
+
+### Git Sharing Credit
+- [Project specific git author, without the gas pains](http://www.codeography.com/2011/08/05/project-specific-git-author.html)
+- [Git pairing aliases, prompts and avatars](http://thepugautomatic.com/2013/11/git-pairing/)
+- [“Pairing With Hitch”](http://blog.leshill.org/blog/2009/04/20/pairing-with-hitch.html)
