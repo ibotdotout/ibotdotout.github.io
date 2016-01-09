@@ -2,6 +2,7 @@
 layout: post
 title: Pair Programming
 tags: coding
+last_modified_at: 2016-01-09 10:23:00
 permalink: pair-programming
 ---
 
@@ -67,6 +68,7 @@ allowfullscreen></iframe></center>
 - [Pair Programming with Wemux](http://blog.rapin.com/pair-programming-with-wemux-and-vim/)
 - [Pair Programming With Tmux Secure pair programming with wemux and Vim](http://martinbrochhaus.com/pair.html)
 - [Simple Remote Pairing with wemux](http://spin.atomicobject.com/2012/04/04/simple-remote-pairing-with-wemux/)
+- [Docker based Paring](https://github.com/dpetersen/dev-container-base)
 - [github-auth - SSH-KEY via GitHub account](https://github.com/chrishunt/github-auth)
 
 ### Atom Paring (Easier but paring cant' see its result)
