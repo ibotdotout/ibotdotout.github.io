@@ -2,7 +2,7 @@
 layout: post
 title: Pair Programming
 tags: coding
-last_modified_at: 2016-01-09 10:23:00
+update_date: 2016-01-09
 permalink: pair-programming
 ---
 

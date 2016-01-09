@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Password Manager
-tags: [secure]
+tags: [security]
 permalink: password-manager
-#last_modified_at: 2015-09-27 14:00:00
 ---
 
 ## What is Password Manager ?
