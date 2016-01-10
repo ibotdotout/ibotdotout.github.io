@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-01-09T05:42:34+00:00</updated>
+<updated>2016-01-10T11:34:58+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -524,6 +524,7 @@ warriors go to war first and then seek to win.&lt;/p&gt;
 &lt;p&gt;If you say a number, you lose. If you are asked on a form, leave it blank.
 If someone is pressing you for a number, just repeat: &amp;quot;I expect to be paid fairly based on my skills.&amp;quot;&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.programmerinterview.com/index.php/job-advice/how-to-prepare-for-a-software-engineering-interview/&quot;&gt;How to prepare for a software engineering interview&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;what-are-they-looking&quot;&gt;What are they looking ?&lt;/h2&gt;
@@ -555,6 +556,55 @@ How does this information relate to the company/job I’m applying to/for.&lt;/p
 &lt;li&gt;&lt;a href=&quot;https://raw.githubusercontent.com/kennyyu/workshop/master/resources.pdf&quot;&gt;Technical interview tips and strategies&lt;/a&gt; - Recommend&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://gist.github.com/TSiege/cbb0507082bb18ff7e4b&quot;&gt;The Technical Interview Cheat Sheet.md&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nZNfSQKC-Yk&quot;&gt;The Art of Ruby Technical Interviews by Chris Mar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;non-technique-interview&quot;&gt;Non-Technique Interview&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.interviewcake.com/article/python/coding-interview-tips&quot;&gt;Coding Interview Tips How to get better at technical interviews without practicing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.programmerinterview.com/index.php/job-advice/negotiating-an-offer-for-a-new-job/&quot;&gt;How do i negotiate an offer or salary for a new job?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://javahungry.blogspot.com/2014/04/top-15-must-prepare-behavioral-interview-questions-and-answers-hr-round-non-technical.html&quot;&gt;Top 15 Must Prepare Behavioral Questions And Answers (HR Round) : Non Technical Java Interview Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://workplace.stackexchange.com/a/8942&quot;&gt;How to answer critical non technical questions in an interview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Be yourself. Be prepared.&lt;br&gt;
+In an interview situation, nothing damages your confidence more than pretending to be something you&amp;#39;re not. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://programmers.stackexchange.com/a/126145&quot;&gt;Why was I asked general, non-technical questions during an interview?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;These are soft questions that do not have a right or wrong answer,
+but are intended to determine the way you think, what kind of personality you have,
+and whether your personality will fit with their culture. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://tosbourn.com/interview-tips-junior-developers/&quot;&gt;Some Interview Tips for Junior Developers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Don&amp;#39;t worry about what you don&amp;#39;t know, 
+Demonstrate a passion for what you do,
+Try and find out who is interviewing you&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://spin.atomicobject.com/2015/10/16/ace-the-non-technical-part-of-a-developer-interview/&quot;&gt;How to Ace the Non-Technical Part of an Atomic Interview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.c-sharpcorner.com/UploadFile/mahesh/how-to-prepare-for-an-interview-non-technical/&quot;&gt;How to Prepare For An Interview (Non-Technical)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I don&amp;#39;t expect candidates to be expert in everything but what I expect is, whatever they have done, they are good at it&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.c-sharpcorner.com/UploadFile/dougwagner/interviewing-must-dos-and-please-donts/&quot;&gt;Interviewing &amp;quot;Must DOs and Please DON&amp;#39;Ts&amp;quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://activeinterview.com/blog/2012/08/22/top-non-technical-questions-to-ask-a-programmer-during-a-video-interview/&quot;&gt;Top non-technical questions to ask a programmer during a video interview&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thesimpledollar.com/25-questions-to-think-about-before-your-next-job-interview/&quot;&gt;Interview Questions: 25 Top Questions &amp;amp; Answers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;good-cv&quot;&gt;Good CV&lt;/h2&gt;
