@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-01-10T11:34:58+00:00</updated>
+<updated>2016-01-11T04:43:53+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -547,6 +547,8 @@ If someone is pressing you for a number, just repeat: &amp;quot;I expect to be p
 &lt;p&gt;Before you send your resume and cover letter, ask yourself this:
 How does this information relate to the company/job I’m applying to/for.&lt;/p&gt;
 &lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.intercom.io/how-we-hire-engineers-part-1/&quot;&gt;HOW WE HIRE ENGINEERS, PART 1: OUR SCREENER&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.intercom.io/how-we-hire-engineers-part-2-culture-contribution/&quot;&gt;HOW WE HIRE ENGINEERS, PART 2: CULTURE CONTRIBUTION&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;technical-interview&quot;&gt;Technical Interview&lt;/h2&gt;
