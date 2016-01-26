@@ -94,4 +94,4 @@ Coming Soon Page](https://www.youtube.com/watch?v=Kj7k1iFcUxM)
 ### ETC
 * <https://generatewp.com>
 * [WordPress Codex](http://codex.wordpress.org)
-* [wp-bootstrap-navwalker](wp-bootstrap-navwalker)
+* [wp-bootstrap-navwalker](https://github.com/twittem/wp-bootstrap-navwalker)
