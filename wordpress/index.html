@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <meta property="og:title" content="All about Wordpress" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dev.im-bot.com/wordpress/" />
+<meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
+<meta property="og:description" content="Docker + Wordpresshttps://hub.docker.com/_/wordpress/WordPress Local Development With Docker – InstallationGuide" />
+<meta property="og:site_name" content="botbotbot" />
+<meta property="og:locale" content="th_TH" />
+
+
+  <title>
+    
+      All about Wordpress &middot; botbotbot
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/searchbox.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Google Analytic-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-52133577-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>botbotbot's blog</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About Me</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tags/">Tags</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2016. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">botbotbot</a>
+            <small>'s blog</small>
+            <!-- jekyll-lunr-js-search -->
+<span id="search">
+  <form action="/search" method="get" id="searchbox">
+    <input type="text" id="search-query" placeholder="Search" autocomplete="off" name="q">
+  </form>
+</span>
+
+          </h3>
+        </div>
+      </div>
+
+      <!-- jekyll-lunr-js-search -->
+<div class="container">
+  <div class="post">
+    <section id="search-results" style="display: none;">
+        <div id="close-search-results">
+          <h1 class="post-title">
+              Search results
+              <i class="fa fa-times" style="font-size: 0.7em"></i>
+          </h1>
+        </div>
+        <div class="entries">
+         </div>
+    </section>
+  </div>
+</div>
+
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">All about Wordpress</h1>
+  <span class="post-date">
+    26 Jan 2016
+      
+        &middot;
+        <a href="/wordpress/index.html#disqus_thread" data-disqus-identifier="/wordpress"></a>
+        
+          &middot;
+          Updated December 26, 2016
+        
+      
+  </span>
+
+  <h1 id="docker-wordpress">Docker + Wordpress</h1>
+
+<ul>
+<li><a href="https://hub.docker.com/_/wordpress/">https://hub.docker.com/_/wordpress/</a></li>
+<li><a href="https://warun.in.th/64-wordpress-local-development-with-docker-installation-guide">WordPress Local Development With Docker – Installation
+Guide</a></li>
+</ul>
+
+<!-- more -->
+
+<h3 id="wordpress-guide">Wordpress Guide</h3>
+
+<ul>
+<li><a href="http://www.wpthaiuser.com/wordpress-basic-set-up/">http://www.wpthaiuser.com/wordpress-basic-set-up/</a></li>
+<li><a href="http://kopkap.in.th/20-plugin-wordpress-2015.html">http://kopkap.in.th/20-plugin-wordpress-2015.html</a></li>
+<li><a href="https://warun.in.th/143-childtheme-%E0%B9%81%E0%B8%A5%E0%B8%B0-best-practice">https://warun.in.th/143-childtheme-และ-best-practice</a></li>
+<li><a href="https://warun.in.th/7-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99-wordpress-%E0%B8%81%E0%B8%B1%E0%B8%9A-cloudflare">https://warun.in.th/7-ใช้งาน-wordpress-กับ-cloudflare</a></li>
+<li><a href="http://www.modifywordpress.com/wordpress/10-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%8A/">10 ข้อผิดพลาดที่มือใหม่ชอบทำใน WORDPRESS</a></li>
+<li><a href="http://www.cryoutcreations.eu/wordpress-themes/wordpress-tutorials/how-to-hide-the-wordpress-admin-bar">http://www.cryoutcreations.eu/wordpress-themes/wordpress-tutorials/how-to-hide-the-wordpress-admin-bar</a></li>
+</ul>
+
+<h3 id="how-to-choose-wordpress-theme">How to choose Wordpress Theme</h3>
+
+<ul>
+<li><a href="http://www.engagewp.com/why-i-no-longer-use-themeforest/">Why I No Longer Use Themeforest Why I Don’t Use Themeforest Anymore</a></li>
+<li><a href="http://www.mypum.com/7-things-to-consider-when-choosing-a-wordpress-theme/">http://www.mypum.com/7-things-to-consider-when-choosing-a-wordpress-theme/</a></li>
+<li><a href="http://mennstudio.com/2014/selling-premium-themes-on-wordpress-com/">http://mennstudio.com/2014/selling-premium-themes-on-wordpress-com/</a></li>
+<li><a href="http://www.designil.com/themeforest-buy-sale-website-template.html">http://www.designil.com/themeforest-buy-sale-website-template.html</a></li>
+<li><a href="http://www.tsupaman.com/2013/12/how-to-buy-template-form-themeforest-net">http://www.tsupaman.com/2013/12/how-to-buy-template-form-themeforest-net</a></li>
+<li><a href="http://www.wpthaiuser.com/get-to-know-wordpress-theme/">http://www.wpthaiuser.com/get-to-know-wordpress-theme/</a></li>
+<li><a href="http://www.wpthaiuser.com/wordpress-themes-comparison/">http://www.wpthaiuser.com/wordpress-themes-comparison/</a></li>
+</ul>
+
+<h3 id="theme">Theme</h3>
+
+<ul>
+<li><a href="https://mythemeshop.com/themes/corporate/">https://mythemeshop.com/themes/corporate/</a></li>
+<li><a href="https://mythemeshop.com/themes/onepage/">https://mythemeshop.com/themes/onepage/</a></li>
+<li><a href="http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226">http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226</a></li>
+<li><a href="http://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775">http://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775</a></li>
+<li><a href="http://www.elegantthemes.com/demo/?theme=Vertex">http://www.elegantthemes.com/demo/?theme=Vertex</a></li>
+<li><a href="http://demo.wpzoom.com/?theme=diamond">http://demo.wpzoom.com/?theme=diamond</a></li>
+<li><a href="http://www.responsivemiracle.com">http://www.responsivemiracle.com</a></li>
+<li><a href="http://csmthemes.com/themes/launch/">Launch Theme</a></li>
+</ul>
+
+<h3 id="wordpress-book">Wordpress Book</h3>
+
+<ul>
+<li><a href="http://pluginbuddy.com/free-ebook-download-getting-started-with-wordpress-plugins/">http://pluginbuddy.com/free-ebook-download-getting-started-with-wordpress-plugins/</a></li>
+</ul>
+
+<h3 id="wordpress-plugin">Wordpress Plugin</h3>
+
+<ul>
+<li><a href="http://ithemes.com/AIOSEO">http://ithemes.com/AIOSEO</a></li>
+<li><a href="http://pluginbuddy.com/purchase/backupbuddy/">http://pluginbuddy.com/purchase/backupbuddy/</a></li>
+<li><a href="https://wordpress.org/plugins/ewww-image-optimizer/">EWWW Image Optimizer</a></li>
+<li><a href="https://wordpress.org/plugins/updraftplus/">UpdraftPlus Backup/Restore</a></li>
+<li><a href="https://wordpress.org/plugins/duplicator/">https://wordpress.org/plugins/duplicator/</a></li>
+<li><a href="https://wordpress.org/plugins/wp-smushit/">https://wordpress.org/plugins/wp-smushit/</a></li>
+<li><a href="https://wordpress.org/plugins/bj-lazy-load/">https://wordpress.org/plugins/bj-lazy-load/</a></li>
+<li><a href="http://www.techiosoft.com/best-wordpress-plugins/">http://www.techiosoft.com/best-wordpress-plugins/</a></li>
+<li><a href="http://jirayu.in.th/2013/08/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A5%E0%B8%B1%E0%B9%8A%E0%B8%81%E0%B8%AD%E0%B8%B4%E0%B8%99-wordpress-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9C%E0%B8%A1%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%9A%E0%B8%99/">http://jirayu.in.th/2013/08/รวมปลั๊กอิน-wordpress-ที่ผมใช้บน/</a></li>
+<li><a href="http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/">http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/</a></li>
+<li><a href="https://www.youtube.com/watch?v=J7M4RMpY55c">https://www.youtube.com/watch?v=J7M4RMpY55c</a></li>
+<li><a href="http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/">http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/</a></li>
+<li><a href="https://wordpress.org/plugins/wp-super-cache/">WP Super Cache</a></li>
+<li><a href="https://wordpress.org/plugins/peters-login-redirect/">https://wordpress.org/plugins/peters-login-redirect/</a></li>
+</ul>
+
+<h3 id="avada-theme">Avada Theme</h3>
+
+<ul>
+<li><a href="https://theme-fusion.com/videos/install-avada-via-ftp/">https://theme-fusion.com/videos/install-avada-via-ftp/</a></li>
+<li><a href="http://wearnhardt.com/why-you-should-avoid-avada/">http://wearnhardt.com/why-you-should-avoid-avada/</a></li>
+<li><a href="http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/">http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/</a></li>
+<li><a href="https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/">https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/</a></li>
+<li><a href="https://theme-fusion.com/forums/reply/reply-to-removing-double-lines/">https://theme-fusion.com/forums/reply/reply-to-removing-double-lines/</a></li>
+</ul>
+
+<h3 id="wordpress-on-plesk">Wordpress on Plesk</h3>
+
+<ul>
+<li><a href="http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/">http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/</a></li>
+<li><a href="http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress">http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress</a></li>
+<li><a href="https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows">https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows</a></li>
+</ul>
+
+<h3 id="etc">ETC</h3>
+
+<ul>
+<li><a href="http://www.thaiseoboard.com/index.php/topic,372082.msg5088682/topicseen.html">http://www.thaiseoboard.com/index.php/topic,372082.msg5088682/topicseen.html</a></li>
+</ul>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/password-manager">
+            Password Manager
+            <small>09 Jan 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/avoid-git-commit-m">
+            Avoid git commit -m
+            <small>25 Dec 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/ror">
+            All About Ruby and Ruby on Rails
+            <small>12 Dec 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+    <div class="related">
+      <!-- disqus comment -->
+      <div id="disqus_thread"></div>
+      <script>
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'im-bot';
+      var disqus_identifier = "/wordpress";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  
+
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+  
+  <script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'im-bot'; // required: replace example with your forum shortname
+  // var disqus_developer = 1; // Comment out when the site is live
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+  </script>
+
+
+  </body>
+
+    <!-- jekyll-lunr-js-search -->
+  <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script id="search-results-template" type="text/mustache">
+    {{#entries}}
+      <article>
+        <h3>
+          {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+          <a href="{{url}}">{{title}}</a>
+        </h3>
+      </article>
+    {{/entries}}
+  </script>
+  
+  <script type="text/javascript">
+    $(function() {
+      $('#search-query').lunrSearch({
+        indexUrl: '/js/index.json',   // Url for the .json file containing search index data
+        results : '#search-results',  // selector for containing search results element
+        entries : '.entries',         // selector for search entries containing element (contained within results above)
+        template: '#search-results-template'  // selector for Mustache.js template
+      });
+    });
+    $("#close-search-results").click(function(){
+      $('#search-query').val('');
+      $('#search-results').hide();
+    });
+  </script>
+
+</html>

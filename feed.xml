@@ -3,12 +3,116 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-01-17T11:37:17+00:00</updated>
+<updated>2016-01-26T17:06:14+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
 <name>botbotbot</name>
 </author>
+<entry>
+<title>All about Wordpress</title>
+<link href="http://dev.im-bot.com//wordpress" rel="alternate" type="text/html" title="All about Wordpress" />
+<published>2016-01-26T00:00:00+00:00</published>
+<updated>2016-01-26T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//wordpress</id>
+<content type="html" xml:base="http://dev.im-bot.com//wordpress">&lt;h1 id=&quot;docker-wordpress&quot;&gt;Docker + Wordpress&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/wordpress/&quot;&gt;https://hub.docker.com/_/wordpress/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://warun.in.th/64-wordpress-local-development-with-docker-installation-guide&quot;&gt;WordPress Local Development With Docker – Installation
+Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;wordpress-guide&quot;&gt;Wordpress Guide&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/wordpress-basic-set-up/&quot;&gt;http://www.wpthaiuser.com/wordpress-basic-set-up/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://kopkap.in.th/20-plugin-wordpress-2015.html&quot;&gt;http://kopkap.in.th/20-plugin-wordpress-2015.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://warun.in.th/143-childtheme-%E0%B9%81%E0%B8%A5%E0%B8%B0-best-practice&quot;&gt;https://warun.in.th/143-childtheme-และ-best-practice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://warun.in.th/7-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99-wordpress-%E0%B8%81%E0%B8%B1%E0%B8%9A-cloudflare&quot;&gt;https://warun.in.th/7-ใช้งาน-wordpress-กับ-cloudflare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.modifywordpress.com/wordpress/10-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%8A/&quot;&gt;10 ข้อผิดพลาดที่มือใหม่ชอบทำใน WORDPRESS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cryoutcreations.eu/wordpress-themes/wordpress-tutorials/how-to-hide-the-wordpress-admin-bar&quot;&gt;http://www.cryoutcreations.eu/wordpress-themes/wordpress-tutorials/how-to-hide-the-wordpress-admin-bar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-choose-wordpress-theme&quot;&gt;How to choose Wordpress Theme&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.engagewp.com/why-i-no-longer-use-themeforest/&quot;&gt;Why I No Longer Use Themeforest Why I Don’t Use Themeforest Anymore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.mypum.com/7-things-to-consider-when-choosing-a-wordpress-theme/&quot;&gt;http://www.mypum.com/7-things-to-consider-when-choosing-a-wordpress-theme/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mennstudio.com/2014/selling-premium-themes-on-wordpress-com/&quot;&gt;http://mennstudio.com/2014/selling-premium-themes-on-wordpress-com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.designil.com/themeforest-buy-sale-website-template.html&quot;&gt;http://www.designil.com/themeforest-buy-sale-website-template.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tsupaman.com/2013/12/how-to-buy-template-form-themeforest-net&quot;&gt;http://www.tsupaman.com/2013/12/how-to-buy-template-form-themeforest-net&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/get-to-know-wordpress-theme/&quot;&gt;http://www.wpthaiuser.com/get-to-know-wordpress-theme/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/wordpress-themes-comparison/&quot;&gt;http://www.wpthaiuser.com/wordpress-themes-comparison/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;theme&quot;&gt;Theme&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mythemeshop.com/themes/corporate/&quot;&gt;https://mythemeshop.com/themes/corporate/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mythemeshop.com/themes/onepage/&quot;&gt;https://mythemeshop.com/themes/onepage/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226&quot;&gt;http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775&quot;&gt;http://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.elegantthemes.com/demo/?theme=Vertex&quot;&gt;http://www.elegantthemes.com/demo/?theme=Vertex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://demo.wpzoom.com/?theme=diamond&quot;&gt;http://demo.wpzoom.com/?theme=diamond&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.responsivemiracle.com&quot;&gt;http://www.responsivemiracle.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://csmthemes.com/themes/launch/&quot;&gt;Launch Theme&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;wordpress-book&quot;&gt;Wordpress Book&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://pluginbuddy.com/free-ebook-download-getting-started-with-wordpress-plugins/&quot;&gt;http://pluginbuddy.com/free-ebook-download-getting-started-with-wordpress-plugins/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;wordpress-plugin&quot;&gt;Wordpress Plugin&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ithemes.com/AIOSEO&quot;&gt;http://ithemes.com/AIOSEO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pluginbuddy.com/purchase/backupbuddy/&quot;&gt;http://pluginbuddy.com/purchase/backupbuddy/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/ewww-image-optimizer/&quot;&gt;EWWW Image Optimizer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/updraftplus/&quot;&gt;UpdraftPlus Backup/Restore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/duplicator/&quot;&gt;https://wordpress.org/plugins/duplicator/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/wp-smushit/&quot;&gt;https://wordpress.org/plugins/wp-smushit/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/bj-lazy-load/&quot;&gt;https://wordpress.org/plugins/bj-lazy-load/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.techiosoft.com/best-wordpress-plugins/&quot;&gt;http://www.techiosoft.com/best-wordpress-plugins/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jirayu.in.th/2013/08/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A5%E0%B8%B1%E0%B9%8A%E0%B8%81%E0%B8%AD%E0%B8%B4%E0%B8%99-wordpress-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9C%E0%B8%A1%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%9A%E0%B8%99/&quot;&gt;http://jirayu.in.th/2013/08/รวมปลั๊กอิน-wordpress-ที่ผมใช้บน/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/&quot;&gt;http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J7M4RMpY55c&quot;&gt;https://www.youtube.com/watch?v=J7M4RMpY55c&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/&quot;&gt;http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/wp-super-cache/&quot;&gt;WP Super Cache&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/peters-login-redirect/&quot;&gt;https://wordpress.org/plugins/peters-login-redirect/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;avada-theme&quot;&gt;Avada Theme&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/videos/install-avada-via-ftp/&quot;&gt;https://theme-fusion.com/videos/install-avada-via-ftp/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wearnhardt.com/why-you-should-avoid-avada/&quot;&gt;http://wearnhardt.com/why-you-should-avoid-avada/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/&quot;&gt;http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/&quot;&gt;https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/forums/reply/reply-to-removing-double-lines/&quot;&gt;https://theme-fusion.com/forums/reply/reply-to-removing-double-lines/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;wordpress-on-plesk&quot;&gt;Wordpress on Plesk&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/&quot;&gt;http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress&quot;&gt;http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows&quot;&gt;https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;etc&quot;&gt;ETC&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thaiseoboard.com/index.php/topic,372082.msg5088682/topicseen.html&quot;&gt;http://www.thaiseoboard.com/index.php/topic,372082.msg5088682/topicseen.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+<category term="wordpress" />
+<summary>Docker + Wordpresshttps://hub.docker.com/_/wordpress/WordPress Local Development With Docker – InstallationGuide</summary>
+</entry>
 <entry>
 <title>Password Manager</title>
 <link href="http://dev.im-bot.com//password-manager" rel="alternate" type="text/html" title="Password Manager" />
@@ -906,75 +1010,5 @@ Linux&lt;/a&gt;&lt;/li&gt;
 </content>
 <category term="unix" />
 <summary>Collection example of text processing in shell</summary>
-</entry>
-<entry>
-<title>Sharing with Open Graph</title>
-<link href="http://dev.im-bot.com//opengraph" rel="alternate" type="text/html" title="Sharing with Open Graph" />
-<published>2015-10-12T00:00:00+00:00</published>
-<updated>2015-10-12T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//open-graph</id>
-<content type="html" xml:base="http://dev.im-bot.com//opengraph">&lt;p&gt;&lt;img src=&quot;%7B%7Bsite.url%7D%7D/public/img/open-graph-thumbnail.png&quot; alt=&quot;sharing with open graph&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Add this meta data to your &lt;code&gt;html page&lt;/code&gt; between &lt;code&gt;&amp;lt;head&amp;gt; ... &amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:title&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Markdown Slide&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:type&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;article&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:url&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://dev.im-bot.com/slide/&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://dev.im-bot.com/public/opengraph_logo.png&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:description&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Remark.js - easy and simple slide&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:site_name&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;botbotbot&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:locale&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;th_TH&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then using &lt;a href=&quot;https://developers.facebook.com/tools/debug/og/object/&quot;&gt;Open Graph Object Debugger&lt;/a&gt; to look what it look like when shared.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h3 id=&quot;tips&quot;&gt;Tips:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;og:image&lt;/code&gt; always cache in fb server. you should change your image url to force fb reload your image.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;jekyll-integrate-open-graph&quot;&gt;Jekyll Integrate Open Graph&lt;/h1&gt;
-
-&lt;p&gt;Add this line in your &lt;code&gt;_includes/head.html&lt;/code&gt; between &lt;code&gt;&amp;lt;head&amp;gt; ... &amp;lt;/head&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% include opengraph.html %}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Create &lt;code&gt;_includes/opengraph.html&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:title&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:type&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{% if page.title %}article{% else %}website{% endif %}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:url&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ page.url | replace:&amp;#39;index.html&amp;#39;,&amp;#39;&amp;#39; | prepend: site.url | append: &amp;#39;/&amp;#39; }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:image&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{% if page.thumbnail %}{{ page.thumbnail | prepend: site.url }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:description&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:site_name&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ site.title }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;og:locale&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ site.locale }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Update &lt;code&gt;_config.yml&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;logo&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;/public/logo.png&lt;/span&gt;
-&lt;span class=&quot;l-Scalar-Plain&quot;&gt;locale&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;l-Scalar-Plain&quot;&gt;th_TH&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Custom Post&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;----
-excerpt: summary
-thumbnail: /public/thumbnail_for_your_post.png
-----
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/&quot;&gt;Adding Open Graph Tags to Jekyll&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://danyalzia.com/2015/03/25/integrating-facebook-open-graph-in-jekyll/&quot;&gt;Integrating Facebook Open Graph Meta Tags In Jekyll&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://milanaryal.com/2015/integrating-social-meta-tags-into-jekyll/&quot;&gt;Integrating social meta tags into Jekyll&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;references&quot;&gt;References:&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2950189/facebook-share-doesnt-show-my-description-or-my-thumbnail&quot;&gt;Facebook Share doesn&amp;#39;t show my description or my thumbnail&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://ogp.me&quot;&gt;The Open Graph protocol&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developers.facebook.com/docs/sharing/best-practices&quot;&gt;Sharing Best Practices for Websites &amp;amp; Mobile Apps&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developers.facebook.com/tools/debug/og/object/&quot;&gt;Open Graph Object Debugger&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="jekyll" />
-<category term="website" />
-<summary>Make your site look pretty when sharing on facebook.</summary>
 </entry>
 </feed>
