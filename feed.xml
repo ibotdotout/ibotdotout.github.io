@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-01-26T17:06:14+00:00</updated>
+<updated>2016-01-26T18:01:50+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -18,7 +18,7 @@
 <content type="html" xml:base="http://dev.im-bot.com//wordpress">&lt;h1 id=&quot;docker-wordpress&quot;&gt;Docker + Wordpress&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/wordpress/&quot;&gt;https://hub.docker.com/_/wordpress/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/wordpress/&quot;&gt;Wordpress Docker Image&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://warun.in.th/64-wordpress-local-development-with-docker-installation-guide&quot;&gt;WordPress Local Development With Docker – Installation
 Guide&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -28,90 +28,83 @@ Guide&lt;/a&gt;&lt;/li&gt;
 &lt;h3 id=&quot;wordpress-guide&quot;&gt;Wordpress Guide&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/wordpress-basic-set-up/&quot;&gt;http://www.wpthaiuser.com/wordpress-basic-set-up/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://kopkap.in.th/20-plugin-wordpress-2015.html&quot;&gt;http://kopkap.in.th/20-plugin-wordpress-2015.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://warun.in.th/143-childtheme-%E0%B9%81%E0%B8%A5%E0%B8%B0-best-practice&quot;&gt;https://warun.in.th/143-childtheme-และ-best-practice&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://warun.in.th/7-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99-wordpress-%E0%B8%81%E0%B8%B1%E0%B8%9A-cloudflare&quot;&gt;https://warun.in.th/7-ใช้งาน-wordpress-กับ-cloudflare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/wordpress-basic-set-up/&quot;&gt;9 สิ่งที่ต้องทำ หลังการติดตั้ง WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://warun.in.th/7-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99-wordpress-%E0%B8%81%E0%B8%B1%E0%B8%9A-cloudflare&quot;&gt;ใช้งาน WordPress กับ CloudFlare&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.modifywordpress.com/wordpress/10-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%8A/&quot;&gt;10 ข้อผิดพลาดที่มือใหม่ชอบทำใน WORDPRESS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cryoutcreations.eu/wordpress-themes/wordpress-tutorials/how-to-hide-the-wordpress-admin-bar&quot;&gt;http://www.cryoutcreations.eu/wordpress-themes/wordpress-tutorials/how-to-hide-the-wordpress-admin-bar&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;how-to-choose-wordpress-theme&quot;&gt;How to choose Wordpress Theme&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.engagewp.com/why-i-no-longer-use-themeforest/&quot;&gt;Why I No Longer Use Themeforest Why I Don’t Use Themeforest Anymore&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.mypum.com/7-things-to-consider-when-choosing-a-wordpress-theme/&quot;&gt;http://www.mypum.com/7-things-to-consider-when-choosing-a-wordpress-theme/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mennstudio.com/2014/selling-premium-themes-on-wordpress-com/&quot;&gt;http://mennstudio.com/2014/selling-premium-themes-on-wordpress-com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.designil.com/themeforest-buy-sale-website-template.html&quot;&gt;http://www.designil.com/themeforest-buy-sale-website-template.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.tsupaman.com/2013/12/how-to-buy-template-form-themeforest-net&quot;&gt;http://www.tsupaman.com/2013/12/how-to-buy-template-form-themeforest-net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/get-to-know-wordpress-theme/&quot;&gt;http://www.wpthaiuser.com/get-to-know-wordpress-theme/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/wordpress-themes-comparison/&quot;&gt;http://www.wpthaiuser.com/wordpress-themes-comparison/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.mypum.com/7-things-to-consider-when-choosing-a-wordpress-theme/&quot;&gt;7 สิ่งที่ควรพิจารณาก่อนเลือกธีม Wordpress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://mennstudio.com/2014/selling-premium-themes-on-wordpress-com/&quot;&gt;การสร้างธีมที่เป็นมาตรฐาน และขายผ่าน WordPress.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.designil.com/themeforest-buy-sale-website-template.html&quot;&gt;ความจริงเกี่ยวกับ Themeforest ที่คนอยากขายธีมต้องรู้&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.thaiseoboard.com/index.php/topic,372082.msg5088682/topicseen.html&quot;&gt;license ของ themeforest : การเลือกซื้อ และการแอบตรวจสอบว่าเราละเมิดกฏ license&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tsupaman.com/2013/12/how-to-buy-template-form-themeforest-net&quot;&gt;วิธีการซื้อ Template สวยๆจาก themeForest.net&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/get-to-know-wordpress-theme/&quot;&gt;ส่วนประกอบของธีม WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/wordpress-themes-comparison/&quot;&gt;เปรียบเทียบ(ราคา) ธีม WordPress ของค่ายต่างๆ&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;theme&quot;&gt;Theme&lt;/h3&gt;
+&lt;h3 id=&quot;wordpress-theme&quot;&gt;Wordpress Theme&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mythemeshop.com/themes/corporate/&quot;&gt;https://mythemeshop.com/themes/corporate/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mythemeshop.com/themes/onepage/&quot;&gt;https://mythemeshop.com/themes/onepage/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226&quot;&gt;http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775&quot;&gt;http://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.elegantthemes.com/demo/?theme=Vertex&quot;&gt;http://www.elegantthemes.com/demo/?theme=Vertex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://demo.wpzoom.com/?theme=diamond&quot;&gt;http://demo.wpzoom.com/?theme=diamond&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.responsivemiracle.com&quot;&gt;http://www.responsivemiracle.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mythemeshop.com/themes/corporate/&quot;&gt;Corporate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mythemeshop.com/themes/onepage/&quot;&gt;One page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226&quot;&gt;Avada | Responsive Multi-Purpose Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775&quot;&gt;Jupiter - Multi-Purpose Responsive Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.elegantthemes.com/demo/?theme=Vertex&quot;&gt;Vertex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://demo.wpzoom.com/?theme=diamond&quot;&gt;Diamond&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://csmthemes.com/themes/launch/&quot;&gt;Launch Theme&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;wordpress-book&quot;&gt;Wordpress Book&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://pluginbuddy.com/free-ebook-download-getting-started-with-wordpress-plugins/&quot;&gt;http://pluginbuddy.com/free-ebook-download-getting-started-with-wordpress-plugins/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.responsivemiracle.com&quot;&gt;http://www.responsivemiracle.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;wordpress-plugin&quot;&gt;Wordpress Plugin&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://ithemes.com/AIOSEO&quot;&gt;http://ithemes.com/AIOSEO&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://pluginbuddy.com/purchase/backupbuddy/&quot;&gt;http://pluginbuddy.com/purchase/backupbuddy/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ithemes.com/2011/08/29/free-ebook-download-getting-started-with-wordpress-plugins/&quot;&gt;Free Ebook Download – Getting Started with WordPress Plugins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://kopkap.in.th/20-plugin-wordpress-2015.html&quot;&gt;20 Plugin WordPress สำหรับปี 2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.techiosoft.com/best-wordpress-plugins/&quot;&gt;แนะนำ ปลั๊กอิน WordPress ฟรี ! ยอดนิยม 2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jirayu.in.th/2013/08/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A5%E0%B8%B1%E0%B9%8A%E0%B8%81%E0%B8%AD%E0%B8%B4%E0%B8%99-wordpress-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9C%E0%B8%A1%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%9A%E0%B8%99/&quot;&gt;รวมปลั๊กอิน WordPress ที่ผมใช้บนบล็อกนี้&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pluginbuddy.com/purchase/backupbuddy/&quot;&gt;Backup Buddy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/ewww-image-optimizer/&quot;&gt;EWWW Image Optimizer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/updraftplus/&quot;&gt;UpdraftPlus Backup/Restore&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/duplicator/&quot;&gt;https://wordpress.org/plugins/duplicator/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/wp-smushit/&quot;&gt;https://wordpress.org/plugins/wp-smushit/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/bj-lazy-load/&quot;&gt;https://wordpress.org/plugins/bj-lazy-load/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.techiosoft.com/best-wordpress-plugins/&quot;&gt;http://www.techiosoft.com/best-wordpress-plugins/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jirayu.in.th/2013/08/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A5%E0%B8%B1%E0%B9%8A%E0%B8%81%E0%B8%AD%E0%B8%B4%E0%B8%99-wordpress-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9C%E0%B8%A1%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%9A%E0%B8%99/&quot;&gt;http://jirayu.in.th/2013/08/รวมปลั๊กอิน-wordpress-ที่ผมใช้บน/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/&quot;&gt;http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J7M4RMpY55c&quot;&gt;https://www.youtube.com/watch?v=J7M4RMpY55c&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/&quot;&gt;http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/duplicator/&quot;&gt;Duplicator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/wp-smushit/&quot;&gt;WP Smush&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/bj-lazy-load/&quot;&gt;BJ Lazy Load&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/wp-super-cache/&quot;&gt;WP Super Cache&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/peters-login-redirect/&quot;&gt;https://wordpress.org/plugins/peters-login-redirect/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/peters-login-redirect/&quot;&gt;Peter&amp;#39;s Login Redirect&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;wordpress-custom&quot;&gt;Wordpress Custom&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://warun.in.th/143-childtheme-%E0%B9%81%E0%B8%A5%E0%B8%B0-best-practice&quot;&gt;Child Theme คืออะไร มาปรับแต่ง WordPress แบบถูกวิธีกันเถอะ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cryoutcreations.eu/wordpress-themes/wordpress-tutorials/how-to-hide-the-wordpress-admin-bar&quot;&gt;How to hide the WordPress admin bar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/&quot;&gt;ADDING CUSTOM IMAGES SIZES TO THE WORDPRESS MEDIA LIBRARY&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J7M4RMpY55c&quot;&gt;How Can I Change a Thumbnail Size in WordPress? : WordPress Lessons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/&quot;&gt;How to Easily Replace Image and Media Files in WordPress&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;avada-theme&quot;&gt;Avada Theme&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/videos/install-avada-via-ftp/&quot;&gt;https://theme-fusion.com/videos/install-avada-via-ftp/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wearnhardt.com/why-you-should-avoid-avada/&quot;&gt;http://wearnhardt.com/why-you-should-avoid-avada/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/&quot;&gt;http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/&quot;&gt;https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/forums/reply/reply-to-removing-double-lines/&quot;&gt;https://theme-fusion.com/forums/reply/reply-to-removing-double-lines/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wearnhardt.com/why-you-should-avoid-avada/&quot;&gt;Why You Should Avoid Avada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/videos/install-avada-via-ftp/&quot;&gt;How To Install Avada Via FTP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/&quot;&gt;25 Stunning Examples of Avada — ThemeForest’s Most Popular WordPress Theme — In Action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/&quot;&gt;How To Make Custom CSS Changes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;wordpress-on-plesk&quot;&gt;Wordpress on Plesk&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/&quot;&gt;http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress&quot;&gt;http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows&quot;&gt;https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;etc&quot;&gt;ETC&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.thaiseoboard.com/index.php/topic,372082.msg5088682/topicseen.html&quot;&gt;http://www.thaiseoboard.com/index.php/topic,372082.msg5088682/topicseen.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/&quot;&gt;How to Install WordPress Manually on Plesk Parallels&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress&quot;&gt;Enabling Pretty Permalinks in WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows&quot;&gt;Pretty Permalinks with Plesk for Windows&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
 <category term="wordpress" />
-<summary>Docker + Wordpresshttps://hub.docker.com/_/wordpress/WordPress Local Development With Docker – InstallationGuide</summary>
+<summary>Docker + WordpressWordpress Docker ImageWordPress Local Development With Docker – InstallationGuide</summary>
 </entry>
 <entry>
 <title>Password Manager</title>
