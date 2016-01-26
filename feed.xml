@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-01-26T18:02:42+00:00</updated>
+<updated>2016-01-26T18:48:19+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -28,6 +28,8 @@ Guide&lt;/a&gt;&lt;/li&gt;
 &lt;h3 id=&quot;wordpress-guide&quot;&gt;Wordpress Guide&lt;/h3&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ithemes.com/publishing/getting-started-with-wordpress/&quot;&gt;Getting Started with WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://cloudcourse.io/course/wordpress-theme-and-bootstrap-3/&quot;&gt;WordPress Theme with Bootstrap 3 วิดีโอสอนภาษาไทย&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/wordpress-basic-set-up/&quot;&gt;9 สิ่งที่ต้องทำ หลังการติดตั้ง WordPress&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://warun.in.th/7-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99-wordpress-%E0%B8%81%E0%B8%B1%E0%B8%9A-cloudflare&quot;&gt;ใช้งาน WordPress กับ CloudFlare&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.modifywordpress.com/wordpress/10-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%8A/&quot;&gt;10 ข้อผิดพลาดที่มือใหม่ชอบทำใน WORDPRESS&lt;/a&gt;&lt;/li&gt;
@@ -66,6 +68,9 @@ Guide&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://kopkap.in.th/20-plugin-wordpress-2015.html&quot;&gt;20 Plugin WordPress สำหรับปี 2015&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.techiosoft.com/best-wordpress-plugins/&quot;&gt;แนะนำ ปลั๊กอิน WordPress ฟรี ! ยอดนิยม 2015&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://jirayu.in.th/2013/08/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A5%E0%B8%B1%E0%B9%8A%E0%B8%81%E0%B8%AD%E0%B8%B4%E0%B8%99-wordpress-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9C%E0%B8%A1%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%9A%E0%B8%99/&quot;&gt;รวมปลั๊กอิน WordPress ที่ผมใช้บนบล็อกนี้&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wpbeginner.com/beginners-guide/best-drag-and-drop-page-builders-for-wordpress/&quot;&gt;5 Best Drag and Drop WordPress Page Builders Compared&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://premium.wpmudev.org/blog/10-drag-and-drop-page-builders-wordpress/&quot;&gt;10 FANTASTIC DRAG AND DROP PAGE BUILDERS FOR WORDPRESS WORTH CHECKING
+OUT&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://pluginbuddy.com/purchase/backupbuddy/&quot;&gt;Backup Buddy&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/ewww-image-optimizer/&quot;&gt;EWWW Image Optimizer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/updraftplus/&quot;&gt;UpdraftPlus Backup/Restore&lt;/a&gt;&lt;/li&gt;
@@ -84,14 +89,26 @@ Guide&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/&quot;&gt;ADDING CUSTOM IMAGES SIZES TO THE WORDPRESS MEDIA LIBRARY&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J7M4RMpY55c&quot;&gt;How Can I Change a Thumbnail Size in WordPress? : WordPress Lessons&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/&quot;&gt;How to Easily Replace Image and Media Files in WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Kj7k1iFcUxM&quot;&gt;How to put WordPress in maintenance mode Under Construction Wordpress
+Coming Soon Page&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;avada-theme&quot;&gt;Avada Theme&lt;/h3&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dn6g_gJDAIk&quot;&gt;Quick Guided Tour of Avada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=IE_uTEoyylM&quot;&gt;Avada Wordpress Theme Review 2015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jirawatisme.com/resources/avada-wordpress-theme/&quot;&gt;ทำไม Avada WordPress theme ถึงเป็น premium WordPress theme
+ที่ฮิตมากที่สุด&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://wearnhardt.com/why-you-should-avoid-avada/&quot;&gt;Why You Should Avoid Avada&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/videos/install-avada-via-ftp/&quot;&gt;How To Install Avada Via FTP&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/&quot;&gt;25 Stunning Examples of Avada — ThemeForest’s Most Popular WordPress Theme — In Action&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0wgJvbkzYsg&quot;&gt;Page Layouts using Wordpress Avada Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/support/documentation/avada-documentation/&quot;&gt;Avada Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/user/ThemeFusionVideos/videos&quot;&gt;Avada Video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=63M5EluEKcg&quot;&gt;One Page Site using Avada Wordpress Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ithemes.com&quot;&gt;Avada Fusion Slider&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bMXC3Wm5wG4&quot;&gt;Revolution Slider Tutorial using Theme Avada&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/&quot;&gt;How To Make Custom CSS Changes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -101,6 +118,14 @@ Guide&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/&quot;&gt;How to Install WordPress Manually on Plesk Parallels&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress&quot;&gt;Enabling Pretty Permalinks in WordPress&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows&quot;&gt;Pretty Permalinks with Plesk for Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;etc&quot;&gt;ETC&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://generatewp.com&quot;&gt;https://generatewp.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://codex.wordpress.org&quot;&gt;WordPress Codex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/twittem/wp-bootstrap-navwalker&quot;&gt;wp-bootstrap-navwalker&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
 <category term="wordpress" />
