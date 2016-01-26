@@ -4,7 +4,7 @@ title: All about Wordpress
 tags: [wordpress ]
 permalink: wordpress
 # --- option ---
-update_date: 2016-12-26
+update_date: 2016-01-26
 ---
 
 # Docker + Wordpress
