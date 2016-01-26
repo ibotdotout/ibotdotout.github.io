@@ -15,6 +15,8 @@ Guide](https://warun.in.th/64-wordpress-local-development-with-docker-installati
 
 <!-- more -->
 ### Wordpress Guide
+* [Getting Started with WordPress](https://ithemes.com/publishing/getting-started-with-wordpress/)
+* [WordPress Theme with Bootstrap 3 วิดีโอสอนภาษาไทย](http://cloudcourse.io/course/wordpress-theme-and-bootstrap-3/)
 * [9 สิ่งที่ต้องทำ หลังการติดตั้ง WordPress](http://www.wpthaiuser.com/wordpress-basic-set-up/)
 * [ใช้งาน WordPress กับ CloudFlare](https://warun.in.th/7-ใช้งาน-wordpress-กับ-cloudflare)
 * [10 ข้อผิดพลาดที่มือใหม่ชอบทำใน WORDPRESS](http://www.modifywordpress.com/wordpress/10-ข้อผิดพลาดที่มือใหม่ช/)
@@ -46,6 +48,9 @@ Guide](https://warun.in.th/64-wordpress-local-development-with-docker-installati
 * [20 Plugin WordPress สำหรับปี 2015](http://kopkap.in.th/20-plugin-wordpress-2015.html)
 * [แนะนำ ปลั๊กอิน WordPress ฟรี ! ยอดนิยม 2015](http://www.techiosoft.com/best-wordpress-plugins/)
 * [รวมปลั๊กอิน WordPress ที่ผมใช้บนบล็อกนี้](http://jirayu.in.th/2013/08/รวมปลั๊กอิน-wordpress-ที่ผมใช้บน/)
+* [5 Best Drag and Drop WordPress Page Builders Compared](http://www.wpbeginner.com/beginners-guide/best-drag-and-drop-page-builders-for-wordpress/)
+* [10 FANTASTIC DRAG AND DROP PAGE BUILDERS FOR WORDPRESS WORTH CHECKING
+OUT](https://premium.wpmudev.org/blog/10-drag-and-drop-page-builders-wordpress/)
 * [Backup Buddy](http://pluginbuddy.com/purchase/backupbuddy/)
 * [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
 * [UpdraftPlus Backup/Restore](https://wordpress.org/plugins/updraftplus/)
@@ -61,15 +66,32 @@ Guide](https://warun.in.th/64-wordpress-local-development-with-docker-installati
 * [ADDING CUSTOM IMAGES SIZES TO THE WORDPRESS MEDIA LIBRARY](http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/)
 * [How Can I Change a Thumbnail Size in WordPress? : WordPress Lessons](https://www.youtube.com/watch?v=J7M4RMpY55c)
 * [How to Easily Replace Image and Media Files in WordPress](http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/)
+* [How to put WordPress in maintenance mode Under Construction Wordpress
+Coming Soon Page](https://www.youtube.com/watch?v=Kj7k1iFcUxM)
 
 
 ### Avada Theme
+* [Quick Guided Tour of Avada](https://www.youtube.com/watch?v=dn6g_gJDAIk)
+* [Avada Wordpress Theme Review 2015](https://www.youtube.com/watch?v=IE_uTEoyylM)
+* [ทำไม Avada WordPress theme ถึงเป็น premium WordPress theme
+ที่ฮิตมากที่สุด](http://www.jirawatisme.com/resources/avada-wordpress-theme/)
 * [Why You Should Avoid Avada](http://wearnhardt.com/why-you-should-avoid-avada/)
 * [How To Install Avada Via FTP](https://theme-fusion.com/videos/install-avada-via-ftp/)
 * [25 Stunning Examples of Avada — ThemeForest’s Most Popular WordPress Theme — In Action](http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/)
+* [Page Layouts using Wordpress Avada Theme](https://www.youtube.com/watch?v=0wgJvbkzYsg)
+* [Avada Documentation](https://theme-fusion.com/support/documentation/avada-documentation/)
+* [Avada Video](https://www.youtube.com/user/ThemeFusionVideos/videos)
+* [One Page Site using Avada Wordpress Theme](https://www.youtube.com/watch?v=63M5EluEKcg)
+* [Avada Fusion Slider](https://ithemes.com)
+* [Revolution Slider Tutorial using Theme Avada](https://www.youtube.com/watch?v=bMXC3Wm5wG4)
 * [How To Make Custom CSS Changes](https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/)
 
 ### Wordpress on Plesk
 * [How to Install WordPress Manually on Plesk Parallels](http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/)
 * [Enabling Pretty Permalinks in WordPress](http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress)
 * [Pretty Permalinks with Plesk for Windows](https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows)
+
+### ETC
+* <https://generatewp.com>
+* [WordPress Codex](http://codex.wordpress.org)
+* [wp-bootstrap-navwalker](wp-bootstrap-navwalker)
