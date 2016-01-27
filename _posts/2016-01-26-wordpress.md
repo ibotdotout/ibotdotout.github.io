@@ -16,6 +16,7 @@ Guide](https://warun.in.th/64-wordpress-local-development-with-docker-installati
 <!-- more -->
 ### Wordpress Guide
 * [Getting Started with WordPress](https://ithemes.com/publishing/getting-started-with-wordpress/)
+* [WP101-102 การใช้งาน WordPress เบื้องต้นทั้งหมด](https://www.skilllane.com/courses/wordpress-for-beginners)
 * [WordPress Theme with Bootstrap 3 วิดีโอสอนภาษาไทย](http://cloudcourse.io/course/wordpress-theme-and-bootstrap-3/)
 * [9 สิ่งที่ต้องทำ หลังการติดตั้ง WordPress](http://www.wpthaiuser.com/wordpress-basic-set-up/)
 * [ใช้งาน WordPress กับ CloudFlare](https://warun.in.th/7-ใช้งาน-wordpress-กับ-cloudflare)
