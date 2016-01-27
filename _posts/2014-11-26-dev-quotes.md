@@ -42,3 +42,9 @@ minutes, but you can't search Google to balance individual desire -
 
 * Keep your personal emotions out of it. These people invest in results,
 not dreams. - Rise of the Planet of the Apes
+
+* ความอดทนต่อสถานการณ์ต่างหาก ที่นำอิสรภาพมาให้ - [ในวันที่เผลอมองว่าชีวิต "ไม่เป็นดังใจ"](https://storylog.co/story/55362b8e95099c580df8db1d)
+
+* ทำให้มันเสร็จ ทำให้มันดี ทำให้มันเนี้ยบ ทำให้สุด - [Thai Robotics Team - เป็นแชมป์หุ่นยนต์แล้วไปไหน](https://www.youtube.com/watch?v=YKLXDWiWNCY)
+
+* Impossible just a little longer - the Lexus hover board
