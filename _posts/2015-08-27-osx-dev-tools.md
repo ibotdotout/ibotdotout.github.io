@@ -25,6 +25,14 @@ $ brew install caskroom/cask/brew-cas
 $ brew tap caskroom/fonts
 ```
 
+- [homebrew-rmtree](https://github.com/beeftornado/homebrew-rmtree) - [Uninstall / remove a Homebrew package including all its
+dependencies](http://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies)
+
+```sh
+$ brew tap beeftornado/rmtree && brew install brew-rmtree
+$ brew rmtree <package>
+```
+
 ### Developer Tools
 
 - [iTerm2 - Mac OS Terminal Replacement](http://iterm2.com)
