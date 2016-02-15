@@ -190,6 +190,9 @@
         &middot;
         <a href="/docker/index.html#disqus_thread" data-disqus-identifier="/docker"></a>
         
+          &middot;
+          Updated February 10, 2016
+        
       
   </span>
 
@@ -253,6 +256,8 @@ docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> 
 <h3 id="remove-lt-none-gt-images">Remove &lt; none &gt; images</h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># if space full in docker engine</span>
 <span class="nv">$ </span>docker rmi <span class="k">$(</span>docker images <span class="p">|</span> grep <span class="s1">&#39;&lt;none&gt;&#39;</span> <span class="p">|</span> tr -s <span class="s1">&#39; &#39;</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f 3<span class="k">)</span>
+<span class="c"># or</span>
+<span class="nv">$ </span>docker images -a <span class="p">|</span> grep none <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span> <span class="p">|</span> xargs docker rmi -f
 </code></pre></div>
 <h3 id="fix-repositoryalready-being-pulled">Fix Repositoryalready being pulled</h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># $ dokcer pull &lt;images&gt;</span>
@@ -385,7 +390,6 @@ $ pip install -U docker-compose
 <li><a href="http://www.centurylinklabs.com/optimizing-docker-images/?hvid=2b3AmY">MAKING DOCKER IMAGES SMALLER</a></li>
 <li><a href="http://blog.docker.com/2013/07/docker-desktop-your-desktop-over-ssh-running-inside-of-a-docker-container/">DOCKER DESKTOP</a> - <a href="https://github.com/rogaha/docker-desktop">Github</a></li>
 <li><a href="https://registry.hub.docker.com/u/michaelneale/jenkins-docker-executors/dockerfile/">jenkins-docker-executors</a></li>
-<li><a href="https://github.com/jpetazzo/dind">Docker-in-Docker</a></li>
 <li><a href="http://blog.stefanxo.com/2014/02/clean-up-after-docker/">Clean up after Docker</a></li>
 <li><a href="http://viget.com/extend/how-to-use-docker-on-os-x-the-missing-guide">How to Use Docker on OS X: The Missing Guide</a></li>
 <li><a href="http://www.slideshare.net/winggundamth/introduction-to-docker-40139950">introduction-to-docker</a></li>
@@ -398,6 +402,23 @@ $ pip install -U docker-compose
 <li><a href="http://blog.heavybit.com/blog/2015/3/23/dockermeetup">The Realities of Docker in Production</a></li>
 <li><a href="http://docs.docker.com/installation/mac/#migrate-from-boot2docker">Docker Toolbox - Migrate from Boot2Docker</a></li>
 <li><a href="http://www.slideshare.net/ruoshiling/how-to-deploy-php-projects-with-docker">How to deploy PHP projects with docker</a></li>
+<li><a href="http://layer0.authentise.com/docker-4-useful-tips-you-may-not-know-about.html">Docker: 4 useful tips, you may not know about</a></li>
+<li><a href="http://www.iron.io/microcontainers-tiny-portable-containers/">Microcontainers – Tiny, Portable Docker
+Containers</a></li>
+<li><a href="https://jpetazzo.github.io/assets/2015-03-03-not-so-deep-dive-into-docker-storage-drivers.html#1">Deep dive into Docker storage drivers</a></li>
+<li><a href="http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/">Refactoring a Dockerfile for image size</a></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>apt-get install -y --no-install-recommends &lt;packages&gt;
+</code></pre></div>
+<ol>
+<li><a href="https://github.com/wsargent/docker-cheat-sheet">Docker Cheat Sheet</a></li>
+<li><a href="https://github.com/jpetazzo/dind">Docker-in-Docker</a></li>
+<li><a href="http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">Using Docker-in-Docker for your CI or testing environment? Think twice.</a></li>
+<li><a href="https://www.brianchristner.io/how-to-scale-a-docker-container-with-docker-compose/">How to scale Docker Containers with
+Docker-Compose</a></li>
+<li><a href="http://jpetazzo.github.io/2015/01/19/dockerfile-and-data-in-volumes/">Putting data in a volume in a Dockerfile</a></li>
+<li><a href="https://www.youtube.com/watch?v=LmUw2H6JgJo">Best practices for building secure Docker images</a></li>
+<li><a href="http://www.slideshare.net/jpetazzo/anatomy-of-a-container-namespaces-cgroups-some-filesystem-magic-linuxcon">Anatomy of a Container: Namespaces, cgroups &amp; Some Filesystem Magic - LinuxCon</a></li>
 </ol>
 
 </div>
