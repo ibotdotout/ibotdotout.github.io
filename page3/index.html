@@ -186,6 +186,49 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/text-processing">
+        Text Processing in Shell
+      </a>
+    </h1>
+
+    <span class="post-date">
+      17 Oct 2015
+      
+        &middot;
+        <a href="/text-processing#disqus_thread" data-disqus-identifier="/text-processing"></a>
+        
+      
+    </span>
+
+    
+      <blockquote>
+<p>Most of example come from problem in <a href="https://www.hackerrank.com/domains/shell/bash">Linux Shell - Hackerrank</a>
+<a href="http://tldp.org/LDP/abs/html/textproc.html">Text Processing Commands</a></p>
+</blockquote>
+
+<h2 id="sed">Sed</h2>
+
+<blockquote>
+<p>Trip:<br>
+<code>sed</code> in OSX may not working as example. You should try <code>gsed</code>.<br>
+<code>gsed</code> can install via brew and call <code>gsed</code> instead of <code>sed</code>  </p>
+</blockquote>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>cat in
+<span class="m">1234</span> <span class="m">5678</span> <span class="m">9101</span> <span class="m">1234</span>  
+<span class="m">2999</span> <span class="m">5178</span> <span class="m">9101</span> <span class="m">2234</span>  
+<span class="nv">$ </span>sed -re <span class="s1">&#39;s/([0-9]{4}\s){3}/**** **** **** /&#39;</span> in
+**** **** **** <span class="m">1234</span>  
+**** **** **** <span class="m">2234</span>  
+</code></pre></div>
+
+      <div style="text-align:right;">
+        <a href="/text-processing" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/opengraph">
         Sharing with Open Graph
       </a>
@@ -333,42 +376,6 @@ programmer,” soon your brain will believe you.</p>
 
       <div style="text-align:right;">
         <a href="/fp-python" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/startup">
-        Start Up
-      </a>
-    </h1>
-
-    <span class="post-date">
-      01 Oct 2015
-      
-        &middot;
-        <a href="/startup#disqus_thread" data-disqus-identifier="/startup"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="book">Book</h2>
-
-<ol>
-<li><a href="http://www.amazon.com/The-Alchemist-Paulo-Coelho/dp/0061122416">Alchemist Novel</a> - <a href="https://www.se-ed.com/product/%E0%B8%82%E0%B8%B8%E0%B8%A1%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%9E%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%9D%E0%B8%B1%E0%B8%99.aspx?no=9786160421701">ขุมทรัพย์ที่ปลายฝัน</a></li>
-</ol>
-
-<h2 id="series">Series</h2>
-
-<ol>
-<li><a href="http://www.hbo.com/silicon-valley/about/video/trailer.html">Silicon Valley (TV series)</a></li>
-</ol>
-
-
-      <div style="text-align:right;">
-        <a href="/startup" style="color:#000;"> Read More </a>
       </div>
     
   </div>

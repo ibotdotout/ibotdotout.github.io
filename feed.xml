@@ -3,12 +3,103 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-02-15T16:13:59+00:00</updated>
+<updated>2016-03-03T17:59:07+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
 <name>botbotbot</name>
 </author>
+<entry>
+<title>Reduce docker image size</title>
+<link href="http://dev.im-bot.com//docker-reduce-image-size" rel="alternate" type="text/html" title="Reduce docker image size" />
+<published>2016-03-03T00:00:00+00:00</published>
+<updated>2016-03-03T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//docker-reduce-image-size</id>
+<content type="html" xml:base="http://dev.im-bot.com//docker-reduce-image-size">&lt;p&gt;that can help your to portable your contain
+across network, save bandwidth and storage, faster to scale.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-using-alpine-base-image-when-possible&quot;&gt;1. Using &lt;a href=&quot;https://hub.docker.com/_/alpine/&quot;&gt;alpine&lt;/a&gt; base image when possible&lt;/h2&gt;
+
+&lt;p&gt;It is minimal Docker image based on Alpine Linux that only 5 MB in size.
+You can install packages with &lt;code&gt;apk add --update &amp;lt;pakckages&amp;gt;&lt;/code&gt; command and
+you can check packages that avaible on &lt;a href=&quot;https://pkgs.alpinelinux.org/packages&quot;&gt;alpine packages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;debian-ubuntu-vs-alpine&quot;&gt;Debian/Ubuntu vs Alpine&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/nginx/&quot;&gt;Nginx based on debian&lt;/a&gt; 135 MB vs 13 MB &lt;a href=&quot;https://hub.docker.com/r/smebberson/alpine-nginx/&quot;&gt;alpine-nginx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/node/&quot;&gt;Node based on debian&lt;/a&gt; 644 MB vs 36.76 MB &lt;a href=&quot;https://hub.docker.com/r/mhart/alpine-node/&quot;&gt;alpine-node&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can see how smallest alpine based image are.
+However alpine based is new born linux that not contain much packages as
+older linux like debian/ubuntu. There are some compiled packages and
+some that your have to compile with your own.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;2-using-apt-get-with-no-install-recommends-option-on-debian-ubuntu-image&quot;&gt;2. Using &lt;code&gt;apt-get&lt;/code&gt; with &lt;code&gt;--no-install-recommends&lt;/code&gt; option on Debian/Ubuntu Image&lt;/h2&gt;
+
+&lt;p&gt;with this option, &lt;a href=&quot;http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/&quot;&gt;Marc Campbell&lt;/a&gt; can drop ~120MB for &lt;code&gt;python-pip&lt;/code&gt; and &lt;code&gt;curl&lt;/code&gt; packages
+and I can save ~700MB by using this technique and combine commands on
+&lt;a href=&quot;https://github.com/ibotdotout/docker-predictionio/blob/master/Dockerfile&quot;&gt;docker-predictionio&lt;/a&gt;
+that based on &lt;a href=&quot;https://github.com/sphereie/docker-predictionio/blob/master/Dockerfile&quot;&gt;sphereio/docker-predictionio&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RUN apt-get install -y --no-install-recommends &amp;lt;packages&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;3-combine-commands-to-reduce-layers&quot;&gt;3. Combine commands to reduce layers&lt;/h2&gt;
+
+&lt;p&gt;Example your &lt;code&gt;Dockfile&lt;/code&gt; look like&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RUN apt-get update
+RUN apt-get install -y python-pip
+RUN pip install predictionio
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;should combile commands like this&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RUN apt-get update \
+    &amp;amp;&amp;amp; apt-get install -y python-pip \
+    &amp;amp;&amp;amp; pip install predictionio
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;that reduce image layer and drop iamge size.
+However your should do this when your sure with &lt;code&gt;Dockerfile&lt;/code&gt;
+becuase &lt;code&gt;docker build&lt;/code&gt; will cache a huge layer, you need to rebuild all
+commands if your edit any single one.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-remove-unecessary-packages-files&quot;&gt;4. Remove unecessary packages/files&lt;/h2&gt;
+
+&lt;p&gt;Remove some no longer need packages ex. &lt;code&gt;python-pip&lt;/code&gt; &lt;code&gt;curl&lt;/code&gt; or Any SDK
+or compressed file that your extracted when you finish your
+installation.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Much remove in same layer, remove in another layer not help to reduce
+image size.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RUN apt-get install -y python-pip pyhton-dev \
+    &amp;amp;&amp;amp; pip install predictionio \
+    &amp;amp;&amp;amp; apt-get remove -y python-pip \
+    &amp;amp;&amp;amp; ap-get clean \
+    &amp;amp;&amp;amp; rm -rf /var/lib/apt/lists/*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;5-using-docker-squash-to-make-them-smaller&quot;&gt;5. Using &lt;a href=&quot;https://github.com/jwilder/docker-squash&quot;&gt;docker-squash&lt;/a&gt; to make them smaller&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I not sure about this solution that I can&amp;#39;t complie it on OSX.
+You can read more about &lt;code&gt;docker-squash&lt;/code&gt; in References.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References::&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/alpine/&quot;&gt;Alpine Linux - A minimal Docker image based&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/&quot;&gt;Refactoring a Dockerfile for image size&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jonathan.bergknoff.com/journal/building-good-docker-images&quot;&gt;Building Good Docker Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://layer0.authentise.com/docker-4-useful-tips-you-may-not-know-about.html&quot;&gt;Docker: 4 useful tips, you may not know about&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jwilder/docker-squash&quot;&gt;docker-squash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jasonwilder.com/blog/2014/08/19/squashing-docker-images/&quot;&gt;Squashing Docker Images&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+<category term="docker" />
+<summary>that can help your to portable your containacross network, save bandwidth and storage, faster to scale.1. Using alpine base image when possibleIt is minimal Docker image based on Alpine Linux that only 5 MB in size.You can install packages with apk add --update &amp;lt;pakckages&amp;gt; command andyou can check packages that avaible on alpine packages.Debian/Ubuntu vs AlpineNginx based on debian 135 MB vs 13 MB alpine-nginxNode based on debian 644 MB vs 36.76 MB alpine-nodeYou can see how smallest alpine based image are.However alpine based is new born linux that not contain much packages asolder linux like debian/ubuntu. There are some compiled packages andsome that your have to compile with your own.</summary>
+</entry>
 <entry>
 <title>All about Wordpress</title>
 <link href="http://dev.im-bot.com//wordpress" rel="alternate" type="text/html" title="All about Wordpress" />
@@ -882,152 +973,5 @@ You can&amp;#39;t see this message via index.html
 </content>
 <category term="jekyll" />
 <summary>Read more feature on jekyll that working with Github Pages</summary>
-</entry>
-<entry>
-<title>Text Processing in Shell</title>
-<link href="http://dev.im-bot.com//text-processing" rel="alternate" type="text/html" title="Text Processing in Shell" />
-<published>2015-10-17T00:00:00+00:00</published>
-<updated>2015-10-17T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//text-processing</id>
-<content type="html" xml:base="http://dev.im-bot.com//text-processing">&lt;blockquote&gt;
-&lt;p&gt;Most of example come from problem in &lt;a href=&quot;https://www.hackerrank.com/domains/shell/bash&quot;&gt;Linux Shell - Hackerrank&lt;/a&gt;
-&lt;a href=&quot;http://tldp.org/LDP/abs/html/textproc.html&quot;&gt;Text Processing Commands&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;sed&quot;&gt;Sed&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Trip:&lt;br&gt;
-&lt;code&gt;sed&lt;/code&gt; in OSX may not working as example. You should try &lt;code&gt;gsed&lt;/code&gt;.&lt;br&gt;
-&lt;code&gt;gsed&lt;/code&gt; can install via brew and call &lt;code&gt;gsed&lt;/code&gt; instead of &lt;code&gt;sed&lt;/code&gt;  &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
-&lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5678&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;  
-&lt;span class=&quot;m&quot;&gt;2999&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5178&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2234&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sed -re &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/([0-9]{4}\s){3}/**** **** **** /&amp;#39;&lt;/span&gt; in
-**** **** **** &lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;  
-**** **** **** &lt;span class=&quot;m&quot;&gt;2234&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;!-- more --&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
-&lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5678&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;  
-&lt;span class=&quot;m&quot;&gt;2999&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5178&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2234&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sed -r &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/([0-9]{4}\s?)([0-9]{4}\s?)([0-9]{4}\s?)([0-9]{4})/\4&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;\3\2\1/&amp;#39;&lt;/span&gt; in
-&lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5678&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1234&lt;/span&gt;  
-&lt;span class=&quot;m&quot;&gt;2234&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5178&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2999&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
-hello cat meow meow Cat Cat caT love cAt
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sed -e &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/cat/{\0}/gi&amp;#39;&lt;/span&gt; in
-hello &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;cat&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; meow meow &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Cat&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Cat&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;caT&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; love &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;cAt&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
-hello cat meow meow Cat Cat caT love cAt
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sed -e &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/cat/dog/gi&amp;#39;&lt;/span&gt; in
-hello dog meow meow dog dog dog love dog
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.grymoire.com/Unix/Sed.html&quot;&gt;Sed - An Introduction and Tutorial by Bruce Barnett&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://tldp.org/LDP/abs/html/x23170.html&quot;&gt;Advanced Bash-Scripting Guide: Sed&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html&quot;&gt;Sed Command in Unix and Linux Examples&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/&quot;&gt;Unix Sed Tutorial: Advanced Sed Substitution Examples&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2232200/regular-expression-in-sed-for-masking-credit-card&quot;&gt;regular expression in sed for masking credit card&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/sed/manual/sed.html&quot;&gt;sed, a stream editor&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux&quot;&gt;The Basics of Using the Sed Stream Editor to Manipulate Text in Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/articles/intermediate-sed-manipulating-streams-of-text-in-a-linux-environment&quot;&gt;Intermediate Sed: Manipulating Streams of Text in a Linux Environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.tutorialspoint.com/unix/unix-regular-expressions.htm&quot;&gt;Unix - Regular Expressions with SED&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2009/11/unix-sed-tutorial-append-insert-replace-and-count-file-lines/&quot;&gt;Unix Sed Tutorial: Append, Insert, Replace, and Count File Lines&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.shellhacks.com/en/Add-Character-to-the-Beginning-or-to-the-End-of-Each-Line-using-AWK-and-SED&quot;&gt;Add Character to the Beginning or to the End of Each Line using AWK and SED&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/sed/manual/sed.html&quot;&gt;sed, a stream editor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://docstore.mik.ua/orelly/unix/sedawk/index.htm&quot;&gt;Sed &amp;amp; Awk Book&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html&quot;&gt;Overview of Regular Expression Syntax&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;awk&quot;&gt;Awk&lt;/h2&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
-A &lt;span class=&quot;m&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;27&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;  
-B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
-C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt;  
-D &lt;span class=&quot;m&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;88&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;76&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{ if ($4 ==&amp;quot;&amp;quot;) print &amp;quot;Not all scores are available for&amp;quot;,$1; }&amp;#39;&lt;/span&gt; in
-Not all scores are available &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; B
-Not all scores are available &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; C
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
-B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
-C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $1,&amp;quot;:&amp;quot;,($4 &amp;gt;= 50 &amp;amp;&amp;amp; $2 &amp;gt;= 50 &amp;amp;&amp;amp; $3 &amp;gt;= 50)?&amp;quot;Pass&amp;quot;:&amp;quot;Fail&amp;quot;}&amp;#39;&lt;/span&gt; in
-B : Fail
-C : Pass
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
-B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
-C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{ score=($2+$3+$3)/3; \&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;if (score &amp;gt;= 80) grade = &amp;quot;A&amp;quot;; \&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;else if (score &amp;gt;= 60) grade = &amp;quot;B&amp;quot;; \&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;else if(score &amp;gt;= 50) grade= &amp;quot;C&amp;quot;; \&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;else grade = &amp;quot;FAIL &amp;quot;; \&lt;/span&gt;
-&lt;span class=&quot;s1&quot;&gt;print $0,&amp;quot;:&amp;quot;,grade }&amp;#39;&lt;/span&gt;
-B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; : FAIL
-C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt; : B
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;cat in
-A &lt;span class=&quot;m&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;27&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;  
-B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
-C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;  
-D &lt;span class=&quot;m&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;88&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;76&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;ORS=NR%2?&amp;quot;;&amp;quot;:&amp;quot;\n&amp;quot;&amp;#39;&lt;/span&gt; in
-A &lt;span class=&quot;m&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;27&lt;/span&gt; 50&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;B &lt;span class=&quot;m&quot;&gt;35&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;37&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt;  
-C &lt;span class=&quot;m&quot;&gt;75&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;78&lt;/span&gt; 80&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;D &lt;span class=&quot;m&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;88&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;76&lt;/span&gt;  
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://ferd.ca/awk-in-20-minutes.html&quot;&gt;Awk in 20 Minutes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/&quot;&gt;Awk Introduction Tutorial – 7 Awk Print Examples&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2010/02/awk-conditional-statements/&quot;&gt;4 Awk If Statement Examples ( if, if else, if else if, :?)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.linuxnix.com/awk-scripting-how-to-define-awk-variables/&quot;&gt;AWK Scripting: How to define awk variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/&quot;&gt;8 Powerful Awk Built-in Variables – FS, OFS, RS, ORS, NR, NF, FILENAME, FNR&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;grep&quot;&gt;Grep&lt;/h2&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;grep -o text &lt;span class=&quot;c&quot;&gt;# show only match&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/1898578&quot;&gt;Return a regex match in a BASH script, instead of replacing it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.robelle.com/smugbook/regexpr.html&quot;&gt;Grep and Regex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://unix.stackexchange.com/questions/70933/regular-expression-for-finding-double-characters-in-bash&quot;&gt;Regular Expression for finding double characters in Bash&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/&quot;&gt;15 Practical Grep Command Examples In Linux / UNIX&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;paste&quot;&gt;Paste&lt;/h2&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;paste file1 file2
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;paste -d, file1 file2
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;paste -s file1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/12361977/how-to-join-columns-of-two-files-in-unix-system&quot;&gt;How to join columns of two files in unix system&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html&quot;&gt;10 examples of paste command usage in
-Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://unix.stackexchange.com/questions/115754/paste-command-setting-multiple-delimiters&quot;&gt;paste command: setting (multiple) delimiters&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;bash-substring&quot;&gt;Bash Substring&lt;/h3&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# $ {var::-1}&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;123
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;${a::-1}&amp;quot;&lt;/span&gt;
-12
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;reference&quot;&gt;Reference:&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://unix.stackexchange.com/questions/144298/delete-the-last-character-of-a-string-using-string-manipulation-in-shell-script&quot;&gt;Substring in bash&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-<category term="unix" />
-<summary>Collection example of text processing in shell</summary>
 </entry>
 </feed>
