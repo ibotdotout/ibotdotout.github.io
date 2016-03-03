@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://dev.im-bot.com/docker-reduce-image-size/" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="that can help your to portable your containacross network, save bandwidth and storage, faster to scale.1. Using alpine base image when possibleIt is minimal ..." />
+<meta property="og:description" content="Reduce Docker image size can help your to portable your containacross network, save bandwidth and storage, faster to scale.1. Using alpine base image when po..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -196,13 +196,13 @@
       
   </span>
 
-  <p>that can help your to portable your contain
+  <p>Reduce Docker image size can help your to portable your contain
 across network, save bandwidth and storage, faster to scale.</p>
 
 <h2 id="1-using-alpine-base-image-when-possible">1. Using <a href="https://hub.docker.com/_/alpine/">alpine</a> base image when possible</h2>
 
-<p>It is minimal Docker image based on Alpine Linux that only 5 MB in size.
-You can install packages with <code>apk add --update &lt;pakckages&gt;</code> command and
+<p>It is minimal Docker image based on Alpine Linux that only 5 MB.
+You can install packages with <code>apk add --update &lt;pakckages&gt;</code> and
 you can check packages that avaible on <a href="https://pkgs.alpinelinux.org/packages">alpine packages</a>.</p>
 
 <h3 id="debian-ubuntu-vs-alpine">Debian/Ubuntu vs Alpine</h3>
@@ -212,7 +212,7 @@ you can check packages that avaible on <a href="https://pkgs.alpinelinux.org/pac
 <li><a href="https://hub.docker.com/_/node/">Node based on debian</a> 644 MB vs 36.76 MB <a href="https://hub.docker.com/r/mhart/alpine-node/">alpine-node</a></li>
 </ul>
 
-<p>You can see how smallest alpine based image are.
+<p>You can see how small alpine based image are.
 However alpine based is new born linux that not contain much packages as
 older linux like debian/ubuntu. There are some compiled packages and
 some that your have to compile with your own.</p>
@@ -239,15 +239,15 @@ RUN pip install predictionio
     &amp;&amp; apt-get install -y python-pip \
     &amp;&amp; pip install predictionio
 </code></pre></div>
-<p>that reduce image layer and drop iamge size.
+<p>that reduce image layer and image size.
 However your should do this when your sure with <code>Dockerfile</code>
 becuase <code>docker build</code> will cache a huge layer, you need to rebuild all
 commands if your edit any single one.</p>
 
 <h2 id="4-remove-unecessary-packages-files">4. Remove unecessary packages/files</h2>
 
-<p>Remove some no longer need packages ex. <code>python-pip</code> <code>curl</code> or Any SDK
-or compressed file that your extracted when you finish your
+<p>Remove some no longer need packages ex. <code>python-pip</code> <code>curl</code> Any SDK
+and compressed file that your extracted when you finish your
 installation.</p>
 
 <blockquote>
