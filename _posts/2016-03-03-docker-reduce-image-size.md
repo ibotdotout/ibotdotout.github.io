@@ -3,23 +3,22 @@ layout: post
 title: Reduce docker image size
 tags: [docker]
 permalink: docker-reduce-image-size
-# --- option ---
 update_date: 2016-03-03
 ---
 
-that can help your to portable your contain
+Reduce Docker image size can help your to portable your contain
 across network, save bandwidth and storage, faster to scale.
 
 ## 1. Using [alpine](https://hub.docker.com/_/alpine/) base image when possible
-It is minimal Docker image based on Alpine Linux that only 5 MB in size.
-You can install packages with `apk add --update <pakckages>` command and
+It is minimal Docker image based on Alpine Linux that only 5 MB.
+You can install packages with `apk add --update <pakckages>` and
 you can check packages that avaible on [alpine packages](https://pkgs.alpinelinux.org/packages).
 
 ### Debian/Ubuntu vs Alpine
 * [Nginx based on debian](https://hub.docker.com/_/nginx/) 135 MB vs 13 MB [alpine-nginx](https://hub.docker.com/r/smebberson/alpine-nginx/)
 * [Node based on debian](https://hub.docker.com/_/node/) 644 MB vs 36.76 MB [alpine-node](https://hub.docker.com/r/mhart/alpine-node/)
 
-You can see how smallest alpine based image are.
+You can see how small alpine based image are.
 However alpine based is new born linux that not contain much packages as
 older linux like debian/ubuntu. There are some compiled packages and
 some that your have to compile with your own.
@@ -55,7 +54,7 @@ RUN apt-get update \
     && pip install predictionio
 ```
 
-that reduce image layer and drop iamge size.
+that reduce image layer and image size.
 However your should do this when your sure with `Dockerfile`
 becuase `docker build` will cache a huge layer, you need to rebuild all
 commands if your edit any single one.
@@ -63,8 +62,8 @@ commands if your edit any single one.
 
 ## 4. Remove unecessary packages/files
 
-Remove some no longer need packages ex. `python-pip` `curl` or Any SDK
-or compressed file that your extracted when you finish your
+Remove some no longer need packages ex. `python-pip` `curl` Any SDK
+and compressed file that your extracted when you finish your
 installation.
 
 > Much remove in same layer, remove in another layer not help to reduce
