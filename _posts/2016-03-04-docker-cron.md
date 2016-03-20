@@ -7,21 +7,20 @@ permalink: docker-cron
 update_date: 2016-03-04
 ---
 
-You can start cron following [Run a cron job with Docker](https://www.ekito.fr/people/run-a-cron-job-with-docker/)
+You can start `crontab` following [Run a cron job with Docker](https://www.ekito.fr/people/run-a-cron-job-with-docker/)
 just put `crontab` in `/etc/cron.d/` and run `cron` for making it working.
 
 <!-- more -->
 
-However when you try something that complex than `echo "hello world` sometimes it just not working and you don't know why!!!
+However when you try something that complex than `echo "hello world"` sometimes it just not working and you don't know why!!!
 You had alreay tried to run your script that working on your linux but no idea why not working on your docker.
 
 [rozkosz](http://stackoverflow.com/a/26958348) said:
 
-    > Several issues that I faced while trying to get a cron job running in a docker container were:
-    >
-    > 1. time in the docker container is in UTC not local time;
-    > 2. the docker environment is not passed to cron;
-    > 3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
+     Several issues that I faced while trying to get a cron job running in a docker container were:
+     1. time in the docker container is in UTC not local time;
+     2. the docker environment is not passed to cron;
+     3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
 
 
 I think the problem that most people face is `cron` not run your script with same environment as your docker in terminal.
@@ -29,17 +28,20 @@ You need to export your Docker environment to your `cron` that I found solution 
 You can following this for simple solution:
 
 
-1. In Dockerfile, export Docker environment to /root/env.txt
+1. In `Dockerfile`, export Docker environment to /root/env.txt
+
   ```sh
   CMD env > /root/env.txt && cron && your_init_script
   ```
-2. In your crontab file, You need to to import your Docker environment before run your script
+
+2. In your `crontab` file, You need to to import your Docker environment before run your script
 
   ```sh
   */5 * * * *  root env - `cat /root/env.txt`  your_scipt  >> /var/log/cron.log 2>&1
   # An empty line is required at the end of this file for a valid cron file.
   ```
-3. Test it. Your Should put `date` in your script and `cat /var/log/cron.log` to see your results.
+
+3. Test it. Your should put `date` in your script for debug and then `cat /var/log/cron.log` to see your results.
 
 For the local timezone problem your can setup your Dockerfile following this
 
