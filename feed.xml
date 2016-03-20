@@ -3,12 +3,93 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-03-03T18:13:04+00:00</updated>
+<updated>2016-03-20T11:56:53+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
 <name>botbotbot</name>
 </author>
+<entry>
+<title>Crontab on Docker</title>
+<link href="http://dev.im-bot.com//docker-cron" rel="alternate" type="text/html" title="Crontab on Docker" />
+<published>2016-03-04T00:00:00+00:00</published>
+<updated>2016-03-04T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//docker-cron</id>
+<content type="html" xml:base="http://dev.im-bot.com//docker-cron">&lt;p&gt;You can start cron following &lt;a href=&quot;https://www.ekito.fr/people/run-a-cron-job-with-docker/&quot;&gt;Run a cron job with Docker&lt;/a&gt;
+just put &lt;code&gt;crontab&lt;/code&gt; in &lt;code&gt;/etc/cron.d/&lt;/code&gt; and run &lt;code&gt;cron&lt;/code&gt; for making it working.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;However when you try something that complex than &lt;code&gt;echo &amp;quot;hello world&lt;/code&gt; sometimes it just not working and you don&amp;#39;t know why!!!
+You had alreay tried to run your script that working on your linux but no idea why not working on your docker.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/26958348&quot;&gt;rozkosz&lt;/a&gt; said:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&amp;gt; Several issues that I faced while trying to get a cron job running in a docker container were:
+&amp;gt;
+&amp;gt; 1. time in the docker container is in UTC not local time;
+&amp;gt; 2. the docker environment is not passed to cron;
+&amp;gt; 3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I think the problem that most people face is &lt;code&gt;cron&lt;/code&gt; not run your script with same environment as your docker in terminal.
+You need to export your Docker environment to your &lt;code&gt;cron&lt;/code&gt; that I found solution from &lt;a href=&quot;https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/&quot;&gt;postgres-s3-backup Dockerfile&lt;/a&gt;.
+You can following this for simple solution:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In Dockerfile, export Docker environment to /root/env.txt
+&lt;code&gt;sh
+CMD env &amp;gt; /root/env.txt &amp;amp;&amp;amp; cron &amp;amp;&amp;amp; your_init_script
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In your crontab file, You need to to import your Docker environment before run your script&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;  */5 * * * *  root env - &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;cat /root/env.txt&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;  your_scipt  &amp;gt;&amp;gt; /var/log/cron.log 2&amp;gt;&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;1
+  &lt;span class=&quot;c&quot;&gt;# An empty line is required at the end of this file for a valid cron file.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Test it. Your Should put &lt;code&gt;date&lt;/code&gt; in your script and &lt;code&gt;cat /var/log/cron.log&lt;/code&gt; to see your results.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For the local timezone problem your can setup your Dockerfile following this&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Debian/Linux Setting timezone&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt; &lt;span class=&quot;c&quot;&gt;# Set the time zone to the local time zone&lt;/span&gt;
+ RUN &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Asia/Bangkok&amp;quot;&lt;/span&gt; &amp;gt; /etc/timezone &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; dpkg-reconfigure --frontend noninteractive tzdata
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://wiki.alpinelinux.org/wiki/Setting_the_timezone&quot;&gt;Alpine Setting the timezone&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Alpine Linux&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# set bangkok time&lt;/span&gt;
+USEo root
+RUN apk add --update tzdata &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Asia/Bangkok&amp;quot;&lt;/span&gt; &amp;gt;  /etc/timezone &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apk del tzdata &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; mv /etc/localtime /usr/share/zoneinfo/Asia/Bangkok
+
+&lt;span class=&quot;c&quot;&gt;# or&lt;/span&gt;
+USER root
+RUN apk add --update tzdata
+ENV &lt;span class=&quot;nv&quot;&gt;TZ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Asia/Bangkok
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/25130291&quot;&gt;Will docker container auto sync time with the host machine?&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run -it -v /etc/localtime:/etc/localtime:ro &amp;lt; image &amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/26822067/running-cron-python-jobs-within-docker/26958348#26958348&quot;&gt;Running cron python jobs within docker&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.ekito.fr/people/run-a-cron-job-with-docker/&quot;&gt;Run a cron job with Docker&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/26958348&quot;&gt;Running cron python jobs within docker&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Alexis-benoist/docker-cron-example&quot;&gt;docker-cron-example&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/aptible/docker-cron-example&quot;&gt;Example implementation of cron jobs on Docker/Aptible&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/&quot;&gt;Example of Cron&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://serverfault.com/a/84545&quot;&gt;PATH in crontab&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+<category term="docker" />
+<summary>You can start cron following Run a cron job with Dockerjust put crontab in /etc/cron.d/ and run cron for making it working.</summary>
+</entry>
 <entry>
 <title>Reduce docker image size</title>
 <link href="http://dev.im-bot.com//docker-reduce-image-size" rel="alternate" type="text/html" title="Reduce docker image size" />
@@ -916,62 +997,5 @@ You should convert that file from tis-620 to utf-8 which make it readable on osx
 </content>
 <category term="osx" />
 <summary>Covert file from windows that encoded with TIS-620 to UTF-8 for readable in OSX.</summary>
-</entry>
-<entry>
-<title>Read more feature on jekyll</title>
-<link href="http://dev.im-bot.com//read-more-jekyll" rel="alternate" type="text/html" title="Read more feature on jekyll" />
-<published>2015-10-18T00:00:00+00:00</published>
-<updated>2015-10-18T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//read-more-jekyll</id>
-<content type="html" xml:base="http://dev.im-bot.com//read-more-jekyll">&lt;blockquote&gt;
-&lt;p&gt;Github Pages Tips:&lt;br&gt;
-Github Pages always complie jekyll with &lt;code&gt;--safe&lt;/code&gt; option that will&lt;br&gt;
-disable plugins but some plugin can work with Github Pages.&lt;br&gt;
-&lt;a href=&quot;https://help.github.com/articles/using-jekyll-plugins-with-github-pages/&quot;&gt;List of Jekyll Plguins that working on Github &amp;gt; Pages&lt;/a&gt;  &lt;/p&gt;
-
-&lt;p&gt;Easy ways: using &lt;a href=&quot;http://jekyllrb.com/docs/posts/#post-excerpts&quot;&gt;excerpt option of &amp;gt; jekyll&lt;/a&gt;&lt;br&gt;
-&lt;a href=&quot;http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll&quot;&gt;Customized excerpt separator in &amp;gt; Jekyll&lt;/a&gt;  &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Just using &lt;code&gt;truncate&lt;/code&gt; they not checking html tag that make your site look
-terrible and Github Pages not support custom ruby script that place in
-&lt;code&gt;_plugins&lt;/code&gt;. The better way is using split with custom tags.&lt;/p&gt;
-
-&lt;p&gt;Replace &lt;code&gt;{{ post.content }}&lt;/code&gt; in &lt;code&gt;index.html&lt;/code&gt; in jekyll directory with&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raw&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%}&lt;/span&gt;
-&lt;span class=&quot;sx&quot;&gt;    {% if post.content contains &amp;quot;&amp;lt;!-- more --&amp;gt;&amp;quot; %}&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:&amp;quot;&amp;lt;!-- more --&amp;gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;text-align:right;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;{{ post.url }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;color:#000;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Read&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;More&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/a&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;sr&quot;&gt;      &amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%}&lt;/span&gt;
-&lt;span class=&quot;sx&quot;&gt;      {{ post.content }&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%}&lt;/span&gt;
-&lt;span class=&quot;sx&quot;&gt;    {% endraw %}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;!-- more --&gt;
-
-&lt;p&gt;In your contents add &lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;---
-layout: post
-title: Read more feature on jekyll
-tags: [jekyll]
----
-Hello, world
-
-&amp;lt;!-- more --&amp;gt;
-
-You can&amp;#39;t see this message via index.html
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://mikeygee.com/blog/truncate.html&quot;&gt;Truncating blog posts in Jekyll&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://truongtx.me/2013/05/01/jekyll-read-more-feature-without-any-plugin/&quot;&gt;Jekyll - Read More without plugin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/MattHall/truncatehtml&quot;&gt;A Jekyll plugin that truncates HTML while preserving markup structure.&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-<category term="jekyll" />
-<summary>Read more feature on jekyll that working with Github Pages</summary>
 </entry>
 </feed>

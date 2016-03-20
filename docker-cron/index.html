@@ -8,18 +8,18 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Google Compute Engine" />
+  <meta property="og:title" content="Crontab on Docker" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/compute-engine/" />
+<meta property="og:url" content="http://dev.im-bot.com/docker-cron/" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="Open Port On Google Compute EngineGo to cloud.google.comGo to my ConsoleChoose you Project.Choose &quot;Compute Engine&quot;Choose &quot;Networks&quot;Choose..." />
+<meta property="og:description" content="You can start cron following Run a cron job with Dockerjust put crontab in /etc/cron.d/ and run cron for making it working." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Google Compute Engine &middot; botbotbot
+      Crontab on Docker &middot; botbotbot
     
   </title>
 
@@ -183,46 +183,96 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Google Compute Engine</h1>
+  <h1 class="post-title">Crontab on Docker</h1>
   <span class="post-date">
-    28 Jul 2014
+    04 Mar 2016
       
         &middot;
-        <a href="/compute-engine/index.html#disqus_thread" data-disqus-identifier="/compute-engine"></a>
+        <a href="/docker-cron/index.html#disqus_thread" data-disqus-identifier="/docker-cron"></a>
+        
+          &middot;
+          Updated March 04, 2016
         
       
   </span>
 
-  <h2 id="open-port-on-google-compute-engine"><a href="http://stackoverflow.com/questions/21065922/how-to-open-a-specific-port-such-as-9090-in-google-compute-engine">Open Port On Google Compute Engine</a></h2>
+  <p>You can start cron following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
+just put <code>crontab</code> in <code>/etc/cron.d/</code> and run <code>cron</code> for making it working.</p>
+
+<!-- more -->
+
+<p>However when you try something that complex than <code>echo &quot;hello world</code> sometimes it just not working and you don&#39;t know why!!!
+You had alreay tried to run your script that working on your linux but no idea why not working on your docker.</p>
+
+<p><a href="http://stackoverflow.com/a/26958348">rozkosz</a> said:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; Several issues that I faced while trying to get a cron job running in a docker container were:
+&gt;
+&gt; 1. time in the docker container is in UTC not local time;
+&gt; 2. the docker environment is not passed to cron;
+&gt; 3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
+</code></pre></div>
+<p>I think the problem that most people face is <code>cron</code> not run your script with same environment as your docker in terminal.
+You need to export your Docker environment to your <code>cron</code> that I found solution from <a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/">postgres-s3-backup Dockerfile</a>.
+You can following this for simple solution:</p>
 
 <ol>
-<li>Go to cloud.google.com</li>
-<li>Go to my Console</li>
-<li>Choose you Project.</li>
-<li>Choose &quot;Compute Engine&quot;</li>
-<li>Choose &quot;Networks&quot;</li>
-<li>Choose the interface for you Instances.</li>
-<li>In firewalls section, Go to Create New.</li>
-<li>Create your rule, in this case &quot;Protocols &amp; Ports&quot; would be &quot;tcp:9090&quot; i guess.</li>
-<li>Save.</li>
+<li>In Dockerfile, export Docker environment to /root/env.txt
+<code>sh
+CMD env &gt; /root/env.txt &amp;&amp; cron &amp;&amp; your_init_script
+</code></li>
+<li>In your crontab file, You need to to import your Docker environment before run your script</li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  */5 * * * *  root env - <span class="sb">`</span>cat /root/env.txt<span class="sb">`</span>  your_scipt  &gt;&gt; /var/log/cron.log 2&gt;<span class="p">&amp;</span>1
+  <span class="c"># An empty line is required at the end of this file for a valid cron file.</span>
+</code></pre></div>
+<ol>
+<li>Test it. Your Should put <code>date</code> in your script and <code>cat /var/log/cron.log</code> to see your results.</li>
 </ol>
 
-<h2 id="attach-disk"><a href="https://developers.google.com/compute/docs/disks#attachdiskcreation">Attach Disk</a></h2>
+<p>For the local timezone problem your can setup your Dockerfile following this</p>
+
+<ul>
+<li><p>Debian/Linux Setting timezone</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"> <span class="c"># Set the time zone to the local time zone</span>
+ RUN <span class="nb">echo</span> <span class="s2">&quot;Asia/Bangkok&quot;</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure --frontend noninteractive tzdata
+</code></pre></div></li>
+<li><p><a href="http://wiki.alpinelinux.org/wiki/Setting_the_timezone">Alpine Setting the timezone</a></p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Alpine Linux</span>
+<span class="c"># set bangkok time</span>
+USEo root
+RUN apk add --update tzdata <span class="se">\</span>
+<span class="o">&amp;&amp;</span> cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime <span class="se">\</span>
+<span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;Asia/Bangkok&quot;</span> &gt;  /etc/timezone <span class="se">\</span>
+<span class="o">&amp;&amp;</span> apk del tzdata <span class="se">\</span>
+<span class="o">&amp;&amp;</span> mv /etc/localtime /usr/share/zoneinfo/Asia/Bangkok
+
+<span class="c"># or</span>
+USER root
+RUN apk add --update tzdata
+ENV <span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok
+</code></pre></div></li>
+<li><p><a href="http://stackoverflow.com/a/25130291">Will docker container auto sync time with the host machine?</a></p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker run -it -v /etc/localtime:/etc/localtime:ro &lt; image &gt;
+</code></pre></div></li>
+</ul>
+
+<h3 id="references">References:</h3>
+
+<ul>
+<li><p><a href="http://stackoverflow.com/questions/26822067/running-cron-python-jobs-within-docker/26958348#26958348">Running cron python jobs within docker</a></p></li>
+<li><p><a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a></p></li>
+<li><p><a href="http://stackoverflow.com/a/26958348">Running cron python jobs within docker</a></p></li>
+<li><p><a href="https://github.com/Alexis-benoist/docker-cron-example">docker-cron-example</a></p></li>
+<li><p><a href="https://github.com/aptible/docker-cron-example">Example implementation of cron jobs on Docker/Aptible</a></p></li>
+<li><p><a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/">Example of Cron</a></p></li>
+<li><p><a href="http://serverfault.com/a/84545">PATH in crontab</a></p></li>
+</ul>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/docker-cron">
-            Crontab on Docker
-            <small>04 Mar 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -242,6 +292,15 @@
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/password-manager">
+            Password Manager
+            <small>09 Jan 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -253,7 +312,7 @@
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/compute-engine";
+      var disqus_identifier = "/docker-cron";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
