@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-03-20T12:07:11+00:00</updated>
+<updated>2016-03-20T12:46:22+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -176,6 +176,7 @@ You can read more about &lt;code&gt;docker-squash&lt;/code&gt; in References.&lt
 &lt;li&gt;&lt;a href=&quot;http://layer0.authentise.com/docker-4-useful-tips-you-may-not-know-about.html&quot;&gt;Docker: 4 useful tips, you may not know about&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/jwilder/docker-squash&quot;&gt;docker-squash&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://jasonwilder.com/blog/2014/08/19/squashing-docker-images/&quot;&gt;Squashing Docker Images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://woudenberg.io/reducing-docker-image-size/&quot;&gt;Reducing the size of Docker Images&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
 <category term="docker" />
@@ -529,6 +530,8 @@ retrospective&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&quot;introduction-to-mixpanel&quot;&gt;&lt;a href=&quot;http://www.coursesquare.co/course/courseInfo/Introduction-to-Mixpanel&quot;&gt;Introduction to Mixpanel&lt;/a&gt;&lt;/h4&gt;
 
 &lt;h3 id=&quot;website-performance-tutorials&quot;&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLLnpHn493BHGpGXukqYsxwQw3ziW3uti6&quot;&gt;Website Performance Tutorials&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;f5-อ่อนว่ะ&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1wUi1ZeqIHvnE4YkWC613rVJFdbgC0t-pCNcyk0PaUxk/edit#heading=h.xiu1i3wbkwyr&quot;&gt;F5 อ่อนว่ะ&lt;/a&gt;&lt;/h3&gt;
 </content>
 <category term="learn" />
 <summary></summary>
@@ -917,6 +920,7 @@ Try and find out who is interviewing you&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://careers.stackoverflow.com/chakrit&quot;&gt;http://careers.stackoverflow.com/chakrit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://carpedm20.github.io&quot;&gt;http://carpedm20.github.io&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://dt.in.th&quot;&gt;http://dt.in.th&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/tomkowz&quot;&gt;https://www.linkedin.com/in/tomkowz&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;cv-tools&quot;&gt;CV Tools&lt;/h2&gt;
@@ -965,6 +969,32 @@ end of&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://career-advice.monster.com/resumes-cover-letters/resume-samples/sample-resume-software-engineer-entry-level/article.aspx&quot;&gt;Sample Resume for an Entry-Level Software Engineer&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.huffingtonpost.com/2015/06/12/fonts-to-use-on-resume_n_7562714.html&quot;&gt;The 5 Best Fonts To Use On Your Resume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;[25 Things About Life I Wish I Had Known 10 Years Ago](&lt;a href=&quot;https://medium.com/life-learning/25-things-about-life-i-wish-i-had-known-10-years-ago-61d96e93a028#.8s2gdkc7&quot;&gt;https://medium.com/life-learning/25-things-about-life-i-wish-i-had-known-10-years-ago-61d96e93a028#.8s2gdkc7&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Pick An Industry, Not A Job
+If you want to become good at something, you need to spend years and years doing that. You can’t do that if you hop from industry to industry. Pick an industry you love and start at the bottom. You will find the perfect role for you eventually.k&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blog.thefirehoseproject.com/posts/getting-your-first-junior-web-developer-job/&quot;&gt;The Only Thing Between You and a New Job as a Junior Web Developer&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Everyone who is interviewing you, wants to hire you.  Interviewing is a time consuming, taxing experience for companies and team members as well.  If a company is hiring, they are likely hiring because they have more work they need to do than the current team is capable of.
+Interview preparation isn’t something that can be condensed into a week or two long “job preparation cram course”
+At the conclusion of the interview it’s important to have questions about the company.  You should ask questions you genuinely care the answer to.  I usually like to ask questions about: The team’s workflow, The company’s operations, Technology decisions.
+Always hope the for the best, but expect the worst.  Don’t wait for a rejection to pursue the next opportunity.  Work asynchronously and try to line up as many interviews at the same time as possible.  Be frank and honest that you’re doing this if you’re ever asked, but don’t feel bad about it.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/@kenmazaika/the-most-critical-skill-to-getting-hired-as-a-web-developer-553613af5bb4#.kwz5ki15z&quot;&gt;The Most Critical Skill to Getting Hired as a Web Developer and the only way you can get it.&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Key Skill:
+GitHub Pull Requests &amp;amp; Code Reviews
+Breaking Large Problems into Smaller Ones
+Test Driven Development
+Merge Conflicts
+Stand-up / Scrum Meetings
+Pair Programming
+Working in a constantly evolving environment&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
 <category term="jobs" />
