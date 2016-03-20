@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://dev.im-bot.com/docker-cron/" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="You can start cron following Run a cron job with Dockerjust put crontab in /etc/cron.d/ and run cron for making it working." />
+<meta property="og:description" content="You can start crontab following Run a cron job with Dockerjust put crontab in /etc/cron.d/ and run cron for making it working." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -196,37 +196,37 @@
       
   </span>
 
-  <p>You can start cron following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
+  <p>You can start <code>crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
 just put <code>crontab</code> in <code>/etc/cron.d/</code> and run <code>cron</code> for making it working.</p>
 
 <!-- more -->
 
-<p>However when you try something that complex than <code>echo &quot;hello world</code> sometimes it just not working and you don&#39;t know why!!!
+<p>However when you try something that complex than <code>echo &quot;hello world&quot;</code> sometimes it just not working and you don&#39;t know why!!!
 You had alreay tried to run your script that working on your linux but no idea why not working on your docker.</p>
 
 <p><a href="http://stackoverflow.com/a/26958348">rozkosz</a> said:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; Several issues that I faced while trying to get a cron job running in a docker container were:
-&gt;
-&gt; 1. time in the docker container is in UTC not local time;
-&gt; 2. the docker environment is not passed to cron;
-&gt; 3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
+<div class="highlight"><pre><code class="language-text" data-lang="text"> Several issues that I faced while trying to get a cron job running in a docker container were:
+ 1. time in the docker container is in UTC not local time;
+ 2. the docker environment is not passed to cron;
+ 3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
 </code></pre></div>
 <p>I think the problem that most people face is <code>cron</code> not run your script with same environment as your docker in terminal.
 You need to export your Docker environment to your <code>cron</code> that I found solution from <a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/">postgres-s3-backup Dockerfile</a>.
 You can following this for simple solution:</p>
 
 <ol>
-<li>In Dockerfile, export Docker environment to /root/env.txt
-<code>sh
-CMD env &gt; /root/env.txt &amp;&amp; cron &amp;&amp; your_init_script
-</code></li>
-<li>In your crontab file, You need to to import your Docker environment before run your script</li>
+<li>In <code>Dockerfile</code>, export Docker environment to /root/env.txt</li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  CMD env &gt; /root/env.txt <span class="o">&amp;&amp;</span> cron <span class="o">&amp;&amp;</span> your_init_script
+</code></pre></div>
+<ol>
+<li>In your <code>crontab</code> file, You need to to import your Docker environment before run your script</li>
 </ol>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">  */5 * * * *  root env - <span class="sb">`</span>cat /root/env.txt<span class="sb">`</span>  your_scipt  &gt;&gt; /var/log/cron.log 2&gt;<span class="p">&amp;</span>1
   <span class="c"># An empty line is required at the end of this file for a valid cron file.</span>
 </code></pre></div>
 <ol>
-<li>Test it. Your Should put <code>date</code> in your script and <code>cat /var/log/cron.log</code> to see your results.</li>
+<li>Test it. Your should put <code>date</code> in your script for debug and then <code>cat /var/log/cron.log</code> to see your results.</li>
 </ol>
 
 <p>For the local timezone problem your can setup your Dockerfile following this</p>
