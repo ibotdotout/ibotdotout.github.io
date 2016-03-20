@@ -48,3 +48,5 @@ not dreams. - Rise of the Planet of the Apes
 * ทำให้มันเสร็จ ทำให้มันดี ทำให้มันเนี้ยบ ทำให้สุด - [Thai Robotics Team - เป็นแชมป์หุ่นยนต์แล้วไปไหน](https://www.youtube.com/watch?v=YKLXDWiWNCY)
 
 * Impossible just a little longer - the Lexus hover board
+
+* “Remember, before you can be great, you’ve got to be good. Before you can be good, you’ve got to be bad. But before you can even be bad, you’ve got to try.” – Art Williamsk - [The Difference Between Excellent, Good and Bad JavaScript Developers](http://thefullstack.xyz/excellent-javascript-developer/)
