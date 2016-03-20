@@ -3,8 +3,7 @@ layout: post
 title: Crontab on Docker
 tags: [docker]
 permalink: docker-cron
-# --- option ---
-update_date: 2016-03-04
+update_date: 2016-03-20
 ---
 
 You can start `crontab` following [Run a cron job with Docker](https://www.ekito.fr/people/run-a-cron-job-with-docker/)
@@ -77,15 +76,9 @@ For the local timezone problem your can setup your Dockerfile following this
 
 ### References:
 * [Running cron python jobs within docker](http://stackoverflow.com/questions/26822067/running-cron-python-jobs-within-docker/26958348#26958348)
-
 * [Run a cron job with Docker](https://www.ekito.fr/people/run-a-cron-job-with-docker/)
-
 * [Running cron python jobs within docker](http://stackoverflow.com/a/26958348)
-
 * [docker-cron-example](https://github.com/Alexis-benoist/docker-cron-example)
-
 * [Example implementation of cron jobs on Docker/Aptible](https://github.com/aptible/docker-cron-example)
-
 * [Example of Cron](https://hub.docker.com/r/draffensperger/postgres-s3-backup/~/dockerfile/)
-
 * [PATH in crontab](http://serverfault.com/a/84545)
