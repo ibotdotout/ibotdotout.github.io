@@ -90,3 +90,4 @@ RUN apt-get install -y python-pip pyhton-dev \
 * [Docker: 4 useful tips, you may not know about](http://layer0.authentise.com/docker-4-useful-tips-you-may-not-know-about.html)
 * [docker-squash](https://github.com/jwilder/docker-squash)
 * [Squashing Docker Images](http://jasonwilder.com/blog/2014/08/19/squashing-docker-images/)
+* [Reducing the size of Docker Images](http://woudenberg.io/reducing-docker-image-size/)
