@@ -33,3 +33,5 @@ permalink: learning
 #### [Introduction to Mixpanel](http://www.coursesquare.co/course/courseInfo/Introduction-to-Mixpanel)
 
 ### [Website Performance Tutorials](https://www.youtube.com/playlist?list=PLLnpHn493BHGpGXukqYsxwQw3ziW3uti6)
+
+### [F5 อ่อนว่ะ](https://docs.google.com/document/d/1wUi1ZeqIHvnE4YkWC613rVJFdbgC0t-pCNcyk0PaUxk/edit#heading=h.xiu1i3wbkwyr)
