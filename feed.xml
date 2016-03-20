@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-03-20T12:02:44+00:00</updated>
+<updated>2016-03-20T12:07:11+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -78,13 +78,13 @@ ENV &lt;span class=&quot;nv&quot;&gt;TZ&lt;/span&gt;&lt;span class=&quot;o&quot;
 &lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/26822067/running-cron-python-jobs-within-docker/26958348#26958348&quot;&gt;Running cron python jobs within docker&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.ekito.fr/people/run-a-cron-job-with-docker/&quot;&gt;Run a cron job with Docker&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/26958348&quot;&gt;Running cron python jobs within docker&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Alexis-benoist/docker-cron-example&quot;&gt;docker-cron-example&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/aptible/docker-cron-example&quot;&gt;Example implementation of cron jobs on Docker/Aptible&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/&quot;&gt;Example of Cron&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://serverfault.com/a/84545&quot;&gt;PATH in crontab&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/26822067/running-cron-python-jobs-within-docker/26958348#26958348&quot;&gt;Running cron python jobs within docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ekito.fr/people/run-a-cron-job-with-docker/&quot;&gt;Run a cron job with Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/26958348&quot;&gt;Running cron python jobs within docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Alexis-benoist/docker-cron-example&quot;&gt;docker-cron-example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/aptible/docker-cron-example&quot;&gt;Example implementation of cron jobs on Docker/Aptible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/&quot;&gt;Example of Cron&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://serverfault.com/a/84545&quot;&gt;PATH in crontab&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
 <category term="docker" />
