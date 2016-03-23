@@ -3,7 +3,7 @@ layout: post
 title: Selectively disable caching for specific RUN commands in Dockerfile
 tags: [docker]
 permalink: docker-select-caching
-update_date: 2015-12-24
+update_date: 2016-03-24
 ---
 
 If you using `Dockerfile`, you should know about caching for faster builds.
