@@ -338,6 +338,9 @@ CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o"
 <h3 id="graphdriver-prior-storage-driver-quot-aufs-quot-failed-invalid-argument-by-kelindar"><a href="https://github.com/docker/docker/issues/14026">graphdriver prior storage driver &quot;aufs&quot; failed: invalid argument </a> by @Kelindar</h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo rm -rf /var/lib/docker/aufs
 </code></pre></div>
+<h3 id="to-see-the-file-size-of-your-containers"><a href="http://stackoverflow.com/a/33344280">To see the file size of your containers</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker ps -s
+</code></pre></div>
 <h3 id="fix-no-space-left-on-device-in-default-machine"><a href="https://github.com/docker/machine/issues/1779">Fix No space left on device in default machine</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># clean your mapping volume on host that was copied to docker machine</span>
 <span class="nv">$ </span>docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -v /var/lib/
@@ -414,6 +417,7 @@ $ pip install -U docker-compose
 <li><a href="https://www.brianchristner.io/how-to-scale-a-docker-container-with-docker-compose/">How to scale Docker Containers with Docker-Compose</a></li>
 <li><a href="http://www.slideshare.net/jpetazzo/anatomy-of-a-container-namespaces-cgroups-some-filesystem-magic-linuxcon">Anatomy of a Container: Namespaces, cgroups &amp; Some Filesystem Magic - LinuxCon</a></li>
 <li><a href="https://github.com/codekitchen/dinghy/issues/19#issuecomment-151139659">Reduce Sending build context Size to Docker-Machine</a></li>
+<li><a href="https://kvaes.wordpress.com/2016/02/11/docker-storage-patterns-for-persistence/">Docker : Storage Patterns for Persistence</a></li>
 </ol>
 
 </div>
