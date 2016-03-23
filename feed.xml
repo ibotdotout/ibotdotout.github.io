@@ -3,12 +3,61 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-03-23T17:09:23+00:00</updated>
+<updated>2016-03-23T17:17:23+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
 <name>botbotbot</name>
 </author>
+<entry>
+<title>Selectively disable caching for specific RUN commands in Dockerfile</title>
+<link href="http://dev.im-bot.com//docker-select-caching" rel="alternate" type="text/html" title="Selectively disable caching for specific RUN commands in Dockerfile" />
+<published>2016-03-24T00:00:00+00:00</published>
+<updated>2016-03-24T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//docker-select-caching</id>
+<content type="html" xml:base="http://dev.im-bot.com//docker-select-caching">&lt;p&gt;If you using &lt;code&gt;Dockerfile&lt;/code&gt;, you should know about caching for faster builds.
+Sometimes, you need to rebuild without cache. you can run docker &lt;code&gt;build&lt;/code&gt; with
+&lt;code&gt;--no-cache&lt;/code&gt; option that will disable all layer cache.&lt;/p&gt;
+
+&lt;p&gt;There is problem when you should use some &lt;code&gt;Dockerfile&lt;/code&gt; commands like &lt;code&gt;ADD&lt;/code&gt; or
+&lt;code&gt;COPY&lt;/code&gt; to copy file form host to container.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;You need to copy new file to container then rebuild again without change any
+line of &lt;code&gt;Dockerfile&lt;/code&gt; but the new file not was copy to container.
+The last build using layer cache that contain old file instead of rebuild with new
+file. So this problem can solve easily by using &lt;code&gt;--no-cache&lt;/code&gt; buuild option that
+disable all layer cache.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, you need to rebuild only some layer not all layer.
+For this case, there is not native solution for Docker but there is some trick
+about &lt;code&gt;ARG&lt;/code&gt; command in &lt;code&gt;Dockerfile&lt;/code&gt; and &lt;code&gt;--build-arg&lt;/code&gt; build option that I found
+on &lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-172606763&quot;&gt;New feature request: Selectively disable caching for specific RUN commands
+in Dockerfile&lt;/a&gt;
+for more detail you should look at &lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-185872769&quot;&gt;solution description&lt;/a&gt;
+and &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#arg&quot;&gt;Dockerfile - ARG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;add &lt;code&gt;ARG&lt;/code&gt; command to your &lt;code&gt;Dockerfile&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Dockerfile&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# add this and below command will run without cache&lt;/span&gt;
+ARG &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;when you need to rebuild with selected cache, run it with &lt;code&gt;--build-arg&lt;/code&gt; option&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker build -t your-image --build-arg &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date +%s&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;references&quot;&gt;References:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#build-cache&quot;&gt;Build Cache - Best practices for writing Dockerfiles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#arg&quot;&gt;Dockerfile - ARG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-172606763&quot;&gt;Temporary Solution - Selectively disable caching for specific RUN commands in Dockerfile&lt;/a&gt; - &lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-185872769&quot;&gt;An
+additional description &lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+<category term="docker" />
+<summary>If you using Dockerfile, you should know about caching for faster builds.Sometimes, you need to rebuild without cache. you can run docker build with--no-cache option that will disable all layer cache.There is problem when you should use some Dockerfile commands like ADD orCOPY to copy file form host to container.</summary>
+</entry>
 <entry>
 <title>Crontab on Docker</title>
 <link href="http://dev.im-bot.com//docker-cron" rel="alternate" type="text/html" title="Crontab on Docker" />
@@ -999,33 +1048,5 @@ Working in a constantly evolving environment&lt;/p&gt;
 </content>
 <category term="jobs" />
 <summary>รวมบทความ เทคนิคต่างๆ เกี่ยวกับการสมัครงาน developer</summary>
-</entry>
-<entry>
-<title>Convert File Encoding in OSX</title>
-<link href="http://dev.im-bot.com//osx-convert-encoding" rel="alternate" type="text/html" title="Convert File Encoding in OSX" />
-<published>2015-10-19T00:00:00+00:00</published>
-<updated>2015-10-19T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//osx-convert-encoding</id>
-<content type="html" xml:base="http://dev.im-bot.com//osx-convert-encoding">&lt;p&gt;Sometime, you download file from Internet specially file that in local language
-which not encode with UTF-8 that unreadable on OSX. Your should guess
-what encode that file using and convert it in to UTF-8.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# convert tis-620 to utf-8 encoding&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$iconv&lt;/span&gt; -f tis-620 -t utf-8 source.xml &amp;gt; destination.xml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Example. Thai language on Windows system normally encode with TIS-620 when
-open it in OSX that will display with some symbol char that unreadable.
-You should convert that file from tis-620 to utf-8 which make it readable on osx.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://superuser.com/questions/151981/converting-the-encoding-of-a-text-file-mac-os-x&quot;&gt;Converting the encoding of a text file (Mac OS X)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://apple.stackexchange.com/questions/81663/is-there-a-mac-os-x-command-line-application-that-can-convert-text-encodings-fro&quot;&gt;Is there a Mac OS X Command Line application that can convert text encodings from one type to another?  &lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-<category term="osx" />
-<summary>Covert file from windows that encoded with TIS-620 to UTF-8 for readable in OSX.</summary>
 </entry>
 </feed>

@@ -186,6 +186,40 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/docker-select-caching">
+        Selectively disable caching for specific RUN commands in Dockerfile
+      </a>
+    </h1>
+
+    <span class="post-date">
+      24 Mar 2016
+      
+        &middot;
+        <a href="/docker-select-caching#disqus_thread" data-disqus-identifier="/docker-select-caching"></a>
+        
+          &middot;
+          Updated March 24, 2016
+        
+      
+    </span>
+
+    
+      <p>If you using <code>Dockerfile</code>, you should know about caching for faster builds.
+Sometimes, you need to rebuild without cache. you can run docker <code>build</code> with
+<code>--no-cache</code> option that will disable all layer cache.</p>
+
+<p>There is problem when you should use some <code>Dockerfile</code> commands like <code>ADD</code> or
+<code>COPY</code> to copy file form host to container.</p>
+
+
+      <div style="text-align:right;">
+        <a href="/docker-select-caching" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/docker-cron">
         Crontab on Docker
       </a>
@@ -323,37 +357,6 @@ Guide</a></li>
 
       <div style="text-align:right;">
         <a href="/password-manager" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/avoid-git-commit-m">
-        Avoid git commit -m
-      </a>
-    </h1>
-
-    <span class="post-date">
-      25 Dec 2015
-      
-        &middot;
-        <a href="/avoid-git-commit-m#disqus_thread" data-disqus-identifier="/avoid-git-commit-m"></a>
-        
-      
-    </span>
-
-    
-      <p>Most of Git tutorial even <a href="http://try.github.io">Try Git</a> guide you
-about git commit with this</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git commit -m <span class="s2">&quot;hello world&quot;</span>
-</code></pre></div>
-<p>That&#39;s OK.
-But It better to use any option without -m.</p>
-
-
-      <div style="text-align:right;">
-        <a href="/avoid-git-commit-m" style="color:#000;"> Read More </a>
       </div>
     
   </div>
