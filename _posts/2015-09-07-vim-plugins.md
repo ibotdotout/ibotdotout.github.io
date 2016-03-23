@@ -6,6 +6,7 @@ permalink: vim-plugins
 ---
 
 # Plug-in - [More](http://vimawesome.com):
+1. [Vim Plug - A minimalist Vim plugin manager.](https://github.com/junegunn/vim-plug)
 1. [surround](https://github.com/tpope/vim-surround)
 2. [Easymotion](https://github.com/Lokaltog/vim-easymotion) - [EasyMotion Doc](https://github.com/Lokaltog/vim-easymotion/blob/master/doc/easymotion.txt#L88)
 3. ctags
@@ -70,3 +71,5 @@ $ sudo gem install vimdeck-without-ascii-art
 9. [vim.rc & vim plugin (video th)](https://www.youtube.com/watch?v=k_KSeQgtrb4)
 8. [Vim and Ctags](http://andrew.stwrt.ca/posts/vim-ctags)
 3. [How can you automatically remove trailing whitespace in vim](http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim)
+1. [Why I switched from Vundle to Plug](https://jordaneldredge.com/blog/why-i-switched-from-vundle-to-plug/)
+1. [How to use Syntastic plugin for Vim](http://codeyarns.com/2014/11/06/how-to-use-syntastic-plugin-for-vim/)
