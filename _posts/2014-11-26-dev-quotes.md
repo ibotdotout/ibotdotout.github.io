@@ -50,3 +50,5 @@ not dreams. - Rise of the Planet of the Apes
 * Impossible just a little longer - the Lexus hover board
 
 * “Remember, before you can be great, you’ve got to be good. Before you can be good, you’ve got to be bad. But before you can even be bad, you’ve got to try.” – Art Williamsk - [The Difference Between Excellent, Good and Bad JavaScript Developers](http://thefullstack.xyz/excellent-javascript-developer/)
+
+* You can't optimize what you can't measure - [MongoDB at Scale](https://www.mongodb.com/mongodb-scale)
