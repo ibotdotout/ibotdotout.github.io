@@ -227,6 +227,8 @@ ARG <span class="nv">CACHEBUST</span><span class="o">=</span>1
 <p>when you need to rebuild with selected cache, run it with <code>--build-arg</code> option</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker build -t your-image --build-arg <span class="nv">CACHEBUST</span><span class="o">=</span><span class="k">$(</span>date +%s<span class="k">)</span> .
 </code></pre></div>
+<p>then only layer below <code>ARG</code> command in <code>Dockerfile</code> will rebuild.</p>
+
 <h1 id="references">References:</h1>
 
 <ul>

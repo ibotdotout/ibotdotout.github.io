@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-03-23T17:17:23+00:00</updated>
+<updated>2016-03-23T17:22:29+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -46,6 +46,8 @@ ARG &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;
 &lt;p&gt;when you need to rebuild with selected cache, run it with &lt;code&gt;--build-arg&lt;/code&gt; option&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker build -t your-image --build-arg &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date +%s&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; .
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;then only layer below &lt;code&gt;ARG&lt;/code&gt; command in &lt;code&gt;Dockerfile&lt;/code&gt; will rebuild.&lt;/p&gt;
+
 &lt;h1 id=&quot;references&quot;&gt;References:&lt;/h1&gt;
 
 &lt;ul&gt;
