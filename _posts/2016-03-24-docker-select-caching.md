@@ -43,6 +43,8 @@ when you need to rebuild with selected cache, run it with `--build-arg` option
 $ docker build -t your-image --build-arg CACHEBUST=$(date +%s) .
 ```
 
+then only layer below `ARG` command in `Dockerfile` will rebuild.
+
 # References:
 * [Build Cache - Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#build-cache)
 * [Dockerfile - ARG](https://docs.docker.com/engine/reference/builder/#arg)
