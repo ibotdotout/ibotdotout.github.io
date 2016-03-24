@@ -2,7 +2,7 @@
 layout: post
 title: Mock
 tags: python
-permalink: mock
+permalink: mock/
 ---
 
 ## [Mock - Mocking and Testing Library](http://www.voidspace.org.uk/python/mock/)

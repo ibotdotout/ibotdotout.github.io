@@ -2,7 +2,7 @@
 layout: post
 title: Continuos Integrations
 tags: CI
-permalink: ci
+permalink: ci/
 ---
 
 Continuous Integrations doesn't get rid of bugs, but it does make them dramatically easier to find and remove. - [Continuous Integration by Martin Fowler](http://martinfowler.com/articles/continuousIntegration.html)

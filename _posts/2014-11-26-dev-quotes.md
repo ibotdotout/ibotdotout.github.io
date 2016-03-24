@@ -2,7 +2,7 @@
 layout: post
 title: Dev Qutoes
 tags: qutoes
-permalink: quotes
+permalink: quotes/
 ---
 
 * A magical, better time in the future never comes - [Nell Shamrell -

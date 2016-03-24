@@ -2,7 +2,7 @@
 layout: post
 title: Robot Packtpub
 tags: robot-framework
-permalink: robot-packtpub
+permalink: robot-packtpub/
 ---
 
 Automate claim [free ebook from packtpub](https://www.packtpub.com/packt/offers/free-learning) to your packtpub account by robotframework script.

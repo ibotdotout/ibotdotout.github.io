@@ -2,7 +2,7 @@
 layout: post
 title: OSX Backup
 tags: osx
-permalink: osx-backup
+permalink: osx-backup/
 ---
 
 ## Time Machine Backups on External Hard Drive

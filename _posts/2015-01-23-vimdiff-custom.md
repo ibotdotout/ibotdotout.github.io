@@ -2,7 +2,7 @@
 layout: post
 title: Vimdiff Custom
 tags: vim
-permalink: vimdiff
+permalink: vimdiff/
 ---
 
 ###You need to convent result of unix diff to ed style to use in vimdiff.  

@@ -3,7 +3,7 @@ layout: post
 title: Pair Programming
 tags: coding
 update_date: 2016-01-09
-permalink: pair-programming
+permalink: pair-programming/
 ---
 
 > My mind to your mind. My thoughts to your thoughts... -- MrSpock

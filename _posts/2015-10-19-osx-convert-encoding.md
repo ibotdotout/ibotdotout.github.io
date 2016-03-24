@@ -2,7 +2,7 @@
 layout: post
 title: Convert File Encoding in OSX
 tags: [osx]
-permalink: osx-convert-encoding
+permalink: osx-convert-encoding/
 excerpt: Covert file from windows that encoded with TIS-620 to UTF-8 for readable in OSX.
 ---
 

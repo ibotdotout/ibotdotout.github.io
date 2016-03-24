@@ -2,7 +2,7 @@
 layout: post
 title: Sharing with Open Graph
 tags: [jekyll, website]
-permalink: opengraph
+permalink: opengraph/
 excerpt: Make your site look pretty when sharing on facebook.
 thumbnail: /public/img/open-graph-thumbnail.png
 ---

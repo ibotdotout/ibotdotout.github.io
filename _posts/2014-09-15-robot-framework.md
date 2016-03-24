@@ -2,7 +2,7 @@
 layout: post
 title: "Robot Framework"
 tags: robot-framework
-permalink: robot-framework
+permalink: robot-framework/
 ---
 
 ## [Robot Framework(RF)](http://robotframework.org/) - [Github Repo](https://github.com/robotframework/robotframework)

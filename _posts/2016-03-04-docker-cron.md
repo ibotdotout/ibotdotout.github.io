@@ -2,7 +2,7 @@
 layout: post
 title: Crontab on Docker
 tags: [docker]
-permalink: docker-cron
+permalink: docker-cron/
 update_date: 2016-03-20
 ---
 

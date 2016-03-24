@@ -2,7 +2,7 @@
 layout: post
 title: Jekyll build with Travis and deploy to Github Page
 tags: [jekyll]
-permalink: jekyll-travis-github
+permalink: jekyll-travis-github/
 # --- option ---
 category: article
 excerpt: Custom build jekyll with Travis for enable plugin and deploy to Github Page

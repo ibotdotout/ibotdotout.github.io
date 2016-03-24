@@ -2,7 +2,7 @@
 layout: post
 title: OSX Dev Tools
 tags: osx
-permalink: dev-tools
+permalink: dev-tools/
 ---
 
 ### Package Manager

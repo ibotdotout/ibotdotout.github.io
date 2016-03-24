@@ -2,7 +2,7 @@
 layout: post
 title: All about Wordpress
 tags: [wordpress ]
-permalink: wordpress
+permalink: wordpress/
 # --- option ---
 update_date: 2016-01-26
 ---

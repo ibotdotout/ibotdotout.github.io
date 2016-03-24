@@ -2,7 +2,7 @@
 layout: post
 title: Functional Programming in Python
 tags: python
-permalink: fp-python
+permalink: fp-python/
 ---
 
 พอดีเพิ่งอ่าน [Oreilly.com FP in python](http://www.oreilly.com/programming/free/files/functional-programming-python.pdf) จบ แบบมึนๆ เนื่องจากยังไม่แน่นใน concept

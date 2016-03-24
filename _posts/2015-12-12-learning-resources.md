@@ -2,7 +2,7 @@
 layout: post
 title: Learning Resources
 tags: [learn]
-permalink: learning
+permalink: learning/
 ---
 
 

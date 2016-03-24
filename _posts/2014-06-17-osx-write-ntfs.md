@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable NTFS write on OSX
-permalink: osx-write-ntfs
+permalink: osx-write-ntfs/
 tags: osx
 ---
 

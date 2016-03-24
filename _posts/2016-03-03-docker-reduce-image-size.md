@@ -2,7 +2,7 @@
 layout: post
 title: Reduce docker image size
 tags: [docker]
-permalink: docker-reduce-image-size
+permalink: docker-reduce-image-size/
 update_date: 2016-03-03
 ---
 

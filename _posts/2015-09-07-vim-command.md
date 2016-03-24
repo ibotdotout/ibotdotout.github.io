@@ -2,7 +2,7 @@
 layout: post
 title: Vim Command
 tags: vim
-permalink: vim-command
+permalink: vim-command/
 ---
 
 ### Range

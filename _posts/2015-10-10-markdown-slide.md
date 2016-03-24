@@ -2,7 +2,7 @@
 layout: post
 title: Markdown Slide
 tags: markdown
-permalink: slide
+permalink: slide/
 ---
 
 ## [Remark.js - easy and simple slide](https://github.com/gnab/remark) - [Example](http://remarkjs.com)

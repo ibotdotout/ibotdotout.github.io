@@ -2,7 +2,7 @@
 layout: post
 title: Avoid git commit -m
 tags: [git]
-permalink: avoid-git-commit-m
+permalink: avoid-git-commit-m/
 ---
 
 Most of Git tutorial even [Try Git](http://try.github.io) guide you

@@ -2,7 +2,7 @@
 layout: post
 title: Selectively disable caching for specific RUN commands in Dockerfile
 tags: [docker]
-permalink: docker-select-caching
+permalink: docker-select-caching/
 update_date: 2016-03-24
 ---
 

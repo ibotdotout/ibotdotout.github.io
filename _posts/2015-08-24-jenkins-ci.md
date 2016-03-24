@@ -2,7 +2,7 @@
 layout: post
 title: Jenkins CI
 tags: CI
-permalink: jenkins
+permalink: jenkins/
 ---
 
 # [Jenkins-CI](http://jenkins-ci.org) - Extendable CI Server

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to set up this blog
-permalink: how-to-setup-this-blog
+permalink: how-to-setup-this-blog/
 tags: [jekyll]
 update_date: 2015-12-26
 ---

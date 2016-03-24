@@ -2,7 +2,7 @@
 layout: post
 title: Python Testing
 tags: python
-permalink: python-testing
+permalink: python-testing/
 ---
 
 There are difference between 'building it right' and 'building the right thing'. -Python Testing Cookbook by Greg L. Turnquist

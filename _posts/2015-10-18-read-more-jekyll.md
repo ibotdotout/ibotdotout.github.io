@@ -2,7 +2,7 @@
 layout: post
 title: Read more feature on jekyll
 tags: [jekyll]
-permalink: read-more-jekyll
+permalink: read-more-jekyll/
 # --- option ---
 excerpt: Read more feature on jekyll that working with Github Pages
 ---

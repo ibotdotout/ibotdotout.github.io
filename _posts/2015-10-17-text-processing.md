@@ -2,7 +2,7 @@
 layout: post
 title: Text Processing in Shell
 tags: [unix]
-permalink: text-processing
+permalink: text-processing/
 excerpt: Collection example of text processing in shell
 ---
 

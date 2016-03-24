@@ -2,7 +2,7 @@
 layout: post
 title: Grammar check
 tags: english
-permalink: grammar
+permalink: grammar/
 ---
 
 ## Web Based

@@ -2,7 +2,7 @@
 layout: post
 title: Smtp with gmail
 tags: smtp
-permalink: smtp
+permalink: smtp/
 ---
 
 ## [Gmail Error 5.7.14](http://ralphminderhoud.com/posts/gmail-error-5-7-14/)

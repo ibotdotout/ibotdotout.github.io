@@ -2,7 +2,7 @@
 layout: post
 title: Vim Plugins
 tags: vim
-permalink: vim-plugins
+permalink: vim-plugins/
 ---
 
 # Plug-in - [More](http://vimawesome.com):

@@ -2,7 +2,7 @@
 layout: post
 title: Password Manager
 tags: [security]
-permalink: password-manager
+permalink: password-manager/
 ---
 
 ## What is Password Manager ?

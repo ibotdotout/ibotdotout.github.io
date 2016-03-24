@@ -2,7 +2,7 @@
 layout: post
 title: What I know about Apache Cassandra
 tags: [cassandra, nosql]
-permalink: cassandra
+permalink: cassandra/
 # --- option ---
 update_date: 2016-03-24
 # category: article

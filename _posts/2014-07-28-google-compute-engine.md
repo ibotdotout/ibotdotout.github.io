@@ -2,7 +2,7 @@
 layout: post
 title: Google Compute Engine
 tags: cloud
-permalink: compute-engine
+permalink: compute-engine/
 ---
 
 ## [Open Port On Google Compute Engine](http://stackoverflow.com/questions/21065922/how-to-open-a-specific-port-such-as-9090-in-google-compute-engine)

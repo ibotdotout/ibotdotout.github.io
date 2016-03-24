@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll with Continuous Integration
-permalink: jekyll-with-ci
+permalink: jekyll-with-ci/
 tags: [jekyll]
 ---
 
