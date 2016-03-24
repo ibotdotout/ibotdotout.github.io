@@ -97,8 +97,6 @@
       
     
       
-        
-      
     
       
         
@@ -140,6 +138,8 @@
         
       
     
+      
+        
       
     
 
@@ -212,11 +212,106 @@ the number.</li>
 
 <h3 id="fizzbuzz-nested-if">FizzBuzz Nested If</h3>
 
-<script src="https://gist.github.com/ibotdotout/067c8310320d21e7d78a.js"> </script>
+<p><noscript><pre>x = 105</p>
+
+<p>if x%7 == 0 and x%3 == 0 and x%5 == 0:
+    print(&quot;FizzBuzzBang&quot;)
+elif x%7 == 0 and x%5 == 0:
+    print(&quot;BuzzBang&quot;)
+elif x%7 == 0 and x%3 == 0:
+    print(&quot;FizzBang&quot;)
+elif x%3 == 0 and x%5 == 0:
+    print(&quot;FizzBuzz&quot;)
+elif x%7 == 0:
+    print(&quot;Bang&quot;)
+elif x%5 == 0:
+    print(&quot;Buzz&quot;)
+elif x%3 == 0:
+    print(&quot;Fizz&quot;)
+else:
+    print(x)
+</pre></noscript><script src="https://gist.github.com/ibotdotout/067c8310320d21e7d78a.js"> </script></p>
 
 <h3 id="fizzbuzz-ocp">FizzBuzz OCP</h3>
 
-<script src="https://gist.github.com/ibotdotout/824ca575b9480f03b3f7.js"> </script>
+<p><noscript><pre>#Kata with Up1 - Agile Thailand 2014 @ Eng CU</p>
+
+<h1 id="sat-7-june-2014">Sat 7 June 2014</h1>
+
+<p>class FizzBuzzFactory():
+    def create(self):
+        rules = [FizzBuzzBangRule(), BuzzBangRule(), FizzBangRule(), FizzBuzzRule(),
+             BangRule, BuzzRule(),FizzRule(),NormalRule()]
+        return FizzBuzz(rules)</p>
+
+<p>class FizzBuzz():
+    def <strong>init</strong>(cls,rules):
+        cls.rules = rules</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
+    for rule in self.rules:
+        if rule.is_handle(x):
+            return rule.say(x)
+</code></pre></div>
+<p>class Rule():
+    def is_handle(self,x):
+        pass</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
+    pass
+</code></pre></div>
+<p>class NormalRule(Rule):
+    def is_handle(self,x):
+        return True</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
+    return x
+</code></pre></div>
+<p>class FizzRule(Rule):
+    def is_handle(self,x):
+        return x % 3 == 0</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
+    return &amp;quot;Fizz&amp;quot;
+</code></pre></div>
+<p>class BuzzRule(Rule):
+    def is_handle(self,x):
+        return x % 5 == 0</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
+    return &amp;quot;Buzz&amp;quot;
+</code></pre></div>
+<p>class BangRule(Rule):
+    def is_handle(self,x):
+        return x % 7 == 0</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
+    return &amp;quot;Bang&amp;quot;
+</code></pre></div>
+<p>class FizzBuzzRule(Rule):
+    def is_handle(self,x):
+        return x % 5 == 0 and x % 3 == 0</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
+    return &amp;quot;FizzBuzz&amp;quot;
+</code></pre></div>
+<p>class FizzBangRule(Rule):
+    def is_handle(self,x):
+        return x % 7 == 0 and x % 3 == 0
+    def say(self,x):
+        return &quot;FizzBang&quot;</p>
+
+<p>class BuzzBangRule(Rule):
+    def is_handle(self,x):
+        return x % 7 == 0 and x % 5 == 0
+    def say(self,x):
+        return &quot;BuzzBang&quot;</p>
+
+<p>class FizzBuzzBangRule(Rule):
+    def is_handle(self,x):
+        return x % 7 ==0 and x % 5 == 0 and x % 3 == 0</p>
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
+    return &amp;quot;FizzBuzzBang&amp;quot;
+</code></pre></div>
+<p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:
+    l = [1,2,3,6,5,15,20]
+    fizz_buzz = FizzBuzzFactory().create()
+    for x in l:
+        print(fizz_buzz.say(x))
+</pre></noscript><script src="https://gist.github.com/ibotdotout/824ca575b9480f03b3f7.js"> </script></p>
 
 <h3 id="references">References:</h3>
 
