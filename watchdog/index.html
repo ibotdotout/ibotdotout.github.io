@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://dev.im-bot.com/watchdog//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="WatchdogPython API and shell utilities to monitor file system events.pip install watchdogWatching python file changes#!/usr/bin/env pythonimport osimport sys..." />
+<meta property="og:description" content="WatchdogPython API and shell utilities to monitor file system events.pip install watchdogWatching python file changesWatchdog over Docker (VM) via polling -R..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -97,8 +97,6 @@
       
     
       
-    
-      
         
       
     
@@ -140,6 +138,8 @@
     
       
         
+      
+    
       
     
 
@@ -206,78 +206,8 @@
 </code></pre></div>
 <h3 id="watching-python-file-changes">Watching python file changes</h3>
 
-<p><noscript><pre>#!/usr/bin/env python
-import os
-import sys
-import time
-from watchdog.observers import Observer
-from watchdog.events import PatternMatchingEventHandler</p>
+<script src="https://gist.github.com/ibotdotout/8f42fbc0ee122f89e728.js"> </script>
 
-<p>def when_file_changed(filename):
-    &quot;&quot;&quot;
-        Unittest Monitoring with coverage filtering
-        file - ./&lt;projectname&gt;/&lt;package&gt;/&lt;file&gt;.py
-            ex. ./meow_meow/core/api.py
-        testfile - ./tests/unit/&lt;package&gt;/test_&lt;file&gt;.py
-            ex. ./tests/unit/core/test_api.py
-    &quot;&quot;&quot;
-    def projectname():
-        &quot;&quot;&quot;
-            Projectname from name of current directory (&#39;.&#39;)
-            if there are dash &#39;-&#39; in its name replace to underscore &#39;<em>&#39;
-        &quot;&quot;&quot;
-        return os.path.abspath(&quot;.&quot;).rsplit(&quot;/&quot;, 1)[1].replace(&quot;-&quot;, &quot;</em>&quot;)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def package(filename):
-    basename = os.path.basename(filename)
-    if not basename.startswith(&amp;quot;test_&amp;quot;):
-        package = filename.replace(&amp;quot;./&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
-    else:
-        package = filename.replace(&amp;quot;./tests/unit&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
-        package = projectname() + package.replace(&amp;quot;/test_&amp;quot;, &amp;quot;/&amp;quot;)
-    package = package.replace(&amp;quot;/&amp;quot;, &amp;quot;.&amp;quot;)
-    return package
-
-def test_file(filename):
-    basename = os.path.basename(filename)
-    if not basename.startswith(&amp;quot;test_&amp;quot;):
-        filename = filename.replace(projectname(), &amp;quot;tests/unit&amp;quot;)
-        filename = filename.replace(basename, &amp;quot;test_&amp;quot; + basename)
-    return filename
-
-cls()
-print(os.path.abspath(filename))
-args = {&amp;quot;package&amp;quot;: package(filename), &amp;quot;testfile&amp;quot;: test_file(filename)}
-cmd = &amp;quot;nosetests --with-coverage --cover-erase --cover-package={package}&amp;quot; \
-      &amp;quot; -v {testfile}&amp;quot;.format(**args)
-os.system(cmd)
-</code></pre></div>
-<p>def cls():
-    os.system(&#39;cls&#39; if os.name == &#39;nt&#39; else &#39;clear&#39;)</p>
-
-<p>class ModifiedHandler(PatternMatchingEventHandler):
-    patterns = [&quot;*.py&quot;]  # Monitor only matched patterns</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def on_created(self, event):
-    &amp;quot;&amp;quot;&amp;quot;&amp;quot; For Vim :w - not modify that deleted and created file instead. &amp;quot;&amp;quot;&amp;quot;
-    when_file_changed(event.src_path)
-
-def on_modified(self, event):
-    &amp;quot;&amp;quot;&amp;quot; For other text-editor ex.sublime &amp;quot;&amp;quot;&amp;quot;
-    when_file_changed(event.src_path)
-</code></pre></div>
-<p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:
-    args = sys.argv[1:]
-    event_handler = ModifiedHandler()
-    observer = Observer()
-    observer.schedule(event_handler,
-                      path=args[1] if args else &#39;.&#39;, recursive=True)
-    observer.start()</p>
-<div class="highlight"><pre><code class="language-" data-lang="">try:
-    while True:
-        time.sleep(1)
-except KeyboardInterrupt:
-    observer.stop()
-observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src="https://gist.github.com/ibotdotout/8f42fbc0ee122f89e728.js"&gt; &lt;/script&gt;
-</code></pre></div>
 <h3 id="watchdog-over-docker-vm-via-polling">Watchdog over Docker (VM) via polling -</h3>
 
 <p><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Ref</a></p>
