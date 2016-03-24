@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-03-24T14:44:49+00:00</updated>
+<updated>2016-03-24T15:14:44+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -68,7 +68,9 @@ additional description &lt;/a&gt;)&lt;/li&gt;
 <id>http://dev.im-bot.com//cassandra</id>
 <content type="html" xml:base="http://dev.im-bot.com//cassandra">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.datastax.com/wp-content/uploads/2012/08/WP-IntrotoCassandra.pdf&quot;&gt;Introduction to Apache Cassandra&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.datastax.com/wp-content/uploads/2012/08/WP-IntrotoCassandra.pdf&quot;&gt;Introduction to Apache Cassandra&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Cassandra has a peer-to-peer distributed architecture that is much more elegant, and easy to set up and maintain.
@@ -90,25 +92,18 @@ Data is transparently partitioned across all nodes in either a randomized or ord
 
 &lt;!-- more --&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://exponential.io/blog/2015/01/22/cassandra-vs-mongodb/&quot;&gt;Cassandra vs MongoDB&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://db-engines.com/en/system/Cassandra%3BMongoDB&quot;&gt;System Properties Comparison Cassandra vs. MongoDB&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.edureka.co/blog/mongodb-vs-hbase-vs-cassandra/&quot;&gt;Face Off: MongoDB Vs HBase Vs Cassandra&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.linkedin.com/pulse/real-comparison-nosql-databases-hbase-cassandra-mongodb-sahu&quot;&gt;A Real Comparison Of NoSQL Databases HBase, Cassandra &amp;amp; MongoDB&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://patrickmcfadin.com/2014/02/11/mongodb-this-is-not-the-database-you-are-looking-for/&quot;&gt;MongoDB. This is not the database you are looking for.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5qEoEAfAer8&quot;&gt;DataStax Cassandra Tutorials - Apache Cassandra Overview&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://academy.datastax.com/demos/brief-introduction-apache-cassandra&quot;&gt;A Brief Introduction to Apache Cassandra&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/patrickmcfadin/real-data-models-of-silicon-valley&quot;&gt;Real data models of silicon valley&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.divconq.com/2010/migrate-a-relational-database-structure-into-a-nosql-cassandra-structure-part-i/&quot;&gt;Migrate a Relational Database Structure into a NoSQL Cassandra Structure (Part I)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.divconq.com/2010/migrate-a-relational-database-structure-into-a-nosql-cassandra-structure-part-ii-northwind-planning/&quot;&gt;Migrate a Relational Database into Cassandra (Part II – Northwind Planning)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://exponential.io/blog/2015/01/22/cassandra-vs-mongodb/&quot;&gt;Cassandra vs MongoDB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://db-engines.com/en/system/Cassandra%3BMongoDB&quot;&gt;System Properties Comparison Cassandra vs. MongoDB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.edureka.co/blog/mongodb-vs-hbase-vs-cassandra/&quot;&gt;Face Off: MongoDB Vs HBase Vs Cassandra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/pulse/real-comparison-nosql-databases-hbase-cassandra-mongodb-sahu&quot;&gt;A Real Comparison Of NoSQL Databases HBase, Cassandra &amp;amp; MongoDB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://patrickmcfadin.com/2014/02/11/mongodb-this-is-not-the-database-you-are-looking-for/&quot;&gt;MongoDB. This is not the database you are looking for.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5qEoEAfAer8&quot;&gt;DataStax Cassandra Tutorials - Apache Cassandra Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://academy.datastax.com/demos/brief-introduction-apache-cassandra&quot;&gt;A Brief Introduction to Apache Cassandra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/patrickmcfadin/real-data-models-of-silicon-valley&quot;&gt;Real data models of silicon valley&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.divconq.com/2010/migrate-a-relational-database-structure-into-a-nosql-cassandra-structure-part-i/&quot;&gt;Migrate a Relational Database Structure into a NoSQL Cassandra Structure (Part I)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.divconq.com/2010/migrate-a-relational-database-structure-into-a-nosql-cassandra-structure-part-ii-northwind-planning/&quot;&gt;Migrate a Relational Database into Cassandra (Part II – Northwind Planning)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;In a relational database setting I can often simply normalize away and worry about which table I need to focus my indexing efforts on later when I’m working in the application.  However, in NoSQL, non-relational database design, we often need to decide up front which entity most queries will be interested in and build everything else around that entity.&lt;/p&gt;
@@ -116,37 +111,33 @@ Data is transparently partitioned across all nodes in either a randomized or ord
 &lt;p&gt;So…will it be “order” or “product”?  Today I’ll decide that the key entity in this database is “order” – customers will be hitting this on a daily, per transaction basis whereas I can probably run my product reports offline.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/soundcloud-activity-feed-and-real-time-stats-powered-by-apache-cassandra/&quot;&gt;SoundCloud’s Activity Feed and Real-Time Stats Powered by Apache Cassandra&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/interview/spotify-scales-to-the-top-of-the-charts-with-apache-cassandra-at-40k-requestssecond/&quot;&gt;Spotify scales to the top of the charts with Apache Cassandra at 40k requests/second&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NQXxKzfv7Zo&quot;&gt;C* Summit EU 2013: Playlists at Spotify - Using Cassandra to Store Version Controlled Objects&lt;/a&gt; - &lt;a href=&quot;http://www.slideshare.net/planetcassandra/c-summit-eu-2013-playlists-at-spotify-using-cassandra-to-store-version-controlled-objects&quot;&gt;Slide&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.information-management.com/news/big-data-analytics/Relational-Database-Big-Data-Migration-Guide-10026758-1.html&quot;&gt;Big Data Platforms: How To Migrate From Relational Databases to NoSQL&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLtNErhYMkHnF2LleKggnFhNcF4t37iDCZ&quot;&gt;Apache Cassandra - O&amp;#39;Reilly - Video Training&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/planetcassandra/migration-best-practices-from-rdbms-to-cassandra-without-a-hitch&quot;&gt;Migration Best Practices: From RDBMS to Cassandra without a Hitch&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/soundcloud-activity-feed-and-real-time-stats-powered-by-apache-cassandra/&quot;&gt;SoundCloud’s Activity Feed and Real-Time Stats Powered by Apache Cassandra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/interview/spotify-scales-to-the-top-of-the-charts-with-apache-cassandra-at-40k-requestssecond/&quot;&gt;Spotify scales to the top of the charts with Apache Cassandra at 40k requests/second&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NQXxKzfv7Zo&quot;&gt;C* Summit EU 2013: Playlists at Spotify - Using Cassandra to Store Version Controlled Objects&lt;/a&gt; - &lt;a href=&quot;http://www.slideshare.net/planetcassandra/c-summit-eu-2013-playlists-at-spotify-using-cassandra-to-store-version-controlled-objects&quot;&gt;Slide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.information-management.com/news/big-data-analytics/Relational-Database-Big-Data-Migration-Guide-10026758-1.html&quot;&gt;Big Data Platforms: How To Migrate From Relational Databases to NoSQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLtNErhYMkHnF2LleKggnFhNcF4t37iDCZ&quot;&gt;Apache Cassandra - O&amp;#39;Reilly - Video Training&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/planetcassandra/migration-best-practices-from-rdbms-to-cassandra-without-a-hitch&quot;&gt;Migration Best Practices: From RDBMS to Cassandra without a Hitch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;data-model&quot;&gt;Data Model&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/cassandra-faq-can-i-start-with-a-single-node/&quot;&gt;Cassandra FAQ: Can I Start With a Single Node?&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lostechies.com/ryansvihla/2015/09/17/data-density-destroyer-of-scalability/&quot;&gt;Data Density! Destroyer of Scalability&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@mustwin/cassandra-from-a-relational-world-7bbdb0a9f1d#.217xii10w&quot;&gt;Cassandra From a Relational World&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/cassandra-faq-can-i-start-with-a-single-node/&quot;&gt;Cassandra FAQ: Can I Start With a Single Node?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://lostechies.com/ryansvihla/2015/09/17/data-density-destroyer-of-scalability/&quot;&gt;Data Density! Destroyer of Scalability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@mustwin/cassandra-from-a-relational-world-7bbdb0a9f1d#.217xii10w&quot;&gt;Cassandra From a Relational World&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;When you are designing the schema for your relational database, the primary thought on your mind is “What’s the best way to store this data?”. But with Cassandra, your dominant concern should be “How am I going to query this data?”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://wiki.apache.org/cassandra/DataModel&quot;&gt;DataModel - Introduction&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.tutorialspoint.com/cassandra/cassandra_data_model.htm&quot;&gt;Cassandra - Data Model&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.ipponusa.com/blog/modeling-data-with-cassandra-what-cql-hides-away-from-you/&quot;&gt;Modeling data with Cassandra: what CQL hides away from you&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.datastax.com/dev/blog/basic-rules-of-cassandra-data-modeling&quot;&gt;Basic Rules of Cassandra Data Modeling&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.apache.org/cassandra/DataModel&quot;&gt;DataModel - Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.tutorialspoint.com/cassandra/cassandra_data_model.htm&quot;&gt;Cassandra - Data Model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ipponusa.com/blog/modeling-data-with-cassandra-what-cql-hides-away-from-you/&quot;&gt;Modeling data with Cassandra: what CQL hides away from you&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.datastax.com/dev/blog/basic-rules-of-cassandra-data-modeling&quot;&gt;Basic Rules of Cassandra Data Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Developers coming from a relational background usually carry over rules about relational modeling and try to apply them to Cassandra. To avoid wasting time on rules that don’t really matter with Cassandra&lt;/p&gt;
@@ -163,70 +154,61 @@ Data is transparently partitioned across all nodes in either a randomized or ord
 
 &lt;p&gt;The way to minimize partition reads is to model your data to fit your queries. Don’t model around relations. Don’t model around objects.&lt;/p&gt;
 
-&lt;p&gt;If you need different types of answers, you usually need different tables. This is how you optimize for reads.&lt;/p&gt;
+&lt;p&gt;If you need different types of answers, you usually need different tables. This is how you optimize for reads.  Remember, data duplication is okay. Many of your tables may repeat the same data.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Remember, data duplication is okay. Many of your tables may repeat the same data.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://academy.datastax.com/courses/ds220-data-modeling&quot;&gt;DS220: Data Modeling&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://docs.datastax.com/en/cql/3.1/cql/ddl/dataModelingApproach.html&quot;&gt;Data Modeling Concepts&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://docs.datastax.com/en/cql/3.1/cql/ddl/ddl_intro_c.html&quot;&gt;Data modeling example&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://docs.datastax.com/en/cql/3.1/cql/cql_using/use_collections_c.html&quot;&gt;Using collections - Set, List, Map Types&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.instaclustr.com/blog/2015/08/03/common-cassandra-data-modelling-traps/&quot;&gt;Common Cassandra Data Modelling Traps&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://support.instaclustr.com/hc/en-us/articles/207071957&quot;&gt;Data Modelling Recommended Practices&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.seastar.io/blog/the-devops-of-cassandra-data-modeling/&quot;&gt;The DevOps of Cassandra Data Modeling&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://academy.datastax.com/courses/ds220-data-modeling&quot;&gt;DS220: Data Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.datastax.com/en/cql/3.1/cql/ddl/dataModelingApproach.html&quot;&gt;Data Modeling Concepts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.datastax.com/en/cql/3.1/cql/ddl/ddl_intro_c.html&quot;&gt;Data modeling example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.datastax.com/en/cql/3.1/cql/cql_using/use_collections_c.html&quot;&gt;Using collections - Set, List, Map Types&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.instaclustr.com/blog/2015/08/03/common-cassandra-data-modelling-traps/&quot;&gt;Common Cassandra Data Modelling Traps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://support.instaclustr.com/hc/en-us/articles/207071957&quot;&gt;Data Modelling Recommended Practices&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.seastar.io/blog/the-devops-of-cassandra-data-modeling/&quot;&gt;The DevOps of Cassandra Data Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;In Cassandra, it is best to start the data modeling process by defining your query patterns first.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.hakkalabs.co/articles/cassandra-data-modeling-guide&quot;&gt;An Advanced Cassandra Data Modeling Guide&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.hakkalabs.co/articles/cassandra-data-modeling-guide&quot;&gt;An Advanced Cassandra Data Modeling Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Denormalize ALL THE THINGS: Increase the number of writes to reduce and simplify reads 
 Most importantly we did this without querying multiple tables and merging and reconciling the results by using a data model that duplicates data and writes our host information in a de-normalized manner contrary to the original highly relational MySQL data model.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/jaykumarpatel/cassandra-data-modeling-best-practices&quot;&gt;Cassandra Data Modeling Best Practices by eBay ,  Slide&lt;/a&gt;
-&lt;a href=&quot;http://www.ebaytechblog.com/2012/07/16/cassandra-data-modeling-best-practices-part-1/&quot;&gt;Cassandra Data Modeling Best Practices by eBay, Part 1&lt;/a&gt;
-&lt;a href=&quot;http://www.ebaytechblog.com/2012/08/14/cassandra-data-modeling-best-practices-part-2/&quot;&gt;Cassandra Data Modeling Best Practices by eBay, Part 2&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/jaykumarpatel/cassandra-data-modeling-best-practices&quot;&gt;Cassandra Data Modeling Best Practices by eBay ,  Slide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ebaytechblog.com/2012/07/16/cassandra-data-modeling-best-practices-part-1/&quot;&gt;Cassandra Data Modeling Best Practices by eBay, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ebaytechblog.com/2012/08/14/cassandra-data-modeling-best-practices-part-2/&quot;&gt;Cassandra Data Modeling Best Practices by eBay, Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/patrickmcfadin/advanced-data-modeling-with-apache-cassandra&quot;&gt;Advanced data modeling with apache cassandra&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/patrickmcfadin/advanced-data-modeling-with-apache-cassandra&quot;&gt;Advanced data modeling with apache cassandra&lt;/a&gt;
-Data Modeling Step:
+&lt;blockquote&gt;
+&lt;p&gt;Data Modeling Step:
 1. Conceptual Data Model (ER Diagram?)
 2. Application Query Workflow
 3. Logical Data Model (Combine 1 &amp;amp; 2)
 4. Physical Data Model (3 with Data Type)&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/jericevans/cassandra-by-example-data-modelling-with-cql3&quot;&gt;Cassandra By Example: Data Modelling with CQL3&lt;/a&gt; - &lt;a href=&quot;https://github.com/twissandra/twissandra/&quot;&gt;Twissandra - Twitter + Cassandra&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/nkorla1share/cass-summit-3&quot;&gt;Cassandra Data Modeling - Practical Considerations @ Netflix&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/the-most-important-thing-to-know-in-cassandra-data-modeling-the-primary-key/&quot;&gt;The most important thing to know in Cassandra data modeling: The primary key&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/the-importance-of-single-partition-operations-in-cassandra/&quot;&gt;The importance of single-partition operations in Cassandra&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/transitioning-from-mysql-to-cassandra-at-chaordic-2/&quot;&gt;Transitioning from MySQL to Cassandra at Chaordic&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blogs.infosupport.com/static-columns-in-cassandra-and-their-benefits/&quot;&gt;Static columns in Cassandra and their benefits&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@foundev/domain-modeling-around-deletes-1cc9b6da0d24#.6k2dnj3nj&quot;&gt;Understanding Deletes&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.gitbook.com/book/teddyma/learncassandra/details&quot;&gt;Learn Cassandra - GitBook&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://lostechies.com/ryansvihla/2014/04/17/100/&quot;&gt;Data Modeling for Scale with Cassandra&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@foundev/cassandra-batch-loading-without-the-batch-keyword-40f00e35e23e#.at85ikylw&quot;&gt;Cassandra: Batch loading without the Batch keyword&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.datastax.com/en/playlist/doc/java/playlistPreface.html&quot;&gt;Playlist tutorial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.allthingsdistributed.com/2008/12/eventually_consistent.html&quot;&gt;Eventually Consistent - Revisited&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/jericevans/cassandra-by-example-data-modelling-with-cql3&quot;&gt;Cassandra By Example: Data Modelling with CQL3&lt;/a&gt; - &lt;a href=&quot;https://github.com/twissandra/twissandra/&quot;&gt;Twissandra - Twitter + Cassandra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/nkorla1share/cass-summit-3&quot;&gt;Cassandra Data Modeling - Practical Considerations @ Netflix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/the-most-important-thing-to-know-in-cassandra-data-modeling-the-primary-key/&quot;&gt;The most important thing to know in Cassandra data modeling: The primary key&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/the-importance-of-single-partition-operations-in-cassandra/&quot;&gt;The importance of single-partition operations in Cassandra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/transitioning-from-mysql-to-cassandra-at-chaordic-2/&quot;&gt;Transitioning from MySQL to Cassandra at Chaordic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blogs.infosupport.com/static-columns-in-cassandra-and-their-benefits/&quot;&gt;Static columns in Cassandra and their benefits&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@foundev/domain-modeling-around-deletes-1cc9b6da0d24#.6k2dnj3nj&quot;&gt;Understanding Deletes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gitbook.com/book/teddyma/learncassandra/details&quot;&gt;Learn Cassandra - GitBook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://lostechies.com/ryansvihla/2014/04/17/100/&quot;&gt;Data Modeling for Scale with Cassandra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@foundev/cassandra-batch-loading-without-the-batch-keyword-40f00e35e23e#.at85ikylw&quot;&gt;Cassandra: Batch loading without the Batch keyword&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.datastax.com/en/playlist/doc/java/playlistPreface.html&quot;&gt;Playlist tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.allthingsdistributed.com/2008/12/eventually_consistent.html&quot;&gt;Eventually Consistent - Revisited&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;the CAP theorem, which states that of three properties of shared-data systems—data consistency, system availability, and tolerance to network partition—only two can be achieved at any given time.&lt;/p&gt;
@@ -234,13 +216,17 @@ Data Modeling Step:
 &lt;p&gt;An important observation is that in larger distributed-scale systems, network partitions are a given; therefore, consistency and availability cannot be achieved at the same time. This means that there are two choices on what to drop: relaxing consistency will allow the system to remain highly available under the partitionable conditions, whereas making consistency a priority means that under certain conditions the system will not be available.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://lostechies.com/ryansvihla/2014/09/22/cassandra-query-patterns-not-using-the-in-query-for-multiple-partitions/&quot;&gt;Cassandra Query Patterns: Not using the “in” query for multiple partitions.&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://lostechies.com/ryansvihla/2014/09/22/cassandra-query-patterns-not-using-the-in-query-for-multiple-partitions/&quot;&gt;Cassandra Query Patterns: Not using the “in” query for multiple partitions.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;driver&quot;&gt;Driver&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/datastax/nodejs-driver&quot;&gt;nodejs-driver - DataStax Node.js Driver for Apache Cassandra&lt;/a&gt;
-&lt;a href=&quot;https://academy.datastax.com/demos/getting-started-apache-cassandra-and-nodejs&quot;&gt;Getting Started with Apache Cassandra and Node.js&lt;/a&gt;
-&lt;a href=&quot;http://datastax.github.io/nodejs-driver/getting-started&quot;&gt;nodejs-driver - Getting started&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/datastax/nodejs-driver&quot;&gt;nodejs-driver - DataStax Node.js Driver for Apache Cassandra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://academy.datastax.com/demos/getting-started-apache-cassandra-and-nodejs&quot;&gt;Getting Started with Apache Cassandra and Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://datastax.github.io/nodejs-driver/getting-started&quot;&gt;nodejs-driver - Getting started&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
 <category term="cassandra" />
 <category term="nosql" />
