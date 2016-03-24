@@ -66,7 +66,7 @@ Remove some no longer need packages ex. `python-pip` `curl` Any SDK
 and compressed file that your extracted when you finish your
 installation.
 
-> Much remove in same layer, remove in another layer not help to reduce
+> Must remove in same layer, remove in another layer not help to reduce
 > image size.
 
 ```
