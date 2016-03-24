@@ -42,10 +42,13 @@ gems:
     - redcarpet
     - jekyll-feed
     - jekyll-lunr-js-search
+    - octopress-minify-html
 
 # Plugins config
 lunr_search:
     excludes: [feed.xml, tags, search, "404"]
+
+minify_html: true
 
 # Custom vars
 version:          0.0.1
