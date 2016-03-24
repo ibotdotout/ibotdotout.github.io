@@ -11,7 +11,7 @@ branches:
 
 script:
 - bundle exec jekyll build
-- bundle exec htmlproof ./_site --disable-external
+- bundle exec htmlproofer ./_site --disable-external
 
 after_success:
 - git clone https://$GH_REF

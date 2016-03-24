@@ -16,7 +16,7 @@ tags: [jekyll]
 Travis support docker but not fully permission some dependencies that
 try to use OS command ex. kill can make your test error or failed.
 
-- htmlproof external
+- htmlproofer external
 
 link that not start with http will be claim as internal link
 
