@@ -2,7 +2,9 @@
 markdown:         redcarpet
 redcarpet:
     extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-highlighter:      pygments
+
+highlighter: rouge
+# highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
@@ -33,7 +35,11 @@ author:
 exclude: [Dockerfile, Gemfile, Gemfile.lock, LICENSE.md, docker-compose.yml, vendor]
 
 # Jekyll Plugins
-gems:
+# gems:
+gems:           
+    - jekyll-paginate
+    - jekyll-gist
+    - redcarpet
     - jekyll-feed
     - jekyll-lunr-js-search
 
