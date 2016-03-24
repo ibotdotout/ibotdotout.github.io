@@ -97,6 +97,8 @@
       
     
       
+    
+      
         
       
     
@@ -190,7 +192,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/ocp">
+      <a href="/ocp/">
         Open/closed principle Example in Python
       </a>
     </h1>
@@ -199,7 +201,7 @@
       01 Jul 2015
       
         &middot;
-        <a href="/ocp#disqus_thread" data-disqus-identifier="/ocp"></a>
+        <a href="/ocp/#disqus_thread" data-disqus-identifier="/ocp/"></a>
         
       
     </span>
@@ -253,7 +255,7 @@ else:
 <p>class FizzBuzz():
     def <strong>init</strong>(cls,rules):
         cls.rules = rules</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     for rule in self.rules:
         if rule.is_handle(x):
             return rule.say(x)
@@ -261,37 +263,37 @@ else:
 <p>class Rule():
     def is_handle(self,x):
         pass</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     pass
 </code></pre></div>
 <p>class NormalRule(Rule):
     def is_handle(self,x):
         return True</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return x
 </code></pre></div>
 <p>class FizzRule(Rule):
     def is_handle(self,x):
         return x % 3 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;Fizz&amp;quot;
 </code></pre></div>
 <p>class BuzzRule(Rule):
     def is_handle(self,x):
         return x % 5 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;Buzz&amp;quot;
 </code></pre></div>
 <p>class BangRule(Rule):
     def is_handle(self,x):
         return x % 7 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;Bang&amp;quot;
 </code></pre></div>
 <p>class FizzBuzzRule(Rule):
     def is_handle(self,x):
         return x % 5 == 0 and x % 3 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;FizzBuzz&amp;quot;
 </code></pre></div>
 <p>class FizzBangRule(Rule):
@@ -309,7 +311,7 @@ else:
 <p>class FizzBuzzBangRule(Rule):
     def is_handle(self,x):
         return x % 7 ==0 and x % 5 == 0 and x % 3 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;FizzBuzzBang&amp;quot;
 </code></pre></div>
 <p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:
@@ -334,7 +336,7 @@ Principle</a></li>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/coding">
+      <a href="/coding/">
         Coding
       </a>
     </h1>
@@ -343,7 +345,7 @@ Principle</a></li>
       24 Jun 2015
       
         &middot;
-        <a href="/coding#disqus_thread" data-disqus-identifier="/coding"></a>
+        <a href="/coding/#disqus_thread" data-disqus-identifier="/coding/"></a>
         
           &middot;
           Updated January 27, 2016
@@ -559,7 +561,7 @@ Technician: Tools &amp; Tactics</p>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/ssh">
+      <a href="/ssh/">
         All about Secure Shell
       </a>
     </h1>
@@ -568,7 +570,7 @@ Technician: Tools &amp; Tactics</p>
       06 Apr 2015
       
         &middot;
-        <a href="/ssh#disqus_thread" data-disqus-identifier="/ssh"></a>
+        <a href="/ssh/#disqus_thread" data-disqus-identifier="/ssh/"></a>
         
       
     </span>
@@ -594,7 +596,7 @@ Technician: Tools &amp; Tactics</p>
 <span class="c">#DynamicForward</span>
 <span class="c">#  Specifies that a TCP port on the local machine be forwarded over the secure channel, and the application protocol is then used to determine where to connect to from the remote machine.</span>
 <span class="c">#IdentityFile</span>
-<span class="c">#  Specifies a file from which the user&#39;s DSA, ECDSA, Ed25519 or RSA authentication identity is read</span>
+<span class="c">#  Specifies a file from which the user's DSA, ECDSA, Ed25519 or RSA authentication identity is read</span>
 
   Host &lt;proxy&gt;
   HostName &lt;ip&gt;
@@ -604,12 +606,12 @@ Technician: Tools &amp; Tactics</p>
 </code></pre></div>
 <h2 id="ssh-login-with-key-based-authentication"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Client: generate key</span>
-<span class="nv">$ </span>ssh-keygen -t rsa -b 4096
+<span class="gp">$ </span>ssh-keygen -t rsa -b 4096
 
 <span class="c"># Server: put client key</span>
 <span class="c"># copy ~/.ssh/id_rsa.pub into ~/.ssh/authorized_keys in server</span>
 <span class="c"># (option: server denies passed auth)</span>
-<span class="nv">$ </span>sudo vim /etc/ssh/sshd_config
+<span class="gp">$ </span>sudo vim /etc/ssh/sshd_config
 </code></pre></div>
 <h2 id="ssh-login-with-password"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># /etc/ssh/sshd_config</span>
@@ -619,7 +621,7 @@ Match address 192.0.2.0/24
     PasswordAuthentication yes
 </code></pre></div>
 <h2 id="ssh-proxy-with-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>ssh -N -D <span class="m">8080</span> user@server -p 443
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>ssh -N -D 8080 user@server -p 443
 <span class="c"># should using port 443 to avoid blocking port 22</span>
 <span class="c"># setting proxy  on your browser</span>
 <span class="c"># sock host 127.0.0.1 port 8080</span>
@@ -631,7 +633,7 @@ Host &lt;proxy&gt;
   DynamicForward 8080
 </code></pre></div>
 <h2 id="ssh-skip-known_host"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>ssh -o <span class="s2">&quot;StrictHostKeyChecking no&quot;</span> user@host
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>ssh -o <span class="s2">"StrictHostKeyChecking no"</span> user@host
 </code></pre></div>
 <h3 id="resources">Resources</h3>
 
@@ -646,7 +648,7 @@ Host &lt;proxy&gt;
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/latex">
+      <a href="/latex/">
         All about Latex
       </a>
     </h1>
@@ -655,14 +657,14 @@ Host &lt;proxy&gt;
       07 Feb 2015
       
         &middot;
-        <a href="/latex#disqus_thread" data-disqus-identifier="/latex"></a>
+        <a href="/latex/#disqus_thread" data-disqus-identifier="/latex/"></a>
         
       
     </span>
 
     
       <h3 id="install-latex-osx-mactex">Install Latex OSX (mactex)</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>brew cask install mactex
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install mactex
 </code></pre></div>
 <h3 id="figures">Figures</h3>
 
@@ -671,41 +673,41 @@ Host &lt;proxy&gt;
 <li><a href="http://tex.stackexchange.com/questions/34063/figure-span-to-one-column-on-double-column-page">figure span to one column on double column page</a></li>
 </ul>
 <div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
-<span class="k">\begin</span><span class="nb">{</span>figure*<span class="nb">}</span>
-  <span class="k">\centering</span> <span class="k">\includegraphics</span><span class="nb">{</span>figure<span class="nb">}</span>
-  <span class="k">\caption</span><span class="nb">{</span>This is a figure caption<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>figure*<span class="nb">}</span>
+<span class="nt">\begin{figure*}</span>
+  <span class="k">\centering</span> <span class="k">\includegraphics</span><span class="p">{</span>figure<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>This is a figure caption<span class="p">}</span>
+<span class="nt">\end{figure*}</span>
 </code></pre></div>
 <h3 id="label">Label</h3>
 
 <ul>
 <li><a href="http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">LaTeX/Labels and Cross-referencing</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\caption</span><span class="nb">{</span>Close-up of a gull<span class="k">\label</span><span class="nb">{</span>fig:gull<span class="nb">}}</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
 </code></pre></div>
 <h3 id="landscape"><a href="http://tex.stackexchange.com/questions/168309/landscape-figure-on-different-page-to-heading">Landscape</a></h3>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="nb">{</span>pdflscape<span class="nb">}</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
 
-<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
-<span class="k">\begin</span><span class="nb">{</span>landscape<span class="nb">}</span>
+<span class="nt">\begin{document}</span>
+<span class="nt">\begin{landscape}</span>
 .
 .
 .
-<span class="k">\end</span><span class="nb">{</span>landscape<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="nt">\end{landscape}</span>
+<span class="nt">\end{document}</span>
 </code></pre></div>
 <h3 id="math-equation">Math Equation</h3>
 <div class="highlight"><pre><code class="language-tex" data-lang="tex"># inline equation
-<span class="s">$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="s">$</span> #equation
-<span class="sb">$$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="s">$$</span> #equation in new line
+<span class="p">$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$</span> #equation
+<span class="p">$$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$$</span> #equation in new line
 
 # equation
-<span class="k">\begin</span><span class="nb">{</span>eqaution<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>eqaution<span class="nb">}</span>
+<span class="nt">\begin{eqaution}</span>
+<span class="nt">\end{eqaution}</span>
 
 # equation array
-<span class="k">\begin</span><span class="nb">{</span>eqnarray<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>eqnarray<span class="nb">}</span>
+<span class="nt">\begin{eqnarray}</span>
+<span class="nt">\end{eqnarray}</span>
 </code></pre></div>
 <ul>
 <li><a href="http://www.clas.kitasato-u.ac.jp/%7Efujiwara/keyNote/equationToKeynote.html">Import equations into Keynote</a></li>
@@ -739,12 +741,12 @@ Host &lt;proxy&gt;
 <div class="highlight"><pre><code class="language-tex" data-lang="tex">  # read more in document
   # 2.5 Copy a formula
 
-  <span class="k">\STcopy</span><span class="nb">{</span>&gt;x,vy<span class="nb">}{</span>formula<span class="nb">}</span>
+  <span class="k">\STcopy</span><span class="p">{</span>&gt;x,vy<span class="p">}{</span>formula<span class="p">}</span>
 
   # 3.2 Number formatting and the fp package
 
   # foating point numbers are rounded to 2 digits
-  <span class="k">\STautoround</span><span class="nb">{</span>2<span class="nb">}</span>
+  <span class="k">\STautoround</span><span class="p">{</span>2<span class="p">}</span>
 </code></pre></div>
 <h3 id="separate-compilation-of-child-documents">Separate compilation of child documents</h3>
 
@@ -774,7 +776,7 @@ Host &lt;proxy&gt;
 </ul>
 <div class="highlight"><pre><code class="language-tex" data-lang="tex">    Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
     # or using <span class="k">\hyphenation</span> to cut all the documents
-    <span class="k">\hyphenation</span><span class="nb">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="nb">}</span>
+    <span class="k">\hyphenation</span><span class="p">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="p">}</span>
 </code></pre></div>
 <ul>
 <li>Word Cut</li>
@@ -785,14 +787,14 @@ Host &lt;proxy&gt;
 <li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
 <li><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\input</span><span class="nb">{</span>table.tex<span class="nb">}</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
 </code></pre></div>
 <ul>
 <li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
 <li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
 <li>hidden character</li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  <span class="k">\phantom</span><span class="nb">{</span>-<span class="nb">}</span> <span class="c">%hidden character</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">  <span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
 </code></pre></div>
 <ul>
 <li><a href="http://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment">Custom alignment of text in itemized environment</a></li>
@@ -806,12 +808,12 @@ Host &lt;proxy&gt;
 <li><a href="https://www.youtube.com/watch?v=5ifh3NF-k-k">LaTeX tutorial: How to cite references/paper/articles in Latex</a></li>
 </ol>
 <div class="highlight"><pre><code class="language-tex" data-lang="tex">  # cite to bibtex references
-  <span class="k">\usepackage</span><span class="nb">{</span>cite<span class="nb">}</span>
-  <span class="k">\cite</span><span class="nb">{</span>sample1234<span class="nb">}</span>
+  <span class="k">\usepackage</span><span class="p">{</span>cite<span class="p">}</span>
+  <span class="k">\cite</span><span class="p">{</span>sample1234<span class="p">}</span>
 
   # referecnes from bibtex
-  <span class="k">\bibliographystyle</span><span class="nb">{</span>IEEEtran<span class="nb">}</span>
-  <span class="k">\bibliography</span><span class="nb">{</span>file<span class="nb">_</span>of<span class="nb">_</span>bibex<span class="nb">}</span>
+  <span class="k">\bibliographystyle</span><span class="p">{</span>IEEEtran<span class="p">}</span>
+  <span class="k">\bibliography</span><span class="p">{</span>file<span class="p">_</span>of<span class="p">_</span>bibex<span class="p">}</span>
 </code></pre></div>
 <h3 id="bibtex">BibTex</h3>
 
@@ -820,10 +822,10 @@ Host &lt;proxy&gt;
 <li><a href="http://tex.stackexchange.com/questions/204291/bibtex-latex-compiling">Bibtex, Latex compiling</a></li>
 </ul>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># build latex + bibtex</span>
-<span class="nv">$ </span>pdflatex paper.tex
-<span class="nv">$ </span>bibtex paper <span class="c"># without extension</span>
-<span class="nv">$ </span>pdflatex paper.tex
-<span class="nv">$ </span>pdflatex paper.tex
+<span class="gp">$ </span>pdflatex paper.tex
+<span class="gp">$ </span>bibtex paper <span class="c"># without extension</span>
+<span class="gp">$ </span>pdflatex paper.tex
+<span class="gp">$ </span>pdflatex paper.tex
 </code></pre></div>
 <h3 id="latex-slide-beamer">Latex Slide (Beamer)</h3>
 
@@ -895,7 +897,7 @@ in LaTeX</a></li>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/Security">
+      <a href="/Security/">
         All about Security
       </a>
     </h1>
@@ -904,7 +906,7 @@ in LaTeX</a></li>
       05 Feb 2015
       
         &middot;
-        <a href="/Security#disqus_thread" data-disqus-identifier="/Security"></a>
+        <a href="/Security/#disqus_thread" data-disqus-identifier="/Security/"></a>
         
       
     </span>

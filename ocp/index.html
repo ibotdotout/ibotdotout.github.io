@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Open/closed principle Example in Python" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/ocp/" />
+<meta property="og:url" content="http://dev.im-bot.com/ocp//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="FizzBuzz Problemprint any number divisible by three with the word &quot;fizz&quot; instead ofthe number.print any number divisible by five with the word &quo..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,7 +194,7 @@
     01 Jul 2015
       
         &middot;
-        <a href="/ocp/index.html#disqus_thread" data-disqus-identifier="/ocp"></a>
+        <a href="/ocp//index.html#disqus_thread" data-disqus-identifier="/ocp/"></a>
         
       
   </span>
@@ -245,7 +247,7 @@ else:
 <p>class FizzBuzz():
     def <strong>init</strong>(cls,rules):
         cls.rules = rules</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     for rule in self.rules:
         if rule.is_handle(x):
             return rule.say(x)
@@ -253,37 +255,37 @@ else:
 <p>class Rule():
     def is_handle(self,x):
         pass</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     pass
 </code></pre></div>
 <p>class NormalRule(Rule):
     def is_handle(self,x):
         return True</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return x
 </code></pre></div>
 <p>class FizzRule(Rule):
     def is_handle(self,x):
         return x % 3 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;Fizz&amp;quot;
 </code></pre></div>
 <p>class BuzzRule(Rule):
     def is_handle(self,x):
         return x % 5 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;Buzz&amp;quot;
 </code></pre></div>
 <p>class BangRule(Rule):
     def is_handle(self,x):
         return x % 7 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;Bang&amp;quot;
 </code></pre></div>
 <p>class FizzBuzzRule(Rule):
     def is_handle(self,x):
         return x % 5 == 0 and x % 3 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;FizzBuzz&amp;quot;
 </code></pre></div>
 <p>class FizzBangRule(Rule):
@@ -301,7 +303,7 @@ else:
 <p>class FizzBuzzBangRule(Rule):
     def is_handle(self,x):
         return x % 7 ==0 and x % 5 == 0 and x % 3 == 0</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def say(self,x):
+<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
     return &amp;quot;FizzBuzzBang&amp;quot;
 </code></pre></div>
 <p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:
@@ -329,7 +331,7 @@ Principle</a></li>
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -338,7 +340,7 @@ Principle</a></li>
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -347,7 +349,7 @@ Principle</a></li>
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -365,7 +367,7 @@ Principle</a></li>
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/ocp";
+      var disqus_identifier = "/ocp/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

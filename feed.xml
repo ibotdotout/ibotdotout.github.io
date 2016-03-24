@@ -1,21 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-<generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
-<link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
-<link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-03-24T15:14:44+00:00</updated>
-<id>http://dev.im-bot.com//</id>
-<subtitle>botbotbot&#39;s blog</subtitle>
-<author>
-<name>botbotbot</name>
-</author>
-<entry>
-<title>Selectively disable caching for specific RUN commands in Dockerfile</title>
-<link href="http://dev.im-bot.com//docker-select-caching" rel="alternate" type="text/html" title="Selectively disable caching for specific RUN commands in Dockerfile" />
-<published>2016-03-24T00:00:00+00:00</published>
-<updated>2016-03-24T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//docker-select-caching</id>
-<content type="html" xml:base="http://dev.im-bot.com//docker-select-caching">&lt;p&gt;If you using &lt;code&gt;Dockerfile&lt;/code&gt;, you should know about caching for faster builds.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-03-24T18:21:40+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Selectively disable caching for specific RUN commands in Dockerfile</title><link href="http://dev.im-bot.com//docker-select-caching/" rel="alternate" type="text/html" title="Selectively disable caching for specific RUN commands in Dockerfile" /><published>2016-03-24T00:00:00+00:00</published><updated>2016-03-24T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-select-caching</id><content type="html" xml:base="http://dev.im-bot.com//docker-select-caching/">&lt;p&gt;If you using &lt;code&gt;Dockerfile&lt;/code&gt;, you should know about caching for faster builds.
 Sometimes, you need to rebuild without cache. you can run docker &lt;code&gt;build&lt;/code&gt; with
 &lt;code&gt;--no-cache&lt;/code&gt; option that will disable all layer cache.&lt;/p&gt;
 
@@ -44,7 +27,7 @@ and &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#arg&quot;
 ARG &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;when you need to rebuild with selected cache, run it with &lt;code&gt;--build-arg&lt;/code&gt; option&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker build -t your-image --build-arg &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date +%s&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; .
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker build -t your-image --build-arg &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date +%s&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; .
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;then only layer below &lt;code&gt;ARG&lt;/code&gt; command in &lt;code&gt;Dockerfile&lt;/code&gt; will rebuild.&lt;/p&gt;
 
@@ -55,18 +38,12 @@ ARG &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;
 &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#arg&quot;&gt;Dockerfile - ARG&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-172606763&quot;&gt;Temporary Solution - Selectively disable caching for specific RUN commands in Dockerfile&lt;/a&gt; - &lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-185872769&quot;&gt;An
 additional description &lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="docker" />
-<summary>If you using Dockerfile, you should know about caching for faster builds.Sometimes, you need to rebuild without cache. you can run docker build with--no-cache option that will disable all layer cache.There is problem when you should use some Dockerfile commands like ADD orCOPY to copy file form host to container.</summary>
-</entry>
-<entry>
-<title>What I know about Apache Cassandra</title>
-<link href="http://dev.im-bot.com//cassandra" rel="alternate" type="text/html" title="What I know about Apache Cassandra" />
-<published>2016-03-24T00:00:00+00:00</published>
-<updated>2016-03-24T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//cassandra</id>
-<content type="html" xml:base="http://dev.im-bot.com//cassandra">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="docker" /><summary>If you using Dockerfile, you should know about caching for faster builds.
+Sometimes, you need to rebuild without cache. you can run docker build with
+--no-cache option that will disable all layer cache.
+
+There is problem when you should use some Dockerfile commands like ADD or
+COPY to copy file form host to container.</summary></entry><entry><title>What I know about Apache Cassandra</title><link href="http://dev.im-bot.com//cassandra/" rel="alternate" type="text/html" title="What I know about Apache Cassandra" /><published>2016-03-24T00:00:00+00:00</published><updated>2016-03-24T00:00:00+00:00</updated><id>http://dev.im-bot.com//cassandra</id><content type="html" xml:base="http://dev.im-bot.com//cassandra/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.datastax.com/wp-content/uploads/2012/08/WP-IntrotoCassandra.pdf&quot;&gt;Introduction to Apache Cassandra&lt;/a&gt;&lt;/li&gt;
@@ -226,19 +203,28 @@ Most importantly we did this without querying multiple tables and merging and re
 &lt;li&gt;&lt;a href=&quot;https://github.com/datastax/nodejs-driver&quot;&gt;nodejs-driver - DataStax Node.js Driver for Apache Cassandra&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://academy.datastax.com/demos/getting-started-apache-cassandra-and-nodejs&quot;&gt;Getting Started with Apache Cassandra and Node.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://datastax.github.io/nodejs-driver/getting-started&quot;&gt;nodejs-driver - Getting started&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="cassandra" />
-<category term="nosql" />
-<summary>IntroIntroduction to Apache CassandraCassandra has a peer-to-peer distributed architecture that is much more elegant, and easy to set up and maintain.In Cassandra, all nodes are the same; there is no concept of a master node, with all nodes communicating with each other via a gossip protocol.There is nothing programmatic that a developer or administrator needs to do or code to distribute data across a cluster.Data is transparently partitioned across all nodes in either a randomized or ordered fashion, with random being the default.When creating a new Cassandra database (also called a keyspace), a user simply indicates via a single command which data centers and/or cloud providers will hold copies of the new database; everything from that point forward is automatically handled and maintained by Cassandra.If one or more nodes responsible for a particular set of data are down, data is simply written to another node, which temporarily holds the data. Once the node(s) come back online, they automatically bring themselves back up to date from nodes that are holding the data they maintain.A user requests data from any node (which becomes that user’s coordinator node ), with the user’s query being assembled from one or more nodes holding the necessary data. If a particular node having the required data is down, Cassandra simply requests data from another node holding a replicated copy of that data.While Cassandra is not a transactional database in the same way that legacy RDBMSs offer ACID transactions, it does offer the “AID” portion of ACID, in that data written is atomic, isolated, and durable. The “C” of ACID does not apply to Cassandra, as there is no concept of referential integrity or foreign keysBecause NoSQL databases like Cassandra do not support operations like SQL joins, data tends to be highly denormalized. While such a thing (wide rows) is normally a problem for an RDBMS, Cassandra provides exceptional performance for objects with many thousands of columns.</summary>
-</entry>
-<entry>
-<title>Crontab on Docker</title>
-<link href="http://dev.im-bot.com//docker-cron" rel="alternate" type="text/html" title="Crontab on Docker" />
-<published>2016-03-04T00:00:00+00:00</published>
-<updated>2016-03-04T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//docker-cron</id>
-<content type="html" xml:base="http://dev.im-bot.com//docker-cron">&lt;p&gt;You can start &lt;code&gt;crontab&lt;/code&gt; following &lt;a href=&quot;https://www.ekito.fr/people/run-a-cron-job-with-docker/&quot;&gt;Run a cron job with Docker&lt;/a&gt;
+&lt;/ul&gt;</content><category term="cassandra" /><category term="nosql" /><summary>Intro
+
+
+Introduction to Apache Cassandra
+
+
+
+Cassandra has a peer-to-peer distributed architecture that is much more elegant, and easy to set up and maintain.
+In Cassandra, all nodes are the same; there is no concept of a master node, with all nodes communicating with each other via a gossip protocol.
+
+There is nothing programmatic that a developer or administrator needs to do or code to distribute data across a cluster.
+Data is transparently partitioned across all nodes in either a randomized or ordered fashion, with random being the default.
+
+When creating a new Cassandra database (also called a keyspace), a user simply indicates via a single command which data centers and/or cloud providers will hold copies of the new database; everything from that point forward is automatically handled and maintained by Cassandra.
+
+If one or more nodes responsible for a particular set of data are down, data is simply written to another node, which temporarily holds the data. Once the node(s) come back online, they automatically bring themselves back up to date from nodes that are holding the data they maintain.
+
+A user requests data from any node (which becomes that user’s coordinator node ), with the user’s query being assembled from one or more nodes holding the necessary data. If a particular node having the required data is down, Cassandra simply requests data from another node holding a replicated copy of that data.
+
+While Cassandra is not a transactional database in the same way that legacy RDBMSs offer ACID transactions, it does offer the “AID” portion of ACID, in that data written is atomic, isolated, and durable. The “C” of ACID does not apply to Cassandra, as there is no concept of referential integrity or foreign keys
+
+Because NoSQL databases like Cassandra do not support operations like SQL joins, data tends to be highly denormalized. While such a thing (wide rows) is normally a problem for an RDBMS, Cassandra provides exceptional performance for objects with many thousands of columns.</summary></entry><entry><title>Crontab on Docker</title><link href="http://dev.im-bot.com//docker-cron/" rel="alternate" type="text/html" title="Crontab on Docker" /><published>2016-03-04T00:00:00+00:00</published><updated>2016-03-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-cron</id><content type="html" xml:base="http://dev.im-bot.com//docker-cron/">&lt;p&gt;You can start &lt;code&gt;crontab&lt;/code&gt; following &lt;a href=&quot;https://www.ekito.fr/people/run-a-cron-job-with-docker/&quot;&gt;Run a cron job with Docker&lt;/a&gt;
 just put &lt;code&gt;crontab&lt;/code&gt; in &lt;code&gt;/etc/cron.d/&lt;/code&gt; and run &lt;code&gt;cron&lt;/code&gt; for making it working.&lt;/p&gt;
 
 &lt;!-- more --&gt;
@@ -247,7 +233,7 @@ just put &lt;code&gt;crontab&lt;/code&gt; in &lt;code&gt;/etc/cron.d/&lt;/code&g
 You had alreay tried to run your script that working on your linux but no idea why not working on your docker.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/26958348&quot;&gt;rozkosz&lt;/a&gt; said:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt; Several issues that I faced while trying to get a cron job running in a docker container were:
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt; Several issues that I faced while trying to get a cron job running in a docker container were:
  1. time in the docker container is in UTC not local time;
  2. the docker environment is not passed to cron;
  3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
@@ -264,7 +250,7 @@ You can following this for simple solution:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;In your &lt;code&gt;crontab&lt;/code&gt; file, You need to to import your Docker environment before run your script&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;  */5 * * * *  root env - &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;cat /root/env.txt&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;  your_scipt  &amp;gt;&amp;gt; /var/log/cron.log 2&amp;gt;&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;1
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;  &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;/5 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;  root env - &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;cat /root/env.txt&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;  your_scipt  &amp;gt;&amp;gt; /var/log/cron.log 2&amp;gt;&amp;amp;1
   &lt;span class=&quot;c&quot;&gt;# An empty line is required at the end of this file for a valid cron file.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol&gt;
@@ -276,7 +262,7 @@ You can following this for simple solution:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Debian/Linux Setting timezone&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt; &lt;span class=&quot;c&quot;&gt;# Set the time zone to the local time zone&lt;/span&gt;
- RUN &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Asia/Bangkok&amp;quot;&lt;/span&gt; &amp;gt; /etc/timezone &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; dpkg-reconfigure --frontend noninteractive tzdata
+ RUN &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Asia/Bangkok&quot;&lt;/span&gt; &amp;gt; /etc/timezone &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; dpkg-reconfigure --frontend noninteractive tzdata
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://wiki.alpinelinux.org/wiki/Setting_the_timezone&quot;&gt;Alpine Setting the timezone&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Alpine Linux&lt;/span&gt;
@@ -284,7 +270,7 @@ You can following this for simple solution:&lt;/p&gt;
 USEo root
 RUN apk add --update tzdata &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Asia/Bangkok&amp;quot;&lt;/span&gt; &amp;gt;  /etc/timezone &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Asia/Bangkok&quot;&lt;/span&gt; &amp;gt;  /etc/timezone &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apk del tzdata &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; mv /etc/localtime /usr/share/zoneinfo/Asia/Bangkok
 
@@ -294,7 +280,7 @@ RUN apk add --update tzdata
 ENV &lt;span class=&quot;nv&quot;&gt;TZ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Asia/Bangkok
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/25130291&quot;&gt;Will docker container auto sync time with the host machine?&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker run -it -v /etc/localtime:/etc/localtime:ro &amp;lt; image &amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker run -it -v /etc/localtime:/etc/localtime:ro &amp;lt; image &amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -308,18 +294,8 @@ ENV &lt;span class=&quot;nv&quot;&gt;TZ&lt;/span&gt;&lt;span class=&quot;o&quot;
 &lt;li&gt;&lt;a href=&quot;https://github.com/aptible/docker-cron-example&quot;&gt;Example implementation of cron jobs on Docker/Aptible&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/&quot;&gt;Example of Cron&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://serverfault.com/a/84545&quot;&gt;PATH in crontab&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="docker" />
-<summary>You can start crontab following Run a cron job with Dockerjust put crontab in /etc/cron.d/ and run cron for making it working.</summary>
-</entry>
-<entry>
-<title>Reduce docker image size</title>
-<link href="http://dev.im-bot.com//docker-reduce-image-size" rel="alternate" type="text/html" title="Reduce docker image size" />
-<published>2016-03-03T00:00:00+00:00</published>
-<updated>2016-03-03T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//docker-reduce-image-size</id>
-<content type="html" xml:base="http://dev.im-bot.com//docker-reduce-image-size">&lt;p&gt;Reduce Docker image size can help your to portable your contain
+&lt;/ul&gt;</content><category term="docker" /><summary>You can start crontab following Run a cron job with Docker
+just put crontab in /etc/cron.d/ and run cron for making it working.</summary></entry><entry><title>Reduce docker image size</title><link href="http://dev.im-bot.com//docker-reduce-image-size/" rel="alternate" type="text/html" title="Reduce docker image size" /><published>2016-03-03T00:00:00+00:00</published><updated>2016-03-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-reduce-image-size</id><content type="html" xml:base="http://dev.im-bot.com//docker-reduce-image-size/">&lt;p&gt;Reduce Docker image size can help your to portable your contain
 across network, save bandwidth and storage, faster to scale.&lt;/p&gt;
 
 &lt;h2 id=&quot;1-using-alpine-base-image-when-possible&quot;&gt;1. Using &lt;a href=&quot;https://hub.docker.com/_/alpine/&quot;&gt;alpine&lt;/a&gt; base image when possible&lt;/h2&gt;
@@ -348,17 +324,17 @@ some that your have to compile with your own.&lt;/p&gt;
 and I can save ~700MB by using this technique and combine commands on
 &lt;a href=&quot;https://github.com/ibotdotout/docker-predictionio/blob/master/Dockerfile&quot;&gt;docker-predictionio&lt;/a&gt;
 that based on &lt;a href=&quot;https://github.com/sphereie/docker-predictionio/blob/master/Dockerfile&quot;&gt;sphereio/docker-predictionio&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RUN apt-get install -y --no-install-recommends &amp;lt;packages&amp;gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;RUN apt-get install -y --no-install-recommends &amp;lt;packages&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;3-combine-commands-to-reduce-layers&quot;&gt;3. Combine commands to reduce layers&lt;/h2&gt;
 
 &lt;p&gt;Example your &lt;code&gt;Dockfile&lt;/code&gt; look like&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RUN apt-get update
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;RUN apt-get update
 RUN apt-get install -y python-pip
 RUN pip install predictionio
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;should combile commands like this&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RUN apt-get update \
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;RUN apt-get update \
     &amp;amp;&amp;amp; apt-get install -y python-pip \
     &amp;amp;&amp;amp; pip install predictionio
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -377,7 +353,7 @@ installation.&lt;/p&gt;
 &lt;p&gt;Must remove in same layer, remove in another layer not help to reduce
 image size.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RUN apt-get install -y python-pip pyhton-dev \
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;RUN apt-get install -y python-pip pyhton-dev \
     &amp;amp;&amp;amp; pip install predictionio \
     &amp;amp;&amp;amp; apt-get remove -y python-pip \
     &amp;amp;&amp;amp; ap-get clean \
@@ -400,18 +376,26 @@ You can read more about &lt;code&gt;docker-squash&lt;/code&gt; in References.&lt
 &lt;li&gt;&lt;a href=&quot;https://github.com/jwilder/docker-squash&quot;&gt;docker-squash&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://jasonwilder.com/blog/2014/08/19/squashing-docker-images/&quot;&gt;Squashing Docker Images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://woudenberg.io/reducing-docker-image-size/&quot;&gt;Reducing the size of Docker Images&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="docker" />
-<summary>Reduce Docker image size can help your to portable your containacross network, save bandwidth and storage, faster to scale.1. Using alpine base image when possibleIt is minimal Docker image based on Alpine Linux that only 5 MB.You can install packages with apk add --update &amp;lt;pakckages&amp;gt; andyou can check packages that avaible on alpine packages.Debian/Ubuntu vs AlpineNginx based on debian 135 MB vs 13 MB alpine-nginxNode based on debian 644 MB vs 36.76 MB alpine-nodeYou can see how small alpine based image are.However alpine based is new born linux that not contain much packages asolder linux like debian/ubuntu. There are some compiled packages andsome that your have to compile with your own.</summary>
-</entry>
-<entry>
-<title>All about Wordpress</title>
-<link href="http://dev.im-bot.com//wordpress" rel="alternate" type="text/html" title="All about Wordpress" />
-<published>2016-01-26T00:00:00+00:00</published>
-<updated>2016-01-26T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//wordpress</id>
-<content type="html" xml:base="http://dev.im-bot.com//wordpress">&lt;h1 id=&quot;docker-wordpress&quot;&gt;Docker + Wordpress&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="docker" /><summary>Reduce Docker image size can help your to portable your contain
+across network, save bandwidth and storage, faster to scale.
+
+1. Using alpine base image when possible
+
+It is minimal Docker image based on Alpine Linux that only 5 MB.
+You can install packages with apk add --update &amp;lt;pakckages&amp;gt; and
+you can check packages that avaible on alpine packages.
+
+Debian/Ubuntu vs Alpine
+
+
+Nginx based on debian 135 MB vs 13 MB alpine-nginx
+Node based on debian 644 MB vs 36.76 MB alpine-node
+
+
+You can see how small alpine based image are.
+However alpine based is new born linux that not contain much packages as
+older linux like debian/ubuntu. There are some compiled packages and
+some that your have to compile with your own.</summary></entry><entry><title>All about Wordpress</title><link href="http://dev.im-bot.com//wordpress/" rel="alternate" type="text/html" title="All about Wordpress" /><published>2016-01-26T00:00:00+00:00</published><updated>2016-01-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//wordpress</id><content type="html" xml:base="http://dev.im-bot.com//wordpress/">&lt;h1 id=&quot;docker-wordpress&quot;&gt;Docker + Wordpress&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/wordpress/&quot;&gt;Wordpress Docker Image&lt;/a&gt;&lt;/li&gt;
@@ -523,18 +507,12 @@ Coming Soon Page&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://generatewp.com&quot;&gt;https://generatewp.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://codex.wordpress.org&quot;&gt;WordPress Codex&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/twittem/wp-bootstrap-navwalker&quot;&gt;wp-bootstrap-navwalker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="wordpress" />
-<summary>Docker + WordpressWordpress Docker ImageWordPress Local Development With Docker – InstallationGuide</summary>
-</entry>
-<entry>
-<title>Password Manager</title>
-<link href="http://dev.im-bot.com//password-manager" rel="alternate" type="text/html" title="Password Manager" />
-<published>2016-01-09T00:00:00+00:00</published>
-<updated>2016-01-09T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//password-manager</id>
-<content type="html" xml:base="http://dev.im-bot.com//password-manager">&lt;h2 id=&quot;what-is-password-manager&quot;&gt;What is Password Manager ?&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="wordpress" /><summary>Docker + Wordpress
+
+
+Wordpress Docker Image
+WordPress Local Development With Docker – Installation
+Guide</summary></entry><entry><title>Password Manager</title><link href="http://dev.im-bot.com//password-manager/" rel="alternate" type="text/html" title="Password Manager" /><published>2016-01-09T00:00:00+00:00</published><updated>2016-01-09T00:00:00+00:00</updated><id>http://dev.im-bot.com//password-manager</id><content type="html" xml:base="http://dev.im-bot.com//password-manager/">&lt;h2 id=&quot;what-is-password-manager&quot;&gt;What is Password Manager ?&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/141500/why-you-should-use-a-password-manager-and-how-to-get-started/&quot;&gt;Why You Should Use a Password Manager and How to Get Started&lt;/a&gt;&lt;/li&gt;
@@ -585,33 +563,25 @@ dropbox or personal account of cloud storage.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=M448GtFa5Xs&quot;&gt;kpcli - Keepass Password Manager - Linux CLI&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-kpcli-to-manage-keepass2-password-files-on-an-ubuntu-14-04-server&quot;&gt;How To Use kpcli To Manage KeePass2 Password Files on an Ubuntu 14.04 Server&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.australsounds.com/2014/10/installingkpcli.html&quot;&gt;Installing KPCLI on OS X&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="security" />
-<summary>What is Password Manager ?Why You Should Use a Password Manager and How to Get Started</summary>
-</entry>
-<entry>
-<title>Avoid git commit -m</title>
-<link href="http://dev.im-bot.com//avoid-git-commit-m" rel="alternate" type="text/html" title="Avoid git commit -m" />
-<published>2015-12-25T00:00:00+00:00</published>
-<updated>2015-12-25T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//aviod-git-commit-m</id>
-<content type="html" xml:base="http://dev.im-bot.com//avoid-git-commit-m">&lt;p&gt;Most of Git tutorial even &lt;a href=&quot;http://try.github.io&quot;&gt;Try Git&lt;/a&gt; guide you
+&lt;/ul&gt;</content><category term="security" /><summary>What is Password Manager ?
+
+
+Why You Should Use a Password Manager and How to Get Started</summary></entry><entry><title>Avoid git commit -m</title><link href="http://dev.im-bot.com//avoid-git-commit-m/" rel="alternate" type="text/html" title="Avoid git commit -m" /><published>2015-12-25T00:00:00+00:00</published><updated>2015-12-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//aviod-git-commit-m</id><content type="html" xml:base="http://dev.im-bot.com//avoid-git-commit-m/">&lt;p&gt;Most of Git tutorial even &lt;a href=&quot;http://try.github.io&quot;&gt;Try Git&lt;/a&gt; guide you
 about git commit with this&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;hello world&amp;quot;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&quot;hello world&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That&amp;#39;s OK.
 But It better to use any option without -m.&lt;/p&gt;
 
 &lt;!-- more --&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -a
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit --amend
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit -a
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit --amend
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Without -m, Git will popup your editor to write the commit message like
 this&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;%7B%7Burl%7D%7D/public/img/git-commit-vim.png&quot; alt=&quot;git-commit-vim&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/public/img/git-commit-vim.png&quot; alt=&quot;git-commit-vim&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;It&amp;#39;s more powerful than -m option that limit your commit message to
 one line, without -m you can write commit message with many line.&lt;/p&gt;
@@ -642,18 +612,12 @@ retrospective&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/2596835&quot;&gt;How do I make git use the editor of my choice for commits?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="git" />
-<summary>Most of Git tutorial even Try Git guide youabout git commit with this$ git commit -m &amp;quot;hello world&amp;quot;That&amp;#39;s OK.But It better to use any option without -m.</summary>
-</entry>
-<entry>
-<title>All About Ruby and Ruby on Rails</title>
-<link href="http://dev.im-bot.com//ror" rel="alternate" type="text/html" title="All About Ruby and Ruby on Rails" />
-<published>2015-12-12T00:00:00+00:00</published>
-<updated>2015-12-12T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//ror</id>
-<content type="html" xml:base="http://dev.im-bot.com//ror">&lt;h3 id=&quot;tips&quot;&gt;Tips&lt;/h3&gt;
+&lt;/ul&gt;</content><category term="git" /><summary>Most of Git tutorial even Try Git guide you
+about git commit with this
+$ git commit -m &quot;hello world&quot;
+
+That&amp;#39;s OK.
+But It better to use any option without -m.</summary></entry><entry><title>All About Ruby and Ruby on Rails</title><link href="http://dev.im-bot.com//ror/" rel="alternate" type="text/html" title="All About Ruby and Ruby on Rails" /><published>2015-12-12T00:00:00+00:00</published><updated>2015-12-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//ror</id><content type="html" xml:base="http://dev.im-bot.com//ror/">&lt;h3 id=&quot;tips&quot;&gt;Tips&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/2569501/what-ruby-and-rails-developers-ought-to-know&quot;&gt;What Ruby and Rails Developers Ought To Know?&lt;/a&gt;&lt;/li&gt;
@@ -706,18 +670,13 @@ retrospective&lt;/a&gt;.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.sitepoint.com/guide-ruby-collections-ii-hashes-sets-ranges/&quot;&gt;http://www.sitepoint.com/guide-ruby-collections-ii-hashes-sets-ranges/&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://rubymonk.com&quot;&gt;https://rubymonk.com&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://rubykoans.com&quot;&gt;http://rubykoans.com&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="ror" />
-<summary>TipsWhat Ruby and Rails Developers Ought To Know?Styleguide Rubyruby-style-guideWhat Is the Difference Between a Block, a Proc, and a Lambda in Ruby?</summary>
-</entry>
-<entry>
-<title>Learning Resources</title>
-<link href="http://dev.im-bot.com//learning" rel="alternate" type="text/html" title="Learning Resources" />
-<published>2015-12-12T00:00:00+00:00</published>
-<updated>2015-12-12T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//learning-resources</id>
-<content type="html" xml:base="http://dev.im-bot.com//learning">&lt;!-- more --&gt;
+&lt;/ul&gt;</content><category term="ror" /><summary>Tips
+
+
+What Ruby and Rails Developers Ought To Know?
+Styleguide Ruby
+ruby-style-guide
+What Is the Difference Between a Block, a Proc, and a Lambda in Ruby?</summary></entry><entry><title>Learning Resources</title><link href="http://dev.im-bot.com//learning/" rel="alternate" type="text/html" title="Learning Resources" /><published>2015-12-12T00:00:00+00:00</published><updated>2015-12-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//learning-resources</id><content type="html" xml:base="http://dev.im-bot.com//learning/">&lt;!-- more --&gt;
 
 &lt;h3 id=&quot;resources-by-up1-http-www-somkiat-cc&quot;&gt;Resources by Up1 &lt;a href=&quot;http://www.somkiat.cc&quot;&gt;http://www.somkiat.cc&lt;/a&gt;&lt;/h3&gt;
 
@@ -754,18 +713,7 @@ retrospective&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;website-performance-tutorials&quot;&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLLnpHn493BHGpGXukqYsxwQw3ziW3uti6&quot;&gt;Website Performance Tutorials&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;f5-อ่อนว่ะ&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1wUi1ZeqIHvnE4YkWC613rVJFdbgC0t-pCNcyk0PaUxk/edit#heading=h.xiu1i3wbkwyr&quot;&gt;F5 อ่อนว่ะ&lt;/a&gt;&lt;/h3&gt;
-</content>
-<category term="learn" />
-<summary></summary>
-</entry>
-<entry>
-<title>Jekyll build with Travis and deploy to Github Page</title>
-<link href="http://dev.im-bot.com//jekyll-travis-github" rel="alternate" type="text/html" title="Jekyll build with Travis and deploy to Github Page" />
-<published>2015-10-26T00:00:00+00:00</published>
-<updated>2015-10-26T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//jekyll-build-with-travis</id>
-<content type="html" xml:base="http://dev.im-bot.com//jekyll-travis-github">&lt;blockquote&gt;
+&lt;h3 id=&quot;f5-อ่อนว่ะ&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1wUi1ZeqIHvnE4YkWC613rVJFdbgC0t-pCNcyk0PaUxk/edit#heading=h.xiu1i3wbkwyr&quot;&gt;F5 อ่อนว่ะ&lt;/a&gt;&lt;/h3&gt;</content><category term="learn" /></entry><entry><title>Jekyll build with Travis and deploy to Github Page</title><link href="http://dev.im-bot.com//jekyll-travis-github/" rel="alternate" type="text/html" title="Jekyll build with Travis and deploy to Github Page" /><published>2015-10-26T00:00:00+00:00</published><updated>2015-10-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//jekyll-build-with-travis</id><content type="html" xml:base="http://dev.im-bot.com//jekyll-travis-github/">&lt;blockquote&gt;
 &lt;p&gt;Github Pages Tips:&lt;br&gt;
 Github Pages always complie jekyll with &lt;code&gt;--safe&lt;/code&gt; option that will&lt;br&gt;
 disable plugins but some plugin can work with Github Pages.&lt;br&gt;
@@ -776,7 +724,7 @@ disable plugins but some plugin can work with Github Pages.&lt;br&gt;
 We can automate build jekyll with &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis-CI&lt;/a&gt;
 that store your jekyll file in &lt;code&gt;jekyll&lt;/code&gt; branch when push to github that
 will trig to Travis to build and deploy static page back to your &lt;code&gt;main&lt;/code&gt;
-branch to publish your contents. you should read previous &lt;a href=&quot;%7B%7Burl%7D%7D/jekyll-with-ci/&quot;&gt;blog about
+branch to publish your contents. you should read previous &lt;a href=&quot;/jekyll-with-ci/&quot;&gt;blog about
 jekyll and travis&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
@@ -802,16 +750,16 @@ branch&lt;/code&gt; on your Github repository settings that will use your
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Create &lt;code&gt;jekyll&lt;/code&gt; branch for development&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch jekyll
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git branch jekyll
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Clear your &lt;code&gt;main&lt;/code&gt; or &lt;code&gt;gh-page&lt;/code&gt; branch to blank&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git rm *
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git rm &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Enable Travis on your repository on Travis website and turn on &lt;code&gt;Build
 only if .travis.yml is present&lt;/code&gt; on your travis repository settings.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Checkout &lt;code&gt;jekyll&lt;/code&gt; branch and create &lt;code&gt;.travis.yml&lt;/code&gt; then edit &lt;code&gt;GH_REF&lt;/code&gt;
 and &lt;code&gt;TARGET_BRANCH&lt;/code&gt; to your own&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout jekyll
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git checkout jekyll
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;.travis.yml&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;sudo: false
@@ -827,18 +775,18 @@ branches:
 
 script:
 - bundle exec jekyll build
-- bundle exec htmlproof ./_site --disable-external
+- bundle exec htmlproofer ./_site --disable-external
 
 after_success:
 - git clone https://$GH_REF
 - cd $(basename ${GH_REF%.git})
-- git config user.name &amp;quot;Travis-CI&amp;quot;
+- git config user.name &quot;Travis-CI&quot;
 - git config user.email ${EMAIL}
-- rsync -az --delete --exclude &amp;#39;.git*&amp;#39; ../_site/ .
+- rsync -az --delete --exclude &#39;.git*&#39; ../_site/ .
 - touch .nojekyll
 - git add -A .
-- git commit -m &amp;quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&amp;quot;
-- git push -f &amp;quot;https://${DEPLOY_KEY}@${GH_REF}&amp;quot; ${TARGET_BRANCH} &amp;gt; /dev/null 2&amp;gt;&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;1
+- git commit -m &quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&quot;
+- git push -f &quot;https://${DEPLOY_KEY}@${GH_REF}&quot; ${TARGET_BRANCH} &amp;gt; /dev/null 2&amp;gt;&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;1
 
 env:
   global:
@@ -848,22 +796,22 @@ env:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Create your &lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Github Personal Access Tokens&lt;/a&gt; - check only &lt;code&gt;repo&lt;/code&gt; that enough.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Install Travis Gem on your machine for encryption sensitive data&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem install travis
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install travis
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Encrypt your &lt;code&gt;EMAIL&lt;/code&gt; and &lt;code&gt;DEPLOY_KEY&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# --add opton will automated add sescure data to your .travis.yml&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# edit verifiedemail to your github email account&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;travis encrypt &lt;span class=&quot;nv&quot;&gt;EMAIL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;verifiedemail --add
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;travis encrypt &lt;span class=&quot;nv&quot;&gt;EMAIL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;verifiedemail --add
 &lt;span class=&quot;c&quot;&gt;# edit githubtoken to your github personal access tokens&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;travis encrpy &lt;span class=&quot;nv&quot;&gt;DEPLOY_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;githubtoken --add
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;travis encrpy &lt;span class=&quot;nv&quot;&gt;DEPLOY_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;githubtoken --add
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Commit &lt;code&gt;jekyll&lt;/code&gt; branch&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add -A
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Create Jekyll branch for build jekyll with Travis&amp;quot;&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git add -A
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&quot;Create Jekyll branch for build jekyll with Travis&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Push to &lt;code&gt;jekyll&lt;/code&gt; branch to Github repository and wait&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin jekyll
-&lt;span class=&quot;c&quot;&gt;# Don&amp;#39;t care warnning about main/gh-page branch that local repository out of date&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git push origin jekyll
+&lt;span class=&quot;c&quot;&gt;# Don&#39;t care warnning about main/gh-page branch that local repository out of date&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Look your published site&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -874,7 +822,7 @@ env:
 
 &lt;h3 id=&quot;tips&quot;&gt;Tips:&lt;/h3&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# config local git repo to push only current active branch&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config push.default simple
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git config push.default simple
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
 
@@ -887,10 +835,4 @@ env:
 &lt;li&gt;&lt;a href=&quot;http://docs.travis-ci.com/user/encryption-keys/&quot;&gt;Travis Encryption keys&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Creating an access token for command-line use&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/blog/572-bypassing-jekyll-on-github-pages&quot;&gt;Bypassing Jekyll on GitHub Pages&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-<category term="article" />
-<category term="jekyll" />
-<summary>Custom build jekyll with Travis for enable plugin and deploy to Github Page</summary>
-</entry>
-</feed>
+&lt;/ol&gt;</content><category term="article" /><category term="jekyll" /><summary>Custom build jekyll with Travis for enable plugin and deploy to Github Page</summary></entry></feed>

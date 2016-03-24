@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Read more feature on jekyll" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/read-more-jekyll/" />
+<meta property="og:url" content="http://dev.im-bot.com/read-more-jekyll//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="Read more feature on jekyll that working with Github Pages" />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,7 +194,7 @@
     18 Oct 2015
       
         &middot;
-        <a href="/read-more-jekyll/index.html#disqus_thread" data-disqus-identifier="/read-more-jekyll"></a>
+        <a href="/read-more-jekyll//index.html#disqus_thread" data-disqus-identifier="/read-more-jekyll/"></a>
         
       
   </span>
@@ -212,19 +214,21 @@ terrible and Github Pages not support custom ruby script that place in
 <code>_plugins</code>. The better way is using split with custom tags.</p>
 
 <p>Replace `<code>in</code>index.html` in jekyll directory with</p>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">post</span><span class="o">.</span><span class="n">content</span> <span class="n">contains</span> <span class="s2">&quot;&lt;!-- more --&gt;&quot;</span> <span class="sx">%}</span>
-<span class="sx">      {{ post.content | split:&quot;&lt;!-- more --&gt;&quot; | first % }</span><span class="p">}</span>
-      <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;text-align:right;&quot;</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;{{ post.url }}&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color:#000;&quot;</span><span class="o">&gt;</span> <span class="no">Read</span> <span class="no">More</span> <span class="o">&lt;</span><span class="sr">/a&gt;</span>
-<span class="sr">      &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-    <span class="p">{</span><span class="o">%</span> <span class="k">else</span> <span class="sx">%}</span>
-<span class="sx">      {{ post.content }</span><span class="p">}</span>
-    <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby">
+    <span class="p">{</span><span class="sx">% if </span><span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="n">contains</span> <span class="s2">"&lt;!-- more --&gt;"</span> <span class="o">%</span><span class="p">}</span>
+      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="nb">split</span><span class="ss">:"&lt;!-- more --&gt;"</span> <span class="o">|</span> <span class="n">first</span> <span class="o">%</span> <span class="p">}}</span>
+      <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"text-align:right;"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"{{ post.url }}"</span> <span class="n">style</span><span class="o">=</span><span class="s2">"color:#000;"</span><span class="o">&gt;</span> <span class="no">Read</span> <span class="no">More</span> <span class="o">&lt;</span><span class="sr">/a&gt;
+      &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="sx">% else </span><span class="o">%</span><span class="p">}</span>
+      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="p">}}</span>
+    <span class="p">{</span><span class="sx">% endif </span><span class="o">%</span><span class="p">}</span>
+
 </code></pre></div>
 <!-- more -->
 
 <p>In your contents add <code>&lt;!-- more --&gt;</code></p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">---
+<div class="highlight"><pre><code class="language-" data-lang="">---
 layout: post
 title: Read more feature on jekyll
 tags: [jekyll]
@@ -233,7 +237,7 @@ Hello, world
 
 &lt;!-- more --&gt;
 
-You can&#39;t see this message via index.html
+You can't see this message via index.html
 </code></pre></div>
 <h3 id="references">References:</h3>
 
@@ -251,7 +255,7 @@ You can&#39;t see this message via index.html
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -260,7 +264,7 @@ You can&#39;t see this message via index.html
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -269,7 +273,7 @@ You can&#39;t see this message via index.html
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -287,7 +291,7 @@ You can&#39;t see this message via index.html
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/read-more-jekyll";
+      var disqus_identifier = "/read-more-jekyll/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

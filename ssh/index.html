@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="All about Secure Shell" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/ssh/" />
+<meta property="og:url" content="http://dev.im-bot.com/ssh//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="SSHSSH Alias Config# .ssh/config# use $ssh &lt;hostname&gt; to connect# Host * //setting for every host  Host &lt;hostname&gt;  HostName &lt;ip&gt;  User   &..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,7 +194,7 @@
     06 Apr 2015
       
         &middot;
-        <a href="/ssh/index.html#disqus_thread" data-disqus-identifier="/ssh"></a>
+        <a href="/ssh//index.html#disqus_thread" data-disqus-identifier="/ssh/"></a>
         
       
   </span>
@@ -217,7 +219,7 @@
 <span class="c">#DynamicForward</span>
 <span class="c">#  Specifies that a TCP port on the local machine be forwarded over the secure channel, and the application protocol is then used to determine where to connect to from the remote machine.</span>
 <span class="c">#IdentityFile</span>
-<span class="c">#  Specifies a file from which the user&#39;s DSA, ECDSA, Ed25519 or RSA authentication identity is read</span>
+<span class="c">#  Specifies a file from which the user's DSA, ECDSA, Ed25519 or RSA authentication identity is read</span>
 
   Host &lt;proxy&gt;
   HostName &lt;ip&gt;
@@ -227,12 +229,12 @@
 </code></pre></div>
 <h2 id="ssh-login-with-key-based-authentication"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Client: generate key</span>
-<span class="nv">$ </span>ssh-keygen -t rsa -b 4096
+<span class="gp">$ </span>ssh-keygen -t rsa -b 4096
 
 <span class="c"># Server: put client key</span>
 <span class="c"># copy ~/.ssh/id_rsa.pub into ~/.ssh/authorized_keys in server</span>
 <span class="c"># (option: server denies passed auth)</span>
-<span class="nv">$ </span>sudo vim /etc/ssh/sshd_config
+<span class="gp">$ </span>sudo vim /etc/ssh/sshd_config
 </code></pre></div>
 <h2 id="ssh-login-with-password"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># /etc/ssh/sshd_config</span>
@@ -242,7 +244,7 @@ Match address 192.0.2.0/24
     PasswordAuthentication yes
 </code></pre></div>
 <h2 id="ssh-proxy-with-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>ssh -N -D <span class="m">8080</span> user@server -p 443
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>ssh -N -D 8080 user@server -p 443
 <span class="c"># should using port 443 to avoid blocking port 22</span>
 <span class="c"># setting proxy  on your browser</span>
 <span class="c"># sock host 127.0.0.1 port 8080</span>
@@ -254,7 +256,7 @@ Host &lt;proxy&gt;
   DynamicForward 8080
 </code></pre></div>
 <h2 id="ssh-skip-known_host"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>ssh -o <span class="s2">&quot;StrictHostKeyChecking no&quot;</span> user@host
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>ssh -o <span class="s2">"StrictHostKeyChecking no"</span> user@host
 </code></pre></div>
 <h3 id="resources">Resources</h3>
 
@@ -272,7 +274,7 @@ Host &lt;proxy&gt;
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -281,7 +283,7 @@ Host &lt;proxy&gt;
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -290,7 +292,7 @@ Host &lt;proxy&gt;
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -308,7 +310,7 @@ Host &lt;proxy&gt;
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/ssh";
+      var disqus_identifier = "/ssh/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

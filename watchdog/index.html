@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Watchdog" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/watchdog/" />
+<meta property="og:url" content="http://dev.im-bot.com/watchdog//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="WatchdogPython API and shell utilities to monitor file system events.pip install watchdogWatching python file changes#!/usr/bin/env pythonimport osimport sys..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,7 +194,7 @@
     20 Jul 2014
       
         &middot;
-        <a href="/watchdog/index.html#disqus_thread" data-disqus-identifier="/watchdog"></a>
+        <a href="/watchdog//index.html#disqus_thread" data-disqus-identifier="/watchdog/"></a>
         
       
   </span>
@@ -225,7 +227,7 @@ from watchdog.events import PatternMatchingEventHandler</p>
             if there are dash &#39;-&#39; in its name replace to underscore &#39;<em>&#39;
         &quot;&quot;&quot;
         return os.path.abspath(&quot;.&quot;).rsplit(&quot;/&quot;, 1)[1].replace(&quot;-&quot;, &quot;</em>&quot;)</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def package(filename):
+<div class="highlight"><pre><code class="language-" data-lang="">def package(filename):
     basename = os.path.basename(filename)
     if not basename.startswith(&amp;quot;test_&amp;quot;):
         package = filename.replace(&amp;quot;./&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
@@ -254,7 +256,7 @@ os.system(cmd)
 
 <p>class ModifiedHandler(PatternMatchingEventHandler):
     patterns = [&quot;*.py&quot;]  # Monitor only matched patterns</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">def on_created(self, event):
+<div class="highlight"><pre><code class="language-" data-lang="">def on_created(self, event):
     &amp;quot;&amp;quot;&amp;quot;&amp;quot; For Vim :w - not modify that deleted and created file instead. &amp;quot;&amp;quot;&amp;quot;
     when_file_changed(event.src_path)
 
@@ -269,12 +271,12 @@ def on_modified(self, event):
     observer.schedule(event_handler,
                       path=args[1] if args else &#39;.&#39;, recursive=True)
     observer.start()</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">try:
+<div class="highlight"><pre><code class="language-" data-lang="">try:
     while True:
         time.sleep(1)
 except KeyboardInterrupt:
     observer.stop()
-observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/ibotdotout/8f42fbc0ee122f89e728.js&quot;&gt; &lt;/script&gt;
+observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src="https://gist.github.com/ibotdotout/8f42fbc0ee122f89e728.js"&gt; &lt;/script&gt;
 </code></pre></div>
 <h3 id="watchdog-over-docker-vm-via-polling">Watchdog over Docker (VM) via polling -</h3>
 
@@ -298,7 +300,7 @@ observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.gi
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -307,7 +309,7 @@ observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.gi
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -316,7 +318,7 @@ observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.gi
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -334,7 +336,7 @@ observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.gi
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/watchdog";
+      var disqus_identifier = "/watchdog/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

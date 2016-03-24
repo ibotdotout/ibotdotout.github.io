@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="All about Latex" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/latex/" />
+<meta property="og:url" content="http://dev.im-bot.com/latex//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="Install Latex OSX (mactex)$ brew cask install mactexFiguresHow to avoid showing the filename when using graphicx? - Ans: avoid filename with spacefigure span..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,13 +194,13 @@
     07 Feb 2015
       
         &middot;
-        <a href="/latex/index.html#disqus_thread" data-disqus-identifier="/latex"></a>
+        <a href="/latex//index.html#disqus_thread" data-disqus-identifier="/latex/"></a>
         
       
   </span>
 
   <h3 id="install-latex-osx-mactex">Install Latex OSX (mactex)</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>brew cask install mactex
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install mactex
 </code></pre></div>
 <h3 id="figures">Figures</h3>
 
@@ -207,41 +209,41 @@
 <li><a href="http://tex.stackexchange.com/questions/34063/figure-span-to-one-column-on-double-column-page">figure span to one column on double column page</a></li>
 </ul>
 <div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
-<span class="k">\begin</span><span class="nb">{</span>figure*<span class="nb">}</span>
-  <span class="k">\centering</span> <span class="k">\includegraphics</span><span class="nb">{</span>figure<span class="nb">}</span>
-  <span class="k">\caption</span><span class="nb">{</span>This is a figure caption<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>figure*<span class="nb">}</span>
+<span class="nt">\begin{figure*}</span>
+  <span class="k">\centering</span> <span class="k">\includegraphics</span><span class="p">{</span>figure<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>This is a figure caption<span class="p">}</span>
+<span class="nt">\end{figure*}</span>
 </code></pre></div>
 <h3 id="label">Label</h3>
 
 <ul>
 <li><a href="http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">LaTeX/Labels and Cross-referencing</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\caption</span><span class="nb">{</span>Close-up of a gull<span class="k">\label</span><span class="nb">{</span>fig:gull<span class="nb">}}</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
 </code></pre></div>
 <h3 id="landscape"><a href="http://tex.stackexchange.com/questions/168309/landscape-figure-on-different-page-to-heading">Landscape</a></h3>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="nb">{</span>pdflscape<span class="nb">}</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
 
-<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
-<span class="k">\begin</span><span class="nb">{</span>landscape<span class="nb">}</span>
+<span class="nt">\begin{document}</span>
+<span class="nt">\begin{landscape}</span>
 .
 .
 .
-<span class="k">\end</span><span class="nb">{</span>landscape<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="nt">\end{landscape}</span>
+<span class="nt">\end{document}</span>
 </code></pre></div>
 <h3 id="math-equation">Math Equation</h3>
 <div class="highlight"><pre><code class="language-tex" data-lang="tex"># inline equation
-<span class="s">$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="s">$</span> #equation
-<span class="sb">$$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="s">$$</span> #equation in new line
+<span class="p">$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$</span> #equation
+<span class="p">$$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$$</span> #equation in new line
 
 # equation
-<span class="k">\begin</span><span class="nb">{</span>eqaution<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>eqaution<span class="nb">}</span>
+<span class="nt">\begin{eqaution}</span>
+<span class="nt">\end{eqaution}</span>
 
 # equation array
-<span class="k">\begin</span><span class="nb">{</span>eqnarray<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>eqnarray<span class="nb">}</span>
+<span class="nt">\begin{eqnarray}</span>
+<span class="nt">\end{eqnarray}</span>
 </code></pre></div>
 <ul>
 <li><a href="http://www.clas.kitasato-u.ac.jp/%7Efujiwara/keyNote/equationToKeynote.html">Import equations into Keynote</a></li>
@@ -275,12 +277,12 @@
 <div class="highlight"><pre><code class="language-tex" data-lang="tex">  # read more in document
   # 2.5 Copy a formula
 
-  <span class="k">\STcopy</span><span class="nb">{</span>&gt;x,vy<span class="nb">}{</span>formula<span class="nb">}</span>
+  <span class="k">\STcopy</span><span class="p">{</span>&gt;x,vy<span class="p">}{</span>formula<span class="p">}</span>
 
   # 3.2 Number formatting and the fp package
 
   # foating point numbers are rounded to 2 digits
-  <span class="k">\STautoround</span><span class="nb">{</span>2<span class="nb">}</span>
+  <span class="k">\STautoround</span><span class="p">{</span>2<span class="p">}</span>
 </code></pre></div>
 <h3 id="separate-compilation-of-child-documents">Separate compilation of child documents</h3>
 
@@ -310,7 +312,7 @@
 </ul>
 <div class="highlight"><pre><code class="language-tex" data-lang="tex">    Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
     # or using <span class="k">\hyphenation</span> to cut all the documents
-    <span class="k">\hyphenation</span><span class="nb">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="nb">}</span>
+    <span class="k">\hyphenation</span><span class="p">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="p">}</span>
 </code></pre></div>
 <ul>
 <li>Word Cut</li>
@@ -321,14 +323,14 @@
 <li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
 <li><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\input</span><span class="nb">{</span>table.tex<span class="nb">}</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
 </code></pre></div>
 <ul>
 <li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
 <li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
 <li>hidden character</li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  <span class="k">\phantom</span><span class="nb">{</span>-<span class="nb">}</span> <span class="c">%hidden character</span>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">  <span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
 </code></pre></div>
 <ul>
 <li><a href="http://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment">Custom alignment of text in itemized environment</a></li>
@@ -342,12 +344,12 @@
 <li><a href="https://www.youtube.com/watch?v=5ifh3NF-k-k">LaTeX tutorial: How to cite references/paper/articles in Latex</a></li>
 </ol>
 <div class="highlight"><pre><code class="language-tex" data-lang="tex">  # cite to bibtex references
-  <span class="k">\usepackage</span><span class="nb">{</span>cite<span class="nb">}</span>
-  <span class="k">\cite</span><span class="nb">{</span>sample1234<span class="nb">}</span>
+  <span class="k">\usepackage</span><span class="p">{</span>cite<span class="p">}</span>
+  <span class="k">\cite</span><span class="p">{</span>sample1234<span class="p">}</span>
 
   # referecnes from bibtex
-  <span class="k">\bibliographystyle</span><span class="nb">{</span>IEEEtran<span class="nb">}</span>
-  <span class="k">\bibliography</span><span class="nb">{</span>file<span class="nb">_</span>of<span class="nb">_</span>bibex<span class="nb">}</span>
+  <span class="k">\bibliographystyle</span><span class="p">{</span>IEEEtran<span class="p">}</span>
+  <span class="k">\bibliography</span><span class="p">{</span>file<span class="p">_</span>of<span class="p">_</span>bibex<span class="p">}</span>
 </code></pre></div>
 <h3 id="bibtex">BibTex</h3>
 
@@ -356,10 +358,10 @@
 <li><a href="http://tex.stackexchange.com/questions/204291/bibtex-latex-compiling">Bibtex, Latex compiling</a></li>
 </ul>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># build latex + bibtex</span>
-<span class="nv">$ </span>pdflatex paper.tex
-<span class="nv">$ </span>bibtex paper <span class="c"># without extension</span>
-<span class="nv">$ </span>pdflatex paper.tex
-<span class="nv">$ </span>pdflatex paper.tex
+<span class="gp">$ </span>pdflatex paper.tex
+<span class="gp">$ </span>bibtex paper <span class="c"># without extension</span>
+<span class="gp">$ </span>pdflatex paper.tex
+<span class="gp">$ </span>pdflatex paper.tex
 </code></pre></div>
 <h3 id="latex-slide-beamer">Latex Slide (Beamer)</h3>
 
@@ -434,7 +436,7 @@ in LaTeX</a></li>
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -443,7 +445,7 @@ in LaTeX</a></li>
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -452,7 +454,7 @@ in LaTeX</a></li>
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -470,7 +472,7 @@ in LaTeX</a></li>
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/latex";
+      var disqus_identifier = "/latex/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

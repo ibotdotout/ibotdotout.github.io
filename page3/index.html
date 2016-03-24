@@ -97,6 +97,8 @@
       
     
       
+    
+      
         
       
     
@@ -190,7 +192,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/get-job">
+      <a href="/get-job/">
         How to get that job for developer
       </a>
     </h1>
@@ -199,7 +201,7 @@
       21 Oct 2015
       
         &middot;
-        <a href="/get-job#disqus_thread" data-disqus-identifier="/get-job"></a>
+        <a href="/get-job/#disqus_thread" data-disqus-identifier="/get-job/"></a>
         
           &middot;
           Updated March 20, 2016
@@ -250,14 +252,14 @@
 
 
       <div style="text-align:right;">
-        <a href="/get-job" style="color:#000;"> Read More </a>
+        <a href="/get-job/" style="color:#000;"> Read More </a>
       </div>
     
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/osx-convert-encoding">
+      <a href="/osx-convert-encoding/">
         Convert File Encoding in OSX
       </a>
     </h1>
@@ -266,7 +268,7 @@
       19 Oct 2015
       
         &middot;
-        <a href="/osx-convert-encoding#disqus_thread" data-disqus-identifier="/osx-convert-encoding"></a>
+        <a href="/osx-convert-encoding/#disqus_thread" data-disqus-identifier="/osx-convert-encoding/"></a>
         
       
     </span>
@@ -284,14 +286,14 @@ You should convert that file from tis-620 to utf-8 which make it readable on osx
 
 
       <div style="text-align:right;">
-        <a href="/osx-convert-encoding" style="color:#000;"> Read More </a>
+        <a href="/osx-convert-encoding/" style="color:#000;"> Read More </a>
       </div>
     
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/read-more-jekyll">
+      <a href="/read-more-jekyll/">
         Read more feature on jekyll
       </a>
     </h1>
@@ -300,7 +302,7 @@ You should convert that file from tis-620 to utf-8 which make it readable on osx
       18 Oct 2015
       
         &middot;
-        <a href="/read-more-jekyll#disqus_thread" data-disqus-identifier="/read-more-jekyll"></a>
+        <a href="/read-more-jekyll/#disqus_thread" data-disqus-identifier="/read-more-jekyll/"></a>
         
       
     </span>
@@ -321,25 +323,27 @@ terrible and Github Pages not support custom ruby script that place in
 <code>_plugins</code>. The better way is using split with custom tags.</p>
 
 <p>Replace `<code>in</code>index.html` in jekyll directory with</p>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">post</span><span class="o">.</span><span class="n">content</span> <span class="n">contains</span> <span class="s2">&quot;&lt;!-- more --&gt;&quot;</span> <span class="sx">%}</span>
-<span class="sx">      {{ post.content | split:&quot;&lt;!-- more --&gt;&quot; | first % }</span><span class="p">}</span>
-      <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;text-align:right;&quot;</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;{{ post.url }}&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;color:#000;&quot;</span><span class="o">&gt;</span> <span class="no">Read</span> <span class="no">More</span> <span class="o">&lt;</span><span class="sr">/a&gt;</span>
-<span class="sr">      &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-    <span class="p">{</span><span class="o">%</span> <span class="k">else</span> <span class="sx">%}</span>
-<span class="sx">      {{ post.content }</span><span class="p">}</span>
-    <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby">
+    <span class="p">{</span><span class="sx">% if </span><span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="n">contains</span> <span class="s2">"&lt;!-- more --&gt;"</span> <span class="o">%</span><span class="p">}</span>
+      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="nb">split</span><span class="ss">:"&lt;!-- more --&gt;"</span> <span class="o">|</span> <span class="n">first</span> <span class="o">%</span> <span class="p">}}</span>
+      <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"text-align:right;"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"{{ post.url }}"</span> <span class="n">style</span><span class="o">=</span><span class="s2">"color:#000;"</span><span class="o">&gt;</span> <span class="no">Read</span> <span class="no">More</span> <span class="o">&lt;</span><span class="sr">/a&gt;
+      &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="sx">% else </span><span class="o">%</span><span class="p">}</span>
+      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="p">}}</span>
+    <span class="p">{</span><span class="sx">% endif </span><span class="o">%</span><span class="p">}</span>
+
 </code></pre></div>
 
       <div style="text-align:right;">
-        <a href="/read-more-jekyll" style="color:#000;"> Read More </a>
+        <a href="/read-more-jekyll/" style="color:#000;"> Read More </a>
       </div>
     
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/text-processing">
+      <a href="/text-processing/">
         Text Processing in Shell
       </a>
     </h1>
@@ -348,7 +352,7 @@ terrible and Github Pages not support custom ruby script that place in
       17 Oct 2015
       
         &middot;
-        <a href="/text-processing#disqus_thread" data-disqus-identifier="/text-processing"></a>
+        <a href="/text-processing/#disqus_thread" data-disqus-identifier="/text-processing/"></a>
         
       
     </span>
@@ -366,23 +370,23 @@ terrible and Github Pages not support custom ruby script that place in
 <code>sed</code> in OSX may not working as example. You should try <code>gsed</code>.<br>
 <code>gsed</code> can install via brew and call <code>gsed</code> instead of <code>sed</code>  </p>
 </blockquote>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>cat in
-<span class="m">1234</span> <span class="m">5678</span> <span class="m">9101</span> <span class="m">1234</span>  
-<span class="m">2999</span> <span class="m">5178</span> <span class="m">9101</span> <span class="m">2234</span>  
-<span class="nv">$ </span>sed -re <span class="s1">&#39;s/([0-9]{4}\s){3}/**** **** **** /&#39;</span> in
-**** **** **** <span class="m">1234</span>  
-**** **** **** <span class="m">2234</span>  
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>cat <span class="k">in
+</span>1234 5678 9101 1234  
+2999 5178 9101 2234  
+<span class="gp">$ </span>sed -re <span class="s1">'s/([0-9]{4}\s){3}/**** **** **** /'</span> <span class="k">in</span>
+<span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 1234  
+<span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 2234  
 </code></pre></div>
 
       <div style="text-align:right;">
-        <a href="/text-processing" style="color:#000;"> Read More </a>
+        <a href="/text-processing/" style="color:#000;"> Read More </a>
       </div>
     
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/opengraph">
+      <a href="/opengraph/">
         Sharing with Open Graph
       </a>
     </h1>
@@ -391,7 +395,7 @@ terrible and Github Pages not support custom ruby script that place in
       12 Oct 2015
       
         &middot;
-        <a href="/opengraph#disqus_thread" data-disqus-identifier="/opengraph"></a>
+        <a href="/opengraph/#disqus_thread" data-disqus-identifier="/opengraph/"></a>
         
       
     </span>
@@ -400,19 +404,19 @@ terrible and Github Pages not support custom ruby script that place in
       <p><img src="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" alt="sharing with open graph"></p>
 
 <p>Add this meta data to your <code>html page</code> between <code>&lt;head&gt; ... &lt;/head&gt;</code></p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content=</span><span class="s">&quot;Markdown Slide&quot;</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:type&quot;</span> <span class="na">content=</span><span class="s">&quot;article&quot;</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:url&quot;</span> <span class="na">content=</span><span class="s">&quot;http://dev.im-bot.com/slide/&quot;</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:image&quot;</span> <span class="na">content=</span><span class="s">&quot;http://dev.im-bot.com/public/opengraph_logo.png&quot;</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:description&quot;</span> <span class="na">content=</span><span class="s">&quot;Remark.js - easy and simple slide&quot;</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:site_name&quot;</span> <span class="na">content=</span><span class="s">&quot;botbotbot&quot;</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:locale&quot;</span> <span class="na">content=</span><span class="s">&quot;th_TH&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Markdown Slide"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/slide/"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/opengraph_logo.png"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Remark.js - easy and simple slide"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
 </code></pre></div>
 <p>Then using <a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a> to look what it look like when shared.</p>
 
 
       <div style="text-align:right;">
-        <a href="/opengraph" style="color:#000;"> Read More </a>
+        <a href="/opengraph/" style="color:#000;"> Read More </a>
       </div>
     
   </div>

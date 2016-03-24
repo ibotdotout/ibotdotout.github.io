@@ -97,6 +97,8 @@
       
     
       
+    
+      
         
       
     
@@ -190,7 +192,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/osx-backup">
+      <a href="/osx-backup/">
         OSX Backup
       </a>
     </h1>
@@ -199,7 +201,7 @@
       08 Sep 2014
       
         &middot;
-        <a href="/osx-backup#disqus_thread" data-disqus-identifier="/osx-backup"></a>
+        <a href="/osx-backup/#disqus_thread" data-disqus-identifier="/osx-backup/"></a>
         
       
     </span>
@@ -218,7 +220,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/devops">
+      <a href="/devops/">
         DevOps
       </a>
     </h1>
@@ -227,7 +229,7 @@
       09 Aug 2014
       
         &middot;
-        <a href="/devops#disqus_thread" data-disqus-identifier="/devops"></a>
+        <a href="/devops/#disqus_thread" data-disqus-identifier="/devops/"></a>
         
       
     </span>
@@ -242,32 +244,32 @@ Docker is a tool for building and deploying applications by packaging them into 
 
 <p>bypass.conf</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">server <span class="o">{</span>
-    listen 80<span class="p">;</span>
+    listen 80;
 
     location / <span class="o">{</span>
-        proxy_pass http://127.0.0.1:8000<span class="p">;</span>
+        proxy_pass http://127.0.0.1:8000;
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># debian</span>
-<span class="nv">$ </span>sudo apt-get install nginx
-<span class="nv">$ </span>sudo vim /etc/nginx/sites-available/&lt;your&gt;.conf
-<span class="nv">$ </span>sudo rm /etc/ngin/sites-enabled/default.conf
-<span class="nv">$ </span>suo ln -f /etc/nginx/sites-available/&lt;your&gt;.conf /etc/sites-enabled/
-<span class="nv">$ </span>sudo services nginx reload
+<span class="gp">$ </span>sudo apt-get install nginx
+<span class="gp">$ </span>sudo vim /etc/nginx/sites-available/&lt;your&gt;.conf
+<span class="gp">$ </span>sudo rm /etc/ngin/sites-enabled/default.conf
+<span class="gp">$ </span>suo ln -f /etc/nginx/sites-available/&lt;your&gt;.conf /etc/sites-enabled/
+<span class="gp">$ </span>sudo services nginx reload
 </code></pre></div>
 <h2 id="nginx-allow-file-browser-list">Nginx Allow File browser list</h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># debain</span>
-<span class="nv">$ </span><span class="nb">cd</span> /usr/share/nginx/html
-<span class="nv">$ </span>ln -s &lt;path&gt; &lt;link_name&gt;
+<span class="gp">$ </span><span class="nb">cd</span> /usr/share/nginx/html
+<span class="gp">$ </span>ln -s &lt;path&gt; &lt;link_name&gt;
 </code></pre></div>
 <p>edit your nginx.conf</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">    location /&lt;url&gt; <span class="o">{</span>
       <span class="nb">alias</span> /usr/share/nginx/html/&lt;link_name&gt;
-      autoindex on<span class="p">;</span>
-      autoindex_exact_size off<span class="p">;</span>
-      autoindex_localtime on<span class="p">;</span>
-      auth_basic <span class="s2">&quot;Restricted&quot;</span><span class="p">;</span>                <span class="c">#For Basic Auth</span>
-      auth_basic_user_file &lt;your .htpasswd&gt;<span class="p">;</span>  <span class="c">#For Basic Auth</span>
+      autoindex on;
+      autoindex_exact_size off;
+      autoindex_localtime on;
+      auth_basic <span class="s2">"Restricted"</span>;                <span class="c">#For Basic Auth</span>
+      auth_basic_user_file &lt;your .htpasswd&gt;;  <span class="c">#For Basic Auth</span>
     <span class="o">}</span>
 </code></pre></div>
 <h3 id="useful-command">Useful command</h3>
@@ -311,7 +313,7 @@ Docker is a tool for building and deploying applications by packaging them into 
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/git">
+      <a href="/git/">
         Git
       </a>
     </h1>
@@ -320,7 +322,7 @@ Docker is a tool for building and deploying applications by packaging them into 
       29 Jul 2014
       
         &middot;
-        <a href="/git#disqus_thread" data-disqus-identifier="/git"></a>
+        <a href="/git/#disqus_thread" data-disqus-identifier="/git/"></a>
         
       
     </span>
@@ -335,9 +337,9 @@ Docker is a tool for building and deploying applications by packaging them into 
 </code></pre></div>
 <h2 id="global-ignore">Global Ignore</h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># set where is global gitignore file</span>
-<span class="nv">$ </span>git config --global core.excludesfile ~/.gitignore_global
+<span class="gp">$ </span>git config --global core.excludesfile ~/.gitignore_global
 <span class="c"># write some ignore file in global gitignore</span>
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;tags&quot;</span> &gt;&gt; ~/.gitignore_global
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"tags"</span> &gt;&gt; ~/.gitignore_global
 </code></pre></div>
 <h2 id="git-stash">Git stash</h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">git stash
@@ -345,14 +347,14 @@ git stash pop
 git revert
 </code></pre></div>
 <h2 id="git-alis">Git Alis</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">git config --global alias.tree <span class="s2">&quot;log --graph --decorate --oneline --abbrev-commit&quot;</span>
-git config --global alias.hist <span class="s2">&quot;log --pretty=format:&#39;%h %ad | %s%d [%an]&#39; --graph --date=short&quot;</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git config --global alias.tree <span class="s2">"log --graph --decorate --oneline --abbrev-commit"</span>
+git config --global alias.hist <span class="s2">"log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"</span>
 </code></pre></div>
 <h2 id="git-taggin"><a href="http://git-scm.com/book/en/v2/Git-Basics-Tagging">Git Taggin</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>git tag -a &lt;tag name&gt; &lt;commit id&gt; -m “desc<span class="err">&quot;</span>
-<span class="nv">$ </span>git push origin —tags
-<span class="nv">$ </span>git pull --tags
-</code></pre></div>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>git tag -a &lt;tag name&gt; &lt;commit id&gt; -m “desc<span class="s2">"
+</span><span class="nv">$ </span><span class="s2">git push origin —tags
+</span><span class="nv">$ </span><span class="s2">git pull --tags
+</span></code></pre></div>
 <h2 id="keep-file-in-a-git-repo-but-don-39-t-track-changes"><a href="http://stackoverflow.com/questions/9794931/keep-file-in-a-git-repo-but-dont-track-changes">Keep file in a Git repo, but don&#39;t track changes</a></h2>
 
 <p>Should keep database.php.example and config.php.example in the repo.
@@ -376,7 +378,7 @@ Then add config.php and database.php to the .gitignore file.</p>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/smtp">
+      <a href="/smtp/">
         Smtp with gmail
       </a>
     </h1>
@@ -385,7 +387,7 @@ Then add config.php and database.php to the .gitignore file.</p>
       28 Jul 2014
       
         &middot;
-        <a href="/smtp#disqus_thread" data-disqus-identifier="/smtp"></a>
+        <a href="/smtp/#disqus_thread" data-disqus-identifier="/smtp/"></a>
         
       
     </span>
@@ -404,7 +406,7 @@ Then add config.php and database.php to the .gitignore file.</p>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/compute-engine">
+      <a href="/compute-engine/">
         Google Compute Engine
       </a>
     </h1>
@@ -413,7 +415,7 @@ Then add config.php and database.php to the .gitignore file.</p>
       28 Jul 2014
       
         &middot;
-        <a href="/compute-engine#disqus_thread" data-disqus-identifier="/compute-engine"></a>
+        <a href="/compute-engine/#disqus_thread" data-disqus-identifier="/compute-engine/"></a>
         
       
     </span>

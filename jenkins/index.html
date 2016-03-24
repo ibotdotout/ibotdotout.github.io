@@ -10,9 +10,9 @@
 
   <meta property="og:title" content="Jenkins CI" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/jenkins/" />
+<meta property="og:url" content="http://dev.im-bot.com/jenkins//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="Jenkins-CI - Extendable CI ServerInstall Jenkins::Debian  # Don&#39;t use only apt-get install jenkins that old version  $ wget -q -O - http://pkg.jenkins-ci..." />
+<meta property="og:description" content="Jenkins-CI - Extendable CI ServerInstall Jenkins::Debian  # Don't use only apt-get install jenkins that old version  $ wget -q -O - http://pkg.jenkins-ci.org..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,7 +194,7 @@
     24 Aug 2015
       
         &middot;
-        <a href="/jenkins/index.html#disqus_thread" data-disqus-identifier="/jenkins"></a>
+        <a href="/jenkins//index.html#disqus_thread" data-disqus-identifier="/jenkins/"></a>
         
       
   </span>
@@ -202,8 +204,8 @@
 <h2 id="install-jenkins">Install Jenkins::</h2>
 
 <h3 id="debian">Debian</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Don&#39;t use only apt-get install jenkins that old version</span>
-  <span class="nv">$ </span>wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key <span class="p">|</span> sudo apt-key add -
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Don't use only apt-get install jenkins that old version</span>
+  <span class="nv">$ </span>wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
   <span class="nv">$ </span>sudo vim /etc/apt/sources.list
   <span class="c"># add the following entry</span>
   <span class="c"># deb http://pkg.jenkins-ci.org/debian binary/</span>
@@ -223,12 +225,12 @@
     <span class="nv">$ </span>sudo a2dissite 000-default.conf
 </code></pre></div>
 <p>Create &quot;jenfins.conf&quot; in /etc/apache2/sites-available</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  &lt;VirtualHost *:80&gt;
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  &lt;VirtualHost <span class="k">*</span>:80&gt;
       ServerAdmin webmaster@localhost
       ServerName ci.company.com
       ServerAlias ci
       ProxyRequests Off
-      &lt;Proxy *&gt;
+      &lt;Proxy <span class="k">*</span>&gt;
             Order deny,Alloww
             Allow from all
       &lt;/Proxy&gt;
@@ -290,14 +292,14 @@
 <ol>
 <li>You can trigger jenkins after git push by</li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># git don&#39;t have post-push hook</span>
-  <span class="nv">$ </span>git push <span class="o">&amp;&amp;</span> curl http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v <span class="p">|</span> grep -m <span class="m">1</span> -oh <span class="s2">&quot;git@.*git&quot;</span><span class="k">)</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># git don't have post-push hook</span>
+  <span class="nv">$ </span>git push <span class="o">&amp;&amp;</span> curl http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
 </code></pre></div>
 <ol>
 <li>You can use git alias to make short cmd by edit .git/config in your git repository</li>
 </ol>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="o">[</span><span class="nb">alias</span><span class="o">]</span>
-      trig-jenkins <span class="o">=</span> !curl http://yourjenkinsservergit/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v <span class="p">|</span> grep -m <span class="m">1</span> -oh <span class="s2">&quot;git@.*git&quot;</span><span class="k">)</span>
+      trig-jenkins <span class="o">=</span> !curl http://yourjenkinsservergit/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
       push-wt <span class="o">=</span> !git push <span class="o">&amp;&amp;</span> git trig-jenkins
 </code></pre></div>
 <p>call your alias by</p>
@@ -347,11 +349,11 @@
 
 <h2 id="start-stop-jenkins-that-installed-via-homebrew">Start/Stop Jenkins that installed via Homebrew</h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># launchd start jenkins at login:</span>
-<span class="nv">$ </span>ln -sfv /usr/local/opt/jenkins/*.plist ~/Library/LaunchAgents
+<span class="gp">$ </span>ln -sfv /usr/local/opt/jenkins/<span class="k">*</span>.plist ~/Library/LaunchAgents
 <span class="c"># start jenkins</span>
-<span class="nv">$ </span>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+<span class="gp">$ </span>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 <span class="c"># stop jenkins:</span>
-<span class="nv">$ </span>launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+<span class="gp">$ </span>launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 </code></pre></div>
 <h3 id="jekins-reset-password"><a href="https://gist.github.com/gmhawash/4043232">Jekins Reset Password</a></h3>
 
@@ -363,12 +365,12 @@
 <li>Delete &lt; authorizationStrategy&gt; and &lt; securityRealm&gt; tags<br></li>
 <li>Restart Jenkins<br></li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo service jenkins restart
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo service jenkins restart
 </code></pre></div>
 <h3 id="ssh-key-on-jenkins"><a href="http://www.uvd.co.uk/blog/labs/configuring-jenkins-continuous-integration-server-to-work-with-git/">SSH Key on Jenkins</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo su - jenkins
-<span class="nv">$ </span>ssh-keygen -t rsa -C <span class="s2">&quot;your_email@example.com&quot;</span>
-<span class="nv">$ </span>cat ~/.ssh/id_rsa.pub
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo su - jenkins
+<span class="gp">$ </span>ssh-keygen -t rsa -C <span class="s2">"your_email@example.com"</span>
+<span class="gp">$ </span>cat ~/.ssh/id_rsa.pub
 </code></pre></div>
 <h3 id="jekins-git-pulling-timeout-after-10-min"><a href="http://stackoverflow.com/questions/22013217/on-building-jenkins-project-timeout-after-10-minute-error-happens">Jekins git pulling timeout after 10 min</a></h3>
 
@@ -379,8 +381,8 @@
 
 <h2 id="jenkins-running-parallel-scripts"><a href="http://stackoverflow.com/questions/23062933/jenkins-running-parallel-scripts">Jenkins running parallel scripts</a></h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># wokr in any shell</span>
-<span class="nv">$ </span>script1.sh <span class="p">&amp;</span>   <span class="c"># run in background (sub-shell)</span>
-<span class="nv">$ </span>script2.sh     <span class="c"># run in foreground (shell)</span>
+<span class="gp">$ </span>script1.sh &amp;   <span class="c"># run in background (sub-shell)</span>
+<span class="gp">$ </span>script2.sh     <span class="c"># run in foreground (shell)</span>
 </code></pre></div>
 <h3 id="jenkins-with-docker-io">Jenkins with Docker.io</h3>
 
@@ -390,9 +392,9 @@
 <li><a href="http://www.therightcode.net/use-docker-jenkins-to-run-github-tests/">Use Docker + Jenkins to run GitHub tests</a></li>
 </ol>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># add jenkins to docker group</span>
-<span class="nv">$ </span>sudo gpasswd -a jenkins docker <span class="c"># or sudo adduser jenkins docker</span>
-<span class="nv">$ </span>sudo service docker.io restart
-<span class="nv">$ </span>sudo service jenkins restart
+<span class="gp">$ </span>sudo gpasswd -a jenkins docker <span class="c"># or sudo adduser jenkins docker</span>
+<span class="gp">$ </span>sudo service docker.io restart
+<span class="gp">$ </span>sudo service jenkins restart
 </code></pre></div>
 <h3 id="jenkins-plugins-install-via-terminal">Jenkins Plugins - <a href="http://stackoverflow.com/questions/7709993/how-can-i-update-jenkins-plugins-from-the-terminal">Install via Terminal</a>::</h3>
 
@@ -431,7 +433,7 @@ Jenkkins</a></li>
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -440,7 +442,7 @@ Jenkkins</a></li>
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -449,7 +451,7 @@ Jenkkins</a></li>
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -467,7 +469,7 @@ Jenkkins</a></li>
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/jenkins";
+      var disqus_identifier = "/jenkins/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Python Line API" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/line/" />
+<meta property="og:url" content="http://dev.im-bot.com/line//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="Line API requirement - Line API DocumentationLine APIPython2 (not 3 because Thrift not support yet)Apache ThriftInstall Thrift on Ubuntu$ apt-get install -y ..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,7 +194,7 @@
     30 Jul 2015
       
         &middot;
-        <a href="/line/index.html#disqus_thread" data-disqus-identifier="/line"></a>
+        <a href="/line//index.html#disqus_thread" data-disqus-identifier="/line/"></a>
         
       
   </span>
@@ -206,23 +208,23 @@
 </ul>
 
 <h2 id="install-thrift-on-ubuntu"><a href="http://www.saltycrane.com/blog/2011/06/install-thrift-ubuntu-1010-maverick">Install Thrift on Ubuntu</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>apt-get install -y automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git debhelper cmake
-<span class="nv">$ </span><span class="nb">cd</span> /tmp
-<span class="nv">$ </span>curl http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz <span class="p">|</span> tar zx
-<span class="nv">$ </span><span class="nb">cd</span> /tmp/thrift-0.9.1
-<span class="nv">$ </span>./configure
-<span class="nv">$ </span>make <span class="o">&amp;&amp;</span> make install
-<span class="nv">$ </span>rm -rf /tmp/thrift-0.9.1
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>apt-get install -y automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git debhelper cmake
+<span class="gp">$ </span><span class="nb">cd</span> /tmp
+<span class="gp">$ </span>curl http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz | tar zx
+<span class="gp">$ </span><span class="nb">cd</span> /tmp/thrift-0.9.1
+<span class="gp">$ </span>./configure
+<span class="gp">$ </span>make <span class="o">&amp;&amp;</span> make install
+<span class="gp">$ </span>rm -rf /tmp/thrift-0.9.1
 </code></pre></div>
 <h2 id="fix-login-with-email-and-password-failed"><a href="https://www.youtube.com/watch?v=vaB1ZzV7UxY">Fix login with email and password failed</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># installl line and remove first that tricky don&#39;t know why</span>
-<span class="nv">$ </span>pip install line <span class="o">&amp;&amp;</span> pip uninstall -y line
-<span class="nv">$ </span>git clone https://github.com/carpedm20/LINE.git
-<span class="nv">$ </span><span class="nb">cd </span>LINE/line
-<span class="nv">$ </span>wget https://gist.github.com/windows98SE/b739038218b6fe4d423f/raw/5f68cf3d9a2a88576b739810a6bd6fcaa0c5e940/api.py.patch
-<span class="nv">$ </span>patch api.py &lt; api.py.patch
-<span class="nv">$ </span>python config.py
-<span class="nv">$ </span>python setup.py install
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># installl line and remove first that tricky don't know why</span>
+<span class="gp">$ </span>pip install line <span class="o">&amp;&amp;</span> pip uninstall -y line
+<span class="gp">$ </span>git clone https://github.com/carpedm20/LINE.git
+<span class="gp">$ </span><span class="nb">cd </span>LINE/line
+<span class="gp">$ </span>wget https://gist.github.com/windows98SE/b739038218b6fe4d423f/raw/5f68cf3d9a2a88576b739810a6bd6fcaa0c5e940/api.py.patch
+<span class="gp">$ </span>patch api.py &lt; api.py.patch
+<span class="gp">$ </span>python config.py
+<span class="gp">$ </span>python setup.py install
 </code></pre></div>
 <h2 id="sample-bot">Sample Bot</h2>
 
@@ -247,9 +249,9 @@ except:
       sender   = op[0]
       receiver = op[1]
       message  = op[2]</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">  msg = message.text
+<div class="highlight"><pre><code class="language-" data-lang="">  msg = message.text
   #receiver.sendMessage(&amp;quot;[%s] %s&amp;quot; % (sender.name, msg)) #this send message to ourselft that make infinity loop
-  sender.sendMessage(&amp;quot;[%s] %s&amp;quot; % (sender.name, msg)) #send message back to sender&lt;/pre&gt;&lt;/noscript&gt;&lt;script src=&quot;https://gist.github.com/ibotdotout/382369f272b9a2804318.js&quot;&gt; &lt;/script&gt;
+  sender.sendMessage(&amp;quot;[%s] %s&amp;quot; % (sender.name, msg)) #send message back to sender&lt;/pre&gt;&lt;/noscript&gt;&lt;script src="https://gist.github.com/ibotdotout/382369f272b9a2804318.js"&gt; &lt;/script&gt;
 </code></pre></div>
 <h2 id="line-api-patched-dockerfile-on-ubuntu">Line API Patched Dockerfile on Ubuntu</h2>
 
@@ -319,7 +321,7 @@ except:
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -328,7 +330,7 @@ except:
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -337,7 +339,7 @@ except:
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -355,7 +357,7 @@ except:
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/line";
+      var disqus_identifier = "/line/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

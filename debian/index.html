@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Debian frist boot" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/debian/" />
+<meta property="og:url" content="http://dev.im-bot.com/debian//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="Make user can use Sudo command$ su # aceess to root  $ apt-get install sudo  $ adduser &lt;username&gt; sudo  $ reboot # or logout  Ref:1. How can I add a ne..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,79 +194,79 @@
     10 Sep 2014
       
         &middot;
-        <a href="/debian/index.html#disqus_thread" data-disqus-identifier="/debian"></a>
+        <a href="/debian//index.html#disqus_thread" data-disqus-identifier="/debian/"></a>
         
       
   </span>
 
   <h3 id="make-user-can-use-sudo-command">Make user can use Sudo command</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>su <span class="c"># aceess to root  </span>
-<span class="nv">$ </span>apt-get install sudo  
-<span class="nv">$ </span>adduser &lt;username&gt; sudo  
-<span class="nv">$ </span>reboot <span class="c"># or logout  </span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>su <span class="c"># aceess to root  </span>
+<span class="gp">$ </span>apt-get install sudo  
+<span class="gp">$ </span>adduser &lt;username&gt; sudo  
+<span class="gp">$ </span>reboot <span class="c"># or logout  </span>
 </code></pre></div>
 <p>Ref:<br>
 1. <a href="http://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line">How can I add a new user as sudoer using the command line?</a><br>
 2. <a href="http://www.debianhelp.co.uk/sudo.htm">Sudo Configuration in Debian</a>    </p>
 
 <h3 id="upgrade-debian-to-unstable-sid"><a href="https://www.digitalocean.com/community/tutorials/upgrading-debian-to-unstable">Upgrade Debian to Unstable(Sid)</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo vi /etc/apt/sources.list
-<span class="c"># edit all &#39;squeeze&#39; that&#39;s version codename </span>
-<span class="c"># to &#39;sid&#39; that&#39;s unstable codename</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo vi /etc/apt/sources.list
+<span class="c"># edit all 'squeeze' that's version codename </span>
+<span class="c"># to 'sid' that's unstable codename</span>
 <span class="c"># ex. deb http://ftp.us.debian.org/debian squeeze main </span>
 <span class="c"># to deb http://ftp.us.debian.org/debian sid main</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get dist-upgrade
-<span class="nv">$ </span>sudo reboot
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get dist-upgrade
+<span class="gp">$ </span>sudo reboot
 </code></pre></div>
 <h3 id="using-lastest-package-on-debian-testing-package">Using Lastest Package on Debian (Testing Package)</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo vim /etc/apt/sources.list
-<span class="c"># add &quot;deb     http://http.debian.net/debian testing         main&quot;</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get install &lt;your package&gt;
-<span class="c"># don&#39;t call sudo apt-get upgrade if your don&#39;t want to upgrade your all system to lastest packages</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo vim /etc/apt/sources.list
+<span class="c"># add "deb     http://http.debian.net/debian testing         main"</span>
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get install &lt;your package&gt;
+<span class="c"># don't call sudo apt-get upgrade if your don't want to upgrade your all system to lastest packages</span>
 </code></pre></div>
 <h3 id="check-version-debian">Check Version Debian</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>lsb_release -a <span class="c">#check debian version</span>
-<span class="nv">$ </span>uname -a <span class="c">#check linux version</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>lsb_release -a <span class="c">#check debian version</span>
+<span class="gp">$ </span>uname -a <span class="c">#check linux version</span>
 </code></pre></div>
 <h3 id="how-to-switch-between-users-on-one-terminal"><a href="http://unix.stackexchange.com/questions/3568/how-to-switch-between-users-on-one-terminal">How to switch between users on one terminal?</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>su - &lt;user&gt;
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>su - &lt;user&gt;
 </code></pre></div>
 <h3 id="how-to-find-fastest-mirror-lists-with-‘netselect-apt’-on-debian"><a href="http://www.unixmen.com/how-to-find-fastest-official-mirror-lists-with-netselect-apt-on-debian/">How To Find Fastest Mirror Lists With ‘Netselect-apt’ On Debian</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># choose set your region to your local frist</span>
-<span class="nv">$ </span>sudo apt-get install netselect-apt
-<span class="nv">$ </span>sudo netselect-apt
+<span class="gp">$ </span>sudo apt-get install netselect-apt
+<span class="gp">$ </span>sudo netselect-apt
 </code></pre></div>
 <h3 id="debian-linux-install-openssh-sshd-server"><a href="http://www.cyberciti.biz/faq/debian-linux-install-openssh-sshd-server/">Debian Linux Install OpenSSH SSHD Server</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># install</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get install openssh-server
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get install openssh-server
 
 <span class="c"># control ssh-server</span>
-<span class="nv">$ </span>sudo service ssh stop
-<span class="nv">$ </span>sudo service ssh start
-<span class="nv">$ </span>sudo service ssh restart
-<span class="nv">$ </span>sudo service ssh status
+<span class="gp">$ </span>sudo service ssh stop
+<span class="gp">$ </span>sudo service ssh start
+<span class="gp">$ </span>sudo service ssh restart
+<span class="gp">$ </span>sudo service ssh status
 </code></pre></div>
 <h3 id="set-bash-color-on-ssh"><a href="http://ubuntuforums.org/showthread.php?t=1733664">Set Bash Color on SSH</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># In your ssh server</span>
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;source your .bashrc&quot;</span> &gt;&gt; .bash_profile
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"source your .bashrc"</span> &gt;&gt; .bash_profile
 <span class="c"># or you can try this [[ -f ~/.bashrc ]] &amp;&amp; . ~/.bashrc</span>
 </code></pre></div>
 <h3 id="extended-monitor"><a href="http://unix.stackexchange.com/questions/101283/extended-monitor-scroll-right-to-access-left-screen">Extended monitor</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>xrandr --output VGA-1 --auto --primary --output DVI-I-1 --auto --left-of VGA-1
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>xrandr --output VGA-1 --auto --primary --output DVI-I-1 --auto --left-of VGA-1
 </code></pre></div>
 <h2 id="install-locals-to-support-many-languages">Install locals to support many languages</h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># debian</span>
-<span class="nv">$ </span>sudo apt-get install locales
-<span class="nv">$ </span>sudo dpkg-reconfigure locales
+<span class="gp">$ </span>sudo apt-get install locales
+<span class="gp">$ </span>sudo dpkg-reconfigure locales
 </code></pre></div>
 <h3 id="clan-uninstall">Clan Uninstall</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo apt-get remove --purge &lt;packagename&gt; <span class="c"># --purge delete all data and config</span>
-<span class="nv">$ </span>sudo apt-get autoremove --purge
-<span class="nv">$ </span>sudo apt-get clean
-<span class="nv">$ </span>locate &lt;packagename&gt; <span class="c"># manual delete</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo apt-get remove --purge &lt;packagename&gt; <span class="c"># --purge delete all data and config</span>
+<span class="gp">$ </span>sudo apt-get autoremove --purge
+<span class="gp">$ </span>sudo apt-get clean
+<span class="gp">$ </span>locate &lt;packagename&gt; <span class="c"># manual delete</span>
 </code></pre></div>
 <h3 id="show-hidden-file-in-gui"><a href="http://ubuntuforums.org/showthread.php?t=1108528">Show hidden file in GUI</a></h3>
 
@@ -276,7 +278,7 @@
 Ctrl+Shift+C - copy  </p>
 
 <h3 id="install-and-mount-an-exfat-partition"><a href="http://askubuntu.com/questions/100278/how-do-i-install-and-mount-an-exfat-partition">install and mount an exFAT partition</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo apt-get install exfat-fuse exfat-utils
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo apt-get install exfat-fuse exfat-utils
 </code></pre></div>
 </div>
 
@@ -286,7 +288,7 @@ Ctrl+Shift+C - copy  </p>
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -295,7 +297,7 @@ Ctrl+Shift+C - copy  </p>
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -304,7 +306,7 @@ Ctrl+Shift+C - copy  </p>
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -322,7 +324,7 @@ Ctrl+Shift+C - copy  </p>
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/debian";
+      var disqus_identifier = "/debian/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

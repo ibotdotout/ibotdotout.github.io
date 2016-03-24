@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Robot Framework" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/robot-framework/" />
+<meta property="og:url" content="http://dev.im-bot.com/robot-framework//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="Robot Framework(RF) - Github RepoRobot Framework Template*** Settings ***Documentation     &lt;document&gt;Library           &lt;Library&gt;Library          ..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,7 +194,7 @@
     15 Sep 2014
       
         &middot;
-        <a href="/robot-framework/index.html#disqus_thread" data-disqus-identifier="/robot-framework"></a>
+        <a href="/robot-framework//index.html#disqus_thread" data-disqus-identifier="/robot-framework/"></a>
         
       
   </span>
@@ -287,7 +289,7 @@
 <span class="err">$</span><span class="p">{</span><span class="bp">None</span><span class="p">}</span>   <span class="o">-</span> <span class="n">python</span> <span class="bp">None</span>
 </code></pre></div>
 <h2 id="selecting-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#selecting-test-cases">Selecting test cases</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">--test example*       <span class="c">#select test</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">--test example<span class="k">*</span>       <span class="c">#select test</span>
 --suite example-??    <span class="c">#select suite</span>
 </code></pre></div>
 <h2 id="tagging-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#tagging-test-cases">Tagging test cases</a></h2>
@@ -300,28 +302,28 @@
   <span class="p">[</span><span class="n">Tags</span><span class="p">]</span>  <span class="n">InvalidTest</span>
 </code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Tag select</span>
 
-<span class="nv">$ </span>pybot -i InvalidTest login_tests.txt
-<span class="nv">$ </span>pybot --include InvalidTest login_tests.html
+<span class="gp">$ </span>pybot -i InvalidTest login_tests.txt
+<span class="gp">$ </span>pybot --include InvalidTest login_tests.html
 
-<span class="nv">$ </span>pybot -e InvalidTest login_tests.txt
-<span class="nv">$ </span>pybot --exclude InvalidTest login_tests.html
+<span class="gp">$ </span>pybot -e InvalidTest login_tests.txt
+<span class="gp">$ </span>pybot --exclude InvalidTest login_tests.html
 </code></pre></div>
 <h2 id="test-suites"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-suites">Test suites</a></h2>
 
 <p><strong>init</strong>.txt  - init test suite file</p>
 
 <h2 id="assgin-variable-via-cli">Assgin Variable via CLI</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
-<span class="nv">$ </span>pybot  -d /tmp --variable SERVER:<span class="s2">&quot;192.168.59.103&quot;</span> --variable BROWSER:chrome tests/acceptance/
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
+<span class="gp">$ </span>pybot  -d /tmp --variable SERVER:<span class="s2">"192.168.59.103"</span> --variable BROWSER:chrome tests/acceptance/
 </code></pre></div>
 <h2 id="for-loops-tutorial"><a href="http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html#for-loops">For loops</a> - <a href="https://blog.codecentric.de/en/2013/05/robot-framework-tutorial-loops-conditional-execution-and-more/">Tutorial</a></h2>
 <div class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">:</span><span class="n">FOR</span>    <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>   <span class="n">IN</span>    <span class="err">@</span><span class="p">{</span><span class="nb">list</span><span class="p">}</span>
 \    <span class="n">LOG</span>     <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>
 </code></pre></div>
 <h2 id="selenium-driver">Selenium Driver</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>brew install chromedriver <span class="c"># chrome driver for osx</span>
-<span class="nv">$ </span>brew install phantomjs <span class="c"># GUI less driver for osx</span>
-<span class="nv">$ </span>apt-get install phatomjs <span class="c"># GUI less driver for ubuntu</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew install chromedriver <span class="c"># chrome driver for osx</span>
+<span class="gp">$ </span>brew install phantomjs <span class="c"># GUI less driver for osx</span>
+<span class="gp">$ </span>apt-get install phatomjs <span class="c"># GUI less driver for ubuntu</span>
 </code></pre></div>
 <h2 id="plugin">Plugin:</h2>
 
@@ -372,7 +374,7 @@
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -381,7 +383,7 @@
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -390,7 +392,7 @@
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -408,7 +410,7 @@
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/robot-framework";
+      var disqus_identifier = "/robot-framework/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

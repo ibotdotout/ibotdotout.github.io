@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Unix" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/unix/" />
+<meta property="og:url" content="http://dev.im-bot.com/unix//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="Helper$ ~ $ home user directory  $ ~+ # same as pwd  $ ~- # previous directory  $ ls -1 $PWD/*.txt # list all .txt with full path  $ cd - # cd to previous pa..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,7 +194,7 @@
     27 Jun 2014
       
         &middot;
-        <a href="/unix/index.html#disqus_thread" data-disqus-identifier="/unix"></a>
+        <a href="/unix//index.html#disqus_thread" data-disqus-identifier="/unix/"></a>
         
           &middot;
           Updated February 07, 2016
@@ -201,20 +203,20 @@
   </span>
 
   <h3 id="helper">Helper</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>~ <span class="nv">$ </span>home user directory  
-<span class="nv">$ </span>~+ <span class="c"># same as pwd  </span>
-<span class="nv">$ </span>~- <span class="c"># previous directory  </span>
-<span class="nv">$ </span>ls -1 <span class="nv">$PWD</span>/*.txt <span class="c"># list all .txt with full path  </span>
-<span class="nv">$ </span><span class="nb">cd</span> - <span class="c"># cd to previous path</span>
-<span class="nv">$ </span><span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim <span class="c"># set vim as default editor</span>
-<span class="nv">$ </span>groups <span class="c">#list group</span>
-<span class="nv">$ </span>getent group &lt;group_name&gt; <span class="c">#list members of group</span>
-<span class="nv">$ </span>top <span class="c">#check performance</span>
-<span class="nv">$ </span>du -sh &lt;folder&gt; <span class="c"># summary disk usage of folder</span>
-<span class="nv">$ </span>df -h <span class="c"># disk free</span>
-<span class="nv">$ </span>chsh - &lt;user&gt; <span class="c"># change default ssh user</span>
-<span class="nv">$ </span>printenv <span class="c"># list environment variables</span>
-<span class="nv">$ </span><span class="se">\&lt;</span>cmd&gt; <span class="c"># run command by  avoid alias</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>~ <span class="nv">$ </span>home user directory  
+<span class="gp">$ </span>~+ <span class="c"># same as pwd  </span>
+<span class="gp">$ </span>~- <span class="c"># previous directory  </span>
+<span class="gp">$ </span>ls -1 <span class="nv">$PWD</span>/<span class="k">*</span>.txt <span class="c"># list all .txt with full path  </span>
+<span class="gp">$ </span><span class="nb">cd</span> - <span class="c"># cd to previous path</span>
+<span class="gp">$ </span><span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim <span class="c"># set vim as default editor</span>
+<span class="gp">$ </span>groups <span class="c">#list group</span>
+<span class="gp">$ </span>getent group &lt;group_name&gt; <span class="c">#list members of group</span>
+<span class="gp">$ </span>top <span class="c">#check performance</span>
+<span class="gp">$ </span>du -sh &lt;folder&gt; <span class="c"># summary disk usage of folder</span>
+<span class="gp">$ </span>df -h <span class="c"># disk free</span>
+<span class="gp">$ </span>chsh - &lt;user&gt; <span class="c"># change default ssh user</span>
+<span class="gp">$ </span>printenv <span class="c"># list environment variables</span>
+<span class="gp">$ </span><span class="se">\&lt;</span>cmd&gt; <span class="c"># run command by  avoid alias</span>
 </code></pre></div>
 <h3 id="command">Command</h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">nl <span class="c">#number line</span>
@@ -223,61 +225,61 @@ sed <span class="c">#stream editor</span>
 pbcopy &lt; &lt;file&gt; <span class="c"># OSX: copy file into clipboard</span>
 </code></pre></div>
 <h3 id="where-command">Where command</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">hash</span> <span class="c"># list command and its path  </span>
-<span class="nv">$ </span><span class="nb">type</span> -a &lt;cmd&gt; <span class="c"># tell all path of commamd  </span>
-<span class="nv">$ </span>which &lt;cmd&gt; <span class="c"># tell default path of command  </span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">hash</span> <span class="c"># list command and its path  </span>
+<span class="gp">$ </span><span class="nb">type</span> -a &lt;cmd&gt; <span class="c"># tell all path of commamd  </span>
+<span class="gp">$ </span>which &lt;cmd&gt; <span class="c"># tell default path of command  </span>
 </code></pre></div>
 <h3 id="redirection"><a href="http://en.wikipedia.org/wiki/Redirection_computing">Redirection</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>cmd &gt; &lt;file&gt; <span class="c"># print output to file (overwrite)  </span>
-<span class="nv">$ </span>cmd &gt;&gt; &lt;file&gt; <span class="c"># print output to file (append)  </span>
-<span class="nv">$ </span>cmd 2&gt; &lt;file&gt; <span class="c"># print error to file  </span>
-<span class="nv">$ </span>cmd <span class="p">&amp;</span>&gt; &lt;file&gt; <span class="c"># print output &amp; error to file  </span>
-<span class="nv">$ </span>cmd &lt; &lt;file&gt; <span class="c"># use file as  input  </span>
-<span class="nv">$ </span>cmd &lt;&lt; &lt;file&gt; <span class="c"># use file as input  </span>
-<span class="nv">$ </span>cmd <span class="o">&lt;&lt;&lt;</span> &lt;any&gt;  <span class="c">#use anyas input (here string not compute any tag)  </span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>cmd &gt; &lt;file&gt; <span class="c"># print output to file (overwrite)  </span>
+<span class="gp">$ </span>cmd &gt;&gt; &lt;file&gt; <span class="c"># print output to file (append)  </span>
+<span class="gp">$ </span>cmd 2&gt; &lt;file&gt; <span class="c"># print error to file  </span>
+<span class="gp">$ </span>cmd &amp;&gt; &lt;file&gt; <span class="c"># print output &amp; error to file  </span>
+<span class="gp">$ </span>cmd &lt; &lt;file&gt; <span class="c"># use file as  input  </span>
+<span class="gp">$ </span>cmd &lt;&lt; &lt;file&gt; <span class="c"># use file as input  </span>
+<span class="gp">$ </span>cmd <span class="o">&lt;&lt;&lt;</span> &lt;any&gt;  <span class="c">#use anyas input (here string not compute any tag)  </span>
 <span class="c"># Redirection output wiht sudo</span>
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;hello&quot;</span> <span class="p">|</span> sudo tee out &gt; /dev/null <span class="c"># eq. echo &quot;hello&quot; &gt; out</span>
-<span class="c"># echo &quot;hello&quot; | sudo tee -a out &gt; /dev/null # eq echo &quot;hello&quot; &gt; out</span>
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"hello"</span> | sudo tee out &gt; /dev/null <span class="c"># eq. echo "hello" &gt; out</span>
+<span class="c"># echo "hello" | sudo tee -a out &gt; /dev/null # eq echo "hello" &gt; out</span>
 </code></pre></div>
 <h3 id="jobs"><a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">Jobs</a> -</h3>
 
 <p><a href="https://www.youtube.com/watch?v=r4xkCDRnGiw">fg bg Tutorial</a></p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">jobs</span> <span class="c"># list suspended jobs  </span>
-<span class="nv">$ </span><span class="nb">fg</span> <span class="c"># put the top suspended job in the foreground</span>
-<span class="nv">$ </span><span class="nb">fg</span> %1 <span class="c"># put the suspended job id 1 in the foreground</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">jobs</span> <span class="c"># list suspended jobs  </span>
+<span class="gp">$ </span><span class="nb">fg</span> <span class="c"># put the top suspended job in the foreground</span>
+<span class="gp">$ </span><span class="nb">fg</span> %1 <span class="c"># put the suspended job id 1 in the foreground</span>
 Ctrl-z <span class="c"># Suspend a foreground job</span>
-<span class="nv">$ </span><span class="nb">bg</span> <span class="c"># run suspended job in background</span>
-<span class="nv">$ </span><span class="nb">kill</span> <span class="c"># kill job</span>
+<span class="gp">$ </span><span class="nb">bg</span> <span class="c"># run suspended job in background</span>
+<span class="gp">$ </span><span class="nb">kill</span> <span class="c"># kill job</span>
 </code></pre></div>
 <h3 id="crontab-time-schedule">Crontab Time schedule</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>crontab -e <span class="c">#edit crontab profile</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>crontab -e <span class="c">#edit crontab profile</span>
 <span class="c"># */5 * * * * cmd</span>
 <span class="c"># run cmd every five minutes</span>
-<span class="nv">$ </span>grep CRON /var/log/syslog <span class="c">#see crontablog (debian)</span>
+<span class="gp">$ </span>grep CRON /var/log/syslog <span class="c">#see crontablog (debian)</span>
 </code></pre></div>
 <h3 id="zsh-history-expansion">Zsh History expansion</h3>
 
 <p>should also work with bash.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>man zshexpn <span class="c"># manual for look in-depth  </span>
-<span class="nv">$ </span><span class="nb">history</span> <span class="c"># tell history command that keep in ~/.bash_history  </span>
-<span class="nv">$ </span><span class="nb">history</span> -c <span class="c"># clear history  </span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>man zshexpn <span class="c"># manual for look in-depth  </span>
+<span class="gp">$ </span><span class="nb">history</span> <span class="c"># tell history command that keep in ~/.bash_history  </span>
+<span class="gp">$ </span><span class="nb">history</span> -c <span class="c"># clear history  </span>
 ! <span class="c"># previous that can combine with command and argument  </span>
-<span class="nv">$ </span>!! <span class="c"># call previous command  </span>
-<span class="nv">$ </span>!&lt;str&gt; <span class="c"># call last command that start with str  </span>
-<span class="nv">$ </span>!?&lt;str&gt;<span class="o">[</span>?<span class="o">]</span> <span class="c"># call last command containing str  </span>
-<span class="nv">$ </span>!&lt;hist_number&gt; <span class="c"># call command in nth of history files  </span>
+<span class="gp">$ </span>!! <span class="c"># call previous command  </span>
+<span class="gp">$ </span>!&lt;str&gt; <span class="c"># call last command that start with str  </span>
+<span class="gp">$ </span>!?&lt;str&gt;[?] <span class="c"># call last command containing str  </span>
+<span class="gp">$ </span>!&lt;hist_number&gt; <span class="c"># call command in nth of history files  </span>
  ^ <span class="c"># first argument  </span>
  <span class="nv">$ </span><span class="c"># last argument  </span>
  :n <span class="c"># nth argument  </span>
  :m-n <span class="c"># mth to nth argument  </span>
- * <span class="c"># all argument  </span>
-<span class="nv">$ </span>&lt;space&gt;&lt;cmd&gt; <span class="c"># call command without keep history</span>
+ <span class="k">*</span> <span class="c"># all argument  </span>
+<span class="gp">$ </span>&lt;space&gt;&lt;cmd&gt; <span class="c"># call command without keep history</span>
 </code></pre></div>
 <h3 id="zsh-basic-editing-bash-shortcuts">Zsh Basic Editing - <a href="http://www.skorks.com/2009/09/bash-shortcuts-for-maximum-productivity/">Bash Shortcuts</a></h3>
 
 <p>should also work with bash.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>bindkey -v <span class="c"># vi mode  </span>
-<span class="nv">$ </span>bindkey -e <span class="c"># emac mode  </span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>bindkey -v <span class="c"># vi mode  </span>
+<span class="gp">$ </span>bindkey -e <span class="c"># emac mode  </span>
 Ctrl + a <span class="c"># moves the cursor to begin of line  </span>
 Ctrl + e <span class="c"># moves the cursor to end of line  </span>
 Ctrl + u <span class="c"># delete current to begin of line</span>
@@ -297,56 +299,56 @@ Meta is your Alt key, normally.
 For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; Preferences &gt; Settings &gt; Keyboard, and <span class="nb">enable </span>Use option as meta key.
 </code></pre></div>
 <h3 id="diff-command"><a href="http://linux.about.com/library/cmd/blcmdl1_diff.htm">Diff Command</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>diff --brief &lt;file1&gt; &lt;file2&gt;
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>diff --brief &lt;file1&gt; &lt;file2&gt;
 </code></pre></div>
 <h3 id="howto-find-out-my-linux-distribution-name-and-version"><a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>cat /etc/*-release
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>cat /etc/<span class="k">*</span>-release
 </code></pre></div>
 <h3 id="timezone-setting-in-linux"><a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok date
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok date
 </code></pre></div>
 <h3 id="how-to-cycle-through-reverse-i-search-in-bash"><a href="http://unix.stackexchange.com/questions/73498/how-to-cycle-through-reverse-i-search-in-bash">How to cycle through reverse-i-search in BASH?</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>Ctrl+R grep Ctrl+R Ctrl+R
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>Ctrl+R grep Ctrl+R Ctrl+R
 </code></pre></div>
 <h3 id="safeguard-rm"><a href="https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm">safeguard-rm</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># only zsh</span>
 
-<span class="nv">$ </span>setopt noclobber <span class="c"># prevents overwriting an existing file.</span>
-<span class="nv">$ </span>setopt clobber <span class="c"># disable</span>
+<span class="gp">$ </span>setopt noclobber <span class="c"># prevents overwriting an existing file.</span>
+<span class="gp">$ </span>setopt clobber <span class="c"># disable</span>
 
-<span class="nv">$ </span>unsetopt RM_STAR_SILENT <span class="c"># ask before rm with star (*)</span>
-<span class="nv">$ </span>setopt RM_STAR_WAIT <span class="c"># wait 10 sec before exec rm with star</span>
+<span class="gp">$ </span>unsetopt RM_STAR_SILENT <span class="c"># ask before rm with star (*)</span>
+<span class="gp">$ </span>setopt RM_STAR_WAIT <span class="c"># wait 10 sec before exec rm with star</span>
 </code></pre></div>
 <h3 id="mac-style-copy-paste-for-linux-machines"><a href="https://www.youtube.com/watch?v=fKP0FLp3uW0">Mac style copy/paste for linux machines</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># copy/paste for linux machines (Mac style)</span>
 <span class="c"># sudo apt-get install xclip</span>
-<span class="nv">$ </span><span class="nb">alias </span><span class="nv">pbcopy</span><span class="o">=</span><span class="s1">&#39;xclip -selection clipboard&#39;</span>
-<span class="nv">$ </span><span class="nb">alias </span><span class="nv">pbpaste</span><span class="o">=</span><span class="s1">&#39;xclip -selection clipboard -o&#39;</span>
-<span class="nv">$ </span><span class="nb">alias </span><span class="nv">pbselect</span><span class="o">=</span><span class="s1">&#39;xclip -selection primary -o&#39;</span>
+<span class="gp">$ </span><span class="nb">alias </span><span class="nv">pbcopy</span><span class="o">=</span><span class="s1">'xclip -selection clipboard'</span>
+<span class="gp">$ </span><span class="nb">alias </span><span class="nv">pbpaste</span><span class="o">=</span><span class="s1">'xclip -selection clipboard -o'</span>
+<span class="gp">$ </span><span class="nb">alias </span><span class="nv">pbselect</span><span class="o">=</span><span class="s1">'xclip -selection primary -o'</span>
 </code></pre></div>
 <h3 id="bash">Bash</h3>
 
 <h3 id="shell-bash-script">Shell/Bash Script</h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
 
-<span class="nv">VAR</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$VAR&quot;</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>  <span class="c"># use = to equal string not ==</span>
+VAR <span class="o">=</span> <span class="s2">"hello"</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$VAR</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"hello"</span> <span class="o">]</span>; <span class="k">then</span>  <span class="c"># use = to equal string not ==</span>
   <span class="nb">echo</span> <span class="nv">$VAR</span>
-<span class="k">else</span>
-  <span class="nb">echo</span> <span class="s2">&quot;fasle&quot;</span>
+<span class="k">else
+  </span><span class="nb">echo</span> <span class="s2">"fasle"</span>
 <span class="k">fi</span>
 </code></pre></div>
 <h3 id="run-script-different-ways-to-execute-a-shell-script">Run Script - <a href="http://unix.stackexchange.com/questions/2976/different-ways-to-execute-a-shell-script">Different ways to execute a shell script</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>./script      <span class="c">#run with using shebang(#) in script ex. #!/usr/bin/python</span>
-<span class="nv">$ </span>. script      <span class="c">#run with shell (work in related bash)</span>
-<span class="nv">$ </span><span class="nb">source </span>script <span class="c">#run with shell (work in both bash and csh)</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>./script      <span class="c">#run with using shebang(#) in script ex. #!/usr/bin/python</span>
+<span class="gp">$ </span>. script      <span class="c">#run with shell (work in related bash)</span>
+<span class="gp">$ </span><span class="nb">source </span>script <span class="c">#run with shell (work in both bash and csh)</span>
 </code></pre></div>
 <h3 id="shell-function-passing-argument-to-alias-in-bash">Shell function - <a href="http://stackoverflow.com/questions/4060880/passing-argument-to-alias-in-bash">Passing argument to alias in bash</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;rm() { mkdir -p /tmp/rm; /bin/mv &quot;$@&quot; /tmp/rm; }&#39;</span> &gt;&gt; .zshrc
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">echo</span> <span class="s1">'rm() { mkdir -p /tmp/rm; /bin/mv "$@" /tmp/rm; }'</span> &gt;&gt; .zshrc
 </code></pre></div>
 <h3 id="execute-combine-multiple-linux-commands-in-one-line"><a href="http://stackoverflow.com/questions/13077241/execute-combine-multiple-linux-commands-in-one-line">Execute combine multiple linux commands in one line</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">cmd1 <span class="o">&amp;&amp;</span> cmd2  <span class="c"># cmd 2 run only if cmd1 successful</span>
-cmd1 <span class="p">;</span> cmd2  <span class="c"># cmd 2 run whether failed or not</span>
+cmd1 ; cmd2  <span class="c"># cmd 2 run whether failed or not</span>
 </code></pre></div>
 <h3 id="parallel-shell-script">Parallel shell script</h3>
 
@@ -354,15 +356,15 @@ cmd1 <span class="p">;</span> cmd2  <span class="c"># cmd 2 run whether failed o
 <li><a href="http://prll.sourceforge.net/shell_parallel.html">Parallel batch processing in the shell</a><br></li>
 <li><a href="http://stackoverflow.com/questions/19543139/bash-script-processing-commands-in-parallel">Bash script processing commands in parallel</a><br></li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">process1 <span class="p">&amp;</span>
-process2 <span class="p">&amp;</span>
-process3 <span class="p">&amp;</span>
-process4 <span class="p">&amp;</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">process1 &amp;
+process2 &amp;
+process3 &amp;
+process4 &amp;
 <span class="nb">wait</span>  <span class="c"># wait until process1, 2, 3, 4 done</span>
-process5 <span class="p">&amp;</span>
-process6 <span class="p">&amp;</span>
-process7 <span class="p">&amp;</span>
-process8 <span class="p">&amp;</span>
+process5 &amp;
+process6 &amp;
+process7 &amp;
+process8 &amp;
 <span class="nb">wait</span>  <span class="c"># wait until process5, 6, 7, 8 done</span>
 </code></pre></div>
 <ol>
@@ -375,8 +377,8 @@ process8 <span class="p">&amp;</span>
 <span class="c"># waitproc - wait until have core slots</span>
 waitproc <span class="o">()</span> <span class="o">{</span>
   <span class="nv">jobcnt</span><span class="o">=(</span><span class="k">$(</span><span class="nb">jobs</span> -p<span class="k">)</span><span class="o">)</span>
-  <span class="k">until</span> <span class="o">[</span> <span class="k">${#</span><span class="nv">jobcnt</span><span class="p">[@]</span><span class="k">}</span> -lt <span class="nv">$nproc</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span>
-    sleep 0.05
+  <span class="k">until</span> <span class="o">[</span> <span class="k">${#</span><span class="nv">jobcnt</span><span class="p">[@]</span><span class="k">}</span> -lt <span class="nv">$nproc</span> <span class="o">]</span>; <span class="k">do
+    </span>sleep 0.05
     <span class="nv">jobcnt</span><span class="o">=(</span><span class="k">$(</span>job -p<span class="k">)</span><span class="o">)</span>
   <span class="k">done</span>
 </code></pre></div>
@@ -385,9 +387,9 @@ waitproc <span class="o">()</span> <span class="o">{</span>
 <ol>
 <li><a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">Introduction to if</a></li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span>
-<span class="k">do</span>
-    <span class="nb">echo</span> <span class="s2">&quot;hello&quot;</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 0 <span class="o">]</span>
+<span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"hello"</span>
 <span class="k">done</span>
 </code></pre></div>
 <ol>
@@ -397,15 +399,15 @@ waitproc <span class="o">()</span> <span class="o">{</span>
 
 <span class="nv">array</span><span class="o">=(</span> one two three <span class="o">)</span>
 
-<span class="k">for</span> i in <span class="s2">&quot;${array[@]}&quot;</span>
-<span class="k">do</span>
-    <span class="nb">echo</span> <span class="nv">$i</span>
+<span class="k">for </span>i <span class="k">in</span> <span class="s2">"</span><span class="k">${</span><span class="nv">array</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+<span class="k">do
+    </span><span class="nb">echo</span> <span class="nv">$i</span>
 <span class="k">done</span>
 </code></pre></div>
 <h3 id="get-file-directory-path-from-filepath"><a href="http://stackoverflow.com/questions/6121091/get-file-directory-path-from-filepath#6121114">Get file directory path from filepath</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>dirname <span class="s2">&quot;/home/user/dir/file.py&quot;</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>dirname <span class="s2">"/home/user/dir/file.py"</span>
 /home/user/dir
-<span class="nv">$ </span>basename <span class="s2">&quot;/home/user/dir/file.py&quot;</span>
+<span class="gp">$ </span>basename <span class="s2">"/home/user/dir/file.py"</span>
 file.py
 </code></pre></div>
 <h3 id="how-to-find-out-from-the-logs-what-caused-system-shutdown"><a href="http://unix.stackexchange.com/questions/9819/how-to-find-out-from-the-logs-what-caused-system-shutdown">How to find out from the logs what caused system shutdown?</a></h3>
@@ -414,8 +416,8 @@ file.py
 <li><a href="http://unix.stackexchange.com/questions/107501/shutdown-log-linux-username">Shutdown log Linux UserName</a></li>
 <li><a href="http://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html">Linux last Reboot Time and Date Find Out Command</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">last reboot <span class="p">|</span> less
-last -x<span class="p">|</span>grep shutdown <span class="p">|</span> head -1
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">last reboot | less
+last -x|grep shutdown | head -1
 </code></pre></div>
 <h3 id="zsh">Zsh</h3>
 
@@ -470,7 +472,7 @@ last -x<span class="p">|</span>grep shutdown <span class="p">|</span> head -1
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -479,7 +481,7 @@ last -x<span class="p">|</span>grep shutdown <span class="p">|</span> head -1
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -488,7 +490,7 @@ last -x<span class="p">|</span>grep shutdown <span class="p">|</span> head -1
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -506,7 +508,7 @@ last -x<span class="p">|</span>grep shutdown <span class="p">|</span> head -1
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/unix";
+      var disqus_identifier = "/unix/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

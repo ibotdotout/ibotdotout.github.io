@@ -97,6 +97,8 @@
       
     
       
+    
+      
         
       
     
@@ -190,7 +192,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/python">
+      <a href="/python/">
         All about Python
       </a>
     </h1>
@@ -199,7 +201,7 @@
       08 Jun 2014
       
         &middot;
-        <a href="/python#disqus_thread" data-disqus-identifier="/python"></a>
+        <a href="/python/#disqus_thread" data-disqus-identifier="/python/"></a>
         
       
     </span>
@@ -271,7 +273,7 @@
 <ul>
 <li>Install Project as develop via pip</li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># same as &#39;python setup.py develope&#39;</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># same as 'python setup.py develope'</span>
   pip install --use-mirrors --editable .
 </code></pre></div>
 <ul>
@@ -280,13 +282,13 @@
 <div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">sys</span>
 
   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-      <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">)</span>
+      <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
       <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
 </code></pre></div>
 <ul>
 <li><a href="http://stackoverflow.com/questions/1027714/how-to-execute-a-file-within-the-python-interpreter">How to execute a file within the python interpreter?</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="nb">execfile</span><span class="p">(</span><span class="s">&#39;filename.py&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="nb">execfile</span><span class="p">(</span><span class="s">'filename.py'</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported</a></li>
@@ -297,7 +299,7 @@
 <ul>
 <li><a href="http://stackoverflow.com/questions/7300321/how-to-use-pythons-pip-to-download-and-keep-the-zipped-files-for-a-package">How to use Python&#39;s pip to download and keep the zipped files for a package?</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>pip install --download-cache<span class="o">=</span><span class="s2">&quot;/pth/to/downloaded/files&quot;</span> package
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>pip install --download-cache<span class="o">=</span><span class="s2">"/pth/to/downloaded/files"</span> package
 </code></pre></div>
 <ul>
 <li><p><a href="http://bhfsteve.blogspot.se/2014/07/embedding-python-in-bash-scripts.html">Embedding python in bash scripts</a></p>
@@ -306,22 +308,22 @@
 <li><a href="http://stackoverflow.com/questions/29734394/running-a-python-function-as-a-bash-command">Running a python function as a bash command</a></li>
 <li><a href="https://gist.github.com/jiaaro/5452675">Embed Python in a bash script</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">function</span> line <span class="o">{</span>
-<span class="nv">PYTHON_ARG</span><span class="o">=</span><span class="s2">&quot;$1&quot;</span> python - <span class="s">&lt;&lt;END</span>
-<span class="s">import os</span>
-<span class="s">line_len = int(os.environ[&#39;PYTHON_ARG&#39;])</span>
-<span class="s">print &#39;-&#39; * line_len</span>
-<span class="s">END</span>
-<span class="o">}</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">function </span>line <span class="o">{</span>
+<span class="nv">PYTHON_ARG</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> python - <span class="sh">&lt;&lt;END
+import os
+line_len = int(os.environ['PYTHON_ARG'])
+print '-' * line_len
+END
+</span><span class="o">}</span>
 </code></pre></div>
 <ul>
 <li><a href="http://stackoverflow.com/questions/2119702/calling-a-python-function-from-bash-script">Calling a python function from bash script</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">python -c<span class="s1">&#39;import themodule; themodule.thefunction(&quot;boo!&quot;)&#39;</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">python -c<span class="s1">'import themodule; themodule.thefunction("boo!")'</span>
 </code></pre></div></li>
 <li><p><a href="http://stackoverflow.com/questions/5574702/how-to-print-to-stderr-in-python">How to print to stderr in Python?</a></p></li>
 </ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#39;word&#39;</span>
+<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s">'word'</span>
 </code></pre></div>
 <h2 id="tools">Tools:</h2>
 
@@ -347,22 +349,22 @@
 <li><a href="https://github.com/kennethreitz/autoenv">AutoEnv</a></li>
 </ul>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">  brew install autoenv
-  <span class="nb">echo</span> <span class="s1">&#39;source /usr/local/opt/autoenv/activate.sh&#39;</span> &gt;&gt; ~/.zshrc
+  <span class="nb">echo</span> <span class="s1">'source /usr/local/opt/autoenv/activate.sh'</span> &gt;&gt; ~/.zshrc
 </code></pre></div>
 <ul>
 <li><a href="https://github.com/hhatto/autopep8">AutoPEP8</a></li>
 </ul>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># install</span>
-<span class="nv">$ </span>pip install --upgrade autopep8
+<span class="gp">$ </span>pip install --upgrade autopep8
 <span class="c"># usage</span>
-<span class="nv">$ </span>autopep8 --in-place --aggressive --aggressive &lt;filename&gt;
+<span class="gp">$ </span>autopep8 --in-place --aggressive --aggressive &lt;filename&gt;
 </code></pre></div>
 <ul>
 <li><a href="https://www.logilab.org/blogentry/6883">Pyreverse : UML Diagrams for Python</a></li>
 </ul>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># install</span>
-<span class="nv">$ </span>pip install pylint
-<span class="nv">$ </span>apt-get install graphviz
+<span class="gp">$ </span>pip install pylint
+<span class="gp">$ </span>apt-get install graphviz
 
 <span class="c"># usage</span>
 pyreverse -o png &lt;code&gt;

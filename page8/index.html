@@ -97,6 +97,8 @@
       
     
       
+    
+      
         
       
     
@@ -190,7 +192,7 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/vimdiff">
+      <a href="/vimdiff/">
         Vimdiff Custom
       </a>
     </h1>
@@ -199,7 +201,7 @@
       23 Jan 2015
       
         &middot;
-        <a href="/vimdiff#disqus_thread" data-disqus-identifier="/vimdiff"></a>
+        <a href="/vimdiff/#disqus_thread" data-disqus-identifier="/vimdiff/"></a>
         
       
     </span>
@@ -242,9 +244,9 @@ index fc3703c..11629db 100644
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">1c1
 &lt; aaaa
 ---
-&gt; aabb
+<span class="gp">&gt; </span>aabb
 2a3
-&gt; dddd
+<span class="gp">&gt; </span>dddd
 4,6d4
 &lt; eeee
 &lt; eeee
@@ -261,26 +263,26 @@ index fc3703c..11629db 100644
 <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">get_buffer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
             <span class="n">res</span> <span class="o">+=</span> <span class="n">i</span>
-        <span class="n">res</span> <span class="o">+=</span> <span class="s">&#39;---</span><span class="se">\n</span><span class="s">&#39;</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="s">'---</span><span class="se">\n</span><span class="s">'</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
             <span class="n">res</span> <span class="o">+=</span> <span class="n">i</span>
         <span class="k">return</span> <span class="n">res</span>
 
     <span class="k">def</span> <span class="nf">get_action</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
         <span class="k">if</span> <span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="p">:</span>
-            <span class="n">res</span> <span class="o">+=</span> <span class="s">&quot;{0}c{0}</span><span class="se">\n</span><span class="s">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s">"{0}c{0}</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">res</span> <span class="o">+=</span> <span class="s">&quot;{0},{1}c{0},{1}</span><span class="se">\n</span><span class="s">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s">"{0},{1}c{0},{1}</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">res</span>
 
     <span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
 
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">a</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">file2</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">b</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">a</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">file2</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">b</span><span class="p">:</span>
 
         <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
         <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
@@ -295,8 +297,8 @@ index fc3703c..11629db 100644
                 <span class="n">start</span> <span class="o">=</span> <span class="n">curr</span> <span class="o">+</span> <span class="mi">1</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">end</span> <span class="o">=</span> <span class="n">curr</span>
-                <span class="n">buffer_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;&lt; &#39;</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
-                <span class="n">buffer_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&#39;&gt; &#39;</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+                <span class="n">buffer_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'&lt; '</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
+                <span class="n">buffer_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'&gt; '</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
             <span class="n">curr</span> <span class="o">+=</span> <span class="mi">1</span>
 
         <span class="n">res</span> <span class="o">+=</span> <span class="n">get_action</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
@@ -305,7 +307,7 @@ index fc3703c..11629db 100644
         <span class="k">print</span> <span class="n">res</span><span class="p">,</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">sys</span>
     <span class="n">diff</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </code></pre></div>
@@ -313,8 +315,8 @@ index fc3703c..11629db 100644
 
 <p>.vimrc</p>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
-<span class="k">function</span> MyDiff<span class="o">()</span>
-    silent execute <span class="s2">&quot;!python &lt;your_paht&gt;/my_diff.py &quot;</span> . v:fname_in . <span class="s2">&quot; &quot;</span> . v:fname_new . <span class="s2">&quot; &gt; &quot;</span> . v:fname_out
+<span class="k">function </span>MyDiff<span class="o">()</span>
+    silent execute <span class="s2">"!python &lt;your_paht&gt;/my_diff.py "</span> . v:fname_in . <span class="s2">" "</span> . v:fname_new . <span class="s2">" &gt; "</span> . v:fname_out
 endfunction
 </code></pre></div>
 <p>Ref:<br>
@@ -329,7 +331,7 @@ endfunction
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/quotes">
+      <a href="/quotes/">
         Dev Qutoes
       </a>
     </h1>
@@ -338,7 +340,7 @@ endfunction
       26 Nov 2014
       
         &middot;
-        <a href="/quotes#disqus_thread" data-disqus-identifier="/quotes"></a>
+        <a href="/quotes/#disqus_thread" data-disqus-identifier="/quotes/"></a>
         
       
     </span>
@@ -382,7 +384,7 @@ not dreams. - Rise of the Planet of the Apes</p></li>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/robot-framework">
+      <a href="/robot-framework/">
         Robot Framework
       </a>
     </h1>
@@ -391,7 +393,7 @@ not dreams. - Rise of the Planet of the Apes</p></li>
       15 Sep 2014
       
         &middot;
-        <a href="/robot-framework#disqus_thread" data-disqus-identifier="/robot-framework"></a>
+        <a href="/robot-framework/#disqus_thread" data-disqus-identifier="/robot-framework/"></a>
         
       
     </span>
@@ -487,7 +489,7 @@ not dreams. - Rise of the Planet of the Apes</p></li>
 <span class="err">$</span><span class="p">{</span><span class="bp">None</span><span class="p">}</span>   <span class="o">-</span> <span class="n">python</span> <span class="bp">None</span>
 </code></pre></div>
 <h2 id="selecting-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#selecting-test-cases">Selecting test cases</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">--test example*       <span class="c">#select test</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">--test example<span class="k">*</span>       <span class="c">#select test</span>
 --suite example-??    <span class="c">#select suite</span>
 </code></pre></div>
 <h2 id="tagging-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#tagging-test-cases">Tagging test cases</a></h2>
@@ -500,28 +502,28 @@ not dreams. - Rise of the Planet of the Apes</p></li>
   <span class="p">[</span><span class="n">Tags</span><span class="p">]</span>  <span class="n">InvalidTest</span>
 </code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Tag select</span>
 
-<span class="nv">$ </span>pybot -i InvalidTest login_tests.txt
-<span class="nv">$ </span>pybot --include InvalidTest login_tests.html
+<span class="gp">$ </span>pybot -i InvalidTest login_tests.txt
+<span class="gp">$ </span>pybot --include InvalidTest login_tests.html
 
-<span class="nv">$ </span>pybot -e InvalidTest login_tests.txt
-<span class="nv">$ </span>pybot --exclude InvalidTest login_tests.html
+<span class="gp">$ </span>pybot -e InvalidTest login_tests.txt
+<span class="gp">$ </span>pybot --exclude InvalidTest login_tests.html
 </code></pre></div>
 <h2 id="test-suites"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-suites">Test suites</a></h2>
 
 <p><strong>init</strong>.txt  - init test suite file</p>
 
 <h2 id="assgin-variable-via-cli">Assgin Variable via CLI</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
-<span class="nv">$ </span>pybot  -d /tmp --variable SERVER:<span class="s2">&quot;192.168.59.103&quot;</span> --variable BROWSER:chrome tests/acceptance/
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
+<span class="gp">$ </span>pybot  -d /tmp --variable SERVER:<span class="s2">"192.168.59.103"</span> --variable BROWSER:chrome tests/acceptance/
 </code></pre></div>
 <h2 id="for-loops-tutorial"><a href="http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html#for-loops">For loops</a> - <a href="https://blog.codecentric.de/en/2013/05/robot-framework-tutorial-loops-conditional-execution-and-more/">Tutorial</a></h2>
 <div class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">:</span><span class="n">FOR</span>    <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>   <span class="n">IN</span>    <span class="err">@</span><span class="p">{</span><span class="nb">list</span><span class="p">}</span>
 \    <span class="n">LOG</span>     <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>
 </code></pre></div>
 <h2 id="selenium-driver">Selenium Driver</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>brew install chromedriver <span class="c"># chrome driver for osx</span>
-<span class="nv">$ </span>brew install phantomjs <span class="c"># GUI less driver for osx</span>
-<span class="nv">$ </span>apt-get install phatomjs <span class="c"># GUI less driver for ubuntu</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew install chromedriver <span class="c"># chrome driver for osx</span>
+<span class="gp">$ </span>brew install phantomjs <span class="c"># GUI less driver for osx</span>
+<span class="gp">$ </span>apt-get install phatomjs <span class="c"># GUI less driver for ubuntu</span>
 </code></pre></div>
 <h2 id="plugin">Plugin:</h2>
 
@@ -569,7 +571,7 @@ not dreams. - Rise of the Planet of the Apes</p></li>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/docker">
+      <a href="/docker/">
         Docker.io
       </a>
     </h1>
@@ -578,7 +580,7 @@ not dreams. - Rise of the Planet of the Apes</p></li>
       11 Sep 2014
       
         &middot;
-        <a href="/docker#disqus_thread" data-disqus-identifier="/docker"></a>
+        <a href="/docker/#disqus_thread" data-disqus-identifier="/docker/"></a>
         
           &middot;
           Updated March 20, 2016
@@ -600,8 +602,8 @@ docker.io is old name</p>
 
 <h4 id="install-on-debian"><a href="https://docs.docker.com/engine/installation/debian/#debian-wheezy-stable-7-x-64-bit">Install on Debian</a></h4>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Debian Jessie 8.0 (64-bit) or unstable packages</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get install docker-engine
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get install docker-engine
 </code></pre></div>
 <ul>
 <li><a href="http://linuxconfig.org/package-docker-io-has-no-installation-candidate-debian-jessie">Package &#39;docker.io&#39; has no installation candidate - Debian
@@ -612,57 +614,57 @@ Jessie</a></li>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># if virtualbox not installed, install via homebrew cask</span>
 http://docs.docker.com/installation/mac/#from-your-shell
 
-<span class="nv">$ </span>brew install caskroom/cask/brew-cask
-<span class="nv">$ </span>brew cask install dockertoolbox
+<span class="gp">$ </span>brew install caskroom/cask/brew-cask
+<span class="gp">$ </span>brew cask install dockertoolbox
 
 <span class="c"># start docker engine</span>
-<span class="nv">$ </span>docker-machine create
-<span class="nv">$ </span><span class="nb">eval</span> <span class="s2">&quot;$(docker-machine env default)&quot;</span>
+<span class="gp">$ </span>docker-machine create
+<span class="gp">$ </span><span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>docker-machine env default<span class="k">)</span><span class="s2">"</span>
 </code></pre></div>
 <h3 id="run-docker-without-sudo"><a href="https://docs.docker.com/installation/debian/#giving-non-root-access">Run Docker without sudo</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#debian</span>
-<span class="nv">$ </span>sudo groupadd docker
-<span class="nv">$ </span>sudo gpasswd -a <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker <span class="c"># or sudo adduser ${USER} docker</span>
-<span class="nv">$ </span>sudo service docker restart
+<span class="gp">$ </span>sudo groupadd docker
+<span class="gp">$ </span>sudo gpasswd -a <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker <span class="c"># or sudo adduser ${USER} docker</span>
+<span class="gp">$ </span>sudo service docker restart
 </code></pre></div>
 <h3 id="command-tips">Command Tips:</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker images --tree <span class="c">#list images in tree structure (&#39;--tree&#39; is deprecated)</span>
-<span class="nv">$ </span>docker ps -a <span class="c">#List all containers</span>
-<span class="nv">$ </span>docker ps -l <span class="c">#List lastest containers</span>
-<span class="nv">$ </span>docker ps -q <span class="c">#List containers display on IDs (quiet)</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker images --tree <span class="c">#list images in tree structure ('--tree' is deprecated)</span>
+<span class="gp">$ </span>docker ps -a <span class="c">#List all containers</span>
+<span class="gp">$ </span>docker ps -l <span class="c">#List lastest containers</span>
+<span class="gp">$ </span>docker ps -q <span class="c">#List containers display on IDs (quiet)</span>
 </code></pre></div>
 <h3 id="command-by-yourself-in-containers-working-with-containers">Command by yourself in containers - <a href="https://docs.docker.com/userguide/usingdocker/">Working with Containers</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker run -i -t &lt;image&gt; /bin/bash
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker run -i -t &lt;image&gt; /bin/bash
 </code></pre></div>
 <h3 id="how-to-continue-a-docker-which-is-exited"><a href="http://stackoverflow.com/questions/21928691/how-to-continue-a-docker-which-is-exited">How to continue a docker which is exited</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">docker start <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># restart it in the background</span>
 docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># reattach the terminal &amp; stdin</span>
 </code></pre></div>
 <h3 id="clean-up-remove-docker-after-exited"><a href="https://docs.docker.com/reference/run/#clean-up-rm">Clean Up - Remove Docker after exited</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker run --rm &lt;imamge&gt;
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker run --rm &lt;imamge&gt;
 </code></pre></div>
 <h3 id="docker-remove-all-exited-containers-by-filippo-valsorda"><a href="https://coderwall.com/p/zguz_w">Docker: remove all Exited containers by Filippo Valsorda</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo docker ps -a <span class="p">|</span> grep Exit <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f <span class="m">1</span> <span class="p">|</span> xargs sudo docker rm
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo docker ps -a | grep Exit | cut -d <span class="s1">' '</span> -f 1 | xargs sudo docker rm
 </code></pre></div>
 <h3 id="remove-lt-none-gt-images">Remove &lt; none &gt; images</h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># if space full in docker engine</span>
-<span class="nv">$ </span>docker rmi <span class="k">$(</span>docker images <span class="p">|</span> grep <span class="s1">&#39;&lt;none&gt;&#39;</span> <span class="p">|</span> tr -s <span class="s1">&#39; &#39;</span> <span class="p">|</span> cut -d <span class="s1">&#39; &#39;</span> -f 3<span class="k">)</span>
+<span class="gp">$ </span>docker rmi <span class="k">$(</span>docker images | grep <span class="s1">'&lt;none&gt;'</span> | tr -s <span class="s1">' '</span> | cut -d <span class="s1">' '</span> -f 3<span class="k">)</span>
 <span class="c"># or</span>
-<span class="nv">$ </span>docker images -a <span class="p">|</span> grep none <span class="p">|</span> awk <span class="s1">&#39;{print $3}&#39;</span> <span class="p">|</span> xargs docker rmi -f
+<span class="gp">$ </span>docker images -a | grep none | awk <span class="s1">'{print $3}'</span> | xargs docker rmi -f
 </code></pre></div>
 <h3 id="fix-repositoryalready-being-pulled">Fix Repositoryalready being pulled</h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># $ dokcer pull &lt;images&gt;</span>
 <span class="c"># Fix Repository debian already being pulled by another client. Waiting.</span>
-<span class="nv">$ </span>sudo service docker restart
+<span class="gp">$ </span>sudo service docker restart
 </code></pre></div>
 <h3 id="mount-directory-to-container-managing-data-in-containers">Mount directory to container - <a href="https://docs.docker.com/userguide/dockervolumes/">Managing data in containers</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># docker run option</span>
 <span class="c"># -v, --volume=[] create a volume</span>
 <span class="c"># -v host:container mount host directory to container</span>
 <span class="c">#   ex. -v $PWD:/app , mount current path to /app in container</span>
-<span class="c"># -w, --workdir=&quot;&quot; Working directory inside the container</span>
+<span class="c"># -w, --workdir="" Working directory inside the container</span>
 
-<span class="nv">$ </span>docker run -v &lt;host_dir_path&gt;:&lt;container_dir_path&gt; -w &lt;workdir_path&gt; &lt;image&gt; &lt;cmd&gt;
+<span class="gp">$ </span>docker run -v &lt;host_dir_path&gt;:&lt;container_dir_path&gt; -w &lt;workdir_path&gt; &lt;image&gt; &lt;cmd&gt;
 </code></pre></div>
 <h3 id="docker-daemon-on-debian-not-start-automatically-bash-scripting-wait-for-wireless-connection-execute-program">Docker daemon on Debian: not start automatically - <a href="https://bbs.archlinux.org/viewtopic.php?id=51939">Bash Scripting: Wait for wireless connection, execute program</a></h3>
 
@@ -671,27 +673,27 @@ docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> 
 </ol>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
 
-<span class="nv">Q</span><span class="o">=</span><span class="s2">&quot;0&quot;</span>
-<span class="k">while</span> <span class="o">[</span> <span class="nv">$Q</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span>
-   <span class="nv">Q</span><span class="o">=</span><span class="k">$(</span>ping -c1 www.google.com 2&gt; /dev/null <span class="p">|</span> grep -c google<span class="k">)</span><span class="p">;</span>
-<span class="k">done</span>
-<span class="nb">echo </span>Connected!
+<span class="nv">Q</span><span class="o">=</span><span class="s2">"0"</span>
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$Q</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">]</span>; <span class="k">do
+   </span><span class="nv">Q</span><span class="o">=</span><span class="k">$(</span>ping -c1 www.google.com 2&gt; /dev/null | grep -c google<span class="k">)</span>;
+<span class="k">done
+</span><span class="nb">echo </span>Connected!
 
 sudo service docker restart
 </code></pre></div>
 <h3 id="run-multiple-command-in-docker">Run multiple command in docker</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker <span class="nb">exec</span> &lt;image&gt; sh -c ‘&lt;cmd&gt;’
-<span class="nv">$ </span>docker run &lt;image&gt; bash -c ‘&lt;cmd&gt;’
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker <span class="nb">exec</span> &lt;image&gt; sh -c ‘&lt;cmd&gt;’
+<span class="gp">$ </span>docker run &lt;image&gt; bash -c ‘&lt;cmd&gt;’
 </code></pre></div>
 <h3 id="crontab-in-docker"><a href="http://www.ekito.fr/people/run-a-cron-job-with-docker/">Crontab in Docker</a></h3>
 
 <h4 id="crontab-with-docker-enviorment-sample-project"><a href="https://registry.hub.docker.com/u/draffensperger/postgres-s3-backup/dockerfile/">Crontab with Docker enviorment</a> - <a href="https://github.com/draffensperger/postgres-s3-backup">Sample Project</a></h4>
 
 <p>Dockerfile</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Docker env don&#39;t pass though cron jobs, you need to save env to file and load it in cron jobs.</span>
-<span class="c"># save Docker envoirment to file with command &quot;env &gt; &lt;file&gt;&quot;</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Docker env don't pass though cron jobs, you need to save env to file and load it in cron jobs.</span>
+<span class="c"># save Docker envoirment to file with command "env &gt; &lt;file&gt;"</span>
 
-<span class="c"># To debug crontab see to run &quot;rsyslogd&quot; and see logs at &quot;/var/log/syslo&quot;</span>
+<span class="c"># To debug crontab see to run "rsyslogd" and see logs at "/var/log/syslo"</span>
 <span class="c"># CMD rsyslogd &amp;&amp; &amp;&amp; env &gt; /root/env.sh &amp;&amp; tail -f /var/log/cron.log</span>
 
 CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o">&amp;&amp;</span> tail -f /var/log/cron.log
@@ -703,45 +705,45 @@ CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o"
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># always need ot &gt;&gt; to some where to avoid “(CRON) info (No MTA installed, discarding output)” error in the syslog</span>
 <span class="c"># http://askubuntu.com/questions/222512/cron-info-no-mta-installed-discarding-output-error-in-the-syslog</span>
 
-* * * * * root crontab_task.sh “&lt;your <span class="nb">command</span>&gt;<span class="err">&quot;</span> &gt;&gt; /var/log/cron.log 2&gt;<span class="p">&amp;</span>1
-<span class="c">#An empty line is required at the end of this file for a valid cron file.</span>
-</code></pre></div>
+<span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> root crontab_task.sh “&lt;your <span class="nb">command</span>&gt;<span class="s2">" &gt;&gt; /var/log/cron.log 2&gt;&amp;1
+#An empty line is required at the end of this file for a valid cron file.
+</span></code></pre></div>
 <h3 id="docker-error-client-and-server-don-39-t-have-same-version">docker Error: client and server don&#39;t have same version</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker-machine upgrade &lt;machine&gt;
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker-machine upgrade &lt;machine&gt;
 </code></pre></div>
 <h3 id="set-time-zone-in-dockerfile"><a href="http://tedwise.com/2015/05/02/setting-the-timezone-in-a-docker-image">Set time zone in Dockerfile</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;Asia/Bangkok&quot;</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure -f noninteractive tzdata
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure -f noninteractive tzdata
 </code></pre></div>
 <h3 id="push-docker-to-registry">Push docker to registry</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker login
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker login
 <span class="c"># docker tag &lt;image&gt; &lt;username/image:version&gt;</span>
-<span class="nv">$ </span>docker tag viau10-app ibotdotout/viau10-app:latest
+<span class="gp">$ </span>docker tag viau10-app ibotdotout/viau10-app:latest
 <span class="c"># docker push &lt;username/image&gt;</span>
-<span class="nv">$ </span>docker push ibotdotout/viau10-app
+<span class="gp">$ </span>docker push ibotdotout/viau10-app
 
 <span class="c"># private registry</span>
-<span class="nv">$ </span>docker tag &lt;contrainer_id&gt; &lt;your_registry_domain&gt;/&lt;image&gt;
-<span class="nv">$ </span>docker push &lt;your_registry_domain&gt;/&lt;image&gt;
+<span class="gp">$ </span>docker tag &lt;contrainer_id&gt; &lt;your_registry_domain&gt;/&lt;image&gt;
+<span class="gp">$ </span>docker push &lt;your_registry_domain&gt;/&lt;image&gt;
 </code></pre></div>
 <h3 id="force-clean-build-of-an-image-without-cache"><a href="https://github.com/docker/docker/issues/1326">Force clean build of an image (without cache)</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker build --no-cache .
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker build --no-cache .
 </code></pre></div>
 <h3 id="graphdriver-prior-storage-driver-quot-aufs-quot-failed-invalid-argument-by-kelindar"><a href="https://github.com/docker/docker/issues/14026">graphdriver prior storage driver &quot;aufs&quot; failed: invalid argument </a> by @Kelindar</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo rm -rf /var/lib/docker/aufs
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo rm -rf /var/lib/docker/aufs
 </code></pre></div>
 <h3 id="to-see-the-file-size-of-your-containers"><a href="http://stackoverflow.com/a/33344280">To see the file size of your containers</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>docker ps -s
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker ps -s
 </code></pre></div>
 <h3 id="ssh-to-docker-machine"><a href="http://stackoverflow.com/a/33350931">SSH to docker machine</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># you can use `docker-machine ssh &lt; machine &gt; instead this</span>
 <span class="c"># 192.168.99.100 this is ip for &lt; machine &gt;</span>
 <span class="c"># that can check via `docker-machine ip &lt; machine &gt;</span>
-<span class="nv">$ </span>ssh docker@192.168.99.100
+<span class="gp">$ </span>ssh docker@192.168.99.100
 <span class="c"># password: tcuser</span>
 </code></pre></div>
 <h3 id="fix-no-space-left-on-device-in-default-machine"><a href="https://github.com/docker/machine/issues/1779">Fix No space left on device in default machine</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># clean your mapping volume on host that was copied to docker machine</span>
-<span class="nv">$ </span>docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -v /var/lib/
+<span class="gp">$ </span>docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -v /var/lib/
 </code></pre></div>
 <h3 id="install-docker-compose-aka-fig">Install Docker-compose aka Fig</h3>
 
@@ -753,7 +755,7 @@ $ pip install -U docker-compose
 
 <h3 id="docker-compose-production">Docker-Compose Production</h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># https://docs.docker.com/compose/extends/</span>
-<span class="nv">$ </span>docker-compose -f production.yml
+<span class="gp">$ </span>docker-compose -f production.yml
 </code></pre></div>
 <h3 id="dockerfile">Dockerfile</h3>
 
@@ -823,7 +825,7 @@ $ pip install -U docker-compose
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/debian">
+      <a href="/debian/">
         Debian frist boot
       </a>
     </h1>
@@ -832,80 +834,80 @@ $ pip install -U docker-compose
       10 Sep 2014
       
         &middot;
-        <a href="/debian#disqus_thread" data-disqus-identifier="/debian"></a>
+        <a href="/debian/#disqus_thread" data-disqus-identifier="/debian/"></a>
         
       
     </span>
 
     
       <h3 id="make-user-can-use-sudo-command">Make user can use Sudo command</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>su <span class="c"># aceess to root  </span>
-<span class="nv">$ </span>apt-get install sudo  
-<span class="nv">$ </span>adduser &lt;username&gt; sudo  
-<span class="nv">$ </span>reboot <span class="c"># or logout  </span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>su <span class="c"># aceess to root  </span>
+<span class="gp">$ </span>apt-get install sudo  
+<span class="gp">$ </span>adduser &lt;username&gt; sudo  
+<span class="gp">$ </span>reboot <span class="c"># or logout  </span>
 </code></pre></div>
 <p>Ref:<br>
 1. <a href="http://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line">How can I add a new user as sudoer using the command line?</a><br>
 2. <a href="http://www.debianhelp.co.uk/sudo.htm">Sudo Configuration in Debian</a>    </p>
 
 <h3 id="upgrade-debian-to-unstable-sid"><a href="https://www.digitalocean.com/community/tutorials/upgrading-debian-to-unstable">Upgrade Debian to Unstable(Sid)</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo vi /etc/apt/sources.list
-<span class="c"># edit all &#39;squeeze&#39; that&#39;s version codename </span>
-<span class="c"># to &#39;sid&#39; that&#39;s unstable codename</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo vi /etc/apt/sources.list
+<span class="c"># edit all 'squeeze' that's version codename </span>
+<span class="c"># to 'sid' that's unstable codename</span>
 <span class="c"># ex. deb http://ftp.us.debian.org/debian squeeze main </span>
 <span class="c"># to deb http://ftp.us.debian.org/debian sid main</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get dist-upgrade
-<span class="nv">$ </span>sudo reboot
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get dist-upgrade
+<span class="gp">$ </span>sudo reboot
 </code></pre></div>
 <h3 id="using-lastest-package-on-debian-testing-package">Using Lastest Package on Debian (Testing Package)</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo vim /etc/apt/sources.list
-<span class="c"># add &quot;deb     http://http.debian.net/debian testing         main&quot;</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get install &lt;your package&gt;
-<span class="c"># don&#39;t call sudo apt-get upgrade if your don&#39;t want to upgrade your all system to lastest packages</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo vim /etc/apt/sources.list
+<span class="c"># add "deb     http://http.debian.net/debian testing         main"</span>
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get install &lt;your package&gt;
+<span class="c"># don't call sudo apt-get upgrade if your don't want to upgrade your all system to lastest packages</span>
 </code></pre></div>
 <h3 id="check-version-debian">Check Version Debian</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>lsb_release -a <span class="c">#check debian version</span>
-<span class="nv">$ </span>uname -a <span class="c">#check linux version</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>lsb_release -a <span class="c">#check debian version</span>
+<span class="gp">$ </span>uname -a <span class="c">#check linux version</span>
 </code></pre></div>
 <h3 id="how-to-switch-between-users-on-one-terminal"><a href="http://unix.stackexchange.com/questions/3568/how-to-switch-between-users-on-one-terminal">How to switch between users on one terminal?</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>su - &lt;user&gt;
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>su - &lt;user&gt;
 </code></pre></div>
 <h3 id="how-to-find-fastest-mirror-lists-with-‘netselect-apt’-on-debian"><a href="http://www.unixmen.com/how-to-find-fastest-official-mirror-lists-with-netselect-apt-on-debian/">How To Find Fastest Mirror Lists With ‘Netselect-apt’ On Debian</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># choose set your region to your local frist</span>
-<span class="nv">$ </span>sudo apt-get install netselect-apt
-<span class="nv">$ </span>sudo netselect-apt
+<span class="gp">$ </span>sudo apt-get install netselect-apt
+<span class="gp">$ </span>sudo netselect-apt
 </code></pre></div>
 <h3 id="debian-linux-install-openssh-sshd-server"><a href="http://www.cyberciti.biz/faq/debian-linux-install-openssh-sshd-server/">Debian Linux Install OpenSSH SSHD Server</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># install</span>
-<span class="nv">$ </span>sudo apt-get update
-<span class="nv">$ </span>sudo apt-get install openssh-server
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get install openssh-server
 
 <span class="c"># control ssh-server</span>
-<span class="nv">$ </span>sudo service ssh stop
-<span class="nv">$ </span>sudo service ssh start
-<span class="nv">$ </span>sudo service ssh restart
-<span class="nv">$ </span>sudo service ssh status
+<span class="gp">$ </span>sudo service ssh stop
+<span class="gp">$ </span>sudo service ssh start
+<span class="gp">$ </span>sudo service ssh restart
+<span class="gp">$ </span>sudo service ssh status
 </code></pre></div>
 <h3 id="set-bash-color-on-ssh"><a href="http://ubuntuforums.org/showthread.php?t=1733664">Set Bash Color on SSH</a></h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># In your ssh server</span>
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;source your .bashrc&quot;</span> &gt;&gt; .bash_profile
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"source your .bashrc"</span> &gt;&gt; .bash_profile
 <span class="c"># or you can try this [[ -f ~/.bashrc ]] &amp;&amp; . ~/.bashrc</span>
 </code></pre></div>
 <h3 id="extended-monitor"><a href="http://unix.stackexchange.com/questions/101283/extended-monitor-scroll-right-to-access-left-screen">Extended monitor</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>xrandr --output VGA-1 --auto --primary --output DVI-I-1 --auto --left-of VGA-1
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>xrandr --output VGA-1 --auto --primary --output DVI-I-1 --auto --left-of VGA-1
 </code></pre></div>
 <h2 id="install-locals-to-support-many-languages">Install locals to support many languages</h2>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># debian</span>
-<span class="nv">$ </span>sudo apt-get install locales
-<span class="nv">$ </span>sudo dpkg-reconfigure locales
+<span class="gp">$ </span>sudo apt-get install locales
+<span class="gp">$ </span>sudo dpkg-reconfigure locales
 </code></pre></div>
 <h3 id="clan-uninstall">Clan Uninstall</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo apt-get remove --purge &lt;packagename&gt; <span class="c"># --purge delete all data and config</span>
-<span class="nv">$ </span>sudo apt-get autoremove --purge
-<span class="nv">$ </span>sudo apt-get clean
-<span class="nv">$ </span>locate &lt;packagename&gt; <span class="c"># manual delete</span>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo apt-get remove --purge &lt;packagename&gt; <span class="c"># --purge delete all data and config</span>
+<span class="gp">$ </span>sudo apt-get autoremove --purge
+<span class="gp">$ </span>sudo apt-get clean
+<span class="gp">$ </span>locate &lt;packagename&gt; <span class="c"># manual delete</span>
 </code></pre></div>
 <h3 id="show-hidden-file-in-gui"><a href="http://ubuntuforums.org/showthread.php?t=1108528">Show hidden file in GUI</a></h3>
 
@@ -917,7 +919,7 @@ $ pip install -U docker-compose
 Ctrl+Shift+C - copy  </p>
 
 <h3 id="install-and-mount-an-exfat-partition"><a href="http://askubuntu.com/questions/100278/how-do-i-install-and-mount-an-exfat-partition">install and mount an exFAT partition</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nv">$ </span>sudo apt-get install exfat-fuse exfat-utils
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo apt-get install exfat-fuse exfat-utils
 </code></pre></div>
     
   </div>

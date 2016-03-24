@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="Drone.io CI" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/drone-ci/" />
+<meta property="og:url" content="http://dev.im-bot.com/drone-ci//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="Drone is a Continuous Integration platform built on Docker, written in Go -  better than Drone.ioHow to setup your own continuous integration server with Dro..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -94,6 +94,8 @@
         
           <a class="sidebar-nav-item" href="/tags/">Tags</a>
         
+      
+    
       
     
       
@@ -192,7 +194,7 @@
     23 Aug 2015
       
         &middot;
-        <a href="/drone-ci/index.html#disqus_thread" data-disqus-identifier="/drone-ci"></a>
+        <a href="/drone-ci//index.html#disqus_thread" data-disqus-identifier="/drone-ci/"></a>
         
       
   </span>
@@ -215,13 +217,13 @@
 <li>add your configuration url in &quot;Environment Variable&quot;</li>
 </ol>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Example</span>
-  <span class="nv">CONFIG_URL</span><span class="o">=</span><span class="s2">&quot;&lt;your_configuration_url&gt;&quot;</span>
+  <span class="nv">CONFIG_URL</span><span class="o">=</span><span class="s2">"&lt;your_configuration_url&gt;"</span>
 </code></pre></div>
 <ol>
 <li>in &quot;Commands&quot; download your configurations via wget without display result</li>
 </ol>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c">#!/bin/sh</span>
-  wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; <span class="p">&amp;</span>&gt; /dev/null
+  wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/null
 </code></pre></div>
 <h3 id="keep-variables-in-environment">Keep Variables in Environment</h3>
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Example</span>
@@ -230,23 +232,23 @@
 <span class="nb">export </span><span class="nv">TAGS</span><span class="o">=</span>&lt;your tags&gt;
 </code></pre></div><div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;CLIENT_ID&#39;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="n">tags</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;TAGS&#39;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">tags</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'TAGS'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="dynamic-solution">Dynamic Solution</h3>
 <div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
-<span class="c"># Configuration from Environment Variables if can&#39;t load config.ini</span>
+<span class="c"># Configuration from Environment Variables if can't load config.ini</span>
 <span class="c"># you can make you own configuration from config.ini.sample</span>
 
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">&quot;config.ini&quot;</span><span class="p">):</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">"config.ini"</span><span class="p">):</span>
     <span class="kn">import</span> <span class="nn">configparser</span>
     <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
-    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&#39;config.ini&#39;</span><span class="p">)</span>
-    <span class="n">client_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;DEFAULT&#39;</span><span class="p">,</span> <span class="s">&#39;client_id&#39;</span><span class="p">)</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">'config.ini'</span><span class="p">)</span>
+    <span class="n">client_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'DEFAULT'</span><span class="p">,</span> <span class="s">'client_id'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;CLIENT_ID&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
+    <span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="references">References:</h2>
 
@@ -265,7 +267,7 @@
     
       <li>
         <h3>
-          <a href="/docker-select-caching">
+          <a href="/docker-select-caching/">
             Selectively disable caching for specific RUN commands in Dockerfile
             <small>24 Mar 2016</small>
           </a>
@@ -274,7 +276,7 @@
     
       <li>
         <h3>
-          <a href="/cassandra">
+          <a href="/cassandra/">
             What I know about Apache Cassandra
             <small>24 Mar 2016</small>
           </a>
@@ -283,7 +285,7 @@
     
       <li>
         <h3>
-          <a href="/docker-cron">
+          <a href="/docker-cron/">
             Crontab on Docker
             <small>04 Mar 2016</small>
           </a>
@@ -301,7 +303,7 @@
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/drone-ci";
+      var disqus_identifier = "/drone-ci/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
