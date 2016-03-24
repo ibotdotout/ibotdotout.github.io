@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator>
 <link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://dev.im-bot.com//" rel="alternate" type="text/html" />
-<updated>2016-03-23T19:13:32+00:00</updated>
+<updated>2016-03-24T14:44:49+00:00</updated>
 <id>http://dev.im-bot.com//</id>
 <subtitle>botbotbot&#39;s blog</subtitle>
 <author>
@@ -59,6 +59,192 @@ additional description &lt;/a&gt;)&lt;/li&gt;
 </content>
 <category term="docker" />
 <summary>If you using Dockerfile, you should know about caching for faster builds.Sometimes, you need to rebuild without cache. you can run docker build with--no-cache option that will disable all layer cache.There is problem when you should use some Dockerfile commands like ADD orCOPY to copy file form host to container.</summary>
+</entry>
+<entry>
+<title>What I know about Apache Cassandra</title>
+<link href="http://dev.im-bot.com//cassandra" rel="alternate" type="text/html" title="What I know about Apache Cassandra" />
+<published>2016-03-24T00:00:00+00:00</published>
+<updated>2016-03-24T00:00:00+00:00</updated>
+<id>http://dev.im-bot.com//cassandra</id>
+<content type="html" xml:base="http://dev.im-bot.com//cassandra">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.datastax.com/wp-content/uploads/2012/08/WP-IntrotoCassandra.pdf&quot;&gt;Introduction to Apache Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Cassandra has a peer-to-peer distributed architecture that is much more elegant, and easy to set up and maintain.
+In Cassandra, all nodes are the same; there is no concept of a master node, with all nodes communicating with each other via a gossip protocol.&lt;/p&gt;
+
+&lt;p&gt;There is nothing programmatic that a developer or administrator needs to do or code to distribute data across a cluster.
+Data is transparently partitioned across all nodes in either a randomized or ordered fashion, with random being the default.&lt;/p&gt;
+
+&lt;p&gt;When creating a new Cassandra database (also called a keyspace), a user simply indicates via a single command which data centers and/or cloud providers will hold copies of the new database; everything from that point forward is automatically handled and maintained by Cassandra.&lt;/p&gt;
+
+&lt;p&gt;If one or more nodes responsible for a particular set of data are down, data is simply written to another node, which temporarily holds the data. Once the node(s) come back online, they automatically bring themselves back up to date from nodes that are holding the data they maintain.&lt;/p&gt;
+
+&lt;p&gt;A user requests data from any node (which becomes that user’s coordinator node ), with the user’s query being assembled from one or more nodes holding the necessary data. If a particular node having the required data is down, Cassandra simply requests data from another node holding a replicated copy of that data.&lt;/p&gt;
+
+&lt;p&gt;While Cassandra is not a transactional database in the same way that legacy RDBMSs offer ACID transactions, it does offer the “AID” portion of ACID, in that data written is atomic, isolated, and durable. The “C” of ACID does not apply to Cassandra, as there is no concept of referential integrity or foreign keys&lt;/p&gt;
+
+&lt;p&gt;Because NoSQL databases like Cassandra do not support operations like SQL joins, data tends to be highly denormalized. While such a thing (wide rows) is normally a problem for an RDBMS, Cassandra provides exceptional performance for objects with many thousands of columns.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://exponential.io/blog/2015/01/22/cassandra-vs-mongodb/&quot;&gt;Cassandra vs MongoDB&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://db-engines.com/en/system/Cassandra%3BMongoDB&quot;&gt;System Properties Comparison Cassandra vs. MongoDB&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.edureka.co/blog/mongodb-vs-hbase-vs-cassandra/&quot;&gt;Face Off: MongoDB Vs HBase Vs Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.linkedin.com/pulse/real-comparison-nosql-databases-hbase-cassandra-mongodb-sahu&quot;&gt;A Real Comparison Of NoSQL Databases HBase, Cassandra &amp;amp; MongoDB&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://patrickmcfadin.com/2014/02/11/mongodb-this-is-not-the-database-you-are-looking-for/&quot;&gt;MongoDB. This is not the database you are looking for.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5qEoEAfAer8&quot;&gt;DataStax Cassandra Tutorials - Apache Cassandra Overview&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://academy.datastax.com/demos/brief-introduction-apache-cassandra&quot;&gt;A Brief Introduction to Apache Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/patrickmcfadin/real-data-models-of-silicon-valley&quot;&gt;Real data models of silicon valley&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.divconq.com/2010/migrate-a-relational-database-structure-into-a-nosql-cassandra-structure-part-i/&quot;&gt;Migrate a Relational Database Structure into a NoSQL Cassandra Structure (Part I)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.divconq.com/2010/migrate-a-relational-database-structure-into-a-nosql-cassandra-structure-part-ii-northwind-planning/&quot;&gt;Migrate a Relational Database into Cassandra (Part II – Northwind Planning)&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In a relational database setting I can often simply normalize away and worry about which table I need to focus my indexing efforts on later when I’m working in the application.  However, in NoSQL, non-relational database design, we often need to decide up front which entity most queries will be interested in and build everything else around that entity.&lt;/p&gt;
+
+&lt;p&gt;So…will it be “order” or “product”?  Today I’ll decide that the key entity in this database is “order” – customers will be hitting this on a daily, per transaction basis whereas I can probably run my product reports offline.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/soundcloud-activity-feed-and-real-time-stats-powered-by-apache-cassandra/&quot;&gt;SoundCloud’s Activity Feed and Real-Time Stats Powered by Apache Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/interview/spotify-scales-to-the-top-of-the-charts-with-apache-cassandra-at-40k-requestssecond/&quot;&gt;Spotify scales to the top of the charts with Apache Cassandra at 40k requests/second&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=NQXxKzfv7Zo&quot;&gt;C* Summit EU 2013: Playlists at Spotify - Using Cassandra to Store Version Controlled Objects&lt;/a&gt; - &lt;a href=&quot;http://www.slideshare.net/planetcassandra/c-summit-eu-2013-playlists-at-spotify-using-cassandra-to-store-version-controlled-objects&quot;&gt;Slide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.information-management.com/news/big-data-analytics/Relational-Database-Big-Data-Migration-Guide-10026758-1.html&quot;&gt;Big Data Platforms: How To Migrate From Relational Databases to NoSQL&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLtNErhYMkHnF2LleKggnFhNcF4t37iDCZ&quot;&gt;Apache Cassandra - O&amp;#39;Reilly - Video Training&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/planetcassandra/migration-best-practices-from-rdbms-to-cassandra-without-a-hitch&quot;&gt;Migration Best Practices: From RDBMS to Cassandra without a Hitch&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;data-model&quot;&gt;Data Model&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/cassandra-faq-can-i-start-with-a-single-node/&quot;&gt;Cassandra FAQ: Can I Start With a Single Node?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://lostechies.com/ryansvihla/2015/09/17/data-density-destroyer-of-scalability/&quot;&gt;Data Density! Destroyer of Scalability&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@mustwin/cassandra-from-a-relational-world-7bbdb0a9f1d#.217xii10w&quot;&gt;Cassandra From a Relational World&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;When you are designing the schema for your relational database, the primary thought on your mind is “What’s the best way to store this data?”. But with Cassandra, your dominant concern should be “How am I going to query this data?”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://wiki.apache.org/cassandra/DataModel&quot;&gt;DataModel - Introduction&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.tutorialspoint.com/cassandra/cassandra_data_model.htm&quot;&gt;Cassandra - Data Model&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.ipponusa.com/blog/modeling-data-with-cassandra-what-cql-hides-away-from-you/&quot;&gt;Modeling data with Cassandra: what CQL hides away from you&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.datastax.com/dev/blog/basic-rules-of-cassandra-data-modeling&quot;&gt;Basic Rules of Cassandra Data Modeling&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Developers coming from a relational background usually carry over rules about relational modeling and try to apply them to Cassandra. To avoid wasting time on rules that don’t really matter with Cassandra&lt;/p&gt;
+
+&lt;p&gt;Writes in Cassandra aren’t free, but they’re awfully cheap. Cassandra is optimized for high write throughput, and almost all writes are equally efficient [1]. If you can perform extra writes to improve the efficiency of your read queries, it’s almost always a good tradeoff.&lt;/p&gt;
+
+&lt;p&gt;Denormalization and duplication of data is a fact of life with Cassandra. Don’t be afraid of it. Disk space is generally the cheapest resource (compared to CPU, memory, disk IOPs, or network), and Cassandra is architected around that fact.&lt;/p&gt;
+
+&lt;p&gt;Cassandra doesn’t have JOINs, and you don’t really want to use those in a distributed fashion.&lt;/p&gt;
+
+&lt;p&gt;Rows are spread around the cluster based on a hash of the partition key, which is the first element of the PRIMARY KEY. So, the key to spreading data evenly is this: pick a good primary key.&lt;/p&gt;
+
+&lt;p&gt;Partitions are groups of rows that share the same partition key. When you issue a read query, you want to read rows from as few partitions as possible.&lt;/p&gt;
+
+&lt;p&gt;The way to minimize partition reads is to model your data to fit your queries. Don’t model around relations. Don’t model around objects.&lt;/p&gt;
+
+&lt;p&gt;If you need different types of answers, you usually need different tables. This is how you optimize for reads.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Remember, data duplication is okay. Many of your tables may repeat the same data.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://academy.datastax.com/courses/ds220-data-modeling&quot;&gt;DS220: Data Modeling&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.datastax.com/en/cql/3.1/cql/ddl/dataModelingApproach.html&quot;&gt;Data Modeling Concepts&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.datastax.com/en/cql/3.1/cql/ddl/ddl_intro_c.html&quot;&gt;Data modeling example&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.datastax.com/en/cql/3.1/cql/cql_using/use_collections_c.html&quot;&gt;Using collections - Set, List, Map Types&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.instaclustr.com/blog/2015/08/03/common-cassandra-data-modelling-traps/&quot;&gt;Common Cassandra Data Modelling Traps&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://support.instaclustr.com/hc/en-us/articles/207071957&quot;&gt;Data Modelling Recommended Practices&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.seastar.io/blog/the-devops-of-cassandra-data-modeling/&quot;&gt;The DevOps of Cassandra Data Modeling&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In Cassandra, it is best to start the data modeling process by defining your query patterns first.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.hakkalabs.co/articles/cassandra-data-modeling-guide&quot;&gt;An Advanced Cassandra Data Modeling Guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Denormalize ALL THE THINGS: Increase the number of writes to reduce and simplify reads 
+Most importantly we did this without querying multiple tables and merging and reconciling the results by using a data model that duplicates data and writes our host information in a de-normalized manner contrary to the original highly relational MySQL data model.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/jaykumarpatel/cassandra-data-modeling-best-practices&quot;&gt;Cassandra Data Modeling Best Practices by eBay ,  Slide&lt;/a&gt;
+&lt;a href=&quot;http://www.ebaytechblog.com/2012/07/16/cassandra-data-modeling-best-practices-part-1/&quot;&gt;Cassandra Data Modeling Best Practices by eBay, Part 1&lt;/a&gt;
+&lt;a href=&quot;http://www.ebaytechblog.com/2012/08/14/cassandra-data-modeling-best-practices-part-2/&quot;&gt;Cassandra Data Modeling Best Practices by eBay, Part 2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/patrickmcfadin/advanced-data-modeling-with-apache-cassandra&quot;&gt;Advanced data modeling with apache cassandra&lt;/a&gt;
+Data Modeling Step:
+1. Conceptual Data Model (ER Diagram?)
+2. Application Query Workflow
+3. Logical Data Model (Combine 1 &amp;amp; 2)
+4. Physical Data Model (3 with Data Type)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/jericevans/cassandra-by-example-data-modelling-with-cql3&quot;&gt;Cassandra By Example: Data Modelling with CQL3&lt;/a&gt; - &lt;a href=&quot;https://github.com/twissandra/twissandra/&quot;&gt;Twissandra - Twitter + Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/nkorla1share/cass-summit-3&quot;&gt;Cassandra Data Modeling - Practical Considerations @ Netflix&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/the-most-important-thing-to-know-in-cassandra-data-modeling-the-primary-key/&quot;&gt;The most important thing to know in Cassandra data modeling: The primary key&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/the-importance-of-single-partition-operations-in-cassandra/&quot;&gt;The importance of single-partition operations in Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.planetcassandra.org/blog/transitioning-from-mysql-to-cassandra-at-chaordic-2/&quot;&gt;Transitioning from MySQL to Cassandra at Chaordic&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blogs.infosupport.com/static-columns-in-cassandra-and-their-benefits/&quot;&gt;Static columns in Cassandra and their benefits&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@foundev/domain-modeling-around-deletes-1cc9b6da0d24#.6k2dnj3nj&quot;&gt;Understanding Deletes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.gitbook.com/book/teddyma/learncassandra/details&quot;&gt;Learn Cassandra - GitBook&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://lostechies.com/ryansvihla/2014/04/17/100/&quot;&gt;Data Modeling for Scale with Cassandra&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@foundev/cassandra-batch-loading-without-the-batch-keyword-40f00e35e23e#.at85ikylw&quot;&gt;Cassandra: Batch loading without the Batch keyword&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.datastax.com/en/playlist/doc/java/playlistPreface.html&quot;&gt;Playlist tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.allthingsdistributed.com/2008/12/eventually_consistent.html&quot;&gt;Eventually Consistent - Revisited&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;the CAP theorem, which states that of three properties of shared-data systems—data consistency, system availability, and tolerance to network partition—only two can be achieved at any given time.&lt;/p&gt;
+
+&lt;p&gt;An important observation is that in larger distributed-scale systems, network partitions are a given; therefore, consistency and availability cannot be achieved at the same time. This means that there are two choices on what to drop: relaxing consistency will allow the system to remain highly available under the partitionable conditions, whereas making consistency a priority means that under certain conditions the system will not be available.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://lostechies.com/ryansvihla/2014/09/22/cassandra-query-patterns-not-using-the-in-query-for-multiple-partitions/&quot;&gt;Cassandra Query Patterns: Not using the “in” query for multiple partitions.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;driver&quot;&gt;Driver&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/datastax/nodejs-driver&quot;&gt;nodejs-driver - DataStax Node.js Driver for Apache Cassandra&lt;/a&gt;
+&lt;a href=&quot;https://academy.datastax.com/demos/getting-started-apache-cassandra-and-nodejs&quot;&gt;Getting Started with Apache Cassandra and Node.js&lt;/a&gt;
+&lt;a href=&quot;http://datastax.github.io/nodejs-driver/getting-started&quot;&gt;nodejs-driver - Getting started&lt;/a&gt;&lt;/p&gt;
+</content>
+<category term="cassandra" />
+<category term="nosql" />
+<summary>IntroIntroduction to Apache CassandraCassandra has a peer-to-peer distributed architecture that is much more elegant, and easy to set up and maintain.In Cassandra, all nodes are the same; there is no concept of a master node, with all nodes communicating with each other via a gossip protocol.There is nothing programmatic that a developer or administrator needs to do or code to distribute data across a cluster.Data is transparently partitioned across all nodes in either a randomized or ordered fashion, with random being the default.When creating a new Cassandra database (also called a keyspace), a user simply indicates via a single command which data centers and/or cloud providers will hold copies of the new database; everything from that point forward is automatically handled and maintained by Cassandra.If one or more nodes responsible for a particular set of data are down, data is simply written to another node, which temporarily holds the data. Once the node(s) come back online, they automatically bring themselves back up to date from nodes that are holding the data they maintain.A user requests data from any node (which becomes that user’s coordinator node ), with the user’s query being assembled from one or more nodes holding the necessary data. If a particular node having the required data is down, Cassandra simply requests data from another node holding a replicated copy of that data.While Cassandra is not a transactional database in the same way that legacy RDBMSs offer ACID transactions, it does offer the “AID” portion of ACID, in that data written is atomic, isolated, and durable. The “C” of ACID does not apply to Cassandra, as there is no concept of referential integrity or foreign keysBecause NoSQL databases like Cassandra do not support operations like SQL joins, data tends to be highly denormalized. While such a thing (wide rows) is normally a problem for an RDBMS, Cassandra provides exceptional performance for objects with many thousands of columns.</summary>
 </entry>
 <entry>
 <title>Crontab on Docker</title>
@@ -202,7 +388,7 @@ and compressed file that your extracted when you finish your
 installation.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Much remove in same layer, remove in another layer not help to reduce
+&lt;p&gt;Must remove in same layer, remove in another layer not help to reduce
 image size.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;RUN apt-get install -y python-pip pyhton-dev \
@@ -720,335 +906,5 @@ env:
 <category term="article" />
 <category term="jekyll" />
 <summary>Custom build jekyll with Travis for enable plugin and deploy to Github Page</summary>
-</entry>
-<entry>
-<title>How to get that job for developer</title>
-<link href="http://dev.im-bot.com//get-job" rel="alternate" type="text/html" title="How to get that job for developer" />
-<published>2015-10-21T00:00:00+00:00</published>
-<updated>2015-10-21T00:00:00+00:00</updated>
-<id>http://dev.im-bot.com//get-job</id>
-<content type="html" xml:base="http://dev.im-bot.com//get-job">&lt;h2 id=&quot;ทำไงให้ได้งาน&quot;&gt;ทำไงให้ได้งาน:&lt;/h2&gt;
-
-&lt;p&gt;หลักการง่ายๆ คือทำให้ตัวเองเป็นที่รู้จัก หากคุณเก่งอยู่บ้านคนเดียวโดยที่คนอื่นไม่รู้ก็ยากที่จะมีใครมาจ้างคุณไปทำงาน&lt;/p&gt;
-
-&lt;h2 id=&quot;วิธีการทำให้ตัวเองเป็นที่รู้จัก-online&quot;&gt;วิธีการทำให้ตัวเองเป็นที่รู้จัก Online:&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;มี CV Online และคอยอัพเดทอยู่เสมอๆ เช่น
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://linkedin.com&quot;&gt;http://linkedin.com&lt;/a&gt; ปัจจุบัน HR/Agency หลายคนหาคนไปทำงานจาก linkedin กันมากขึ้น&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.wantedly.com&quot;&gt;https://www.wantedly.com&lt;/a&gt; ฝากโปรไฟล์ไว้บนเว็บเด่นๆ หรือ เฉพาะทาง มีโอกาสให้ บ. มาเชิญไปทำงานได้ง่ายขึ้น&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;มี &lt;a href=&quot;http://github.com&quot;&gt;Github Account&lt;/a&gt; - Recommend
-
-&lt;ul&gt;
-&lt;li&gt;เพื่อแสดงผลงาน code ต่างๆ รวมถึงสกิลในการใช้ Git version control หลาย บ. ให้ส่ง Github Account แทน CV&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;มีผลงานที่ชัดเจนเป็นของตัวเองไม่ใช่ในนามบริษัท
-
-&lt;ul&gt;
-&lt;li&gt;เช่น สาย mobile ก็ควรมีแอพบน store , สาย web / design ก็ควรมี website เป็นของตัวเอง&lt;/li&gt;
-&lt;li&gt;อาจจะเป็น pet project หรือโค๊ดที่เราเรียนรู้สิ่งใหม่ๆ ต่างๆ ไม่จำเป็นต้องเป็นระดับ prodcut เสมอไป&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;เขียน Blog ของตัวเอง - Recommend
-
-&lt;ul&gt;
-&lt;li&gt;เนื่องจากไม่ใช่ทุกคนที่จะ code หรือสามารถมีชิ้นงานเป็นของตัวเองได้&lt;/li&gt;
-&lt;li&gt;แต่ทุกงานมักจะมีปัญหา และ ทำจำเป็นต้องค้นหาวิธีแก้ปัญหาเองบ่อยครั้ง ให้พยายามนำสิ่งเหล่านี้มาเขียน เช่น เจอปัญหา xxx บน wordpress ต้องแก้ยังไง ลองอะไรมาบ้าง work ไหม แต่ละวิธีมีข้อจำกัดเป็นยังไง ตัวอย่าง &lt;a href=&quot;http://www.itpcc.net/tip-and-technic/self-wordpress-update-via-ftp-solvement/&quot;&gt;เส้นผมบังภูเขา : การแก้ปัญหาการอัพเดต WordPress จากตัวระบบเองผ่าน FTP&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;เพื่อแสดงให้เห็นว่าเรามีความรู้ ความเข้าใจในเรื่องนั้นระดับหนึ่ง ซึ่งมักเป็นสิ่งที่ไม่สามารถรู้จักกันผ่านการสัมภาษณ์เพียงแค่ไม่อีกชั่วโมงได้&lt;/li&gt;
-&lt;li&gt;นอกจากที่ยังมีประโยชน์เวลาเราเจอปัญหาที่ซํ้าๆยังสามารถกลับมาทบทวนได้อีก ประหยัดเวลาไปนั่งค้นเรื่องเดิมๆ ได้เยอะ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;เข้าไปตอบคำถามตามบอร์ดต่างๆ
-
-&lt;ul&gt;
-&lt;li&gt;เช่น &lt;a href=&quot;http://stackoverflow.com&quot;&gt;http://stackoverflow.com&lt;/a&gt; เคยได้ยินมาว่าบางที่ถาม StackOverflow Account กันเลยทีเดียว&lt;/li&gt;
-&lt;li&gt;ถ้าไม่ถนัดภาษาอังกฤษอาจจะเป็นกลุ่มของไทยเล็กๆ เฉพาะทางบนเฟส เช่น &lt;a href=&quot;https://www.facebook.com/groups/admin.py.dev/&quot;&gt;Pyhton Thailand&lt;/a&gt;, &lt;a href=&quot;https://www.facebook.com/groups/iosthailand/&quot;&gt;iOS Dev Thailand&lt;/a&gt; เป็นต้น&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;วิธีการทำให้ตัวเองเป็นที่รู้จัก-offline&quot;&gt;วิธีการทำให้ตัวเองเป็นที่รู้จัก Offline:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;เหมาะกับ กทม ต่างจังหวัดมีิกิจกรรมน้อยมาก&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;โดยทั่วไปงานสัมมนาหรือ meetup จะมีการจัด talks ให้ความรู้ในเรื่องต่างๆ และเปิดรับสมัครงานบ้าง
-เพื่อให้โปรแกรมเมอร์ได้ทำรู้จักกันมากขึ้น เพื่อการแลกเปลี่ยนแบ่งปันความรู้ต่างๆ  &lt;/p&gt;
-
-&lt;p&gt;การที่เราไปสมัครงานในงานสัมมนาเหล่านี้มักจะได้เปรียบกว่าการสมัครงานทั่วๆ ไปเสมอ
-ซึ่งคนที่ไปงานมักมีคุณสมบัติตรงกับที่เปิดรับสมัคร เช่น มีรับสมัคร iOS Dev ที่งาน iOS Meetup
-หรืออย่างน้อยที่สุดคนที่มางานลักษณะนี้มักเป็นคนที่ชอบเรียนรู้อะไรใหม่ สนใจงานด้านนี้อย่างจริงจัง
-ซึ่งมักเป็นอย่างสิ่งที่ผู้ัรับสมัครงานมองหา  &lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;กิจกรรม meetup/สัมมนาต่างๆ มีทั้งแบบฟรีและเสียตังตั้งแต่ระดับร้อยไปถึงพันบาท มีทั้งภาษาไทย / อังกฤษ
-บางงานก็มีอาหารเลี้ยง เช่น พิชช่า เบียร์ แล้วแต่สปอนเซอร์ในการจัดแต่ละครั้ง&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;เข้ารวมงานสัมมนาต่างๆ
-
-&lt;ul&gt;
-&lt;li&gt;มักเป็นงานใหญ่ระดับ 60 คนขึ้นไป มักจัดทุก 3 เดือนครั้ง หรือ ปีละครั้งแล้วงาน&lt;/li&gt;
-&lt;li&gt;เช่น &lt;a href=&quot;https://www.facebook.com/AGTH66&quot;&gt;AgileThailand&lt;/a&gt;, &lt;a href=&quot;https://www.facebook.com/Barcampbangkhen&quot;&gt;BarCamp Bangkhen&lt;/a&gt;, &lt;a href=&quot;http://thaiprogrammer.org/category/activity/&quot;&gt;Code Mania&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;เข้ารวม meetup ต่างๆ ซึ่งสามารถหาได้จาก &lt;a href=&quot;http://www.meetup.com&quot;&gt;http://www.meetup.com&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;งานระดับเล็ก อาจจะมีคนร่วมงานเพียงแค่ 10 - 20 คน แล้วแต่ความเข็มแข็งของงานั้น&lt;/li&gt;
-&lt;li&gt;มักจัดเดือนละครั้ง คนที่มาส่วนใหญ่จะเป็นฝรั่ง มักจะมีการนำเทคโนโลยีต่างๆ มาพูดคุยกัน เช่น &lt;a href=&quot;http://www.meetup.com/bkkhack/events/225060163/&quot;&gt;Hack Night: Code, Make, Teach, or Learn&lt;/a&gt;,
-&lt;a href=&quot;http://www.meetup.com/bkk-web/&quot;&gt;BKK WEB MEETUP&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;ขั้นตอนสัมภาษณ์หลักๆ&quot;&gt;ขั้นตอนสัมภาษณ์หลักๆ:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;แนะนำให้อ่าน &lt;a href=&quot;https://adamcod.es/2013/02/28/how-to-hire-a-developer.html&quot;&gt;How to Hire a Developer&lt;/a&gt;
-เค้าเขียนได้ละเอียดมากเริ่มตั้งแต่กระบวนการเปิดรับสมัคร การคัดกรองเร่ซูเม่ การนัดสัมภาษณ์ ต่างๆ ได้มุมมองของคนสัมภาษณ์ในเชิง Dev ถ้าเจอ HR อาจจะอีกแบบ&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;สัมภาษณ์ทางโทรศัพท์ (Phone Interview)
-
-&lt;ul&gt;
-&lt;li&gt;สอบถามข้อมูลทั่วไปเกี่ยวกับผู้สมัคร บางที่อาจจะเป็นภาษาอังกฤษ เช่น  เรียนหรือทำงาน เขียนภาษาอะไรบ้าง ใช้เทคโนโลยีอะไรบ้างกว้างๆ ทั่วไป&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;สัมภาษณ์ทางเจอตัว (Face to Face Interview)
-
-&lt;ul&gt;
-&lt;li&gt;สอบถามรายละเอียดแบบลงลึกมากขึ้น เพื่อดูทัศนคติ บุคลิก ความสนใจ อารมณ์ สกิลการสื่อสาร ไหวพริบต่างๆ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;สัมภาษณ์ทางเทคนิค (Technical Interview)
-
-&lt;ul&gt;
-&lt;li&gt;สอบถามรายละเอียดทางเทคนิค โดยทั่วไปเน้นดูที่กระบวนการคิดและการแก้ปัญหา บางที่อาจจะลงลึกมากขึ้นอยู่กับ บ. และตำแหน่งที่สมัคร / บางที่อาจจะให้ลองทำ pair-programming เพื่อสัมภาษณ์&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;คำแนะนำอื่นๆ&quot;&gt;คำแนะนำอื่นๆ:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;บางตำแหน่งก็ไม่ได้จำเป็นต้องมีประสบการณ์โดยตรง เช่น node.js
-ถ้าหากเคยเขียน java, js มีความรู้เรื่อง network, thread และพื้นฐานที่ดี
-บางที่ก็พร้อมจะรับและให้เงินเดือนสูง เนื่องจากงานที่เค้าให้ไปทำ
-มันสิ่งที่จำเป็นต้องสร้างขึ้นใหม่และเรียนรู้ได้ด้วยตัวเองเป็นส่วนใหญ่ ไม่มีอยู่ในตำรา
-หรือ stack overflow &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;อย่าดูที่ตำแหน่งที่เปิดรับ ให้ดูที่รายละเอียดการทำงาน หลายที่เขียนชื่อตำแหน่งรายละเอียดเพื่อแค่ให้ดูดี ไม่ได้ต้องการคุณสมบัติมากมายขนาดนั้น
-บางตำแหน่งไม่ได้จำเป็นต้องมีประสบการณ์ตามที่ระบุ อาศัยการเรียนรู้งานได้ แต่การมีความรู้พื้นฐานต่างๆ ประสบการณ์ของงานที่ใกล้เคียงจะทำให้เราเรียนรู้ได้เร็วขึ้น&lt;/li&gt;
-&lt;li&gt;การไปสัมภาษณ์งานควรเป็นการทำให้ บ. รู้จักเรา และเรารู้จัก บ. มากขึ้น เช่น ถามเค้ากลับว่าถ้าหากได้งานนี้ เรายังขาดสกิลอะไรบ้าง ได้ไปศึกษาเพิ่ม / มีการทำ OT บ่อยไหม / ทำงานที่บ้านโดยไม่เข้าออฟฟิส ได้ไหม ?&lt;/li&gt;
-&lt;li&gt;พัฒนาตัวเองทุกวัน ไม่ใช่แค่ช่วงหางานใหม่&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;how-to-prepare-for-interview&quot;&gt;How to prepare for interview ?&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.khajochi.com/2015/03/7-jobs-interview-tips-for-programmer.html&quot;&gt;7 เทคนิคการสัมภาษณ์งานสำหรับ &amp;quot;โปรแกรมเมอร์&amp;quot;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://thumbsup.in.th/2014/08/five-non-tech-interview-questions-to-ask-a-developer/&quot;&gt;5 คำถาม non-technical ที่ควรใช้สัมภาษณ์งานตำแหน่งเกี่ยวกับ Developer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.sitepoint.com/getting-hired-developer-tips-senior-recruiters/&quot;&gt;Getting Hired as a Developer: Tips from Senior Recruiters&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mashable.com/2014/12/10/job-seekers-lacking-qualifications/#GIryioKmk5qU&quot;&gt;How to apply for a job when you don&amp;#39;t meet all the requirements&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/@dpup/whiteboarding-4df873dbba2e#.fg7g06i6a&quot;&gt;Whiteboarding Interview&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Many interview questions are intentionally vague; the interviewer
-wants to see how you handle uncertainty and what assumptions you
-make.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/this-happened-to-me/four-steps-to-google-without-a-degree-8f381aa6bd5e#.fzffykwvj&quot;&gt;Four Steps to Google, Without a Degree&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Victorious warriors win first and then go to war, while defeated
-warriors go to war first and then seek to win.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stevehanov.ca/blog/index.php?id=106&quot;&gt;Five essential steps to prepare for your next programming interview&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stevehanov.ca/blog/index.php?id=67&quot;&gt;Game Theory, Salary Negotiation, and Programmers&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If you say a number, you lose. If you are asked on a form, leave it blank.
-If someone is pressing you for a number, just repeat: &amp;quot;I expect to be paid fairly based on my skills.&amp;quot;&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.programmerinterview.com/index.php/job-advice/how-to-prepare-for-a-software-engineering-interview/&quot;&gt;How to prepare for a software engineering interview&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;what-are-they-looking&quot;&gt;What are they looking ?&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.somkiat.cc/improve-hiring-process/&quot;&gt;มาเปลี่ยนวิธีการสัมภาษณ์ developer กันไหม ?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://adamcod.es/2013/02/28/how-to-hire-a-developer.html&quot;&gt;How to Hire a Developer&lt;/a&gt; - Recommend&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://stevehanov.ca/blog/index.php?id=105&quot;&gt;Finding awesome developers in programming interviews&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://scaleyourcode.com/blog/article/11&quot;&gt;4 Traits CTOs Look For When Hiring&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;1) Natural Curiosity&lt;br&gt;
-2) Team player who fits in with culture&lt;br&gt;
-3) Desire to win and to push hard&lt;br&gt;
-4) Ability to openly communicate  &lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/@christophelimpalair/why-the-founder-of-rails-automatically-rejects-80-of-software-engineer-applicants-4e2a4d255f58#.gfkjxztnf&quot;&gt;Why the founder of Rails automatically rejects 80% of Software Engineer applicants&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Before you send your resume and cover letter, ask yourself this:
-How does this information relate to the company/job I’m applying to/for.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.intercom.io/how-we-hire-engineers-part-1/&quot;&gt;HOW WE HIRE ENGINEERS, PART 1: OUR SCREENER&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.intercom.io/how-we-hire-engineers-part-2-culture-contribution/&quot;&gt;HOW WE HIRE ENGINEERS, PART 2: CULTURE CONTRIBUTION&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;technical-interview&quot;&gt;Technical Interview&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/kennyyu/workshop&quot;&gt;Technical Interview Workshop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://raw.githubusercontent.com/kennyyu/workshop/master/resources.pdf&quot;&gt;Technical interview tips and strategies&lt;/a&gt; - Recommend&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://gist.github.com/TSiege/cbb0507082bb18ff7e4b&quot;&gt;The Technical Interview Cheat Sheet.md&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=nZNfSQKC-Yk&quot;&gt;The Art of Ruby Technical Interviews by Chris Mar&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;non-technique-interview&quot;&gt;Non-Technique Interview&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.interviewcake.com/article/python/coding-interview-tips&quot;&gt;Coding Interview Tips How to get better at technical interviews without practicing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.programmerinterview.com/index.php/job-advice/negotiating-an-offer-for-a-new-job/&quot;&gt;How do i negotiate an offer or salary for a new job?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://javahungry.blogspot.com/2014/04/top-15-must-prepare-behavioral-interview-questions-and-answers-hr-round-non-technical.html&quot;&gt;Top 15 Must Prepare Behavioral Questions And Answers (HR Round) : Non Technical Java Interview Questions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://workplace.stackexchange.com/a/8942&quot;&gt;How to answer critical non technical questions in an interview&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Be yourself. Be prepared.&lt;br&gt;
-In an interview situation, nothing damages your confidence more than pretending to be something you&amp;#39;re not. &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://programmers.stackexchange.com/a/126145&quot;&gt;Why was I asked general, non-technical questions during an interview?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;These are soft questions that do not have a right or wrong answer,
-but are intended to determine the way you think, what kind of personality you have,
-and whether your personality will fit with their culture. &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://tosbourn.com/interview-tips-junior-developers/&quot;&gt;Some Interview Tips for Junior Developers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Don&amp;#39;t worry about what you don&amp;#39;t know, 
-Demonstrate a passion for what you do,
-Try and find out who is interviewing you&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://spin.atomicobject.com/2015/10/16/ace-the-non-technical-part-of-a-developer-interview/&quot;&gt;How to Ace the Non-Technical Part of an Atomic Interview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.c-sharpcorner.com/UploadFile/mahesh/how-to-prepare-for-an-interview-non-technical/&quot;&gt;How to Prepare For An Interview (Non-Technical)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I don&amp;#39;t expect candidates to be expert in everything but what I expect is, whatever they have done, they are good at it&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.c-sharpcorner.com/UploadFile/dougwagner/interviewing-must-dos-and-please-donts/&quot;&gt;Interviewing &amp;quot;Must DOs and Please DON&amp;#39;Ts&amp;quot;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://activeinterview.com/blog/2012/08/22/top-non-technical-questions-to-ask-a-programmer-during-a-video-interview/&quot;&gt;Top non-technical questions to ask a programmer during a video interview&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.thesimpledollar.com/25-questions-to-think-about-before-your-next-job-interview/&quot;&gt;Interview Questions: 25 Top Questions &amp;amp; Answers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=oMrRpYto-pI&quot;&gt;English Job Interviews&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Practice in pressure not normal situation.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;good-cv&quot;&gt;Good CV&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.juntima.me/cv-small.pdf&quot;&gt;http://www.juntima.me/cv-small.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://nuuneoi.com/profile&quot;&gt;http://nuuneoi.com/profile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://careers.stackoverflow.com/chakrit&quot;&gt;http://careers.stackoverflow.com/chakrit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://carpedm20.github.io&quot;&gt;http://carpedm20.github.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://dt.in.th&quot;&gt;http://dt.in.th&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.linkedin.com/in/tomkowz&quot;&gt;https://www.linkedin.com/in/tomkowz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;cv-tools&quot;&gt;CV Tools&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://jsonresume.org&quot;&gt;https://jsonresume.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;etc&quot;&gt;ETC.&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/life-learning/find-a-boss-not-a-job-1eb3aefe9bc1#.w9u4m1ecm&quot;&gt;Find a Boss, Not a Job&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I was not looking for a job; I was looking for someone I wanted to
-work with&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.fongmun.com/m/13572&quot;&gt;กรณีศึกษา Job Interview ที่ Business Insider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.fongmun.com/m/10733&quot;&gt;การสมัครงาน Software Engineer ที่ Silicon Valley&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://tanin.nanakorn.com/blogs/58&quot;&gt;My interviewee life is over&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Honesty is the key
-Just try to be honest about everything you have done in your life,
-what you want in the future, and what you&amp;#39;re not sure that you want.
-(Notice the difference)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/thai-people-in-usa-%E0%B8%84%E0%B8%99%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%AD%E0%B9%80%E0%B8%A1%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%B2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%83%E0%B8%99%E0%B8%AD%E0%B9%80%E0%B8%A1%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2-82c7b185da5f#.wtvvhy39t&quot;&gt;ประสบการณ์การหางานในอเมริกา&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://tanjai.in.th/2015/05/14/apply-at-thoughtworks/&quot;&gt;แบ่งปันประสบการณ์ : สมัครงาน ThoughtWorks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.juntima.me/blog/2015/08/little-intern/&quot;&gt;Little Intern in a Big Company – เด็กฝึกงานตัวเล็กๆในบริษัทใหญ่ๆ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://programmers.stackexchange.com/a/85342&quot;&gt;How to describe your skill levels in the CV?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Leaving out &amp;quot;expert&amp;quot; or &amp;quot;advanced&amp;quot;. Just don&amp;#39;t put down any
-technology you aren&amp;#39;t comfortable with being thrown into the deep
-end of&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://career-advice.monster.com/resumes-cover-letters/resume-samples/sample-resume-software-engineer-entry-level/article.aspx&quot;&gt;Sample Resume for an Entry-Level Software Engineer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.huffingtonpost.com/2015/06/12/fonts-to-use-on-resume_n_7562714.html&quot;&gt;The 5 Best Fonts To Use On Your Resume&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;[25 Things About Life I Wish I Had Known 10 Years Ago](&lt;a href=&quot;https://medium.com/life-learning/25-things-about-life-i-wish-i-had-known-10-years-ago-61d96e93a028#.8s2gdkc7&quot;&gt;https://medium.com/life-learning/25-things-about-life-i-wish-i-had-known-10-years-ago-61d96e93a028#.8s2gdkc7&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Pick An Industry, Not A Job
-If you want to become good at something, you need to spend years and years doing that. You can’t do that if you hop from industry to industry. Pick an industry you love and start at the bottom. You will find the perfect role for you eventually.k&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blog.thefirehoseproject.com/posts/getting-your-first-junior-web-developer-job/&quot;&gt;The Only Thing Between You and a New Job as a Junior Web Developer&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Everyone who is interviewing you, wants to hire you.  Interviewing is a time consuming, taxing experience for companies and team members as well.  If a company is hiring, they are likely hiring because they have more work they need to do than the current team is capable of.
-Interview preparation isn’t something that can be condensed into a week or two long “job preparation cram course”
-At the conclusion of the interview it’s important to have questions about the company.  You should ask questions you genuinely care the answer to.  I usually like to ask questions about: The team’s workflow, The company’s operations, Technology decisions.
-Always hope the for the best, but expect the worst.  Don’t wait for a rejection to pursue the next opportunity.  Work asynchronously and try to line up as many interviews at the same time as possible.  Be frank and honest that you’re doing this if you’re ever asked, but don’t feel bad about it.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/@kenmazaika/the-most-critical-skill-to-getting-hired-as-a-web-developer-553613af5bb4#.kwz5ki15z&quot;&gt;The Most Critical Skill to Getting Hired as a Web Developer and the only way you can get it.&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Key Skill:
-GitHub Pull Requests &amp;amp; Code Reviews
-Breaking Large Problems into Smaller Ones
-Test Driven Development
-Merge Conflicts
-Stand-up / Scrum Meetings
-Pair Programming
-Working in a constantly evolving environment&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<category term="jobs" />
-<summary>รวมบทความ เทคนิคต่างๆ เกี่ยวกับการสมัครงาน developer</summary>
 </entry>
 </feed>
