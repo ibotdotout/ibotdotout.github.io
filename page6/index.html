@@ -1,17 +1,239 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><link href="http://gmpg.org/xfn/11" rel="profile"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><meta property="og:title" content="botbotbot's blog"/><meta property="og:type" content="article"/><meta property="og:url" content="http://dev.im-bot.com/page6//"/><meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png"/><meta property="og:description" content="botbotbot's blog"/><meta property="og:site_name" content="botbotbot"/><meta property="og:locale" content="th_TH"/><title> botbotbot's blog · botbotbot</title><link rel="stylesheet" href="/public/css/poole.css"><link rel="stylesheet" href="/public/css/syntax.css"><link rel="stylesheet" href="/public/css/lanyon.css"><link rel="stylesheet" href="/public/css/searchbox.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"><link rel="shortcut icon" href="/public/favicon.ico"><link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml"> <script>!function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-52133577-1","auto"),ga("send","pageview")</script></head><body> <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><div class="sidebar" id="sidebar"><div class="sidebar-item"><p>botbotbot's blog</p></div><nav class="sidebar-nav"> <a class="sidebar-nav-item" href="/">Home</a> <a class="sidebar-nav-item" href="/about/">About Me</a> <a class="sidebar-nav-item" href="/tags/">Tags</a><div class="sidebar-item"><p> © 2016. All rights reserved.</p></div></div><div class="wrap"><div class="masthead"><div class="container"><h3 class="masthead-title"> <a href="/" title="Home">botbotbot</a> <small>'s blog</small> <span id="search"><form action="/search"  id="searchbox"> <input id="search-query" placeholder="Search" autocomplete="off" name="q"></form> </span></h3></div></div><div class="container"><div class="post"> <section id="search-results" style="display:none"><div id="close-search-results"><h1 class="post-title"> Search results <i class="fa fa-times" style="font-size:.7em"></i></h1></div><div class="entries"></div> </section></div></div><div class="container content"><div class="posts"><div class="post"><h1 class="post-title"> <a href="/jenkins/"> Jenkins CI </a></h1><span class="post-date"> 24 Aug 2015 · <a href="/jenkins/#disqus_thread" data-disqus-identifier="/jenkins/"></a> </span><h1 id="jenkins-ci-extendable-ci-server"><a href="http://jenkins-ci.org">Jenkins-CI</a> - Extendable CI Server</h1><h2 id="install-jenkins">Install Jenkins::</h2><h3 id="debian">Debian</h3><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Don't use only apt-get install jenkins that old version</span>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <meta property="og:title" content="botbotbot's blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dev.im-bot.com/page6//" />
+<meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
+<meta property="og:description" content="botbotbot's blog" />
+<meta property="og:site_name" content="botbotbot" />
+<meta property="og:locale" content="th_TH" />
+
+
+  <title>
+    
+      botbotbot's blog &middot; botbotbot
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/searchbox.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Google Analytic-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-52133577-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>botbotbot's blog</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About Me</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tags/">Tags</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2016. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">botbotbot</a>
+            <small>'s blog</small>
+            <!-- jekyll-lunr-js-search -->
+<span id="search">
+  <form action="/search" method="get" id="searchbox">
+    <input type="text" id="search-query" placeholder="Search" autocomplete="off" name="q">
+  </form>
+</span>
+
+          </h3>
+        </div>
+      </div>
+
+      <!-- jekyll-lunr-js-search -->
+<div class="container">
+  <div class="post">
+    <section id="search-results" style="display: none;">
+        <div id="close-search-results">
+          <h1 class="post-title">
+              Search results
+              <i class="fa fa-times" style="font-size: 0.7em"></i>
+          </h1>
+        </div>
+        <div class="entries">
+         </div>
+    </section>
+  </div>
+</div>
+
+
+      <div class="container content">
+        <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/jenkins/">
+        Jenkins CI
+      </a>
+    </h1>
+
+    <span class="post-date">
+      24 Aug 2015
+      
+        &middot;
+        <a href="/jenkins/#disqus_thread" data-disqus-identifier="/jenkins/"></a>
+        
+      
+    </span>
+
+    
+      <h1 id="jenkins-ci-extendable-ci-server"><a href="http://jenkins-ci.org">Jenkins-CI</a> - Extendable CI Server</h1>
+
+<h2 id="install-jenkins">Install Jenkins::</h2>
+
+<h3 id="debian">Debian</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Don't use only apt-get install jenkins that old version</span>
   <span class="nv">$ </span>wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
   <span class="nv">$ </span>sudo vim /etc/apt/sources.list
   <span class="c"># add the following entry</span>
   <span class="c"># deb http://pkg.jenkins-ci.org/debian binary/</span>
   <span class="nv">$ </span>sudo apt-get update
   <span class="nv">$ </span>sudo apt-get install jenkins
-</code></pre></div><h3 id="osx">OSX</h3><div class="highlight"><pre><code class="language-sh" data-lang="sh">  brew update
+</code></pre></div>
+<h3 id="osx">OSX</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  brew update
   brew install jenkins
-</code></pre></div><h3 id="allow-others-to-access-jenkins">Allow others to access jenkins</h3><p>Original From <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Setting up an Apache Proxy for port 80 -&gt; 8080</a> but it use old version of apache2</p><div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="nv">$ </span>sudo apt-get install apache2
+</code></pre></div>
+<h3 id="allow-others-to-access-jenkins">Allow others to access jenkins</h3>
+
+<p>Original From <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Setting up an Apache Proxy for port 80 -&gt; 8080</a> but it use old version of apache2</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="nv">$ </span>sudo apt-get install apache2
     <span class="nv">$ </span>sudo a2enmod proxy
     <span class="nv">$ </span>sudo a2enmod proxy_http
     <span class="nv">$ </span>sudo a2dissite 000-default.conf
-</code></pre></div><p>Create "jenfins.conf" in /etc/apache2/sites-available</p><div class="highlight"><pre><code class="language-sh" data-lang="sh">  &lt;VirtualHost <span class="k">*</span>:80&gt;
+</code></pre></div>
+<p>Create &quot;jenfins.conf&quot; in /etc/apache2/sites-available</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  &lt;VirtualHost <span class="k">*</span>:80&gt;
       ServerAdmin webmaster@localhost
       ServerName ci.company.com
       ServerAlias ci
@@ -25,45 +247,289 @@
   &lt;/VirtualHost&gt;
 </code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>sudo a2ensite jenkins
   <span class="nv">$ </span>sudo service apache2 restart
-</code></pre></div><h2 id="jenkins-job-workspace">Jenkins Job Workspace::</h2><ol><li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br></li><li>In Home directory clicks Adanced... Buttons.<br></li><li>look Workspace Root Directory. Normally it is "workspace".<br></li><li>your job workspace is &lt; jenkins home directory &gt; /jobs/&lt; your jobs &gt; / &lt; workspace &gt;<br></li></ol><h2 id="jenkins-backup-and-import-configure">Jenkins backup and Import Configure::</h2><h3 id="backup-job-configure">Backup Job Configure</h3><div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/job/&lt;project name&gt;/config.xml
-</code></pre></div><h3 id="import-job-configure">Import Job Configure</h3><ol><li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br></li><li>go to &lt; jenkins home directory &gt;/jobs<br></li><li>go to &lt; your jobs directory &gt;<br></li><li>replace your backup config.xml with config.xml<br></li><li>reload jenkins with<br></li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/reload
-</code></pre></div><h2 id="jenkins-trigger-via-git-hook">Jenkins Trigger via git hook::</h2><h3 id="setup-configure">Setup Configure</h3><ol><li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a><br></li><li>In Job Configure &gt; Source Code Management &gt; Select Git<br></li><li>add your git repository url to Repository URL<br></li><li>Select Poll SCM in Build Triggers and you can leave Schedule as blank<br></li><li>Save Configure<br></li></ol><h3 id="git-hook-to-trigger-jenkins"><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository">Git Hook to trigger Jenkins</a></h3><ol><li>If you use linux you have to install curl. That was installed osx.</li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>sudo apt-get install curl
-</code></pre></div><ol><li>You can trigger jenkins with this url</li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span>&lt;URL of the Git repository&gt;
-</code></pre></div><ol><li>You can trigger jenkins after git push by</li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># git don't have post-push hook</span>
+</code></pre></div>
+<h2 id="jenkins-job-workspace">Jenkins Job Workspace::</h2>
+
+<ol>
+<li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br></li>
+<li>In Home directory clicks Adanced... Buttons.<br></li>
+<li>look Workspace Root Directory. Normally it is &quot;workspace&quot;.<br></li>
+<li>your job workspace is &lt; jenkins home directory &gt; /jobs/&lt; your jobs &gt; / &lt; workspace &gt;<br></li>
+</ol>
+
+<h2 id="jenkins-backup-and-import-configure">Jenkins backup and Import Configure::</h2>
+
+<h3 id="backup-job-configure">Backup Job Configure</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/job/&lt;project name&gt;/config.xml
+</code></pre></div>
+<h3 id="import-job-configure">Import Job Configure</h3>
+
+<ol>
+<li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br></li>
+<li>go to &lt; jenkins home directory &gt;/jobs<br></li>
+<li>go to &lt; your jobs directory &gt;<br></li>
+<li>replace your backup config.xml with config.xml<br></li>
+<li>reload jenkins with<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/reload
+</code></pre></div>
+<h2 id="jenkins-trigger-via-git-hook">Jenkins Trigger via git hook::</h2>
+
+<h3 id="setup-configure">Setup Configure</h3>
+
+<ol>
+<li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a><br></li>
+<li>In Job Configure &gt; Source Code Management &gt; Select Git<br></li>
+<li>add your git repository url to Repository URL<br></li>
+<li>Select Poll SCM in Build Triggers and you can leave Schedule as blank<br></li>
+<li>Save Configure<br></li>
+</ol>
+
+<h3 id="git-hook-to-trigger-jenkins"><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository">Git Hook to trigger Jenkins</a></h3>
+
+<ol>
+<li>If you use linux you have to install curl. That was installed osx.</li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>sudo apt-get install curl
+</code></pre></div>
+<ol>
+<li>You can trigger jenkins with this url</li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span>&lt;URL of the Git repository&gt;
+</code></pre></div>
+<ol>
+<li>You can trigger jenkins after git push by</li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># git don't have post-push hook</span>
   <span class="nv">$ </span>git push <span class="o">&amp;&amp;</span> curl http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
-</code></pre></div><ol><li>You can use git alias to make short cmd by edit .git/config in your git repository</li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="o">[</span><span class="nb">alias</span><span class="o">]</span>
+</code></pre></div>
+<ol>
+<li>You can use git alias to make short cmd by edit .git/config in your git repository</li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="o">[</span><span class="nb">alias</span><span class="o">]</span>
       trig-jenkins <span class="o">=</span> !curl http://yourjenkinsservergit/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
       push-wt <span class="o">=</span> !git push <span class="o">&amp;&amp;</span> git trig-jenkins
-</code></pre></div><p>call your alias by</p><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>git trig-jenkins
+</code></pre></div>
+<p>call your alias by</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>git trig-jenkins
   <span class="nv">$ </span>git push-wt
-</code></pre></div><h2 id="jenkins-with-python">Jenkins with Python::</h2><h3 id="setup">Setup</h3><ol><li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin</a><br></li><li>In Manage Jenkins &gt; Configure System &gt; Python clicks "Python installations" button.<br></li><li>Config your python environments<br></li><li>Save<br></li></ol><h3 id="configure-job-to-run-with-python">Configure Job to run with python</h3><ol><li>In Job Configure &gt; Build &gt; Add build step &gt; {Python Builder, VirtualEnv Builder}<br></li><li>Select your Python version<br></li><li>Nature select shell<br></li><li>In command add your run script<br></li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># example</span>
+</code></pre></div>
+<h2 id="jenkins-with-python">Jenkins with Python::</h2>
+
+<h3 id="setup">Setup</h3>
+
+<ol>
+<li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin</a><br></li>
+<li>In Manage Jenkins &gt; Configure System &gt; Python clicks &quot;Python installations&quot; button.<br></li>
+<li>Config your python environments<br></li>
+<li>Save<br></li>
+</ol>
+
+<h3 id="configure-job-to-run-with-python">Configure Job to run with python</h3>
+
+<ol>
+<li>In Job Configure &gt; Build &gt; Add build step &gt; {Python Builder, VirtualEnv Builder}<br></li>
+<li>Select your Python version<br></li>
+<li>Nature select shell<br></li>
+<li>In command add your run script<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># example</span>
   <span class="nb">export </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
   python setup.py develop
   nosetests --with-coverage --cover-erase --cover-package<span class="o">=</span>core,bin --cover-html --with-xunit
-</code></pre></div><ol><li><p>(Optional) Publish Test Result Report 5.1 Use nosetests to generate xml result in xunit format</p><div class="highlight"><pre><code class="language-sh" data-lang="sh"> <span class="nv">$ </span>nosetests --with-xunit  <span class="c"># nosetests.xml is default name of xml</span>
-</code></pre></div><p>5.2 Add post-build action &gt; Publish JUnit test result report<br> 5.3 Add "nosetests.xml" in Test report XMLs</p></li><li><p>(Optional) Publish coverage.py HTML reports<br> 6.1 Use nosetests to run coverage.py</p></li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="nv">$ </span>nosetests --with-coveage --cover-html
-</code></pre></div><p>6.2 Add post-build action &gt; Publish coverage.py HTML reports<br> 7. (Options) Publish your product<br> 7.1 Add post-build action &gt; Archive the artifacts<br> 7.2 Add your file name</p><h2 id="start-stop-jenkins-that-installed-via-homebrew">Start/Stop Jenkins that installed via Homebrew</h2><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># launchd start jenkins at login:</span>
+</code></pre></div>
+<ol>
+<li><p>(Optional) Publish Test Result Report 
+5.1 Use nosetests to generate xml result in xunit format  </p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"> <span class="nv">$ </span>nosetests --with-xunit  <span class="c"># nosetests.xml is default name of xml</span>
+</code></pre></div>
+<p>5.2 Add post-build action &gt; Publish JUnit test result report<br>
+5.3 Add &quot;nosetests.xml&quot; in Test report XMLs  </p></li>
+<li><p>(Optional) Publish coverage.py HTML reports<br>
+6.1 Use nosetests to run coverage.py  </p></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="nv">$ </span>nosetests --with-coveage --cover-html
+</code></pre></div>
+<p>6.2 Add post-build action &gt; Publish coverage.py HTML reports<br>
+7. (Options) Publish your product<br>
+  7.1 Add post-build action &gt; Archive the artifacts<br>
+  7.2 Add your file name  </p>
+
+<h2 id="start-stop-jenkins-that-installed-via-homebrew">Start/Stop Jenkins that installed via Homebrew</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># launchd start jenkins at login:</span>
 <span class="gp">$ </span>ln -sfv /usr/local/opt/jenkins/<span class="k">*</span>.plist ~/Library/LaunchAgents
 <span class="c"># start jenkins</span>
 <span class="gp">$ </span>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 <span class="c"># stop jenkins:</span>
 <span class="gp">$ </span>launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
-</code></pre></div><h3 id="jekins-reset-password"><a href="https://gist.github.com/gmhawash/4043232">Jekins Reset Password</a></h3><ol><li>Go to Jenkins Home Path<br> (debian) /var/lib/jenkins<br></li><li>Edit config.xml<br></li><li>Set &lt; userSecurity&gt; tag to false<br></li><li>Delete &lt; authorizationStrategy&gt; and &lt; securityRealm&gt; tags<br></li><li>Restart Jenkins<br></li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo service jenkins restart
-</code></pre></div><h3 id="ssh-key-on-jenkins"><a href="http://www.uvd.co.uk/blog/labs/configuring-jenkins-continuous-integration-server-to-work-with-git/">SSH Key on Jenkins</a></h3><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo su - jenkins
+</code></pre></div>
+<h3 id="jekins-reset-password"><a href="https://gist.github.com/gmhawash/4043232">Jekins Reset Password</a></h3>
+
+<ol>
+<li>Go to Jenkins Home Path<br>
+(debian) /var/lib/jenkins<br></li>
+<li>Edit config.xml<br></li>
+<li>Set &lt; userSecurity&gt; tag to false<br></li>
+<li>Delete &lt; authorizationStrategy&gt; and &lt; securityRealm&gt; tags<br></li>
+<li>Restart Jenkins<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo service jenkins restart
+</code></pre></div>
+<h3 id="ssh-key-on-jenkins"><a href="http://www.uvd.co.uk/blog/labs/configuring-jenkins-continuous-integration-server-to-work-with-git/">SSH Key on Jenkins</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo su - jenkins
 <span class="gp">$ </span>ssh-keygen -t rsa -C <span class="s2">"your_email@example.com"</span>
 <span class="gp">$ </span>cat ~/.ssh/id_rsa.pub
-</code></pre></div><h3 id="jekins-git-pulling-timeout-after-10-min"><a href="http://stackoverflow.com/questions/22013217/on-building-jenkins-project-timeout-after-10-minute-error-happens">Jekins git pulling timeout after 10 min</a></h3><ol><li>Edit job configuration, In git plugion section</li><li>Click Add &gt; Advanced clone behaviours &gt; Set Timeout</li></ol><h2 id="jenkins-running-parallel-scripts"><a href="http://stackoverflow.com/questions/23062933/jenkins-running-parallel-scripts">Jenkins running parallel scripts</a></h2><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># wokr in any shell</span>
+</code></pre></div>
+<h3 id="jekins-git-pulling-timeout-after-10-min"><a href="http://stackoverflow.com/questions/22013217/on-building-jenkins-project-timeout-after-10-minute-error-happens">Jekins git pulling timeout after 10 min</a></h3>
+
+<ol>
+<li>Edit job configuration, In git plugion section</li>
+<li>Click Add &gt; Advanced clone behaviours &gt; Set Timeout</li>
+</ol>
+
+<h2 id="jenkins-running-parallel-scripts"><a href="http://stackoverflow.com/questions/23062933/jenkins-running-parallel-scripts">Jenkins running parallel scripts</a></h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># wokr in any shell</span>
 <span class="gp">$ </span>script1.sh &amp;   <span class="c"># run in background (sub-shell)</span>
 <span class="gp">$ </span>script2.sh     <span class="c"># run in foreground (shell)</span>
-</code></pre></div><h3 id="jenkins-with-docker-io">Jenkins with Docker.io</h3><ol><li><a href="https://developer.rackspace.com/blog/move-fast-and-dont-break-things-testing-with-jenkins-ansible-and-docker/">Move fast and don’t break things! Testing with Jenkins, Ansible and Docker</a></li><li><a href="https://github.com/orangain/jenkins-docker-sample">jenkins-docker-sample</a></li><li><a href="http://www.therightcode.net/use-docker-jenkins-to-run-github-tests/">Use Docker + Jenkins to run GitHub tests</a></li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># add jenkins to docker group</span>
+</code></pre></div>
+<h3 id="jenkins-with-docker-io">Jenkins with Docker.io</h3>
+
+<ol>
+<li><a href="https://developer.rackspace.com/blog/move-fast-and-dont-break-things-testing-with-jenkins-ansible-and-docker/">Move fast and don’t break things! Testing with Jenkins, Ansible and Docker</a></li>
+<li><a href="https://github.com/orangain/jenkins-docker-sample">jenkins-docker-sample</a></li>
+<li><a href="http://www.therightcode.net/use-docker-jenkins-to-run-github-tests/">Use Docker + Jenkins to run GitHub tests</a></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># add jenkins to docker group</span>
 <span class="gp">$ </span>sudo gpasswd -a jenkins docker <span class="c"># or sudo adduser jenkins docker</span>
 <span class="gp">$ </span>sudo service docker.io restart
 <span class="gp">$ </span>sudo service jenkins restart
-</code></pre></div><h3 id="jenkins-plugins-install-via-terminal">Jenkins Plugins - <a href="http://stackoverflow.com/questions/7709993/how-can-i-update-jenkins-plugins-from-the-terminal">Install via Terminal</a>::</h3><ol><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a></li><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin - Python support to Jenkkins</a></li><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls">Green Balls</a></li><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin">Build Pipeline Plugin</a></li><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Monitor+Plugin">Build Monitor Plugin</a></li><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Sounds+plugin">Jenkins Sounds plugin</a></li><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Robot+Framework+Plugin">Robot Framework Plugin</a></li><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Sonar+plugin">Sonar plugin</a></li><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Violations">Violations - generates reports static code violation detectors</a></li><li><a href="http://www.somkiat.cc/jenkins-deploy-over-ssh/">Publish over SSH</a></li></ol><h2 id="jenkins-references">Jenkins References::</h2><ol><li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Installing Jenkins on Ubuntu</a></li><li><a href="http://pkg.jenkins-ci.org/debian/">Jenkins Debian packages</a></li><li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li><li><a href="http://www.somkiat.cc/jenkins-popular-plugins/">Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557</a></li><li><a href="http://oemden.com/?p=205">Jenkins Setup on Os X server</a></li><li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li><li><a href="http://chrigl.de/blogentries/integration-of-pylint-into-jenkins">Integration of pylint into jenkins</a></li><li><a href="http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/">Running Jenkins in Docker Containers</a></li></ol></div><div class="post"><h1 class="post-title"> <a href="/travis-ci/"> Travis CI </a></h1><span class="post-date"> 23 Aug 2015 · <a href="/travis-ci/#disqus_thread" data-disqus-identifier="/travis-ci/"></a> </span><h1 id="travis-ci-test-and-deploy-your-code-with-confidence"><a href="http://travis-ci.org">Travis CI</a> - Test and Deploy Your Code with Confidence</h1><h3 id="travis-with-docker"><a href="http://docs.travis-ci.com/user/docker/">Travis with Docker</a></h3><p>Travis support docker but not fully permission some dependencies that try to use OS command ex. kill can make your test error or failed.</p><p><noscript><pre>400: Invalid request</pre></noscript><script src="https://gist.github.com/47d7fb757eab01fce56b.js"></script></p><h3 id="travis-with-python"><a href="http://docs.travis-ci.com/user/languages/python/">Travis with Python</a></h3><p><noscript><pre>400: Invalid request</pre></noscript><script src="https://gist.github.com/1faa3e6416306b3b191f.js"></script></p><h3 id="nightli-es-travis-night-build"><a href="https://nightli.es">Nightli.es Travis Night Build</a></h3><p>Third-party web service that use Travis API to automatic build every 24 hour after last build</p><h2 id="references">References</h2><ol><li><a href="http://docs.travis-ci.com/user/for-beginners/">Travis CI for Complete Beginners</a></li><li><a href="http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/">Faster Builds with Container-Based Infrastructure and Docker</a></li><li><a href="http://docs.travis-ci.com/user/deployment/custom/">Travis Custom Deployment</a></li></ol></div><div class="post"><h1 class="post-title"> <a href="/drone-ci/"> Drone.io CI </a></h1><span class="post-date"> 23 Aug 2015 · <a href="/drone-ci/#disqus_thread" data-disqus-identifier="/drone-ci/"></a> </span><h1 id="drone-is-a-continuous-integration-platform-built-on-docker-written-in-go-better-than-drone-io"><a href="https://github.com/drone/drone">Drone is a Continuous Integration platform built on Docker, written in Go</a> - better than Drone.io</h1><ul><li><a href="https://www.youtube.com/watch?v=pP3iRUC6EOM">How to setup your own continuous integration server with Drone</a></li></ul><h1 id="drone-io-based-on-drone-simple-ci-server"><a href="https://drone.io">Drone.io based on Drone</a> - Simple CI Server</h1><h2 id="private-configuration">Private Configuration:</h2><h3 id="can-run-shell-command">Can run shell command</h3><ol><li>upload your configuration into gist with secret</li><li>get url of your raw configuration</li><li>add your configuration url in "Environment Variable"</li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Example</span>
+</code></pre></div>
+<h3 id="jenkins-plugins-install-via-terminal">Jenkins Plugins - <a href="http://stackoverflow.com/questions/7709993/how-can-i-update-jenkins-plugins-from-the-terminal">Install via Terminal</a>::</h3>
+
+<ol>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin - Python support to
+Jenkkins</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls">Green Balls</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin">Build Pipeline Plugin</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Monitor+Plugin">Build Monitor Plugin</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Sounds+plugin">Jenkins Sounds plugin</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Robot+Framework+Plugin">Robot Framework Plugin</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Sonar+plugin">Sonar plugin</a></li>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Violations">Violations - generates reports static code violation detectors</a></li>
+<li><a href="http://www.somkiat.cc/jenkins-deploy-over-ssh/">Publish over SSH</a></li>
+</ol>
+
+<h2 id="jenkins-references">Jenkins References::</h2>
+
+<ol>
+<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Installing Jenkins on Ubuntu</a></li>
+<li><a href="http://pkg.jenkins-ci.org/debian/">Jenkins Debian packages</a></li>
+<li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li>
+<li><a href="http://www.somkiat.cc/jenkins-popular-plugins/">Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557</a></li>
+<li><a href="http://oemden.com/?p=205">Jenkins Setup on Os X server</a></li>
+<li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li>
+<li><a href="http://chrigl.de/blogentries/integration-of-pylint-into-jenkins">Integration of pylint into jenkins</a></li>
+<li><a href="http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/">Running Jenkins in Docker Containers</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/travis-ci/">
+        Travis CI
+      </a>
+    </h1>
+
+    <span class="post-date">
+      23 Aug 2015
+      
+        &middot;
+        <a href="/travis-ci/#disqus_thread" data-disqus-identifier="/travis-ci/"></a>
+        
+      
+    </span>
+
+    
+      <h1 id="travis-ci-test-and-deploy-your-code-with-confidence"><a href="http://travis-ci.org">Travis CI</a> - Test and Deploy Your Code with Confidence</h1>
+
+<h3 id="travis-with-docker"><a href="http://docs.travis-ci.com/user/docker/">Travis with Docker</a></h3>
+
+<p>Travis support docker but not fully permission some dependencies that
+try to use OS command ex. kill can make your test error or failed.</p>
+
+<p><noscript><pre>400: Invalid request
+</pre></noscript><script src="https://gist.github.com/47d7fb757eab01fce56b.js"> </script></p>
+
+<h3 id="travis-with-python"><a href="http://docs.travis-ci.com/user/languages/python/">Travis with Python</a></h3>
+
+<p><noscript><pre>400: Invalid request
+</pre></noscript><script src="https://gist.github.com/1faa3e6416306b3b191f.js"> </script></p>
+
+<h3 id="nightli-es-travis-night-build"><a href="https://nightli.es">Nightli.es Travis Night Build</a></h3>
+
+<p>Third-party web service that use Travis API to automatic build every 24
+hour after last build</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+<li><a href="http://docs.travis-ci.com/user/for-beginners/">Travis CI for Complete Beginners</a></li>
+<li><a href="http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/">Faster Builds with Container-Based Infrastructure and
+Docker</a></li>
+<li><a href="http://docs.travis-ci.com/user/deployment/custom/">Travis Custom Deployment</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/drone-ci/">
+        Drone.io CI
+      </a>
+    </h1>
+
+    <span class="post-date">
+      23 Aug 2015
+      
+        &middot;
+        <a href="/drone-ci/#disqus_thread" data-disqus-identifier="/drone-ci/"></a>
+        
+      
+    </span>
+
+    
+      <h1 id="drone-is-a-continuous-integration-platform-built-on-docker-written-in-go-better-than-drone-io"><a href="https://github.com/drone/drone">Drone is a Continuous Integration platform built on Docker, written in Go</a> -  better than Drone.io</h1>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=pP3iRUC6EOM">How to setup your own continuous integration server with Drone</a></li>
+</ul>
+
+<h1 id="drone-io-based-on-drone-simple-ci-server"><a href="https://drone.io">Drone.io based on Drone</a> - Simple CI Server</h1>
+
+<h2 id="private-configuration">Private Configuration:</h2>
+
+<h3 id="can-run-shell-command">Can run shell command</h3>
+
+<ol>
+<li>upload your configuration into gist with secret</li>
+<li>get url of your raw configuration</li>
+<li>add your configuration url in &quot;Environment Variable&quot;</li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Example</span>
   <span class="nv">CONFIG_URL</span><span class="o">=</span><span class="s2">"&lt;your_configuration_url&gt;"</span>
-</code></pre></div><ol><li>in "Commands" download your configurations via wget without display result</li></ol><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c">#!/bin/sh</span>
+</code></pre></div>
+<ol>
+<li>in &quot;Commands&quot; download your configurations via wget without display result</li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c">#!/bin/sh</span>
   wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/null
-</code></pre></div><h3 id="keep-variables-in-environment">Keep Variables in Environment</h3><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Example</span>
+</code></pre></div>
+<h3 id="keep-variables-in-environment">Keep Variables in Environment</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Example</span>
 <span class="c">#!/bin/sh</span>
 <span class="nb">export </span><span class="nv">CLIENT_ID</span><span class="o">=</span>&lt;your id&gt;
 <span class="nb">export </span><span class="nv">TAGS</span><span class="o">=</span>&lt;your tags&gt;
@@ -71,7 +537,9 @@
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
 <span class="n">tags</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'TAGS'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre></div><h3 id="dynamic-solution">Dynamic Solution</h3><div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
+</code></pre></div>
+<h3 id="dynamic-solution">Dynamic Solution</h3>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
 <span class="c"># Configuration from Environment Variables if can't load config.ini</span>
@@ -84,14 +552,55 @@
     <span class="n">client_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'DEFAULT'</span><span class="p">,</span> <span class="s">'client_id'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre></div><h2 id="references">References:</h2><ol><li><a href="http://docs.drone.io/quickstart.html">Drone.io Quickstart</a></li><li><a href="http://docs.drone.io/python.html">Drone.io Building Python Projects</a></li><li><a href="http://buddylindsey.com/hosting-your-open-source-project-on-heroku-with-private-configuration/">Hosting Your Open Source Project on Heroku with Private Configuration</a></li><li><a href="http://stackoverflow.com/questions/3176918/how-to-hide-connection-string-user-name-pw-when-using-source-control">How to hide connection string, user name, pw when using source control?</a></li></ol></div><div class="post"><h1 class="post-title"> <a href="/line/"> Python Line API </a></h1><span class="post-date"> 30 Jul 2015 · <a href="/line/#disqus_thread" data-disqus-identifier="/line/"></a> </span><h2 id="line-api-requirement-line-api-documentation">Line API requirement - <a href="http://carpedm20.github.io/line/">Line API Documentation</a></h2><ul><li><a href="https://github.com/carpedm20/LINE">Line API</a></li><li>Python2 (not 3 because Thrift not support yet)</li><li><a href="https://thrift.apache.org">Apache Thrift</a></li></ul><h2 id="install-thrift-on-ubuntu"><a href="http://www.saltycrane.com/blog/2011/06/install-thrift-ubuntu-1010-maverick">Install Thrift on Ubuntu</a></h2><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>apt-get install -y automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git debhelper cmake
+</code></pre></div>
+<h2 id="references">References:</h2>
+
+<ol>
+<li><a href="http://docs.drone.io/quickstart.html">Drone.io Quickstart</a></li>
+<li><a href="http://docs.drone.io/python.html">Drone.io Building Python Projects</a></li>
+<li><a href="http://buddylindsey.com/hosting-your-open-source-project-on-heroku-with-private-configuration/">Hosting Your Open Source Project on Heroku with Private Configuration</a></li>
+<li><a href="http://stackoverflow.com/questions/3176918/how-to-hide-connection-string-user-name-pw-when-using-source-control">How to hide connection string, user name, pw when using source control?</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/line/">
+        Python Line API
+      </a>
+    </h1>
+
+    <span class="post-date">
+      30 Jul 2015
+      
+        &middot;
+        <a href="/line/#disqus_thread" data-disqus-identifier="/line/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="line-api-requirement-line-api-documentation">Line API requirement - <a href="http://carpedm20.github.io/line/">Line API Documentation</a></h2>
+
+<ul>
+<li><a href="https://github.com/carpedm20/LINE">Line API</a></li>
+<li>Python2 (not 3 because Thrift not support yet)</li>
+<li><a href="https://thrift.apache.org">Apache Thrift</a></li>
+</ul>
+
+<h2 id="install-thrift-on-ubuntu"><a href="http://www.saltycrane.com/blog/2011/06/install-thrift-ubuntu-1010-maverick">Install Thrift on Ubuntu</a></h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>apt-get install -y automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git debhelper cmake
 <span class="gp">$ </span><span class="nb">cd</span> /tmp
 <span class="gp">$ </span>curl http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz | tar zx
 <span class="gp">$ </span><span class="nb">cd</span> /tmp/thrift-0.9.1
 <span class="gp">$ </span>./configure
 <span class="gp">$ </span>make <span class="o">&amp;&amp;</span> make install
 <span class="gp">$ </span>rm -rf /tmp/thrift-0.9.1
-</code></pre></div><h2 id="fix-login-with-email-and-password-failed"><a href="https://www.youtube.com/watch?v=vaB1ZzV7UxY">Fix login with email and password failed</a></h2><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># installl line and remove first that tricky don't know why</span>
+</code></pre></div>
+<h2 id="fix-login-with-email-and-password-failed"><a href="https://www.youtube.com/watch?v=vaB1ZzV7UxY">Fix login with email and password failed</a></h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># installl line and remove first that tricky don't know why</span>
 <span class="gp">$ </span>pip install line <span class="o">&amp;&amp;</span> pip uninstall -y line
 <span class="gp">$ </span>git clone https://github.com/carpedm20/LINE.git
 <span class="gp">$ </span><span class="nb">cd </span>LINE/line
@@ -99,16 +608,19 @@
 <span class="gp">$ </span>patch api.py &lt; api.py.patch
 <span class="gp">$ </span>python config.py
 <span class="gp">$ </span>python setup.py install
-</code></pre></div><h2 id="sample-bot">Sample Bot</h2><p><noscript><pre># original: <a href="https://github.com/carpedm20/LINE/blob/master/examples/echobot.py">https://github.com/carpedm20/LINE/blob/master/examples/echobot.py</a></p>
+</code></pre></div>
+<h2 id="sample-bot">Sample Bot</h2>
+
+<p><noscript><pre># original: <a href="https://github.com/carpedm20/LINE/blob/master/examples/echobot.py">https://github.com/carpedm20/LINE/blob/master/examples/echobot.py</a></p>
 
 <p>from line import LineClient, LineGroup, LineContact</p>
 
 <p>try:
-   client = LineClient("ID", "PASSWORD")
+   client = LineClient(&quot;ID&quot;, &quot;PASSWORD&quot;)
    print client.authToken #print authToken before error and use this login again
-   #client = LineClient(authToken="AUTHTOKEN")
+   #client = LineClient(authToken=&quot;AUTHTOKEN&quot;)
 except:
-   print "Login Failed"</p>
+   print &quot;Login Failed&quot;</p>
 
 <p>while True:
    op_list = []</p>
@@ -123,7 +635,10 @@ except:
 <div class="highlight"><pre><code class="language-" data-lang="">  msg = message.text
   #receiver.sendMessage(&amp;quot;[%s] %s&amp;quot; % (sender.name, msg)) #this send message to ourselft that make infinity loop
   sender.sendMessage(&amp;quot;[%s] %s&amp;quot; % (sender.name, msg)) #send message back to sender&lt;/pre&gt;&lt;/noscript&gt;&lt;script src="https://gist.github.com/ibotdotout/382369f272b9a2804318.js"&gt; &lt;/script&gt;
-</code></pre></div><h2 id="line-api-patched-dockerfile-on-ubuntu">Line API Patched Dockerfile on Ubuntu</h2><p><noscript><pre>FROM dockerfile/python</p>
+</code></pre></div>
+<h2 id="line-api-patched-dockerfile-on-ubuntu">Line API Patched Dockerfile on Ubuntu</h2>
+
+<p><noscript><pre>FROM dockerfile/python</p>
 
 <p>RUN apt-get update -y &amp;&amp; apt-get dist-upgrade -y</p>
 
@@ -150,22 +665,115 @@ RUN cd /tmp/LINE &amp;&amp; python config.py
 RUN cd /tmp/LINE &amp;&amp; python setup.py install
 RUN rm -rf /tmp/LINE</p>
 
-<p>CMD ["bash"]</pre></noscript><script src="https://gist.github.com/ibotdotout/7082eae15450fe5de783.js"></script></p><h2 id="line-send-message-by-lineid">Line send message by LineID</h2><p><noscript><pre>from line import LineClient, LineGroup, LineContact</p>
+<p>CMD [&quot;bash&quot;]</pre></noscript><script src="https://gist.github.com/ibotdotout/7082eae15450fe5de783.js"> </script></p>
+
+<h2 id="line-send-message-by-lineid">Line send message by LineID</h2>
+
+<p><noscript><pre>from line import LineClient, LineGroup, LineContact</p>
 
 <p>try:
-   client = LineClient("ID", "PASSWORD")
+   client = LineClient(&quot;ID&quot;, &quot;PASSWORD&quot;)
    print client.authToken #print authToken before error and use this login again
-   #client = LineClient(authToken="AUTHTOKEN")
+   #client = LineClient(authToken=&quot;AUTHTOKEN&quot;)
 except:
-   print "Login Failed"</p>
+   print &quot;Login Failed&quot;</p>
 
-<p>lineID = "Enter target LineID"
+<p>lineID = &quot;Enter target LineID&quot;
 try:
     target = client._client.findContactByUserid(lineID)
     c = LineContact(client, target)
-    c.sendMessage("hello")
+    c.sendMessage(&quot;hello&quot;)
 except:
-    print("cant find LineID or your LineID is private ID")</pre></noscript><script src="https://gist.github.com/ibotdotout/0a4aabc85c7767cb0679.js"></script></p><h3 id="references">References:</h3><ol><li><a href="https://github.com/carpedm20/LINE">Python Line API Repository</a></li><li><a href="http://carpedm20.github.io/line/">Line API Documentation</a></li><li><a href="https://www.youtube.com/playlist?list=PLv55tReH1ENzu9z5oaU46VNtU0G9wESTH">StepHack.Com : มาเขียน บอท line ด้วย Python กันเถอะ</a></li><li><a href="http://dev-program.com/how-to-use-line-api-in-python-lts-work/">How to use LINE API in python ( lt’s work)</a></li><li><a href="http://carpedm20.blogspot.kr/2013/09/line-reverse-engineering.html">Line reverse engineering</a></li></ol></div><div class="post"><h1 class="post-title"> <a href="/grammar/"> Grammar check </a></h1><span class="post-date"> 30 Jul 2015 · <a href="/grammar/#disqus_thread" data-disqus-identifier="/grammar/"></a> </span><h2 id="web-based">Web Based</h2><ol><li><a href="http://fraze.it">FrazeIt - checking phrase from top writers</a></li><li><a href="https://www.languagetool.org">LanguageTool - proof­reading program</a></li><li><a href="https://www.grammarly.com">Grammarly makes you a better writer</a></li></ol><h2 id="tools">Tools</h2><ol><li><a href="https://robots.thoughtbot.com/vim-spell-checking">Vim Spell-Checking</a></li><li><a href="https://www.linux.com/learn/tutorials/357267:using-spell-checking-in-vim">Using Spell Checking in Vim</a></li></ol></div></div><div class="pagination"> <a class="pagination-item older" href="/page7">Older</a> <a class="pagination-item newer" href="/page5">Newer</a></div></div></div><label for="sidebar-checkbox" class="sidebar-toggle"></label> <script>var disqus_shortname="im-bot";!function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript",t.src="http://"+disqus_shortname+".disqus.com/count.js",(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(t)}()</script></body> <script src="/js/search.min.js"  charset="utf-8"></script><script id="search-results-template" type="text/mustache">
+    print(&quot;cant find LineID or your LineID is private ID&quot;)</pre></noscript><script src="https://gist.github.com/ibotdotout/0a4aabc85c7767cb0679.js"> </script></p>
+
+<h3 id="references">References:</h3>
+
+<ol>
+<li><a href="https://github.com/carpedm20/LINE">Python Line API Repository</a></li>
+<li><a href="http://carpedm20.github.io/line/">Line API Documentation</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLv55tReH1ENzu9z5oaU46VNtU0G9wESTH">StepHack.Com : มาเขียน บอท line ด้วย Python กันเถอะ</a></li>
+<li><a href="http://dev-program.com/how-to-use-line-api-in-python-lts-work/">How to use LINE API in python ( lt’s work)</a></li>
+<li><a href="http://carpedm20.blogspot.kr/2013/09/line-reverse-engineering.html">Line reverse engineering</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/grammar/">
+        Grammar check
+      </a>
+    </h1>
+
+    <span class="post-date">
+      30 Jul 2015
+      
+        &middot;
+        <a href="/grammar/#disqus_thread" data-disqus-identifier="/grammar/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="web-based">Web Based</h2>
+
+<ol>
+<li><a href="http://fraze.it">FrazeIt - checking phrase from top writers</a></li>
+<li><a href="https://www.languagetool.org">LanguageTool - proof­reading program</a></li>
+<li><a href="https://www.grammarly.com">Grammarly makes you a better writer</a></li>
+</ol>
+
+<h2 id="tools">Tools</h2>
+
+<ol>
+<li><a href="https://robots.thoughtbot.com/vim-spell-checking">Vim Spell-Checking</a></li>
+<li><a href="https://www.linux.com/learn/tutorials/357267:using-spell-checking-in-vim">Using Spell Checking in Vim</a></li>
+</ol>
+
+    
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page7">Older</a>
+  
+  
+    
+      <a class="pagination-item newer" href="/page5">Newer</a>
+    
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+  
+  <script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'im-bot'; // required: replace example with your forum shortname
+  // var disqus_developer = 1; // Comment out when the site is live
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+  </script>
+
+
+  </body>
+
+    <!-- jekyll-lunr-js-search -->
+  <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script id="search-results-template" type="text/mustache">
     {{#entries}}
       <article>
         <h3>
@@ -174,4 +782,21 @@ except:
         </h3>
       </article>
     {{/entries}}
-  </script><script>$(function(){$("#search-query").lunrSearch({indexUrl:"/js/index.json",results:"#search-results",entries:".entries",template:"#search-results-template"})}),$("#close-search-results").click(function(){$("#search-query").val(""),$("#search-results").hide()})</script></html>
+  </script>
+  
+  <script type="text/javascript">
+    $(function() {
+      $('#search-query').lunrSearch({
+        indexUrl: '/js/index.json',   // Url for the .json file containing search index data
+        results : '#search-results',  // selector for containing search results element
+        entries : '.entries',         // selector for search entries containing element (contained within results above)
+        template: '#search-results-template'  // selector for Mustache.js template
+      });
+    });
+    $("#close-search-results").click(function(){
+      $('#search-query').val('');
+      $('#search-results').hide();
+    });
+  </script>
+
+</html>

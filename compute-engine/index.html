@@ -1,4 +1,303 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><link href="http://gmpg.org/xfn/11" rel="profile"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><meta property="og:title" content="Google Compute Engine"/><meta property="og:type" content="article"/><meta property="og:url" content="http://dev.im-bot.com/compute-engine//"/><meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png"/><meta property="og:description" content="Open Port On Google Compute EngineGo to cloud.google.comGo to my ConsoleChoose you Project.Choose " Compute Engine"  Choose"  Networks"  Choose..." /><meta property="og:site_name" content="botbotbot"/><meta property="og:locale" content="th_TH"/><title> Google Compute Engine · botbotbot</title><link rel="stylesheet" href="/public/css/poole.css"><link rel="stylesheet" href="/public/css/syntax.css"><link rel="stylesheet" href="/public/css/lanyon.css"><link rel="stylesheet" href="/public/css/searchbox.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"><link rel="shortcut icon" href="/public/favicon.ico"><link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml"> <script>!function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-52133577-1","auto"),ga("send","pageview")</script></head><body> <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><div class="sidebar" id="sidebar"><div class="sidebar-item"><p>botbotbot's blog</p></div><nav class="sidebar-nav"> <a class="sidebar-nav-item" href="/">Home</a> <a class="sidebar-nav-item" href="/about/">About Me</a> <a class="sidebar-nav-item" href="/tags/">Tags</a><div class="sidebar-item"><p> © 2016. All rights reserved.</p></div></div><div class="wrap"><div class="masthead"><div class="container"><h3 class="masthead-title"> <a href="/" title="Home">botbotbot</a> <small>'s blog</small> <span id="search"><form action="/search" id="searchbox"> <input id="search-query" placeholder="Search" autocomplete="off" name="q"></form> </span></h3></div></div><div class="container"><div class="post"> <section id="search-results" style="display:none"><div id="close-search-results"><h1 class="post-title"> Search results <i class="fa fa-times" style="font-size:.7em"></i></h1></div><div class="entries"></div> </section></div></div><div class="container content"><div class="post"><h1 class="post-title">Google Compute Engine</h1> <span class="post-date"> 28 Jul 2014 · <a href="/compute-engine//index.html#disqus_thread" data-disqus-identifier="/compute-engine/"></a> </span><h2 id="open-port-on-google-compute-engine"><a href="http://stackoverflow.com/questions/21065922/how-to-open-a-specific-port-such-as-9090-in-google-compute-engine">Open Port On Google Compute Engine</a></h2><ol><li>Go to cloud.google.com</li><li>Go to my Console</li><li>Choose you Project.</li><li>Choose "Compute Engine"</li><li>Choose "Networks"</li><li>Choose the interface for you Instances.</li><li>In firewalls section, Go to Create New.</li><li>Create your rule, in this case "Protocols &amp; Ports" would be "tcp:9090" i guess.</li><li>Save.</li></ol><h2 id="attach-disk"><a href="https://developers.google.com/compute/docs/disks#attachdiskcreation">Attach Disk</a></h2></div><div class="related"><h2>Related Posts</h2><ul class="related-posts"><li><h3> <a href="/docker-select-caching/"> Selectively disable caching for specific RUN commands in Dockerfile <small>24 Mar 2016</small> </a></h3></li><li><h3> <a href="/cassandra/"> What I know about Apache Cassandra <small>24 Mar 2016</small> </a></h3></li><li><h3> <a href="/docker-cron/"> Crontab on Docker <small>04 Mar 2016</small> </a></h3></li></ul></div><div class="related"><div id="disqus_thread"></div> <script>var disqus_shortname="im-bot",disqus_identifier="/compute-engine/";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//"+disqus_shortname+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div><label for="sidebar-checkbox" class="sidebar-toggle"></label> <script>var disqus_shortname="im-bot";!function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript",t.src="http://"+disqus_shortname+".disqus.com/count.js",(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(t)}()</script></body> <script src="/js/search.min.js" charset="utf-8"></script><script id="search-results-template" type="text/mustache">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <meta property="og:title" content="Google Compute Engine" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dev.im-bot.com/compute-engine//" />
+<meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
+<meta property="og:description" content="Open Port On Google Compute EngineGo to cloud.google.comGo to my ConsoleChoose you Project.Choose &quot;Compute Engine&quot;Choose &quot;Networks&quot;Choose..." />
+<meta property="og:site_name" content="botbotbot" />
+<meta property="og:locale" content="th_TH" />
+
+
+  <title>
+    
+      Google Compute Engine &middot; botbotbot
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/searchbox.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Google Analytic-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-52133577-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>botbotbot's blog</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About Me</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/tags/">Tags</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2016. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">botbotbot</a>
+            <small>'s blog</small>
+            <!-- jekyll-lunr-js-search -->
+<span id="search">
+  <form action="/search" method="get" id="searchbox">
+    <input type="text" id="search-query" placeholder="Search" autocomplete="off" name="q">
+  </form>
+</span>
+
+          </h3>
+        </div>
+      </div>
+
+      <!-- jekyll-lunr-js-search -->
+<div class="container">
+  <div class="post">
+    <section id="search-results" style="display: none;">
+        <div id="close-search-results">
+          <h1 class="post-title">
+              Search results
+              <i class="fa fa-times" style="font-size: 0.7em"></i>
+          </h1>
+        </div>
+        <div class="entries">
+         </div>
+    </section>
+  </div>
+</div>
+
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Google Compute Engine</h1>
+  <span class="post-date">
+    28 Jul 2014
+      
+        &middot;
+        <a href="/compute-engine//index.html#disqus_thread" data-disqus-identifier="/compute-engine/"></a>
+        
+      
+  </span>
+
+  <h2 id="open-port-on-google-compute-engine"><a href="http://stackoverflow.com/questions/21065922/how-to-open-a-specific-port-such-as-9090-in-google-compute-engine">Open Port On Google Compute Engine</a></h2>
+
+<ol>
+<li>Go to cloud.google.com</li>
+<li>Go to my Console</li>
+<li>Choose you Project.</li>
+<li>Choose &quot;Compute Engine&quot;</li>
+<li>Choose &quot;Networks&quot;</li>
+<li>Choose the interface for you Instances.</li>
+<li>In firewalls section, Go to Create New.</li>
+<li>Create your rule, in this case &quot;Protocols &amp; Ports&quot; would be &quot;tcp:9090&quot; i guess.</li>
+<li>Save.</li>
+</ol>
+
+<h2 id="attach-disk"><a href="https://developers.google.com/compute/docs/disks#attachdiskcreation">Attach Disk</a></h2>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/docker-select-caching/">
+            Selectively disable caching for specific RUN commands in Dockerfile
+            <small>24 Mar 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/cassandra/">
+            What I know about Apache Cassandra
+            <small>24 Mar 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/docker-cron/">
+            Crontab on Docker
+            <small>04 Mar 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+    <div class="related">
+      <!-- disqus comment -->
+      <div id="disqus_thread"></div>
+      <script>
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'im-bot';
+      var disqus_identifier = "/compute-engine/";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  
+
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+  
+  <script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'im-bot'; // required: replace example with your forum shortname
+  // var disqus_developer = 1; // Comment out when the site is live
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+  </script>
+
+
+  </body>
+
+    <!-- jekyll-lunr-js-search -->
+  <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script id="search-results-template" type="text/mustache">
     {{#entries}}
       <article>
         <h3>
@@ -7,4 +306,21 @@
         </h3>
       </article>
     {{/entries}}
-  </script><script>$(function(){$("#search-query").lunrSearch({indexUrl:"/js/index.json",results:"#search-results",entries:".entries",template:"#search-results-template"})}),$("#close-search-results").click(function(){$("#search-query").val(""),$("#search-results").hide()})</script></html>
+  </script>
+  
+  <script type="text/javascript">
+    $(function() {
+      $('#search-query').lunrSearch({
+        indexUrl: '/js/index.json',   // Url for the .json file containing search index data
+        results : '#search-results',  // selector for containing search results element
+        entries : '.entries',         // selector for search entries containing element (contained within results above)
+        template: '#search-results-template'  // selector for Mustache.js template
+      });
+    });
+    $("#close-search-results").click(function(){
+      $('#search-query').val('');
+      $('#search-results').hide();
+    });
+  </script>
+
+</html>
