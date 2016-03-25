@@ -42,7 +42,6 @@ gems:
     - redcarpet
     - jekyll-feed
     - jekyll-lunr-js-search
-    - octopress-minify-html
 
 # Plugins config
 lunr_search:
