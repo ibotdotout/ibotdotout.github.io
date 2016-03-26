@@ -6,6 +6,7 @@ title: About Me
 Hi, I'm botbotbot.  
 
 ### Profiles:
+* [My Codestats - Summary My Github](http://coderstats.net/github/ibotdotout/)
 * [My Github](http://github.com/ibotdotout)  
 * [My FbPage](http://fb.me/botblogblog)  
 * [My Linkedin](https://www.linkedin.com/in/tkroputa)  
