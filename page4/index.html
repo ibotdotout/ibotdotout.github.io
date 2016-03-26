@@ -192,6 +192,43 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/opengraph/">
+        Sharing with Open Graph
+      </a>
+    </h1>
+
+    <span class="post-date">
+      12 Oct 2015
+      
+        &middot;
+        <a href="/opengraph/#disqus_thread" data-disqus-identifier="/opengraph/"></a>
+        
+      
+    </span>
+
+    
+      <p><img src="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" alt="sharing with open graph"></p>
+
+<p>Add this meta data to your <code>html page</code> between <code>&lt;head&gt; ... &lt;/head&gt;</code></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Markdown Slide"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/slide/"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/opengraph_logo.png"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Remark.js - easy and simple slide"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+<p>Then using <a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a> to look what it look like when shared.</p>
+
+
+      <div style="text-align:right;">
+        <a href="/opengraph/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/slide/">
         Markdown Slide
       </a>
@@ -339,57 +376,6 @@ programmer,” soon your brain will believe you.</p>
       <div style="text-align:right;">
         <a href="/startup/" style="color:#000;"> Read More </a>
       </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/jekyll-with-ci/">
-        Jekyll with Continuous Integration
-      </a>
-    </h1>
-
-    <span class="post-date">
-      23 Sep 2015
-      
-        &middot;
-        <a href="/jekyll-with-ci/#disqus_thread" data-disqus-identifier="/jekyll-with-ci/"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="travis-yml">.travis.yml</h2>
-
-<p><noscript><pre>400: Invalid request
-</pre></noscript><script src="https://gist.github.com/96c3b980cdecef2c7ee4.js"> </script></p>
-
-<h2 id="tips">Tips:</h2>
-
-<ul>
-<li>Jekyll + Travis with Docker not work well - <a href="https://travis-ci.org/ibotdotout/ibotdotout.github.io/builds/81637869">Error:  Permission denied</a></li>
-</ul>
-
-<p>Travis support docker but not fully permission some dependencies that
-try to use OS command ex. kill can make your test error or failed.</p>
-
-<ul>
-<li>htmlproofer external</li>
-</ul>
-
-<p>link that not start with http will be claim as internal link</p>
-
-<h2 id="references">References:</h2>
-
-<ol>
-<li><a href="https://jekyllrb.com/docs/continuous-integration/">Jekyll with Continuous Integration</a></li>
-<li><a href="http://www.jacobtomlinson.co.uk/jekyll/2015/02/18/test-you-jekyll-blog-with-travis-ci/">Test your Jekyll blog with Travis CI</a></li>
-<li><a href="https://hub.docker.com/r/grahamc/jekyll/">Simple Docker Container for Jekyll Work</a></li>
-<li><a href="http://stackoverflow.com/questions/28788109/automatic-merge-branch-into-master-on-sucessful-build-in-travis">Automatic merge branch into master on sucessful build in
-travis</a></li>
-<li><a href="http://docs.travis-ci.com/user/deployment/custom/">TravisCI Custom Deployment</a></li>
-</ol>
-
     
   </div>
   

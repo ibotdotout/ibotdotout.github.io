@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-03-26T12:18:42+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Selectively disable caching for specific RUN commands in Dockerfile</title><link href="http://dev.im-bot.com//docker-select-caching/" rel="alternate" type="text/html" title="Selectively disable caching for specific RUN commands in Dockerfile" /><published>2016-03-24T00:00:00+00:00</published><updated>2016-03-24T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-select-caching</id><content type="html" xml:base="http://dev.im-bot.com//docker-select-caching/">&lt;p&gt;If you using &lt;code&gt;Dockerfile&lt;/code&gt;, you should know about caching for faster builds.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-03-26T12:34:02+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Colemak Keyboard Layout</title><link href="http://dev.im-bot.com//colemak/" rel="alternate" type="text/html" title="Colemak Keyboard Layout" /><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//colemak</id><content type="html" xml:base="http://dev.im-bot.com//colemak/">&lt;p&gt;Colemak&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Fast typing, Least finger move than QWERY&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://colemak.com&quot;&gt;colemak layout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://chetansurpur.com/blog/2012/11/colemak.html&quot;&gt;Ditch QWERTY – Your Hands Need Colemak&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://patorjk.com/keyboard-layout-analyzer/#/main&quot;&gt;Analyze Text Input See which layout is best for your input text&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/189270/alternative-keyboard-layouts-explained-dvorak-colemak-and-whether-you-should-care/&quot;&gt;Alternative Keyboard Layouts Explained: Should You Switch to Dvorak or Colemak?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.workmanlayout.com/blog/#popbooks&quot;&gt;Test Keyboard Layout Using Popular Books&lt;/a&gt; -  Should look at Top/Home/Bottom Row Percentage&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sermoa.wordpress.com/2011/12/22/colemak-is-easy-to-learn/&quot;&gt;Colemak is easy to learn!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://thetypingcat.com/course/colemak&quot;&gt;Learn Colemak&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vim&quot;&gt;Vim&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/vim-scripts/colqer&quot;&gt;colqer - Colemak  Only in Vim Insert Mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=uubflqamqFk&quot;&gt;Intro to Vim for Colemak users&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://forum.colemak.com/viewtopic.php?pid=162#p162&quot;&gt;Colemak + Vim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jooize/vim-colemak&quot;&gt;vim-colemak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sermoa.wordpress.com/2011/12/16/colemak-and-vim-but-what-about-hjkl/&quot;&gt;Colemak and vim: “But what about h/j/k/l?”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="keyboard" /><summary>Colemak
+
+
+Fast typing, Least finger move than QWERY
+
+
+
+colemak layout
+Ditch QWERTY – Your Hands Need Colemak</summary></entry><entry><title>Selectively disable caching for specific RUN commands in Dockerfile</title><link href="http://dev.im-bot.com//docker-select-caching/" rel="alternate" type="text/html" title="Selectively disable caching for specific RUN commands in Dockerfile" /><published>2016-03-24T00:00:00+00:00</published><updated>2016-03-24T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-select-caching</id><content type="html" xml:base="http://dev.im-bot.com//docker-select-caching/">&lt;p&gt;If you using &lt;code&gt;Dockerfile&lt;/code&gt;, you should know about caching for faster builds.
 Sometimes, you need to rebuild without cache. you can run docker &lt;code&gt;build&lt;/code&gt; with
 &lt;code&gt;--no-cache&lt;/code&gt; option that will disable all layer cache.&lt;/p&gt;
 
@@ -713,126 +750,4 @@ What Is the Difference Between a Block, a Proc, and a Lambda in Ruby?</summary><
 
 &lt;h3 id=&quot;website-performance-tutorials&quot;&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLLnpHn493BHGpGXukqYsxwQw3ziW3uti6&quot;&gt;Website Performance Tutorials&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;f5-อ่อนว่ะ&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1wUi1ZeqIHvnE4YkWC613rVJFdbgC0t-pCNcyk0PaUxk/edit#heading=h.xiu1i3wbkwyr&quot;&gt;F5 อ่อนว่ะ&lt;/a&gt;&lt;/h3&gt;</content><category term="learn" /></entry><entry><title>Jekyll build with Travis and deploy to Github Page</title><link href="http://dev.im-bot.com//jekyll-travis-github/" rel="alternate" type="text/html" title="Jekyll build with Travis and deploy to Github Page" /><published>2015-10-26T00:00:00+00:00</published><updated>2015-10-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//jekyll-build-with-travis</id><content type="html" xml:base="http://dev.im-bot.com//jekyll-travis-github/">&lt;blockquote&gt;
-&lt;p&gt;Github Pages Tips:&lt;br&gt;
-Github Pages always complie jekyll with &lt;code&gt;--safe&lt;/code&gt; option that will&lt;br&gt;
-disable plugins but some plugin can work with Github Pages.&lt;br&gt;
-&lt;a href=&quot;https://help.github.com/articles/using-jekyll-plugins-with-github-pages/&quot;&gt;List of Jekyll Plguins that working on Github &amp;gt; Pages&lt;/a&gt;  &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;To avoid this &lt;code&gt;--safe&lt;/code&gt; option to be powerful jekyll, you need to build your jelyll somewhere else and commit your static page to &lt;code&gt;main&lt;/code&gt; or &lt;code&gt;gh-page&lt;/code&gt; branch.
-We can automate build jekyll with &lt;a href=&quot;https://travis-ci.org&quot;&gt;Travis-CI&lt;/a&gt;
-that store your jekyll file in &lt;code&gt;jekyll&lt;/code&gt; branch when push to github that
-will trig to Travis to build and deploy static page back to your &lt;code&gt;main&lt;/code&gt;
-branch to publish your contents. you should read previous &lt;a href=&quot;/jekyll-with-ci/&quot;&gt;blog about
-jekyll and travis&lt;/a&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;good-to-knows&quot;&gt;Good to knows:&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Should backup your repository in somewhere else, this method need to
-in your local repository and your github repository.&lt;/li&gt;
-&lt;li&gt;In your &lt;code&gt;.travis.yml&lt;/code&gt; always keep &lt;code&gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1&lt;/code&gt; to avoid your tokens display on logs or you can remove for debugging git push.&lt;/li&gt;
-&lt;li&gt;Github page need &lt;code&gt;verified email&lt;/code&gt; for trigger update contents.&lt;/li&gt;
-&lt;li&gt;You can check your last build from &lt;code&gt;feed.xml&lt;/code&gt; on Jekyll&lt;/li&gt;
-&lt;li&gt;If your use Github page as personal page don&amp;#39;t try to change &lt;code&gt;Default
-branch&lt;/code&gt; on your Github repository settings that will use your
-&lt;code&gt;Default branch&lt;/code&gt; to hosting your page.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;how-to&quot;&gt;How to:&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Verified by &lt;a href=&quot;http://dev.mildronize.com&quot;&gt;Mildronize&lt;/a&gt;  &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Create &lt;code&gt;jekyll&lt;/code&gt; branch for development&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git branch jekyll
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Clear your &lt;code&gt;main&lt;/code&gt; or &lt;code&gt;gh-page&lt;/code&gt; branch to blank&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git rm &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Enable Travis on your repository on Travis website and turn on &lt;code&gt;Build
-only if .travis.yml is present&lt;/code&gt; on your travis repository settings.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Checkout &lt;code&gt;jekyll&lt;/code&gt; branch and create &lt;code&gt;.travis.yml&lt;/code&gt; then edit &lt;code&gt;GH_REF&lt;/code&gt;
-and &lt;code&gt;TARGET_BRANCH&lt;/code&gt; to your own&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git checkout jekyll
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;.travis.yml&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;sudo: false
-
-language: ruby
-
-rvm:
-- 2.2
-
-branches:
-  only:
-  - jekyll
-
-script:
-- bundle exec jekyll build
-- bundle exec htmlproofer ./_site --disable-external
-
-after_success:
-- git clone https://$GH_REF
-- cd $(basename ${GH_REF%.git})
-- git config user.name &quot;Travis-CI&quot;
-- git config user.email ${EMAIL}
-- rsync -az --delete --exclude &#39;.git*&#39; ../_site/ .
-- touch .nojekyll
-- git add -A .
-- git commit -m &quot;Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}&quot;
-- git push -f &quot;https://${DEPLOY_KEY}@${GH_REF}&quot; ${TARGET_BRANCH} &amp;gt; /dev/null 2&amp;gt;&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;1
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
-  - TARGET_BRANCH: master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Create your &lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Github Personal Access Tokens&lt;/a&gt; - check only &lt;code&gt;repo&lt;/code&gt; that enough.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Install Travis Gem on your machine for encryption sensitive data&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gem install travis
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Encrypt your &lt;code&gt;EMAIL&lt;/code&gt; and &lt;code&gt;DEPLOY_KEY&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# --add opton will automated add sescure data to your .travis.yml&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# edit verifiedemail to your github email account&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;travis encrypt &lt;span class=&quot;nv&quot;&gt;EMAIL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;verifiedemail --add
-&lt;span class=&quot;c&quot;&gt;# edit githubtoken to your github personal access tokens&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;travis encrpy &lt;span class=&quot;nv&quot;&gt;DEPLOY_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;githubtoken --add
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Commit &lt;code&gt;jekyll&lt;/code&gt; branch&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git add -A
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&quot;Create Jekyll branch for build jekyll with Travis&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Push to &lt;code&gt;jekyll&lt;/code&gt; branch to Github repository and wait&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git push origin jekyll
-&lt;span class=&quot;c&quot;&gt;# Don&#39;t care warnning about main/gh-page branch that local repository out of date&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Look your published site&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;demo-repository&quot;&gt;&lt;a href=&quot;https://github.com/ibotdotout/ibotdotout.github.io&quot;&gt;Demo Repository&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;I use &lt;code&gt;develop&lt;/code&gt; branch as &lt;code&gt;jekyll&lt;/code&gt; and I&amp;#39;m lazy to change but I recommend to use &lt;code&gt;jekyll&lt;/code&gt; branch should be better.&lt;/p&gt;
-
-&lt;h3 id=&quot;tips&quot;&gt;Tips:&lt;/h3&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# config local git repo to push only current active branch&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git config push.default simple
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://gist.github.com/domenic/ec8b0fc8ab45f39403dd&quot;&gt;Auto-deploying built products to gh-pages with Travis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://medium.com/@nthgergo/publishing-gh-pages-with-travis-ci-53a8270e87db&quot;&gt;Publishing gh-pages with Travis-CI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://eshepelyuk.github.io/2014/10/28/automate-github-pages-travisci.html&quot;&gt;Automate GitHub Pages publishing with Jekyll and Travis CI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/troubleshooting-github-pages-build-failures/&quot;&gt;Troubleshooting GitHub Pages build failures&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://docs.travis-ci.com/user/deployment/custom/&quot;&gt;Travis Custom Deployment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://docs.travis-ci.com/user/encryption-keys/&quot;&gt;Travis Encryption keys&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/creating-an-access-token-for-command-line-use/&quot;&gt;Creating an access token for command-line use&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/blog/572-bypassing-jekyll-on-github-pages&quot;&gt;Bypassing Jekyll on GitHub Pages&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><category term="article" /><category term="jekyll" /><summary>Custom build jekyll with Travis for enable plugin and deploy to Github Page</summary></entry></feed>
+&lt;h3 id=&quot;f5-อ่อนว่ะ&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1wUi1ZeqIHvnE4YkWC613rVJFdbgC0t-pCNcyk0PaUxk/edit#heading=h.xiu1i3wbkwyr&quot;&gt;F5 อ่อนว่ะ&lt;/a&gt;&lt;/h3&gt;</content><category term="learn" /></entry></feed>
