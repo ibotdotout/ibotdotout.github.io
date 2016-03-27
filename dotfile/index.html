@@ -8,18 +8,18 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Crontab on Docker" />
+  <meta property="og:title" content="Dotfile" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/docker-cron//" />
-<meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="You can start crontab following Run a cron job with Dockerjust put crontab in /etc/cron.d/ and run cron for making it working." />
+<meta property="og:url" content="http://dev.im-bot.com/dotfile//" />
+<meta property="og:image" content="http://dev.im-bot.comimg_url (local ulr)" />
+<meta property="og:description" content="learn about dotfile." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Crontab on Docker &middot; botbotbot
+      Dotfile &middot; botbotbot
     
   </title>
 
@@ -189,105 +189,51 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Crontab on Docker</h1>
+  <h1 class="post-title">Dotfile</h1>
   <span class="post-date">
-    04 Mar 2016
+    27 Mar 2016
       
         &middot;
-        <a href="/docker-cron//index.html#disqus_thread" data-disqus-identifier="/docker-cron/"></a>
+        <a href="/dotfile//index.html#disqus_thread" data-disqus-identifier="/dotfile/"></a>
         
           &middot;
-          Updated March 20, 2016
+          Updated December 24, 2015
         
       
   </span>
 
-  <p>You can start <code>crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
-just put <code>crontab</code> in <code>/etc/cron.d/</code> and run <code>cron</code> for making it working.</p>
+  <blockquote>
+<p>A file begins witn . that was hidden file on unix bases. Mostly use as configuration file ex. git, vim, bash  - <a href="https://www.quora.com/What-are-dotfiles">What are dotfiles?</a> </p>
+</blockquote>
+
+<p>Keep dotfiles with github like backup yours machine&#39;s setting. Your can move to new machine with same feeling from old one by restore dotfiles backup.</p>
 
 <!-- more -->
 
-<p>However when you try something that complex than <code>echo &quot;hello world&quot;</code> sometimes it just not working and you don&#39;t know why!!!
-You had alreay tried to run your script that working on your linux but no idea why not working on your docker.</p>
-
-<p><a href="http://stackoverflow.com/a/26958348">rozkosz</a> said:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""> Several issues that I faced while trying to get a cron job running in a docker container were:
- 1. time in the docker container is in UTC not local time;
- 2. the docker environment is not passed to cron;
- 3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
-</code></pre></div>
-<p>I think the problem that most people face is <code>cron</code> not run your script with same environment as your docker in terminal.
-You need to export your Docker environment to your <code>cron</code> that I found solution from <a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/">postgres-s3-backup Dockerfile</a>.
-You can following this for simple solution:</p>
-
-<ol>
-<li>In <code>Dockerfile</code>, export Docker environment to /root/env.txt</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  CMD env &gt; /root/env.txt <span class="o">&amp;&amp;</span> cron <span class="o">&amp;&amp;</span> your_init_script
-</code></pre></div>
-<ol>
-<li>In your <code>crontab</code> file, You need to to import your Docker environment before run your script</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="k">*</span>/5 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span>  root env - <span class="sb">`</span>cat /root/env.txt<span class="sb">`</span>  your_scipt  &gt;&gt; /var/log/cron.log 2&gt;&amp;1
-  <span class="c"># An empty line is required at the end of this file for a valid cron file.</span>
-</code></pre></div>
-<ol>
-<li>Test it. Your should put <code>date</code> in your script for debug and then <code>cat /var/log/cron.log</code> to see your results.</li>
-</ol>
-
-<p>For the local timezone problem your can setup your Dockerfile following this</p>
+<p>For <a href="https://github.com/ibotdotout/dotfiles">My OSX Dev Developement</a>, I use</p>
 
 <ul>
-<li><p>Debian/Linux Setting timezone</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"> <span class="c"># Set the time zone to the local time zone</span>
- RUN <span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure --frontend noninteractive tzdata
-</code></pre></div></li>
-<li><p><a href="http://wiki.alpinelinux.org/wiki/Setting_the_timezone">Alpine Setting the timezone</a></p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Alpine Linux</span>
-<span class="c"># set bangkok time</span>
-USEo root
-RUN apk add --update tzdata <span class="se">\</span>
-<span class="o">&amp;&amp;</span> cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime <span class="se">\</span>
-<span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt;  /etc/timezone <span class="se">\</span>
-<span class="o">&amp;&amp;</span> apk del tzdata <span class="se">\</span>
-<span class="o">&amp;&amp;</span> mv /etc/localtime /usr/share/zoneinfo/Asia/Bangkok
-
-<span class="c"># or</span>
-USER root
-RUN apk add --update tzdata
-ENV <span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok
-</code></pre></div></li>
-<li><p><a href="http://stackoverflow.com/a/25130291">Will docker container auto sync time with the host machine?</a></p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker run -it -v /etc/localtime:/etc/localtime:ro &lt; image &gt;
-</code></pre></div></li>
+<li><a href="https://github.com/anishathalye/dotbot/">dotbot</a> to link dotfiles.</li>
+<li><a href="https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew">Brewfile</a> and <a href="https://github.com/Homebrew/homebrew-bundle">Brew Bundle</a> to back and restore homebrew dependentcies.</li>
+<li><a href="https://github.com/junegunn/vim-plug">vim-plug - A minimalist Vim plugin manager.</a> - install vim plugins via <code>.vimrc</code></li>
+<li><a href="https://github.com/tmux-plugins/tpm">tpm - Tmux Plugin Manager</a> - install tmux plugins via <code>.tmux.conf</code></li>
 </ul>
 
-<h3 id="references">References:</h3>
+<h2 id="reference">Reference</h2>
 
-<ul>
-<li><a href="http://stackoverflow.com/questions/26822067/running-cron-python-jobs-within-docker/26958348#26958348">Running cron python jobs within docker</a></li>
-<li><a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a></li>
-<li><a href="http://stackoverflow.com/a/26958348">Running cron python jobs within docker</a></li>
-<li><a href="https://github.com/Alexis-benoist/docker-cron-example">docker-cron-example</a></li>
-<li><a href="https://github.com/aptible/docker-cron-example">Example implementation of cron jobs on Docker/Aptible</a></li>
-<li><a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/">Example of Cron</a></li>
-<li><a href="http://serverfault.com/a/84545">PATH in crontab</a></li>
-</ul>
+<ol>
+<li><a href="https://www.quora.com/What-are-dotfiles">What are dotfiles?</a></li>
+<li><a href="http://dotfiles.github.io">Dotfile Github</a></li>
+<li><a href="https://github.com/webpro/awesome-dotfiles">Awesome Dotfile</a></li>
+<li><a href="http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/">USING GIT AND GITHUB TO MANAGE YOUR DOTFILES</a></li>
+<li><a href="https://github.com/mildronize/dotfiles">mildronize/dotfiles</a></li>
+</ol>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/dotfile/">
-            Dotfile
-            <small>27 Mar 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -307,6 +253,15 @@ ENV <span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/cassandra/">
+            What I know about Apache Cassandra
+            <small>24 Mar 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -318,7 +273,7 @@ ENV <span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/docker-cron/";
+      var disqus_identifier = "/dotfile/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

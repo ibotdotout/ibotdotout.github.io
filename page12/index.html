@@ -192,6 +192,573 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/vim/">
+        Vim
+      </a>
+    </h1>
+
+    <span class="post-date">
+      09 Jun 2014
+      
+        &middot;
+        <a href="/vim/#disqus_thread" data-disqus-identifier="/vim/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="tutorial">Tutorial</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>vimtutor
+</code></pre></div>
+<h2 id="enter-to-vim">Enter to Vim</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  vim . <span class="c"># open with file browse</span>
+  vim -c <span class="s2">"h quickref | only"</span>
+  vim -O &lt; file1 &gt; &lt; file2 &gt; ... <span class="c"># open in verticle</span>
+  vim -o &lt; file1 &gt; &lt; file2 &gt; ... <span class="c"># open in honzital</span>
+</code></pre></div>
+<h2 id="normal-mode">Normal Mode</h2>
+
+<h3 id="save-exit">Save, Exit</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ZZ</td>
+<td>save and quit</td>
+</tr>
+<tr>
+<td>ZQ</td>
+<td>save without quit</td>
+</tr>
+</tbody></table>
+
+<h3 id="movements">Movements</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>w[ord]</td>
+<td>{letters, numbers, underscore}</td>
+</tr>
+<tr>
+<td>W[ORD]</td>
+<td>{non-blank characters}</td>
+</tr>
+<tr>
+<td>g{motion}</td>
+<td>work with display line ex. gj down one line, g$ go to end of display line</td>
+</tr>
+<tr>
+<td>f{char}</td>
+<td>move to next char</td>
+</tr>
+<tr>
+<td>t{char}</td>
+<td>move to before next char</td>
+</tr>
+<tr>
+<td>;</td>
+<td>repeat last search</td>
+</tr>
+<tr>
+<td>,</td>
+<td>repeat last search backward</td>
+</tr>
+</tbody></table>
+
+<h2 id="jump">Jump</h2>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>%</td>
+<td>jump between open/close parentheses</td>
+</tr>
+<tr>
+<td>&lt;C-o&gt;, &lt;C-i&gt;</td>
+<td>toggle jump position</td>
+</tr>
+<tr>
+<td>{num}&#124;(pipe)</td>
+<td>Go to Column</td>
+</tr>
+<tr>
+<td>&lt;number&gt;G</td>
+<td>go to line number</td>
+</tr>
+</tbody></table>
+
+<h3 id="visual">Visual</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>v{motion}</td>
+<td>visual mode select in line</td>
+</tr>
+<tr>
+<td>V{motion}</td>
+<td>visual mode select line</td>
+</tr>
+<tr>
+<td>&lt;C-v&gt;{motion}{cIA}</td>
+<td>change/insert/append in multiple lines</td>
+</tr>
+<tr>
+<td>&lt;C-v&gt;{motion}:</td>
+<td>command with multiple lines</td>
+</tr>
+</tbody></table>
+
+<h3 id="indent">Indent</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>==</td>
+<td>Auto Indent</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Auto Indent in selected on visual mode</td>
+</tr>
+<tr>
+<td>J</td>
+<td>join the current line and next line together</td>
+</tr>
+</tbody></table>
+
+<h3 id="edit">Edit</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cw</td>
+<td>change word</td>
+</tr>
+<tr>
+<td>gu{motion}, gU{motion}</td>
+<td>lower/upper letter</td>
+</tr>
+</tbody></table>
+
+<h3 id="delete">Delete</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>daw</td>
+<td>delete a word</td>
+</tr>
+<tr>
+<td>das</td>
+<td>delete a sentence</td>
+</tr>
+<tr>
+<td>dap</td>
+<td>delete a paragraph</td>
+</tr>
+<tr>
+<td>dW</td>
+<td>delete until space</td>
+</tr>
+<tr>
+<td>dG</td>
+<td>delete until end of file</td>
+</tr>
+<tr>
+<td>d$</td>
+<td>delete until last of line</td>
+</tr>
+<tr>
+<td>dbw , &lt;C-w&gt; in insert mode</td>
+<td>delete back one word</td>
+</tr>
+<tr>
+<td>d^ , &lt;C-u&gt; in insert mode</td>
+<td>delete back to start of line</td>
+</tr>
+</tbody></table>
+
+<h3 id="undo">Undo</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>u</td>
+<td>redo</td>
+</tr>
+<tr>
+<td>&lt;C-r&gt;</td>
+<td>Redo</td>
+</tr>
+</tbody></table>
+
+<h3 id="search">Search</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>\&lt;word&gt;\c</td>
+<td>search word with ignore case</td>
+</tr>
+</tbody></table>
+
+<h3 id="repeat">Repeat</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.</td>
+<td>repeat last action (not include any move action)</td>
+</tr>
+</tbody></table>
+
+<h3 id="etc">ETC</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*</td>
+<td>highlight word</td>
+</tr>
+<tr>
+<td>&lt;C-a&gt;,&lt;C-x&gt;</td>
+<td>addition and subtraction on numbers that also find next number automatically if current cursor not a number</td>
+</tr>
+<tr>
+<td>&lt;C-I&gt;</td>
+<td>Tab</td>
+</tr>
+<tr>
+<td>&lt;C-[&gt;</td>
+<td>Esc</td>
+</tr>
+<tr>
+<td>&lt;C-M&gt;</td>
+<td>Enter</td>
+</tr>
+<tr>
+<td>&lt;C-H&gt;</td>
+<td>Backspace</td>
+</tr>
+</tbody></table>
+
+<h2 id="in-insert-mode">In Insert Mode</h2>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&lt;C-r&gt;=55*10&lt;Cr&gt; in insert mode</td>
+<td>calculate can print it</td>
+</tr>
+</tbody></table>
+
+<h2 id="windows-managements">Windows Managements</h2>
+
+<h3 id="windows-split">Windows Split</h3>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&lt;C-ws&gt;</td>
+<td>Split windows</td>
+</tr>
+<tr>
+<td>&lt;C-wv&gt;</td>
+<td>Split windows vertically</td>
+</tr>
+<tr>
+<td>&lt;C-wq&gt;</td>
+<td>Quit windows</td>
+</tr>
+<tr>
+<td>&lt;C-ww&gt;</td>
+<td>switch between windows</td>
+</tr>
+</tbody></table>
+
+<p>You split navigations with</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;
+  nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;
+  nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;
+  nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
+</code></pre></div>
+<h3 id="tab">Tab</h3>
+
+<table><thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>:tabe[dit] {filename}</td>
+<td>open file in new tab use gt, gT to move to next, previous tab</td>
+</tr>
+<tr>
+<td>:tabc[lose]</td>
+<td>close all tabs</td>
+</tr>
+<tr>
+<td>:tabo[nly]</td>
+<td>keep current tab and closing all others</td>
+</tr>
+</tbody></table>
+
+<h2 id="vim-spell">Vim spell</h2>
+
+<table><thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>:set spell</td>
+<td>enable spell checker</td>
+</tr>
+<tr>
+<td>[s, ]s</td>
+<td>jump to miss spelling work</td>
+</tr>
+<tr>
+<td>z=</td>
+<td>fix miss spelling word</td>
+</tr>
+<tr>
+<td>zg</td>
+<td>add current word into spell dictionary</td>
+</tr>
+<tr>
+<td>zw</td>
+<td>remove current word from spell dictionary</td>
+</tr>
+</tbody></table>
+
+<h2 id="repositioning-the-screen">Repositioning the screen</h2>
+
+<table><thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>zt</td>
+<td>Move current line to top screen</td>
+</tr>
+<tr>
+<td>zz</td>
+<td>Move current line to mid screen</td>
+</tr>
+<tr>
+<td>zb</td>
+<td>Move current line to bottom screen</td>
+</tr>
+</tbody></table>
+
+<h2 id="scroll-screen">Scroll Screen</h2>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>&lt;C-f&gt;</td>
+<td>scroll down one screen</td>
+</tr>
+<tr>
+<td>&lt;C-b&gt;</td>
+<td>scroll up one screen</td>
+</tr>
+<tr>
+<td>&lt;C-d&gt;</td>
+<td>scroll down half screen</td>
+</tr>
+<tr>
+<td>&lt;C-u&gt;</td>
+<td>scroll up half screen</td>
+</tr>
+</tbody></table>
+
+<h2 id="text-object-lt-need-to-combine-with-cmd-gt">Text object &lt;need to combine with cmd&gt;</h2>
+
+<table><thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>iw/aw</td>
+<td>inside/around word</td>
+</tr>
+<tr>
+<td>is/as</td>
+<td>inside/around sentences</td>
+</tr>
+<tr>
+<td>ip/ap</td>
+<td>inside/around paragraph</td>
+</tr>
+<tr>
+<td>it/at</td>
+<td>inside/around tag ex. html tag</td>
+</tr>
+<tr>
+<td>i”</td>
+<td>inside double quote</td>
+</tr>
+<tr>
+<td>i)</td>
+<td>inside parents</td>
+</tr>
+</tbody></table>
+
+<h2 id="register">Register</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># update vim version</span>
+<span class="gp">$ </span>brew install vim
+<span class="gp">$ </span>brew install reattach-to-user-namespace
+</code></pre></div>
+<table><thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>:reg[ister]</td>
+<td>check buffer register</td>
+</tr>
+<tr>
+<td>&quot;&lt;register&gt;p</td>
+<td>paste buffer</td>
+</tr>
+<tr>
+<td>&quot;&lt;register&gt;yy</td>
+<td>yank to buffer</td>
+</tr>
+<tr>
+<td>&quot;*yy</td>
+<td>yank to system clipboard</td>
+</tr>
+</tbody></table>
+
+<h2 id="vim-command"><a href="/vim-command">Vim Command</a></h2>
+
+<h2 id="vim-plugins"><a href="/vim-plugins">Vim Plugins</a></h2>
+
+<h3 id="vim-script">Vim Script</h3>
+
+<ol>
+<li><a href="http://learnvimscriptthehardway.stevelosh.com/chapters/14.html">autocmd group</a></li>
+</ol>
+
+<h3 id="vim-performances">Vim Performances</h3>
+
+<h4 id="open-vim-without-plugin-no-settings-from-your-vimrc">Open vim without plugin no settings from your .vimrc</h4>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>vim -u NONE -N
+</code></pre></div>
+<h4 id="open-vim-without-plugin">Open vim without plugin</h4>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>vim --noplugin
+</code></pre></div>
+<ul>
+<li><a href="http://vimcasts.org/episodes/profiling-vimscript-performance/">Profiling Vimscript performance</a></li>
+<li><a href="http://usevim.com/2012/04/18/startuptime/">Improving Vim&#39;s Startup Time</a></li>
+<li><a href="https://github.com/hyiltiz/vim-plugins-profile">Profile Vim&#39;s Plugins, Generate Awesome Statistics and Optimize Vim Startup Time</a></li>
+<li><a href="https://medium.com/@saaguero/improving-performance-in-vim-9b33598c8eaf">Improving Performance in Vim</a></li>
+<li><a href="http://junegunn.kr/2014/07/vim-plugins-and-startup-time/">Vim plugins and startup time</a></li>
+<li><a href="http://stackoverflow.com/questions/4261785/temporarily-disable-some-plugins-using-pathogen-in-vim">Temporarily disable some plugins using pathogen in vim.</a></li>
+</ul>
+
+<h2 id="reference">Reference:</h2>
+
+<ol>
+<li><a href="http://www.danielmiessler.com/study/vim/">A vim Tutorial and Primer</a></li>
+<li><a href="http://www.joinstick.net/howto/vim.html">วิธีใช้ Vi และ Vim</a></li>
+<li><a href="http://tips.webdesign10.com/vim/how-use-vims-spellchecker">How to Use Vim&#39;s Spell checker</a></li>
+<li><a href="http://www.worldtimzone.com/res/vi.html">Vi/Vim Cheat Sheet</a></li>
+<li><a href="https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png">Vim Cheat Sheet Graphical</a></li>
+<li><a href="https://coderwall.com/p/j9wnfw">Vim &amp; Tmux &amp; System Clipboard</a></li>
+<li><a href="https://www.youtube.com/watch?v=k_KSeQgtrb4">vim.rc &amp; vim plugin (video th)</a></li>
+<li><a href="https://www.youtube.com/watch?v=BhwtnCaFTFk">John Crepezzi&#39;s Vim (video)</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/">Vi and Vim Macro Tutorial: How To Record and Play</a></li>
+<li><a href="https://github.com/JoelQ/vim-grammar/blob/master/presentation.md">VIM Grammar-Jaa-LGyagRA</a></li>
+<li><a href="http://www.linux.com/learn/tutorials/442438-vim-tips-folding-fun">Vim tips: Folding fun</a></li>
+<li><a href="http://learnvimscriptthehardway.stevelosh.com">Learn Vimscript the Hard Way</a></li>
+<li><a href="https://github.com/jez/vim-as-an-ide">Vim as an IDE</a></li>
+<li><a href="http://stackoverflow.com/questions/9953082/how-to-jump-directly-to-a-column-number-in-vim">How to jump directly to a column number in Vim</a>
+17.<a href="http://stevelosh.com/blog/2010/09/coming-home-to-vim/">Coming Home to Vim</a></li>
+<li><a href="https://github.com/vim-scripts/LanguageTool">Vim-LanguageTool</a></li>
+<li><a href="http://khonkaenlug.blogspot.com/2015/08/vim-tips.html">Vim Tips (KKLUG)</a></li>
+<li><a href="http://stackoverflow.com/questions/11784408/vim-multiline-editing-like-in-sublimetext">Vim multiline editing like in sublimetext?</a></li>
+<li><a href="http://dougblack.io/words/a-good-vimrc.html">A Good Vimrc</a></li>
+<li><a href="http://inside.github.io/vim-presentation/">THE VIM PRESENTATION</a></li>
+<li><a href="http://vimcasts.org/categories/">Vim Cast</a></li>
+<li><a href="https://github.com/mhinz/vim-galore">vim-galore - Everything you need to know about Vim.</a></li>
+<li><a href="http://vim.wikia.com/wiki/Converting_tabs_to_spaces">Converting tabs to spaces</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/tmux/">
         Tmux
       </a>

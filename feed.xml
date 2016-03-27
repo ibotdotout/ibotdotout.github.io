@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-03-27T00:14:48+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Colemak Keyboard Layout</title><link href="http://dev.im-bot.com//colemak/" rel="alternate" type="text/html" title="Colemak Keyboard Layout" /><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//colemak</id><content type="html" xml:base="http://dev.im-bot.com//colemak/">&lt;p&gt;Colemak&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-03-27T10:49:35+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Dotfile</title><link href="http://dev.im-bot.com//dotfile/" rel="alternate" type="text/html" title="Dotfile" /><published>2016-03-27T00:00:00+00:00</published><updated>2016-03-27T00:00:00+00:00</updated><id>http://dev.im-bot.com//dotfile</id><content type="html" xml:base="http://dev.im-bot.com//dotfile/">&lt;blockquote&gt;
+&lt;p&gt;A file begins witn . that was hidden file on unix bases. Mostly use as configuration file ex. git, vim, bash  - &lt;a href=&quot;https://www.quora.com/What-are-dotfiles&quot;&gt;What are dotfiles?&lt;/a&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Keep dotfiles with github like backup yours machine&amp;#39;s setting. Your can move to new machine with same feeling from old one by restore dotfiles backup.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;For &lt;a href=&quot;https://github.com/ibotdotout/dotfiles&quot;&gt;My OSX Dev Developement&lt;/a&gt;, I use&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/anishathalye/dotbot/&quot;&gt;dotbot&lt;/a&gt; to link dotfiles.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew&quot;&gt;Brewfile&lt;/a&gt; and &lt;a href=&quot;https://github.com/Homebrew/homebrew-bundle&quot;&gt;Brew Bundle&lt;/a&gt; to back and restore homebrew dependentcies.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/junegunn/vim-plug&quot;&gt;vim-plug - A minimalist Vim plugin manager.&lt;/a&gt; - install vim plugins via &lt;code&gt;.vimrc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tmux-plugins/tpm&quot;&gt;tpm - Tmux Plugin Manager&lt;/a&gt; - install tmux plugins via &lt;code&gt;.tmux.conf&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-are-dotfiles&quot;&gt;What are dotfiles?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://dotfiles.github.io&quot;&gt;Dotfile Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/webpro/awesome-dotfiles&quot;&gt;Awesome Dotfile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/&quot;&gt;USING GIT AND GITHUB TO MANAGE YOUR DOTFILES&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mildronize/dotfiles&quot;&gt;mildronize/dotfiles&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><category term="article" /><category term="unix" /><summary>learn about dotfile.</summary></entry><entry><title>Colemak Keyboard Layout</title><link href="http://dev.im-bot.com//colemak/" rel="alternate" type="text/html" title="Colemak Keyboard Layout" /><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//colemak</id><content type="html" xml:base="http://dev.im-bot.com//colemak/">&lt;p&gt;Colemak&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Fast typing, Least finger movement than QWERY&lt;/p&gt;
@@ -714,41 +739,4 @@ But It better to use any option without -m.</summary></entry><entry><title>All A
 What Ruby and Rails Developers Ought To Know?
 Styleguide Ruby
 ruby-style-guide
-What Is the Difference Between a Block, a Proc, and a Lambda in Ruby?</summary></entry><entry><title>Learning Resources</title><link href="http://dev.im-bot.com//learning/" rel="alternate" type="text/html" title="Learning Resources" /><published>2015-12-12T00:00:00+00:00</published><updated>2015-12-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//learning-resources</id><content type="html" xml:base="http://dev.im-bot.com//learning/">&lt;!-- more --&gt;
-
-&lt;h3 id=&quot;resources-by-up1-http-www-somkiat-cc&quot;&gt;Resources by Up1 &lt;a href=&quot;http://www.somkiat.cc&quot;&gt;http://www.somkiat.cc&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/up1/course_php_101&quot;&gt;https://github.com/up1/course_php_101&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/up1/course-robotframework/tree/master/slide&quot;&gt;https://github.com/up1/course-robotframework/tree/master/slide&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/up1/course-performance-testing/tree/master/slide&quot;&gt;https://github.com/up1/course-performance-testing/tree/master/slide&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/up1/workshop_android_automated_test/tree/master/slide&quot;&gt;https://github.com/up1/workshop_android_automated_test/tree/master/slide&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/up1/workshop_mongodb/tree/master/slide01&quot;&gt;https://github.com/up1/workshop_mongodb/tree/master/slide01&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;resources-by-suchart-msu&quot;&gt;Resources by Suchart@MSU&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://isan.msu.ac.th/suchart/NetworkHowTo/NetworkHowTo.pdf&quot;&gt;https://isan.msu.ac.th/suchart/NetworkHowTo/NetworkHowTo.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://isan.msu.ac.th/suchart/NetworkHowTo/Workshop/&quot;&gt;https://isan.msu.ac.th/suchart/NetworkHowTo/Workshop/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://isan.msu.ac.th/suchart/NetworkHowTo/LAB/&quot;&gt;https://isan.msu.ac.th/suchart/NetworkHowTo/LAB/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;code-school-slides&quot;&gt;&lt;a href=&quot;https://github.com/fishbecat/Code-School-Slides&quot;&gt;Code-School-Slides&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;application-security-learning-resources&quot;&gt;&lt;a href=&quot;https://github.com/paragonie/awesome-appsec&quot;&gt;Application Security Learning Resources&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;resources-by-http-www-coursesquare-co&quot;&gt;Resources by &lt;a href=&quot;http://www.coursesquare.co/&quot;&gt;http://www.coursesquare.co/&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4 id=&quot;ux-talk-enterprise-ux&quot;&gt;UX TALK ENTERPRISE UX&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-%E0%B8%95%E0%B8%AD%E0%B8%99-E-Commerce-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%86&quot;&gt;http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-ตอน-E-Commerce-แบบไทยๆ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX&quot;&gt;http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;introduction-to-mixpanel&quot;&gt;&lt;a href=&quot;http://www.coursesquare.co/course/courseInfo/Introduction-to-Mixpanel&quot;&gt;Introduction to Mixpanel&lt;/a&gt;&lt;/h4&gt;
-
-&lt;h3 id=&quot;website-performance-tutorials&quot;&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLLnpHn493BHGpGXukqYsxwQw3ziW3uti6&quot;&gt;Website Performance Tutorials&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;f5-อ่อนว่ะ&quot;&gt;&lt;a href=&quot;https://docs.google.com/document/d/1wUi1ZeqIHvnE4YkWC613rVJFdbgC0t-pCNcyk0PaUxk/edit#heading=h.xiu1i3wbkwyr&quot;&gt;F5 อ่อนว่ะ&lt;/a&gt;&lt;/h3&gt;</content><category term="learn" /></entry></feed>
+What Is the Difference Between a Block, a Proc, and a Lambda in Ruby?</summary></entry></feed>
