@@ -1,4 +1,4 @@
-# dev.im-bot.com
+# [dev.im-bot.com](http://dev.im-bot.com)
 ---
 [![Build Status](https://travis-ci.org/ibotdotout/ibotdotout.github.io.svg?branch=jekyll)](https://travis-ci.org/ibotdotout/ibotdotout.github.io)
 
