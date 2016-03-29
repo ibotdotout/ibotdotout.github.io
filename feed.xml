@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-03-27T11:10:18+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Dotfile</title><link href="http://dev.im-bot.com//dotfile/" rel="alternate" type="text/html" title="Dotfile" /><published>2016-03-27T00:00:00+00:00</published><updated>2016-03-27T00:00:00+00:00</updated><id>http://dev.im-bot.com//dotfile</id><content type="html" xml:base="http://dev.im-bot.com//dotfile/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-03-29T16:00:00+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Dotfile</title><link href="http://dev.im-bot.com//dotfile/" rel="alternate" type="text/html" title="Dotfile" /><published>2016-03-27T00:00:00+00:00</published><updated>2016-03-27T00:00:00+00:00</updated><id>http://dev.im-bot.com//dotfile</id><content type="html" xml:base="http://dev.im-bot.com//dotfile/">&lt;blockquote&gt;
 &lt;p&gt;A file begins with . that is hidden file on unix based. Mostly use as configuration file ex. &lt;code&gt;.gitconfig&lt;/code&gt;, &lt;code&gt;.vimrc&lt;/code&gt;, &lt;code&gt;.bashrc&lt;/code&gt;  - &lt;a href=&quot;https://www.quora.com/What-are-dotfiles&quot;&gt;What are dotfiles?&lt;/a&gt; &lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -43,6 +43,9 @@
 &lt;li&gt;&lt;a href=&quot;https://sermoa.wordpress.com/2011/12/22/colemak-is-easy-to-learn/&quot;&gt;Colemak is easy to learn!&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://thetypingcat.com/course/colemak&quot;&gt;Learn Colemak&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://alexarmstrong.net/2015/01/reassign-capslock-to-backspace/&quot;&gt;Reassign Caps Lock to Backspace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.erw.dk/2015/02/27/4-years-with-colemak/&quot;&gt;4 Years with Colemak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ryanheise.com/colemak/&quot;&gt;Learning Colemak&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://emileswarts.github.io/2012/08/25/dont-remap-caps-to-be-escape.html&quot;&gt;Don&amp;#39;t remap caps-lock to be escape&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;vim&quot;&gt;Vim&lt;/h3&gt;
