@@ -192,6 +192,39 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/ror/">
+        All About Ruby and Ruby on Rails
+      </a>
+    </h1>
+
+    <span class="post-date">
+      12 Dec 2015
+      
+        &middot;
+        <a href="/ror/#disqus_thread" data-disqus-identifier="/ror/"></a>
+        
+      
+    </span>
+
+    
+      <h3 id="tips">Tips</h3>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/2569501/what-ruby-and-rails-developers-ought-to-know">What Ruby and Rails Developers Ought To Know?</a></li>
+<li><a href="https://github.com/styleguide/ruby">Styleguide Ruby</a></li>
+<li><a href="https://github.com/bbatsov/ruby-style-guide">ruby-style-guide</a></li>
+<li><a href="http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/">What Is the Difference Between a Block, a Proc, and a Lambda in Ruby?</a></li>
+</ul>
+
+
+      <div style="text-align:right;">
+        <a href="/ror/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/learning/">
         Learning Resources
       </a>
@@ -349,56 +382,6 @@ You should convert that file from tis-620 to utf-8 which make it readable on osx
 
       <div style="text-align:right;">
         <a href="/osx-convert-encoding/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/read-more-jekyll/">
-        Read more feature on jekyll
-      </a>
-    </h1>
-
-    <span class="post-date">
-      18 Oct 2015
-      
-        &middot;
-        <a href="/read-more-jekyll/#disqus_thread" data-disqus-identifier="/read-more-jekyll/"></a>
-        
-      
-    </span>
-
-    
-      <blockquote>
-<p>Github Pages Tips:<br>
-Github Pages always complie jekyll with <code>--safe</code> option that will<br>
-disable plugins but some plugin can work with Github Pages.<br>
-<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a>  </p>
-
-<p>Easy ways: using <a href="http://jekyllrb.com/docs/posts/#post-excerpts">excerpt option of &gt; jekyll</a><br>
-<a href="http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll">Customized excerpt separator in &gt; Jekyll</a>  </p>
-</blockquote>
-
-<p>Just using <code>truncate</code> they not checking html tag that make your site look
-terrible and Github Pages not support custom ruby script that place in
-<code>_plugins</code>. The better way is using split with custom tags.</p>
-
-<p>Replace `<code>in</code>index.html` in jekyll directory with</p>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby">
-    <span class="p">{</span><span class="sx">% if </span><span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="n">contains</span> <span class="s2">"&lt;!-- more --&gt;"</span> <span class="o">%</span><span class="p">}</span>
-      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="nb">split</span><span class="ss">:"&lt;!-- more --&gt;"</span> <span class="o">|</span> <span class="n">first</span> <span class="o">%</span> <span class="p">}}</span>
-      <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"text-align:right;"</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"{{ post.url }}"</span> <span class="n">style</span><span class="o">=</span><span class="s2">"color:#000;"</span><span class="o">&gt;</span> <span class="no">Read</span> <span class="no">More</span> <span class="o">&lt;</span><span class="sr">/a&gt;
-      &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-    <span class="p">{</span><span class="sx">% else </span><span class="o">%</span><span class="p">}</span>
-      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="p">}}</span>
-    <span class="p">{</span><span class="sx">% endif </span><span class="o">%</span><span class="p">}</span>
-
-</code></pre></div>
-
-      <div style="text-align:right;">
-        <a href="/read-more-jekyll/" style="color:#000;"> Read More </a>
       </div>
     
   </div>
