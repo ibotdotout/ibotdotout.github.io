@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-03-29T16:13:33+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>All I know about mongo</title><link href="http://dev.im-bot.com//mogno/" rel="alternate" type="text/html" title="All I know about mongo" /><published>2016-03-29T00:00:00+00:00</published><updated>2016-03-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo</id><content type="html" xml:base="http://dev.im-bot.com//mogno/">&lt;h1 id=&quot;mongo&quot;&gt;Mongo&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-03-30T13:00:27+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>All I know about mongo</title><link href="http://dev.im-bot.com//mongo/" rel="alternate" type="text/html" title="All I know about mongo" /><published>2016-03-29T00:00:00+00:00</published><updated>2016-03-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo</id><content type="html" xml:base="http://dev.im-bot.com//mongo/">&lt;h1 id=&quot;mongo&quot;&gt;Mongo&lt;/h1&gt;
 
 &lt;h3 id=&quot;understand-documents&quot;&gt;Understand Documents&lt;/h3&gt;
 
@@ -16,11 +16,11 @@
 
 &lt;blockquote&gt;
 &lt;p&gt;The first question to ask, then, when moving from a relational database to MongoDB is, ‘How will this data be accessed?’ Other important questions include:&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;What is the access pattern?
 What are you hoping to show to your customers/users?
 How are you going to write this data?&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;!-- more --&gt;
 
@@ -65,12 +65,14 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/mongodb/everything-you-need-to-know-about-sharding?ref=https://www.mongodb.com/presentations/webinar-everything-you-need-know-about-sharding?jmp=docs&quot;&gt;Everything You Need to Know About Sharding&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Good Shard Key
-- Cardinality
-- Write Distribution
-- Query Isolation
-- Reliability
+&lt;blockquote&gt;
+&lt;p&gt;Good Shard Key&lt;br&gt;
+- Cardinality&lt;br&gt;
+- Write Distribution&lt;br&gt;
+- Query Isolation&lt;br&gt;
+- Reliability&lt;br&gt;
 - Index Locality&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://goranzugic.wordpress.com/2014/05/29/selecting-a-mongodb-shard-key/&quot;&gt;Selecting a MongoDB Shard Key&lt;/a&gt;&lt;/li&gt;
@@ -81,32 +83,24 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 
 &lt;p&gt;Usually you will not shard all collections but only collections that need data to be distributed over shards to improve read and/or write performance. All un-sharded collections will be held in only one shard that is called primary shard&lt;/p&gt;
 
-&lt;p&gt;MongoDB supports three types of sharding:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;MongoDB supports three types of sharding:
+- Range-based sharding
+- Hash-based sharding
+- Tag-aware sharding&lt;/p&gt;
 
-&lt;p&gt;Range-based sharding
-Hash-based sharding
-Tag-aware sharding&lt;/p&gt;
-
-&lt;blockquote&gt;
 &lt;p&gt;In general, range-based sharding provides better support for range queries that need query isolation while the hash-based sharding supports write operations more efficiently.&lt;/p&gt;
 
 &lt;p&gt;In order to properly select a shard key for your MongoDB sharded cluster, it is important to understand how your application reads and writes data. Actually the main question is&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;    What is more critical, query isolation, or write scaling, or both?
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In order to select an optimal shard key for query isolation you must take into consideration the following:&lt;/p&gt;
-&lt;/blockquote&gt;
 
-&lt;p&gt;Analyze what query operations are most performance dependent;
-Determine which fields are used the most in these operations and include them in the shard key;
-Make sure that the selected shard key enable even (balanced) distribution of data across shards;
-A high cardinality field is preferable. Low cardinality fields tend to group documents on a small number of shards what would require frequent rebalancing of the chunks.&lt;/p&gt;
+&lt;p&gt;What is more critical, query isolation, or write scaling, or both?&lt;/p&gt;
 
-&lt;blockquote&gt;
+&lt;p&gt;In order to select an optimal shard key for query isolation you must take into consideration the following:
+ - Analyze what query operations are most performance dependent;
+ - Determine which fields are used the most in these operations and include them in the shard key;
+ - Make sure that the selected shard key enable even (balanced) distribution of data across shards;
+ - A high cardinality field is preferable. Low cardinality fields tend to group documents on a small number of shards what would require frequent rebalancing of the chunks.&lt;/p&gt;
+
 &lt;p&gt;The most common techniques people use to distribute data are:&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;Ascending key distribution – The shard key field is usually of Date, Timestamp or Objectld type. This pattern is not definitely good for the write scaling.&lt;/p&gt;
 
@@ -114,7 +108,6 @@ A high cardinality field is preferable. Low cardinality fields tend to group doc
 
 &lt;p&gt;Compound Shard Key – Combine more than one field into a shard key in order to come up with optimal shard key  values for high cardinality and balanced distribution of data for an efficient  write scaling and query isolation.&lt;/p&gt;
 
-&lt;blockquote&gt;
 &lt;p&gt;high  Query isolation / Write scaling - high  A shard key enabling mid-high randomness and relatively even distribution of data.  A compound shard keys are usually good candidates.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -122,24 +115,19 @@ A high cardinality field is preferable. Low cardinality fields tend to group doc
 
 &lt;blockquote&gt;
 &lt;p&gt;Shard Key Considerations
-With that said, there are five criteria for a good shard key. They are:&lt;/p&gt;
-&lt;/blockquote&gt;
+With that said, there are five criteria for a good shard key. They are:
+- Cardinality
+- Write Distribution
+- Read Distribution
+- Read Targeting
+- Read Locality&lt;/p&gt;
 
-&lt;p&gt;Cardinality
-Write Distribution
-Read Distribution
-Read Targeting
-Read Locality&lt;/p&gt;
-
-&lt;blockquote&gt;
 &lt;p&gt;There are two design patterns that I think work well for shard key selection. The first is using a hashed shard key, based on a field that is usually present in most queries.  The other useful design pattern is a compound shard key, composed of of a low-cardinality (&amp;quot;chunky&amp;quot;) first part, and a high-cardinality second part, often a monotonically increasing one.&lt;/p&gt;
 
 &lt;p&gt;Hashed shard keys can often be a good option: out of the 5 criteria, the only one they don&amp;#39;t provide is Read Locality. If your application doesn&amp;#39;t use range queries, they may be ideal.&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;Two important things to note about hashed shard keys: the underlying field that they&amp;#39;re based on must provide enough cardinality, and the underlying field must be present in most queries in order to allow for Read Targeting.&lt;/p&gt;
 
-&lt;blockquote&gt;
 &lt;p&gt;Compound shard key, composed of of a low-cardinality (&amp;quot;chunky&amp;quot;) first part, and a high-cardinality second part, often a monotonically increasing one.  If there are enough distinct values in the first part (at least twice the number of shards) you&amp;#39;ll get good write and read distribution; the high-cardinality second part gets you good cardinality and read locality.&lt;/p&gt;
 
 &lt;p&gt;For one thing, these five criteria I listed are typically mutually incompatible: it&amp;#39;s very rare to be able to get good write distribution, read distribution, and read locality all with a single shard key.&lt;/p&gt;
@@ -150,13 +138,11 @@ Read Locality&lt;/p&gt;
 &lt;h3 id=&quot;how-to-choose-a-shard-key-for-mongodb&quot;&gt;&lt;a href=&quot;http://blog.bugsnag.com/mongo-shard-key&quot;&gt;How to choose a shard key for MongoDB&lt;/a&gt;&lt;/h3&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Hashed id 
+&lt;p&gt;Hashed id :
 This will distribute reads and writes evenly, and it will ensure that each document has a different shard key so chunks can be fine-grained and small.&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;It’s not perfect, because queries for multiple documents will have to hit all shards, but it might be good enough.&lt;/p&gt;
 
-&lt;blockquote&gt;
 &lt;p&gt;Multi-tenant compound index
 If you want to beat the hashed _id scheme, you need to come up with way of grouping related documents close together in the index. At Bugsnag we group the documents by project, because of the way our app works most queries are run in the scope of a project. We can’t just use projectId as a shard key because that leads to jumbo chunks, so we also include the _id to break large projects into multiple chunks.  To avoid this problem in the future, we will likely migrate to an index on {projectId: &amp;#39;hashed&amp;#39;, _id: 1}&lt;/p&gt;
 
@@ -238,7 +224,6 @@ SQL to MongoDB Mapping Chart
 
 
 The first question to ask, then, when moving from a relational database to MongoDB is, ‘How will this data be accessed?’ Other important questions include:
-
 
 What is the access pattern?
 What are you hoping to show to your customers/users?

@@ -10,7 +10,7 @@
 
   <meta property="og:title" content="All I know about mongo" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/mogno//" />
+<meta property="og:url" content="http://dev.im-bot.com/mongo//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:description" content="MongoUnderstand DocumentsThinking in Documents: Part 1Thinking in Documents: Part 2MigrationConsiderations before moving from RDBMS to MongoDBSQL to MongoDB ..." />
 <meta property="og:site_name" content="botbotbot" />
@@ -194,7 +194,7 @@
     29 Mar 2016
       
         &middot;
-        <a href="/mogno//index.html#disqus_thread" data-disqus-identifier="/mogno/"></a>
+        <a href="/mongo//index.html#disqus_thread" data-disqus-identifier="/mongo/"></a>
         
           &middot;
           Updated March 29, 2016
@@ -220,11 +220,11 @@
 
 <blockquote>
 <p>The first question to ask, then, when moving from a relational database to MongoDB is, ‘How will this data be accessed?’ Other important questions include:</p>
-</blockquote>
 
 <p>What is the access pattern?
 What are you hoping to show to your customers/users?
 How are you going to write this data?</p>
+</blockquote>
 
 <!-- more -->
 
@@ -269,12 +269,14 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 <li><a href="http://www.slideshare.net/mongodb/everything-you-need-to-know-about-sharding?ref=https://www.mongodb.com/presentations/webinar-everything-you-need-know-about-sharding?jmp=docs">Everything You Need to Know About Sharding</a></li>
 </ul>
 
-<p>Good Shard Key
-- Cardinality
-- Write Distribution
-- Query Isolation
-- Reliability
+<blockquote>
+<p>Good Shard Key<br>
+- Cardinality<br>
+- Write Distribution<br>
+- Query Isolation<br>
+- Reliability<br>
 - Index Locality</p>
+</blockquote>
 
 <ul>
 <li><a href="https://goranzugic.wordpress.com/2014/05/29/selecting-a-mongodb-shard-key/">Selecting a MongoDB Shard Key</a></li>
@@ -285,32 +287,24 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 
 <p>Usually you will not shard all collections but only collections that need data to be distributed over shards to improve read and/or write performance. All un-sharded collections will be held in only one shard that is called primary shard</p>
 
-<p>MongoDB supports three types of sharding:</p>
-</blockquote>
+<p>MongoDB supports three types of sharding:
+- Range-based sharding
+- Hash-based sharding
+- Tag-aware sharding</p>
 
-<p>Range-based sharding
-Hash-based sharding
-Tag-aware sharding</p>
-
-<blockquote>
 <p>In general, range-based sharding provides better support for range queries that need query isolation while the hash-based sharding supports write operations more efficiently.</p>
 
 <p>In order to properly select a shard key for your MongoDB sharded cluster, it is important to understand how your application reads and writes data. Actually the main question is</p>
-</blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">    What is more critical, query isolation, or write scaling, or both?
-</code></pre></div>
-<blockquote>
-<p>In order to select an optimal shard key for query isolation you must take into consideration the following:</p>
-</blockquote>
 
-<p>Analyze what query operations are most performance dependent;
-Determine which fields are used the most in these operations and include them in the shard key;
-Make sure that the selected shard key enable even (balanced) distribution of data across shards;
-A high cardinality field is preferable. Low cardinality fields tend to group documents on a small number of shards what would require frequent rebalancing of the chunks.</p>
+<p>What is more critical, query isolation, or write scaling, or both?</p>
 
-<blockquote>
+<p>In order to select an optimal shard key for query isolation you must take into consideration the following:
+ - Analyze what query operations are most performance dependent;
+ - Determine which fields are used the most in these operations and include them in the shard key;
+ - Make sure that the selected shard key enable even (balanced) distribution of data across shards;
+ - A high cardinality field is preferable. Low cardinality fields tend to group documents on a small number of shards what would require frequent rebalancing of the chunks.</p>
+
 <p>The most common techniques people use to distribute data are:</p>
-</blockquote>
 
 <p>Ascending key distribution – The shard key field is usually of Date, Timestamp or Objectld type. This pattern is not definitely good for the write scaling.</p>
 
@@ -318,7 +312,6 @@ A high cardinality field is preferable. Low cardinality fields tend to group doc
 
 <p>Compound Shard Key – Combine more than one field into a shard key in order to come up with optimal shard key  values for high cardinality and balanced distribution of data for an efficient  write scaling and query isolation.</p>
 
-<blockquote>
 <p>high  Query isolation / Write scaling - high  A shard key enabling mid-high randomness and relatively even distribution of data.  A compound shard keys are usually good candidates.</p>
 </blockquote>
 
@@ -326,24 +319,19 @@ A high cardinality field is preferable. Low cardinality fields tend to group doc
 
 <blockquote>
 <p>Shard Key Considerations
-With that said, there are five criteria for a good shard key. They are:</p>
-</blockquote>
+With that said, there are five criteria for a good shard key. They are:
+- Cardinality
+- Write Distribution
+- Read Distribution
+- Read Targeting
+- Read Locality</p>
 
-<p>Cardinality
-Write Distribution
-Read Distribution
-Read Targeting
-Read Locality</p>
-
-<blockquote>
 <p>There are two design patterns that I think work well for shard key selection. The first is using a hashed shard key, based on a field that is usually present in most queries.  The other useful design pattern is a compound shard key, composed of of a low-cardinality (&quot;chunky&quot;) first part, and a high-cardinality second part, often a monotonically increasing one.</p>
 
 <p>Hashed shard keys can often be a good option: out of the 5 criteria, the only one they don&#39;t provide is Read Locality. If your application doesn&#39;t use range queries, they may be ideal.</p>
-</blockquote>
 
 <p>Two important things to note about hashed shard keys: the underlying field that they&#39;re based on must provide enough cardinality, and the underlying field must be present in most queries in order to allow for Read Targeting.</p>
 
-<blockquote>
 <p>Compound shard key, composed of of a low-cardinality (&quot;chunky&quot;) first part, and a high-cardinality second part, often a monotonically increasing one.  If there are enough distinct values in the first part (at least twice the number of shards) you&#39;ll get good write and read distribution; the high-cardinality second part gets you good cardinality and read locality.</p>
 
 <p>For one thing, these five criteria I listed are typically mutually incompatible: it&#39;s very rare to be able to get good write distribution, read distribution, and read locality all with a single shard key.</p>
@@ -354,13 +342,11 @@ Read Locality</p>
 <h3 id="how-to-choose-a-shard-key-for-mongodb"><a href="http://blog.bugsnag.com/mongo-shard-key">How to choose a shard key for MongoDB</a></h3>
 
 <blockquote>
-<p>Hashed id 
+<p>Hashed id :
 This will distribute reads and writes evenly, and it will ensure that each document has a different shard key so chunks can be fine-grained and small.</p>
-</blockquote>
 
 <p>It’s not perfect, because queries for multiple documents will have to hit all shards, but it might be good enough.</p>
 
-<blockquote>
 <p>Multi-tenant compound index
 If you want to beat the hashed _id scheme, you need to come up with way of grouping related documents close together in the index. At Bugsnag we group the documents by project, because of the way our app works most queries are run in the scope of a project. We can’t just use projectId as a shard key because that leads to jumbo chunks, so we also include the _id to break large projects into multiple chunks.  To avoid this problem in the future, we will likely migrate to an index on {projectId: &#39;hashed&#39;, _id: 1}</p>
 
@@ -470,7 +456,7 @@ guarantee sufficient query isolation  or appropriate write scaling .</p>
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/mogno/";
+      var disqus_identifier = "/mongo/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
