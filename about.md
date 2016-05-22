@@ -15,6 +15,9 @@ Hi, I'm botbotbot.
 * [My Code Shool](https://www.codeschool.com/users/ibotdotout)
 
 ### Contributed
+* [sphereio/docker-predictionio](https://github.com/sphereio/docker-predictionio)
+	- [Update PredictionIO version to 0.9.5](https://github.com/sphereio/docker-predictionio/commit/18034baf9cc312801953f817e1801828cbf751af)
+
 * [feross/standard](https://github.com/feross/standard)
 	- [Update document Vim automatic formatting on save](https://github.com/feross/standard/commit/08c8d6fdaf0352b42a5c0ee57cef3b08bedf0acb)
 
@@ -27,3 +30,4 @@ Hi, I'm botbotbot.
 	- [Fix mktemp to work on linux and osx](https://github.com/mildronize/latex-live-preview/commit/b66b36689aff62d97de3746e67be10ceed5730bc)
 
 * [sdayu/PSU-thesis-latex-template](https://github.com/sdayu/PSU-thesis-latex-template) - Co-Author
+
