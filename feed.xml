@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-04-01T11:01:27+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>All I know about mongo</title><link href="http://dev.im-bot.com//mongo/" rel="alternate" type="text/html" title="All I know about mongo" /><published>2016-03-29T00:00:00+00:00</published><updated>2016-03-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo</id><content type="html" xml:base="http://dev.im-bot.com//mongo/">&lt;h1 id=&quot;mongo&quot;&gt;Mongo&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.5">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-05-22T06:44:10+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>All I know about mongo</title><link href="http://dev.im-bot.com//mongo/" rel="alternate" type="text/html" title="All I know about mongo" /><published>2016-03-29T00:00:00+00:00</published><updated>2016-03-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo</id><content type="html" xml:base="http://dev.im-bot.com//mongo/">&lt;h1 id=&quot;mongo&quot;&gt;Mongo&lt;/h1&gt;
 
 &lt;h3 id=&quot;understand-documents&quot;&gt;Understand Documents&lt;/h3&gt;
 
@@ -206,7 +206,7 @@ guarantee sufficient query isolation  or appropriate write scaling .&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/index.html&quot;&gt;mongoose - elegant mongodb object modeling for node.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/docs/index.html&quot;&gt;mongoose - Getting Started&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/docs/promises.html&quot;&gt;mongoose - Promises&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="mogno" /><category term="nosql" /><summary>Mongo
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mogno" /><category term="nosql" /><summary>Mongo
 
 Understand Documents
 
@@ -252,7 +252,7 @@ How are you going to write this data?</summary></entry><entry><title>Dotfile</ti
 &lt;li&gt;&lt;a href=&quot;https://github.com/webpro/awesome-dotfiles&quot;&gt;Awesome Dotfile&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/&quot;&gt;USING GIT AND GITHUB TO MANAGE YOUR DOTFILES&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/mildronize/dotfiles&quot;&gt;mildronize/dotfiles&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><category term="unix" /><summary>learn about dotfile.</summary></entry><entry><title>Colemak Keyboard Layout</title><link href="http://dev.im-bot.com//colemak/" rel="alternate" type="text/html" title="Colemak Keyboard Layout" /><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//colemak</id><content type="html" xml:base="http://dev.im-bot.com//colemak/">&lt;p&gt;Colemak&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>botbotbot</name></author><category term="unix" /><summary>learn about dotfile.</summary></entry><entry><title>Colemak Keyboard Layout</title><link href="http://dev.im-bot.com//colemak/" rel="alternate" type="text/html" title="Colemak Keyboard Layout" /><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//colemak</id><content type="html" xml:base="http://dev.im-bot.com//colemak/">&lt;p&gt;Colemak&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Fast typing, Least finger movement than QWERY&lt;/p&gt;
@@ -285,7 +285,7 @@ How are you going to write this data?</summary></entry><entry><title>Dotfile</ti
 &lt;li&gt;&lt;a href=&quot;http://forum.colemak.com/viewtopic.php?pid=162#p162&quot;&gt;Colemak + Vim&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/jooize/vim-colemak&quot;&gt;vim-colemak&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://sermoa.wordpress.com/2011/12/16/colemak-and-vim-but-what-about-hjkl/&quot;&gt;Colemak and vim: “But what about h/j/k/l?”&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="keyboard" /><summary>Colemak
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="keyboard" /><summary>Colemak
 
 
 Fast typing, Least finger movement than QWERY
@@ -333,7 +333,7 @@ ARG &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;
 &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#arg&quot;&gt;Dockerfile - ARG&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-172606763&quot;&gt;Temporary Solution - Selectively disable caching for specific RUN commands in Dockerfile&lt;/a&gt; - &lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-185872769&quot;&gt;An
 additional description &lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;</content><category term="docker" /><summary>If you using Dockerfile, you should know about caching for faster builds.
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary>If you using Dockerfile, you should know about caching for faster builds.
 Sometimes, you need to rebuild without cache. you can run docker build with
 --no-cache option that will disable all layer cache.
 
@@ -498,7 +498,7 @@ Most importantly we did this without querying multiple tables and merging and re
 &lt;li&gt;&lt;a href=&quot;https://github.com/datastax/nodejs-driver&quot;&gt;nodejs-driver - DataStax Node.js Driver for Apache Cassandra&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://academy.datastax.com/demos/getting-started-apache-cassandra-and-nodejs&quot;&gt;Getting Started with Apache Cassandra and Node.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://datastax.github.io/nodejs-driver/getting-started&quot;&gt;nodejs-driver - Getting started&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="cassandra" /><category term="nosql" /><summary>Intro
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="cassandra" /><category term="nosql" /><summary>Intro
 
 
 Introduction to Apache Cassandra
@@ -589,7 +589,7 @@ ENV &lt;span class=&quot;nv&quot;&gt;TZ&lt;/span&gt;&lt;span class=&quot;o&quot;
 &lt;li&gt;&lt;a href=&quot;https://github.com/aptible/docker-cron-example&quot;&gt;Example implementation of cron jobs on Docker/Aptible&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/&quot;&gt;Example of Cron&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://serverfault.com/a/84545&quot;&gt;PATH in crontab&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="docker" /><summary>You can start crontab following Run a cron job with Docker
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary>You can start crontab following Run a cron job with Docker
 just put crontab in /etc/cron.d/ and run cron for making it working.</summary></entry><entry><title>Reduce docker image size</title><link href="http://dev.im-bot.com//docker-reduce-image-size/" rel="alternate" type="text/html" title="Reduce docker image size" /><published>2016-03-03T00:00:00+00:00</published><updated>2016-03-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-reduce-image-size</id><content type="html" xml:base="http://dev.im-bot.com//docker-reduce-image-size/">&lt;p&gt;Reduce Docker image size can help your to portable your contain
 across network, save bandwidth and storage, faster to scale.&lt;/p&gt;
 
@@ -671,7 +671,7 @@ You can read more about &lt;code&gt;docker-squash&lt;/code&gt; in References.&lt
 &lt;li&gt;&lt;a href=&quot;https://github.com/jwilder/docker-squash&quot;&gt;docker-squash&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://jasonwilder.com/blog/2014/08/19/squashing-docker-images/&quot;&gt;Squashing Docker Images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://woudenberg.io/reducing-docker-image-size/&quot;&gt;Reducing the size of Docker Images&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="docker" /><summary>Reduce Docker image size can help your to portable your contain
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary>Reduce Docker image size can help your to portable your contain
 across network, save bandwidth and storage, faster to scale.
 
 1. Using alpine base image when possible
@@ -802,7 +802,7 @@ Coming Soon Page&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://generatewp.com&quot;&gt;https://generatewp.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://codex.wordpress.org&quot;&gt;WordPress Codex&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/twittem/wp-bootstrap-navwalker&quot;&gt;wp-bootstrap-navwalker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="wordpress" /><summary>Docker + Wordpress
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="wordpress" /><summary>Docker + Wordpress
 
 
 Wordpress Docker Image
@@ -858,7 +858,7 @@ dropbox or personal account of cloud storage.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=M448GtFa5Xs&quot;&gt;kpcli - Keepass Password Manager - Linux CLI&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-kpcli-to-manage-keepass2-password-files-on-an-ubuntu-14-04-server&quot;&gt;How To Use kpcli To Manage KeePass2 Password Files on an Ubuntu 14.04 Server&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.australsounds.com/2014/10/installingkpcli.html&quot;&gt;Installing KPCLI on OS X&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="security" /><summary>What is Password Manager ?
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="security" /><summary>What is Password Manager ?
 
 
 Why You Should Use a Password Manager and How to Get Started</summary></entry><entry><title>Avoid git commit -m</title><link href="http://dev.im-bot.com//avoid-git-commit-m/" rel="alternate" type="text/html" title="Avoid git commit -m" /><published>2015-12-25T00:00:00+00:00</published><updated>2015-12-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//aviod-git-commit-m</id><content type="html" xml:base="http://dev.im-bot.com//avoid-git-commit-m/">&lt;p&gt;Most of Git tutorial even &lt;a href=&quot;http://try.github.io&quot;&gt;Try Git&lt;/a&gt; guide you
@@ -907,7 +907,7 @@ retrospective&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/2596835&quot;&gt;How do I make git use the editor of my choice for commits?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="git" /><summary>Most of Git tutorial even Try Git guide you
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary>Most of Git tutorial even Try Git guide you
 about git commit with this
 $ git commit -m &quot;hello world&quot;
 
