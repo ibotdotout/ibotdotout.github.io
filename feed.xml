@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.5">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-05-22T06:44:10+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>All I know about mongo</title><link href="http://dev.im-bot.com//mongo/" rel="alternate" type="text/html" title="All I know about mongo" /><published>2016-03-29T00:00:00+00:00</published><updated>2016-03-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo</id><content type="html" xml:base="http://dev.im-bot.com//mongo/">&lt;h1 id=&quot;mongo&quot;&gt;Mongo&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-06-14T10:43:28+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Git Bisect</title><link href="http://dev.im-bot.com//git-bisect/" rel="alternate" type="text/html" title="Git Bisect" /><published>2016-06-14T00:00:00+00:00</published><updated>2016-06-14T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-bisect</id><content type="html" xml:base="http://dev.im-bot.com//git-bisect/">&lt;p&gt;Git Bisect is useful for debugging something is work is past but not now (Regression).&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;The better way to dubug regression is find first commit that make error happen to reduce scope of the cause.
+Instead of search each one by one commit that is linear search, you can apply binary search to help you find the commit that is cause of bug.
+binay search will reduce the number of commits to  &lt;code&gt;log n + 1&lt;/code&gt; that is worst case of it.
+&lt;code&gt;git bisect&lt;/code&gt; is the command that apply this concept you dont have to do it with your own.&lt;/p&gt;
+
+&lt;h1 id=&quot;demo-amp-use-case-of-git-bisect&quot;&gt;Demo &amp;amp; Use case of Git Bisect&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ibotdotout/demo-git-bisect&quot;&gt;ibotdotout/demo-git-bisect&lt;/a&gt;&lt;/p&gt;</content><author><name>botbotbot</name></author><category term="article" /><category term="git" /><summary>Git Bisect is useful for debugging something is work is past but not now (Regression).</summary></entry><entry><title>All I know about mongo</title><link href="http://dev.im-bot.com//mongo/" rel="alternate" type="text/html" title="All I know about mongo" /><published>2016-03-29T00:00:00+00:00</published><updated>2016-03-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo</id><content type="html" xml:base="http://dev.im-bot.com//mongo/">&lt;h1 id=&quot;mongo&quot;&gt;Mongo&lt;/h1&gt;
 
 &lt;h3 id=&quot;understand-documents&quot;&gt;Understand Documents&lt;/h3&gt;
 
@@ -861,55 +872,4 @@ dropbox or personal account of cloud storage.&lt;/p&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="security" /><summary>What is Password Manager ?
 
 
-Why You Should Use a Password Manager and How to Get Started</summary></entry><entry><title>Avoid git commit -m</title><link href="http://dev.im-bot.com//avoid-git-commit-m/" rel="alternate" type="text/html" title="Avoid git commit -m" /><published>2015-12-25T00:00:00+00:00</published><updated>2015-12-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//aviod-git-commit-m</id><content type="html" xml:base="http://dev.im-bot.com//avoid-git-commit-m/">&lt;p&gt;Most of Git tutorial even &lt;a href=&quot;http://try.github.io&quot;&gt;Try Git&lt;/a&gt; guide you
-about git commit with this&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&quot;hello world&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;That&amp;#39;s OK.
-But It better to use any option without -m.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit -a
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git commit --amend
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Without -m, Git will popup your editor to write the commit message like
-this&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/public/img/git-commit-vim.png&quot; alt=&quot;git-commit-vim&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s more powerful than -m option that limit your commit message to
-one line, without -m you can write commit message with many line.&lt;/p&gt;
-
-&lt;p&gt;It also let your know when the first line exceed 50 characters that
-is best practice to write commit message.&lt;/p&gt;
-
-&lt;p&gt;It provide a list of files which involve in the commit that
-give your a chance to revise.&lt;/p&gt;
-
-&lt;p&gt;If you are Vim fanboy, you should look at
-&lt;a href=&quot;https://github.com/tpope/vim-fugitive&quot;&gt;fugitive.vim&lt;/a&gt;
-the best Git wrapper that make Vim more powerful with Git,
-your can watch screencast with fugitive.vim in &lt;a href=&quot;http://vimcasts.org/blog/2011/05/the-fugitive-series/&quot;&gt;The Fugitive Series - a
-retrospective&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-write-better-commit-message&quot;&gt;How to write better commit message:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://thaiprogrammer.org/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%99-git-commit-message/&quot;&gt;การเขียน Git Commit Message&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message&quot;&gt;5 Useful Tips For A Better Commit Message&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.freshconsulting.com/atomic-commits/&quot;&gt;Developer Tip: Keep Your Commits “Atomic”&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://chris.beams.io/posts/git-commit/&quot;&gt;How to Write a Git Commit Message&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template&quot;&gt;Better Commit Messages with a .gitmessage Template&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;set-your-git-editor&quot;&gt;Set your git editor&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/2596835&quot;&gt;How do I make git use the editor of my choice for commits?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary>Most of Git tutorial even Try Git guide you
-about git commit with this
-$ git commit -m &quot;hello world&quot;
-
-That&amp;#39;s OK.
-But It better to use any option without -m.</summary></entry></feed>
+Why You Should Use a Password Manager and How to Get Started</summary></entry></feed>

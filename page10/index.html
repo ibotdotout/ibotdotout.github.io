@@ -192,6 +192,102 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/devops/">
+        DevOps
+      </a>
+    </h1>
+
+    <span class="post-date">
+      09 Aug 2014
+      
+        &middot;
+        <a href="/devops/#disqus_thread" data-disqus-identifier="/devops/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="varany-vs-docker"><a href="http://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-io-for-creating-an-isolated-environment">Varany vs. Docker</a></h2>
+
+<p>Vagrant is a tool for managing virtual machines.<br>
+Docker is a tool for building and deploying applications by packaging them into lightweight containers.</p>
+
+<h2 id="nginx-bypass-confixguration">Nginx ByPass Confixguration</h2>
+
+<p>bypass.conf</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">server <span class="o">{</span>
+    listen 80;
+
+    location / <span class="o">{</span>
+        proxy_pass http://127.0.0.1:8000;
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># debian</span>
+<span class="gp">$ </span>sudo apt-get install nginx
+<span class="gp">$ </span>sudo vim /etc/nginx/sites-available/&lt;your&gt;.conf
+<span class="gp">$ </span>sudo rm /etc/ngin/sites-enabled/default.conf
+<span class="gp">$ </span>suo ln -f /etc/nginx/sites-available/&lt;your&gt;.conf /etc/sites-enabled/
+<span class="gp">$ </span>sudo services nginx reload
+</code></pre></div>
+<h2 id="nginx-allow-file-browser-list">Nginx Allow File browser list</h2>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># debain</span>
+<span class="gp">$ </span><span class="nb">cd</span> /usr/share/nginx/html
+<span class="gp">$ </span>ln -s &lt;path&gt; &lt;link_name&gt;
+</code></pre></div>
+<p>edit your nginx.conf</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">    location /&lt;url&gt; <span class="o">{</span>
+      <span class="nb">alias</span> /usr/share/nginx/html/&lt;link_name&gt;
+      autoindex on;
+      autoindex_exact_size off;
+      autoindex_localtime on;
+      auth_basic <span class="s2">"Restricted"</span>;                <span class="c">#For Basic Auth</span>
+      auth_basic_user_file &lt;your .htpasswd&gt;;  <span class="c">#For Basic Auth</span>
+    <span class="o">}</span>
+</code></pre></div>
+<h3 id="useful-command">Useful command</h3>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Vd848ePkM_4">Nethogs - Bandwidth Monitor</a></li>
+<li><a href="https://www.youtube.com/watch?v=39rzNcqNq1E">watch - Execute Command Repeatedly - Linux TUI CLI</a></li>
+<li><a href="https://www.youtube.com/watch?v=sqXZirjvo6c">nohup - Run Commands in the Background - Linux CLI</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZnEDfqr4Rm0">Htop - Task Manager - Linux TUI</a></li>
+<li><a href="https://www.youtube.com/watch?v=a2Kvj9ff8Qk">rsync - Backup and Sync Files - Linux CLI</a></li>
+</ul>
+
+<h3 id="rsync">Rsync</h3>
+
+<ol>
+<li><a href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/">How to Backup Linux? 15 rsync Command Examples</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps">How To Use Rsync to Sync Local and Remote Directories on a VPS</a></li>
+</ol>
+
+<h3 id="ref">Ref::</h3>
+
+<ol>
+<li><a href="http://techglimpse.com/enable-directory-listing-mode-nginx/">How to enable file browser mode in Nginx?</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10">How To Set Up HTTP Authentication With Nginx On Ubuntu 12.10</a></li>
+<li><a href="http://www.techsuii.com/2014/08/03/how-to-setup-https-for-nginx/">วิธี setup Nginx ให้บริการ HTTPS</a></li>
+<li><a href="http://www.youtube.com/watch?v=xr5bZ2ZR28w&amp;list=PLjQo0sojbbxUav7I746f0lT4apGX8-iON">DevOps for Developers (Nginx + Ruby)</a> </li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-fabric-to-automate-administration-tasks-and-deployments">How To Use Fabric To Automate Administration Tasks And Deployments</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx">How to Deploy Python WSGI Apps Using Gunicorn HTTP Server Behind Nginx</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-nginx-for-ubuntu-12-04">How To Create a SSL Certificate on nginx for Ubuntu 12.04</a></li>
+<li><a href="http://bryanhelmig.com/auto-reload-gunicorn-on-file-change-event/">Auto Reload Gunicorn On File Change Event</a></li>
+<li><a href="http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html">20 Linux System Monitoring Tools Every SysAdmin Should Know</a></li>
+<li><a href="https://github.com/n1trux/awesome-sysadmin">Awesome Sysadmin</a></li>
+<li><a href="https://serversforhackers.com">Server Admin for Programmers</a></li>
+<li><a href="http://www.opsschool.org/">Ops School Curriculum</a></li>
+<li><a href="http://serverspec.org">serverspec automation testing your configured(Ruby)</a></li>
+<li><a href="http://nginx.com/wp-content/uploads/2015/01/Building_Microservices_Nginx.pdf">Building Microservices Nginx</a></li>
+<li><a href="https://github.com/ansible/ansible">Ansible is a radically simple IT automation platform</a></li>
+<li><a href="https://www.vagrantup.com/docs/getting-started/">Vargrant GETTING STARTED</a></li>
+<li><a href="https://learn.chef.io">LEARN CHEF</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/git/">
         Git
       </a>
@@ -369,119 +465,6 @@ Then add config.php and database.php to the .gitignore file.</p>
 <li><a href="http://www.voidspace.org.uk/python/mock/mock.html">The Mock Class</a></li>
 <li><a href="http://melp.nl/2011/02/enhancing-python-unit-tests-with-more-decorators/">enhancing-python-unit-tests-with-more-decorators</a></li>
 <li><a href="http://stackoverflow.com/questions/5929107/python-decorators-with-parameters">python-decorators-with-parameters</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/watchdog/">
-        Watchdog
-      </a>
-    </h1>
-
-    <span class="post-date">
-      20 Jul 2014
-      
-        &middot;
-        <a href="/watchdog/#disqus_thread" data-disqus-identifier="/watchdog/"></a>
-        
-      
-    </span>
-
-    
-      <h3 id="watchdog"><a href="https://github.com/gorakhargosh/watchdog">Watchdog</a></h3>
-
-<p>Python API and shell utilities to monitor file system events.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">pip install watchdog
-</code></pre></div>
-<h3 id="watching-python-file-changes">Watching python file changes</h3>
-
-<p><noscript><pre>#!/usr/bin/env python
-import os
-import sys
-import time
-from watchdog.observers import Observer
-from watchdog.events import PatternMatchingEventHandler</p>
-
-<p>def when_file_changed(filename):
-    &quot;&quot;&quot;
-        Unittest Monitoring with coverage filtering
-        file - ./&lt;projectname&gt;/&lt;package&gt;/&lt;file&gt;.py
-            ex. ./meow_meow/core/api.py
-        testfile - ./tests/unit/&lt;package&gt;/test_&lt;file&gt;.py
-            ex. ./tests/unit/core/test_api.py
-    &quot;&quot;&quot;
-    def projectname():
-        &quot;&quot;&quot;
-            Projectname from name of current directory (&#39;.&#39;)
-            if there are dash &#39;-&#39; in its name replace to underscore &#39;<em>&#39;
-        &quot;&quot;&quot;
-        return os.path.abspath(&quot;.&quot;).rsplit(&quot;/&quot;, 1)[1].replace(&quot;-&quot;, &quot;</em>&quot;)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def package(filename):
-    basename = os.path.basename(filename)
-    if not basename.startswith(&amp;quot;test_&amp;quot;):
-        package = filename.replace(&amp;quot;./&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
-    else:
-        package = filename.replace(&amp;quot;./tests/unit&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
-        package = projectname() + package.replace(&amp;quot;/test_&amp;quot;, &amp;quot;/&amp;quot;)
-    package = package.replace(&amp;quot;/&amp;quot;, &amp;quot;.&amp;quot;)
-    return package
-
-def test_file(filename):
-    basename = os.path.basename(filename)
-    if not basename.startswith(&amp;quot;test_&amp;quot;):
-        filename = filename.replace(projectname(), &amp;quot;tests/unit&amp;quot;)
-        filename = filename.replace(basename, &amp;quot;test_&amp;quot; + basename)
-    return filename
-
-cls()
-print(os.path.abspath(filename))
-args = {&amp;quot;package&amp;quot;: package(filename), &amp;quot;testfile&amp;quot;: test_file(filename)}
-cmd = &amp;quot;nosetests --with-coverage --cover-erase --cover-package={package}&amp;quot; \
-      &amp;quot; -v {testfile}&amp;quot;.format(**args)
-os.system(cmd)
-</code></pre></div>
-<p>def cls():
-    os.system(&#39;cls&#39; if os.name == &#39;nt&#39; else &#39;clear&#39;)</p>
-
-<p>class ModifiedHandler(PatternMatchingEventHandler):
-    patterns = [&quot;*.py&quot;]  # Monitor only matched patterns</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def on_created(self, event):
-    &amp;quot;&amp;quot;&amp;quot;&amp;quot; For Vim :w - not modify that deleted and created file instead. &amp;quot;&amp;quot;&amp;quot;
-    when_file_changed(event.src_path)
-
-def on_modified(self, event):
-    &amp;quot;&amp;quot;&amp;quot; For other text-editor ex.sublime &amp;quot;&amp;quot;&amp;quot;
-    when_file_changed(event.src_path)
-</code></pre></div>
-<p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:
-    args = sys.argv[1:]
-    event_handler = ModifiedHandler()
-    observer = Observer()
-    observer.schedule(event_handler,
-                      path=args[1] if args else &#39;.&#39;, recursive=True)
-    observer.start()</p>
-<div class="highlight"><pre><code class="language-" data-lang="">try:
-    while True:
-        time.sleep(1)
-except KeyboardInterrupt:
-    observer.stop()
-observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src="https://gist.github.com/ibotdotout/8f42fbc0ee122f89e728.js"&gt; &lt;/script&gt;
-</code></pre></div>
-<h3 id="watchdog-over-docker-vm-via-polling">Watchdog over Docker (VM) via polling -</h3>
-
-<p><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Ref</a></p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">watchdog.observers.polling</span> <span class="kn">import</span> <span class="n">PollingObserver</span> <span class="k">as</span> <span class="n">Observer</span>
-<span class="n">Observer</span><span class="p">()</span> <span class="c">#polling every 1 second</span>
-</code></pre></div>
-<h3 id="references">References:</h3>
-
-<ol>
-<li><a href="https://pythonhosted.org/watchdog/api.html#event-handler-classes">Event Handler Classes</a></li>
-<li><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a><br></li>
-<li><a href="http://ginstrom.com/scribbles/2012/05/10/continuous-integration-in-python-using-watchdog/">Continuous integration in python using watchdog</a></li>
 </ol>
 
     
