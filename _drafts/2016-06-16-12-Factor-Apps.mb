@@ -1,0 +1,27 @@
+---
+layout: post
+title: 12 Factor Apps
+tags: [coding]
+permalink: 12-factor-apps/
+# --- option ---
+update_date: 2016-06-16
+category: article
+---
+
+> The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - [The twelve factor app](http://12factor.net)
+
+## Official Site
+* [The twelve factor app](http://12factor.net)
+
+<!-- more -->
+
+## Article
+* [12-Factor Apps in Plain English](http://www.clearlytech.com/2014/01/04/12-factor-apps-plain-english/)
+* ["12-Factor App" Summary](http://jaketrent.com/post/12-factor-app-summary/)
+* [Twelve-Factor Config: Misunderstandings and Advice](http://blog.doismellburning.co.uk/twelve-factor-config-misunderstandings-and-advice/)
+* [Py - The Twelve-Factor App](http://www.doismellburning.co.uk/talks/django12factor/)
+* [How to Build 12 Factor Microservices on Docker - Part 1](https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-1)
+* [How to Build 12 Factor Microservices on Docker - Part 2](https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-2)
+
+## Talks
+* [CF & The 12-factor App 101: The Secret Decoder Ring for Operations](https://www.youtube.com/watch?v=QOz1UOf6MdU)
