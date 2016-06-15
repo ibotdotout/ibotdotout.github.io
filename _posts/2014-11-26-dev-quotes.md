@@ -54,3 +54,5 @@ not dreams. - Rise of the Planet of the Apes
 * You can't optimize what you can't measure - [MongoDB at Scale](https://www.mongodb.com/mongodb-scale)
 
 * เอ้าซอร์สให้ผลลัพธ์ไม่ได้ให้ความรู้ เอ้าซอร์สช่วยประหยัดเวลาไม่ได้ช่วยสร้างประสบการณ์ - [Outsourcing Work](https://medium.com/inspiring-home/outsourcing-work-f269c0233f6f#.lryg8vdxw)
+
+* You can't optimize what you can't measure -  [MongoDB at Scale](https://www.mongodb.com/mongodb-scale)
