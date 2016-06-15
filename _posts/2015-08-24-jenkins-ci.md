@@ -235,6 +235,7 @@ $ sudo service jenkins restart
 8. [Sonar plugin](https://wiki.jenkins-ci.org/display/JENKINS/Sonar+plugin)
 9. [Violations - generates reports static code violation detectors](https://wiki.jenkins-ci.org/display/JENKINS/Violations)
 10. [Publish over SSH](http://www.somkiat.cc/jenkins-deploy-over-ssh/)
+11. [Jenkins Job DSL](https://jenkinsci.github.io/job-dsl-plugin/#)
 
 
 ## Jenkins References::
