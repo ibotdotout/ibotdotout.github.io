@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-06-15T18:50:06+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Git Bisect</title><link href="http://dev.im-bot.com//git-bisect/" rel="alternate" type="text/html" title="Git Bisect" /><published>2016-06-14T00:00:00+00:00</published><updated>2016-06-14T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-bisect</id><content type="html" xml:base="http://dev.im-bot.com//git-bisect/">&lt;p&gt;Git Bisect is useful for debugging something is work is past but not now (Regression).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-06-17T14:24:21+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-Factor-Apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&gt; The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - [The twelve factor app](http://12factor.net)
+
+## Official Site
+* [The twelve factor app](http://12factor.net)
+
+&lt;!-- more --&gt;
+
+## Article
+* [12-Factor Apps in Plain English](http://www.clearlytech.com/2014/01/04/12-factor-apps-plain-english/)
+* [&quot;12-Factor App&quot; Summary](http://jaketrent.com/post/12-factor-app-summary/)
+* [Twelve-Factor Config: Misunderstandings and Advice](http://blog.doismellburning.co.uk/twelve-factor-config-misunderstandings-and-advice/)
+* [Py - The Twelve-Factor App](http://www.doismellburning.co.uk/talks/django12factor/)
+* [How to Build 12 Factor Microservices on Docker - Part 1](https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-1)
+* [How to Build 12 Factor Microservices on Docker - Part 2](https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-2)
+
+## Talks
+* [CF &amp; The 12-factor App 101: The Secret Decoder Ring for Operations](https://www.youtube.com/watch?v=QOz1UOf6MdU)</content><author><name>botbotbot</name></author><category term="article" /><category term="coding" /><summary>&gt; The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - [The twelve factor app](http://12factor.net)
+
+## Official Site
+* [The twelve factor app](http://12factor.net)</summary></entry><entry><title>Git Bisect</title><link href="http://dev.im-bot.com//git-bisect/" rel="alternate" type="text/html" title="Git Bisect" /><published>2016-06-14T00:00:00+00:00</published><updated>2016-06-14T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-bisect</id><content type="html" xml:base="http://dev.im-bot.com//git-bisect/">&lt;p&gt;Git Bisect is useful for debugging something is work is past but not now (Regression).&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -818,58 +837,4 @@ Coming Soon Page&lt;/a&gt;&lt;/li&gt;
 
 Wordpress Docker Image
 WordPress Local Development With Docker – Installation
-Guide</summary></entry><entry><title>Password Manager</title><link href="http://dev.im-bot.com//password-manager/" rel="alternate" type="text/html" title="Password Manager" /><published>2016-01-09T00:00:00+00:00</published><updated>2016-01-09T00:00:00+00:00</updated><id>http://dev.im-bot.com//password-manager</id><content type="html" xml:base="http://dev.im-bot.com//password-manager/">&lt;h2 id=&quot;what-is-password-manager&quot;&gt;What is Password Manager ?&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/141500/why-you-should-use-a-password-manager-and-how-to-get-started/&quot;&gt;Why You Should Use a Password Manager and How to Get Started&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;what-is-best-password-manger&quot;&gt;What is best password manger ?&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-is-the-best-password-management-software-for-cross-platform-use-comparing-KeePass-1Password-and-LastPass&quot;&gt;What is the best password management software for cross-platform use; comparing KeePass, 1Password, and LastPass?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;LassPass (Free with lite)- Online Service keeps your password in cloud.&lt;br&gt;
-1password (Paid App)- Nice for Mac/iOS, also work on Windows, not have version
-on linux.&lt;br&gt;
-Keepass - Open source and cross platform.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.guidingtech.com/47530/1password-over-lastpass/&quot;&gt;Why I Switched From LastPass to 1Password: It’s More Than Just About Password Management&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;LassPass keeps your password in cloud.
-1password keeps in your local machine that your can backup it on
-dropbox or personal account of cloud storage.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://gizmodo.com/lastpass-vs-keepass-whats-the-best-online-password-m-1452918307&quot;&gt;LastPass vs. KeePass: What&amp;#39;s the Best Online Password Management?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;LastPass offers the convenience but KeePass have better security.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;keepass&quot;&gt;Keepass&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/165882/how-to-use-keepass-in-your-browser-across-your-computers-and-on-your-phone/&quot;&gt;How to Use KeePass In Your Browser, Across Your Computers, and On Your Phone&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;kpcli-keepass-command-line&quot;&gt;KPCLI - Keepass Command line&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=M448GtFa5Xs&quot;&gt;kpcli - Keepass Password Manager - Linux CLI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-kpcli-to-manage-keepass2-password-files-on-an-ubuntu-14-04-server&quot;&gt;How To Use kpcli To Manage KeePass2 Password Files on an Ubuntu 14.04 Server&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.australsounds.com/2014/10/installingkpcli.html&quot;&gt;Installing KPCLI on OS X&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="security" /><summary>What is Password Manager ?
-
-
-Why You Should Use a Password Manager and How to Get Started</summary></entry></feed>
+Guide</summary></entry></feed>

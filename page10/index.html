@@ -141,6 +141,10 @@
       
     
       
+        
+      
+    
+      
     
 
   <div class="sidebar-item">
@@ -189,6 +193,34 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/osx-backup/">
+        OSX Backup
+      </a>
+    </h1>
+
+    <span class="post-date">
+      08 Sep 2014
+      
+        &middot;
+        <a href="/osx-backup/#disqus_thread" data-disqus-identifier="/osx-backup/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="time-machine-backups-on-external-hard-drive">Time Machine Backups on External Hard Drive</h2>
+
+<ol>
+<li><a href="http://osxdaily.com/2013/05/01/use-single-hard-drive-time-machine-and-file-storage/">Use a Single External Hard Drive for Time Machine Backups and File Storage</a></li>
+<li><a href="http://www.imore.com/how-set-and-restore-time-machine-backup">How to easily back up and restore your Mac with Time Machine on OS X Mavericks</a></li>
+<li><a href="http://support.apple.com/kb/HT1427">Mac Basics: Time Machine backs up your Mac</a></li>
+</ol>
+
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -411,61 +443,6 @@ Then add config.php and database.php to the .gitignore file.</p>
 </ol>
 
 <h2 id="attach-disk"><a href="https://developers.google.com/compute/docs/disks#attachdiskcreation">Attach Disk</a></h2>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/mock/">
-        Mock
-      </a>
-    </h1>
-
-    <span class="post-date">
-      24 Jul 2014
-      
-        &middot;
-        <a href="/mock/#disqus_thread" data-disqus-identifier="/mock/"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="mock-mocking-and-testing-library"><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></h2>
-
-<p>If you mock some thing, it can&#39;t be runnable. Don&#39;t forget it just mock object.  </p>
-
-<h3 id="mock-method-that-can-be-runnable">Mock Method that can be runnable</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># side_effect will make mock method can be runable  </span>
-<span class="c"># this can be use to reutrn_value in different arguments</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>  
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>  
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="mi">2</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="mi">3</span>
-</code></pre></div>
-<h3 id="patch-module-attribute">Patch Module Attribute</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Using PropertyMock with return_value argument  </span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">'package.module.attribute'</span><span class="p">,</span>  
-                     <span class="n">new_callable</span><span class="o">=</span><span class="n">mock</span><span class="o">.</span><span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
-                     <span class="k">as</span> <span class="n">mock_attribute</span><span class="p">:</span>  
-<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">mock_attribte</span><span class="p">)</span>  
-<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span>  
-<span class="mi">3</span>  
-<span class="mi">3</span>  
-</code></pre></div>
-<h3 id="my_mock-mock_calls">my_mock.mock_calls</h3>
-
-<h3 id="reference">Reference:</h3>
-
-<ol>
-<li><a href="http://www.voidspace.org.uk/python/mock/mock.html">The Mock Class</a></li>
-<li><a href="http://melp.nl/2011/02/enhancing-python-unit-tests-with-more-decorators/">enhancing-python-unit-tests-with-more-decorators</a></li>
-<li><a href="http://stackoverflow.com/questions/5929107/python-decorators-with-parameters">python-decorators-with-parameters</a></li>
-</ol>
 
     
   </div>

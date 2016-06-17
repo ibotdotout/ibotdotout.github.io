@@ -141,6 +141,10 @@
       
     
       
+        
+      
+    
+      
     
 
   <div class="sidebar-item">
@@ -189,6 +193,62 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/pomodoro/">
+        Pomodoro Technique
+      </a>
+    </h1>
+
+    <span class="post-date">
+      14 Sep 2015
+      
+        &middot;
+        <a href="/pomodoro/#disqus_thread" data-disqus-identifier="/pomodoro/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="benefits">Benefits</h2>
+
+<ul>
+<li>Focus on your work and make it Flow, eliminate your social that you can do in break.</li>
+<li>Estimate your work with time, not your feeling that you know how long did you work and how long will be break.</li>
+<li>Reduce multi-task that has high cost for switching.</li>
+<li>Keep track of how long you&#39;re spending at your task that make you easier to plan. Normally use pomodoro unit ex. two pomodoros for meeting, four for coding.</li>
+</ul>
+
+<h2 id="guide">Guide</h2>
+
+<ol>
+<li><a href="http://pomodorotechnique.com/get-started/">Pomodoro Get Started</a></li>
+<li><a href="http://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730">Productivity 101: A Primer to The Pomodoro Technique</a></li>
+<li><a href="https://www.skilllane.com/blog/pomodoro-technique-to-improve-your-productivity">เทคนิค Pomodoro: วิธีจัดเวลาเพื่อทำงานอย่างฉลาด เพื่อเปลี่ยนเรื่องยากให้เป็นเรื่องง่าย</a></li>
+<li><a href="http://korn4d.com/2014/06/14/pomodoro-%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99-25-%E0%B8%99%E0%B8%B2%E0%B8%97%E0%B8%B5-%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%9E/">Pomodoro ไม่ใช่ทำงาน 25 นาที แล้วพัก 5 นาที</a></li>
+</ol>
+
+<h2 id="apps">Apps</h2>
+
+<ol>
+<li><a href="http://www.tomighty.org">Tomighty - Simpler</a> - <a href="https://github.com/ccidral/tomighty">Source</a></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># osx</span>
+<span class="gp">$ </span>brew cask install tomighty
+
+<span class="c"># if use dark theme need to build with youself</span>
+<span class="c"># issuse - https://github.com/ccidral/tomighty-osx/pull/16</span>
+<span class="c"># https://github.com/mrknmc/tomighty-osx</span>
+<span class="c"># notification version</span>
+<span class="c"># https://github.com/eduardonunesp/tomighty-osx</span>
+</code></pre></div>
+<ol>
+<li><a href="http://tomato-timer.com">TomatoTimer - WebApp</a></li>
+</ol>
+
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -652,252 +712,6 @@ dependencies</a></li>
 <li><a href="https://github.com/caskroom/homebrew-versions">homebrew-versions</a></li>
 <li><a href="https://github.com/msanders/cider">Cider - homebrew wrapper</a></li>
 </ul>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/jenkins/">
-        Jenkins CI
-      </a>
-    </h1>
-
-    <span class="post-date">
-      24 Aug 2015
-      
-        &middot;
-        <a href="/jenkins/#disqus_thread" data-disqus-identifier="/jenkins/"></a>
-        
-      
-    </span>
-
-    
-      <h1 id="jenkins-ci-extendable-ci-server"><a href="http://jenkins-ci.org">Jenkins-CI</a> - Extendable CI Server</h1>
-
-<h2 id="install-jenkins">Install Jenkins::</h2>
-
-<h3 id="debian">Debian</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Don't use only apt-get install jenkins that old version</span>
-  <span class="nv">$ </span>wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
-  <span class="nv">$ </span>sudo vim /etc/apt/sources.list
-  <span class="c"># add the following entry</span>
-  <span class="c"># deb http://pkg.jenkins-ci.org/debian binary/</span>
-  <span class="nv">$ </span>sudo apt-get update
-  <span class="nv">$ </span>sudo apt-get install jenkins
-</code></pre></div>
-<h3 id="osx">OSX</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  brew update
-  brew install jenkins
-</code></pre></div>
-<h3 id="allow-others-to-access-jenkins">Allow others to access jenkins</h3>
-
-<p>Original From <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Setting up an Apache Proxy for port 80 -&gt; 8080</a> but it use old version of apache2</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="nv">$ </span>sudo apt-get install apache2
-    <span class="nv">$ </span>sudo a2enmod proxy
-    <span class="nv">$ </span>sudo a2enmod proxy_http
-    <span class="nv">$ </span>sudo a2dissite 000-default.conf
-</code></pre></div>
-<p>Create &quot;jenfins.conf&quot; in /etc/apache2/sites-available</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  &lt;VirtualHost <span class="k">*</span>:80&gt;
-      ServerAdmin webmaster@localhost
-      ServerName ci.company.com
-      ServerAlias ci
-      ProxyRequests Off
-      &lt;Proxy <span class="k">*</span>&gt;
-            Order deny,Alloww
-            Allow from all
-      &lt;/Proxy&gt;
-      ProxyPreserveHost on
-      ProxyPass / http://Proxylocalhost:8080/
-  &lt;/VirtualHost&gt;
-</code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>sudo a2ensite jenkins
-  <span class="nv">$ </span>sudo service apache2 restart
-</code></pre></div>
-<h2 id="jenkins-job-workspace">Jenkins Job Workspace::</h2>
-
-<ol>
-<li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br></li>
-<li>In Home directory clicks Adanced... Buttons.<br></li>
-<li>look Workspace Root Directory. Normally it is &quot;workspace&quot;.<br></li>
-<li>your job workspace is &lt; jenkins home directory &gt; /jobs/&lt; your jobs &gt; / &lt; workspace &gt;<br></li>
-</ol>
-
-<h2 id="jenkins-backup-and-import-configure">Jenkins backup and Import Configure::</h2>
-
-<h3 id="backup-job-configure">Backup Job Configure</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/job/&lt;project name&gt;/config.xml
-</code></pre></div>
-<h3 id="import-job-configure">Import Job Configure</h3>
-
-<ol>
-<li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br></li>
-<li>go to &lt; jenkins home directory &gt;/jobs<br></li>
-<li>go to &lt; your jobs directory &gt;<br></li>
-<li>replace your backup config.xml with config.xml<br></li>
-<li>reload jenkins with<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/reload
-</code></pre></div>
-<h2 id="jenkins-trigger-via-git-hook">Jenkins Trigger via git hook::</h2>
-
-<h3 id="setup-configure">Setup Configure</h3>
-
-<ol>
-<li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a><br></li>
-<li>In Job Configure &gt; Source Code Management &gt; Select Git<br></li>
-<li>add your git repository url to Repository URL<br></li>
-<li>Select Poll SCM in Build Triggers and you can leave Schedule as blank<br></li>
-<li>Save Configure<br></li>
-</ol>
-
-<h3 id="git-hook-to-trigger-jenkins"><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository">Git Hook to trigger Jenkins</a></h3>
-
-<ol>
-<li>If you use linux you have to install curl. That was installed osx.</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>sudo apt-get install curl
-</code></pre></div>
-<ol>
-<li>You can trigger jenkins with this url</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span>&lt;URL of the Git repository&gt;
-</code></pre></div>
-<ol>
-<li>You can trigger jenkins after git push by</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># git don't have post-push hook</span>
-  <span class="nv">$ </span>git push <span class="o">&amp;&amp;</span> curl http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
-</code></pre></div>
-<ol>
-<li>You can use git alias to make short cmd by edit .git/config in your git repository</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="o">[</span><span class="nb">alias</span><span class="o">]</span>
-      trig-jenkins <span class="o">=</span> !curl http://yourjenkinsservergit/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
-      push-wt <span class="o">=</span> !git push <span class="o">&amp;&amp;</span> git trig-jenkins
-</code></pre></div>
-<p>call your alias by</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>git trig-jenkins
-  <span class="nv">$ </span>git push-wt
-</code></pre></div>
-<h2 id="jenkins-with-python">Jenkins with Python::</h2>
-
-<h3 id="setup">Setup</h3>
-
-<ol>
-<li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin</a><br></li>
-<li>In Manage Jenkins &gt; Configure System &gt; Python clicks &quot;Python installations&quot; button.<br></li>
-<li>Config your python environments<br></li>
-<li>Save<br></li>
-</ol>
-
-<h3 id="configure-job-to-run-with-python">Configure Job to run with python</h3>
-
-<ol>
-<li>In Job Configure &gt; Build &gt; Add build step &gt; {Python Builder, VirtualEnv Builder}<br></li>
-<li>Select your Python version<br></li>
-<li>Nature select shell<br></li>
-<li>In command add your run script<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># example</span>
-  <span class="nb">export </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
-  python setup.py develop
-  nosetests --with-coverage --cover-erase --cover-package<span class="o">=</span>core,bin --cover-html --with-xunit
-</code></pre></div>
-<ol>
-<li><p>(Optional) Publish Test Result Report 
-5.1 Use nosetests to generate xml result in xunit format  </p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"> <span class="nv">$ </span>nosetests --with-xunit  <span class="c"># nosetests.xml is default name of xml</span>
-</code></pre></div>
-<p>5.2 Add post-build action &gt; Publish JUnit test result report<br>
-5.3 Add &quot;nosetests.xml&quot; in Test report XMLs  </p></li>
-<li><p>(Optional) Publish coverage.py HTML reports<br>
-6.1 Use nosetests to run coverage.py  </p></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="nv">$ </span>nosetests --with-coveage --cover-html
-</code></pre></div>
-<p>6.2 Add post-build action &gt; Publish coverage.py HTML reports<br>
-7. (Options) Publish your product<br>
-  7.1 Add post-build action &gt; Archive the artifacts<br>
-  7.2 Add your file name  </p>
-
-<h2 id="start-stop-jenkins-that-installed-via-homebrew">Start/Stop Jenkins that installed via Homebrew</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># launchd start jenkins at login:</span>
-<span class="gp">$ </span>ln -sfv /usr/local/opt/jenkins/<span class="k">*</span>.plist ~/Library/LaunchAgents
-<span class="c"># start jenkins</span>
-<span class="gp">$ </span>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
-<span class="c"># stop jenkins:</span>
-<span class="gp">$ </span>launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
-</code></pre></div>
-<h3 id="jekins-reset-password"><a href="https://gist.github.com/gmhawash/4043232">Jekins Reset Password</a></h3>
-
-<ol>
-<li>Go to Jenkins Home Path<br>
-(debian) /var/lib/jenkins<br></li>
-<li>Edit config.xml<br></li>
-<li>Set &lt; userSecurity&gt; tag to false<br></li>
-<li>Delete &lt; authorizationStrategy&gt; and &lt; securityRealm&gt; tags<br></li>
-<li>Restart Jenkins<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo service jenkins restart
-</code></pre></div>
-<h3 id="ssh-key-on-jenkins"><a href="http://www.uvd.co.uk/blog/labs/configuring-jenkins-continuous-integration-server-to-work-with-git/">SSH Key on Jenkins</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo su - jenkins
-<span class="gp">$ </span>ssh-keygen -t rsa -C <span class="s2">"your_email@example.com"</span>
-<span class="gp">$ </span>cat ~/.ssh/id_rsa.pub
-</code></pre></div>
-<h3 id="jekins-git-pulling-timeout-after-10-min"><a href="http://stackoverflow.com/questions/22013217/on-building-jenkins-project-timeout-after-10-minute-error-happens">Jekins git pulling timeout after 10 min</a></h3>
-
-<ol>
-<li>Edit job configuration, In git plugion section</li>
-<li>Click Add &gt; Advanced clone behaviours &gt; Set Timeout</li>
-</ol>
-
-<h2 id="jenkins-running-parallel-scripts"><a href="http://stackoverflow.com/questions/23062933/jenkins-running-parallel-scripts">Jenkins running parallel scripts</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># wokr in any shell</span>
-<span class="gp">$ </span>script1.sh &amp;   <span class="c"># run in background (sub-shell)</span>
-<span class="gp">$ </span>script2.sh     <span class="c"># run in foreground (shell)</span>
-</code></pre></div>
-<h3 id="jenkins-with-docker-io">Jenkins with Docker.io</h3>
-
-<ol>
-<li><a href="https://developer.rackspace.com/blog/move-fast-and-dont-break-things-testing-with-jenkins-ansible-and-docker/">Move fast and don’t break things! Testing with Jenkins, Ansible and Docker</a></li>
-<li><a href="https://github.com/orangain/jenkins-docker-sample">jenkins-docker-sample</a></li>
-<li><a href="http://www.therightcode.net/use-docker-jenkins-to-run-github-tests/">Use Docker + Jenkins to run GitHub tests</a></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># add jenkins to docker group</span>
-<span class="gp">$ </span>sudo gpasswd -a jenkins docker <span class="c"># or sudo adduser jenkins docker</span>
-<span class="gp">$ </span>sudo service docker.io restart
-<span class="gp">$ </span>sudo service jenkins restart
-</code></pre></div>
-<h3 id="jenkins-plugins-install-via-terminal">Jenkins Plugins - <a href="http://stackoverflow.com/questions/7709993/how-can-i-update-jenkins-plugins-from-the-terminal">Install via Terminal</a>::</h3>
-
-<ol>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin - Python support to
-Jenkkins</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls">Green Balls</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin">Build Pipeline Plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Monitor+Plugin">Build Monitor Plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Sounds+plugin">Jenkins Sounds plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Robot+Framework+Plugin">Robot Framework Plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Sonar+plugin">Sonar plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Violations">Violations - generates reports static code violation detectors</a></li>
-<li><a href="http://www.somkiat.cc/jenkins-deploy-over-ssh/">Publish over SSH</a></li>
-</ol>
-
-<h2 id="jenkins-references">Jenkins References::</h2>
-
-<ol>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Installing Jenkins on Ubuntu</a></li>
-<li><a href="http://pkg.jenkins-ci.org/debian/">Jenkins Debian packages</a></li>
-<li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li>
-<li><a href="http://www.somkiat.cc/jenkins-popular-plugins/">Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557</a></li>
-<li><a href="http://oemden.com/?p=205">Jenkins Setup on Os X server</a></li>
-<li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li>
-<li><a href="http://chrigl.de/blogentries/integration-of-pylint-into-jenkins">Integration of pylint into jenkins</a></li>
-<li><a href="http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/">Running Jenkins in Docker Containers</a></li>
-</ol>
 
     
   </div>
