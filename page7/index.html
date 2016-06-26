@@ -196,6 +196,108 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/dev-tools/">
+        OSX Dev Tools
+      </a>
+    </h1>
+
+    <span class="post-date">
+      27 Aug 2015
+      
+        &middot;
+        <a href="/dev-tools/#disqus_thread" data-disqus-identifier="/dev-tools/"></a>
+        
+      
+    </span>
+
+    
+      <h3 id="package-manager">Package Manager</h3>
+
+<ul>
+<li><a href="http://brew.sh">Homebrew - The missing package manager for OS X</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">ruby -e <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
+</code></pre></div>
+<ul>
+<li><a href="http://caskroom.io">Homebrew Cask - “To install, drag this icon…” no more!</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew install caskroom/cask/brew-cas
+</code></pre></div>
+<ul>
+<li><a href="https://github.com/caskroom/homebrew-fonts">Caskroom-fonts</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew tap caskroom/fonts
+</code></pre></div>
+<ul>
+<li><a href="https://github.com/beeftornado/homebrew-rmtree">homebrew-rmtree</a> - <a href="http://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies">Uninstall / remove a Homebrew package including all its
+dependencies</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew tap beeftornado/rmtree <span class="o">&amp;&amp;</span> brew install brew-rmtree
+<span class="gp">$ </span>brew rmtree &lt;package&gt;
+</code></pre></div>
+<h3 id="developer-tools">Developer Tools</h3>
+
+<ul>
+<li><a href="http://iterm2.com">iTerm2 - Mac OS Terminal Replacement</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># this is too old version</span>
+<span class="gp">$ </span>brew cask install iterm2
+
+<span class="c"># try night build that lastest version</span>
+<span class="gp">$ </span>brew tap caskroom/versions
+<span class="gp">$ </span>brew cask install iterm2-nightly
+</code></pre></div>
+<ul>
+<li><a href="http://ohmyz.sh">Oh My Zsh - managing your zsh configuration.</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+</code></pre></div>
+<ul>
+<li><a href="https://kapeli.com/dash">Dash - API Documentation Browser</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install dash
+</code></pre></div>
+<ul>
+<li><a href="https://github.com/MrRio/vtop">vtop</a> - <a href="https://parall.ax/vtop">Intro</a></li>
+</ul>
+
+<blockquote>
+<p>htop on osx port from linux that five years ago version. It&#39;s very old.</p>
+</blockquote>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># requried nodejs</span>
+<span class="gp">$ </span>sudo npm install -g vtop
+</code></pre></div>
+<h3 id="window-manager">Window Manager</h3>
+
+<ul>
+<li><a href="http://spectacleapp.com">Spectacle - Move and resize windows with ease</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install spectacle
+</code></pre></div>
+<h3 id="etc">Etc</h3>
+
+<ul>
+<li><a href="https://justgetflux.com">f.lux - warm your display color</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install flux
+</code></pre></div>
+<ul>
+<li><a href="https://slack.com">Slack: Be less busy</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install slack
+</code></pre></div>
+<ul>
+<li><a href="http://www.iviewapp.net/2012/12/thai-dictionary-mac-os-x-mountain-lion.html">OSX Thai Dictionary</a></li>
+<li><a href="https://gist.github.com/kevin-smets/8568070">iTerm2 + oh my zsh + solarized + Meslo powerline font (OSX)</a></li>
+<li><a href="https://github.com/caskroom/homebrew-versions">homebrew-versions</a></li>
+<li><a href="https://github.com/msanders/cider">Cider - homebrew wrapper</a></li>
+</ul>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/jenkins/">
         Jenkins CI
       </a>
@@ -699,41 +801,6 @@ except:
 <li><a href="https://www.youtube.com/playlist?list=PLv55tReH1ENzu9z5oaU46VNtU0G9wESTH">StepHack.Com : มาเขียน บอท line ด้วย Python กันเถอะ</a></li>
 <li><a href="http://dev-program.com/how-to-use-line-api-in-python-lts-work/">How to use LINE API in python ( lt’s work)</a></li>
 <li><a href="http://carpedm20.blogspot.kr/2013/09/line-reverse-engineering.html">Line reverse engineering</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/grammar/">
-        Grammar check
-      </a>
-    </h1>
-
-    <span class="post-date">
-      30 Jul 2015
-      
-        &middot;
-        <a href="/grammar/#disqus_thread" data-disqus-identifier="/grammar/"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="web-based">Web Based</h2>
-
-<ol>
-<li><a href="http://fraze.it">FrazeIt - checking phrase from top writers</a></li>
-<li><a href="https://www.languagetool.org">LanguageTool - proof­reading program</a></li>
-<li><a href="https://www.grammarly.com">Grammarly makes you a better writer</a></li>
-</ol>
-
-<h2 id="tools">Tools</h2>
-
-<ol>
-<li><a href="https://robots.thoughtbot.com/vim-spell-checking">Vim Spell-Checking</a></li>
-<li><a href="https://www.linux.com/learn/tutorials/357267:using-spell-checking-in-vim">Using Spell Checking in Vim</a></li>
 </ol>
 
     

@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-06-17T15:21:00+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-Factor-Apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-06-26T22:22:42+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>RESTful API</title><link href="http://dev.im-bot.com//restful-api/" rel="alternate" type="text/html" title="RESTful API" /><published>2016-06-26T00:00:00+00:00</published><updated>2016-06-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//restful-api</id><content type="html" xml:base="http://dev.im-bot.com//restful-api/">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/dwyl/learn-api-design&quot;&gt;Essential learning for people building APIs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.newrelic.com/2014/09/08/apipunchlist/&quot;&gt;The 5 Things  API Must Have&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;1. Error handling
+2. Error logging
+3. Validation
+4. Authentication and authorization
+5. Testing
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blogs.mulesoft.com/dev/api-best-practices-series-intro/&quot;&gt;New Series: API Design Best Practices&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blog.ploeh.dk/2013/04/29/rest-lessons-learned/&quot;&gt;REST lessons learned by Mark Seemann&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.restapitutorial.com/httpstatuscodes.html&quot;&gt;HTTP Status Codes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://codeplanet.io/principles-good-restful-api-design/&quot;&gt;Principles of good RESTful API Design&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.restapitutorial.com&quot;&gt;Learn REST: A RESTful Tutorial&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/RestCheatSheet/api-cheat-sheet#api-design-cheat-sheet&quot;&gt;API Design Cheat Sheet&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blog.octo.com/en/design-a-rest-api/&quot;&gt;How to design a REST API&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/&quot;&gt;10 Best Practices for Better RESTful API&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://restcookbook.com&quot;&gt;REST CookBook&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://codeplanet.io/principles-good-restful-api-design/&quot;&gt;Principles of good RESTful API Design&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/jaytaph/rest-in-practice-froscon-2012&quot;&gt;REST in practice - FrOSCon 2012&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api&quot;&gt;Best Practices for Designing a Pragmatic RESTful API&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;rest-hypermedia-standard&quot;&gt;REST Hypermedia Standard&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://sookocheff.com/post/api/on-choosing-a-hypermedia-format/&quot;&gt;On choosing a hypermedia type for your API - HAL, JSON-LD, Collection+JSON, SIREN, Oh My!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;And the winner is?
+Unfortunately, there is no clear winner. It depends on the contraints in place on your API. However, I will offer some suggestions.
+If you are augmenting existing API responses choose JSON-LD. If you are keeping it simple choose HAL. If you are looking for a full ?&amp;gt; featured media type choose Collection+JSON&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://jsonapi.org&quot;&gt;JSON-API&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stateless.co/hal_specification.html&quot;&gt;HAL - Hypertext Application Language&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;video&quot;&gt;Video&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=heh4OeB9A-c&quot;&gt;How To Design A Good API and Why it Matters&lt;/a&gt; - &lt;a href=&quot;http://landawn.com/How%20to%20Design%20a%20Good%20API%20and%20Why%20it%20Matters.pdf&quot;&gt;slide&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qCdpTji8nxo&quot;&gt;How to Design Great APIs - Parse Developer Day 2013&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary>Essential learning for people building APIs
+The 5 Things  API Must Have
+1. Error handling
+2. Error logging
+3. Validation
+4. Authentication and authorization
+5. Testing</summary></entry><entry><title>12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-Factor-Apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&lt;blockquote&gt;
 &lt;p&gt;The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - &lt;a href=&quot;http://12factor.net&quot;&gt;The twelve factor app&lt;/a&gt;  &lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -734,121 +790,4 @@ Node based on debian 644 MB vs 36.76 MB alpine-node
 You can see how small alpine based image are.
 However alpine based is new born linux that not contain much packages as
 older linux like debian/ubuntu. There are some compiled packages and
-some that your have to compile with your own.</summary></entry><entry><title>All about Wordpress</title><link href="http://dev.im-bot.com//wordpress/" rel="alternate" type="text/html" title="All about Wordpress" /><published>2016-01-26T00:00:00+00:00</published><updated>2016-01-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//wordpress</id><content type="html" xml:base="http://dev.im-bot.com//wordpress/">&lt;h1 id=&quot;docker-wordpress&quot;&gt;Docker + Wordpress&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/wordpress/&quot;&gt;Wordpress Docker Image&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://warun.in.th/64-wordpress-local-development-with-docker-installation-guide&quot;&gt;WordPress Local Development With Docker – Installation
-Guide&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h3 id=&quot;wordpress-guide&quot;&gt;Wordpress Guide&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://ithemes.com/publishing/getting-started-with-wordpress/&quot;&gt;Getting Started with WordPress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.skilllane.com/courses/wordpress-for-beginners&quot;&gt;WP101-102 การใช้งาน WordPress เบื้องต้นทั้งหมด&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://cloudcourse.io/course/wordpress-theme-and-bootstrap-3/&quot;&gt;WordPress Theme with Bootstrap 3 วิดีโอสอนภาษาไทย&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/wordpress-basic-set-up/&quot;&gt;9 สิ่งที่ต้องทำ หลังการติดตั้ง WordPress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://warun.in.th/7-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99-wordpress-%E0%B8%81%E0%B8%B1%E0%B8%9A-cloudflare&quot;&gt;ใช้งาน WordPress กับ CloudFlare&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.modifywordpress.com/wordpress/10-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%8A/&quot;&gt;10 ข้อผิดพลาดที่มือใหม่ชอบทำใน WORDPRESS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;how-to-choose-wordpress-theme&quot;&gt;How to choose Wordpress Theme&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.engagewp.com/why-i-no-longer-use-themeforest/&quot;&gt;Why I No Longer Use Themeforest Why I Don’t Use Themeforest Anymore&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.mypum.com/7-things-to-consider-when-choosing-a-wordpress-theme/&quot;&gt;7 สิ่งที่ควรพิจารณาก่อนเลือกธีม Wordpress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://mennstudio.com/2014/selling-premium-themes-on-wordpress-com/&quot;&gt;การสร้างธีมที่เป็นมาตรฐาน และขายผ่าน WordPress.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.designil.com/themeforest-buy-sale-website-template.html&quot;&gt;ความจริงเกี่ยวกับ Themeforest ที่คนอยากขายธีมต้องรู้&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.thaiseoboard.com/index.php/topic,372082.msg5088682/topicseen.html&quot;&gt;license ของ themeforest : การเลือกซื้อ และการแอบตรวจสอบว่าเราละเมิดกฏ license&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.tsupaman.com/2013/12/how-to-buy-template-form-themeforest-net&quot;&gt;วิธีการซื้อ Template สวยๆจาก themeForest.net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/get-to-know-wordpress-theme/&quot;&gt;ส่วนประกอบของธีม WordPress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.wpthaiuser.com/wordpress-themes-comparison/&quot;&gt;เปรียบเทียบ(ราคา) ธีม WordPress ของค่ายต่างๆ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;wordpress-theme&quot;&gt;Wordpress Theme&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mythemeshop.com/themes/corporate/&quot;&gt;Corporate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mythemeshop.com/themes/onepage/&quot;&gt;One page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226&quot;&gt;Avada | Responsive Multi-Purpose Theme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775&quot;&gt;Jupiter - Multi-Purpose Responsive Theme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.elegantthemes.com/demo/?theme=Vertex&quot;&gt;Vertex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://demo.wpzoom.com/?theme=diamond&quot;&gt;Diamond&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://csmthemes.com/themes/launch/&quot;&gt;Launch Theme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.responsivemiracle.com&quot;&gt;http://www.responsivemiracle.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;wordpress-plugin&quot;&gt;Wordpress Plugin&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://ithemes.com/2011/08/29/free-ebook-download-getting-started-with-wordpress-plugins/&quot;&gt;Free Ebook Download – Getting Started with WordPress Plugins&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://kopkap.in.th/20-plugin-wordpress-2015.html&quot;&gt;20 Plugin WordPress สำหรับปี 2015&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.techiosoft.com/best-wordpress-plugins/&quot;&gt;แนะนำ ปลั๊กอิน WordPress ฟรี ! ยอดนิยม 2015&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jirayu.in.th/2013/08/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%9B%E0%B8%A5%E0%B8%B1%E0%B9%8A%E0%B8%81%E0%B8%AD%E0%B8%B4%E0%B8%99-wordpress-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9C%E0%B8%A1%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%9A%E0%B8%99/&quot;&gt;รวมปลั๊กอิน WordPress ที่ผมใช้บนบล็อกนี้&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.wpbeginner.com/beginners-guide/best-drag-and-drop-page-builders-for-wordpress/&quot;&gt;5 Best Drag and Drop WordPress Page Builders Compared&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://premium.wpmudev.org/blog/10-drag-and-drop-page-builders-wordpress/&quot;&gt;10 FANTASTIC DRAG AND DROP PAGE BUILDERS FOR WORDPRESS WORTH CHECKING
-OUT&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://pluginbuddy.com/purchase/backupbuddy/&quot;&gt;Backup Buddy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/ewww-image-optimizer/&quot;&gt;EWWW Image Optimizer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/updraftplus/&quot;&gt;UpdraftPlus Backup/Restore&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/duplicator/&quot;&gt;Duplicator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/wp-smushit/&quot;&gt;WP Smush&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/bj-lazy-load/&quot;&gt;BJ Lazy Load&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/wp-super-cache/&quot;&gt;WP Super Cache&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/plugins/peters-login-redirect/&quot;&gt;Peter&amp;#39;s Login Redirect&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;wordpress-custom&quot;&gt;Wordpress Custom&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://warun.in.th/143-childtheme-%E0%B9%81%E0%B8%A5%E0%B8%B0-best-practice&quot;&gt;Child Theme คืออะไร มาปรับแต่ง WordPress แบบถูกวิธีกันเถอะ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cryoutcreations.eu/wordpress-themes/wordpress-tutorials/how-to-hide-the-wordpress-admin-bar&quot;&gt;How to hide the WordPress admin bar&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/&quot;&gt;ADDING CUSTOM IMAGES SIZES TO THE WORDPRESS MEDIA LIBRARY&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J7M4RMpY55c&quot;&gt;How Can I Change a Thumbnail Size in WordPress? : WordPress Lessons&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.wpbeginner.com/plugins/how-to-easily-replace-image-and-media-files-in-wordpress/&quot;&gt;How to Easily Replace Image and Media Files in WordPress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Kj7k1iFcUxM&quot;&gt;How to put WordPress in maintenance mode Under Construction Wordpress
-Coming Soon Page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;avada-theme&quot;&gt;Avada Theme&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dn6g_gJDAIk&quot;&gt;Quick Guided Tour of Avada&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=IE_uTEoyylM&quot;&gt;Avada Wordpress Theme Review 2015&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.jirawatisme.com/resources/avada-wordpress-theme/&quot;&gt;ทำไม Avada WordPress theme ถึงเป็น premium WordPress theme
-ที่ฮิตมากที่สุด&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wearnhardt.com/why-you-should-avoid-avada/&quot;&gt;Why You Should Avoid Avada&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/videos/install-avada-via-ftp/&quot;&gt;How To Install Avada Via FTP&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://winningwp.com/examples-of-sites-built-with-the-wordpress-avada-theme-by-themefusion/&quot;&gt;25 Stunning Examples of Avada — ThemeForest’s Most Popular WordPress Theme — In Action&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0wgJvbkzYsg&quot;&gt;Page Layouts using Wordpress Avada Theme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/support/documentation/avada-documentation/&quot;&gt;Avada Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/user/ThemeFusionVideos/videos&quot;&gt;Avada Video&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=63M5EluEKcg&quot;&gt;One Page Site using Avada Wordpress Theme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://ithemes.com&quot;&gt;Avada Fusion Slider&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bMXC3Wm5wG4&quot;&gt;Revolution Slider Tutorial using Theme Avada&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://theme-fusion.com/knowledgebase/how-to-make-custom-css-changes/&quot;&gt;How To Make Custom CSS Changes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;wordpress-on-plesk&quot;&gt;Wordpress on Plesk&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.pastmasterblogger.com/how-to-install-wordpress-manually-on-plesk-parallels/&quot;&gt;How to Install WordPress Manually on Plesk Parallels&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.iis.net/learn/extensions/url-rewrite-module/enabling-pretty-permalinks-in-wordpress&quot;&gt;Enabling Pretty Permalinks in WordPress&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://wordpress.org/support/topic/pretty-permalinks-with-plesk-for-windows&quot;&gt;Pretty Permalinks with Plesk for Windows&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;etc&quot;&gt;ETC&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://generatewp.com&quot;&gt;https://generatewp.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://codex.wordpress.org&quot;&gt;WordPress Codex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/twittem/wp-bootstrap-navwalker&quot;&gt;wp-bootstrap-navwalker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="wordpress" /><summary>Docker + Wordpress
-
-
-Wordpress Docker Image
-WordPress Local Development With Docker – Installation
-Guide</summary></entry></feed>
+some that your have to compile with your own.</summary></entry></feed>

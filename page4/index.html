@@ -196,6 +196,44 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/jekyll-travis-github/">
+        Jekyll build with Travis and deploy to Github Page
+      </a>
+    </h1>
+
+    <span class="post-date">
+      26 Oct 2015
+      
+        &middot;
+        <a href="/jekyll-travis-github/#disqus_thread" data-disqus-identifier="/jekyll-travis-github/"></a>
+        
+      
+    </span>
+
+    
+      <blockquote>
+<p>Github Pages Tips:<br>
+Github Pages always complie jekyll with <code>--safe</code> option that will<br>
+disable plugins but some plugin can work with Github Pages.<br>
+<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a>  </p>
+</blockquote>
+
+<p>To avoid this <code>--safe</code> option to be powerful jekyll, you need to build your jelyll somewhere else and commit your static page to <code>main</code> or <code>gh-page</code> branch.
+We can automate build jekyll with <a href="https://travis-ci.org">Travis-CI</a>
+that store your jekyll file in <code>jekyll</code> branch when push to github that
+will trig to Travis to build and deploy static page back to your <code>main</code>
+branch to publish your contents. you should read previous <a href="/jekyll-with-ci/">blog about
+jekyll and travis</a></p>
+
+
+      <div style="text-align:right;">
+        <a href="/jekyll-travis-github/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/get-job/">
         How to get that job for developer
       </a>
@@ -384,43 +422,6 @@ terrible and Github Pages not support custom ruby script that place in
 
       <div style="text-align:right;">
         <a href="/text-processing/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/opengraph/">
-        Sharing with Open Graph
-      </a>
-    </h1>
-
-    <span class="post-date">
-      12 Oct 2015
-      
-        &middot;
-        <a href="/opengraph/#disqus_thread" data-disqus-identifier="/opengraph/"></a>
-        
-      
-    </span>
-
-    
-      <p><img src="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" alt="sharing with open graph"></p>
-
-<p>Add this meta data to your <code>html page</code> between <code>&lt;head&gt; ... &lt;/head&gt;</code></p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Markdown Slide"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/slide/"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/opengraph_logo.png"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Remark.js - easy and simple slide"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-<p>Then using <a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a> to look what it look like when shared.</p>
-
-
-      <div style="text-align:right;">
-        <a href="/opengraph/" style="color:#000;"> Read More </a>
       </div>
     
   </div>
