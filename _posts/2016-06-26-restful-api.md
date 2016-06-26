@@ -48,7 +48,7 @@ update_date: 2016-06-27
 
 - [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 
-# REST Hypermedia Standard
+### REST Hypermedia Standard
 
 - [On choosing a hypermedia type for your API - HAL, JSON-LD, Collection+JSON, SIREN, Oh My!](http://sookocheff.com/post/api/on-choosing-a-hypermedia-format/)
 
@@ -60,7 +60,7 @@ update_date: 2016-06-27
 
 - [HAL - Hypertext Application Language](http://stateless.co/hal_specification.html)
 
-# Video
+### Video
 
 - [How To Design A Good API and Why it Matters](https://www.youtube.com/watch?v=heh4OeB9A-c) - [slide](http://landawn.com/How%20to%20Design%20a%20Good%20API%20and%20Why%20it%20Matters.pdf)
 
