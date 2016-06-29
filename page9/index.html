@@ -196,6 +196,255 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/latex/">
+        All about Latex
+      </a>
+    </h1>
+
+    <span class="post-date">
+      07 Feb 2015
+      
+        &middot;
+        <a href="/latex/#disqus_thread" data-disqus-identifier="/latex/"></a>
+        
+      
+    </span>
+
+    
+      <h3 id="install-latex-osx-mactex">Install Latex OSX (mactex)</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install mactex
+</code></pre></div>
+<h3 id="figures">Figures</h3>
+
+<ul>
+<li><a href="http://tex.stackexchange.com/questions/4129/how-to-avoid-showing-the-filename-when-using-graphicx">How to avoid showing the filename when using graphicx?</a> - Ans: avoid filename with space</li>
+<li><a href="http://tex.stackexchange.com/questions/34063/figure-span-to-one-column-on-double-column-page">figure span to one column on double column page</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
+<span class="nt">\begin{figure*}</span>
+  <span class="k">\centering</span> <span class="k">\includegraphics</span><span class="p">{</span>figure<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>This is a figure caption<span class="p">}</span>
+<span class="nt">\end{figure*}</span>
+</code></pre></div>
+<h3 id="label">Label</h3>
+
+<ul>
+<li><a href="http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">LaTeX/Labels and Cross-referencing</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
+</code></pre></div>
+<h3 id="landscape"><a href="http://tex.stackexchange.com/questions/168309/landscape-figure-on-different-page-to-heading">Landscape</a></h3>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+<span class="nt">\begin{landscape}</span>
+.
+.
+.
+<span class="nt">\end{landscape}</span>
+<span class="nt">\end{document}</span>
+</code></pre></div>
+<h3 id="math-equation">Math Equation</h3>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"># inline equation
+<span class="p">$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$</span> #equation
+<span class="p">$$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$$</span> #equation in new line
+
+# equation
+<span class="nt">\begin{eqaution}</span>
+<span class="nt">\end{eqaution}</span>
+
+# equation array
+<span class="nt">\begin{eqnarray}</span>
+<span class="nt">\end{eqnarray}</span>
+</code></pre></div>
+<ul>
+<li><a href="http://www.clas.kitasato-u.ac.jp/%7Efujiwara/keyNote/equationToKeynote.html">Import equations into Keynote</a></li>
+<li><a href="https://www.youtube.com/watch?v=dgVrj62AiAU">Keynote - How to Math on slide (Video)</a></li>
+<li><a href="https://www.sharelatex.com/learn/Mathematical_expressions">Mathematical expressions</a></li>
+<li><a href="http://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX/Mathematics</a></li>
+<li><a href="https://kogler.wordpress.com/2008/03/21/latex-use-of-math-symbols-formulas-and-equations/">math symbols and equations</a></li>
+<li><a href="http://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf">The Great, Big List of LATEX Symbols</a></li>
+<li><a href="https://kogler.wordpress.com/2008/03/21/latex-multiline-equations-systems-and-matrices/">LaTeX – Multiline equations, systems and matrices</a></li>
+<li><a href="http://tex.stackexchange.com/questions/45001/how-do-i-left-align-entries-in-a-matrix-with-beginmatrix">How do I left-align entries in a matrix with \begin{matrix}?</a></li>
+</ul>
+
+<h3 id="table"><a href="https://www.sharelatex.com/learn/Tables">Table</a></h3>
+
+<ul>
+<li><a href="http://www.tablesgenerator.com">LaTeX Table Generator</a></li>
+<li><a href="https://www.sharelatex.com/learn/Positioning_images_and_tables">Positioning images and tables</a></li>
+<li><a href="http://www.sascha-frank.com/Faq/tables_six.html">LaTeX table fixed width</a></li>
+<li><a href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a></li>
+<li><a href="http://en.wikibooks.org/wiki/LaTeX/Tables">LaTeX/Tables</a></li>
+<li><a href="http://www.howtotex.com/packages/improve-your-tables-with-booktabs/">Improve your tables with booktabs</a></li>
+</ul>
+
+<h3 id="spreadtab-calculatable-table-latex">Spreadtab - Calculatable Table latex</h3>
+
+<ul>
+<li><a href="http://tex.stackexchange.com/questions/30081/how-can-i-sum-two-values-and-store-the-result-in-other-variable">How can I sum two values and store the result in other variable?</a></li>
+<li><a href="http://tex.stackexchange.com/questions/130942/calculations-in-table-using-spreadtab">Calculations in Table using spreadtab</a></li>
+<li><a href="http://ctan.megagod.net/tex-archive/macros/latex/contrib/spreadtab/spreadtab_doc_en.pdf">Spreadtab User’s manual</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">  # read more in document
+  # 2.5 Copy a formula
+
+  <span class="k">\STcopy</span><span class="p">{</span>&gt;x,vy<span class="p">}{</span>formula<span class="p">}</span>
+
+  # 3.2 Number formatting and the fp package
+
+  # foating point numbers are rounded to 2 digits
+  <span class="k">\STautoround</span><span class="p">{</span>2<span class="p">}</span>
+</code></pre></div>
+<h3 id="separate-compilation-of-child-documents">Separate compilation of child documents</h3>
+
+<ul>
+<li><p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Subfiles">Subfiles</a></p>
+
+<blockquote>
+<p>use setting from master latex</p>
+</blockquote></li>
+<li><p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Standalone">Standalone</a></p>
+
+<blockquote>
+<p>have own setting not using from master latex</p>
+</blockquote></li>
+</ul>
+
+<h3 id="tips">Tips</h3>
+
+<ul>
+<li><a href="http://tex.stackexchange.com/questions/124621/can-i-include-the-page-number-when-using-includepdf">Insert Pdf Page</a></li>
+<li><a href="http://tex.stackexchange.com/questions/185155/is-is-possible-to-not-abbreviate-the-author-name-of-only-one-reference-in-my-bib">Not abbreviate the author name</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">    author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
+</code></pre></div>
+<ul>
+<li><a href="http://ubuntuforums.org/showthread.php?t=1275429">citation treated like one word?</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">    Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
+    # or using <span class="k">\hyphenation</span> to cut all the documents
+    <span class="k">\hyphenation</span><span class="p">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Word Cut</li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">    using <span class="k">\-</span> or &lt; space &gt;
+</code></pre></div>
+<ul>
+<li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
+<li><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
+<li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
+<li>hidden character</li>
+</ul>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">  <span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
+</code></pre></div>
+<ul>
+<li><a href="http://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment">Custom alignment of text in itemized environment</a></li>
+</ul>
+
+<h3 id="ieee-paper">IEEE Paper</h3>
+
+<ol>
+<li><a href="https://softhandover.wordpress.com/2014/01/08/how-to-add-the-ieee-copyright-and-publication-id-on-a-ieeetran-conference-tex-file/">How to add the IEEE copyright and publication id on a IEEETran conference .tex file</a></li>
+<li><a href="https://www.youtube.com/watch?v=y0VrXGd_xRc">How to write a conference paper (IEEE, ACM) using Latex</a></li>
+<li><a href="https://www.youtube.com/watch?v=5ifh3NF-k-k">LaTeX tutorial: How to cite references/paper/articles in Latex</a></li>
+</ol>
+<div class="highlight"><pre><code class="language-tex" data-lang="tex">  # cite to bibtex references
+  <span class="k">\usepackage</span><span class="p">{</span>cite<span class="p">}</span>
+  <span class="k">\cite</span><span class="p">{</span>sample1234<span class="p">}</span>
+
+  # referecnes from bibtex
+  <span class="k">\bibliographystyle</span><span class="p">{</span>IEEEtran<span class="p">}</span>
+  <span class="k">\bibliography</span><span class="p">{</span>file<span class="p">_</span>of<span class="p">_</span>bibex<span class="p">}</span>
+</code></pre></div>
+<h3 id="bibtex">BibTex</h3>
+
+<ul>
+<li><a href="http://www.bibtex.org/Using/">How to use BibTeX</a></li>
+<li><a href="http://tex.stackexchange.com/questions/204291/bibtex-latex-compiling">Bibtex, Latex compiling</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># build latex + bibtex</span>
+<span class="gp">$ </span>pdflatex paper.tex
+<span class="gp">$ </span>bibtex paper <span class="c"># without extension</span>
+<span class="gp">$ </span>pdflatex paper.tex
+<span class="gp">$ </span>pdflatex paper.tex
+</code></pre></div>
+<h3 id="latex-slide-beamer">Latex Slide (Beamer)</h3>
+
+<ul>
+<li><a href="https://www.sharelatex.com/blog/2013/08/13/beamer-series-pt1.html">Presentations with Beamer pt 1 - Getting Started</a></li>
+<li><a href="https://www.sharelatex.com/learn/Beamer">Beamer - ShareLatex</a></li>
+<li><a href="http://www.math-linux.com/latex-26/article/how-to-make-a-presentation-with-latex-introduction-to-beamer">How to make a presentation with Latex - Introduction to Beamer</a></li>
+<li><a href="http://tug.org/pracjourn/2005-4/mertz/mertz.pdf">Beamer by Example</a></li>
+<li><a href="http://heather.cs.ucdavis.edu/%7Ematloff/beamer.html">Norm Matloff&#39;s Quick Tutorial on the Beamer Package for Slide Making
+in LaTeX</a></li>
+<li><a href="http://www.latextemplates.com/cat/presentations">Presentations - Latex Templates</a></li>
+</ul>
+
+<h4 id="beamer-theme">Beamer Theme</h4>
+
+<ul>
+<li><a href="http://deic.uab.es/%7Eiblanes/beamer_gallery/index_by_theme.html">Beamer theme gallery</a></li>
+<li><a href="http://deic.uab.es/%7Eiblanes/beamer_gallery/individual/Copenhagen-default-default.html">Beamer theme gallery: Copenhagen default default</a></li>
+</ul>
+
+<h3 id="resouces">Resouces</h3>
+
+<ol>
+<li><a href="http://thaitug.daytag.org/">Thai Latex User Group</a></li>
+<li><a href="https://thailatex.wordpress.com">Thai LaTeX and MATLAB</a></li>
+<li><a href="https://www.sharelatex.com/blog/latex-guides/beginners-tutorial.html">ShareLaTeX Blog</a></li>
+<li>Latex Online Editor - <a href="https://www.overleaf.com">Overleaf</a> , <a href="https://www.sharelatex.com">ShareLatex</a></li>
+</ol>
+
+<h4 id="video">Video</h4>
+
+<ol>
+<li><a href="https://www.youtube.com/playlist?list=PL8D253694FEBEEB72">Techpush LaTex Beginner Tutorial Guide</a></li>
+<li><a href="https://www.overleaf.com/help/category/video_tutorials">Video Tutorials - Overleaf</a></li>
+</ol>
+
+<h4 id="book">Book</h4>
+
+<ol>
+<li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LATEX2ε</a></li>
+<li><a href="http://www.stdout.org/%7Ewinston/latex/latexsheet-a4.pdf">LATEX2ε Cheat Sheet</a></li>
+</ol>
+
+<h4 id="example">Example</h4>
+
+<ol>
+<li><a href="http://carmaux.cs.gsu.edu/%7Emweeks/latex/">IEEE Example Conf/Journal</a></li>
+</ol>
+
+<h3 id="latex-docker">Latex Docker</h3>
+
+<ul>
+<li><a href="http://xmodulo.com/how-to-install-latex-on-ubuntu-or-debian.html">How to install LaTex on Ubuntu or Debian</a></li>
+<li><a href="https://www.blang.io/posts/2015-04_docker-tooling-latex/">Docker tooling - Latex</a></li>
+<li><a href="https://github.com/blang/latex-docker">Latex docker container</a></li>
+</ul>
+
+<h3 id="etc">ETC.</h3>
+
+<ul>
+<li><a href="http://thep.blogspot.com/2009/07/thailatex-now-supports-utf-8.html">ThaiLaTeX Now Supports UTF-8</a></li>
+<li><a href="http://thep.blogspot.com/2014/09/swath-053.html">swath</a></li>
+<li><a href="http://tex.stackexchange.com/questions/258/what-is-the-difference-between-let-and-def">What is the difference between \let and \def?</a></li>
+<li><a href="http://tex.stackexchange.com/questions/655/what-is-the-difference-between-def-and-newcommand">What is the difference between \def and \newcommand?</a></li>
+</ul>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/Security/">
         All about Security
       </a>
@@ -635,260 +884,6 @@ not dreams. - Rise of the Planet of the Apes</p></li>
 <li><a href="http://agilethailand.org/2012/07/14/atdd-by-robot-1/">ATDD by Robot Framework#1 - ATH</a></li>
 <li><a href="http://stackoverflow.com/questions/16692593/how-to-import-python-modules-and-expose-the-methods-in-robot-ride">How to import python modules</a></li>
 <li><a href="http://stackoverflow.com/questions/338768/python-importerror-no-module-named">python ImportError No module named</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/docker/">
-        Docker.io
-      </a>
-    </h1>
-
-    <span class="post-date">
-      11 Sep 2014
-      
-        &middot;
-        <a href="/docker/#disqus_thread" data-disqus-identifier="/docker/"></a>
-        
-          &middot;
-          Updated March 20, 2016
-        
-      
-    </span>
-
-    
-      <h2 id="docker-support-only-64-bit-system">Docker Support Only 64-bit System</h2>
-
-<blockquote>
-<p>docker-engine not docker.io anymore<br>
-docker.io is old name</p>
-</blockquote>
-
-<h3 id="docker-try-it-interactive-tutorial"><a href="https://www.docker.com/tryit/">Docker try it! - Interactive Tutorial</a></h3>
-
-<h3 id="install">Install</h3>
-
-<h4 id="install-on-debian"><a href="https://docs.docker.com/engine/installation/debian/#debian-wheezy-stable-7-x-64-bit">Install on Debian</a></h4>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Debian Jessie 8.0 (64-bit) or unstable packages</span>
-<span class="gp">$ </span>sudo apt-get update
-<span class="gp">$ </span>sudo apt-get install docker-engine
-</code></pre></div>
-<ul>
-<li><a href="http://linuxconfig.org/package-docker-io-has-no-installation-candidate-debian-jessie">Package &#39;docker.io&#39; has no installation candidate - Debian
-Jessie</a></li>
-</ul>
-
-<h4 id="install-on-osx-homebrew-cask"><a href="http://docs.docker.com/installation/mac/">Install on OSX</a> - <a href="http://caskroom.io">Homebrew-Cask</a></h4>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># if virtualbox not installed, install via homebrew cask</span>
-http://docs.docker.com/installation/mac/#from-your-shell
-
-<span class="gp">$ </span>brew install caskroom/cask/brew-cask
-<span class="gp">$ </span>brew cask install dockertoolbox
-
-<span class="c"># start docker engine</span>
-<span class="gp">$ </span>docker-machine create
-<span class="gp">$ </span><span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>docker-machine env default<span class="k">)</span><span class="s2">"</span>
-</code></pre></div>
-<h3 id="run-docker-without-sudo"><a href="https://docs.docker.com/installation/debian/#giving-non-root-access">Run Docker without sudo</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#debian</span>
-<span class="gp">$ </span>sudo groupadd docker
-<span class="gp">$ </span>sudo gpasswd -a <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker <span class="c"># or sudo adduser ${USER} docker</span>
-<span class="gp">$ </span>sudo service docker restart
-</code></pre></div>
-<h3 id="command-tips">Command Tips:</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker images --tree <span class="c">#list images in tree structure ('--tree' is deprecated)</span>
-<span class="gp">$ </span>docker ps -a <span class="c">#List all containers</span>
-<span class="gp">$ </span>docker ps -l <span class="c">#List lastest containers</span>
-<span class="gp">$ </span>docker ps -q <span class="c">#List containers display on IDs (quiet)</span>
-</code></pre></div>
-<h3 id="command-by-yourself-in-containers-working-with-containers">Command by yourself in containers - <a href="https://docs.docker.com/userguide/usingdocker/">Working with Containers</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker run -i -t &lt;image&gt; /bin/bash
-</code></pre></div>
-<h3 id="how-to-continue-a-docker-which-is-exited"><a href="http://stackoverflow.com/questions/21928691/how-to-continue-a-docker-which-is-exited">How to continue a docker which is exited</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">docker start <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># restart it in the background</span>
-docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># reattach the terminal &amp; stdin</span>
-</code></pre></div>
-<h3 id="clean-up-remove-docker-after-exited"><a href="https://docs.docker.com/reference/run/#clean-up-rm">Clean Up - Remove Docker after exited</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker run --rm &lt;imamge&gt;
-</code></pre></div>
-<h3 id="docker-remove-all-exited-containers-by-filippo-valsorda"><a href="https://coderwall.com/p/zguz_w">Docker: remove all Exited containers by Filippo Valsorda</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo docker ps -a | grep Exit | cut -d <span class="s1">' '</span> -f 1 | xargs sudo docker rm
-</code></pre></div>
-<h3 id="remove-lt-none-gt-images">Remove &lt; none &gt; images</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># if space full in docker engine</span>
-<span class="gp">$ </span>docker rmi <span class="k">$(</span>docker images | grep <span class="s1">'&lt;none&gt;'</span> | tr -s <span class="s1">' '</span> | cut -d <span class="s1">' '</span> -f 3<span class="k">)</span>
-<span class="c"># or</span>
-<span class="gp">$ </span>docker images -a | grep none | awk <span class="s1">'{print $3}'</span> | xargs docker rmi -f
-</code></pre></div>
-<h3 id="fix-repositoryalready-being-pulled">Fix Repositoryalready being pulled</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># $ dokcer pull &lt;images&gt;</span>
-<span class="c"># Fix Repository debian already being pulled by another client. Waiting.</span>
-<span class="gp">$ </span>sudo service docker restart
-</code></pre></div>
-<h3 id="mount-directory-to-container-managing-data-in-containers">Mount directory to container - <a href="https://docs.docker.com/userguide/dockervolumes/">Managing data in containers</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># docker run option</span>
-<span class="c"># -v, --volume=[] create a volume</span>
-<span class="c"># -v host:container mount host directory to container</span>
-<span class="c">#   ex. -v $PWD:/app , mount current path to /app in container</span>
-<span class="c"># -w, --workdir="" Working directory inside the container</span>
-
-<span class="gp">$ </span>docker run -v &lt;host_dir_path&gt;:&lt;container_dir_path&gt; -w &lt;workdir_path&gt; &lt;image&gt; &lt;cmd&gt;
-</code></pre></div>
-<h3 id="docker-daemon-on-debian-not-start-automatically-bash-scripting-wait-for-wireless-connection-execute-program">Docker daemon on Debian: not start automatically - <a href="https://bbs.archlinux.org/viewtopic.php?id=51939">Bash Scripting: Wait for wireless connection, execute program</a></h3>
-
-<ol>
-<li>write this script and add it into crontab ($ sudo crontab -e)</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
-
-<span class="nv">Q</span><span class="o">=</span><span class="s2">"0"</span>
-<span class="k">while</span> <span class="o">[</span> <span class="nv">$Q</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">]</span>; <span class="k">do
-   </span><span class="nv">Q</span><span class="o">=</span><span class="k">$(</span>ping -c1 www.google.com 2&gt; /dev/null | grep -c google<span class="k">)</span>;
-<span class="k">done
-</span><span class="nb">echo </span>Connected!
-
-sudo service docker restart
-</code></pre></div>
-<h3 id="run-multiple-command-in-docker">Run multiple command in docker</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker <span class="nb">exec</span> &lt;image&gt; sh -c ‘&lt;cmd&gt;’
-<span class="gp">$ </span>docker run &lt;image&gt; bash -c ‘&lt;cmd&gt;’
-</code></pre></div>
-<h3 id="crontab-in-docker"><a href="http://www.ekito.fr/people/run-a-cron-job-with-docker/">Crontab in Docker</a></h3>
-
-<h4 id="crontab-with-docker-enviorment-sample-project"><a href="https://registry.hub.docker.com/u/draffensperger/postgres-s3-backup/dockerfile/">Crontab with Docker enviorment</a> - <a href="https://github.com/draffensperger/postgres-s3-backup">Sample Project</a></h4>
-
-<p>Dockerfile</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Docker env don't pass though cron jobs, you need to save env to file and load it in cron jobs.</span>
-<span class="c"># save Docker envoirment to file with command "env &gt; &lt;file&gt;"</span>
-
-<span class="c"># To debug crontab see to run "rsyslogd" and see logs at "/var/log/syslo"</span>
-<span class="c"># CMD rsyslogd &amp;&amp; &amp;&amp; env &gt; /root/env.sh &amp;&amp; tail -f /var/log/cron.log</span>
-
-CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o">&amp;&amp;</span> tail -f /var/log/cron.log
-</code></pre></div>
-<p>cron_task.sh</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">env - <span class="sb">`</span>cat /root/env.sh<span class="sb">`</span> <span class="nv">$1</span>
-</code></pre></div>
-<p>crontab</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># always need ot &gt;&gt; to some where to avoid “(CRON) info (No MTA installed, discarding output)” error in the syslog</span>
-<span class="c"># http://askubuntu.com/questions/222512/cron-info-no-mta-installed-discarding-output-error-in-the-syslog</span>
-
-<span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> root crontab_task.sh “&lt;your <span class="nb">command</span>&gt;<span class="s2">" &gt;&gt; /var/log/cron.log 2&gt;&amp;1
-#An empty line is required at the end of this file for a valid cron file.
-</span></code></pre></div>
-<h3 id="docker-error-client-and-server-don-39-t-have-same-version">docker Error: client and server don&#39;t have same version</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker-machine upgrade &lt;machine&gt;
-</code></pre></div>
-<h3 id="set-time-zone-in-dockerfile"><a href="http://tedwise.com/2015/05/02/setting-the-timezone-in-a-docker-image">Set time zone in Dockerfile</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure -f noninteractive tzdata
-</code></pre></div>
-<h3 id="push-docker-to-registry">Push docker to registry</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker login
-<span class="c"># docker tag &lt;image&gt; &lt;username/image:version&gt;</span>
-<span class="gp">$ </span>docker tag viau10-app ibotdotout/viau10-app:latest
-<span class="c"># docker push &lt;username/image&gt;</span>
-<span class="gp">$ </span>docker push ibotdotout/viau10-app
-
-<span class="c"># private registry</span>
-<span class="gp">$ </span>docker tag &lt;contrainer_id&gt; &lt;your_registry_domain&gt;/&lt;image&gt;
-<span class="gp">$ </span>docker push &lt;your_registry_domain&gt;/&lt;image&gt;
-</code></pre></div>
-<h3 id="force-clean-build-of-an-image-without-cache"><a href="https://github.com/docker/docker/issues/1326">Force clean build of an image (without cache)</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker build --no-cache .
-</code></pre></div>
-<h3 id="graphdriver-prior-storage-driver-quot-aufs-quot-failed-invalid-argument-by-kelindar"><a href="https://github.com/docker/docker/issues/14026">graphdriver prior storage driver &quot;aufs&quot; failed: invalid argument </a> by @Kelindar</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo rm -rf /var/lib/docker/aufs
-</code></pre></div>
-<h3 id="to-see-the-file-size-of-your-containers"><a href="http://stackoverflow.com/a/33344280">To see the file size of your containers</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker ps -s
-</code></pre></div>
-<h3 id="ssh-to-docker-machine"><a href="http://stackoverflow.com/a/33350931">SSH to docker machine</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># you can use `docker-machine ssh &lt; machine &gt; instead this</span>
-<span class="c"># 192.168.99.100 this is ip for &lt; machine &gt;</span>
-<span class="c"># that can check via `docker-machine ip &lt; machine &gt;</span>
-<span class="gp">$ </span>ssh docker@192.168.99.100
-<span class="c"># password: tcuser</span>
-</code></pre></div>
-<h3 id="fix-no-space-left-on-device-in-default-machine"><a href="https://github.com/docker/machine/issues/1779">Fix No space left on device in default machine</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># clean your mapping volume on host that was copied to docker machine</span>
-<span class="gp">$ </span>docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -v /var/lib/
-</code></pre></div>
-<h3 id="install-docker-compose-aka-fig">Install Docker-compose aka Fig</h3>
-
-<p><code>sh
-$ apt-get update &amp;&amp; apt-get upgrade -y
-$ apt-get install -y python-pip
-$ pip install -U docker-compose
-</code>`</p>
-
-<h3 id="docker-compose-production">Docker-Compose Production</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># https://docs.docker.com/compose/extends/</span>
-<span class="gp">$ </span>docker-compose -f production.yml
-</code></pre></div>
-<h3 id="dockerfile">Dockerfile</h3>
-
-<ol>
-<li><a href="https://docs.docker.com/reference/builder/">Dockerfile Reference</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/docker-explained-using-dockerfiles-to-automate-building-of-images">Docker Explained: Using Dockerfiles to Automate Building of Images</a></li>
-<li><a href="http://crosbymichael.com/dockerfile-best-practices.html">Dockerfile Best Practices</a></li>
-<li><a href="https://www.youtube.com/watch?v=LmUw2H6JgJo">Best practices for building secure Docker images</a></li>
-<li><a href="http://jpetazzo.github.io/2015/01/19/dockerfile-and-data-in-volumes/">Putting data in a volume in a Dockerfile</a></li>
-<li><a href="http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/">Refactoring a Dockerfile for image size</a></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>apt-get install -y --no-install-recommends &lt;packages&gt;
-</code></pre></div>
-<h3 id="tdd-for-dockerfile-serverspec">TDD for Dockerfile - <a href="http://serverspec.org">ServerSpec</a></h3>
-
-<ol>
-<li><a href="https://coderwall.com/p/5xylsg/tdd-for-dockerfile-by-rspec-severspec">TDD for Dockerfile by RSpec (severspec)</a></li>
-</ol>
-
-<h3 id="dokcer-helper-tools">Dokcer Helper Tools::</h3>
-
-<ol>
-<li><a href="https://kitematic.com/">kitematic- Docker on Mac</a></li>
-<li><a href="https://github.com/justone/dockviz">Dockviz - Visualizing Docker Data</a></li>
-<li><a href="https://github.com/ekalinin/Dockerfile.vim">Vim Syntax for  Dockerfile</a></li>
-<li><a href="https://github.com/jwilder/docker-squash">Squash docker images to make them smaller.</a></li>
-</ol>
-
-<h3 id="reference">Reference::</h3>
-
-<ol>
-<li><a href="https://docs.docker.com/userguide/">Docker User Guide</a></li>
-<li><a href="http://knitatoms.net/2013/12/benefits-of-docker-for-application-deployment/">Docker Benefits</a></li>
-<li><a href="https://developer.basespace.illumina.com/docs/content/documentation/native-apps/manage-docker-image">How to Manage your Docker Image</a></li>
-<li><a href="http://www.centurylinklabs.com/15-quick-docker-tips/">15 QUICK DOCKER TIPS</a></li>
-<li><a href="http://www.projectatomic.io/docs/docker-image-author-guidance/">Guidance for Docker Image Authors</a></li>
-<li><a href="http://www.yegor256.com/2014/08/29/docker-non-root.html">How We Run as a Non-Root Inside Docker Container</a></li>
-<li><a href="http://docs.docker.com/reference/commandline/cli/">Docker Command Line Doc</a></li>
-<li><a href="http://www.centurylinklabs.com/optimizing-docker-images/?hvid=2b3AmY">MAKING DOCKER IMAGES SMALLER</a></li>
-<li><a href="http://blog.docker.com/2013/07/docker-desktop-your-desktop-over-ssh-running-inside-of-a-docker-container/">DOCKER DESKTOP</a> - <a href="https://github.com/rogaha/docker-desktop">Github</a></li>
-<li><a href="https://registry.hub.docker.com/u/michaelneale/jenkins-docker-executors/dockerfile/">jenkins-docker-executors</a></li>
-<li><a href="http://blog.stefanxo.com/2014/02/clean-up-after-docker/">Clean up after Docker</a></li>
-<li><a href="http://viget.com/extend/how-to-use-docker-on-os-x-the-missing-guide">How to Use Docker on OS X: The Missing Guide</a></li>
-<li><a href="http://www.slideshare.net/winggundamth/introduction-to-docker-40139950">introduction-to-docker</a></li>
-<li><a href="http://www.syncano.com/docker-workflow-fig-sh/">docker-workflow-fig-sh</a></li>
-<li><a href="https://www.youtube.com/watch?v=y-WH02MlIs8">Docker Exec Tutorial</a></li>
-<li><a href="http://veggiemonk.github.io/awesome-docker">Awesome-docker</a></li>
-<li><a href="http://thaiopensource.org/tag/docker/">Thai Docker Articles</a></li>
-<li><a href="http://crosbymichael.com/category/docker.html">Deep Docker Articles by Micheal Crosby</a></li>
-<li><a href="http://blog.heavybit.com/blog/2015/3/23/dockermeetup">The Realities of Docker in Production</a></li>
-<li><a href="http://docs.docker.com/installation/mac/#migrate-from-boot2docker">Docker Toolbox - Migrate from Boot2Docker</a></li>
-<li><a href="http://www.slideshare.net/ruoshiling/how-to-deploy-php-projects-with-docker">How to deploy PHP projects with docker</a></li>
-<li><a href="http://layer0.authentise.com/docker-4-useful-tips-you-may-not-know-about.html">Docker: 4 useful tips, you may not know about</a></li>
-<li><a href="http://www.iron.io/microcontainers-tiny-portable-containers/">Microcontainers – Tiny, Portable Docker Containers</a></li>
-<li><a href="https://jpetazzo.github.io/assets/2015-03-03-not-so-deep-dive-into-docker-storage-drivers.html#1">Deep dive into Docker storage drivers</a></li>
-<li><a href="https://github.com/wsargent/docker-cheat-sheet">Docker Cheat Sheet</a></li>
-<li><a href="https://github.com/jpetazzo/dind">Docker-in-Docker</a></li>
-<li><a href="http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">Using Docker-in-Docker for your CI or testing environment? Think twice.</a></li>
-<li><a href="https://www.brianchristner.io/how-to-scale-a-docker-container-with-docker-compose/">How to scale Docker Containers with Docker-Compose</a></li>
-<li><a href="http://www.slideshare.net/jpetazzo/anatomy-of-a-container-namespaces-cgroups-some-filesystem-magic-linuxcon">Anatomy of a Container: Namespaces, cgroups &amp; Some Filesystem Magic - LinuxCon</a></li>
-<li><a href="https://github.com/codekitchen/dinghy/issues/19#issuecomment-151139659">Reduce Sending build context Size to Docker-Machine</a></li>
-<li><a href="https://kvaes.wordpress.com/2016/02/11/docker-storage-patterns-for-persistence/">Docker : Storage Patterns for Persistence</a></li>
 </ol>
 
     

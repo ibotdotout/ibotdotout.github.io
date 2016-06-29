@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-06-26T22:22:42+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>RESTful API</title><link href="http://dev.im-bot.com//restful-api/" rel="alternate" type="text/html" title="RESTful API" /><published>2016-06-26T00:00:00+00:00</published><updated>2016-06-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//restful-api</id><content type="html" xml:base="http://dev.im-bot.com//restful-api/">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-06-29T14:32:21+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>Mongo Search</title><link href="http://dev.im-bot.com//mongo-search/" rel="alternate" type="text/html" title="Mongo Search" /><published>2016-06-28T00:00:00+00:00</published><updated>2016-06-28T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo-search</id><content type="html" xml:base="http://dev.im-bot.com//mongo-search/">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://comsysto.com/blog-post/mongodb-full-text-search-vs-regular-expressions&quot;&gt;MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24343156/mongodb-prefix-wildcard-fulltext-search-text-find-part-with-search-string&quot;&gt;mongoDB prefix wildcard: fulltext-search ($text) find part with search-string&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h1 id=&quot;regex&quot;&gt;Regex&lt;/h1&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://snipref.com/mongoose-js/mongoose-js-find-with-regex/&quot;&gt;Mongoose.js find with regex&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/operator/query/regex/&quot;&gt;Mongo $regex&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/operator/query/regex/#index-use&quot;&gt;Mongo $regex - Index Use&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For case sensitive regular expression queries, if an index exists for the field, then MongoDB matches the regular expression against the values in the index, which can be faster than a collection scan.&lt;/p&gt;
+
+&lt;p&gt;For case insensitive regular expression queries, these queries generally cannot use indexes effectively.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;fulltext-search&quot;&gt;Fulltext search&lt;/h1&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;db.books.ensureIndex({title:&quot;text&quot;})
+db.books.reIndex()
+db.bokks.find({$text:{$search:&quot;time&quot;}})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://snipref.com/mongoose-js/mongoose-js-find-with-full-text-search/&quot;&gt;Mongoose.js Search With Full Text Search&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.tutorialspoint.com/mongodb/mongodb_text_search.htm&quot;&gt;MongoDB - Text Search&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.compose.io/articles/full-text-search-with-mongodb-and-node-js/&quot;&gt;Full Text Search with MongoDB &amp;amp; Node.js&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://code.tutsplus.com/tutorials/full-text-search-in-mongodb--cms-24835&quot;&gt;Full-Text Search in MongoDB&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/operator/query/text/&quot;&gt;$text&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><summary>MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS
+mongoDB prefix wildcard: fulltext-search ($text) find part with search-string</summary></entry><entry><title>RESTful API</title><link href="http://dev.im-bot.com//restful-api/" rel="alternate" type="text/html" title="RESTful API" /><published>2016-06-26T00:00:00+00:00</published><updated>2016-06-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//restful-api</id><content type="html" xml:base="http://dev.im-bot.com//restful-api/">&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/dwyl/learn-api-design&quot;&gt;Essential learning for people building APIs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.newrelic.com/2014/09/08/apipunchlist/&quot;&gt;The 5 Things  API Must Have&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;1. Error handling
@@ -690,104 +724,4 @@ ENV &lt;span class=&quot;nv&quot;&gt;TZ&lt;/span&gt;&lt;span class=&quot;o&quot;
 &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/&quot;&gt;Example of Cron&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://serverfault.com/a/84545&quot;&gt;PATH in crontab&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary>You can start crontab following Run a cron job with Docker
-just put crontab in /etc/cron.d/ and run cron for making it working.</summary></entry><entry><title>Reduce docker image size</title><link href="http://dev.im-bot.com//docker-reduce-image-size/" rel="alternate" type="text/html" title="Reduce docker image size" /><published>2016-03-03T00:00:00+00:00</published><updated>2016-03-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-reduce-image-size</id><content type="html" xml:base="http://dev.im-bot.com//docker-reduce-image-size/">&lt;p&gt;Reduce Docker image size can help your to portable your contain
-across network, save bandwidth and storage, faster to scale.&lt;/p&gt;
-
-&lt;h2 id=&quot;1-using-alpine-base-image-when-possible&quot;&gt;1. Using &lt;a href=&quot;https://hub.docker.com/_/alpine/&quot;&gt;alpine&lt;/a&gt; base image when possible&lt;/h2&gt;
-
-&lt;p&gt;It is minimal Docker image based on Alpine Linux that only 5 MB.
-You can install packages with &lt;code&gt;apk add --update &amp;lt;pakckages&amp;gt;&lt;/code&gt; and
-you can check packages that avaible on &lt;a href=&quot;https://pkgs.alpinelinux.org/packages&quot;&gt;alpine packages&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;debian-ubuntu-vs-alpine&quot;&gt;Debian/Ubuntu vs Alpine&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/nginx/&quot;&gt;Nginx based on debian&lt;/a&gt; 135 MB vs 13 MB &lt;a href=&quot;https://hub.docker.com/r/smebberson/alpine-nginx/&quot;&gt;alpine-nginx&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/node/&quot;&gt;Node based on debian&lt;/a&gt; 644 MB vs 36.76 MB &lt;a href=&quot;https://hub.docker.com/r/mhart/alpine-node/&quot;&gt;alpine-node&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can see how small alpine based image are.
-However alpine based is new born linux that not contain much packages as
-older linux like debian/ubuntu. There are some compiled packages and
-some that your have to compile with your own.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;2-using-apt-get-with-no-install-recommends-option-on-debian-ubuntu-image&quot;&gt;2. Using &lt;code&gt;apt-get&lt;/code&gt; with &lt;code&gt;--no-install-recommends&lt;/code&gt; option on Debian/Ubuntu Image&lt;/h2&gt;
-
-&lt;p&gt;with this option, &lt;a href=&quot;http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/&quot;&gt;Marc Campbell&lt;/a&gt; can drop ~120MB for &lt;code&gt;python-pip&lt;/code&gt; and &lt;code&gt;curl&lt;/code&gt; packages
-and I can save ~700MB by using this technique and combine commands on
-&lt;a href=&quot;https://github.com/ibotdotout/docker-predictionio/blob/master/Dockerfile&quot;&gt;docker-predictionio&lt;/a&gt;
-that based on &lt;a href=&quot;https://github.com/sphereie/docker-predictionio/blob/master/Dockerfile&quot;&gt;sphereio/docker-predictionio&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;RUN apt-get install -y --no-install-recommends &amp;lt;packages&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;3-combine-commands-to-reduce-layers&quot;&gt;3. Combine commands to reduce layers&lt;/h2&gt;
-
-&lt;p&gt;Example your &lt;code&gt;Dockfile&lt;/code&gt; look like&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;RUN apt-get update
-RUN apt-get install -y python-pip
-RUN pip install predictionio
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;should combile commands like this&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;RUN apt-get update \
-    &amp;amp;&amp;amp; apt-get install -y python-pip \
-    &amp;amp;&amp;amp; pip install predictionio
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;that reduce image layer and image size.
-However your should do this when your sure with &lt;code&gt;Dockerfile&lt;/code&gt;
-becuase &lt;code&gt;docker build&lt;/code&gt; will cache a huge layer, you need to rebuild all
-commands if your edit any single one.&lt;/p&gt;
-
-&lt;h2 id=&quot;4-remove-unecessary-packages-files&quot;&gt;4. Remove unecessary packages/files&lt;/h2&gt;
-
-&lt;p&gt;Remove some no longer need packages ex. &lt;code&gt;python-pip&lt;/code&gt; &lt;code&gt;curl&lt;/code&gt; Any SDK
-and compressed file that your extracted when you finish your
-installation.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Must remove in same layer, remove in another layer not help to reduce
-image size.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;RUN apt-get install -y python-pip pyhton-dev \
-    &amp;amp;&amp;amp; pip install predictionio \
-    &amp;amp;&amp;amp; apt-get remove -y python-pip \
-    &amp;amp;&amp;amp; ap-get clean \
-    &amp;amp;&amp;amp; rm -rf /var/lib/apt/lists/*
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;5-using-docker-squash-to-make-them-smaller&quot;&gt;5. Using &lt;a href=&quot;https://github.com/jwilder/docker-squash&quot;&gt;docker-squash&lt;/a&gt; to make them smaller&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I not sure about this solution that I can&amp;#39;t complie it on OSX.
-You can read more about &lt;code&gt;docker-squash&lt;/code&gt; in References.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;references&quot;&gt;References::&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/alpine/&quot;&gt;Alpine Linux - A minimal Docker image based&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/&quot;&gt;Refactoring a Dockerfile for image size&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jonathan.bergknoff.com/journal/building-good-docker-images&quot;&gt;Building Good Docker Images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://layer0.authentise.com/docker-4-useful-tips-you-may-not-know-about.html&quot;&gt;Docker: 4 useful tips, you may not know about&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/jwilder/docker-squash&quot;&gt;docker-squash&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://jasonwilder.com/blog/2014/08/19/squashing-docker-images/&quot;&gt;Squashing Docker Images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://woudenberg.io/reducing-docker-image-size/&quot;&gt;Reducing the size of Docker Images&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary>Reduce Docker image size can help your to portable your contain
-across network, save bandwidth and storage, faster to scale.
-
-1. Using alpine base image when possible
-
-It is minimal Docker image based on Alpine Linux that only 5 MB.
-You can install packages with apk add --update &amp;lt;pakckages&amp;gt; and
-you can check packages that avaible on alpine packages.
-
-Debian/Ubuntu vs Alpine
-
-
-Nginx based on debian 135 MB vs 13 MB alpine-nginx
-Node based on debian 644 MB vs 36.76 MB alpine-node
-
-
-You can see how small alpine based image are.
-However alpine based is new born linux that not contain much packages as
-older linux like debian/ubuntu. There are some compiled packages and
-some that your have to compile with your own.</summary></entry></feed>
+just put crontab in /etc/cron.d/ and run cron for making it working.</summary></entry></feed>
