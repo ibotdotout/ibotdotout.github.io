@@ -8,18 +8,18 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Mock" />
+  <meta property="og:title" content="API Documents" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/mock//" />
+<meta property="og:url" content="http://dev.im-bot.com/api-docs//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
-<meta property="og:description" content="Mock - Mocking and Testing LibraryIf you mock some thing, it can&#39;t be runnable. Don&#39;t forget it just mock object.  Mock Method that can be runnable# ..." />
+<meta property="og:description" content="API BlueprintAPI Blueprint. A powerful high-level API description language for web APIs.You’ll never guess which API documentation tools we useAPI Code Gener..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Mock &middot; botbotbot
+      API Documents &middot; botbotbot
     
   </title>
 
@@ -193,65 +193,77 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Mock</h1>
+  <h1 class="post-title">API Documents</h1>
   <span class="post-date">
-    24 Jul 2014
+    10 Jul 2016
       
         &middot;
-        <a href="/mock//index.html#disqus_thread" data-disqus-identifier="/mock/"></a>
+        <a href="/api-docs//index.html#disqus_thread" data-disqus-identifier="/api-docs/"></a>
+        
+          &middot;
+          Updated July 10, 2016
         
       
   </span>
 
-  <h2 id="mock-mocking-and-testing-library"><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></h2>
+  <h1 id="api-blueprint">API Blueprint</h1>
 
-<p>If you mock some thing, it can&#39;t be runnable. Don&#39;t forget it just mock object.  </p>
+<ul>
+<li><p><a href="https://apiblueprint.org/">API Blueprint. A powerful high-level API description language for web APIs.</a></p></li>
+<li><p><a href="https://blog.lateral.io/2015/06/youll-never-guess-which-api-documentation-tools-we-use/">You’ll never guess which API documentation tools we use</a></p></li>
+<li><p><a href="http://www.slideshare.net/bpedro/api-code-generation">API Code Generation</a></p></li>
+</ul>
 
-<h3 id="mock-method-that-can-be-runnable">Mock Method that can be runnable</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># side_effect will make mock method can be runable  </span>
-<span class="c"># this can be use to reutrn_value in different arguments</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>  
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>  
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="mi">2</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="mi">3</span>
-</code></pre></div>
-<h3 id="patch-module-attribute">Patch Module Attribute</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Using PropertyMock with return_value argument  </span>
+<!-- more -->
 
-<span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">'package.module.attribute'</span><span class="p">,</span>  
-                     <span class="n">new_callable</span><span class="o">=</span><span class="n">mock</span><span class="o">.</span><span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
-                     <span class="k">as</span> <span class="n">mock_attribute</span><span class="p">:</span>  
-<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">mock_attribte</span><span class="p">)</span>  
-<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span>  
-<span class="mi">3</span>  
-<span class="mi">3</span>  
-</code></pre></div>
-<h3 id="my_mock-mock_calls">my_mock.mock_calls</h3>
+<h3 id="tools">Tools</h3>
 
-<h3 id="reference">Reference:</h3>
+<ul>
+<li><p><a href="https://github.com/danielgtaylor/aglio">Agilo - An API Blueprint renderer with theme support that outputs static HTML</a></p></li>
+<li><p><a href="https://github.com/thecopy/apiary2postman">apiary2postman</a></p></li>
+<li><p><a href="https://github.com/kminami/apib2swagger">apib2swagger</a></p></li>
+<li><p><a href="https://github.com/apiaryio/dredd">dredd - Language-agnostic HTTP API Testing Framework</a></p></li>
+</ul>
 
-<ol>
-<li><a href="http://www.voidspace.org.uk/python/mock/mock.html">The Mock Class</a></li>
-<li><a href="http://melp.nl/2011/02/enhancing-python-unit-tests-with-more-decorators/">enhancing-python-unit-tests-with-more-decorators</a></li>
-<li><a href="http://stackoverflow.com/questions/5929107/python-decorators-with-parameters">python-decorators-with-parameters</a></li>
-</ol>
+<h3 id="mson-api-blueprint-syntax">MSON  - API Blueprint Syntax</h3>
+
+<ul>
+<li><p><a href="https://github.com/apiaryio/mson">MSON - Markdown Syntax for Object Notation</a></p></li>
+<li><p><a href="https://github.com/apiaryio/api-blueprint/tree/master/examples">api-blueprint/examples/</a></p></li>
+<li><p><a href="https://raw.githubusercontent.com/danielgtaylor/aglio/master/example.apib">aglio-example</a></p></li>
+<li><p><a href="https://gist.github.com/zdne/5f8295642af18aff27ec">Working with multiple blueprint files</a></p></li>
+<li><p><a href="https://github.com/apiaryio/api-blueprint/issues/236">Ability to reference repeated data </a></p></li>
+<li><p><a href="http://stackoverflow.com/questions/30082903/aglio-does-not-allow-parameters-in-the-body-to-be-defined-as-parameters">Aglio does not allow parameters in the body to be defined as parameters</a></p></li>
+<li><p><a href="http://stackoverflow.com/questions/24207495/how-do-i-document-a-multipart-request-with-apiary">How do I document a multipart request with apiary?</a></p></li>
+<li><p><a href="https://github.com/apiaryio/dredd/issues/74">Multipart form requests </a></p></li>
+<li><p><a href="https://gist.github.com/zdne/6267785">zdne/mutlipart-example</a></p></li>
+</ul>
+
+<h3 id="dreed">Dreed</h3>
+
+<ul>
+<li><p><a href="https://github.com/apiaryio/dredd">dredd - Language-agnostic HTTP API Testing Framework</a></p></li>
+<li><p><a href="https://philsturgeon.uk/api/2015/01/28/dredd-api-testing-documentation/">Dredd: Do Your HTTP API Justice</a></p></li>
+<li><p><a href="https://github.com/apiaryio/dredd/issues/133">dredd - Oauth</a></p></li>
+<li><p><a href="https://dredd.readthedocs.io/en/latest/hooks-nodejs/">Writing Dredd Hooks In Node.js</a></p></li>
+</ul>
+
+<h1 id="swagger">Swagger</h1>
+
+<ul>
+<li><p><a href="https://github.com/swagger-api/swagger-node">Swagger module for node.js</a></p></li>
+<li><p><a href="http://www.slideshare.net/whitlockjc/building-apis-with-nodejs-and-swagger">Building APIs with Node.js and Swagger</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=xggucT_xl5U">Swagger: How to Create an API Documentation</a></p></li>
+<li><p><a href="https://scotch.io/tutorials/speed-up-your-restful-api-development-in-node-js-with-swagger">Speed up your RESTful API development in Node.js with Swagger</a></p></li>
+<li><p><a href="https://blog.risingstack.com/swagger-nodejs/">Swagger for Node.js HTTP API Design</a></p></li>
+<li><p><a href="https://github.com/lucybot/api-spec-converter">api-spec-converter - any thing to swagger</a></p></li>
+</ul>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/api-docs/">
-            API Documents
-            <small>10 Jul 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -271,6 +283,15 @@
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/12-factor-apps/">
+            12 Factor Apps
+            <small>16 Jun 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -282,7 +303,7 @@
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/mock/";
+      var disqus_identifier = "/api-docs/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

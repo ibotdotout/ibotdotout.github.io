@@ -196,6 +196,33 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/fp-python/">
+        Functional Programming in Python
+      </a>
+    </h1>
+
+    <span class="post-date">
+      04 Oct 2015
+      
+        &middot;
+        <a href="/fp-python/#disqus_thread" data-disqus-identifier="/fp-python/"></a>
+        
+      
+    </span>
+
+    
+      <p>พอดีเพิ่งอ่าน <a href="http://www.oreilly.com/programming/free/files/functional-programming-python.pdf">Oreilly.com FP in python</a> จบ แบบมึนๆ เนื่องจากยังไม่แน่นใน concept
+ของ FP เลยมาสรุปแปะไว้ก่อน เผื่อใครสนใจอ่าน</p>
+
+
+      <div style="text-align:right;">
+        <a href="/fp-python/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/startup/">
         Start Up
       </a>
@@ -454,197 +481,6 @@ m-&gt;a in NERDTree - create file/folder</p>
 <li><a href="http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim">How can you automatically remove trailing whitespace in vim</a></li>
 <li><a href="https://jordaneldredge.com/blog/why-i-switched-from-vundle-to-plug/">Why I switched from Vundle to Plug</a></li>
 <li><a href="http://codeyarns.com/2014/11/06/how-to-use-syntastic-plugin-for-vim/">How to use Syntastic plugin for Vim</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/vim-command/">
-        Vim Command
-      </a>
-    </h1>
-
-    <span class="post-date">
-      07 Sep 2015
-      
-        &middot;
-        <a href="/vim-command/#disqus_thread" data-disqus-identifier="/vim-command/"></a>
-        
-      
-    </span>
-
-    
-      <h3 id="range">Range</h3>
-
-<table><thead>
-<tr>
-<th>[range]</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>0</td>
-<td>above first line</td>
-</tr>
-<tr>
-<td>1</td>
-<td>first line</td>
-</tr>
-<tr>
-<td>.</td>
-<td>mean to current line</td>
-</tr>
-<tr>
-<td>%</td>
-<td>all lines</td>
-</tr>
-<tr>
-<td>$</td>
-<td>last line</td>
-</tr>
-<tr>
-<td>{start},{end}</td>
-<td>from start to end line</td>
-</tr>
-<tr>
-<td>&lt;,&gt;</td>
-<td>start selection to end selection</td>
-</tr>
-</tbody></table>
-
-<h3 id="insert">Insert</h3>
-
-<table><thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>:[range]print , :p</td>
-<td>print line</td>
-</tr>
-<tr>
-<td>:[range]copy{target} , :t</td>
-<td>copy line &amp; paste</td>
-</tr>
-<tr>
-<td>:[range]normal {vimkey}</td>
-<td>action vim key via command</td>
-</tr>
-<tr>
-<td></td>
-<td>ex. :%normal A; - put &#39;;&#39; in end line for each line</td>
-</tr>
-<tr>
-<td>:!&lt;shell command&gt;</td>
-<td>run shell command in vim  % mean to current file</td>
-</tr>
-<tr>
-<td>:r&lt;file&gt; ,:r !&lt;shell cmd&gt;</td>
-<td>retrieving file after current cursor</td>
-</tr>
-</tbody></table>
-
-<h3 id="editor">Editor</h3>
-
-<table><thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>:e&lt;file&gt;</td>
-<td>edit/new file</td>
-</tr>
-<tr>
-<td>:new&lt;file&gt;</td>
-<td>new file</td>
-</tr>
-<tr>
-<td>:vnew&lt;file&gt;</td>
-<td>new file in vertical</td>
-</tr>
-<tr>
-<td>:w !sudo tee %</td>
-<td><a href="https://www.youtube.com/watch?v=C6xqO4Z1nIo">write file with sudo premission</a></td>
-</tr>
-</tbody></table>
-
-<h3 id="number">Number</h3>
-
-<table><thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>:set relativenumber</td>
-<td>enable relative number</td>
-</tr>
-<tr>
-<td>:set norelativenumber</td>
-<td>disable relative number</td>
-</tr>
-</tbody></table>
-
-<h3 id="key-mapping"><a href="http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)">Key Mapping</a></h3>
-
-<table><thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>:map, :map!</td>
-<td>show mapping key</td>
-</tr>
-<tr>
-<td>:verbose map &lt;key&gt;</td>
-<td>show mapping key and where it mapping</td>
-</tr>
-</tbody></table>
-
-<h3 id="etc">ETC</h3>
-
-<table><thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>:[range]move{target} , :m</td>
-<td>move line</td>
-</tr>
-<tr>
-<td>:nohlsearch , :nohls</td>
-<td>mute highlight search</td>
-</tr>
-<tr>
-<td>:&lt;stg&gt;C-d&lt;\tab&gt;</td>
-<td>command line completion</td>
-</tr>
-<tr>
-<td>:redraw</td>
-<td>redraw screen (Ctrl + L)</td>
-</tr>
-<tr>
-<td>:messages</td>
-<td>show history of messages</td>
-</tr>
-</tbody></table>
-
-<h2 id="references">References:</h2>
-
-<ol>
-<li><a href="http://superuser.com/a/547176">How can I view old status messages in Vim?</a></li>
-<li><a href="http://vim.wikia.com/wiki/Make_echo_seen_when_it_would_otherwise_disappear_and_go_unseen">Make echo seen when it would otherwise disappear and go unseen</a></li>
 </ol>
 
     
