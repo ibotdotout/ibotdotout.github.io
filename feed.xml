@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-08-23T14:37:55+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>API Documents</title><link href="http://dev.im-bot.com//api-docs/" rel="alternate" type="text/html" title="API Documents" /><published>2016-07-10T00:00:00+00:00</published><updated>2016-07-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//api-docs</id><content type="html" xml:base="http://dev.im-bot.com//api-docs/">&lt;h1 id=&quot;api-blueprint&quot;&gt;API Blueprint&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-09-04T10:44:59+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title>API Documents</title><link href="http://dev.im-bot.com//api-docs/" rel="alternate" type="text/html" title="API Documents" /><published>2016-07-10T00:00:00+00:00</published><updated>2016-07-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//api-docs</id><content type="html" xml:base="http://dev.im-bot.com//api-docs/">&lt;h1 id=&quot;api-blueprint&quot;&gt;API Blueprint&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://apiblueprint.org/&quot;&gt;API Blueprint. A powerful high-level API description language for web APIs.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -49,6 +49,7 @@
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://scotch.io/tutorials/speed-up-your-restful-api-development-in-node-js-with-swagger&quot;&gt;Speed up your RESTful API development in Node.js with Swagger&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.risingstack.com/swagger-nodejs/&quot;&gt;Swagger for Node.js HTTP API Design&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lucybot/api-spec-converter&quot;&gt;api-spec-converter - any thing to swagger&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/@bird.praphan/%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-apis-%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81-swagger-f32514c7d729#.8muq43pvk&quot;&gt;อย่าเพิ่งสร้าง APIs ถ้ายังไม่รู้จัก Swagger&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary>API Blueprint
 
 
@@ -396,7 +397,7 @@ guarantee sufficient query isolation  or appropriate write scaling .&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/index.html&quot;&gt;mongoose - elegant mongodb object modeling for node.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/docs/index.html&quot;&gt;mongoose - Getting Started&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/docs/promises.html&quot;&gt;mongoose - Promises&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mogno" /><category term="nosql" /><summary>Mongo
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><category term="nosql" /><summary>Mongo
 
 Understand Documents
 
