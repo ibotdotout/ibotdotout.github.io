@@ -7,7 +7,7 @@ permalink: git-bisect/
 update_date: 2016-06-15
 category: article
 ---
-Git Bisect is useful for debugging something is work is past but not now (Regression).
+Git Bisect is useful for debugging something is work in past but not now (Regression).
 
 <!-- more -->
 
