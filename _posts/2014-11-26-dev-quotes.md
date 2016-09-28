@@ -56,3 +56,5 @@ not dreams. - Rise of the Planet of the Apes
 * เอ้าซอร์สให้ผลลัพธ์ไม่ได้ให้ความรู้ เอ้าซอร์สช่วยประหยัดเวลาไม่ได้ช่วยสร้างประสบการณ์ - [Outsourcing Work](https://medium.com/inspiring-home/outsourcing-work-f269c0233f6f#.lryg8vdxw)
 
 * You can't optimize what you can't measure -  [MongoDB at Scale](https://www.mongodb.com/mongodb-scale)
+
+*  Duplication is better than the wrong abstraction - [RailsConf 2014 - All the Little Things by Sandi Metz](https://www.youtube.com/watch?v=8bZh5LMaSmE)
