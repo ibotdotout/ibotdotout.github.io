@@ -35,4 +35,11 @@ permalink: password-manager/
 ### KPCLI - Keepass Command line
 - [kpcli - Keepass Password Manager - Linux CLI](https://www.youtube.com/watch?v=M448GtFa5Xs)
 - [How To Use kpcli To Manage KeePass2 Password Files on an Ubuntu 14.04 Server](https://www.digitalocean.com/community/tutorials/how-to-use-kpcli-to-manage-keepass2-password-files-on-an-ubuntu-14-04-server)
-- [Installing KPCLI on OS X](http://www.australsounds.com/2014/10/installingkpcli.html)
+
+  Install on OSX via Homebrew
+  
+  ```
+  $ brew install kpcli
+  ```
+
+- legacy - [Installing KPCLI on OS X](http://www.australsounds.com/2014/10/installingkpcli.html)
