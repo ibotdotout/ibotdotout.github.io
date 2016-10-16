@@ -58,3 +58,13 @@ not dreams. - Rise of the Planet of the Apes
 * You can't optimize what you can't measure -  [MongoDB at Scale](https://www.mongodb.com/mongodb-scale)
 
 *  Duplication is better than the wrong abstraction - [RailsConf 2014 - All the Little Things by Sandi Metz](https://www.youtube.com/watch?v=8bZh5LMaSmE)
+
+* [The Best Programming Advice I Ever Got" with Rob Pike](http://www.informit.com/articles/article.aspx?p=1941206)
+
+	```
+	Ken taught me that thinking before debugging is extremely important. If you
+	dive into the bug, you tend to fix the local issue in the code, but if you
+	think about the bug first, how the bug came to be, you often find and correct a
+	higher-level problem in the code that will improve the design and prevent
+	further bugs.
+	```
