@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-10-25T20:17:24+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">API Documents</title><link href="http://dev.im-bot.com//api-docs/" rel="alternate" type="text/html" title="API Documents" /><published>2016-07-10T00:00:00+00:00</published><updated>2016-07-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//api-docs</id><content type="html" xml:base="http://dev.im-bot.com//api-docs/">&lt;h1 id=&quot;api-blueprint&quot;&gt;API Blueprint&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-10-25T20:37:41+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">API Documents</title><link href="http://dev.im-bot.com//api-docs/" rel="alternate" type="text/html" title="API Documents" /><published>2016-07-10T00:00:00+00:00</published><updated>2016-07-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//api-docs</id><content type="html" xml:base="http://dev.im-bot.com//api-docs/">&lt;h1 id=&quot;api-blueprint&quot;&gt;API Blueprint&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://apiblueprint.org/&quot;&gt;API Blueprint. A powerful high-level API description language for web APIs.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -397,6 +397,50 @@ guarantee sufficient query isolation  or appropriate write scaling .&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/index.html&quot;&gt;mongoose - elegant mongodb object modeling for node.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/docs/index.html&quot;&gt;mongoose - Getting Started&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/docs/promises.html&quot;&gt;mongoose - Promises&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;enable-mongo-cmd-in-replicate&quot;&gt;Enable Mongo Cmd in Replicate&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;# mongo shell
+$ rs.slaveOk()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;index&quot;&gt;Index&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/mongodb/indexing-with-mongodb&quot;&gt;Indexing with MongoDB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;# mongo
+$ db.user.ensureIndex( { _id : &quot;hashed&quot; } )
+$ sh.shardCollection(&quot;facebook.user&quot;, { &quot;_id&quot;: &quot;hashed&quot; } )
+$ db.user.getShardDistribution()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;### Set Sharding chunk size
+use config
+db.settings.save( { _id:&quot;chunksize&quot;, value: 8 } )
+
+### Set Shard Key &amp;amp; Index Key
+
+mongo --host mongo_router_1:27017 &amp;lt;&amp;lt;EOF
+use prod;
+sh.enableSharding(&quot;prod&quot;);
+db.user.ensureIndex( { slug : 1 } );
+sh.shardCollection(&quot;prod.user&quot;, { &quot;_id&quot;: 1 } );
+EOF
+
+##  check nscanned
+db.user.find({slug: '8PwobE4O'}).explain(&quot;executionStats&quot;)
+
+## Ensure Index 
+
+db.user.getIndexes()
+db.user.dropIndexes()
+
+db.user.ensureIndex( { slug : 1 }, { unique: true, backgroud: true })
+db.user.ensureIndex( { slug : &quot;hashed&quot;  }, { backgroud: true } )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;query-performance&quot;&gt;Query Performance&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vftxTniVYrU&quot;&gt;MongoDB Tutorial: Speeding Up Queries with Simple and Compound Indexes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/tutorial/analyze-query-plan/&quot;&gt;Analyze Query Performance&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><category term="nosql" /><summary type="html">Mongo
 
 Understand Documents
