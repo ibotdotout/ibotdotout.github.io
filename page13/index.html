@@ -200,6 +200,65 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/osx-write-ntfs/">
+        Enable NTFS write on OSX
+      </a>
+    </h1>
+
+    <span class="post-date">
+      17 Jun 2014
+      
+        &middot;
+        <a href="/osx-write-ntfs/#disqus_thread" data-disqus-identifier="/osx-write-ntfs/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="automatical-way">Automatical Way</h2>
+<div class="highlight"><pre><code class="language-" data-lang="">  http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
+</code></pre></div>
+<h2 id="manual-way">Manual Way</h2>
+
+<ol>
+<li>get UUID form this command<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  diskutil info /Volumes/&lt;drivename&gt; |  grep UUID
+</code></pre></div>
+<ol>
+<li>edit /etc/fstab<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  sudo vim /etc/fstab
+</code></pre></div>
+<ol>
+<li>add this with edit <code>&lt;uuid_drive&gt;</code></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">UUID</span><span class="o">=</span>&lt;uuid_drive&gt; none ntfs rw,auto,nobrowse
+</code></pre></div>
+<ol>
+<li>reject and plug it agian<br></li>
+<li>open hdd with this command<br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  open /Volumes
+</code></pre></div>
+<ol>
+<li>If want to remove writable NTFS drive </li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  sudo rm /etc/fstab
+</code></pre></div>
+<h3 id="reference">Reference:</h3>
+
+<ol>
+<li><a href="http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/">http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/</a></li>
+<li><a href="http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/">http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/</a></li>
+<li><a href="http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/">วิธีทำให้ Mac อ่านและเขียนไฟล์ NTFS บน Windows ได้</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/how-to-setup-this-blog/">
         How to set up this blog
       </a>
