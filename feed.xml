@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-10-16T15:04:31+00:00</updated><id>http://dev.im-bot.com//</id><title>botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title>API Documents</title><link href="http://dev.im-bot.com//api-docs/" rel="alternate" type="text/html" title="API Documents" /><published>2016-07-10T00:00:00+00:00</published><updated>2016-07-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//api-docs</id><content type="html" xml:base="http://dev.im-bot.com//api-docs/">&lt;h1 id=&quot;api-blueprint&quot;&gt;API Blueprint&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-10-25T20:17:24+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">API Documents</title><link href="http://dev.im-bot.com//api-docs/" rel="alternate" type="text/html" title="API Documents" /><published>2016-07-10T00:00:00+00:00</published><updated>2016-07-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//api-docs</id><content type="html" xml:base="http://dev.im-bot.com//api-docs/">&lt;h1 id=&quot;api-blueprint&quot;&gt;API Blueprint&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://apiblueprint.org/&quot;&gt;API Blueprint. A powerful high-level API description language for web APIs.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -50,12 +50,12 @@
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.risingstack.com/swagger-nodejs/&quot;&gt;Swagger for Node.js HTTP API Design&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/lucybot/api-spec-converter&quot;&gt;api-spec-converter - any thing to swagger&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/@bird.praphan/%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-apis-%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%88%E0%B8%B1%E0%B8%81-swagger-f32514c7d729#.8muq43pvk&quot;&gt;อย่าเพิ่งสร้าง APIs ถ้ายังไม่รู้จัก Swagger&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary>API Blueprint
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary type="html">API Blueprint
 
 
 API Blueprint. A powerful high-level API description language for web APIs.
 You’ll never guess which API documentation tools we use
-API Code Generation</summary></entry><entry><title>Mongo Search</title><link href="http://dev.im-bot.com//mongo-search/" rel="alternate" type="text/html" title="Mongo Search" /><published>2016-06-28T00:00:00+00:00</published><updated>2016-06-28T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo-search</id><content type="html" xml:base="http://dev.im-bot.com//mongo-search/">&lt;ul&gt;
+API Code Generation</summary></entry><entry><title type="html">Mongo Search</title><link href="http://dev.im-bot.com//mongo-search/" rel="alternate" type="text/html" title="Mongo Search" /><published>2016-06-28T00:00:00+00:00</published><updated>2016-06-28T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo-search</id><content type="html" xml:base="http://dev.im-bot.com//mongo-search/">&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://comsysto.com/blog-post/mongodb-full-text-search-vs-regular-expressions&quot;&gt;MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24343156/mongodb-prefix-wildcard-fulltext-search-text-find-part-with-search-string&quot;&gt;mongoDB prefix wildcard: fulltext-search ($text) find part with search-string&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -88,8 +88,8 @@ db.bokks.find({$text:{$search:&quot;time&quot;}})
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.compose.io/articles/full-text-search-with-mongodb-and-node-js/&quot;&gt;Full Text Search with MongoDB &amp;amp; Node.js&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://code.tutsplus.com/tutorials/full-text-search-in-mongodb--cms-24835&quot;&gt;Full-Text Search in MongoDB&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/operator/query/text/&quot;&gt;$text&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><summary>MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS
-mongoDB prefix wildcard: fulltext-search ($text) find part with search-string</summary></entry><entry><title>RESTful API</title><link href="http://dev.im-bot.com//restful-api/" rel="alternate" type="text/html" title="RESTful API" /><published>2016-06-26T00:00:00+00:00</published><updated>2016-06-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//restful-api</id><content type="html" xml:base="http://dev.im-bot.com//restful-api/">&lt;ul&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><summary type="html">MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS
+mongoDB prefix wildcard: fulltext-search ($text) find part with search-string</summary></entry><entry><title type="html">RESTful API</title><link href="http://dev.im-bot.com//restful-api/" rel="alternate" type="text/html" title="RESTful API" /><published>2016-06-26T00:00:00+00:00</published><updated>2016-06-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//restful-api</id><content type="html" xml:base="http://dev.im-bot.com//restful-api/">&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/dwyl/learn-api-design&quot;&gt;Essential learning for people building APIs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://blog.newrelic.com/2014/09/08/apipunchlist/&quot;&gt;The 5 Things  API Must Have&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;1. Error handling
@@ -139,13 +139,13 @@ If you are augmenting existing API responses choose JSON-LD. If you are keeping 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=heh4OeB9A-c&quot;&gt;How To Design A Good API and Why it Matters&lt;/a&gt; - &lt;a href=&quot;http://landawn.com/How%20to%20Design%20a%20Good%20API%20and%20Why%20it%20Matters.pdf&quot;&gt;slide&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qCdpTji8nxo&quot;&gt;How to Design Great APIs - Parse Developer Day 2013&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary>Essential learning for people building APIs
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary type="html">Essential learning for people building APIs
 The 5 Things  API Must Have
 1. Error handling
 2. Error logging
 3. Validation
 4. Authentication and authorization
-5. Testing</summary></entry><entry><title>12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-Factor-Apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&lt;blockquote&gt;
+5. Testing</summary></entry><entry><title type="html">12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-Factor-Apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&lt;blockquote&gt;
 &lt;p&gt;The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - &lt;a href=&quot;http://12factor.net&quot;&gt;The twelve factor app&lt;/a&gt;  &lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -172,13 +172,13 @@ The 5 Things  API Must Have
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QOz1UOf6MdU&quot;&gt;CF &amp;amp; The 12-factor App 101: The Secret Decoder Ring for Operations&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="article" /><category term="coding" /><summary>The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - The twelve factor app  
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="article" /><category term="coding" /><summary type="html">The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - The twelve factor app  
 
 
 Official Site
 
 
-The twelve factor app</summary></entry><entry><title>Git Bisect</title><link href="http://dev.im-bot.com//git-bisect/" rel="alternate" type="text/html" title="Git Bisect" /><published>2016-06-14T00:00:00+00:00</published><updated>2016-06-14T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-bisect</id><content type="html" xml:base="http://dev.im-bot.com//git-bisect/">&lt;p&gt;Git Bisect is useful for debugging something is work in past but not now (Regression).&lt;/p&gt;
+The twelve factor app</summary></entry><entry><title type="html">Git Bisect</title><link href="http://dev.im-bot.com//git-bisect/" rel="alternate" type="text/html" title="Git Bisect" /><published>2016-06-14T00:00:00+00:00</published><updated>2016-06-14T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-bisect</id><content type="html" xml:base="http://dev.im-bot.com//git-bisect/">&lt;p&gt;Git Bisect is useful for debugging something is work in past but not now (Regression).&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -189,7 +189,7 @@ binay search will reduce the number of commits to  &lt;code&gt;log n + 1&lt;/cod
 
 &lt;h1 id=&quot;demo-amp-use-case-of-git-bisect&quot;&gt;Demo &amp;amp; Use case of Git Bisect&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/ibotdotout/demo-git-bisect&quot;&gt;ibotdotout/demo-git-bisect&lt;/a&gt;&lt;/p&gt;</content><author><name>botbotbot</name></author><category term="article" /><category term="git" /><summary>Git Bisect is useful for debugging something is work in past but not now (Regression).</summary></entry><entry><title>All I know about mongo</title><link href="http://dev.im-bot.com//mongo/" rel="alternate" type="text/html" title="All I know about mongo" /><published>2016-03-29T00:00:00+00:00</published><updated>2016-03-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo</id><content type="html" xml:base="http://dev.im-bot.com//mongo/">&lt;h1 id=&quot;mongo&quot;&gt;Mongo&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ibotdotout/demo-git-bisect&quot;&gt;ibotdotout/demo-git-bisect&lt;/a&gt;&lt;/p&gt;</content><author><name>botbotbot</name></author><category term="article" /><category term="git" /><summary type="html">Git Bisect is useful for debugging something is work in past but not now (Regression).</summary></entry><entry><title type="html">All I know about mongo</title><link href="http://dev.im-bot.com//mongo/" rel="alternate" type="text/html" title="All I know about mongo" /><published>2016-03-29T00:00:00+00:00</published><updated>2016-03-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo</id><content type="html" xml:base="http://dev.im-bot.com//mongo/">&lt;h1 id=&quot;mongo&quot;&gt;Mongo&lt;/h1&gt;
 
 &lt;h3 id=&quot;understand-documents&quot;&gt;Understand Documents&lt;/h3&gt;
 
@@ -397,7 +397,7 @@ guarantee sufficient query isolation  or appropriate write scaling .&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/index.html&quot;&gt;mongoose - elegant mongodb object modeling for node.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/docs/index.html&quot;&gt;mongoose - Getting Started&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://mongoosejs.com/docs/promises.html&quot;&gt;mongoose - Promises&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><category term="nosql" /><summary>Mongo
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><category term="nosql" /><summary type="html">Mongo
 
 Understand Documents
 
@@ -418,7 +418,7 @@ The first question to ask, then, when moving from a relational database to Mongo
 
 What is the access pattern?
 What are you hoping to show to your customers/users?
-How are you going to write this data?</summary></entry><entry><title>Dotfile</title><link href="http://dev.im-bot.com//dotfile/" rel="alternate" type="text/html" title="Dotfile" /><published>2016-03-27T00:00:00+00:00</published><updated>2016-03-27T00:00:00+00:00</updated><id>http://dev.im-bot.com//dotfile</id><content type="html" xml:base="http://dev.im-bot.com//dotfile/">&lt;blockquote&gt;
+How are you going to write this data?</summary></entry><entry><title type="html">Dotfile</title><link href="http://dev.im-bot.com//dotfile/" rel="alternate" type="text/html" title="Dotfile" /><published>2016-03-27T00:00:00+00:00</published><updated>2016-03-27T00:00:00+00:00</updated><id>http://dev.im-bot.com//dotfile</id><content type="html" xml:base="http://dev.im-bot.com//dotfile/">&lt;blockquote&gt;
 &lt;p&gt;A file begins with . that is hidden file on unix based. Mostly use as configuration file ex. &lt;code&gt;.gitconfig&lt;/code&gt;, &lt;code&gt;.vimrc&lt;/code&gt;, &lt;code&gt;.bashrc&lt;/code&gt;  - &lt;a href=&quot;https://www.quora.com/What-are-dotfiles&quot;&gt;What are dotfiles?&lt;/a&gt; &lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -443,7 +443,7 @@ How are you going to write this data?</summary></entry><entry><title>Dotfile</ti
 &lt;li&gt;&lt;a href=&quot;https://github.com/webpro/awesome-dotfiles&quot;&gt;Awesome Dotfile&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/&quot;&gt;USING GIT AND GITHUB TO MANAGE YOUR DOTFILES&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/mildronize/dotfiles&quot;&gt;mildronize/dotfiles&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>botbotbot</name></author><category term="unix" /><summary>learn about dotfile.</summary></entry><entry><title>Colemak Keyboard Layout</title><link href="http://dev.im-bot.com//colemak/" rel="alternate" type="text/html" title="Colemak Keyboard Layout" /><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//colemak</id><content type="html" xml:base="http://dev.im-bot.com//colemak/">&lt;p&gt;Colemak&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>botbotbot</name></author><category term="unix" /><summary type="html">learn about dotfile.</summary></entry><entry><title type="html">Colemak Keyboard Layout</title><link href="http://dev.im-bot.com//colemak/" rel="alternate" type="text/html" title="Colemak Keyboard Layout" /><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//colemak</id><content type="html" xml:base="http://dev.im-bot.com//colemak/">&lt;p&gt;Colemak&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Fast typing, Least finger movement than QWERY&lt;/p&gt;
@@ -476,7 +476,7 @@ How are you going to write this data?</summary></entry><entry><title>Dotfile</ti
 &lt;li&gt;&lt;a href=&quot;http://forum.colemak.com/viewtopic.php?pid=162#p162&quot;&gt;Colemak + Vim&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/jooize/vim-colemak&quot;&gt;vim-colemak&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://sermoa.wordpress.com/2011/12/16/colemak-and-vim-but-what-about-hjkl/&quot;&gt;Colemak and vim: “But what about h/j/k/l?”&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="keyboard" /><summary>Colemak
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="keyboard" /><summary type="html">Colemak
 
 
 Fast typing, Least finger movement than QWERY
@@ -484,7 +484,7 @@ Fast typing, Least finger movement than QWERY
 
 
 colemak layout
-Ditch QWERTY – Your Hands Need Colemak</summary></entry><entry><title>Selectively disable caching for specific RUN commands in Dockerfile</title><link href="http://dev.im-bot.com//docker-select-caching/" rel="alternate" type="text/html" title="Selectively disable caching for specific RUN commands in Dockerfile" /><published>2016-03-24T00:00:00+00:00</published><updated>2016-03-24T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-select-caching</id><content type="html" xml:base="http://dev.im-bot.com//docker-select-caching/">&lt;p&gt;If you using &lt;code&gt;Dockerfile&lt;/code&gt;, you should know about caching for faster builds.
+Ditch QWERTY – Your Hands Need Colemak</summary></entry><entry><title type="html">Selectively disable caching for specific RUN commands in Dockerfile</title><link href="http://dev.im-bot.com//docker-select-caching/" rel="alternate" type="text/html" title="Selectively disable caching for specific RUN commands in Dockerfile" /><published>2016-03-24T00:00:00+00:00</published><updated>2016-03-24T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-select-caching</id><content type="html" xml:base="http://dev.im-bot.com//docker-select-caching/">&lt;p&gt;If you using &lt;code&gt;Dockerfile&lt;/code&gt;, you should know about caching for faster builds.
 Sometimes, you need to rebuild without cache. you can run docker &lt;code&gt;build&lt;/code&gt; with
 &lt;code&gt;--no-cache&lt;/code&gt; option that will disable all layer cache.&lt;/p&gt;
 
@@ -524,12 +524,12 @@ ARG &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;
 &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#arg&quot;&gt;Dockerfile - ARG&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-172606763&quot;&gt;Temporary Solution - Selectively disable caching for specific RUN commands in Dockerfile&lt;/a&gt; - &lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-185872769&quot;&gt;An
 additional description &lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary>If you using Dockerfile, you should know about caching for faster builds.
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary type="html">If you using Dockerfile, you should know about caching for faster builds.
 Sometimes, you need to rebuild without cache. you can run docker build with
 --no-cache option that will disable all layer cache.
 
 There is problem when you should use some Dockerfile commands like ADD or
-COPY to copy file form host to container.</summary></entry><entry><title>What I know about Apache Cassandra</title><link href="http://dev.im-bot.com//cassandra/" rel="alternate" type="text/html" title="What I know about Apache Cassandra" /><published>2016-03-24T00:00:00+00:00</published><updated>2016-03-24T00:00:00+00:00</updated><id>http://dev.im-bot.com//cassandra</id><content type="html" xml:base="http://dev.im-bot.com//cassandra/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+COPY to copy file form host to container.</summary></entry><entry><title type="html">What I know about Apache Cassandra</title><link href="http://dev.im-bot.com//cassandra/" rel="alternate" type="text/html" title="What I know about Apache Cassandra" /><published>2016-03-24T00:00:00+00:00</published><updated>2016-03-24T00:00:00+00:00</updated><id>http://dev.im-bot.com//cassandra</id><content type="html" xml:base="http://dev.im-bot.com//cassandra/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.datastax.com/wp-content/uploads/2012/08/WP-IntrotoCassandra.pdf&quot;&gt;Introduction to Apache Cassandra&lt;/a&gt;&lt;/li&gt;
@@ -689,7 +689,7 @@ Most importantly we did this without querying multiple tables and merging and re
 &lt;li&gt;&lt;a href=&quot;https://github.com/datastax/nodejs-driver&quot;&gt;nodejs-driver - DataStax Node.js Driver for Apache Cassandra&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://academy.datastax.com/demos/getting-started-apache-cassandra-and-nodejs&quot;&gt;Getting Started with Apache Cassandra and Node.js&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://datastax.github.io/nodejs-driver/getting-started&quot;&gt;nodejs-driver - Getting started&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="cassandra" /><category term="nosql" /><summary>Intro
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="cassandra" /><category term="nosql" /><summary type="html">Intro
 
 
 Introduction to Apache Cassandra
