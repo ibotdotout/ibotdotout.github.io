@@ -17,6 +17,14 @@ layout: default
   </span>
 
   {{ content }}
+  {% if page.tags %}
+    Tags:
+    {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}tags/#{{ tag }}">
+  	    {{ tag }}
+      </a>
+    {% endfor %}
+  {% endif %}
 </div>
 
 <div class="related">
