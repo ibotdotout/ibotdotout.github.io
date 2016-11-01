@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-01T16:27:17+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ol&gt;
-&lt;li&gt;First Way, load files to buffer and run command for each buffers&lt;/li&gt;
-&lt;/ol&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-01T16:36:48+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;First Way, load files to buffer and run command for each buffers&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;// search keyword on files and load files to buffers
 :args `rg -l pattern path/`
 
@@ -9,17 +8,20 @@
 
 // substitute word for each buffers and save
 :argdo %s/pattern/newpattern/ge | update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;!-- more --&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
-Vim and run command for each line on Quickfix&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
+Vim and run command for each line on Quickfix&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;//  run the given command to each line of the quickfix list.
 :Ack! pattern 
 :cdo %s/pattern/newpattern/ge | w
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h3 id=&quot;helper-tools-amp-plugins&quot;&gt;Helper Tools &amp;amp; Plugins&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -38,7 +40,6 @@ Vim and run command for each line on Quickfix&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://usevim.com/2012/04/06/search-and-replace-files/&quot;&gt;Vim 101: Search and Replace on Multiple Files&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/&quot;&gt;Vimcast - Using :argdo to change multiple files&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">First Way, load files to buffer and run command for each buffers
-
 // search keyword on files and load files to buffers
 :args `rg -l pattern path/`
 

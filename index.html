@@ -223,8 +223,7 @@
 
     
       <ol>
-<li>First Way, load files to buffer and run command for each buffers</li>
-</ol>
+<li><p>First Way, load files to buffer and run command for each buffers</p>
 <div class="highlight"><pre><code class="language-" data-lang="">// search keyword on files and load files to buffers
 :args `rg -l pattern path/`
 
@@ -233,7 +232,9 @@
 
 // substitute word for each buffers and save
 :argdo %s/pattern/newpattern/ge | update
-</code></pre></div>
+</code></pre></div></li>
+</ol>
+
 
       <div style="text-align:right;">
         <a href="/vim-change-multiple-files/" style="color:#000;"> Read More </a>

@@ -215,8 +215,7 @@
   </span>
 
   <ol>
-<li>First Way, load files to buffer and run command for each buffers</li>
-</ol>
+<li><p>First Way, load files to buffer and run command for each buffers</p>
 <div class="highlight"><pre><code class="language-" data-lang="">// search keyword on files and load files to buffers
 :args `rg -l pattern path/`
 
@@ -225,17 +224,20 @@
 
 // substitute word for each buffers and save
 :argdo %s/pattern/newpattern/ge | update
-</code></pre></div>
+</code></pre></div></li>
+</ol>
+
 <!-- more -->
 
 <ol>
-<li>Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
-Vim and run command for each line on Quickfix</li>
-</ol>
+<li><p>Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
+Vim and run command for each line on Quickfix</p>
 <div class="highlight"><pre><code class="language-" data-lang="">//  run the given command to each line of the quickfix list.
 :Ack! pattern 
 :cdo %s/pattern/newpattern/ge | w
-</code></pre></div>
+</code></pre></div></li>
+</ol>
+
 <h3 id="helper-tools-amp-plugins">Helper Tools &amp; Plugins</h3>
 
 <ul>
