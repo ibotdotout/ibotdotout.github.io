@@ -8,20 +8,20 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Reduce docker image size" />
+  <meta property="og:title" content="Vim Change Multiple files" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/docker-reduce-image-size//" />
+<meta property="og:url" content="http://dev.im-bot.com/vim-change-multiple-files//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Reduce Docker image size can help your to portable your containacross network, save bandwidth and storage, faster to scale.1. Using alpine base image when po..." />
+<meta property="og:description" content="First Way, load files to buffer and run command for each buffers// search keyword on files and load files to buffers:args `rg -l pattern path/`// list buffer..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Reduce docker image size &middot; botbotbot
+      Vim Change Multiple files &middot; botbotbot
     
   </title>
 
@@ -201,100 +201,58 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Reduce docker image size</h1>
+  <h1 class="post-title">Vim Change Multiple files</h1>
   <span class="post-date">
-    03 Mar 2016
+    01 Nov 2016
       
         &middot;
-        <a href="/docker-reduce-image-size//index.html#disqus_thread" data-disqus-identifier="/docker-reduce-image-size/"></a>
+        <a href="/vim-change-multiple-files//index.html#disqus_thread" data-disqus-identifier="/vim-change-multiple-files/"></a>
         
           &middot;
-          Updated March 03, 2016
+          Updated November 01, 2016
         
       
   </span>
 
-  <p>Reduce Docker image size can help your to portable your contain
-across network, save bandwidth and storage, faster to scale.</p>
+  <ol>
+<li>First Way, load files to buffer and run command for each buffers</li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
 
-<h2 id="1-using-alpine-base-image-when-possible">1. Using <a href="https://hub.docker.com/_/alpine/">alpine</a> base image when possible</h2>
+// list buffers
+:buffers
 
-<p>It is minimal Docker image based on Alpine Linux that only 5 MB.
-You can install packages with <code>apk add --update &lt;pakckages&gt;</code> and
-you can check packages that avaible on <a href="https://pkgs.alpinelinux.org/packages">alpine packages</a>.</p>
-
-<h3 id="debian-ubuntu-vs-alpine">Debian/Ubuntu vs Alpine</h3>
-
-<ul>
-<li><a href="https://hub.docker.com/_/nginx/">Nginx based on debian</a> 135 MB vs 13 MB <a href="https://hub.docker.com/r/smebberson/alpine-nginx/">alpine-nginx</a></li>
-<li><a href="https://hub.docker.com/_/node/">Node based on debian</a> 644 MB vs 36.76 MB <a href="https://hub.docker.com/r/mhart/alpine-node/">alpine-node</a></li>
-</ul>
-
-<p>You can see how small alpine based image are.
-However alpine based is new born linux that not contain much packages as
-older linux like debian/ubuntu. There are some compiled packages and
-some that your have to compile with your own.</p>
-
+// substitute word for each buffers and save
+:argdo %s/pattern/newpattern/ge | update
+</code></pre></div>
 <!-- more -->
 
-<h2 id="2-using-apt-get-with-no-install-recommends-option-on-debian-ubuntu-image">2. Using <code>apt-get</code> with <code>--no-install-recommends</code> option on Debian/Ubuntu Image</h2>
-
-<p>with this option, <a href="http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/">Marc Campbell</a> can drop ~120MB for <code>python-pip</code> and <code>curl</code> packages
-and I can save ~700MB by using this technique and combine commands on
-<a href="https://github.com/ibotdotout/docker-predictionio/blob/master/Dockerfile">docker-predictionio</a>
-that based on <a href="https://github.com/sphereie/docker-predictionio/blob/master/Dockerfile">sphereio/docker-predictionio</a>.</p>
-<div class="highlight"><pre><code class="language-" data-lang="">RUN apt-get install -y --no-install-recommends &lt;packages&gt;
+<ol>
+<li>Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
+Vim and run command for each line on Quickfix</li>
+</ol>
+<div class="highlight"><pre><code class="language-" data-lang="">//  run the given command to each line of the quickfix list.
+:Ack! pattern 
+:cdo %s/pattern/newpattern/ge | w
 </code></pre></div>
-<h2 id="3-combine-commands-to-reduce-layers">3. Combine commands to reduce layers</h2>
-
-<p>Example your <code>Dockfile</code> look like</p>
-<div class="highlight"><pre><code class="language-" data-lang="">RUN apt-get update
-RUN apt-get install -y python-pip
-RUN pip install predictionio
-</code></pre></div>
-<p>should combile commands like this</p>
-<div class="highlight"><pre><code class="language-" data-lang="">RUN apt-get update \
-    &amp;&amp; apt-get install -y python-pip \
-    &amp;&amp; pip install predictionio
-</code></pre></div>
-<p>that reduce image layer and image size.
-However your should do this when your sure with <code>Dockerfile</code>
-becuase <code>docker build</code> will cache a huge layer, you need to rebuild all
-commands if your edit any single one.</p>
-
-<h2 id="4-remove-unecessary-packages-files">4. Remove unecessary packages/files</h2>
-
-<p>Remove some no longer need packages ex. <code>python-pip</code> <code>curl</code> Any SDK
-and compressed file that your extracted when you finish your
-installation.</p>
-
-<blockquote>
-<p>Must remove in same layer, remove in another layer not help to reduce
-image size.</p>
-</blockquote>
-<div class="highlight"><pre><code class="language-" data-lang="">RUN apt-get install -y python-pip pyhton-dev \
-    &amp;&amp; pip install predictionio \
-    &amp;&amp; apt-get remove -y python-pip \
-    &amp;&amp; ap-get clean \
-    &amp;&amp; rm -rf /var/lib/apt/lists/*
-</code></pre></div>
-<h3 id="5-using-docker-squash-to-make-them-smaller">5. Using <a href="https://github.com/jwilder/docker-squash">docker-squash</a> to make them smaller</h3>
-
-<blockquote>
-<p>I not sure about this solution that I can&#39;t complie it on OSX.
-You can read more about <code>docker-squash</code> in References.</p>
-</blockquote>
-
-<h3 id="references">References::</h3>
+<h3 id="helper-tools-amp-plugins">Helper Tools &amp; Plugins</h3>
 
 <ul>
-<li><a href="https://hub.docker.com/_/alpine/">Alpine Linux - A minimal Docker image based</a></li>
-<li><a href="http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/">Refactoring a Dockerfile for image size</a></li>
-<li><a href="http://jonathan.bergknoff.com/journal/building-good-docker-images">Building Good Docker Images</a></li>
-<li><a href="http://layer0.authentise.com/docker-4-useful-tips-you-may-not-know-about.html">Docker: 4 useful tips, you may not know about</a></li>
-<li><a href="https://github.com/jwilder/docker-squash">docker-squash</a></li>
-<li><a href="http://jasonwilder.com/blog/2014/08/19/squashing-docker-images/">Squashing Docker Images</a></li>
-<li><a href="http://woudenberg.io/reducing-docker-image-size/">Reducing the size of Docker Images</a></li>
+<li><a href="https://github.com/mileszs/ack.vim">Ack.vim</a></li>
+<li><a href="http://blog.burntsushi.net/ripgrep/">ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}</a></li>
+<li><a href="https://github.com/BurntSushi/ripgrep">ripgrep (rg)</a> </li>
+<li><a href="http://www.wezm.net/technical/2016/09/ripgrep-with-vim/">Using ripgrep With Vim</a></li>
+</ul>
+
+<h3 id="references">References:</h3>
+
+<ul>
+<li><a href="http://stackoverflow.com/a/39119158">cdo - How to do search &amp; replace with ack in vim?</a></li>
+<li><a href="http://vimcasts.org/episodes/project-wide-find-and-replace/">Project-wide find and replace</a></li>
+<li><a href="http://stackoverflow.com/a/15729568">argdo - How to do search &amp; replace with ack in vim?</a></li>
+<li><a href="http://usevim.com/2012/04/06/search-and-replace-files/">Vim 101: Search and Replace on Multiple Files</a></li>
+<li><a href="http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/">Vimcast - Using :argdo to change multiple files</a></li>
 </ul>
 
 </div>
@@ -302,15 +260,6 @@ You can read more about <code>docker-squash</code> in References.</p>
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -330,6 +279,15 @@ You can read more about <code>docker-squash</code> in References.</p>
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/mongo-search/">
+            Mongo Search
+            <small>28 Jun 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -341,7 +299,7 @@ You can read more about <code>docker-squash</code> in References.</p>
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/docker-reduce-image-size/";
+      var disqus_identifier = "/vim-change-multiple-files/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-10-31T16:58:33+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Git Submodule and Git Subtree</title><link href="http://dev.im-bot.com//git-submodule-subtree/" rel="alternate" type="text/html" title="Git Submodule and Git Subtree" /><published>2016-10-25T00:00:00+00:00</published><updated>2016-10-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-submodule-subtree</id><content type="html" xml:base="http://dev.im-bot.com//git-submodule-subtree/">&lt;h1 id=&quot;git-submodule&quot;&gt;git submodule&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-01T16:27:17+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ol&gt;
+&lt;li&gt;First Way, load files to buffer and run command for each buffers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
+
+// list buffers
+:buffers
+
+// substitute word for each buffers and save
+:argdo %s/pattern/newpattern/ge | update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- more --&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
+Vim and run command for each line on Quickfix&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;//  run the given command to each line of the quickfix list.
+:Ack! pattern 
+:cdo %s/pattern/newpattern/ge | w
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;helper-tools-amp-plugins&quot;&gt;Helper Tools &amp;amp; Plugins&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mileszs/ack.vim&quot;&gt;Ack.vim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.burntsushi.net/ripgrep/&quot;&gt;ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/BurntSushi/ripgrep&quot;&gt;ripgrep (rg)&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.wezm.net/technical/2016/09/ripgrep-with-vim/&quot;&gt;Using ripgrep With Vim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/39119158&quot;&gt;cdo - How to do search &amp;amp; replace with ack in vim?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://vimcasts.org/episodes/project-wide-find-and-replace/&quot;&gt;Project-wide find and replace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/15729568&quot;&gt;argdo - How to do search &amp;amp; replace with ack in vim?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://usevim.com/2012/04/06/search-and-replace-files/&quot;&gt;Vim 101: Search and Replace on Multiple Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/&quot;&gt;Vimcast - Using :argdo to change multiple files&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">First Way, load files to buffer and run command for each buffers
+
+// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
+
+// list buffers
+:buffers
+
+// substitute word for each buffers and save
+:argdo %s/pattern/newpattern/ge | update</summary></entry><entry><title type="html">Git Submodule and Git Subtree</title><link href="http://dev.im-bot.com//git-submodule-subtree/" rel="alternate" type="text/html" title="Git Submodule and Git Subtree" /><published>2016-10-25T00:00:00+00:00</published><updated>2016-10-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-submodule-subtree</id><content type="html" xml:base="http://dev.im-bot.com//git-submodule-subtree/">&lt;h1 id=&quot;git-submodule&quot;&gt;git submodule&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://gist.github.com/gitaarik/8735255&quot;&gt;Git Submodules basic explanation&lt;/a&gt;&lt;/li&gt;
@@ -575,49 +623,4 @@ Fast typing, Least finger movement than QWERY
 
 
 colemak layout
-Ditch QWERTY – Your Hands Need Colemak</summary></entry><entry><title type="html">Selectively disable caching for specific RUN commands in Dockerfile</title><link href="http://dev.im-bot.com//docker-select-caching/" rel="alternate" type="text/html" title="Selectively disable caching for specific RUN commands in Dockerfile" /><published>2016-03-24T00:00:00+00:00</published><updated>2016-03-24T00:00:00+00:00</updated><id>http://dev.im-bot.com//docker-select-caching</id><content type="html" xml:base="http://dev.im-bot.com//docker-select-caching/">&lt;p&gt;If you using &lt;code&gt;Dockerfile&lt;/code&gt;, you should know about caching for faster builds.
-Sometimes, you need to rebuild without cache. you can run docker &lt;code&gt;build&lt;/code&gt; with
-&lt;code&gt;--no-cache&lt;/code&gt; option that will disable all layer cache.&lt;/p&gt;
-
-&lt;p&gt;There is problem when you should use some &lt;code&gt;Dockerfile&lt;/code&gt; commands like &lt;code&gt;ADD&lt;/code&gt; or
-&lt;code&gt;COPY&lt;/code&gt; to copy file form host to container.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;You need to copy new file to container then rebuild again without change any
-line of &lt;code&gt;Dockerfile&lt;/code&gt; but the new file not was copy to container.
-The last build using layer cache that contain old file instead of rebuild with new
-file. So this problem can solve easily by using &lt;code&gt;--no-cache&lt;/code&gt; buuild option that
-disable all layer cache.&lt;/p&gt;
-
-&lt;p&gt;Sometimes, you need to rebuild only some layer not all layer.
-For this case, there is not native solution for Docker but there is some trick
-about &lt;code&gt;ARG&lt;/code&gt; command in &lt;code&gt;Dockerfile&lt;/code&gt; and &lt;code&gt;--build-arg&lt;/code&gt; build option that I found
-on &lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-172606763&quot;&gt;New feature request: Selectively disable caching for specific RUN commands
-in Dockerfile&lt;/a&gt;
-for more detail you should look at &lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-185872769&quot;&gt;solution description&lt;/a&gt;
-and &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#arg&quot;&gt;Dockerfile - ARG&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;add &lt;code&gt;ARG&lt;/code&gt; command to your &lt;code&gt;Dockerfile&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Dockerfile&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# add this and below command will run without cache&lt;/span&gt;
-ARG &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;when you need to rebuild with selected cache, run it with &lt;code&gt;--build-arg&lt;/code&gt; option&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker build -t your-image --build-arg &lt;span class=&quot;nv&quot;&gt;CACHEBUST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date +%s&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; .
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;then only layer below &lt;code&gt;ARG&lt;/code&gt; command in &lt;code&gt;Dockerfile&lt;/code&gt; will rebuild.&lt;/p&gt;
-
-&lt;h1 id=&quot;references&quot;&gt;References:&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#build-cache&quot;&gt;Build Cache - Best practices for writing Dockerfiles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#arg&quot;&gt;Dockerfile - ARG&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-172606763&quot;&gt;Temporary Solution - Selectively disable caching for specific RUN commands in Dockerfile&lt;/a&gt; - &lt;a href=&quot;https://github.com/docker/docker/issues/1996#issuecomment-185872769&quot;&gt;An
-additional description &lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary type="html">If you using Dockerfile, you should know about caching for faster builds.
-Sometimes, you need to rebuild without cache. you can run docker build with
---no-cache option that will disable all layer cache.
-
-There is problem when you should use some Dockerfile commands like ADD or
-COPY to copy file form host to container.</summary></entry></feed>
+Ditch QWERTY – Your Hands Need Colemak</summary></entry></feed>
