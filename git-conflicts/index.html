@@ -8,20 +8,20 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Continuos Integrations" />
+  <meta property="og:title" content="Git conflicts" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/ci//" />
+<meta property="og:url" content="http://dev.im-bot.com/git-conflicts//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Continuous Integrations doesn&#39;t get rid of bugs, but it does make them dramatically easier to find and remove. - Continuous Integration by Martin FowlerO..." />
+<meta property="og:description" content="GitResolve Git merge conflicts in favor of their changes during a pull// In conflicted state$ git checkout --theirs . // use thier code from remote repo$ git..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Continuos Integrations &middot; botbotbot
+      Git conflicts &middot; botbotbot
     
   </title>
 
@@ -201,36 +201,56 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Continuos Integrations</h1>
+  <h1 class="post-title">Git conflicts</h1>
   <span class="post-date">
-    19 Jul 2014
+    02 Nov 2016
       
         &middot;
-        <a href="/ci//index.html#disqus_thread" data-disqus-identifier="/ci/"></a>
+        <a href="/git-conflicts//index.html#disqus_thread" data-disqus-identifier="/git-conflicts/"></a>
+        
+          &middot;
+          Updated November 02, 2016
         
       
   </span>
 
-  <p>Continuous Integrations doesn&#39;t get rid of bugs, but it does make them dramatically easier to find and remove. - <a href="http://martinfowler.com/articles/continuousIntegration.html">Continuous Integration by Martin Fowler</a></p>
-
-<h3 id="own-sever-services">Own Sever Services</h3>
+  <h3 id="git">Git</h3>
 
 <ul>
-<li><a href="/jenkins">Jeknins CI</a> - Popular Open Source CI</li>
+<li><p><a href="http://stackoverflow.com/a/33569970/6144391">Resolve Git merge conflicts in favor of their changes during a pull</a></p>
+<div class="highlight"><pre><code class="language-" data-lang="">// In conflicted state
+$ git checkout --theirs . // use thier code from remote repo
+$ git checkout --ours . // use our code form local repo
+$ git add -u . // add file with skip iles that are not under version control
+</code></pre></div></li>
 </ul>
 
-<h3 id="online-services">Online Services</h3>
+<!-- more -->
+
+<h3 id="vim">Vim</h3>
 
 <ul>
-<li><a href="/travis-ci">Travis CI</a> - Recommend</li>
-<li><a href="/drone-ci">Drone.io CI</a> - Easier than Travis, has few features</li>
+<li><a href="https://github.com/tpope/vim-fugitive">fugitive.vim: a Git wrapper so awesome</a></li>
+<li><p>[Fugitive.vim - resolving merge conflicts with vimdiff]**(<a href="http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/</a>)</p>
+<div class="highlight"><pre><code class="language-" data-lang="">:Gvdiff
+:buffers
+// focus on middle window
+:diffput 2 // see number on :buffers
+:diffput 3 // see number on :buffers
+// ]c next conflict
+// [c previos conflict
+</code></pre></div></li>
 </ul>
 
   
     Tags:
     
-      <a href="/tags/#CI">
-  	    CI
+      <a href="/tags/#git">
+  	    git
+      </a>
+    
+      <a href="/tags/#vim">
+  	    vim
       </a>
     
   
@@ -239,15 +259,6 @@
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -267,6 +278,15 @@
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/api-docs/">
+            API Documents
+            <small>10 Jul 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -278,7 +298,7 @@
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/ci/";
+      var disqus_identifier = "/git-conflicts/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

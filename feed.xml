@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-01T18:04:03+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-02T02:34:43+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/33569970/6144391&quot;&gt;Resolve Git merge conflicts in favor of their changes during a pull&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;// In conflicted state
+$ git checkout --theirs . // use thier code from remote repo
+$ git checkout --ours . // use our code form local repo
+$ git add -u . // add file with skip iles that are not under version control
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&quot;vim&quot;&gt;Vim&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tpope/vim-fugitive&quot;&gt;fugitive.vim: a Git wrapper so awesome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;[Fugitive.vim - resolving merge conflicts with vimdiff]**(&lt;a href=&quot;http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/&quot;&gt;http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;:Gvdiff
+:buffers
+// focus on middle window
+:diffput 2 // see number on :buffers
+:diffput 3 // see number on :buffers
+// ]c next conflict
+// [c previos conflict
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><category term="vim" /><summary type="html">Git
+
+
+Resolve Git merge conflicts in favor of their changes during a pull
+// In conflicted state
+$ git checkout --theirs . // use thier code from remote repo
+$ git checkout --ours . // use our code form local repo
+$ git add -u . // add file with skip iles that are not under version control</summary></entry><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;First Way, load files to buffer and run command for each buffers&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;// search keyword on files and load files to buffers
 :args `rg -l pattern path/`
@@ -583,45 +616,4 @@ How are you going to write this data?</summary></entry><entry><title type="html"
 &lt;li&gt;&lt;a href=&quot;https://github.com/webpro/awesome-dotfiles&quot;&gt;Awesome Dotfile&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/&quot;&gt;USING GIT AND GITHUB TO MANAGE YOUR DOTFILES&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/mildronize/dotfiles&quot;&gt;mildronize/dotfiles&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>botbotbot</name></author><category term="unix" /><summary type="html">learn about dotfile.</summary></entry><entry><title type="html">Colemak Keyboard Layout</title><link href="http://dev.im-bot.com//colemak/" rel="alternate" type="text/html" title="Colemak Keyboard Layout" /><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//colemak</id><content type="html" xml:base="http://dev.im-bot.com//colemak/">&lt;p&gt;Colemak&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Fast typing, Least finger movement than QWERY&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://colemak.com&quot;&gt;colemak layout&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://chetansurpur.com/blog/2012/11/colemak.html&quot;&gt;Ditch QWERTY – Your Hands Need Colemak&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://patorjk.com/keyboard-layout-analyzer/#/main&quot;&gt;Analyze Text Input See which layout is best for your input text&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/189270/alternative-keyboard-layouts-explained-dvorak-colemak-and-whether-you-should-care/&quot;&gt;Alternative Keyboard Layouts Explained: Should You Switch to Dvorak or Colemak?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.workmanlayout.com/blog/#popbooks&quot;&gt;Test Keyboard Layout Using Popular Books&lt;/a&gt; -  Should look at Top/Home/Bottom Row Percentage&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://sermoa.wordpress.com/2011/12/22/colemak-is-easy-to-learn/&quot;&gt;Colemak is easy to learn!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://thetypingcat.com/course/colemak&quot;&gt;Learn Colemak&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://alexarmstrong.net/2015/01/reassign-capslock-to-backspace/&quot;&gt;Reassign Caps Lock to Backspace&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.erw.dk/2015/02/27/4-years-with-colemak/&quot;&gt;4 Years with Colemak&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ryanheise.com/colemak/&quot;&gt;Learning Colemak&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://emileswarts.github.io/2012/08/25/dont-remap-caps-to-be-escape.html&quot;&gt;Don&amp;#39;t remap caps-lock to be escape&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;vim&quot;&gt;Vim&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/vim-scripts/colqer&quot;&gt;colqer - Colemak  Only in Vim Insert Mode&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=uubflqamqFk&quot;&gt;Intro to Vim for Colemak users&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://forum.colemak.com/viewtopic.php?pid=162#p162&quot;&gt;Colemak + Vim&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/jooize/vim-colemak&quot;&gt;vim-colemak&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://sermoa.wordpress.com/2011/12/16/colemak-and-vim-but-what-about-hjkl/&quot;&gt;Colemak and vim: “But what about h/j/k/l?”&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="keyboard" /><summary type="html">Colemak
-
-
-Fast typing, Least finger movement than QWERY
-
-
-
-colemak layout
-Ditch QWERTY – Your Hands Need Colemak</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>botbotbot</name></author><category term="unix" /><summary type="html">learn about dotfile.</summary></entry></feed>

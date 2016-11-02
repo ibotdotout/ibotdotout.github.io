@@ -204,6 +204,297 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/unix/">
+        Unix
+      </a>
+    </h1>
+
+    <span class="post-date">
+      27 Jun 2014
+      
+        &middot;
+        <a href="/unix/#disqus_thread" data-disqus-identifier="/unix/"></a>
+        
+          &middot;
+          Updated February 07, 2016
+        
+      
+    </span>
+
+    
+      <h3 id="helper">Helper</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>~ <span class="nv">$ </span>home user directory  
+<span class="gp">$ </span>~+ <span class="c"># same as pwd  </span>
+<span class="gp">$ </span>~- <span class="c"># previous directory  </span>
+<span class="gp">$ </span>ls -1 <span class="nv">$PWD</span>/<span class="k">*</span>.txt <span class="c"># list all .txt with full path  </span>
+<span class="gp">$ </span><span class="nb">cd</span> - <span class="c"># cd to previous path</span>
+<span class="gp">$ </span><span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim <span class="c"># set vim as default editor</span>
+<span class="gp">$ </span>groups <span class="c">#list group</span>
+<span class="gp">$ </span>getent group &lt;group_name&gt; <span class="c">#list members of group</span>
+<span class="gp">$ </span>top <span class="c">#check performance</span>
+<span class="gp">$ </span>du -sh &lt;folder&gt; <span class="c"># summary disk usage of folder</span>
+<span class="gp">$ </span>df -h <span class="c"># disk free</span>
+<span class="gp">$ </span>chsh - &lt;user&gt; <span class="c"># change default ssh user</span>
+<span class="gp">$ </span>printenv <span class="c"># list environment variables</span>
+<span class="gp">$ </span><span class="se">\&lt;</span>cmd&gt; <span class="c"># run command by  avoid alias</span>
+</code></pre></div>
+<h3 id="command">Command</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">nl <span class="c">#number line</span>
+xargs &lt;cmd&gt; <span class="c">#change input to arguments, use with pipe</span>
+sed <span class="c">#stream editor</span>
+pbcopy &lt; &lt;file&gt; <span class="c"># OSX: copy file into clipboard</span>
+</code></pre></div>
+<h3 id="where-command">Where command</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">hash</span> <span class="c"># list command and its path  </span>
+<span class="gp">$ </span><span class="nb">type</span> -a &lt;cmd&gt; <span class="c"># tell all path of commamd  </span>
+<span class="gp">$ </span>which &lt;cmd&gt; <span class="c"># tell default path of command  </span>
+</code></pre></div>
+<h3 id="redirection"><a href="http://en.wikipedia.org/wiki/Redirection_computing">Redirection</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>cmd &gt; &lt;file&gt; <span class="c"># print output to file (overwrite)  </span>
+<span class="gp">$ </span>cmd &gt;&gt; &lt;file&gt; <span class="c"># print output to file (append)  </span>
+<span class="gp">$ </span>cmd 2&gt; &lt;file&gt; <span class="c"># print error to file  </span>
+<span class="gp">$ </span>cmd &amp;&gt; &lt;file&gt; <span class="c"># print output &amp; error to file  </span>
+<span class="gp">$ </span>cmd &lt; &lt;file&gt; <span class="c"># use file as  input  </span>
+<span class="gp">$ </span>cmd &lt;&lt; &lt;file&gt; <span class="c"># use file as input  </span>
+<span class="gp">$ </span>cmd <span class="o">&lt;&lt;&lt;</span> &lt;any&gt;  <span class="c">#use anyas input (here string not compute any tag)  </span>
+<span class="c"># Redirection output wiht sudo</span>
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"hello"</span> | sudo tee out &gt; /dev/null <span class="c"># eq. echo "hello" &gt; out</span>
+<span class="c"># echo "hello" | sudo tee -a out &gt; /dev/null # eq echo "hello" &gt; out</span>
+</code></pre></div>
+<h3 id="jobs"><a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">Jobs</a> -</h3>
+
+<p><a href="https://www.youtube.com/watch?v=r4xkCDRnGiw">fg bg Tutorial</a></p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">jobs</span> <span class="c"># list suspended jobs  </span>
+<span class="gp">$ </span><span class="nb">fg</span> <span class="c"># put the top suspended job in the foreground</span>
+<span class="gp">$ </span><span class="nb">fg</span> %1 <span class="c"># put the suspended job id 1 in the foreground</span>
+Ctrl-z <span class="c"># Suspend a foreground job</span>
+<span class="gp">$ </span><span class="nb">bg</span> <span class="c"># run suspended job in background</span>
+<span class="gp">$ </span><span class="nb">kill</span> <span class="c"># kill job</span>
+</code></pre></div>
+<h3 id="crontab-time-schedule">Crontab Time schedule</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>crontab -e <span class="c">#edit crontab profile</span>
+<span class="c"># */5 * * * * cmd</span>
+<span class="c"># run cmd every five minutes</span>
+<span class="gp">$ </span>grep CRON /var/log/syslog <span class="c">#see crontablog (debian)</span>
+</code></pre></div>
+<h3 id="zsh-history-expansion">Zsh History expansion</h3>
+
+<p>should also work with bash.</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>man zshexpn <span class="c"># manual for look in-depth  </span>
+<span class="gp">$ </span><span class="nb">history</span> <span class="c"># tell history command that keep in ~/.bash_history  </span>
+<span class="gp">$ </span><span class="nb">history</span> -c <span class="c"># clear history  </span>
+! <span class="c"># previous that can combine with command and argument  </span>
+<span class="gp">$ </span>!! <span class="c"># call previous command  </span>
+<span class="gp">$ </span>!&lt;str&gt; <span class="c"># call last command that start with str  </span>
+<span class="gp">$ </span>!?&lt;str&gt;[?] <span class="c"># call last command containing str  </span>
+<span class="gp">$ </span>!&lt;hist_number&gt; <span class="c"># call command in nth of history files  </span>
+ ^ <span class="c"># first argument  </span>
+ <span class="nv">$ </span><span class="c"># last argument  </span>
+ :n <span class="c"># nth argument  </span>
+ :m-n <span class="c"># mth to nth argument  </span>
+ <span class="k">*</span> <span class="c"># all argument  </span>
+<span class="gp">$ </span>&lt;space&gt;&lt;cmd&gt; <span class="c"># call command without keep history</span>
+</code></pre></div>
+<h3 id="zsh-basic-editing-bash-shortcuts">Zsh Basic Editing - <a href="http://www.skorks.com/2009/09/bash-shortcuts-for-maximum-productivity/">Bash Shortcuts</a></h3>
+
+<p>should also work with bash.</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>bindkey -v <span class="c"># vi mode  </span>
+<span class="gp">$ </span>bindkey -e <span class="c"># emac mode  </span>
+Ctrl + a <span class="c"># moves the cursor to begin of line  </span>
+Ctrl + e <span class="c"># moves the cursor to end of line  </span>
+Ctrl + u <span class="c"># delete current to begin of line</span>
+Ctrl + k <span class="c"># delete until end of line  </span>
+Ctrl + l <span class="c"># clear</span>
+Ctrl + w <span class="c"># delete word backwords  </span>
+Ctrl + d <span class="c"># delete char (moves forward)  </span>
+Ctrl + f <span class="c"># move char foreward</span>
+Ctrl + b <span class="c"># move char backward</span>
+Meta + f <span class="c"># move word foreward</span>
+Meata + b <span class="c"># move word backward</span>
+Ctrl + y <span class="c"># yank last delete word  </span>
+Ctrl + t <span class="c"># transpoes two characters  </span>
+Esc + t <span class="c"># transpoes two words  </span>
+
+Meta is your Alt key, normally.
+For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; Preferences &gt; Settings &gt; Keyboard, and <span class="nb">enable </span>Use option as meta key.
+</code></pre></div>
+<h3 id="diff-command"><a href="http://linux.about.com/library/cmd/blcmdl1_diff.htm">Diff Command</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>diff --brief &lt;file1&gt; &lt;file2&gt;
+</code></pre></div>
+<h3 id="howto-find-out-my-linux-distribution-name-and-version"><a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>cat /etc/<span class="k">*</span>-release
+</code></pre></div>
+<h3 id="timezone-setting-in-linux"><a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok date
+</code></pre></div>
+<h3 id="how-to-cycle-through-reverse-i-search-in-bash"><a href="http://unix.stackexchange.com/questions/73498/how-to-cycle-through-reverse-i-search-in-bash">How to cycle through reverse-i-search in BASH?</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>Ctrl+R grep Ctrl+R Ctrl+R
+</code></pre></div>
+<h3 id="safeguard-rm"><a href="https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm">safeguard-rm</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># only zsh</span>
+
+<span class="gp">$ </span>setopt noclobber <span class="c"># prevents overwriting an existing file.</span>
+<span class="gp">$ </span>setopt clobber <span class="c"># disable</span>
+
+<span class="gp">$ </span>unsetopt RM_STAR_SILENT <span class="c"># ask before rm with star (*)</span>
+<span class="gp">$ </span>setopt RM_STAR_WAIT <span class="c"># wait 10 sec before exec rm with star</span>
+</code></pre></div>
+<h3 id="mac-style-copy-paste-for-linux-machines"><a href="https://www.youtube.com/watch?v=fKP0FLp3uW0">Mac style copy/paste for linux machines</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># copy/paste for linux machines (Mac style)</span>
+<span class="c"># sudo apt-get install xclip</span>
+<span class="gp">$ </span><span class="nb">alias </span><span class="nv">pbcopy</span><span class="o">=</span><span class="s1">'xclip -selection clipboard'</span>
+<span class="gp">$ </span><span class="nb">alias </span><span class="nv">pbpaste</span><span class="o">=</span><span class="s1">'xclip -selection clipboard -o'</span>
+<span class="gp">$ </span><span class="nb">alias </span><span class="nv">pbselect</span><span class="o">=</span><span class="s1">'xclip -selection primary -o'</span>
+</code></pre></div>
+<h3 id="bash">Bash</h3>
+
+<h3 id="shell-bash-script">Shell/Bash Script</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
+
+VAR <span class="o">=</span> <span class="s2">"hello"</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$VAR</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"hello"</span> <span class="o">]</span>; <span class="k">then</span>  <span class="c"># use = to equal string not ==</span>
+  <span class="nb">echo</span> <span class="nv">$VAR</span>
+<span class="k">else
+  </span><span class="nb">echo</span> <span class="s2">"fasle"</span>
+<span class="k">fi</span>
+</code></pre></div>
+<h3 id="run-script-different-ways-to-execute-a-shell-script">Run Script - <a href="http://unix.stackexchange.com/questions/2976/different-ways-to-execute-a-shell-script">Different ways to execute a shell script</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>./script      <span class="c">#run with using shebang(#) in script ex. #!/usr/bin/python</span>
+<span class="gp">$ </span>. script      <span class="c">#run with shell (work in related bash)</span>
+<span class="gp">$ </span><span class="nb">source </span>script <span class="c">#run with shell (work in both bash and csh)</span>
+</code></pre></div>
+<h3 id="shell-function-passing-argument-to-alias-in-bash">Shell function - <a href="http://stackoverflow.com/questions/4060880/passing-argument-to-alias-in-bash">Passing argument to alias in bash</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">echo</span> <span class="s1">'rm() { mkdir -p /tmp/rm; /bin/mv "$@" /tmp/rm; }'</span> &gt;&gt; .zshrc
+</code></pre></div>
+<h3 id="execute-combine-multiple-linux-commands-in-one-line"><a href="http://stackoverflow.com/questions/13077241/execute-combine-multiple-linux-commands-in-one-line">Execute combine multiple linux commands in one line</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">cmd1 <span class="o">&amp;&amp;</span> cmd2  <span class="c"># cmd 2 run only if cmd1 successful</span>
+cmd1 ; cmd2  <span class="c"># cmd 2 run whether failed or not</span>
+</code></pre></div>
+<h3 id="parallel-shell-script">Parallel shell script</h3>
+
+<ol>
+<li><a href="http://prll.sourceforge.net/shell_parallel.html">Parallel batch processing in the shell</a><br></li>
+<li><a href="http://stackoverflow.com/questions/19543139/bash-script-processing-commands-in-parallel">Bash script processing commands in parallel</a><br></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">process1 &amp;
+process2 &amp;
+process3 &amp;
+process4 &amp;
+<span class="nb">wait</span>  <span class="c"># wait until process1, 2, 3, 4 done</span>
+process5 &amp;
+process6 &amp;
+process7 &amp;
+process8 &amp;
+<span class="nb">wait</span>  <span class="c"># wait until process5, 6, 7, 8 done</span>
+</code></pre></div>
+<ol>
+<li><a href="http://stackoverflow.com/questions/38160/parallelize-bash-script">Parallelize Bash Script</a></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
+
+<span class="nv">nproc</span><span class="o">=</span><span class="k">$(($(</span>nproc<span class="k">)</span><span class="o">-</span><span class="m">1</span><span class="k">))</span>  <span class="c"># number of core cpu - 1</span>
+
+<span class="c"># waitproc - wait until have core slots</span>
+waitproc <span class="o">()</span> <span class="o">{</span>
+  <span class="nv">jobcnt</span><span class="o">=(</span><span class="k">$(</span><span class="nb">jobs</span> -p<span class="k">)</span><span class="o">)</span>
+  <span class="k">until</span> <span class="o">[</span> <span class="k">${#</span><span class="nv">jobcnt</span><span class="p">[@]</span><span class="k">}</span> -lt <span class="nv">$nproc</span> <span class="o">]</span>; <span class="k">do
+    </span>sleep 0.05
+    <span class="nv">jobcnt</span><span class="o">=(</span><span class="k">$(</span>job -p<span class="k">)</span><span class="o">)</span>
+  <span class="k">done</span>
+</code></pre></div>
+<h4 id="bash-for-loop-array-iterate-through-array-values"><a href="http://www.cyberciti.biz/faq/bash-for-loop-array/">Bash For Loop Array: Iterate Through Array Values</a></h4>
+
+<ol>
+<li><a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">Introduction to if</a></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 0 <span class="o">]</span>
+<span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"hello"</span>
+<span class="k">done</span>
+</code></pre></div>
+<ol>
+<li><a href="http://www.unixcl.com/2009/09/linux-seq-command-format-option-example.html">Linux seq command format option example</a></li>
+</ol>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
+
+<span class="nv">array</span><span class="o">=(</span> one two three <span class="o">)</span>
+
+<span class="k">for </span>i <span class="k">in</span> <span class="s2">"</span><span class="k">${</span><span class="nv">array</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
+<span class="k">do
+    </span><span class="nb">echo</span> <span class="nv">$i</span>
+<span class="k">done</span>
+</code></pre></div>
+<h3 id="get-file-directory-path-from-filepath"><a href="http://stackoverflow.com/questions/6121091/get-file-directory-path-from-filepath#6121114">Get file directory path from filepath</a></h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>dirname <span class="s2">"/home/user/dir/file.py"</span>
+/home/user/dir
+<span class="gp">$ </span>basename <span class="s2">"/home/user/dir/file.py"</span>
+file.py
+</code></pre></div>
+<h3 id="how-to-find-out-from-the-logs-what-caused-system-shutdown"><a href="http://unix.stackexchange.com/questions/9819/how-to-find-out-from-the-logs-what-caused-system-shutdown">How to find out from the logs what caused system shutdown?</a></h3>
+
+<ul>
+<li><a href="http://unix.stackexchange.com/questions/107501/shutdown-log-linux-username">Shutdown log Linux UserName</a></li>
+<li><a href="http://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html">Linux last Reboot Time and Date Find Out Command</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">last reboot | less
+last -x|grep shutdown | head -1
+</code></pre></div>
+<h3 id="zsh">Zsh</h3>
+
+<ul>
+<li><a href="http://blog.patshead.com/2011/04/improve-your-oh-my-zsh-startup-time-maybe.html">Improve Your oh-my-zsh Startup Time (Maybe)</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># check start zsh time</span>
+  /usr/bin/time zsh -i -c <span class="nb">exit</span>
+</code></pre></div>
+<ul>
+<li><a href="http://superuser.com/questions/236953/zsh-starts-incredibly-slowly">zsh starts incredibly slowly</a></li>
+</ul>
+
+<h3 id="bash-references">Bash References:</h3>
+
+<ol>
+<li><a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html">Functions</a></li>
+<li><a href="http://blog.sanctum.geek.nz/bash-shell-expansion/">Bash shell expansion</a></li>
+<li><a href="https://speakerdeck.com/nibalizer/bash-tricks">bash-tricks</a></li>
+<li><a href="http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script">check command exitsts</a></li>
+<li><a href="https://sanctum.geek.nz/arabesque/high-speed-bash/">High-speed Bash</a></li>
+</ol>
+
+<h3 id="etc">ETC</h3>
+
+<ul>
+<li><a href="http://blog.libinpan.com/2009/07/less-is-better-than-tail/">Less is better, than tail</a></li>
+</ul>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>less +F log/production.log
+</code></pre></div>
+<h2 id="reference">Reference</h2>
+
+<ol>
+<li><a href="http://www.linuxcommand.org/lc3_learning_the_shell.php">learning the shell</a></li>
+<li><a href="http://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/">HowTo: Add Jobs To cron Under Linux or UNIX?</a></li>
+<li><a href="http://www.linuxquestions.org/questions/linux-general-1/how-to-set-cron-job-to-run-every-5-mins-61667/">how to set cron job to run every 5 mins?</a></li>
+<li><a href="https://help.ubuntu.com/community/CronHowto">CronHowto</a></li>
+<li><a href="http://www.sitepoint.com/unix-server-performance/">Checking UNIX Server Performance</a></li>
+<li><a href="http://stackoverflow.com/questions/82256/how-do-i-use-sudo-to-redirect-output-to-a-location-i-dont-have-permission-to-wr">How do I use sudo to redirect output to a location I don&#39;t have permission to write to?</a></li>
+<li><a href="http://www.cyberciti.biz/faq/unix-disk-usage-command-examples/">UNIX Disk Usage Command Examples</a></li>
+<li><a href="http://blog.sanctum.geek.nz/series/unix-as-ide/">Unix as IDE: Introduction</a></li>
+<li><a href="https://leanpub.com/lets_learn_cli_right_now/read">หัดใช้ Command-line Interface เถอะ</a></li>
+<li><a href="http://macfeteria.com/2015/04/18/pimp-my-command-line/">Pimp my command line</a></li>
+<li><a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLu8EoSxDXHP7tXPJp5ZmUpuT7sFvrswzf">Command Line Power User</a></li>
+<li><a href="http://linux.die.net/abs-guide/x15683.html">Here Strings</a></li>
+<li><a href="https://kb.iu.edu/d/admm">what is the find command, and how do I use it to search</a></li>
+<li><a href="https://www.youtube.com/watch?v=ND-W4e-pqMo">Totally Tooling Mini Tip: Command-line Keyboard Shortcuts</a></li>
+<li><a href="http://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html">10 examples of paste command usage in Linux</a></li>
+<li><a href="https://www.youtube.com/watch?v=R5fca6IUxHA">Bang! Previous Command Hotkeys - Linux CLI BASH ZSH</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/recover-lost-partition/">
         Recover lost partition
       </a>
@@ -922,123 +1213,6 @@ for more information about jekyll on github look at  </p>
 <li><a href="http://vimcasts.org/categories/">Vim Cast</a></li>
 <li><a href="https://github.com/mhinz/vim-galore">vim-galore - Everything you need to know about Vim.</a></li>
 <li><a href="http://vim.wikia.com/wiki/Converting_tabs_to_spaces">Converting tabs to spaces</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/tmux/">
-        Tmux
-      </a>
-    </h1>
-
-    <span class="post-date">
-      09 Jun 2014
-      
-        &middot;
-        <a href="/tmux/#disqus_thread" data-disqus-identifier="/tmux/"></a>
-        
-      
-    </span>
-
-    
-      <h3 id="list-binding-key">list binding key</h3>
-
-<p>PREFIX ? - list keys  </p>
-
-<h3 id="leaving-and-coming-back-again">Leaving and Coming Back Again</h3>
-
-<p>PREFIX d - leave  </p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Come Back</span>
-<span class="gp">$ </span>tmux a
-</code></pre></div>
-<h3 id="windows">windows</h3>
-
-<p>PREFIX c - create window<br>
-PREFIX , - rename window<br>
-PREFIX n - next window<br>
-PREFIX p - previous window<br>
-PREFIX {num} - go to {num} window<br>
-PREFIX &amp; - exit window  </p>
-
-<h3 id="panes">panes</h3>
-
-<p>PREFIX % - split pane in vertically<br>
-PREFIX &quot; - split pane in horizontally<br>
-PREFIX o - switch between panes<br>
-PREFIX {arrow} - move around the panes<br>
-PREFIX q - show pane number and its size<br>
-PREFIX x - kill pane<br>
-PREFIX z - toggle pane to be fullscreen<br>
-PREFIX {, } - swap panes<br>
-PREFIX ! - turn pane to window  </p>
-
-<h3 id="copy-amp-paste-to-system-clipboard">Copy &amp; Paste to System Clipboard</h3>
-
-<p><a href="http://blog.joncairns.com/2013/06/copying-between-tmux-buffers-and-the-system-clipboard/">Copying between tmux buffers and the system clipboard</a><br>
-<a href="http://unix.stackexchange.com/questions/131011/use-system-clipboard-in-vi-copy-mode-in-tmux">Share buffer with system clipboard</a><br>
-<a href="http://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future">tmux Copy &amp; Paste on OS X: A Better Future</a><br>
-<a href="https://www.youtube.com/watch?v=OW-lKJDFOzc">Copy Mode - Linux TMUX Video Tutorial</a></p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># .tmux.conf</span>
-setw -g mode-keys vi
-<span class="nb">bind</span>-key -t vi-copy <span class="s1">'v'</span> begin-selection
-<span class="nb">bind</span>-key -t vi-copy <span class="s1">'y'</span> copy-selection
-<span class="nb">bind</span> -t vi-copy y copy-pipe <span class="s1">'xclip -in -selection clipboard'</span>
-</code></pre></div>
-<ul>
-<li><p>Copy to Buffer</p>
-
-<ol>
-<li>PREFIX [ - scroll buffer use arrow key to move around and enter to quit<br></li>
-<li>v - select word<br></li>
-<li>y - copy (yank) word<br></li>
-</ol></li>
-<li><p>Paste from buffer<br>
-PREFIX ]</p></li>
-</ul>
-
-<h3 id="create-custom-layout"><a href="https://www.youtube.com/watch?v=sxw-n5Du600">Create Custom Layout</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#Window: python dev (Prefix - Meta(Alt) + d)</span>
-<span class="c"># -v = split horizontal</span>
-<span class="nb">bind</span>-key M-d split-window -v -p 30 -t 0 <span class="se">\;</span> <span class="se">\</span>
-         send-keys <span class="s1">'./watchdog_python.py'</span> <span class="s1">'Enter'</span> <span class="se">\;</span> <span class="se">\</span>
-         <span class="k">select</span>-pane -t 0
-</code></pre></div>
-<h3 id="tmuxinator"><a href="https://github.com/tmuxinator/tmuxinator">tmuxinator</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>gem install tmuxinator
-<span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim
-</code></pre></div>
-<h3 id="wemux"><a href="https://github.com/zolrath/wemux">wemux</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># OSX via Homebrew</span>
-<span class="gp">$ </span>brew install wemux
-</code></pre></div>
-<h3 id="unable-to-use-39-open-39-command-in-osx-tmux"><a href="http://www.elmund.io/osx/2015/07/10/open-command-in-osx-tmux/">Unable to use &#39;open&#39; command in OSX tmux</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">brew update
-brew install reattach-to-user-namespace
-<span class="nb">echo</span> <span class="s2">"set -g default-command </span><span class="se">\"</span><span class="s2">reattach-to-user-namespace -l </span><span class="k">${</span><span class="nv">SHELL</span><span class="k">}</span><span class="se">\"</span><span class="s2">"</span> &gt;&gt; ~/.tmux.conf
-</code></pre></div>
-<h3 id="how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux"><a href="http://superuser.com/questions/493048/how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux">How to convert 2 horizontal panes to vertical panes in tmux?</a></h3>
-
-<p>Prefix + <kbd>space<kbd></p>
-
-<h2 id="reference">Reference:</h2>
-
-<ol>
-<li><a href="http://www.danielmiessler.com/study/tmux/">A tmux Tutorial and Primer</a></li>
-<li><a href="http://robots.thoughtbot.com/love-hate-tmux">love hate tmux</a></li>
-<li><a href="https://learn.thoughtbot.com/tmux">Thoughtbot tmux</a></li>
-<li><a href="http://www.dayid.org/os/notes/tm.html">screen and tmux</a></li>
-<li><a href="http://myhumblecorner.wordpress.com/2011/08/30/screen-to-tmux-a-humble-quick-start-guide/">screen to tmux: A Humble Quick-start Guide</a></li>
-<li><a href="http://www.sitepoint.com/tmux-a-simple-start/">Tmux: A Simple Start</a></li>
-<li><a href="http://www.youtube.com/watch?v=CKC8Ph-s2F4">Humans Present: tmux</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLtK75qxsQaMJ_DmXk9yZbCBJuG9HRwlGc">tmux tutorial</a></li>
-<li><a href="https://mutelight.org/practical-tmux">Practical Tmux</a></li>
-<li><a href="https://fabianfranke.de/2013/11/19/use-tmuxinator-to-recreate-tmux-panes-and-windows/">tmuxinator: Save tmux pane and window layouts</a></li>
-<li><a href="https://github.com/jimeh/tmuxifier">Tmuxify your Tmux. Powerful session, window &amp; pane management for Tmux.</a></li>
-<li><a href="https://www.codementor.io/tmux/tutorial/beginners-guide-to-tmux-navigating-and-configuring-your-tmux">Beginner’s Guide to Tmux: Recommended Configuration, Plugins and Navigation Demo</a></li>
-<li><a href="https://github.com/tmux-plugins/tpm">Tmux Plugin Manager</a> - <a href="https://github.com/tmux-plugins">tmux-plugins</a></li>
 </ol>
 
     
