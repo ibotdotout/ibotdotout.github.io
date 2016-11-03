@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-02T19:46:26+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-03T14:11:39+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Git ignore files in sub-directories</title><link href="http://dev.im-bot.com//git-ignore-sub-dir/" rel="alternate" type="text/html" title="Git ignore files in sub-directories" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-ignore-in-sub-dir</id><content type="html" xml:base="http://dev.im-bot.com//git-ignore-sub-dir/">&lt;h2 id=&quot;example-ignore-css-in-only-src&quot;&gt;Example: ignore .css in only /src&lt;/h2&gt;
+
+&lt;p&gt;.gitignore
+&lt;code&gt;
+src/**/*.css
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;remove .css that committed in to repo&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;git rm -r --cached .
+git add .
+git commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/6794737/6144391&quot;&gt;Git-ignore certain files in sub-directories, but not all&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/1139797/6144391&quot;&gt;Ignore files that have already been committed to a Git repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">Example: ignore .css in only /src
+
+.gitignore
+
+src/**/*.css</summary></entry><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/33569970/6144391&quot;&gt;Resolve Git merge conflicts in favor of their changes during a pull&lt;/a&gt;&lt;/p&gt;
@@ -591,29 +614,4 @@ The first question to ask, then, when moving from a relational database to Mongo
 
 What is the access pattern?
 What are you hoping to show to your customers/users?
-How are you going to write this data?</summary></entry><entry><title type="html">Dotfile</title><link href="http://dev.im-bot.com//dotfile/" rel="alternate" type="text/html" title="Dotfile" /><published>2016-03-27T00:00:00+00:00</published><updated>2016-03-27T00:00:00+00:00</updated><id>http://dev.im-bot.com//dotfile</id><content type="html" xml:base="http://dev.im-bot.com//dotfile/">&lt;blockquote&gt;
-&lt;p&gt;A file begins with . that is hidden file on unix based. Mostly use as configuration file ex. &lt;code&gt;.gitconfig&lt;/code&gt;, &lt;code&gt;.vimrc&lt;/code&gt;, &lt;code&gt;.bashrc&lt;/code&gt;  - &lt;a href=&quot;https://www.quora.com/What-are-dotfiles&quot;&gt;What are dotfiles?&lt;/a&gt; &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Keep dotfiles with github like backup yours machine&amp;#39;s setting. Your can move to new machine with same feeling from old one by restore dotfiles backup.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;For &lt;a href=&quot;https://github.com/ibotdotout/dotfiles&quot;&gt;My OSX Dev Developement&lt;/a&gt;, I use&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;OSX - &lt;a href=&quot;https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew&quot;&gt;Brewfile&lt;/a&gt; and &lt;a href=&quot;https://github.com/Homebrew/homebrew-bundle&quot;&gt;Brew Bundle&lt;/a&gt; to backup and restore homebrew dependentcies.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/anishathalye/dotbot/&quot;&gt;dotbot&lt;/a&gt; to link dotfiles.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/junegunn/vim-plug&quot;&gt;vim-plug&lt;/a&gt; - install vim plugins via    &lt;code&gt;.vimrc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/tmux-plugins/tpm&quot;&gt;tpm&lt;/a&gt; - install tmux plugins via &lt;code&gt;.tmux.conf&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.quora.com/What-are-dotfiles&quot;&gt;What are dotfiles?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://dotfiles.github.io&quot;&gt;Dotfile Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/webpro/awesome-dotfiles&quot;&gt;Awesome Dotfile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/&quot;&gt;USING GIT AND GITHUB TO MANAGE YOUR DOTFILES&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/mildronize/dotfiles&quot;&gt;mildronize/dotfiles&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>botbotbot</name></author><category term="unix" /><summary type="html">learn about dotfile.</summary></entry></feed>
+How are you going to write this data?</summary></entry></feed>
