@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="MongoUnderstand DocumentsThinking in Documents: Part 1Thinking in Documents: Part 2MigrationConsiderations before moving from RDBMS to MongoDBSQL to MongoDB ..." />
+<meta property="og:description" content="MongoUnderstand Documents  Thinking in Documents: Part 1  Thinking in Documents: Part 2Migration  Considerations before moving from RDBMS to MongoDB      SQL..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -217,227 +217,308 @@
   <h1 id="mongo">Mongo</h1>
 
 <h3 id="understand-documents">Understand Documents</h3>
-
 <ul>
-<li><a href="https://www.mongodb.com/blog/post/thinking-documents-part-1">Thinking in Documents: Part 1</a></li>
-<li><a href="https://www.mongodb.com/blog/post/thinking-documents-part-2">Thinking in Documents: Part 2</a></li>
+  <li><a href="https://www.mongodb.com/blog/post/thinking-documents-part-1">Thinking in Documents: Part 1</a></li>
+  <li><a href="https://www.mongodb.com/blog/post/thinking-documents-part-2">Thinking in Documents: Part 2</a></li>
 </ul>
 
 <h3 id="migration">Migration</h3>
 
 <ul>
-<li><a href="https://www.mongodb.com/post/40602082071/considerations-before-moving-from-rdbms-to-mongodb">Considerations before moving from RDBMS to MongoDB</a></li>
-<li><a href="https://docs.mongodb.org/manual/reference/sql-comparison/">SQL to MongoDB Mapping Chart</a></li>
-</ul>
+  <li><a href="https://www.mongodb.com/post/40602082071/considerations-before-moving-from-rdbms-to-mongodb">Considerations before moving from RDBMS to MongoDB</a></li>
+  <li>
+    <p><a href="https://docs.mongodb.org/manual/reference/sql-comparison/">SQL to MongoDB Mapping Chart</a></p>
 
-<blockquote>
-<p>The first question to ask, then, when moving from a relational database to MongoDB is, ‘How will this data be accessed?’ Other important questions include:</p>
+    <blockquote>
+      <p>The first question to ask, then, when moving from a relational database to MongoDB is, ‘How will this data be accessed?’ Other important questions include:</p>
+    </blockquote>
 
-<p>What is the access pattern?
+    <blockquote>
+      <p>What is the access pattern?
 What are you hoping to show to your customers/users?
 How are you going to write this data?</p>
-</blockquote>
+    </blockquote>
+  </li>
+</ul>
 
 <!-- more -->
 
 <ul>
-<li><a href="https://docs.mongodb.org/manual/reference/sql-aggregation-comparison/">SQL to Aggregation Mapping Chart</a></li>
-<li><a href="https://s3.amazonaws.com/info-mongodb-com/RDBMStoMongoDBMigration.pdf">RDBMS to MongoDB Migration Guide Considerations and Best Practices</a></li>
+  <li><a href="https://docs.mongodb.org/manual/reference/sql-aggregation-comparison/">SQL to Aggregation Mapping Chart</a></li>
+  <li><a href="https://s3.amazonaws.com/info-mongodb-com/RDBMStoMongoDBMigration.pdf">RDBMS to MongoDB Migration Guide Considerations and Best Practices</a></li>
 </ul>
 
 <h3 id="data-model">Data Model</h3>
-
 <ul>
-<li><a href="https://docs.mongodb.org/manual/data-modeling/#data-models">Data Models</a></li>
-<li><a href="https://docs.mongodb.org/v3.0/tutorial/model-embedded-one-to-one-relationships-between-documents/">Model One-to-One Relationships with Embedded Documents</a></li>
-<li><a href="https://docs.mongodb.org/v3.0/tutorial/model-embedded-one-to-many-relationships-between-documents/">Model One-to-Many Relationships with Embedded Documents</a></li>
-<li><a href="https://docs.mongodb.org/v3.0/tutorial/model-referenced-one-to-many-relationships-between-documents/#model-one-to-many-relationships-with-document-references">Model One-to-Many Relationships with Document References</a></li>
-<li><a href="http://www.tutorialspoint.com/mongodb/mongodb_relationships.htm">MongoDB - Relationships</a></li>
-</ul>
+  <li><a href="https://docs.mongodb.org/manual/data-modeling/#data-models">Data Models</a></li>
+  <li><a href="https://docs.mongodb.org/v3.0/tutorial/model-embedded-one-to-one-relationships-between-documents/">Model One-to-One Relationships with Embedded Documents</a></li>
+  <li><a href="https://docs.mongodb.org/v3.0/tutorial/model-embedded-one-to-many-relationships-between-documents/">Model One-to-Many Relationships with Embedded Documents</a></li>
+  <li><a href="https://docs.mongodb.org/v3.0/tutorial/model-referenced-one-to-many-relationships-between-documents/#model-one-to-many-relationships-with-document-references">Model One-to-Many Relationships with Document References</a></li>
+  <li>
+    <p><a href="http://www.tutorialspoint.com/mongodb/mongodb_relationships.htm">MongoDB - Relationships</a></p>
 
-<blockquote>
-<p>There is no such straightforward mapping in MongoDB but the relationships here are designed using embedded and linking documents.</p>
-</blockquote>
+    <blockquote>
+      <p>There is no such straightforward mapping in MongoDB but the relationships here are designed using embedded and linking documents.</p>
+    </blockquote>
+  </li>
+</ul>
 
 <h3 id="mongo-shard-key">Mongo Shard Key</h3>
-
 <ul>
-<li><a href="http://highscalability.com/blog/2014/3/5/10-things-you-should-know-about-running-mongodb-at-scale.html">10 Things You Should Know About Running MongoDB At Scale</a></li>
+  <li><a href="http://highscalability.com/blog/2014/3/5/10-things-you-should-know-about-running-mongodb-at-scale.html">10 Things You Should Know About Running MongoDB At Scale</a></li>
 </ul>
 
 <blockquote>
-<p>in real-life large deployments the biggest impact to performance is how well the schema design fits with the application needs. 
+  <p>in real-life large deployments the biggest impact to performance is how well the schema design fits with the application needs. 
 Second biggest impact is from lack of indexes or wrong indexes or way too many indexes</p>
+</blockquote>
 
-<p>Sharding too early may be a premature optimization. Not every MongoDB deployment requires sharding. </p>
+<blockquote>
+  <p>Sharding too early may be a premature optimization. Not every MongoDB deployment requires sharding.</p>
+</blockquote>
 
-<p>When you have very poorly tuned schema, or incorrect indexes, sharding won&#39;t solve your problem
+<blockquote>
+  <p>When you have very poorly tuned schema, or incorrect indexes, sharding won’t solve your problem
 Sharding is appropriate when a specific resource becomes a bottleneck on a single machine or replica set</p>
+</blockquote>
 
-<p>MongoDB&#39;s big selling points are speed and simplicity</p>
+<blockquote>
+  <p>MongoDB’s big selling points are speed and simplicity</p>
 </blockquote>
 
 <ul>
-<li><a href="http://www.slideshare.net/mongodb/everything-you-need-to-know-about-sharding?ref=https://www.mongodb.com/presentations/webinar-everything-you-need-know-about-sharding?jmp=docs">Everything You Need to Know About Sharding</a></li>
+  <li><a href="http://www.slideshare.net/mongodb/everything-you-need-to-know-about-sharding?ref=https://www.mongodb.com/presentations/webinar-everything-you-need-know-about-sharding?jmp=docs">Everything You Need to Know About Sharding</a></li>
 </ul>
 
 <blockquote>
-<p>Good Shard Key<br>
-- Cardinality<br>
-- Write Distribution<br>
-- Query Isolation<br>
-- Reliability<br>
+  <p>Good Shard Key<br />
+- Cardinality<br />
+- Write Distribution<br />
+- Query Isolation<br />
+- Reliability<br />
 - Index Locality</p>
 </blockquote>
 
 <ul>
-<li><a href="https://goranzugic.wordpress.com/2014/05/29/selecting-a-mongodb-shard-key/">Selecting a MongoDB Shard Key</a></li>
+  <li><a href="https://goranzugic.wordpress.com/2014/05/29/selecting-a-mongodb-shard-key/">Selecting a MongoDB Shard Key</a></li>
 </ul>
 
 <blockquote>
-<p>You should carefully amalyze all options before selecting the shard key since it can significantly affect your system performance and it cannot be changed after data is inserted in MongoDB. </p>
+  <p>You should carefully amalyze all options before selecting the shard key since it can significantly affect your system performance and it cannot be changed after data is inserted in MongoDB.</p>
+</blockquote>
 
-<p>Usually you will not shard all collections but only collections that need data to be distributed over shards to improve read and/or write performance. All un-sharded collections will be held in only one shard that is called primary shard</p>
+<blockquote>
+  <p>Usually you will not shard all collections but only collections that need data to be distributed over shards to improve read and/or write performance. All un-sharded collections will be held in only one shard that is called primary shard</p>
+</blockquote>
 
-<p>MongoDB supports three types of sharding:
+<blockquote>
+  <p>MongoDB supports three types of sharding:
 - Range-based sharding
 - Hash-based sharding
 - Tag-aware sharding</p>
+</blockquote>
 
-<p>In general, range-based sharding provides better support for range queries that need query isolation while the hash-based sharding supports write operations more efficiently.</p>
+<blockquote>
+  <p>In general, range-based sharding provides better support for range queries that need query isolation while the hash-based sharding supports write operations more efficiently.</p>
+</blockquote>
 
-<p>In order to properly select a shard key for your MongoDB sharded cluster, it is important to understand how your application reads and writes data. Actually the main question is</p>
+<blockquote>
+  <p>In order to properly select a shard key for your MongoDB sharded cluster, it is important to understand how your application reads and writes data. Actually the main question is</p>
+</blockquote>
 
-<p>What is more critical, query isolation, or write scaling, or both?</p>
+<blockquote>
+  <p>What is more critical, query isolation, or write scaling, or both?</p>
+</blockquote>
 
-<p>In order to select an optimal shard key for query isolation you must take into consideration the following:
+<blockquote>
+  <p>In order to select an optimal shard key for query isolation you must take into consideration the following:
  - Analyze what query operations are most performance dependent;
  - Determine which fields are used the most in these operations and include them in the shard key;
  - Make sure that the selected shard key enable even (balanced) distribution of data across shards;
  - A high cardinality field is preferable. Low cardinality fields tend to group documents on a small number of shards what would require frequent rebalancing of the chunks.</p>
-
-<p>The most common techniques people use to distribute data are:</p>
-
-<p>Ascending key distribution – The shard key field is usually of Date, Timestamp or Objectld type. This pattern is not definitely good for the write scaling.</p>
-
-<p>Random distribution – This pattern is achieved by fields that do not have an identifiable pattern in the dataset.  This is a preferable pattern for write scaling since it enables balanced distribution of write operations and data across the shards. However this pattern does not work well for the query  isolation if the critical queries must retrieve large amount of “close” data based on range criteria  in which case the query will be spread across the most of the shards in the cluster.</p>
-
-<p>Compound Shard Key – Combine more than one field into a shard key in order to come up with optimal shard key  values for high cardinality and balanced distribution of data for an efficient  write scaling and query isolation.</p>
-
-<p>high  Query isolation / Write scaling - high  A shard key enabling mid-high randomness and relatively even distribution of data.  A compound shard keys are usually good candidates.</p>
 </blockquote>
 
-<h3 id="on-selecting-a-shard-key-for-mongodb"><a href="https://www.mongodb.com/blog/post/on-selecting-a-shard-key-for-mongodb">On Selecting a Shard Key for MongoDB</a></h3>
+<blockquote>
+  <p>The most common techniques people use to distribute data are:</p>
+</blockquote>
 
 <blockquote>
-<p>Shard Key Considerations
+  <p>Ascending key distribution – The shard key field is usually of Date, Timestamp or Objectld type. This pattern is not definitely good for the write scaling.</p>
+</blockquote>
+
+<blockquote>
+  <p>Random distribution – This pattern is achieved by fields that do not have an identifiable pattern in the dataset.  This is a preferable pattern for write scaling since it enables balanced distribution of write operations and data across the shards. However this pattern does not work well for the query  isolation if the critical queries must retrieve large amount of “close” data based on range criteria  in which case the query will be spread across the most of the shards in the cluster.</p>
+</blockquote>
+
+<blockquote>
+  <p>Compound Shard Key – Combine more than one field into a shard key in order to come up with optimal shard key  values for high cardinality and balanced distribution of data for an efficient  write scaling and query isolation.</p>
+</blockquote>
+
+<blockquote>
+  <p>high  Query isolation / Write scaling - high  A shard key enabling mid-high randomness and relatively even distribution of data.  A compound shard keys are usually good candidates.</p>
+</blockquote>
+
+<h3 id="on-selecting-a-shard-key-for-mongodbhttpswwwmongodbcomblogposton-selecting-a-shard-key-for-mongodb"><a href="https://www.mongodb.com/blog/post/on-selecting-a-shard-key-for-mongodb">On Selecting a Shard Key for MongoDB</a></h3>
+
+<blockquote>
+  <p>Shard Key Considerations
 With that said, there are five criteria for a good shard key. They are:
 - Cardinality
 - Write Distribution
 - Read Distribution
 - Read Targeting
 - Read Locality</p>
-
-<p>There are two design patterns that I think work well for shard key selection. The first is using a hashed shard key, based on a field that is usually present in most queries.  The other useful design pattern is a compound shard key, composed of of a low-cardinality (&quot;chunky&quot;) first part, and a high-cardinality second part, often a monotonically increasing one.</p>
-
-<p>Hashed shard keys can often be a good option: out of the 5 criteria, the only one they don&#39;t provide is Read Locality. If your application doesn&#39;t use range queries, they may be ideal.</p>
-
-<p>Two important things to note about hashed shard keys: the underlying field that they&#39;re based on must provide enough cardinality, and the underlying field must be present in most queries in order to allow for Read Targeting.</p>
-
-<p>Compound shard key, composed of of a low-cardinality (&quot;chunky&quot;) first part, and a high-cardinality second part, often a monotonically increasing one.  If there are enough distinct values in the first part (at least twice the number of shards) you&#39;ll get good write and read distribution; the high-cardinality second part gets you good cardinality and read locality.</p>
-
-<p>For one thing, these five criteria I listed are typically mutually incompatible: it&#39;s very rare to be able to get good write distribution, read distribution, and read locality all with a single shard key.</p>
-
-<p>the only reasonable way to approach MongoDB shard key selection is the way that you approach any other part of MongoDB schema design: you have to carefully consider the requirements arising from all of the different operations your application will perform</p>
 </blockquote>
 
-<h3 id="how-to-choose-a-shard-key-for-mongodb"><a href="http://blog.bugsnag.com/mongo-shard-key">How to choose a shard key for MongoDB</a></h3>
+<blockquote>
+  <p>There are two design patterns that I think work well for shard key selection. The first is using a hashed shard key, based on a field that is usually present in most queries.  The other useful design pattern is a compound shard key, composed of of a low-cardinality (“chunky”) first part, and a high-cardinality second part, often a monotonically increasing one.</p>
+</blockquote>
 
 <blockquote>
-<p>Hashed id :
+  <p>Hashed shard keys can often be a good option: out of the 5 criteria, the only one they don’t provide is Read Locality. If your application doesn’t use range queries, they may be ideal.</p>
+</blockquote>
+
+<blockquote>
+  <p>Two important things to note about hashed shard keys: the underlying field that they’re based on must provide enough cardinality, and the underlying field must be present in most queries in order to allow for Read Targeting.</p>
+</blockquote>
+
+<blockquote>
+  <p>Compound shard key, composed of of a low-cardinality (“chunky”) first part, and a high-cardinality second part, often a monotonically increasing one.  If there are enough distinct values in the first part (at least twice the number of shards) you’ll get good write and read distribution; the high-cardinality second part gets you good cardinality and read locality.</p>
+</blockquote>
+
+<blockquote>
+  <p>For one thing, these five criteria I listed are typically mutually incompatible: it’s very rare to be able to get good write distribution, read distribution, and read locality all with a single shard key.</p>
+</blockquote>
+
+<blockquote>
+  <p>the only reasonable way to approach MongoDB shard key selection is the way that you approach any other part of MongoDB schema design: you have to carefully consider the requirements arising from all of the different operations your application will perform</p>
+</blockquote>
+
+<h3 id="how-to-choose-a-shard-key-for-mongodbhttpblogbugsnagcommongo-shard-key"><a href="http://blog.bugsnag.com/mongo-shard-key">How to choose a shard key for MongoDB</a></h3>
+<blockquote>
+  <p>Hashed id :
 This will distribute reads and writes evenly, and it will ensure that each document has a different shard key so chunks can be fine-grained and small.</p>
+</blockquote>
 
-<p>It’s not perfect, because queries for multiple documents will have to hit all shards, but it might be good enough.</p>
+<blockquote>
+  <p>It’s not perfect, because queries for multiple documents will have to hit all shards, but it might be good enough.</p>
+</blockquote>
 
-<p>Multi-tenant compound index
-If you want to beat the hashed _id scheme, you need to come up with way of grouping related documents close together in the index. At Bugsnag we group the documents by project, because of the way our app works most queries are run in the scope of a project. We can’t just use projectId as a shard key because that leads to jumbo chunks, so we also include the _id to break large projects into multiple chunks.  To avoid this problem in the future, we will likely migrate to an index on {projectId: &#39;hashed&#39;, _id: 1}</p>
+<blockquote>
+  <p>Multi-tenant compound index
+If you want to beat the hashed _id scheme, you need to come up with way of grouping related documents close together in the index. At Bugsnag we group the documents by project, because of the way our app works most queries are run in the scope of a project. We can’t just use projectId as a shard key because that leads to jumbo chunks, so we also include the _id to break large projects into multiple chunks.  To avoid this problem in the future, we will likely migrate to an index on {projectId: ‘hashed’, _id: 1}</p>
+</blockquote>
 
-<p>In summary
+<blockquote>
+  <p>In summary
 Choosing a shard key is hard, but there are really only two options. If you can’t find a good grouping key for your application, hash the _id. If you can, then go with that grouping key and add the _id to avoid jumbo chunks. Remember that whichever grouping key you use, it needs to also distribute reads and writes evenly to get the most out of each node in your cluster.</p>
 </blockquote>
 
-<h3 id="how-to-choose-a-shard-key-the-card-game-demo"><a href="http://www.kchodorow.com/blog/2011/01/04/how-to-choose-a-shard-key-the-card-game/">How to Choose a Shard Key: The Card Game</a> - <a href="http://www.kchodorow.com/shardcarks/strategy.php">Demo</a></h3>
+<h3 id="how-to-choose-a-shard-key-the-card-gamehttpwwwkchodorowcomblog20110104how-to-choose-a-shard-key-the-card-game---demohttpwwwkchodorowcomshardcarksstrategyphp"><a href="http://www.kchodorow.com/blog/2011/01/04/how-to-choose-a-shard-key-the-card-game/">How to Choose a Shard Key: The Card Game</a> - <a href="http://www.kchodorow.com/shardcarks/strategy.php">Demo</a></h3>
 
 <blockquote>
-<p>Ascending shard keys are equivalent to this strategy: ObjectIds, dates, timestamps, auto-incrementing primary keys.</p>
-
-<p>Random Sharding keys : MD5 hashes, UUIDs. If you shard on a random key, you lose data locality benefits.</p>
+  <p>Ascending shard keys are equivalent to this strategy: ObjectIds, dates, timestamps, auto-incrementing primary keys.</p>
 </blockquote>
 
-<h3 id="the-three-most-important-considerations-in-selecting-a-mongodb-shard-key"><a href="https://www.morpheusdata.com/blog/2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key">The Three Most Important Considerations in Selecting a MongoDB Shard Key</a></h3>
-
 <blockquote>
-<p>The efficient operation of your MongoDB database depends on which field in the documents you designate as the shard key. Since you have to select the shard key up front and can&#39;t change it later, you need to give the choice due consideration. </p>
-
-<p>The MongoDB Manual recommends that your shard keys have a high degree of randomness to ensure the cluster&#39;s write operations are distributed evenly, which is referred to as write scaling.</p>
-
-<p>Conversely, when a field has a high degree of randomness, it becomes a challenge to target specific shards. By using a shard key that is tied to a single shard, queries run much more efficiently; this is called query isolation.</p>
-
-<p>When a collection doesn&#39;t have a field suitable to use as a shard key, a compound shard key can be used, or a field can be added to serve as the key.</p>
-
-<p>Choice of shard key depends on the nature of the collection</p>
+  <p>Random Sharding keys : MD5 hashes, UUIDs. If you shard on a random key, you lose data locality benefits.</p>
 </blockquote>
 
-<h3 id="sharding-and-mongodb-release-3-2-1"><a href="https://docs.mongodb.org/master/MongoDB-sharding-guide-master.pdf">Sharding and MongoDB Release 3.2.1</a></h3>
+<h3 id="the-three-most-important-considerations-in-selecting-a-mongodb-shard-keyhttpswwwmorpheusdatacomblog2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key"><a href="https://www.morpheusdata.com/blog/2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key">The Three Most Important Considerations in Selecting a MongoDB Shard Key</a></h3>
 
 <blockquote>
-<p>The field you choose as your hashed shard key should have a good cardinality, or large number of different values. Hashed keys work well with fields that increase monotonically like ObjectId values or timestamps.</p>
+  <p>The efficient operation of your MongoDB database depends on which field in the documents you designate as the shard key. Since you have to select the shard key up front and can’t change it later, you need to give the choice due consideration.</p>
+</blockquote>
 
-<p>Shard Keys and Cluster Availability
+<blockquote>
+  <p>The MongoDB Manual recommends that your shard keys have a high degree of randomness to ensure the cluster’s write operations are distributed evenly, which is referred to as write scaling.</p>
+</blockquote>
+
+<blockquote>
+  <p>Conversely, when a field has a high degree of randomness, it becomes a challenge to target specific shards. By using a shard key that is tied to a single shard, queries run much more efficiently; this is called query isolation.</p>
+</blockquote>
+
+<blockquote>
+  <p>When a collection doesn’t have a field suitable to use as a shard key, a compound shard key can be used, or a field can be added to serve as the key.</p>
+</blockquote>
+
+<blockquote>
+  <p>Choice of shard key depends on the nature of the collection</p>
+</blockquote>
+
+<h3 id="sharding-and-mongodb-release-321httpsdocsmongodborgmastermongodb-sharding-guide-masterpdf"><a href="https://docs.mongodb.org/master/MongoDB-sharding-guide-master.pdf">Sharding and MongoDB Release 3.2.1</a></h3>
+<blockquote>
+  <p>The field you choose as your hashed shard key should have a good cardinality, or large number of different values. Hashed keys work well with fields that increase monotonically like ObjectId values or timestamps.</p>
+</blockquote>
+
+<blockquote>
+  <p>Shard Keys and Cluster Availability
 The most important consideration when choosing a shard key are:
 • to ensure that MongoDB will be able to distribute data evenly among shards, and • to scale writes across the cluster, and
 • to ensure that mongos can isolate most queries to a specific mongod.</p>
-
-<p>Theindexontheshardkeycannotbeamultikeyindex.</p>
-
-<p>3.1.2 Considerations for Selecting Shard Keys</p>
-
-<p>Choosing the correct shard key can have a great impact on the performance, capability, and functioning of your database and cluster. Appropriate shard key choice depends on the schema of your data and the way that your appli- cations query and write data</p>
-
-<p>A shard key with high degree of randomness prevents any single shard from becoming a bottleneck and will distribute write operations among the cluster.</p>
-
-<p>The challenge when selecting a shard key is that there is not always an obvious choice. Often, an existing field in your collection may not be the optimal key. In those situations, computing a special purpose shard key into an additional field or using a compound shard key may help produce one that is more ideal.</p>
-
-<p>Cardinality in the context of MongoDB, refers to the ability of the system to partition data into chunks</p>
-
-<p>While “high cardinality,” is necessary for ensuring an even distribution of data, having a high cardinality does not
-guarantee sufficient query isolation  or appropriate write scaling .</p>
-
-<p>Shard Key Selection Strategy</p>
 </blockquote>
 
-<h3 id="mongoose-mongo-orm-for-nodejs">Mongoose - Mongo ORM for NodeJs</h3>
+<blockquote>
+  <p>Theindexontheshardkeycannotbeamultikeyindex.</p>
+</blockquote>
 
+<blockquote>
+  <p>3.1.2 Considerations for Selecting Shard Keys</p>
+</blockquote>
+
+<blockquote>
+  <p>Choosing the correct shard key can have a great impact on the performance, capability, and functioning of your database and cluster. Appropriate shard key choice depends on the schema of your data and the way that your appli- cations query and write data</p>
+</blockquote>
+
+<blockquote>
+  <p>A shard key with high degree of randomness prevents any single shard from becoming a bottleneck and will distribute write operations among the cluster.</p>
+</blockquote>
+
+<blockquote>
+  <p>The challenge when selecting a shard key is that there is not always an obvious choice. Often, an existing field in your collection may not be the optimal key. In those situations, computing a special purpose shard key into an additional field or using a compound shard key may help produce one that is more ideal.</p>
+</blockquote>
+
+<blockquote>
+  <p>Cardinality in the context of MongoDB, refers to the ability of the system to partition data into chunks</p>
+</blockquote>
+
+<blockquote>
+  <p>While “high cardinality,” is necessary for ensuring an even distribution of data, having a high cardinality does not
+guarantee sufficient query isolation  or appropriate write scaling .</p>
+</blockquote>
+
+<blockquote>
+  <p>Shard Key Selection Strategy</p>
+</blockquote>
+
+<h3 id="mongoose---mongo-orm-for-nodejs">Mongoose - Mongo ORM for NodeJs</h3>
 <ul>
-<li><a href="http://mongoosejs.com/index.html">mongoose - elegant mongodb object modeling for node.js</a></li>
-<li><a href="http://mongoosejs.com/docs/index.html">mongoose - Getting Started</a></li>
-<li><a href="http://mongoosejs.com/docs/promises.html">mongoose - Promises</a></li>
+  <li><a href="http://mongoosejs.com/index.html">mongoose - elegant mongodb object modeling for node.js</a></li>
+  <li><a href="http://mongoosejs.com/docs/index.html">mongoose - Getting Started</a></li>
+  <li><a href="http://mongoosejs.com/docs/promises.html">mongoose - Promises</a></li>
 </ul>
 
 <h3 id="enable-mongo-cmd-in-replicate">Enable Mongo Cmd in Replicate</h3>
-<div class="highlight"><pre><code class="language-" data-lang=""># mongo shell
+
+<div class="highlighter-rouge"><pre class="highlight"><code># mongo shell
 $ rs.slaveOk()
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="index">Index</h3>
 
 <ul>
-<li><a href="http://www.slideshare.net/mongodb/indexing-with-mongodb">Indexing with MongoDB</a></li>
+  <li><a href="http://www.slideshare.net/mongodb/indexing-with-mongodb">Indexing with MongoDB</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-" data-lang=""># mongo
+
+<div class="highlighter-rouge"><pre class="highlight"><code># mongo
 $ db.user.ensureIndex( { _id : "hashed" } )
 $ sh.shardCollection("facebook.user", { "_id": "hashed" } )
 $ db.user.getShardDistribution()
-</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">### Set Sharding chunk size
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>### Set Sharding chunk size
 use config
 db.settings.save( { _id:"chunksize", value: 8 } )
 
@@ -460,13 +541,15 @@ db.user.dropIndexes()
 
 db.user.ensureIndex( { slug : 1 }, { unique: true, backgroud: true })
 db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
-</code></pre></div>
-<h3 id="query-performance">Query Performance</h3>
+</code></pre>
+</div>
 
+<h3 id="query-performance">Query Performance</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=vftxTniVYrU">MongoDB Tutorial: Speeding Up Queries with Simple and Compound Indexes</a></li>
-<li><a href="https://docs.mongodb.com/manual/tutorial/analyze-query-plan/">Analyze Query Performance</a></li>
+  <li><a href="https://www.youtube.com/watch?v=vftxTniVYrU">MongoDB Tutorial: Speeding Up Queries with Simple and Compound Indexes</a></li>
+  <li><a href="https://docs.mongodb.com/manual/tutorial/analyze-query-plan/">Analyze Query Performance</a></li>
 </ul>
+
 
   
     Tags:
@@ -488,6 +571,15 @@ db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -500,15 +592,6 @@ db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

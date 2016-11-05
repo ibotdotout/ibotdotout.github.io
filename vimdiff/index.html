@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="You need to convent result of unix diff to ed style to use in vimdiff.Example::a.txtaaaabbbbcccceeeeeeeeeeeeb.txtaabbbbbbddddccccdiff a.txt b.txtdiff --git a..." />
+<meta property="og:description" content="###You need to convent result of unix diff to ed style to use in vimdiff.###Example::a.txtaaaabbbbcccceeeeeeeeeeeeb.txtaabbbbbbddddccccdiff a.txt b.txtdiff -..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -211,26 +211,33 @@
       
   </span>
 
-  <h3 id="you-need-to-convent-result-of-unix-diff-to-ed-style-to-use-in-vimdiff">You need to convent result of unix diff to ed style to use in vimdiff.</h3>
+  <p>###You need to convent result of unix diff to ed style to use in vimdiff.</p>
 
-<h3 id="example">Example::</h3>
+<p>###Example::</p>
 
 <p>a.txt</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">aaaa
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aaaa
 bbbb
 cccc
 eeee
 eeee
 eeee
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>b.txt</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">aabb
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aabb
 bbbb
 dddd
 cccc
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>diff a.txt b.txt</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">diff --git a/aaa b/bbb
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>diff --git a/aaa b/bbb
 index fc3703c..11629db 100644
 --- a/aaa
 +++ b/bbb
@@ -243,9 +250,12 @@ index fc3703c..11629db 100644
 -eeee
 -eeee
 -eeee
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>ed style of result diff a.txt b.txt</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">1c1
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>1c1
 &lt; aaaa
 ---
 <span class="gp">&gt; </span>aabb
@@ -255,13 +265,15 @@ index fc3703c..11629db 100644
 &lt; eeee
 &lt; eeee
 &lt; eeee
-</code></pre></div>
-<h1 id="code">Code</h1>
+</code></pre>
+</div>
 
-<p>My line by line diff just only change no add or delete, result in ed style to use in vim diff.  </p>
+<p>#Code<br />
+My line by line diff just only change no add or delete, result in ed style to use in vim diff.</p>
 
 <p>my_diff.py</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
 
 
 <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">):</span>
@@ -314,19 +326,24 @@ index fc3703c..11629db 100644
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">sys</span>
     <span class="n">diff</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="set-vimdiff-to-use-result-of-my-diff-code">Set vimdiff to use result of my diff code</h3>
 
 <p>.vimrc</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
 <span class="k">function </span>MyDiff<span class="o">()</span>
     silent execute <span class="s2">"!python &lt;your_paht&gt;/my_diff.py "</span> . v:fname_in . <span class="s2">" "</span> . v:fname_new . <span class="s2">" &gt; "</span> . v:fname_out
 endfunction
-</code></pre></div>
-<p>Ref:<br>
-1. <a href="http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html">use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram</a><br>
-2. <a href="https://github.com/neovim/neovim/issues/1466">Use patience diff algorithm for vimdiff #1466</a><br>
-3. <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options">Vim documentation: diff</a><br>
+</code></pre>
+</div>
+
+<p>Ref:<br />
+1. <a href="http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html">use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram</a><br />
+2. <a href="https://github.com/neovim/neovim/issues/1466">Use patience diff algorithm for vimdiff #1466</a><br />
+3. <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options">Vim documentation: diff</a><br />
 4. <a href="http://blog.sanctum.geek.nz/actually-using-ed/">Actually using ed</a>
 5. <a href="http://blog.sanctum.geek.nz/using-more-of-ex/">Using more of ex</a></p>
 
@@ -346,6 +363,15 @@ endfunction
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -358,15 +384,6 @@ endfunction
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

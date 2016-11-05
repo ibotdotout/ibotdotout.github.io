@@ -204,6 +204,121 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/git/">
+        Git
+      </a>
+    </h1>
+
+    <span class="post-date">
+      29 Jul 2014
+      
+        &middot;
+        <a href="/git/#disqus_thread" data-disqus-identifier="/git/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="git-rebase">Git Rebase</h2>
+
+<p>Michael Crichton said, “Great books aren’t written– they’re rewritten.”</p>
+
+<h2 id="fatal-crlf-would-be-replaced-by-lf-in-">fatal: CRLF would be replaced by LF in …</h2>
+
+<p>Because there is differenced end of line in dos and unix.</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># open file that error in vim</span>
+:set noendofline binary
+:wq
+</code></pre>
+</div>
+
+<h2 id="global-ignore">Global Ignore</h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># set where is global gitignore file</span>
+<span class="gp">$ </span>git config --global core.excludesfile ~/.gitignore_global
+<span class="c"># write some ignore file in global gitignore</span>
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"tags"</span> &gt;&gt; ~/.gitignore_global
+</code></pre>
+</div>
+
+<h2 id="git-stash">Git stash</h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>git stash
+git stash pop
+git revert
+</code></pre>
+</div>
+
+<h2 id="git-alis">Git Alis</h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>git config --global alias.tree <span class="s2">"log --graph --decorate --oneline --abbrev-commit"</span>
+git config --global alias.hist <span class="s2">"log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"</span>
+</code></pre>
+</div>
+
+<h2 id="git-tagginhttpgit-scmcombookenv2git-basics-tagging"><a href="http://git-scm.com/book/en/v2/Git-Basics-Tagging">Git Taggin</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git tag -a &lt;tag name&gt; &lt;commit id&gt; -m “desc<span class="s2">"
+</span><span class="nv">$ </span><span class="s2">git push origin —tags
+</span><span class="nv">$ </span><span class="s2">git pull --tags
+</span></code></pre>
+</div>
+
+<h2 id="keep-file-in-a-git-repo-but-dont-track-changeshttpstackoverflowcomquestions9794931keep-file-in-a-git-repo-but-dont-track-changes"><a href="http://stackoverflow.com/questions/9794931/keep-file-in-a-git-repo-but-dont-track-changes">Keep file in a Git repo, but don’t track changes</a></h2>
+
+<p>Should keep database.php.example and config.php.example in the repo.
+Then add config.php and database.php to the .gitignore file.</p>
+
+<h2 id="remove-sensitive-files-and-their-commits-from-git-historyhttpstackoverflowcomquestions872565remove-sensitive-files-and-their-commits-from-git-history---github-answered-exactly-that-question-as-an-faqhttpshelpgithubcomarticlesremove-sensitive-data"><a href="http://stackoverflow.com/questions/872565/remove-sensitive-files-and-their-commits-from-git-history">Remove sensitive files and their commits from Git history</a> - <a href="https://help.github.com/articles/remove-sensitive-data">GitHub answered exactly that question as an FAQ</a></h2>
+
+<h2 id="pick-out-individual-commitshttpgitreadycomintermediate20090304pick-out-individual-commitshtml"><a href="http://gitready.com/intermediate/2009/03/04/pick-out-individual-commits.html">pick out individual commits</a></h2>
+
+<h2 id="cleaning-up-untracked-fileshttpgitreadycombeginner20090116cleaning-up-untracked-fileshtml"><a href="http://gitready.com/beginner/2009/01/16/cleaning-up-untracked-files.html">cleaning up untracked files</a></h2>
+
+<h2 id="httpgitreadycomadvanced20090210squashing-commits-with-rebasehtmlhttpgitreadycomadvanced20090210squashing-commits-with-rebasehtml"><a href="http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html">http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html</a></h2>
+
+<h2 id="reference">Reference</h2>
+<ol>
+  <li><a href="http://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf">git replacing LF with CRLF</a></li>
+  <li><a href="https://help.github.com/articles/generating-ssh-keys">Generating SSH Keys</a></li>
+  <li><a href="https://adamcod.es/2012/07/03/anatomy-of-a-good-commit-message.html">Anatomy Of A Good Commit Message</a></li>
+  <li><a href="https://adamcod.es/2014/12/10/git-pull-correct-workflow.html">Stop using <code class="highlighter-rouge">git pull</code>: A better workflow</a></li>
+  <li><a href="https://gitignore.io/">gitignore.io - Create Useful .gitignore Files For Your Project</a></li>
+  <li><a href="http://devahoy.com/posts/introduction-to-git-and-github/">Git คืออะไร ? + พร้อมสอนใช้งาน Git และ Github</a></li>
+  <li><a href="http://git-scm.com/book/en/v2">Git Pro Book</a></li>
+  <li><a href="http://gitready.com">Git Ready Tips</a></li>
+  <li><a href="https://robots.thoughtbot.com/keeping-a-github-fork-updated">Keeping A GitHub Fork Updated</a></li>
+  <li><a href="https://sandofsky.com/blog/git-workflow.html">Understanding the Git Workflow</a></li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>The intended workflow is:
+
+Create a private branch off a public branch.
+Regularly commit your work to this private branch.
+Once your code is perfect, clean up its history.
+Merge the cleaned-up branch back into the public branch.
+</code></pre>
+</div>
+
+<ol>
+  <li><a href="http://learngitbranching.js.org/?demo">Learn Git Branching</a></li>
+  <li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Linux.conf.au 2013 - Git For Ages 4 And Up</a></li>
+  <li><a href="https://speakerdeck.com/schacon/a-tale-of-three-trees">A Tale of Three Trees</a></li>
+  <li><a href="https://try.github.io/">Try Git: Git Tutorial</a></li>
+  <li><a href="https://wiki.openstack.org/wiki/GitCommitMessages">Git Commit Good Practice - OpenStack</a></li>
+  <li><a href="https://www.youtube.com/watch?v=-kVzV6m5_Qg">Becoming a Git Master</a></li>
+  <li><a href="https://hackernoon.com/lesser-known-git-commands-151a1918a60">Lesser known Git commands</a></li>
+  <li><a href="https://codewords.recurse.com/issues/two/git-from-the-inside-out">Git from the inside out</a></li>
+  <li><a href="http://ohshitgit.com">Oh shit, git!</a></li>
+</ol>
+
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/smtp/">
         Smtp with gmail
       </a>
@@ -219,12 +334,12 @@
     </span>
 
     
-      <h2 id="gmail-error-5-7-14"><a href="http://ralphminderhoud.com/posts/gmail-error-5-7-14/">Gmail Error 5.7.14</a></h2>
+      <h2 id="gmail-error-5714httpralphminderhoudcompostsgmail-error-5-7-14"><a href="http://ralphminderhoud.com/posts/gmail-error-5-7-14/">Gmail Error 5.7.14</a></h2>
 
 <ol>
-<li>Goto <a href="https://www.google.com/settings/security/lesssecureapps">Google Less secure apps</a></li>
-<li>Selected &quot;Enable&quot;</li>
-<li>Done</li>
+  <li>Goto <a href="https://www.google.com/settings/security/lesssecureapps">Google Less secure apps</a></li>
+  <li>Selected “Enable”</li>
+  <li>Done</li>
 </ol>
 
     
@@ -247,21 +362,21 @@
     </span>
 
     
-      <h2 id="open-port-on-google-compute-engine"><a href="http://stackoverflow.com/questions/21065922/how-to-open-a-specific-port-such-as-9090-in-google-compute-engine">Open Port On Google Compute Engine</a></h2>
+      <h2 id="open-port-on-google-compute-enginehttpstackoverflowcomquestions21065922how-to-open-a-specific-port-such-as-9090-in-google-compute-engine"><a href="http://stackoverflow.com/questions/21065922/how-to-open-a-specific-port-such-as-9090-in-google-compute-engine">Open Port On Google Compute Engine</a></h2>
 
 <ol>
-<li>Go to cloud.google.com</li>
-<li>Go to my Console</li>
-<li>Choose you Project.</li>
-<li>Choose &quot;Compute Engine&quot;</li>
-<li>Choose &quot;Networks&quot;</li>
-<li>Choose the interface for you Instances.</li>
-<li>In firewalls section, Go to Create New.</li>
-<li>Create your rule, in this case &quot;Protocols &amp; Ports&quot; would be &quot;tcp:9090&quot; i guess.</li>
-<li>Save.</li>
+  <li>Go to cloud.google.com</li>
+  <li>Go to my Console</li>
+  <li>Choose you Project.</li>
+  <li>Choose “Compute Engine”</li>
+  <li>Choose “Networks”</li>
+  <li>Choose the interface for you Instances.</li>
+  <li>In firewalls section, Go to Create New.</li>
+  <li>Create your rule, in this case “Protocols &amp; Ports” would be “tcp:9090” i guess.</li>
+  <li>Save.</li>
 </ol>
 
-<h2 id="attach-disk"><a href="https://developers.google.com/compute/docs/disks#attachdiskcreation">Attach Disk</a></h2>
+<h2 id="attach-diskhttpsdevelopersgooglecomcomputedocsdisksattachdiskcreation"><a href="https://developers.google.com/compute/docs/disks#attachdiskcreation">Attach Disk</a></h2>
 
     
   </div>
@@ -283,12 +398,12 @@
     </span>
 
     
-      <h2 id="mock-mocking-and-testing-library"><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></h2>
-
-<p>If you mock some thing, it can&#39;t be runnable. Don&#39;t forget it just mock object.  </p>
+      <h2 id="mock---mocking-and-testing-libraryhttpwwwvoidspaceorgukpythonmock"><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></h2>
+<p>If you mock some thing, it can’t be runnable. Don’t forget it just mock object.</p>
 
 <h3 id="mock-method-that-can-be-runnable">Mock Method that can be runnable</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># side_effect will make mock method can be runable  </span>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># side_effect will make mock method can be runable  </span>
 <span class="c"># this can be use to reutrn_value in different arguments</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>  
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>  
@@ -296,9 +411,12 @@
 <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="mi">3</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="patch-module-attribute">Patch Module Attribute</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Using PropertyMock with return_value argument  </span>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Using PropertyMock with return_value argument  </span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">'package.module.attribute'</span><span class="p">,</span>  
                      <span class="n">new_callable</span><span class="o">=</span><span class="n">mock</span><span class="o">.</span><span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
@@ -307,15 +425,16 @@
 <span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span>  
 <span class="mi">3</span>  
 <span class="mi">3</span>  
-</code></pre></div>
-<h3 id="my_mock-mock_calls">my_mock.mock_calls</h3>
+</code></pre>
+</div>
+
+<h3 id="mymockmockcalls">my_mock.mock_calls</h3>
 
 <h3 id="reference">Reference:</h3>
-
 <ol>
-<li><a href="http://www.voidspace.org.uk/python/mock/mock.html">The Mock Class</a></li>
-<li><a href="http://melp.nl/2011/02/enhancing-python-unit-tests-with-more-decorators/">enhancing-python-unit-tests-with-more-decorators</a></li>
-<li><a href="http://stackoverflow.com/questions/5929107/python-decorators-with-parameters">python-decorators-with-parameters</a></li>
+  <li><a href="http://www.voidspace.org.uk/python/mock/mock.html">The Mock Class</a></li>
+  <li><a href="http://melp.nl/2011/02/enhancing-python-unit-tests-with-more-decorators/">enhancing-python-unit-tests-with-more-decorators</a></li>
+  <li><a href="http://stackoverflow.com/questions/5929107/python-decorators-with-parameters">python-decorators-with-parameters</a></li>
 </ol>
 
     
@@ -338,21 +457,24 @@
     </span>
 
     
-      <h3 id="watchdog"><a href="https://github.com/gorakhargosh/watchdog">Watchdog</a></h3>
-
+      <h3 id="watchdoghttpsgithubcomgorakhargoshwatchdog"><a href="https://github.com/gorakhargosh/watchdog">Watchdog</a></h3>
 <p>Python API and shell utilities to monitor file system events.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">pip install watchdog
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install watchdog
+</code></pre>
+</div>
+
 <h3 id="watching-python-file-changes">Watching python file changes</h3>
 
-<p><noscript><pre>#!/usr/bin/env python
+<noscript><pre>#!/usr/bin/env python
 import os
 import sys
 import time
 from watchdog.observers import Observer
-from watchdog.events import PatternMatchingEventHandler</p>
+from watchdog.events import PatternMatchingEventHandler
 
-<p>def when_file_changed(filename):
+
+def when_file_changed(filename):
     &quot;&quot;&quot;
         Unittest Monitoring with coverage filtering
         file - ./&lt;projectname&gt;/&lt;package&gt;/&lt;file&gt;.py
@@ -363,108 +485,81 @@ from watchdog.events import PatternMatchingEventHandler</p>
     def projectname():
         &quot;&quot;&quot;
             Projectname from name of current directory (&#39;.&#39;)
-            if there are dash &#39;-&#39; in its name replace to underscore &#39;<em>&#39;
+            if there are dash &#39;-&#39; in its name replace to underscore &#39;_&#39;
         &quot;&quot;&quot;
-        return os.path.abspath(&quot;.&quot;).rsplit(&quot;/&quot;, 1)[1].replace(&quot;-&quot;, &quot;</em>&quot;)</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def package(filename):
-    basename = os.path.basename(filename)
-    if not basename.startswith(&amp;quot;test_&amp;quot;):
-        package = filename.replace(&amp;quot;./&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
-    else:
-        package = filename.replace(&amp;quot;./tests/unit&amp;quot;, &amp;quot;&amp;quot;).replace(&amp;quot;.py&amp;quot;, &amp;quot;&amp;quot;)
-        package = projectname() + package.replace(&amp;quot;/test_&amp;quot;, &amp;quot;/&amp;quot;)
-    package = package.replace(&amp;quot;/&amp;quot;, &amp;quot;.&amp;quot;)
-    return package
+        return os.path.abspath(&quot;.&quot;).rsplit(&quot;/&quot;, 1)[1].replace(&quot;-&quot;, &quot;_&quot;)
 
-def test_file(filename):
-    basename = os.path.basename(filename)
-    if not basename.startswith(&amp;quot;test_&amp;quot;):
-        filename = filename.replace(projectname(), &amp;quot;tests/unit&amp;quot;)
-        filename = filename.replace(basename, &amp;quot;test_&amp;quot; + basename)
-    return filename
+    def package(filename):
+        basename = os.path.basename(filename)
+        if not basename.startswith(&quot;test_&quot;):
+            package = filename.replace(&quot;./&quot;, &quot;&quot;).replace(&quot;.py&quot;, &quot;&quot;)
+        else:
+            package = filename.replace(&quot;./tests/unit&quot;, &quot;&quot;).replace(&quot;.py&quot;, &quot;&quot;)
+            package = projectname() + package.replace(&quot;/test_&quot;, &quot;/&quot;)
+        package = package.replace(&quot;/&quot;, &quot;.&quot;)
+        return package
 
-cls()
-print(os.path.abspath(filename))
-args = {&amp;quot;package&amp;quot;: package(filename), &amp;quot;testfile&amp;quot;: test_file(filename)}
-cmd = &amp;quot;nosetests --with-coverage --cover-erase --cover-package={package}&amp;quot; \
-      &amp;quot; -v {testfile}&amp;quot;.format(**args)
-os.system(cmd)
-</code></pre></div>
-<p>def cls():
-    os.system(&#39;cls&#39; if os.name == &#39;nt&#39; else &#39;clear&#39;)</p>
+    def test_file(filename):
+        basename = os.path.basename(filename)
+        if not basename.startswith(&quot;test_&quot;):
+            filename = filename.replace(projectname(), &quot;tests/unit&quot;)
+            filename = filename.replace(basename, &quot;test_&quot; + basename)
+        return filename
 
-<p>class ModifiedHandler(PatternMatchingEventHandler):
-    patterns = [&quot;*.py&quot;]  # Monitor only matched patterns</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def on_created(self, event):
-    &amp;quot;&amp;quot;&amp;quot;&amp;quot; For Vim :w - not modify that deleted and created file instead. &amp;quot;&amp;quot;&amp;quot;
-    when_file_changed(event.src_path)
+    cls()
+    print(os.path.abspath(filename))
+    args = {&quot;package&quot;: package(filename), &quot;testfile&quot;: test_file(filename)}
+    cmd = &quot;nosetests --with-coverage --cover-erase --cover-package={package}&quot; \
+          &quot; -v {testfile}&quot;.format(**args)
+    os.system(cmd)
 
-def on_modified(self, event):
-    &amp;quot;&amp;quot;&amp;quot; For other text-editor ex.sublime &amp;quot;&amp;quot;&amp;quot;
-    when_file_changed(event.src_path)
-</code></pre></div>
-<p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:
+
+def cls():
+    os.system(&#39;cls&#39; if os.name == &#39;nt&#39; else &#39;clear&#39;)
+
+
+class ModifiedHandler(PatternMatchingEventHandler):
+    patterns = [&quot;*.py&quot;]  # Monitor only matched patterns
+
+    def on_created(self, event):
+        &quot;&quot;&quot;&quot; For Vim :w - not modify that deleted and created file instead. &quot;&quot;&quot;
+        when_file_changed(event.src_path)
+
+    def on_modified(self, event):
+        &quot;&quot;&quot; For other text-editor ex.sublime &quot;&quot;&quot;
+        when_file_changed(event.src_path)
+
+if __name__ == &#39;__main__&#39;:
     args = sys.argv[1:]
     event_handler = ModifiedHandler()
     observer = Observer()
     observer.schedule(event_handler,
                       path=args[1] if args else &#39;.&#39;, recursive=True)
-    observer.start()</p>
-<div class="highlight"><pre><code class="language-" data-lang="">try:
-    while True:
-        time.sleep(1)
-except KeyboardInterrupt:
-    observer.stop()
-observer.join()&lt;/pre&gt;&lt;/noscript&gt;&lt;script src="https://gist.github.com/ibotdotout/8f42fbc0ee122f89e728.js"&gt; &lt;/script&gt;
-</code></pre></div>
-<h3 id="watchdog-over-docker-vm-via-polling">Watchdog over Docker (VM) via polling -</h3>
+    observer.start()
 
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()</pre></noscript>
+<script src="https://gist.github.com/ibotdotout/8f42fbc0ee122f89e728.js"> </script>
+
+<h3 id="watchdog-over-docker-vm-via-polling--">Watchdog over Docker (VM) via polling -</h3>
 <p><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Ref</a></p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">watchdog.observers.polling</span> <span class="kn">import</span> <span class="n">PollingObserver</span> <span class="k">as</span> <span class="n">Observer</span>
-<span class="n">Observer</span><span class="p">()</span> <span class="c">#polling every 1 second</span>
-</code></pre></div>
-<h3 id="references">References:</h3>
 
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">watchdog.observers.polling</span> <span class="kn">import</span> <span class="n">PollingObserver</span> <span class="k">as</span> <span class="n">Observer</span>
+<span class="n">Observer</span><span class="p">()</span> <span class="c">#polling every 1 second</span>
+</code></pre>
+</div>
+
+<h3 id="references">References:</h3>
 <ol>
-<li><a href="https://pythonhosted.org/watchdog/api.html#event-handler-classes">Event Handler Classes</a></li>
-<li><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a><br></li>
-<li><a href="http://ginstrom.com/scribbles/2012/05/10/continuous-integration-in-python-using-watchdog/">Continuous integration in python using watchdog</a></li>
+  <li><a href="https://pythonhosted.org/watchdog/api.html#event-handler-classes">Event Handler Classes</a></li>
+  <li><a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a></li>
+  <li><a href="http://ginstrom.com/scribbles/2012/05/10/continuous-integration-in-python-using-watchdog/">Continuous integration in python using watchdog</a></li>
 </ol>
 
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/ci/">
-        Continuos Integrations
-      </a>
-    </h1>
-
-    <span class="post-date">
-      19 Jul 2014
-      
-        &middot;
-        <a href="/ci/#disqus_thread" data-disqus-identifier="/ci/"></a>
-        
-      
-    </span>
-
-    
-      <p>Continuous Integrations doesn&#39;t get rid of bugs, but it does make them dramatically easier to find and remove. - <a href="http://martinfowler.com/articles/continuousIntegration.html">Continuous Integration by Martin Fowler</a></p>
-
-<h3 id="own-sever-services">Own Sever Services</h3>
-
-<ul>
-<li><a href="/jenkins">Jeknins CI</a> - Popular Open Source CI</li>
-</ul>
-
-<h3 id="online-services">Online Services</h3>
-
-<ul>
-<li><a href="/travis-ci">Travis CI</a> - Recommend</li>
-<li><a href="/drone-ci">Drone.io CI</a> - Easier than Travis, has few features</li>
-</ul>
 
     
   </div>

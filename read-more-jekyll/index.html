@@ -212,21 +212,24 @@
   </span>
 
   <blockquote>
-<p>Github Pages Tips:<br>
-Github Pages always complie jekyll with <code>--safe</code> option that will<br>
-disable plugins but some plugin can work with Github Pages.<br>
-<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a>  </p>
-
-<p>Easy ways: using <a href="http://jekyllrb.com/docs/posts/#post-excerpts">excerpt option of &gt; jekyll</a><br>
-<a href="http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll">Customized excerpt separator in &gt; Jekyll</a>  </p>
+  <p>Github Pages Tips:<br />
+Github Pages always complie jekyll with <code class="highlighter-rouge">--safe</code> option that will<br />
+disable plugins but some plugin can work with Github Pages.<br />
+<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a></p>
 </blockquote>
 
-<p>Just using <code>truncate</code> they not checking html tag that make your site look
-terrible and Github Pages not support custom ruby script that place in
-<code>_plugins</code>. The better way is using split with custom tags.</p>
+<blockquote>
+  <p>Easy ways: using <a href="http://jekyllrb.com/docs/posts/#post-excerpts">excerpt option of &gt; jekyll</a><br />
+<a href="http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll">Customized excerpt separator in &gt; Jekyll</a></p>
+</blockquote>
 
-<p>Replace `<code>in</code>index.html` in jekyll directory with</p>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby">
+<p>Just using <code class="highlighter-rouge">truncate</code> they not checking html tag that make your site look
+terrible and Github Pages not support custom ruby script that place in
+<code class="highlighter-rouge">_plugins</code>. The better way is using split with custom tags.</p>
+
+<p>Replace `` in <code class="highlighter-rouge">index.html</code> in jekyll directory with</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>    
     <span class="p">{</span><span class="sx">% if </span><span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="n">contains</span> <span class="s2">"&lt;!-- more --&gt;"</span> <span class="o">%</span><span class="p">}</span>
       <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="nb">split</span><span class="ss">:"&lt;!-- more --&gt;"</span> <span class="o">|</span> <span class="n">first</span> <span class="o">%</span> <span class="p">}}</span>
       <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"text-align:right;"</span><span class="o">&gt;</span>
@@ -235,12 +238,15 @@ terrible and Github Pages not support custom ruby script that place in
     <span class="p">{</span><span class="sx">% else </span><span class="o">%</span><span class="p">}</span>
       <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="p">}}</span>
     <span class="p">{</span><span class="sx">% endif </span><span class="o">%</span><span class="p">}</span>
+    
+</code></pre>
+</div>
 
-</code></pre></div>
 <!-- more -->
 
-<p>In your contents add <code>&lt;!-- more --&gt;</code></p>
-<div class="highlight"><pre><code class="language-" data-lang="">---
+<p>In your contents add <code class="highlighter-rouge">&lt;!-- more --&gt;</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 layout: post
 title: Read more feature on jekyll
 tags: [jekyll]
@@ -250,13 +256,14 @@ Hello, world
 &lt;!-- more --&gt;
 
 You can't see this message via index.html
-</code></pre></div>
-<h3 id="references">References:</h3>
+</code></pre>
+</div>
 
+<h3 id="references">References:</h3>
 <ol>
-<li><a href="http://mikeygee.com/blog/truncate.html">Truncating blog posts in Jekyll</a></li>
-<li><a href="https://truongtx.me/2013/05/01/jekyll-read-more-feature-without-any-plugin/">Jekyll - Read More without plugin</a></li>
-<li><a href="https://github.com/MattHall/truncatehtml">A Jekyll plugin that truncates HTML while preserving markup structure.</a></li>
+  <li><a href="http://mikeygee.com/blog/truncate.html">Truncating blog posts in Jekyll</a></li>
+  <li><a href="https://truongtx.me/2013/05/01/jekyll-read-more-feature-without-any-plugin/">Jekyll - Read More without plugin</a></li>
+  <li><a href="https://github.com/MattHall/truncatehtml">A Jekyll plugin that truncates HTML while preserving markup structure.</a></li>
 </ol>
 
   
@@ -275,6 +282,15 @@ You can't see this message via index.html
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -287,15 +303,6 @@ You can't see this message via index.html
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

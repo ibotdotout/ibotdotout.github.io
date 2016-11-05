@@ -214,76 +214,96 @@
       
   </span>
 
-  <p>You can start <code>crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
-just put <code>crontab</code> in <code>/etc/cron.d/</code> and run <code>cron</code> for making it working.</p>
+  <p>You can start <code class="highlighter-rouge">crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
+just put <code class="highlighter-rouge">crontab</code> in <code class="highlighter-rouge">/etc/cron.d/</code> and run <code class="highlighter-rouge">cron</code> for making it working.</p>
 
 <!-- more -->
 
-<p>However when you try something that complex than <code>echo &quot;hello world&quot;</code> sometimes it just not working and you don&#39;t know why!!!
+<p>However when you try something that complex than <code class="highlighter-rouge">echo "hello world"</code> sometimes it just not working and you don’t know why!!!
 You had alreay tried to run your script that working on your linux but no idea why not working on your docker.</p>
 
 <p><a href="http://stackoverflow.com/a/26958348">rozkosz</a> said:</p>
-<div class="highlight"><pre><code class="language-" data-lang=""> Several issues that I faced while trying to get a cron job running in a docker container were:
+
+<div class="highlighter-rouge"><pre class="highlight"><code> Several issues that I faced while trying to get a cron job running in a docker container were:
  1. time in the docker container is in UTC not local time;
  2. the docker environment is not passed to cron;
  3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
-</code></pre></div>
-<p>I think the problem that most people face is <code>cron</code> not run your script with same environment as your docker in terminal.
-You need to export your Docker environment to your <code>cron</code> that I found solution from <a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/">postgres-s3-backup Dockerfile</a>.
+</code></pre>
+</div>
+
+<p>I think the problem that most people face is <code class="highlighter-rouge">cron</code> not run your script with same environment as your docker in terminal.
+You need to export your Docker environment to your <code class="highlighter-rouge">cron</code> that I found solution from <a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/~/dockerfile/">postgres-s3-backup Dockerfile</a>.
 You can following this for simple solution:</p>
 
 <ol>
-<li>In <code>Dockerfile</code>, export Docker environment to /root/env.txt</li>
+  <li>In <code class="highlighter-rouge">Dockerfile</code>, export Docker environment to /root/env.txt</li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  CMD env &gt; /root/env.txt <span class="o">&amp;&amp;</span> cron <span class="o">&amp;&amp;</span> your_init_script
-</code></pre></div>
+
+<p><code class="highlighter-rouge">sh
+  CMD env &gt; /root/env.txt &amp;&amp; cron &amp;&amp; your_init_script
+ </code></p>
+
 <ol>
-<li>In your <code>crontab</code> file, You need to to import your Docker environment before run your script</li>
+  <li>In your <code class="highlighter-rouge">crontab</code> file, You need to to import your Docker environment before run your script</li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="k">*</span>/5 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span>  root env - <span class="sb">`</span>cat /root/env.txt<span class="sb">`</span>  your_scipt  &gt;&gt; /var/log/cron.log 2&gt;&amp;1
-  <span class="c"># An empty line is required at the end of this file for a valid cron file.</span>
-</code></pre></div>
+
+<p><code class="highlighter-rouge">sh
+  */5 * * * *  root env - `cat /root/env.txt`  your_scipt  &gt;&gt; /var/log/cron.log 2&gt;&amp;1
+  # An empty line is required at the end of this file for a valid cron file.
+ </code></p>
+
 <ol>
-<li>Test it. Your should put <code>date</code> in your script for debug and then <code>cat /var/log/cron.log</code> to see your results.</li>
+  <li>Test it. Your should put <code class="highlighter-rouge">date</code> in your script for debug and then <code class="highlighter-rouge">cat /var/log/cron.log</code> to see your results.</li>
 </ol>
 
 <p>For the local timezone problem your can setup your Dockerfile following this</p>
 
 <ul>
-<li><p>Debian/Linux Setting timezone</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"> <span class="c"># Set the time zone to the local time zone</span>
- RUN <span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure --frontend noninteractive tzdata
-</code></pre></div></li>
-<li><p><a href="http://wiki.alpinelinux.org/wiki/Setting_the_timezone">Alpine Setting the timezone</a></p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Alpine Linux</span>
-<span class="c"># set bangkok time</span>
-USEo root
-RUN apk add --update tzdata <span class="se">\</span>
-<span class="o">&amp;&amp;</span> cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime <span class="se">\</span>
-<span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt;  /etc/timezone <span class="se">\</span>
-<span class="o">&amp;&amp;</span> apk del tzdata <span class="se">\</span>
-<span class="o">&amp;&amp;</span> mv /etc/localtime /usr/share/zoneinfo/Asia/Bangkok
+  <li>
+    <p>Debian/Linux Setting timezone</p>
 
-<span class="c"># or</span>
-USER root
-RUN apk add --update tzdata
-ENV <span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok
-</code></pre></div></li>
-<li><p><a href="http://stackoverflow.com/a/25130291">Will docker container auto sync time with the host machine?</a></p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>docker run -it -v /etc/localtime:/etc/localtime:ro &lt; image &gt;
-</code></pre></div></li>
+    <p><code class="highlighter-rouge">sh
+   # Set the time zone to the local time zone
+   RUN echo "Asia/Bangkok" &gt; /etc/timezone &amp;&amp; dpkg-reconfigure --frontend noninteractive tzdata
+  </code></p>
+  </li>
+  <li>
+    <p><a href="http://wiki.alpinelinux.org/wiki/Setting_the_timezone">Alpine Setting the timezone</a></p>
+
+    <p>```sh
+  # Alpine Linux
+  # set bangkok time
+  USEo root
+  RUN apk add –update tzdata \
+  &amp;&amp; cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime \
+  &amp;&amp; echo “Asia/Bangkok” &gt;  /etc/timezone \
+  &amp;&amp; apk del tzdata \
+  &amp;&amp; mv /etc/localtime /usr/share/zoneinfo/Asia/Bangkok</p>
+
+    <p># or
+  USER root
+  RUN apk add –update tzdata
+  ENV TZ=Asia/Bangkok
+  ```</p>
+  </li>
+  <li>
+    <p><a href="http://stackoverflow.com/a/25130291">Will docker container auto sync time with the host machine?</a></p>
+
+    <p><code class="highlighter-rouge">sh
+  $ docker run -it -v /etc/localtime:/etc/localtime:ro &lt; image &gt;
+ </code></p>
+  </li>
 </ul>
 
 <h3 id="references">References:</h3>
-
 <ul>
-<li><a href="http://stackoverflow.com/questions/26822067/running-cron-python-jobs-within-docker/26958348#26958348">Running cron python jobs within docker</a></li>
-<li><a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a></li>
-<li><a href="http://stackoverflow.com/a/26958348">Running cron python jobs within docker</a></li>
-<li><a href="https://github.com/Alexis-benoist/docker-cron-example">docker-cron-example</a></li>
-<li><a href="https://github.com/aptible/docker-cron-example">Example implementation of cron jobs on Docker/Aptible</a></li>
-<li><a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/%7E/dockerfile/">Example of Cron</a></li>
-<li><a href="http://serverfault.com/a/84545">PATH in crontab</a></li>
+  <li><a href="http://stackoverflow.com/questions/26822067/running-cron-python-jobs-within-docker/26958348#26958348">Running cron python jobs within docker</a></li>
+  <li><a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a></li>
+  <li><a href="http://stackoverflow.com/a/26958348">Running cron python jobs within docker</a></li>
+  <li><a href="https://github.com/Alexis-benoist/docker-cron-example">docker-cron-example</a></li>
+  <li><a href="https://github.com/aptible/docker-cron-example">Example implementation of cron jobs on Docker/Aptible</a></li>
+  <li><a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/~/dockerfile/">Example of Cron</a></li>
+  <li><a href="http://serverfault.com/a/84545">PATH in crontab</a></li>
 </ul>
 
   
@@ -302,6 +322,15 @@ ENV <span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -314,15 +343,6 @@ ENV <span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

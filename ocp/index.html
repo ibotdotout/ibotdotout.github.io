@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="FizzBuzz Problemprint any number divisible by three with the word &quot;fizz&quot; instead ofthe number.print any number divisible by five with the word &quo..." />
+<meta property="og:description" content="FizzBuzz Problem  print any number divisible by three with the word “fizz” instead ofthe number.  print any number divisible by five with the word “buzz” ins..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -211,128 +211,136 @@
       
   </span>
 
-  <h2 id="fizzbuzz-problem"><a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz Problem</a></h2>
-
+  <h2 id="fizzbuzz-problemhttpsenwikipediaorgwikifizzbuzz"><a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz Problem</a></h2>
 <ul>
-<li>print any number divisible by three with the word &quot;fizz&quot; instead of
+  <li>print any number divisible by three with the word “fizz” instead of
 the number.</li>
-<li>print any number divisible by five with the word &quot;buzz&quot; instead of
+  <li>print any number divisible by five with the word “buzz” instead of
 the number.</li>
-<li>print any number divisible by seven with the word &quot;bang&quot; instead of
+  <li>print any number divisible by seven with the word “bang” instead of
 the number.</li>
 </ul>
 
 <h3 id="fizzbuzz-nested-if">FizzBuzz Nested If</h3>
 
-<p><noscript><pre>x = 105</p>
+<noscript><pre>x = 105
 
-<p>if x%7 == 0 and x%3 == 0 and x%5 == 0:
-    print(&quot;FizzBuzzBang&quot;)
+if x%7 == 0 and x%3 == 0 and x%5 == 0:
+	print(&quot;FizzBuzzBang&quot;)
 elif x%7 == 0 and x%5 == 0:
-    print(&quot;BuzzBang&quot;)
+	print(&quot;BuzzBang&quot;)
 elif x%7 == 0 and x%3 == 0:
-    print(&quot;FizzBang&quot;)
+	print(&quot;FizzBang&quot;)
 elif x%3 == 0 and x%5 == 0:
-    print(&quot;FizzBuzz&quot;)
+	print(&quot;FizzBuzz&quot;)
 elif x%7 == 0:
-    print(&quot;Bang&quot;)
+	print(&quot;Bang&quot;)
 elif x%5 == 0:
-    print(&quot;Buzz&quot;)
+	print(&quot;Buzz&quot;)
 elif x%3 == 0:
-    print(&quot;Fizz&quot;)
+	print(&quot;Fizz&quot;)
 else:
-    print(x)
-</pre></noscript><script src="https://gist.github.com/ibotdotout/067c8310320d21e7d78a.js"> </script></p>
+	print(x)
+</pre></noscript>
+<script src="https://gist.github.com/ibotdotout/067c8310320d21e7d78a.js"> </script>
 
 <h3 id="fizzbuzz-ocp">FizzBuzz OCP</h3>
 
-<p><noscript><pre>#Kata with Up1 - Agile Thailand 2014 @ Eng CU</p>
+<noscript><pre>#Kata with Up1 - Agile Thailand 2014 @ Eng CU
+#Sat 7 June 2014
 
-<h1 id="sat-7-june-2014">Sat 7 June 2014</h1>
+class FizzBuzzFactory():
+	def create(self):
+		rules = [FizzBuzzBangRule(), BuzzBangRule(), FizzBangRule(), FizzBuzzRule(),
+			 BangRule, BuzzRule(),FizzRule(),NormalRule()]
+		return FizzBuzz(rules)
 
-<p>class FizzBuzzFactory():
-    def create(self):
-        rules = [FizzBuzzBangRule(), BuzzBangRule(), FizzBangRule(), FizzBuzzRule(),
-             BangRule, BuzzRule(),FizzRule(),NormalRule()]
-        return FizzBuzz(rules)</p>
+class FizzBuzz():
+	def __init__(cls,rules):
+		cls.rules = rules
 
-<p>class FizzBuzz():
-    def <strong>init</strong>(cls,rules):
-        cls.rules = rules</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
-    for rule in self.rules:
-        if rule.is_handle(x):
-            return rule.say(x)
-</code></pre></div>
-<p>class Rule():
-    def is_handle(self,x):
-        pass</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
-    pass
-</code></pre></div>
-<p>class NormalRule(Rule):
-    def is_handle(self,x):
-        return True</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
-    return x
-</code></pre></div>
-<p>class FizzRule(Rule):
-    def is_handle(self,x):
-        return x % 3 == 0</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
-    return &amp;quot;Fizz&amp;quot;
-</code></pre></div>
-<p>class BuzzRule(Rule):
-    def is_handle(self,x):
-        return x % 5 == 0</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
-    return &amp;quot;Buzz&amp;quot;
-</code></pre></div>
-<p>class BangRule(Rule):
-    def is_handle(self,x):
-        return x % 7 == 0</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
-    return &amp;quot;Bang&amp;quot;
-</code></pre></div>
-<p>class FizzBuzzRule(Rule):
-    def is_handle(self,x):
-        return x % 5 == 0 and x % 3 == 0</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
-    return &amp;quot;FizzBuzz&amp;quot;
-</code></pre></div>
-<p>class FizzBangRule(Rule):
-    def is_handle(self,x):
-        return x % 7 == 0 and x % 3 == 0
-    def say(self,x):
-        return &quot;FizzBang&quot;</p>
+	def say(self,x):
+		for rule in self.rules:
+			if rule.is_handle(x):
+				return rule.say(x)
 
-<p>class BuzzBangRule(Rule):
-    def is_handle(self,x):
-        return x % 7 == 0 and x % 5 == 0
-    def say(self,x):
-        return &quot;BuzzBang&quot;</p>
+class Rule():
+	def is_handle(self,x):
+		pass
 
-<p>class FizzBuzzBangRule(Rule):
-    def is_handle(self,x):
-        return x % 7 ==0 and x % 5 == 0 and x % 3 == 0</p>
-<div class="highlight"><pre><code class="language-" data-lang="">def say(self,x):
-    return &amp;quot;FizzBuzzBang&amp;quot;
-</code></pre></div>
-<p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:
-    l = [1,2,3,6,5,15,20]
-    fizz_buzz = FizzBuzzFactory().create()
-    for x in l:
-        print(fizz_buzz.say(x))
-</pre></noscript><script src="https://gist.github.com/ibotdotout/824ca575b9480f03b3f7.js"> </script></p>
+	def say(self,x):
+		pass
+
+class NormalRule(Rule):
+	def is_handle(self,x):
+		return True
+
+	def say(self,x):
+		return x
+
+class FizzRule(Rule):
+	def is_handle(self,x):
+		return x % 3 == 0
+
+	def say(self,x):
+		return &quot;Fizz&quot;
+
+class BuzzRule(Rule):
+	def is_handle(self,x):
+		return x % 5 == 0
+
+	def say(self,x):
+		return &quot;Buzz&quot;
+		
+class BangRule(Rule):
+	def is_handle(self,x):
+		return x % 7 == 0
+
+	def say(self,x):
+		return &quot;Bang&quot;
+
+class FizzBuzzRule(Rule):
+	def is_handle(self,x):
+		return x % 5 == 0 and x % 3 == 0
+
+	def say(self,x):
+		return &quot;FizzBuzz&quot;
+		
+class FizzBangRule(Rule):
+	def is_handle(self,x):
+		return x % 7 == 0 and x % 3 == 0
+	def say(self,x):
+		return &quot;FizzBang&quot;
+		
+class BuzzBangRule(Rule):
+	def is_handle(self,x):
+		return x % 7 == 0 and x % 5 == 0
+	def say(self,x):
+		return &quot;BuzzBang&quot;
+		
+class FizzBuzzBangRule(Rule):
+	def is_handle(self,x):
+		return x % 7 ==0 and x % 5 == 0 and x % 3 == 0
+ 
+	def say(self,x):
+		return &quot;FizzBuzzBang&quot;
+
+
+if __name__ == &#39;__main__&#39;:
+	l = [1,2,3,6,5,15,20]
+	fizz_buzz = FizzBuzzFactory().create()
+	for x in l:
+		print(fizz_buzz.say(x))
+</pre></noscript>
+<script src="https://gist.github.com/ibotdotout/824ca575b9480f03b3f7.js"> </script>
 
 <h3 id="references">References:</h3>
-
 <ol>
-<li><a href="http://www.somkiat.cc/solid-principle-calendar/">แนะนำปฏิทิน SOLID
+  <li><a href="http://www.somkiat.cc/solid-principle-calendar/">แนะนำปฏิทิน SOLID
 Principle</a></li>
-<li><a href="http://www.slideshare.net/DrTrucho/python-solid">Python SOLID</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Open/closed_principle">Open/closed principle</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Fizz_buzz">Fizz buzz</a></li>
+  <li><a href="http://www.slideshare.net/DrTrucho/python-solid">Python SOLID</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Open/closed_principle">Open/closed principle</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Fizz_buzz">Fizz buzz</a></li>
 </ol>
 
   
@@ -355,6 +363,15 @@ Principle</a></li>
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -367,15 +384,6 @@ Principle</a></li>
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

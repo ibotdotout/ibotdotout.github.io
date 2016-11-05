@@ -204,6 +204,61 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/read-more-jekyll/">
+        Read more feature on jekyll
+      </a>
+    </h1>
+
+    <span class="post-date">
+      18 Oct 2015
+      
+        &middot;
+        <a href="/read-more-jekyll/#disqus_thread" data-disqus-identifier="/read-more-jekyll/"></a>
+        
+      
+    </span>
+
+    
+      <blockquote>
+  <p>Github Pages Tips:<br />
+Github Pages always complie jekyll with <code class="highlighter-rouge">--safe</code> option that will<br />
+disable plugins but some plugin can work with Github Pages.<br />
+<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a></p>
+</blockquote>
+
+<blockquote>
+  <p>Easy ways: using <a href="http://jekyllrb.com/docs/posts/#post-excerpts">excerpt option of &gt; jekyll</a><br />
+<a href="http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll">Customized excerpt separator in &gt; Jekyll</a></p>
+</blockquote>
+
+<p>Just using <code class="highlighter-rouge">truncate</code> they not checking html tag that make your site look
+terrible and Github Pages not support custom ruby script that place in
+<code class="highlighter-rouge">_plugins</code>. The better way is using split with custom tags.</p>
+
+<p>Replace `` in <code class="highlighter-rouge">index.html</code> in jekyll directory with</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>    
+    <span class="p">{</span><span class="sx">% if </span><span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="n">contains</span> <span class="s2">"&lt;!-- more --&gt;"</span> <span class="o">%</span><span class="p">}</span>
+      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="nb">split</span><span class="ss">:"&lt;!-- more --&gt;"</span> <span class="o">|</span> <span class="n">first</span> <span class="o">%</span> <span class="p">}}</span>
+      <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"text-align:right;"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"{{ post.url }}"</span> <span class="n">style</span><span class="o">=</span><span class="s2">"color:#000;"</span><span class="o">&gt;</span> <span class="no">Read</span> <span class="no">More</span> <span class="o">&lt;</span><span class="sr">/a&gt;
+      &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="sx">% else </span><span class="o">%</span><span class="p">}</span>
+      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="p">}}</span>
+    <span class="p">{</span><span class="sx">% endif </span><span class="o">%</span><span class="p">}</span>
+    
+</code></pre>
+</div>
+
+
+      <div style="text-align:right;">
+        <a href="/read-more-jekyll/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/text-processing/">
         Text Processing in Shell
       </a>
@@ -220,24 +275,27 @@
 
     
       <blockquote>
-<p>Most of example come from problem in <a href="https://www.hackerrank.com/domains/shell/bash">Linux Shell - Hackerrank</a>
+  <p>Most of example come from problem in <a href="https://www.hackerrank.com/domains/shell/bash">Linux Shell - Hackerrank</a>
 <a href="http://tldp.org/LDP/abs/html/textproc.html">Text Processing Commands</a></p>
 </blockquote>
 
 <h2 id="sed">Sed</h2>
 
 <blockquote>
-<p>Trip:<br>
-<code>sed</code> in OSX may not working as example. You should try <code>gsed</code>.<br>
-<code>gsed</code> can install via brew and call <code>gsed</code> instead of <code>sed</code>  </p>
+  <p>Trip:<br />
+<code class="highlighter-rouge">sed</code> in OSX may not working as example. You should try <code class="highlighter-rouge">gsed</code>.<br />
+<code class="highlighter-rouge">gsed</code> can install via brew and call <code class="highlighter-rouge">gsed</code> instead of <code class="highlighter-rouge">sed</code></p>
 </blockquote>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>cat <span class="k">in
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
 </span>1234 5678 9101 1234  
 2999 5178 9101 2234  
 <span class="gp">$ </span>sed -re <span class="s1">'s/([0-9]{4}\s){3}/**** **** **** /'</span> <span class="k">in</span>
 <span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 1234  
 <span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 2234  
-</code></pre></div>
+</code></pre>
+</div>
+
 
       <div style="text-align:right;">
         <a href="/text-processing/" style="color:#000;"> Read More </a>
@@ -262,17 +320,20 @@
     </span>
 
     
-      <p><img src="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" alt="sharing with open graph"></p>
+      <p><img src="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" alt="sharing with open graph" /></p>
 
-<p>Add this meta data to your <code>html page</code> between <code>&lt;head&gt; ... &lt;/head&gt;</code></p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Markdown Slide"</span> <span class="nt">/&gt;</span>
+<p>Add this meta data to your <code class="highlighter-rouge">html page</code> between <code class="highlighter-rouge">&lt;head&gt; ... &lt;/head&gt;</code></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Markdown Slide"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/slide/"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/opengraph_logo.png"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Remark.js - easy and simple slide"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Then using <a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a> to look what it look like when shared.</p>
 
 
@@ -299,24 +360,25 @@
     </span>
 
     
-      <h2 id="remark-js-easy-and-simple-slide-example"><a href="https://github.com/gnab/remark">Remark.js - easy and simple slide</a> - <a href="http://remarkjs.com">Example</a></h2>
-
+      <h2 id="remarkjs---easy-and-simple-slidehttpsgithubcomgnabremark---examplehttpremarkjscom"><a href="https://github.com/gnab/remark">Remark.js - easy and simple slide</a> - <a href="http://remarkjs.com">Example</a></h2>
 <ul>
-<li><a href="https://github.com/gnab/remark/wiki#getting-started">Getting started</a></li>
-<li><a href="https://github.com/gnab/remark/issues/236#issuecomment-108211948">Two-column formatting</a></li>
-<li><a href="https://github.com/gnab/remark/issues/50#issuecomment-112140176">Export to PDF</a></li>
-<li><a href="https://github.com/derickfay/key2txt/blob/master/k2remark.applescript">Keynote to Remark.js</a></li>
+  <li><a href="https://github.com/gnab/remark/wiki#getting-started">Getting started</a></li>
+  <li><a href="https://github.com/gnab/remark/issues/236#issuecomment-108211948">Two-column formatting</a></li>
+  <li><a href="https://github.com/gnab/remark/issues/50#issuecomment-112140176">Export to PDF</a></li>
+  <li><a href="https://github.com/derickfay/key2txt/blob/master/k2remark.applescript">Keynote to Remark.js</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-" data-lang="">1. Open a Keynote presentation
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1. Open a Keynote presentation
 2. Run the script.
 3. Select output destination
 4. Got rough remark.js slide
-</code></pre></div>
-<h2 id="other-markdown-slide">Other Markdown slide</h2>
+</code></pre>
+</div>
 
+<h2 id="other-markdown-slide">Other Markdown slide</h2>
 <ul>
-<li><a href="https://github.com/hakimel/reveal.js">reveal.js - more powerful</a> - <a href="http://lab.hakim.se/reveal-js/">Example</a></li>
-<li><a href="https://github.com/jdan/cleaver">Cleaver</a> - <a href="http://jdan.github.io/cleaver">Example</a></li>
+  <li><a href="https://github.com/hakimel/reveal.js">reveal.js - more powerful</a> - <a href="http://lab.hakim.se/reveal-js/">Example</a></li>
+  <li><a href="https://github.com/jdan/cleaver">Cleaver</a> - <a href="http://jdan.github.io/cleaver">Example</a></li>
 </ul>
 
 
@@ -347,53 +409,30 @@
 
     
       <blockquote>
-<p>My mind to your mind. My thoughts to your thoughts... -- MrSpock</p>
+  <p>My mind to your mind. My thoughts to your thoughts… – MrSpock</p>
 </blockquote>
 
-<h2 id="all-i-really-need-to-know-about-pair-programming-i-learned-in-kindergarten"><a href="http://www.cs.rice.edu/%7Emgricken/teaching/402/09-spring/readings/Everything.pdf">All I really need to know about pair programming I learned in kindergarten</a></h2>
+<h2 id="all-i-really-need-to-know-about-pair-programming-i-learned-in-kindergartenhttpwwwcsriceedumgrickenteaching40209-springreadingseverythingpdf"><a href="http://www.cs.rice.edu/~mgricken/teaching/402/09-spring/readings/Everything.pdf">All I really need to know about pair programming I learned in kindergarten</a></h2>
 
 <blockquote>
-<p>When it comes to programming practices,
+  <p>When it comes to programming practices,
 studies show two heads are almost always better than one.</p>
+</blockquote>
 
-<p>The pair can solve problems they couldn’t solve alone and can help
+<blockquote>
+  <p>The pair can solve problems they couldn’t solve alone and can help
 improve each other’s skills.</p>
+</blockquote>
 
-<p>If you think about something long enough, the brain will consider it a
-truth.  If you tell yourself something negative, such as “I&#39;m a terrible
+<blockquote>
+  <p>If you think about something long enough, the brain will consider it a
+truth.  If you tell yourself something negative, such as “I’m a terrible
 programmer,” soon your brain will believe you.</p>
 </blockquote>
 
 
       <div style="text-align:right;">
         <a href="/pair-programming/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/fp-python/">
-        Functional Programming in Python
-      </a>
-    </h1>
-
-    <span class="post-date">
-      04 Oct 2015
-      
-        &middot;
-        <a href="/fp-python/#disqus_thread" data-disqus-identifier="/fp-python/"></a>
-        
-      
-    </span>
-
-    
-      <p>พอดีเพิ่งอ่าน <a href="http://www.oreilly.com/programming/free/files/functional-programming-python.pdf">Oreilly.com FP in python</a> จบ แบบมึนๆ เนื่องจากยังไม่แน่นใน concept
-ของ FP เลยมาสรุปแปะไว้ก่อน เผื่อใครสนใจอ่าน</p>
-
-
-      <div style="text-align:right;">
-        <a href="/fp-python/" style="color:#000;"> Read More </a>
       </div>
     
   </div>

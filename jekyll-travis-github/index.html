@@ -212,127 +212,157 @@
   </span>
 
   <blockquote>
-<p>Github Pages Tips:<br>
-Github Pages always complie jekyll with <code>--safe</code> option that will<br>
-disable plugins but some plugin can work with Github Pages.<br>
-<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a>  </p>
+  <p>Github Pages Tips:<br />
+Github Pages always complie jekyll with <code class="highlighter-rouge">--safe</code> option that will<br />
+disable plugins but some plugin can work with Github Pages.<br />
+<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a></p>
 </blockquote>
 
-<p>To avoid this <code>--safe</code> option to be powerful jekyll, you need to build your jelyll somewhere else and commit your static page to <code>main</code> or <code>gh-page</code> branch.
+<p>To avoid this <code class="highlighter-rouge">--safe</code> option to be powerful jekyll, you need to build your jelyll somewhere else and commit your static page to <code class="highlighter-rouge">main</code> or <code class="highlighter-rouge">gh-page</code> branch.
 We can automate build jekyll with <a href="https://travis-ci.org">Travis-CI</a>
-that store your jekyll file in <code>jekyll</code> branch when push to github that
-will trig to Travis to build and deploy static page back to your <code>main</code>
+that store your jekyll file in <code class="highlighter-rouge">jekyll</code> branch when push to github that
+will trig to Travis to build and deploy static page back to your <code class="highlighter-rouge">main</code>
 branch to publish your contents. you should read previous <a href="/jekyll-with-ci/">blog about
 jekyll and travis</a></p>
 
 <!-- more -->
 
 <h2 id="good-to-knows">Good to knows:</h2>
-
 <ol>
-<li>Should backup your repository in somewhere else, this method need to
+  <li>Should backup your repository in somewhere else, this method need to
 in your local repository and your github repository.</li>
-<li>In your <code>.travis.yml</code> always keep <code>&gt; /dev/null 2&gt;&amp;1</code> to avoid your tokens display on logs or you can remove for debugging git push.</li>
-<li>Github page need <code>verified email</code> for trigger update contents.</li>
-<li>You can check your last build from <code>feed.xml</code> on Jekyll</li>
-<li>If your use Github page as personal page don&#39;t try to change <code>Default
+  <li>In your <code class="highlighter-rouge">.travis.yml</code> always keep <code class="highlighter-rouge">&gt; /dev/null 2&gt;&amp;1</code> to avoid your tokens display on logs or you can remove for debugging git push.</li>
+  <li>Github page need <code class="highlighter-rouge">verified email</code> for trigger update contents.</li>
+  <li>You can check your last build from <code class="highlighter-rouge">feed.xml</code> on Jekyll</li>
+  <li>If your use Github page as personal page don’t try to change <code class="highlighter-rouge">Default
 branch</code> on your Github repository settings that will use your
-<code>Default branch</code> to hosting your page.</li>
+<code class="highlighter-rouge">Default branch</code> to hosting your page.</li>
 </ol>
 
 <h2 id="how-to">How to:</h2>
-
 <blockquote>
-<p>Verified by <a href="http://dev.mildronize.com">Mildronize</a>  </p>
+  <p>Verified by <a href="http://dev.mildronize.com">Mildronize</a></p>
 </blockquote>
 
 <ol>
-<li><p>Create <code>jekyll</code> branch for development</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>git branch jekyll
-</code></pre></div></li>
-<li><p>Clear your <code>main</code> or <code>gh-page</code> branch to blank</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>git rm <span class="k">*</span>
-</code></pre></div></li>
-<li><p>Enable Travis on your repository on Travis website and turn on <code>Build
-only if .travis.yml is present</code> on your travis repository settings.</p></li>
-<li><p>Checkout <code>jekyll</code> branch and create <code>.travis.yml</code> then edit <code>GH_REF</code>
-and <code>TARGET_BRANCH</code> to your own</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>git checkout jekyll
-</code></pre></div>
-<p>.travis.yml</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">sudo: false
+  <li>
+    <p>Create <code class="highlighter-rouge">jekyll</code> branch for development</p>
 
-language: ruby
+    <p><code class="highlighter-rouge">sh
+ $ git branch jekyll
+</code></p>
+  </li>
+  <li>
+    <p>Clear your <code class="highlighter-rouge">main</code> or <code class="highlighter-rouge">gh-page</code> branch to blank</p>
 
-rvm:
-- 2.2
+    <p><code class="highlighter-rouge">sh
+ $ git rm *
+</code></p>
+  </li>
+  <li>Enable Travis on your repository on Travis website and turn on <code class="highlighter-rouge">Build
+only if .travis.yml is present</code> on your travis repository settings.</li>
+  <li>
+    <p>Checkout <code class="highlighter-rouge">jekyll</code> branch and create <code class="highlighter-rouge">.travis.yml</code> then edit <code class="highlighter-rouge">GH_REF</code>
+and <code class="highlighter-rouge">TARGET_BRANCH</code> to your own</p>
 
-branches:
-  only:
-  - jekyll
+    <p><code class="highlighter-rouge">sh
+ $ git checkout jekyll
+</code></p>
 
-script:
-- bundle exec jekyll build
-- bundle exec htmlproofer ./_site --disable-external
+    <p>.travis.yml</p>
 
-after_success:
-- git clone https://$GH_REF
-- cd $(basename ${GH_REF%.git})
-- git config user.name "Travis-CI"
-- git config user.email ${EMAIL}
-- rsync -az --delete --exclude '.git*' ../_site/ .
-- touch .nojekyll
-- git add -A .
-- git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-- git push -f "https://${DEPLOY_KEY}@${GH_REF}" ${TARGET_BRANCH} &gt; /dev/null 2&gt;<span class="err">&amp;</span>1
+    <p>```xml
+ sudo: false</p>
 
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
-  - TARGET_BRANCH: master
-</code></pre></div></li>
-<li><p>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code>repo</code> that enough.</p></li>
-<li><p>Install Travis Gem on your machine for encryption sensitive data</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>gem install travis
-</code></pre></div></li>
-<li><p>Encrypt your <code>EMAIL</code> and <code>DEPLOY_KEY</code></p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># --add opton will automated add sescure data to your .travis.yml</span>
-<span class="c"># edit verifiedemail to your github email account</span>
-<span class="gp">$ </span>travis encrypt <span class="nv">EMAIL</span><span class="o">=</span>verifiedemail --add
-<span class="c"># edit githubtoken to your github personal access tokens</span>
-<span class="gp">$ </span>travis encrpy <span class="nv">DEPLOY_KEY</span><span class="o">=</span>githubtoken --add
-</code></pre></div></li>
-<li><p>Commit <code>jekyll</code> branch</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>git add -A
-<span class="gp">$ </span>git commit -m <span class="s2">"Create Jekyll branch for build jekyll with Travis"</span>
-</code></pre></div></li>
-<li><p>Push to <code>jekyll</code> branch to Github repository and wait</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>git push origin jekyll
-<span class="c"># Don't care warnning about main/gh-page branch that local repository out of date</span>
-</code></pre></div></li>
-<li><p>Look your published site</p></li>
+    <p>language: ruby</p>
+
+    <p>rvm:
+ - 2.2</p>
+
+    <p>branches:
+   only:
+   - jekyll</p>
+
+    <p>script:
+ - bundle exec jekyll build
+ - bundle exec htmlproofer ./_site –disable-external</p>
+
+    <p>after_success:
+ - git clone https://$GH_REF
+ - cd $(basename ${GH_REF%.git})
+ - git config user.name “Travis-CI”
+ - git config user.email ${EMAIL}
+ - rsync -az –delete –exclude ‘.git*’ ../_site/ .
+ - touch .nojekyll
+ - git add -A .
+ - git commit -m “Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}”
+ - git push -f “https://${DEPLOY_KEY}@${GH_REF}” ${TARGET_BRANCH} &gt; /dev/null 2&gt;&amp;1</p>
+
+    <p>env:
+   global:
+   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
+   - TARGET_BRANCH: master
+ ```</p>
+  </li>
+  <li>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code class="highlighter-rouge">repo</code> that enough.</li>
+  <li>
+    <p>Install Travis Gem on your machine for encryption sensitive data</p>
+
+    <p><code class="highlighter-rouge">sh
+ $ gem install travis
+</code></p>
+  </li>
+  <li>
+    <p>Encrypt your <code class="highlighter-rouge">EMAIL</code> and <code class="highlighter-rouge">DEPLOY_KEY</code></p>
+
+    <p><code class="highlighter-rouge">sh
+ # --add opton will automated add sescure data to your .travis.yml
+ # edit verifiedemail to your github email account
+ $ travis encrypt EMAIL=verifiedemail --add
+ # edit githubtoken to your github personal access tokens
+ $ travis encrpy DEPLOY_KEY=githubtoken --add
+</code></p>
+  </li>
+  <li>
+    <p>Commit <code class="highlighter-rouge">jekyll</code> branch</p>
+
+    <p><code class="highlighter-rouge">sh
+ $ git add -A
+ $ git commit -m "Create Jekyll branch for build jekyll with Travis"
+</code></p>
+  </li>
+  <li>
+    <p>Push to <code class="highlighter-rouge">jekyll</code> branch to Github repository and wait</p>
+
+    <p><code class="highlighter-rouge">sh
+ $ git push origin jekyll
+ # Don't care warnning about main/gh-page branch that local repository out of date
+</code></p>
+  </li>
+  <li>Look your published site</li>
 </ol>
 
-<h2 id="demo-repository"><a href="https://github.com/ibotdotout/ibotdotout.github.io">Demo Repository</a></h2>
-
-<p>I use <code>develop</code> branch as <code>jekyll</code> and I&#39;m lazy to change but I recommend to use <code>jekyll</code> branch should be better.</p>
+<h2 id="demo-repositoryhttpsgithubcomibotdotoutibotdotoutgithubio"><a href="https://github.com/ibotdotout/ibotdotout.github.io">Demo Repository</a></h2>
+<p>I use <code class="highlighter-rouge">develop</code> branch as <code class="highlighter-rouge">jekyll</code> and I’m lazy to change but I recommend to use <code class="highlighter-rouge">jekyll</code> branch should be better.</p>
 
 <h3 id="tips">Tips:</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># config local git repo to push only current active branch</span>
-<span class="gp">$ </span>git config push.default simple
-</code></pre></div>
-<h2 id="references">References:</h2>
 
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># config local git repo to push only current active branch</span>
+<span class="gp">$ </span>git config push.default simple
+</code></pre>
+</div>
+
+<h2 id="references">References:</h2>
 <ol>
-<li><a href="https://gist.github.com/domenic/ec8b0fc8ab45f39403dd">Auto-deploying built products to gh-pages with Travis</a></li>
-<li><a href="https://medium.com/@nthgergo/publishing-gh-pages-with-travis-ci-53a8270e87db">Publishing gh-pages with Travis-CI</a></li>
-<li><a href="http://eshepelyuk.github.io/2014/10/28/automate-github-pages-travisci.html">Automate GitHub Pages publishing with Jekyll and Travis CI</a></li>
-<li><a href="https://help.github.com/articles/troubleshooting-github-pages-build-failures/">Troubleshooting GitHub Pages build failures</a></li>
-<li><a href="http://docs.travis-ci.com/user/deployment/custom/">Travis Custom Deployment</a></li>
-<li><a href="http://docs.travis-ci.com/user/encryption-keys/">Travis Encryption keys</a></li>
-<li><a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Creating an access token for command-line use</a></li>
-<li><a href="https://github.com/blog/572-bypassing-jekyll-on-github-pages">Bypassing Jekyll on GitHub Pages</a></li>
+  <li><a href="https://gist.github.com/domenic/ec8b0fc8ab45f39403dd">Auto-deploying built products to gh-pages with Travis</a></li>
+  <li><a href="https://medium.com/@nthgergo/publishing-gh-pages-with-travis-ci-53a8270e87db">Publishing gh-pages with Travis-CI</a></li>
+  <li><a href="http://eshepelyuk.github.io/2014/10/28/automate-github-pages-travisci.html">Automate GitHub Pages publishing with Jekyll and Travis CI</a></li>
+  <li><a href="https://help.github.com/articles/troubleshooting-github-pages-build-failures/">Troubleshooting GitHub Pages build failures</a></li>
+  <li><a href="http://docs.travis-ci.com/user/deployment/custom/">Travis Custom Deployment</a></li>
+  <li><a href="http://docs.travis-ci.com/user/encryption-keys/">Travis Encryption keys</a></li>
+  <li><a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Creating an access token for command-line use</a></li>
+  <li><a href="https://github.com/blog/572-bypassing-jekyll-on-github-pages">Bypassing Jekyll on GitHub Pages</a></li>
 </ol>
 
   
@@ -351,6 +381,15 @@ env:
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -363,15 +402,6 @@ env:
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

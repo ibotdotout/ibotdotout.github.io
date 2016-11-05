@@ -214,9 +214,12 @@
   <p>Sometime, you download file from Internet specially file that in local language
 which not encode with UTF-8 that unreadable on OSX. Your should guess
 what encode that file using and convert it in to UTF-8.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># convert tis-620 to utf-8 encoding</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># convert tis-620 to utf-8 encoding</span>
 <span class="nv">$iconv</span> -f tis-620 -t utf-8 source.xml &gt; destination.xml
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Example. Thai language on Windows system normally encode with TIS-620 when
 open it in OSX that will display with some symbol char that unreadable.
 You should convert that file from tis-620 to utf-8 which make it readable on osx.</p>
@@ -224,11 +227,11 @@ You should convert that file from tis-620 to utf-8 which make it readable on osx
 <!-- more -->
 
 <h2 id="references">References:</h2>
-
 <ol>
-<li><a href="http://superuser.com/questions/151981/converting-the-encoding-of-a-text-file-mac-os-x">Converting the encoding of a text file (Mac OS X)</a></li>
-<li><a href="http://apple.stackexchange.com/questions/81663/is-there-a-mac-os-x-command-line-application-that-can-convert-text-encodings-fro">Is there a Mac OS X Command Line application that can convert text encodings from one type to another?  </a></li>
+  <li><a href="http://superuser.com/questions/151981/converting-the-encoding-of-a-text-file-mac-os-x">Converting the encoding of a text file (Mac OS X)</a></li>
+  <li><a href="http://apple.stackexchange.com/questions/81663/is-there-a-mac-os-x-command-line-application-that-can-convert-text-encodings-fro">Is there a Mac OS X Command Line application that can convert text encodings from one type to another?  </a></li>
 </ol>
+
 
   
     Tags:
@@ -246,6 +249,15 @@ You should convert that file from tis-620 to utf-8 which make it readable on osx
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -258,15 +270,6 @@ You should convert that file from tis-620 to utf-8 which make it readable on osx
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

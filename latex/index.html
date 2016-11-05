@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Install Latex OSX (mactex)$ brew cask install mactexFiguresHow to avoid showing the filename when using graphicx? - Ans: avoid filename with spacefigure span..." />
+<meta property="og:description" content="Install Latex OSX (mactex)$ brew cask install mactexFigures  How to avoid showing the filename when using graphicx? - Ans: avoid filename with space  figure ..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -212,29 +212,37 @@
   </span>
 
   <h3 id="install-latex-osx-mactex">Install Latex OSX (mactex)</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install mactex
-</code></pre></div>
-<h3 id="figures">Figures</h3>
 
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install mactex
+</code></pre>
+</div>
+
+<h3 id="figures">Figures</h3>
 <ul>
-<li><a href="http://tex.stackexchange.com/questions/4129/how-to-avoid-showing-the-filename-when-using-graphicx">How to avoid showing the filename when using graphicx?</a> - Ans: avoid filename with space</li>
-<li><a href="http://tex.stackexchange.com/questions/34063/figure-span-to-one-column-on-double-column-page">figure span to one column on double column page</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/4129/how-to-avoid-showing-the-filename-when-using-graphicx">How to avoid showing the filename when using graphicx?</a> - Ans: avoid filename with space</li>
+  <li><a href="http://tex.stackexchange.com/questions/34063/figure-span-to-one-column-on-double-column-page">figure span to one column on double column page</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
 <span class="nt">\begin{figure*}</span>
   <span class="k">\centering</span> <span class="k">\includegraphics</span><span class="p">{</span>figure<span class="p">}</span>
   <span class="k">\caption</span><span class="p">{</span>This is a figure caption<span class="p">}</span>
 <span class="nt">\end{figure*}</span>
-</code></pre></div>
-<h3 id="label">Label</h3>
+</code></pre>
+</div>
 
+<h3 id="label">Label</h3>
 <ul>
-<li><a href="http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">LaTeX/Labels and Cross-referencing</a></li>
+  <li><a href="http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">LaTeX/Labels and Cross-referencing</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
-</code></pre></div>
-<h3 id="landscape"><a href="http://tex.stackexchange.com/questions/168309/landscape-figure-on-different-page-to-heading">Landscape</a></h3>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
+</code></pre>
+</div>
+
+<h3 id="landscapehttptexstackexchangecomquestions168309landscape-figure-on-different-page-to-heading"><a href="http://tex.stackexchange.com/questions/168309/landscape-figure-on-different-page-to-heading">Landscape</a></h3>
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
 <span class="nt">\begin{landscape}</span>
@@ -243,9 +251,12 @@
 .
 <span class="nt">\end{landscape}</span>
 <span class="nt">\end{document}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="math-equation">Math Equation</h3>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"># inline equation
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code># inline equation
 <span class="p">$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$</span> #equation
 <span class="p">$$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$$</span> #equation in new line
 
@@ -256,188 +267,204 @@
 # equation array
 <span class="nt">\begin{eqnarray}</span>
 <span class="nt">\end{eqnarray}</span>
-</code></pre></div>
-<ul>
-<li><a href="http://www.clas.kitasato-u.ac.jp/%7Efujiwara/keyNote/equationToKeynote.html">Import equations into Keynote</a></li>
-<li><a href="https://www.youtube.com/watch?v=dgVrj62AiAU">Keynote - How to Math on slide (Video)</a></li>
-<li><a href="https://www.sharelatex.com/learn/Mathematical_expressions">Mathematical expressions</a></li>
-<li><a href="http://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX/Mathematics</a></li>
-<li><a href="https://kogler.wordpress.com/2008/03/21/latex-use-of-math-symbols-formulas-and-equations/">math symbols and equations</a></li>
-<li><a href="http://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf">The Great, Big List of LATEX Symbols</a></li>
-<li><a href="https://kogler.wordpress.com/2008/03/21/latex-multiline-equations-systems-and-matrices/">LaTeX – Multiline equations, systems and matrices</a></li>
-<li><a href="http://tex.stackexchange.com/questions/45001/how-do-i-left-align-entries-in-a-matrix-with-beginmatrix">How do I left-align entries in a matrix with \begin{matrix}?</a></li>
-</ul>
-
-<h3 id="table"><a href="https://www.sharelatex.com/learn/Tables">Table</a></h3>
+</code></pre>
+</div>
 
 <ul>
-<li><a href="http://www.tablesgenerator.com">LaTeX Table Generator</a></li>
-<li><a href="https://www.sharelatex.com/learn/Positioning_images_and_tables">Positioning images and tables</a></li>
-<li><a href="http://www.sascha-frank.com/Faq/tables_six.html">LaTeX table fixed width</a></li>
-<li><a href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a></li>
-<li><a href="http://en.wikibooks.org/wiki/LaTeX/Tables">LaTeX/Tables</a></li>
-<li><a href="http://www.howtotex.com/packages/improve-your-tables-with-booktabs/">Improve your tables with booktabs</a></li>
+  <li><a href="http://www.clas.kitasato-u.ac.jp/~fujiwara/keyNote/equationToKeynote.html">Import equations into Keynote</a></li>
+  <li><a href="https://www.youtube.com/watch?v=dgVrj62AiAU">Keynote - How to Math on slide (Video)</a></li>
+  <li><a href="https://www.sharelatex.com/learn/Mathematical_expressions">Mathematical expressions</a></li>
+  <li><a href="http://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX/Mathematics</a></li>
+  <li><a href="https://kogler.wordpress.com/2008/03/21/latex-use-of-math-symbols-formulas-and-equations/">math symbols and equations</a></li>
+  <li><a href="http://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf">The Great, Big List of LATEX Symbols</a></li>
+  <li><a href="https://kogler.wordpress.com/2008/03/21/latex-multiline-equations-systems-and-matrices/">LaTeX – Multiline equations, systems and matrices</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/45001/how-do-i-left-align-entries-in-a-matrix-with-beginmatrix">How do I left-align entries in a matrix with \begin{matrix}?</a></li>
 </ul>
 
-<h3 id="spreadtab-calculatable-table-latex">Spreadtab - Calculatable Table latex</h3>
-
+<h3 id="tablehttpswwwsharelatexcomlearntables"><a href="https://www.sharelatex.com/learn/Tables">Table</a></h3>
 <ul>
-<li><a href="http://tex.stackexchange.com/questions/30081/how-can-i-sum-two-values-and-store-the-result-in-other-variable">How can I sum two values and store the result in other variable?</a></li>
-<li><a href="http://tex.stackexchange.com/questions/130942/calculations-in-table-using-spreadtab">Calculations in Table using spreadtab</a></li>
-<li><a href="http://ctan.megagod.net/tex-archive/macros/latex/contrib/spreadtab/spreadtab_doc_en.pdf">Spreadtab User’s manual</a></li>
+  <li><a href="http://www.tablesgenerator.com">LaTeX Table Generator</a></li>
+  <li><a href="https://www.sharelatex.com/learn/Positioning_images_and_tables">Positioning images and tables</a></li>
+  <li><a href="http://www.sascha-frank.com/Faq/tables_six.html">LaTeX table fixed width</a></li>
+  <li><a href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a></li>
+  <li><a href="http://en.wikibooks.org/wiki/LaTeX/Tables">LaTeX/Tables</a></li>
+  <li><a href="http://www.howtotex.com/packages/improve-your-tables-with-booktabs/">Improve your tables with booktabs</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  # read more in document
-  # 2.5 Copy a formula
 
-  <span class="k">\STcopy</span><span class="p">{</span>&gt;x,vy<span class="p">}{</span>formula<span class="p">}</span>
+<h3 id="spreadtab---calculatable-table-latex">Spreadtab - Calculatable Table latex</h3>
+<ul>
+  <li><a href="http://tex.stackexchange.com/questions/30081/how-can-i-sum-two-values-and-store-the-result-in-other-variable">How can I sum two values and store the result in other variable?</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/130942/calculations-in-table-using-spreadtab">Calculations in Table using spreadtab</a></li>
+  <li>
+    <p><a href="http://ctan.megagod.net/tex-archive/macros/latex/contrib/spreadtab/spreadtab_doc_en.pdf">Spreadtab User’s manual</a></p>
 
-  # 3.2 Number formatting and the fp package
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code># read more in document
+# 2.5 Copy a formula
 
-  # foating point numbers are rounded to 2 digits
-  <span class="k">\STautoround</span><span class="p">{</span>2<span class="p">}</span>
-</code></pre></div>
+<span class="k">\STcopy</span><span class="p">{</span>&gt;x,vy<span class="p">}{</span>formula<span class="p">}</span>
+
+# 3.2 Number formatting and the fp package
+
+# foating point numbers are rounded to 2 digits
+<span class="k">\STautoround</span><span class="p">{</span>2<span class="p">}</span>
+</code></pre>
+    </div>
+  </li>
+</ul>
+
 <h3 id="separate-compilation-of-child-documents">Separate compilation of child documents</h3>
-
 <ul>
-<li><p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Subfiles">Subfiles</a></p>
+  <li>
+    <p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Subfiles">Subfiles</a></p>
 
-<blockquote>
-<p>use setting from master latex</p>
-</blockquote></li>
-<li><p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Standalone">Standalone</a></p>
+    <blockquote>
+      <p>use setting from master latex</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Standalone">Standalone</a></p>
 
-<blockquote>
-<p>have own setting not using from master latex</p>
-</blockquote></li>
+    <blockquote>
+      <p>have own setting not using from master latex</p>
+    </blockquote>
+  </li>
 </ul>
 
 <h3 id="tips">Tips</h3>
 
 <ul>
-<li><a href="http://tex.stackexchange.com/questions/124621/can-i-include-the-page-number-when-using-includepdf">Insert Pdf Page</a></li>
-<li><a href="http://tex.stackexchange.com/questions/185155/is-is-possible-to-not-abbreviate-the-author-name-of-only-one-reference-in-my-bib">Not abbreviate the author name</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/124621/can-i-include-the-page-number-when-using-includepdf">Insert Pdf Page</a></li>
+  <li>
+    <p><a href="http://tex.stackexchange.com/questions/185155/is-is-possible-to-not-abbreviate-the-author-name-of-only-one-reference-in-my-bib">Not abbreviate the author name</a></p>
+
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="http://ubuntuforums.org/showthread.php?t=1275429">citation treated like one word?</a></p>
+
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
+  # or using <span class="k">\hyphenation</span> to cut all the documents
+  <span class="k">\hyphenation</span><span class="p">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="p">}</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Word Cut</p>
+
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  using <span class="k">\-</span> or &lt; space &gt;
+</code></pre>
+    </div>
+  </li>
+  <li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">    author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
-</code></pre></div>
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
+</code></pre>
+</div>
+
 <ul>
-<li><a href="http://ubuntuforums.org/showthread.php?t=1275429">citation treated like one word?</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">    Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
-    # or using <span class="k">\hyphenation</span> to cut all the documents
-    <span class="k">\hyphenation</span><span class="p">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="p">}</span>
-</code></pre></div>
-<ul>
-<li>Word Cut</li>
-</ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">    using <span class="k">\-</span> or &lt; space &gt;
-</code></pre></div>
-<ul>
-<li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
-<li><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
-</code></pre></div>
-<ul>
-<li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
-<li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
-<li>hidden character</li>
-</ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  <span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
-</code></pre></div>
-<ul>
-<li><a href="http://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment">Custom alignment of text in itemized environment</a></li>
+  <li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
+  <li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
+  <li>
+    <p>hidden character</p>
+
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
+</code></pre>
+    </div>
+  </li>
+  <li><a href="http://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment">Custom alignment of text in itemized environment</a></li>
 </ul>
 
 <h3 id="ieee-paper">IEEE Paper</h3>
 
 <ol>
-<li><a href="https://softhandover.wordpress.com/2014/01/08/how-to-add-the-ieee-copyright-and-publication-id-on-a-ieeetran-conference-tex-file/">How to add the IEEE copyright and publication id on a IEEETran conference .tex file</a></li>
-<li><a href="https://www.youtube.com/watch?v=y0VrXGd_xRc">How to write a conference paper (IEEE, ACM) using Latex</a></li>
-<li><a href="https://www.youtube.com/watch?v=5ifh3NF-k-k">LaTeX tutorial: How to cite references/paper/articles in Latex</a></li>
+  <li><a href="https://softhandover.wordpress.com/2014/01/08/how-to-add-the-ieee-copyright-and-publication-id-on-a-ieeetran-conference-tex-file/">How to add the IEEE copyright and publication id on a IEEETran conference .tex file</a></li>
+  <li><a href="https://www.youtube.com/watch?v=y0VrXGd_xRc">How to write a conference paper (IEEE, ACM) using Latex</a></li>
+  <li><a href="https://www.youtube.com/watch?v=5ifh3NF-k-k">LaTeX tutorial: How to cite references/paper/articles in Latex</a></li>
 </ol>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  # cite to bibtex references
-  <span class="k">\usepackage</span><span class="p">{</span>cite<span class="p">}</span>
-  <span class="k">\cite</span><span class="p">{</span>sample1234<span class="p">}</span>
 
-  # referecnes from bibtex
-  <span class="k">\bibliographystyle</span><span class="p">{</span>IEEEtran<span class="p">}</span>
-  <span class="k">\bibliography</span><span class="p">{</span>file<span class="p">_</span>of<span class="p">_</span>bibex<span class="p">}</span>
-</code></pre></div>
+<p>```tex
+  # cite to bibtex references
+  \usepackage{cite}
+  \cite{sample1234}</p>
+
+<p># referecnes from bibtex
+  \bibliographystyle{IEEEtran}
+  \bibliography{file_of_bibex}
+  ```</p>
+
 <h3 id="bibtex">BibTex</h3>
-
 <ul>
-<li><a href="http://www.bibtex.org/Using/">How to use BibTeX</a></li>
-<li><a href="http://tex.stackexchange.com/questions/204291/bibtex-latex-compiling">Bibtex, Latex compiling</a></li>
+  <li><a href="http://www.bibtex.org/Using/">How to use BibTeX</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/204291/bibtex-latex-compiling">Bibtex, Latex compiling</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># build latex + bibtex</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># build latex + bibtex</span>
 <span class="gp">$ </span>pdflatex paper.tex
 <span class="gp">$ </span>bibtex paper <span class="c"># without extension</span>
 <span class="gp">$ </span>pdflatex paper.tex
 <span class="gp">$ </span>pdflatex paper.tex
-</code></pre></div>
-<h3 id="latex-slide-beamer">Latex Slide (Beamer)</h3>
+</code></pre>
+</div>
 
+<h3 id="latex-slide-beamer">Latex Slide (Beamer)</h3>
 <ul>
-<li><a href="https://www.sharelatex.com/blog/2013/08/13/beamer-series-pt1.html">Presentations with Beamer pt 1 - Getting Started</a></li>
-<li><a href="https://www.sharelatex.com/learn/Beamer">Beamer - ShareLatex</a></li>
-<li><a href="http://www.math-linux.com/latex-26/article/how-to-make-a-presentation-with-latex-introduction-to-beamer">How to make a presentation with Latex - Introduction to Beamer</a></li>
-<li><a href="http://tug.org/pracjourn/2005-4/mertz/mertz.pdf">Beamer by Example</a></li>
-<li><a href="http://heather.cs.ucdavis.edu/%7Ematloff/beamer.html">Norm Matloff&#39;s Quick Tutorial on the Beamer Package for Slide Making
+  <li><a href="https://www.sharelatex.com/blog/2013/08/13/beamer-series-pt1.html">Presentations with Beamer pt 1 - Getting Started</a></li>
+  <li><a href="https://www.sharelatex.com/learn/Beamer">Beamer - ShareLatex</a></li>
+  <li><a href="http://www.math-linux.com/latex-26/article/how-to-make-a-presentation-with-latex-introduction-to-beamer">How to make a presentation with Latex - Introduction to Beamer</a></li>
+  <li><a href="http://tug.org/pracjourn/2005-4/mertz/mertz.pdf">Beamer by Example</a></li>
+  <li><a href="http://heather.cs.ucdavis.edu/~matloff/beamer.html">Norm Matloff’s Quick Tutorial on the Beamer Package for Slide Making
 in LaTeX</a></li>
-<li><a href="http://www.latextemplates.com/cat/presentations">Presentations - Latex Templates</a></li>
+  <li><a href="http://www.latextemplates.com/cat/presentations">Presentations - Latex Templates</a></li>
 </ul>
 
 <h4 id="beamer-theme">Beamer Theme</h4>
-
 <ul>
-<li><a href="http://deic.uab.es/%7Eiblanes/beamer_gallery/index_by_theme.html">Beamer theme gallery</a></li>
-<li><a href="http://deic.uab.es/%7Eiblanes/beamer_gallery/individual/Copenhagen-default-default.html">Beamer theme gallery: Copenhagen default default</a></li>
+  <li><a href="http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html">Beamer theme gallery</a></li>
+  <li><a href="http://deic.uab.es/~iblanes/beamer_gallery/individual/Copenhagen-default-default.html">Beamer theme gallery: Copenhagen default default</a></li>
 </ul>
 
 <h3 id="resouces">Resouces</h3>
-
 <ol>
-<li><a href="http://thaitug.daytag.org/">Thai Latex User Group</a></li>
-<li><a href="https://thailatex.wordpress.com">Thai LaTeX and MATLAB</a></li>
-<li><a href="https://www.sharelatex.com/blog/latex-guides/beginners-tutorial.html">ShareLaTeX Blog</a></li>
-<li>Latex Online Editor - <a href="https://www.overleaf.com">Overleaf</a> , <a href="https://www.sharelatex.com">ShareLatex</a></li>
+  <li><a href="http://thaitug.daytag.org/">Thai Latex User Group</a></li>
+  <li><a href="https://thailatex.wordpress.com">Thai LaTeX and MATLAB</a></li>
+  <li><a href="https://www.sharelatex.com/blog/latex-guides/beginners-tutorial.html">ShareLaTeX Blog</a></li>
+  <li>Latex Online Editor - <a href="https://www.overleaf.com">Overleaf</a> , <a href="https://www.sharelatex.com">ShareLatex</a></li>
 </ol>
 
 <h4 id="video">Video</h4>
-
 <ol>
-<li><a href="https://www.youtube.com/playlist?list=PL8D253694FEBEEB72">Techpush LaTex Beginner Tutorial Guide</a></li>
-<li><a href="https://www.overleaf.com/help/category/video_tutorials">Video Tutorials - Overleaf</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PL8D253694FEBEEB72">Techpush LaTex Beginner Tutorial Guide</a></li>
+  <li><a href="https://www.overleaf.com/help/category/video_tutorials">Video Tutorials - Overleaf</a></li>
 </ol>
 
 <h4 id="book">Book</h4>
-
 <ol>
-<li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LATEX2ε</a></li>
-<li><a href="http://www.stdout.org/%7Ewinston/latex/latexsheet-a4.pdf">LATEX2ε Cheat Sheet</a></li>
+  <li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LATEX2ε</a></li>
+  <li><a href="http://www.stdout.org/~winston/latex/latexsheet-a4.pdf">LATEX2ε Cheat Sheet</a></li>
 </ol>
 
 <h4 id="example">Example</h4>
-
 <ol>
-<li><a href="http://carmaux.cs.gsu.edu/%7Emweeks/latex/">IEEE Example Conf/Journal</a></li>
+  <li><a href="http://carmaux.cs.gsu.edu/~mweeks/latex/">IEEE Example Conf/Journal</a></li>
 </ol>
 
 <h3 id="latex-docker">Latex Docker</h3>
-
 <ul>
-<li><a href="http://xmodulo.com/how-to-install-latex-on-ubuntu-or-debian.html">How to install LaTex on Ubuntu or Debian</a></li>
-<li><a href="https://www.blang.io/posts/2015-04_docker-tooling-latex/">Docker tooling - Latex</a></li>
-<li><a href="https://github.com/blang/latex-docker">Latex docker container</a></li>
+  <li><a href="http://xmodulo.com/how-to-install-latex-on-ubuntu-or-debian.html">How to install LaTex on Ubuntu or Debian</a></li>
+  <li><a href="https://www.blang.io/posts/2015-04_docker-tooling-latex/">Docker tooling - Latex</a></li>
+  <li><a href="https://github.com/blang/latex-docker">Latex docker container</a></li>
 </ul>
 
 <h3 id="etc">ETC.</h3>
-
 <ul>
-<li><a href="http://thep.blogspot.com/2009/07/thailatex-now-supports-utf-8.html">ThaiLaTeX Now Supports UTF-8</a></li>
-<li><a href="http://thep.blogspot.com/2014/09/swath-053.html">swath</a></li>
-<li><a href="http://tex.stackexchange.com/questions/258/what-is-the-difference-between-let-and-def">What is the difference between \let and \def?</a></li>
-<li><a href="http://tex.stackexchange.com/questions/655/what-is-the-difference-between-def-and-newcommand">What is the difference between \def and \newcommand?</a></li>
+  <li><a href="http://thep.blogspot.com/2009/07/thailatex-now-supports-utf-8.html">ThaiLaTeX Now Supports UTF-8</a></li>
+  <li><a href="http://thep.blogspot.com/2014/09/swath-053.html">swath</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/258/what-is-the-difference-between-let-and-def">What is the difference between \let and \def?</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/655/what-is-the-difference-between-def-and-newcommand">What is the difference between \def and \newcommand?</a></li>
 </ul>
 
   
@@ -456,6 +483,15 @@ in LaTeX</a></li>
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -468,15 +504,6 @@ in LaTeX</a></li>
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

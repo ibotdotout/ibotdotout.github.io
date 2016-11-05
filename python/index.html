@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Tips:Flattened list of list  &gt;&gt;&gt; l = [[1,5,6], [4,5,9,7] ,[] ,[] ,[9]]  [[1, 5, 6], [4, 5, 9, 7], [], [], [9]]  &gt;&gt;&gt; sum(l, [])  [1, 5, 6, 4..." />
+<meta property="og:description" content="Tips:      Flattened list of list    &gt;&gt;&gt; l = [[1,5,6], [4,5,9,7] ,[] ,[] ,[9]][[1, 5, 6], [4, 5, 9, 7], [], [], [9]]&gt;&gt;&gt; sum(l, [])[1, 5, 6,..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -212,288 +212,341 @@
   </span>
 
   <h3 id="tips">Tips:</h3>
+<ul>
+  <li>
+    <p>Flattened list of list</p>
+
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> <span class="p">,[]</span> <span class="p">,[]</span> <span class="p">,[</span><span class="mi">9</span><span class="p">]]</span>
+<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">9</span><span class="p">]]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="p">[])</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Else with for loop</p>
+
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)):</span>
+<span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="n">i</span><span class="p">,</span>
+<span class="o">&gt;&gt;</span> <span class="k">else</span><span class="p">:</span>
+<span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="mi">10</span>
+<span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Zen of Python :: run this command in python console</p>
+
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">this</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Virtualenv with system package</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> virtualenv --system-site-packages &lt;env_name&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Virtualenv with python3</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>virtualenv --python<span class="o">=</span><span class="k">$(</span>which python3<span class="k">)</span> &lt;env_name&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Virtualenv can’t move. You must edit environment path in</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>&lt;your_env&gt;/bin/activate
+&lt;your_env&gt;/bin/activate.csh
+&lt;your_env&gt;/bin/activate.finsh
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Install py package into python2</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install &lt;package&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Install py package into python3</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip3 install &lt;package&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Pip upgrade</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install &lt;package&gt; --upgrade
+</code></pre>
+    </div>
+
+    <p>or you can use <a href="https://github.com/nvie/pip-tools">pip-tool</a> to review all pip-package to upgrade</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install pip-tools
+pip-review
+pip-dump
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Install Project as develop via pip</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># same as 'python setup.py develope'</span>
+pip install --use-mirrors --editable .
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="http://stackoverflow.com/questions/493386/how-to-print-in-python-without-newline-or-space">Print without newline or spaces</a></p>
+
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="http://stackoverflow.com/questions/1027714/how-to-execute-a-file-within-the-python-interpreter">How to execute a file within the python interpreter?</a></p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">execfile</span><span class="p">(</span><span class="s">'filename.py'</span><span class="p">)</span>
+</code></pre>
+</div>
 
 <ul>
-<li>Flattened list of list</li>
+  <li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> <span class="p">,[]</span> <span class="p">,[]</span> <span class="p">,[</span><span class="mi">9</span><span class="p">]]</span>
-  <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">9</span><span class="p">]]</span>
-  <span class="o">&gt;&gt;&gt;</span> <span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="p">[])</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-  <span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">]</span>
-  <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-</code></pre></div>
-<ul>
-<li>Else with for loop</li>
-</ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="o">&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)):</span>
-  <span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="n">i</span><span class="p">,</span>
-  <span class="o">&gt;&gt;</span> <span class="k">else</span><span class="p">:</span>
-  <span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="mi">10</span>
-  <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
-</code></pre></div>
-<ul>
-<li>Zen of Python :: run this command in python console</li>
-</ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">this</span>
-</code></pre></div>
-<ul>
-<li>Virtualenv with system package</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">   virtualenv --system-site-packages &lt;env_name&gt;
-</code></pre></div>
-<ul>
-<li>Virtualenv with python3</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  virtualenv --python<span class="o">=</span><span class="k">$(</span>which python3<span class="k">)</span> &lt;env_name&gt;
-</code></pre></div>
-<ul>
-<li>Virtualenv can&#39;t move. You must edit environment path in</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  &lt;your_env&gt;/bin/activate
-  &lt;your_env&gt;/bin/activate.csh
-  &lt;your_env&gt;/bin/activate.finsh
-</code></pre></div>
-<ul>
-<li>Install py package into python2</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install &lt;package&gt;
-</code></pre></div>
-<ul>
-<li>Install py package into python3</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip3 install &lt;package&gt;
-</code></pre></div>
-<ul>
-<li>Pip upgrade</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install &lt;package&gt; --upgrade
-</code></pre></div>
-<p>or you can use <a href="https://github.com/nvie/pip-tools">pip-tool</a> to review all pip-package to upgrade</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install pip-tools
-  pip-review
-  pip-dump
-</code></pre></div>
-<ul>
-<li>Install Project as develop via pip</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># same as 'python setup.py develope'</span>
-  pip install --use-mirrors --editable .
-</code></pre></div>
-<ul>
-<li><a href="http://stackoverflow.com/questions/493386/how-to-print-in-python-without-newline-or-space">Print without newline or spaces</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">sys</span>
 
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-      <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
-      <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-</code></pre></div>
-<ul>
-<li><a href="http://stackoverflow.com/questions/1027714/how-to-execute-a-file-within-the-python-interpreter">How to execute a file within the python interpreter?</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="nb">execfile</span><span class="p">(</span><span class="s">'filename.py'</span><span class="p">)</span>
-</code></pre></div>
-<ul>
-<li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">X</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">X</span>
 <span class="nb">reload</span><span class="p">(</span> <span class="n">X</span> <span class="p">)</span>
-</code></pre></div>
-<ul>
-<li><a href="http://stackoverflow.com/questions/7300321/how-to-use-pythons-pip-to-download-and-keep-the-zipped-files-for-a-package">How to use Python&#39;s pip to download and keep the zipped files for a package?</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>pip install --download-cache<span class="o">=</span><span class="s2">"/pth/to/downloaded/files"</span> package
-</code></pre></div>
-<ul>
-<li><p><a href="http://bhfsteve.blogspot.se/2014/07/embedding-python-in-bash-scripts.html">Embedding python in bash scripts</a></p>
+</code></pre>
+</div>
 
 <ul>
-<li><a href="http://stackoverflow.com/questions/29734394/running-a-python-function-as-a-bash-command">Running a python function as a bash command</a></li>
-<li><a href="https://gist.github.com/jiaaro/5452675">Embed Python in a bash script</a></li>
+  <li><a href="http://stackoverflow.com/questions/7300321/how-to-use-pythons-pip-to-download-and-keep-the-zipped-files-for-a-package">How to use Python’s pip to download and keep the zipped files for a package?</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">function </span>line <span class="o">{</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>pip install --download-cache<span class="o">=</span><span class="s2">"/pth/to/downloaded/files"</span> package
+</code></pre>
+</div>
+
+<ul>
+  <li><a href="http://bhfsteve.blogspot.se/2014/07/embedding-python-in-bash-scripts.html">Embedding python in bash scripts</a>
+    <ul>
+      <li><a href="http://stackoverflow.com/questions/29734394/running-a-python-function-as-a-bash-command">Running a python function as a bash command</a></li>
+      <li>
+        <p><a href="https://gist.github.com/jiaaro/5452675">Embed Python in a bash script</a></p>
+
+        <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="k">function </span>line <span class="o">{</span>
 <span class="nv">PYTHON_ARG</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> python - <span class="sh">&lt;&lt;END
 import os
 line_len = int(os.environ['PYTHON_ARG'])
 print '-' * line_len
 END
 </span><span class="o">}</span>
-</code></pre></div>
-<ul>
-<li><a href="http://stackoverflow.com/questions/2119702/calling-a-python-function-from-bash-script">Calling a python function from bash script</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">python -c<span class="s1">'import themodule; themodule.thefunction("boo!")'</span>
-</code></pre></div></li>
-<li><p><a href="http://stackoverflow.com/questions/5574702/how-to-print-to-stderr-in-python">How to print to stderr in Python?</a></p></li>
-</ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="k">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s">'word'</span>
-</code></pre></div>
-<h2 id="tools">Tools:</h2>
+</code></pre>
+        </div>
+      </li>
+      <li>
+        <p><a href="http://stackoverflow.com/questions/2119702/calling-a-python-function-from-bash-script">Calling a python function from bash script</a></p>
 
-<ul>
-<li><a href="http://virtualenv.readthedocs.org">Virtualenv</a>
-<a href="http://code.tutsplus.com/articles/python-power-tools-virtualenv--net-31560">Python Power Tools: virtualenv</a></li>
+        <div class="language-sh highlighter-rouge"><pre class="highlight"><code>python -c<span class="s1">'import themodule; themodule.thefunction("boo!")'</span>
+</code></pre>
+        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="http://stackoverflow.com/questions/5574702/how-to-print-to-stderr-in-python">How to print to stderr in Python?</a></p>
+
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s">'word'</span>
+</code></pre>
+    </div>
+  </li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install virtualenv
-</code></pre></div>
-<p>Or</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  brew install pyenv-virtualenv
-</code></pre></div>
+
+<h2 id="tools">Tools:</h2>
 <ul>
-<li><a href="http://virtualenvwrapper.readthedocs.org">VirtualenvWrapper</a> -  <a href="http://code.tutsplus.com/articles/python-power-tools-virtualenvwrapper--net-31569">Python Power Tools: virtualenvwrapper</a></li>
+  <li>
+    <p><a href="http://virtualenv.readthedocs.org">Virtualenv</a>
+<a href="http://code.tutsplus.com/articles/python-power-tools-virtualenv--net-31560">Python Power Tools: virtualenv</a></p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install virtualenv
+</code></pre>
+    </div>
+
+    <p>Or</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew install pyenv-virtualenv
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="http://virtualenvwrapper.readthedocs.org">VirtualenvWrapper</a> -  <a href="http://code.tutsplus.com/articles/python-power-tools-virtualenvwrapper--net-31569">Python Power Tools: virtualenvwrapper</a></p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install virtualenvwrapper
+</code></pre>
+    </div>
+    <p>add this into your .bashrc/.zshrc</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span>&lt;env_path&gt;
+<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="https://github.com/kennethreitz/autoenv">AutoEnv</a></p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew install autoenv
+<span class="nb">echo</span> <span class="s1">'source /usr/local/opt/autoenv/activate.sh'</span> &gt;&gt; ~/.zshrc
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="https://github.com/hhatto/autopep8">AutoPEP8</a></p>
+  </li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install virtualenvwrapper
-</code></pre></div>
-<p>add this into your .bashrc/.zshrc</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span>&lt;env_path&gt;
-  <span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
-</code></pre></div>
-<ul>
-<li><a href="https://github.com/kennethreitz/autoenv">AutoEnv</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  brew install autoenv
-  <span class="nb">echo</span> <span class="s1">'source /usr/local/opt/autoenv/activate.sh'</span> &gt;&gt; ~/.zshrc
-</code></pre></div>
-<ul>
-<li><a href="https://github.com/hhatto/autopep8">AutoPEP8</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># install</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># install</span>
 <span class="gp">$ </span>pip install --upgrade autopep8
 <span class="c"># usage</span>
 <span class="gp">$ </span>autopep8 --in-place --aggressive --aggressive &lt;filename&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <ul>
-<li><a href="https://www.logilab.org/blogentry/6883">Pyreverse : UML Diagrams for Python</a></li>
+  <li><a href="https://www.logilab.org/blogentry/6883">Pyreverse : UML Diagrams for Python</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># install</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># install</span>
 <span class="gp">$ </span>pip install pylint
 <span class="gp">$ </span>apt-get install graphviz
 
 <span class="c"># usage</span>
 pyreverse -o png &lt;code&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <ul>
-<li><a href="http://aboumrad.info/essential-python-tools-quality.html">Essential python tools - Quality</a></li>
+  <li><a href="http://aboumrad.info/essential-python-tools-quality.html">Essential python tools - Quality</a></li>
 </ul>
 
 <h2 id="python-project">Python Project</h2>
-
 <ol>
-<li><a href="https://www.quora.com/What-are-good-open-source-projects-in-Python-to-contribute-to-and-start-learning-Python">What are good open source projects in Python to contribute to and start learning Python?</a></li>
-<li><a href="http://openhatch.org/search/?toughness=bitesize&amp;language=Python">OpenHatch find project to contribute</a></li>
-<li><a href="https://news.ycombinator.com/item?id=9896369">Ask HN: Good Python codebases to read?</a></li>
+  <li><a href="https://www.quora.com/What-are-good-open-source-projects-in-Python-to-contribute-to-and-start-learning-Python">What are good open source projects in Python to contribute to and start learning Python?</a></li>
+  <li><a href="http://openhatch.org/search/?toughness=bitesize&amp;language=Python">OpenHatch find project to contribute</a></li>
+  <li><a href="https://news.ycombinator.com/item?id=9896369">Ask HN: Good Python codebases to read?</a></li>
 </ol>
 
 <h2 id="idiomatic-python">Idiomatic Python:</h2>
-
 <ol>
-<li><a href="http://www.cafepy.com/article/be_pythonic/">Be Pythonic</a></li>
-<li><a href="http://blog.startifact.com/posts/older/what-is-pythonic.html">What is Pythonic?</a></li>
-<li><a href="http://courses.cms.caltech.edu/cs11/material/python/misc/python_idioms.html">Python track: python idioms</a></li>
-<li><a href="http://python.net/%7Egoodger/projects/pycon/2007/idiomatic/handout.html">Code Like a Pythonista: Idiomatic Python</a></li>
-<li><a href="http://legacy.python.org/dev/peps/pep-0008/">PEP8</a></li>
-<li><a href="http://docs.python-guide.org/en/latest/">The Hitchhiker’s Guide to Python!</a></li>
-<li><a href="http://legacy.python.org/dev/peps/">Index of Python Enhancement Proposals</a></li>
-<li><a href="http://sahandsaba.com/thirtyMalika-python-language-features-and-tricks-you-may-not-know.html">30 Python Language Features and Tricks You May Not Know About</a></li>
-<li><a href="https://speakerdeck.com/pyconslides/transforming-code-into-beautiful-idiomatic-python-by-raymond-hettinger-1">Transforming code into Beautiful, Idiomatic Python by Raymond Hettinger</a></li>
-<li><a href="http://www.siafoo.net/article/52">Python Tips, Tricks, and Hacks</a></li>
-<li><a href="http://www.jeffknupp.com/blog/2012/10/04/writing-idiomatic-python/">Writing Idiomatic Python</a></li>
-<li><a href="http://python-3-patterns-idioms-test.readthedocs.org/en/latest/">Python 3 Patterns, Recipes and Idioms</a></li>
-<li><a href="https://speakerdeck.com/pycon2014/decorators-a-powerful-weapon-in-your-python-arsenal-by-colton-myers">Decorators: A Powerful Weapon in Your Python Arsenal</a></li>
-<li><a href="http://lignos.org/py_antipatterns/">Anti-Patterns in Python Programming</a></li>
-<li><a href="http://www.reddit.com/r/Python/comments/2e5wb7/best_python_tricks_and_oneliners/">Best python tricks and one-liners</a></li>
-<li><a href="https://www.airpair.com/python/posts/python-tips-and-traps">Python Tips and Traps</a></li>
-<li><a href="http://zokis.github.io/Python--Faster-Way/">Python: faster way Tricks for your code run faster</a></li>
-<li><a href="http://docs.quantifiedcode.com/python-anti-patterns/index.html#">The Little Book of Python Anti-Patterns</a></li>
+  <li><a href="http://www.cafepy.com/article/be_pythonic/">Be Pythonic</a></li>
+  <li><a href="http://blog.startifact.com/posts/older/what-is-pythonic.html">What is Pythonic?</a></li>
+  <li><a href="http://courses.cms.caltech.edu/cs11/material/python/misc/python_idioms.html">Python track: python idioms</a></li>
+  <li><a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html">Code Like a Pythonista: Idiomatic Python</a></li>
+  <li><a href="http://legacy.python.org/dev/peps/pep-0008/">PEP8</a></li>
+  <li><a href="http://docs.python-guide.org/en/latest/">The Hitchhiker’s Guide to Python!</a></li>
+  <li><a href="http://legacy.python.org/dev/peps/">Index of Python Enhancement Proposals</a></li>
+  <li><a href="http://sahandsaba.com/thirtyMalika-python-language-features-and-tricks-you-may-not-know.html">30 Python Language Features and Tricks You May Not Know About</a></li>
+  <li><a href="https://speakerdeck.com/pyconslides/transforming-code-into-beautiful-idiomatic-python-by-raymond-hettinger-1">Transforming code into Beautiful, Idiomatic Python by Raymond Hettinger</a></li>
+  <li><a href="http://www.siafoo.net/article/52">Python Tips, Tricks, and Hacks</a></li>
+  <li><a href="http://www.jeffknupp.com/blog/2012/10/04/writing-idiomatic-python/">Writing Idiomatic Python</a></li>
+  <li><a href="http://python-3-patterns-idioms-test.readthedocs.org/en/latest/">Python 3 Patterns, Recipes and Idioms</a></li>
+  <li><a href="https://speakerdeck.com/pycon2014/decorators-a-powerful-weapon-in-your-python-arsenal-by-colton-myers">Decorators: A Powerful Weapon in Your Python Arsenal</a></li>
+  <li><a href="http://lignos.org/py_antipatterns/">Anti-Patterns in Python Programming</a></li>
+  <li><a href="http://www.reddit.com/r/Python/comments/2e5wb7/best_python_tricks_and_oneliners/">Best python tricks and one-liners</a></li>
+  <li><a href="https://www.airpair.com/python/posts/python-tips-and-traps">Python Tips and Traps</a></li>
+  <li><a href="http://zokis.github.io/Python--Faster-Way/">Python: faster way Tricks for your code run faster</a></li>
+  <li><a href="http://docs.quantifiedcode.com/python-anti-patterns/index.html#">The Little Book of Python Anti-Patterns</a></li>
 </ol>
 
 <h2 id="tutorial-python">Tutorial Python</h2>
-
 <ol>
-<li><a href="http://github.com/gregmalcolm/python_koans">Python Koans</a></li>
-<li><a href="http://newcoder.io">New Coder Python</a></li>
-<li><a href="http://interactivepython.org/runestone/static/pythonds/index.html">Problem Solving with Algorithms and Data Structures Python</a></li>
-<li><a href="http://interactivepython.org/runestone/static/everyday/index.html">Everyday Python Project</a></li>
-<li><a href="https://developers.google.com/edu/python/regular-expressions">Python Regular Expressions</a></li>
-<li><a href="http://anandology.com/python-practice-book/index.html">Python Practice Book</a></li>
+  <li><a href="http://github.com/gregmalcolm/python_koans">Python Koans</a></li>
+  <li><a href="http://newcoder.io">New Coder Python</a></li>
+  <li><a href="http://interactivepython.org/runestone/static/pythonds/index.html">Problem Solving with Algorithms and Data Structures Python</a></li>
+  <li><a href="http://interactivepython.org/runestone/static/everyday/index.html">Everyday Python Project</a></li>
+  <li><a href="https://developers.google.com/edu/python/regular-expressions">Python Regular Expressions</a></li>
+  <li><a href="http://anandology.com/python-practice-book/index.html">Python Practice Book</a></li>
 </ol>
 
 <h2 id="functional-programming-in-python">Functional Programming in Python</h2>
-
 <ol>
-<li><a href="http://www.oreilly.com/programming/free/files/functional-programming-python.pdf">O&#39;Reilly Functional Programming in Python</a></li>
-<li><a href="http://kachayev.github.io/talks/uapycon2012/#/">FUNCTIONAL PROGRAMMING WITH PYTHON by BY ALEXEY KACHAYEV, 2012</a></li>
-<li><a href="https://docs.python.org/3.5/howto/functional.html">Functional Programming HOWTO</a></li>
+  <li><a href="http://www.oreilly.com/programming/free/files/functional-programming-python.pdf">O’Reilly Functional Programming in Python</a></li>
+  <li><a href="http://kachayev.github.io/talks/uapycon2012/#/">FUNCTIONAL PROGRAMMING WITH PYTHON by BY ALEXEY KACHAYEV, 2012</a></li>
+  <li><a href="https://docs.python.org/3.5/howto/functional.html">Functional Programming HOWTO</a></li>
 </ol>
 
 <h2 id="design-patterns-python">Design Patterns Python:</h2>
-
 <ol>
-<li><a href="https://github.com/faif/python-patterns">Python Patterns</a></li>
-<li><a href="http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/">Six GoF design patterns, Python style</a></li>
-<li><a href="http://ginstrom.com/scribbles/2008/11/06/generic-adapter-class-in-python/">Generic adapter class in Python</a></li>
-<li><a href="http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Bridge_Pattern#Python">Bridge Patterns Python</a></li>
-<li><a href="http://stevenloria.com/python-best-practice-patterns-by-vladimir-keleshev-notes/">Python Best Practice Patterns by Vladimir Keleshev</a></li>
-<li><a href="http://www.slideshare.net/DrTrucho/python-solid">Python SOLID</a></li>
-<li><a href="http://pyvideo.org/video/2840/the-clean-architecture-in-python">The Clean Architecture in Python</a></li>
-<li><a href="http://pyvideo.org/video/880/stop-writing-classes">Stop Writing Classes</a></li>
+  <li><a href="https://github.com/faif/python-patterns">Python Patterns</a></li>
+  <li><a href="http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/">Six GoF design patterns, Python style</a></li>
+  <li><a href="http://ginstrom.com/scribbles/2008/11/06/generic-adapter-class-in-python/">Generic adapter class in Python</a></li>
+  <li><a href="http://en.wikibooks.org/wiki/Computer_Science_Design_Patterns/Bridge_Pattern#Python">Bridge Patterns Python</a></li>
+  <li><a href="http://stevenloria.com/python-best-practice-patterns-by-vladimir-keleshev-notes/">Python Best Practice Patterns by Vladimir Keleshev</a></li>
+  <li><a href="http://www.slideshare.net/DrTrucho/python-solid">Python SOLID</a></li>
+  <li><a href="http://pyvideo.org/video/2840/the-clean-architecture-in-python">The Clean Architecture in Python</a></li>
+  <li><a href="http://pyvideo.org/video/880/stop-writing-classes">Stop Writing Classes</a></li>
 </ol>
 
 <h2 id="optimization-python">Optimization Python</h2>
-
 <ol>
-<li><a href="http://ianwitham.wordpress.com/2009/12/18/making-python-programs-run-faster/">10 Ways to Make Python Go Faster</a></li>
-<li><a href="http://maxburstein.com/blog/speeding-up-your-python-code/">Speeding Up Your Python Code</a></li>
-<li><a href="https://wiki.python.org/moin/PythonSpeed">PythonSpeed</a></li>
-<li><a href="http://lukauskas.co.uk/articles/2014/02/12/how-to-make-python-faster-without-trying-that-much/">How to Make Python Faster Without Trying That Much</a></li>
+  <li><a href="http://ianwitham.wordpress.com/2009/12/18/making-python-programs-run-faster/">10 Ways to Make Python Go Faster</a></li>
+  <li><a href="http://maxburstein.com/blog/speeding-up-your-python-code/">Speeding Up Your Python Code</a></li>
+  <li><a href="https://wiki.python.org/moin/PythonSpeed">PythonSpeed</a></li>
+  <li><a href="http://lukauskas.co.uk/articles/2014/02/12/how-to-make-python-faster-without-trying-that-much/">How to Make Python Faster Without Trying That Much</a></li>
 </ol>
 
 <h2 id="python-debugger-pdb">Python Debugger (pdb)</h2>
-
 <ol>
-<li><a href="http://stackoverflow.com/questions/4228637/getting-started-with-the-python-debugger-pdb">Getting started with the Python Debugger pdb</a></li>
-<li><a href="https://gimmebar-assets.s3.amazonaws.com/4fe38b76be0a5.html">Python Debugging Techniques</a></li>
-<li><a href="https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/">Debugging in Python</a></li>
-<li><a href="http://tech.pro/tutorial/1382/getting-started-with-the-python-debugger">Getting Started with the Python Debugger</a></li>
-<li><a href="http://pymotw.com/2/pdb/#temporary-breakpoints">pdb – Interactive Debugger</a></li>
-<li><a href="https://www.youtube.com/watch?v=bZZTeKPRSLQ">Tutorial: Debugging your Python Applications with pdb(Youtube)</a></li>
-<li><a href="https://www.youtube.com/watch?v=vfPtGsSJldg">Introduction to PDB(Youtube)</a></li>
-<li><a href="http://stackoverflow.com/questions/4950637/setting-breakpoints-with-nosetests-pdb-option">setting breakpoints with nosetests --pdb option</a></li>
+  <li><a href="http://stackoverflow.com/questions/4228637/getting-started-with-the-python-debugger-pdb">Getting started with the Python Debugger pdb</a></li>
+  <li><a href="https://gimmebar-assets.s3.amazonaws.com/4fe38b76be0a5.html">Python Debugging Techniques</a></li>
+  <li><a href="https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/">Debugging in Python</a></li>
+  <li><a href="http://tech.pro/tutorial/1382/getting-started-with-the-python-debugger">Getting Started with the Python Debugger</a></li>
+  <li><a href="http://pymotw.com/2/pdb/#temporary-breakpoints">pdb – Interactive Debugger</a></li>
+  <li><a href="https://www.youtube.com/watch?v=bZZTeKPRSLQ">Tutorial: Debugging your Python Applications with pdb(Youtube)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=vfPtGsSJldg">Introduction to PDB(Youtube)</a></li>
+  <li><a href="http://stackoverflow.com/questions/4950637/setting-breakpoints-with-nosetests-pdb-option">setting breakpoints with nosetests –pdb option</a></li>
 </ol>
 
 <h2 id="logging">Logging</h2>
-
 <ol>
-<li><a href="https://www.youtube.com/watch?v=24_4WWkSmNo">Become a logging expert in 30 minutes(Youtube)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=24_4WWkSmNo">Become a logging expert in 30 minutes(Youtube)</a></li>
 </ol>
 
 <h2 id="framework">Framework</h2>
-
 <ol>
-<li><a href="https://github.com/ibotdotout/awesome-python">Awesome Python</a></li>
+  <li><a href="https://github.com/ibotdotout/awesome-python">Awesome Python</a></li>
 </ol>
 
 <h2 id="python-tutorial">Python Tutorial</h2>
-
 <ol>
-<li><a href="https://github.com/s16h/py-must-watch">Must-watch videos about Python</a></li>
-<li><a href="http://pyvideo.org">pyvideo.org</a></li>
+  <li><a href="https://github.com/s16h/py-must-watch">Must-watch videos about Python</a></li>
+  <li><a href="http://pyvideo.org">pyvideo.org</a></li>
 </ol>
 
-<h2 id="python-testing"><a href="/python-testing">Python Testing</a></h2>
+<h2 id="python-testingpython-testing"><a href="/python-testing">Python Testing</a></h2>
 
 <h2 id="etc">ETC.</h2>
-
 <ol>
-<li><a href="http://stackoverflow.com/questions/73663/terminating-a-python-script">Terminating a Python script</a></li>
-<li><a href="http://stackoverflow.com/questions/6908143/should-i-put-shebang-in-python-scripts-and-what-form-should-it-take">Should I put #! (shebang) in Python scripts, and what form should it
+  <li><a href="http://stackoverflow.com/questions/73663/terminating-a-python-script">Terminating a Python script</a></li>
+  <li><a href="http://stackoverflow.com/questions/6908143/should-i-put-shebang-in-python-scripts-and-what-form-should-it-take">Should I put #! (shebang) in Python scripts, and what form should it
 take?</a></li>
-<li><a href="http://stackoverflow.com/questions/15328623/simple-file-server-to-serve-current-directory">Simple file server to serve current directory</a></li>
-<li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported using &quot;from module import *&quot;</a></li>
-<li><a href="https://asmeurer.github.io/python3-presentation/slides.html#1">10 awesome features of Python that you can&#39;t use because you refuse to upgrade to Python 3</a></li>
-<li><a href="http://thep.blogspot.com/2016/04/from-c-to-python-1.html">From C++ to Python (1) - ไทย</a></li>
-<li><a href="http://thep.blogspot.com/2016/05/from-c-to-python-2.html">From C++ to Python (2) - ไทย</a></li>
+  <li><a href="http://stackoverflow.com/questions/15328623/simple-file-server-to-serve-current-directory">Simple file server to serve current directory</a></li>
+  <li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported using “from module import *”</a></li>
+  <li><a href="https://asmeurer.github.io/python3-presentation/slides.html#1">10 awesome features of Python that you can’t use because you refuse to upgrade to Python 3</a></li>
+  <li><a href="http://thep.blogspot.com/2016/04/from-c-to-python-1.html">From C++ to Python (1) - ไทย</a></li>
+  <li><a href="http://thep.blogspot.com/2016/05/from-c-to-python-2.html">From C++ to Python (2) - ไทย</a></li>
 </ol>
 
   
@@ -512,6 +565,15 @@ take?</a></li>
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -524,15 +586,6 @@ take?</a></li>
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

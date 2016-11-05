@@ -204,6 +204,36 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/docker-cron/">
+        Crontab on Docker
+      </a>
+    </h1>
+
+    <span class="post-date">
+      04 Mar 2016
+      
+        &middot;
+        <a href="/docker-cron/#disqus_thread" data-disqus-identifier="/docker-cron/"></a>
+        
+          &middot;
+          Updated March 20, 2016
+        
+      
+    </span>
+
+    
+      <p>You can start <code class="highlighter-rouge">crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
+just put <code class="highlighter-rouge">crontab</code> in <code class="highlighter-rouge">/etc/cron.d/</code> and run <code class="highlighter-rouge">cron</code> for making it working.</p>
+
+
+      <div style="text-align:right;">
+        <a href="/docker-cron/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/docker-reduce-image-size/">
         Reduce docker image size
       </a>
@@ -225,17 +255,15 @@
       <p>Reduce Docker image size can help your to portable your contain
 across network, save bandwidth and storage, faster to scale.</p>
 
-<h2 id="1-using-alpine-base-image-when-possible">1. Using <a href="https://hub.docker.com/_/alpine/">alpine</a> base image when possible</h2>
-
+<h2 id="using-alpinehttpshubdockercomalpine-base-image-when-possible">1. Using <a href="https://hub.docker.com/_/alpine/">alpine</a> base image when possible</h2>
 <p>It is minimal Docker image based on Alpine Linux that only 5 MB.
-You can install packages with <code>apk add --update &lt;pakckages&gt;</code> and
+You can install packages with <code class="highlighter-rouge">apk add --update &lt;pakckages&gt;</code> and
 you can check packages that avaible on <a href="https://pkgs.alpinelinux.org/packages">alpine packages</a>.</p>
 
-<h3 id="debian-ubuntu-vs-alpine">Debian/Ubuntu vs Alpine</h3>
-
+<h3 id="debianubuntu-vs-alpine">Debian/Ubuntu vs Alpine</h3>
 <ul>
-<li><a href="https://hub.docker.com/_/nginx/">Nginx based on debian</a> 135 MB vs 13 MB <a href="https://hub.docker.com/r/smebberson/alpine-nginx/">alpine-nginx</a></li>
-<li><a href="https://hub.docker.com/_/node/">Node based on debian</a> 644 MB vs 36.76 MB <a href="https://hub.docker.com/r/mhart/alpine-node/">alpine-node</a></li>
+  <li><a href="https://hub.docker.com/_/nginx/">Nginx based on debian</a> 135 MB vs 13 MB <a href="https://hub.docker.com/r/smebberson/alpine-nginx/">alpine-nginx</a></li>
+  <li><a href="https://hub.docker.com/_/node/">Node based on debian</a> 644 MB vs 36.76 MB <a href="https://hub.docker.com/r/mhart/alpine-node/">alpine-node</a></li>
 </ul>
 
 <p>You can see how small alpine based image are.
@@ -270,11 +298,11 @@ some that your have to compile with your own.</p>
     </span>
 
     
-      <h1 id="docker-wordpress">Docker + Wordpress</h1>
+      <h1 id="docker--wordpress">Docker + Wordpress</h1>
 
 <ul>
-<li><a href="https://hub.docker.com/_/wordpress/">Wordpress Docker Image</a></li>
-<li><a href="https://warun.in.th/64-wordpress-local-development-with-docker-installation-guide">WordPress Local Development With Docker – Installation
+  <li><a href="https://hub.docker.com/_/wordpress/">Wordpress Docker Image</a></li>
+  <li><a href="https://warun.in.th/64-wordpress-local-development-with-docker-installation-guide">WordPress Local Development With Docker – Installation
 Guide</a></li>
 </ul>
 
@@ -302,10 +330,9 @@ Guide</a></li>
     </span>
 
     
-      <h2 id="what-is-password-manager">What is Password Manager ?</h2>
-
+      <h2 id="what-is-password-manager-">What is Password Manager ?</h2>
 <ul>
-<li><a href="http://www.howtogeek.com/141500/why-you-should-use-a-password-manager-and-how-to-get-started/">Why You Should Use a Password Manager and How to Get Started</a></li>
+  <li><a href="http://www.howtogeek.com/141500/why-you-should-use-a-password-manager-and-how-to-get-started/">Why You Should Use a Password Manager and How to Get Started</a></li>
 </ul>
 
 
@@ -334,47 +361,17 @@ Guide</a></li>
     
       <p>Most of Git tutorial even <a href="http://try.github.io">Try Git</a> guide you
 about git commit with this</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>git commit -m <span class="s2">"hello world"</span>
-</code></pre></div>
-<p>That&#39;s OK.
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git commit -m <span class="s2">"hello world"</span>
+</code></pre>
+</div>
+
+<p>That’s OK.
 But It better to use any option without -m.</p>
 
 
       <div style="text-align:right;">
         <a href="/avoid-git-commit-m/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/ror/">
-        All About Ruby and Ruby on Rails
-      </a>
-    </h1>
-
-    <span class="post-date">
-      12 Dec 2015
-      
-        &middot;
-        <a href="/ror/#disqus_thread" data-disqus-identifier="/ror/"></a>
-        
-      
-    </span>
-
-    
-      <h3 id="tips">Tips</h3>
-
-<ul>
-<li><a href="http://stackoverflow.com/questions/2569501/what-ruby-and-rails-developers-ought-to-know">What Ruby and Rails Developers Ought To Know?</a></li>
-<li><a href="https://github.com/styleguide/ruby">Styleguide Ruby</a></li>
-<li><a href="https://github.com/bbatsov/ruby-style-guide">ruby-style-guide</a></li>
-<li><a href="http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/">What Is the Difference Between a Block, a Proc, and a Lambda in Ruby?</a></li>
-</ul>
-
-
-      <div style="text-align:right;">
-        <a href="/ror/" style="color:#000;"> Read More </a>
       </div>
     
   </div>

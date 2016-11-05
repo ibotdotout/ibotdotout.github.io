@@ -211,31 +211,34 @@
       
   </span>
 
-  <p><img src="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" alt="sharing with open graph"></p>
+  <p><img src="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" alt="sharing with open graph" /></p>
 
-<p>Add this meta data to your <code>html page</code> between <code>&lt;head&gt; ... &lt;/head&gt;</code></p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Markdown Slide"</span> <span class="nt">/&gt;</span>
+<p>Add this meta data to your <code class="highlighter-rouge">html page</code> between <code class="highlighter-rouge">&lt;head&gt; ... &lt;/head&gt;</code></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Markdown Slide"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/slide/"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/opengraph_logo.png"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Remark.js - easy and simple slide"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
  <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Then using <a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a> to look what it look like when shared.</p>
 
 <!-- more -->
 
 <h3 id="tips">Tips:</h3>
-
 <ul>
-<li><code>og:image</code> always cache in fb server. you should change your image url to force fb reload your image.</li>
+  <li><code class="highlighter-rouge">og:image</code> always cache in fb server. you should change your image url to force fb reload your image.</li>
 </ul>
 
 <h1 id="jekyll-integrate-open-graph">Jekyll Integrate Open Graph</h1>
 
-<p>Add this line in your <code>_includes/head.html</code> between <code>&lt;head&gt; ... &lt;/head&gt;</code></p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Sharing with Open Graph"</span> <span class="nt">/&gt;</span>
+<p>Add this line in your <code class="highlighter-rouge">_includes/head.html</code> between <code class="highlighter-rouge">&lt;head&gt; ... &lt;/head&gt;</code></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Sharing with Open Graph"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/opengraph//"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/img/open-graph-thumbnail.png"</span> <span class="nt">/&gt;</span>
@@ -245,39 +248,49 @@
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
 
-</code></pre></div>
-<p>Create <code>_includes/opengraph.html</code></p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Sharing with Open Graph"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<p>Create <code class="highlighter-rouge">_includes/opengraph.html</code></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Sharing with Open Graph"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/opengraph//"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/img/open-graph-thumbnail.png"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Make your site look pretty when sharing on facebook."</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
-</code></pre></div>
-<p>Update <code>_config.yml</code></p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">logo</span><span class="pi">:</span> <span class="s">/public/logo.png</span>
+</code></pre>
+</div>
+
+<p>Update <code class="highlighter-rouge">_config.yml</code></p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">logo</span><span class="pi">:</span> <span class="s">/public/logo.png</span>
 <span class="s">locale</span><span class="pi">:</span> <span class="s">th_TH</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>Custom Post</p>
-<div class="highlight"><pre><code class="language-" data-lang="">----
+
+<div class="highlighter-rouge"><pre class="highlight"><code>----
 excerpt: summary
 thumbnail: /public/thumbnail_for_your_post.png
 ----
-</code></pre></div>
+</code></pre>
+</div>
+
 <ul>
-<li><a href="http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/">Adding Open Graph Tags to Jekyll</a></li>
-<li><a href="http://danyalzia.com/2015/03/25/integrating-facebook-open-graph-in-jekyll/">Integrating Facebook Open Graph Meta Tags In Jekyll</a></li>
-<li><a href="http://milanaryal.com/2015/integrating-social-meta-tags-into-jekyll/">Integrating social meta tags into Jekyll</a></li>
+  <li><a href="http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/">Adding Open Graph Tags to Jekyll</a></li>
+  <li><a href="http://danyalzia.com/2015/03/25/integrating-facebook-open-graph-in-jekyll/">Integrating Facebook Open Graph Meta Tags In Jekyll</a></li>
+  <li><a href="http://milanaryal.com/2015/integrating-social-meta-tags-into-jekyll/">Integrating social meta tags into Jekyll</a></li>
 </ul>
 
 <h1 id="references">References:</h1>
-
 <ul>
-<li><a href="http://stackoverflow.com/questions/2950189/facebook-share-doesnt-show-my-description-or-my-thumbnail">Facebook Share doesn&#39;t show my description or my thumbnail</a></li>
-<li><a href="http://ogp.me">The Open Graph protocol</a></li>
-<li><a href="https://developers.facebook.com/docs/sharing/best-practices">Sharing Best Practices for Websites &amp; Mobile Apps</a></li>
-<li><a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a></li>
+  <li><a href="http://stackoverflow.com/questions/2950189/facebook-share-doesnt-show-my-description-or-my-thumbnail">Facebook Share doesn’t show my description or my thumbnail</a></li>
+  <li><a href="http://ogp.me">The Open Graph protocol</a></li>
+  <li><a href="https://developers.facebook.com/docs/sharing/best-practices">Sharing Best Practices for Websites &amp; Mobile Apps</a></li>
+  <li><a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a></li>
 </ul>
 
   
@@ -300,6 +313,15 @@ thumbnail: /public/thumbnail_for_your_post.png
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -312,15 +334,6 @@ thumbnail: /public/thumbnail_for_your_post.png
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

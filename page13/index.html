@@ -204,6 +204,39 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/ci/">
+        Continuos Integrations
+      </a>
+    </h1>
+
+    <span class="post-date">
+      19 Jul 2014
+      
+        &middot;
+        <a href="/ci/#disqus_thread" data-disqus-identifier="/ci/"></a>
+        
+      
+    </span>
+
+    
+      <p>Continuous Integrations doesn’t get rid of bugs, but it does make them dramatically easier to find and remove. - <a href="http://martinfowler.com/articles/continuousIntegration.html">Continuous Integration by Martin Fowler</a></p>
+
+<h3 id="own-sever-services">Own Sever Services</h3>
+<ul>
+  <li><a href="/jenkins">Jeknins CI</a> - Popular Open Source CI</li>
+</ul>
+
+<h3 id="online-services">Online Services</h3>
+<ul>
+  <li><a href="/travis-ci">Travis CI</a> - Recommend</li>
+  <li><a href="/drone-ci">Drone.io CI</a> - Easier than Travis, has few features</li>
+</ul>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/python-testing/">
         Python Testing
       </a>
@@ -219,194 +252,208 @@
     </span>
 
     
-      <p>There are difference between &#39;building it right&#39; and &#39;building the right thing&#39;. -Python Testing Cookbook by Greg L. Turnquist</p>
+      <p>There are difference between ‘building it right’ and ‘building the right thing’. -Python Testing Cookbook by Greg L. Turnquist</p>
 
-<h2 id="good-test-habits">Good Test Habits</h2>
+<p>##Good Test Habits
+* A few test is better than nothing<br />
+* Coverage isn’t everything<br />
+  - make working software not a 100% coverage
+* Capturing a bug in an automated test<br />
+  1. Write Tests for the bug<br />
+  2. Add it to your test suite<br />
+  3. Fix the bug<br />
+  4. Veriry test suite passed</p>
 
 <ul>
-<li>A few test is better than nothing<br></li>
-<li>Coverage isn&#39;t everything<br>
-
-<ul>
-<li>make working software not a 100% coverage</li>
-</ul></li>
-<li><p>Capturing a bug in an automated test  </p>
-
-<ol>
-<li>Write Tests for the bug<br></li>
-<li>Add it to your test suite<br></li>
-<li>Fix the bug<br></li>
-<li>Veriry test suite passed<br></li>
-</ol></li>
-<li><p>Testing Concept</p>
-
-<ol>
-<li>AAA - Arrange Act Assert<br></li>
-<li>BDD - Give When Then<br></li>
-</ol></li>
+  <li>Testing Concept
+    <ol>
+      <li>AAA - Arrange Act Assert</li>
+      <li>BDD - Give When Then</li>
+    </ol>
+  </li>
 </ul>
 
 <h2 id="tips">Tips:</h2>
 
 <ul>
-<li>Run All unittest in module:</li>
+  <li>
+    <p>Run All unittest in module:</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>python -m unittest discover &lt;test_module&gt;
+</code></pre>
+    </div>
+  </li>
+  <li>Run nosetests with python3.
+    <ul>
+      <li>Install nose into python3 package with pip3 then you can run nosetests with python3 via nosetests-3.x ex. nosetests-3.4 if your python3 is version 3.4</li>
+    </ul>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># ubuntu install python3-pip first</span>
+<span class="c"># $ sudo apt-get install python3-ip</span>
+<span class="gp">$ </span>pip3 install nose
+<span class="gp">$ </span>nosetests-3.x
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="http://stackoverflow.com/questions/864956/problems-using-nose-in-a-virtualenv">Problems using nose in a virtualenv</a></p>
+
+    <p>you can’t run nose in system-packages to using packages in virtualenv (sandbox)</p>
+  </li>
+  <li>
+    <p>Run PDB with nosetest:</p>
+
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">set_trace</span><span class="p">;</span> <span class="n">set_trace</span><span class="p">()</span>
+</code></pre>
+    </div>
+  </li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  python -m unittest discover &lt;test_module&gt;
-</code></pre></div>
-<ul>
-<li>Run nosetests with python3.<br>
+
+<p>##<a href="http://nose.readthedocs.org/en/latest/plugins/multiprocess.html">Nose Multiprocess</a></p>
+
+<p>You should make unittest run faster with mocking better than using multi processes.<br />
+There are many problem with nose plugin ex. rednose, coverage, xunit.</p>
+
+<p>In worst case more processeses can make your tests slower depends on your tests.</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nosetests --processes<span class="o">=</span>NUMBER_OF_PROCESSORS --process-timeout &lt;sec&gt;
+</code></pre>
+</div>
+
+<p><a href="http://www.metaklass.org/nose-accelerating-the-runner/">Plugin Problem</a>:<br />
+1. Rednose - disable rednose by remove –rednose option and NOSE_REDNOSE in enviorment variable<br />
+2. coverage - fix by <a href="https://pypi.python.org/pypi/nose-cov">nose-cov</a><br />
+3. xunit - fix by <a href="https://pypi.python.org/pypi/nose_xunitmp/0.2">nose_xunitmp</a></p>
+
+<p>##Test Coverage</p>
+
+<p>Stmts - statements<br />
+Miss - statements that not executed<br />
+Cover - (Stmts - Miss)/Stmts * 100</p>
 
 <ul>
-<li>Install nose into python3 package with pip3 then you can run nosetests with python3 via nosetests-3.x ex. nosetests-3.4 if your python3 is version 3.4</li>
-</ul></li>
+  <li>Coverage html
+    <ul>
+      <li>Generate an Pretty HTML report</li>
+      <li>powerful way to visually inspect the code and see the lines that missing</li>
+    </ul>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>nosetests --with-coverage --cover-html 
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Coverage erase</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>coverage erase
+coverage -e
+nosetests --with-coverage --cover-erase
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Coverage with filter Third-party Libraries out</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>nosetests --with-coverage --cover-package<span class="o">=</span>&lt;package,package2&gt;
+nosetests --with-coverage --cover-package<span class="o">=</span><span class="k">$(</span>ls | grep <span class="s1">'.py$'</span> | sed <span class="s1">'s/[.]py$//'</span> | xargs | sed <span class="s1">'s/[\ ]/,/g'</span><span class="k">)</span>
+</code></pre>
+    </div>
+  </li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># ubuntu install python3-pip first</span>
-  <span class="c"># $ sudo apt-get install python3-ip</span>
-  <span class="nv">$ </span>pip3 install nose
-  <span class="nv">$ </span>nosetests-3.x
-</code></pre></div>
-<ul>
-<li><a href="http://stackoverflow.com/questions/864956/problems-using-nose-in-a-virtualenv">Problems using nose in a virtualenv</a></li>
-</ul>
 
-<p>you can&#39;t run nose in system-packages to using packages in virtualenv (sandbox)</p>
-
-<ul>
-<li>Run PDB with nosetest:</li>
-</ul>
-<div class="highlight"><pre><code class="language-python" data-lang="python">  <span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">set_trace</span><span class="p">;</span> <span class="n">set_trace</span><span class="p">()</span>
-</code></pre></div>
-<h2 id="nose-multiprocess"><a href="http://nose.readthedocs.org/en/latest/plugins/multiprocess.html">Nose Multiprocess</a></h2>
-
-<p>You should make unittest run faster with mocking better than using multi processes.<br>
-There are many problem with nose plugin ex. rednose, coverage, xunit.  </p>
-
-<p>In worst case more processeses can make your tests slower depends on your tests.  </p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>nosetests --processes<span class="o">=</span>NUMBER_OF_PROCESSORS --process-timeout &lt;sec&gt;
-</code></pre></div>
-<p><a href="http://www.metaklass.org/nose-accelerating-the-runner/">Plugin Problem</a>:<br>
-1. Rednose - disable rednose by remove --rednose option and NOSE_REDNOSE in enviorment variable<br>
-2. coverage - fix by <a href="https://pypi.python.org/pypi/nose-cov">nose-cov</a><br>
-3. xunit - fix by <a href="https://pypi.python.org/pypi/nose_xunitmp/0.2">nose_xunitmp</a>  </p>
-
-<h2 id="test-coverage">Test Coverage</h2>
-
-<p>Stmts - statements<br>
-Miss - statements that not executed<br>
-Cover - (Stmts - Miss)/Stmts * 100  </p>
-
-<ul>
-<li>Coverage html<br>
-
-<ul>
-<li>Generate an Pretty HTML report<br></li>
-<li>powerful way to visually inspect the code and see the lines that missing<br></li>
-</ul></li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  nosetests --with-coverage --cover-html 
-</code></pre></div>
-<ul>
-<li>Coverage erase</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  coverage erase
-  coverage -e
-  nosetests --with-coverage --cover-erase
-</code></pre></div>
-<ul>
-<li>Coverage with filter Third-party Libraries out</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  nosetests --with-coverage --cover-package<span class="o">=</span>&lt;package,package2&gt;
-  nosetests --with-coverage --cover-package<span class="o">=</span><span class="k">$(</span>ls | grep <span class="s1">'.py$'</span> | sed <span class="s1">'s/[.]py$//'</span> | xargs | sed <span class="s1">'s/[\ ]/,/g'</span><span class="k">)</span>
-</code></pre></div>
 <h2 id="mock">Mock</h2>
 
 <ul>
-<li>mocking pattern<br>
-1.record/replay pattern<br>
-2.action/assert pattern </li>
-<li>mock tests behavior<br>
-
-<ul>
-<li>test the method was called or not called by assert_called_with(), etc.<br></li>
-</ul></li>
-<li>stubs tests state<br>
-
-<ul>
-<li>recording method class and its result<br></li>
-</ul></li>
+  <li>mocking pattern<br />
+1.record/replay pattern<br />
+2.action/assert pattern</li>
+  <li>mock tests behavior
+    <ul>
+      <li>test the method was called or not called by assert_called_with(), etc.</li>
+    </ul>
+  </li>
+  <li>stubs tests state
+    <ul>
+      <li>recording method class and its result</li>
+    </ul>
+  </li>
 </ul>
 
-<h2 id="behavior-driven-development">Behavior Driven Development</h2>
+<p>##Behavior Driven Development</p>
 
 <ul>
-<li>BDD - Given, When, and Then</li>
-<li><p>BDD Stroy<br>
--Feature<br>
--- Scenario<br>
---- steps  </p></li>
-<li><p>TDD vs BDD  </p>
-
-<ul>
-<li>setUp   ==  Given<br></li>
-<li>call unit ==  Then<br></li>
-<li>assert    ==   When<br></li>
-</ul></li>
-<li><p><a href="http://lettuce.it">Lettuce</a> is a Cucumber-like BDD tool built for Python.</p></li>
+  <li>BDD - Given, When, and Then</li>
+  <li>
+    <p>BDD Stroy<br />
+-Feature<br />
+– Scenario<br />
+— steps</p>
+  </li>
+  <li>TDD vs BDD
+    <ul>
+      <li>setUp   ==  Given</li>
+      <li>call unit ==  Then</li>
+      <li>assert    ==   When</li>
+    </ul>
+  </li>
+  <li><a href="http://lettuce.it">Lettuce</a> is a Cucumber-like BDD tool built for Python.</li>
 </ul>
 
-<h2 id="robot-framework-acceptance-testing"><a href="https://github.com/robotframework/robotframework">Robot Framework - Acceptance Testing</a></h2>
-
+<h2 id="robot-framework---acceptance-testinghttpsgithubcomrobotframeworkrobotframework"><a href="https://github.com/robotframework/robotframework">Robot Framework - Acceptance Testing</a></h2>
 <ul>
-<li>Acceptance testing is block box testing</li>
-<li>Customers are usually more interested in what the software does, not how it does it.<br></li>
-<li>Robot Framework uses keywords to define tests, test steps, variables, and other testing components and need to maps Robot Framework keywords to our Python code<br></li>
-<li>Robot Framework uses data-driven test suite<br></li>
+  <li>Acceptance testing is block box testing</li>
+  <li>Customers are usually more interested in what the software does, not how it does it.</li>
+  <li>Robot Framework uses keywords to define tests, test steps, variables, and other testing components and need to maps Robot Framework keywords to our Python code</li>
+  <li>Robot Framework uses data-driven test suite</li>
 </ul>
 
-<h2 id="jekin-java-continuous-integration">Jekin(Java) - Continuous Integration</h2>
-
+<h2 id="jekinjava---continuous-integration">Jekin(Java) - Continuous Integration</h2>
 <ul>
-<li>nosetests --with-xunit</li>
-<li>tests upon commit(trigger),when scheduled</li>
+  <li>nosetests –with-xunit</li>
+  <li>tests upon commit(trigger),when scheduled</li>
 </ul>
 
 <h2 id="tools">Tools:</h2>
+<ul>
+  <li>Unittests: <a href="https://nose.readthedocs.org">Nosetests</a>, <a href="https://pypi.python.org/pypi/rednose">Rednose</a>, <a href="https://pypi.python.org/pypi/coverage">Coverage</a>, <a href="https://pypi.python.org/pypi/nose-progressive/">nose-progressive</a></li>
+</ul>
+
+<p><code class="highlighter-rouge">sh
+  pip install nose rednose coverage
+  echo "export NOSE_REDNOSE=1" &gt;&gt; .zshrc #enable rednose
+ </code>
+  * <a href="https://github.com/gorakhargosh/watchdog">Watchdog</a> - 
+  <a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a></p>
+
+<p><code class="highlighter-rouge">sh
+  pip install watchdog
+ </code></p>
 
 <ul>
-<li>Unittests: <a href="https://nose.readthedocs.org">Nosetests</a>, <a href="https://pypi.python.org/pypi/rednose">Rednose</a>, <a href="https://pypi.python.org/pypi/coverage">Coverage</a>, <a href="https://pypi.python.org/pypi/nose-progressive/">nose-progressive</a></li>
+  <li><a href="https://testrun.org/tox/latest/">Tox</a> - multiple environments testing</li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install nose rednose coverage
-  <span class="nb">echo</span> <span class="s2">"export NOSE_REDNOSE=1"</span> &gt;&gt; .zshrc <span class="c">#enable rednose</span>
-</code></pre></div>
-<ul>
-<li><a href="https://github.com/gorakhargosh/watchdog">Watchdog</a> - 
-<a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a><br></li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install watchdog
-</code></pre></div>
-<ul>
-<li><a href="https://testrun.org/tox/latest/">Tox</a> - multiple environments testing</li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  pip install tox
-</code></pre></div>
+
+<p><code class="highlighter-rouge">sh
+  pip install tox
+ </code></p>
+
 <h2 id="testing-python">Testing Python</h2>
-
 <ol>
-<li><a href="http://pythontesting.net/start-here/">Python Testing Start Here</a></li>
-<li><a href="http://techblog.appnexus.com/2012/testing-in-python-using-nose-mocks/">Testing in Python: using nose &amp; mocks</a></li>
-<li><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></li>
-<li><a href="http://www.toptal.com/python/an-introduction-to-mocking-in-python">An Introduction to Mocking in Python</a></li>
-<li><a href="http://dannorth.net/introducing-bdd./">INTRODUCING BDD</a></li>
-<li><a href="http://slidedeck.io/oxtopus/mocklikeaboss">Mock Like a Boss</a></li>
-<li><a href="http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137">Beginning Test-Driven Development in Python</a></li>
-<li><a href="http://code.tutsplus.com/tutorials/behavior-driven-development-in-python--net-26547">Behavior-Driven Development in Python</a></li>
-<li><a href="http://pyvideo.org/video/392/pycon-2011--testing-with-mock">Testing with mock</a></li>
-<li><a href="https://www.udacity.com/course/cs258">Software Testing Course</a></li>
-<li><a href="http://www.drdobbs.com/architecture-and-design/patching-mocks-in-python/240168924">Patching Mocks in Python</a></li>
-<li><a href="http://www.metaklass.org/nose-accelerating-the-runner/">Python Nose: Speed up the runner</a></li>
-<li><a href="http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137">Beginning Test-Driven Development in Python</a></li>
-<li><a href="https://github.com/nattyait/python-test-double">python-test-double</a></li>
-<li><a href="http://www.jamalmoir.com/2016/03/learn-to-mock-in-python.html">Mocking in Python - How to Bypass Expensive and External Code Within Your Tests</a></li>
+  <li><a href="http://pythontesting.net/start-here/">Python Testing Start Here</a></li>
+  <li><a href="http://techblog.appnexus.com/2012/testing-in-python-using-nose-mocks/">Testing in Python: using nose &amp; mocks</a></li>
+  <li><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></li>
+  <li><a href="http://www.toptal.com/python/an-introduction-to-mocking-in-python">An Introduction to Mocking in Python</a></li>
+  <li><a href="http://dannorth.net/introducing-bdd./">INTRODUCING BDD</a></li>
+  <li><a href="http://slidedeck.io/oxtopus/mocklikeaboss">Mock Like a Boss</a></li>
+  <li><a href="http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137">Beginning Test-Driven Development in Python</a></li>
+  <li><a href="http://code.tutsplus.com/tutorials/behavior-driven-development-in-python--net-26547">Behavior-Driven Development in Python</a></li>
+  <li><a href="http://pyvideo.org/video/392/pycon-2011--testing-with-mock">Testing with mock</a></li>
+  <li><a href="https://www.udacity.com/course/cs258">Software Testing Course</a></li>
+  <li><a href="http://www.drdobbs.com/architecture-and-design/patching-mocks-in-python/240168924">Patching Mocks in Python</a></li>
+  <li><a href="http://www.metaklass.org/nose-accelerating-the-runner/">Python Nose: Speed up the runner</a></li>
+  <li><a href="http://code.tutsplus.com/tutorials/beginning-test-driven-development-in-python--net-30137">Beginning Test-Driven Development in Python</a></li>
+  <li><a href="https://github.com/nattyait/python-test-double">python-test-double</a></li>
+  <li><a href="http://www.jamalmoir.com/2016/03/learn-to-mock-in-python.html">Mocking in Python - How to Bypass Expensive and External Code Within Your Tests</a></li>
 </ol>
 
     
@@ -433,7 +480,8 @@ Cover - (Stmts - Miss)/Stmts * 100  </p>
 
     
       <h3 id="helper">Helper</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>~ <span class="nv">$ </span>home user directory  
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>~ <span class="nv">$ </span>home user directory  
 <span class="gp">$ </span>~+ <span class="c"># same as pwd  </span>
 <span class="gp">$ </span>~- <span class="c"># previous directory  </span>
 <span class="gp">$ </span>ls -1 <span class="nv">$PWD</span>/<span class="k">*</span>.txt <span class="c"># list all .txt with full path  </span>
@@ -447,20 +495,29 @@ Cover - (Stmts - Miss)/Stmts * 100  </p>
 <span class="gp">$ </span>chsh - &lt;user&gt; <span class="c"># change default ssh user</span>
 <span class="gp">$ </span>printenv <span class="c"># list environment variables</span>
 <span class="gp">$ </span><span class="se">\&lt;</span>cmd&gt; <span class="c"># run command by  avoid alias</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="command">Command</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">nl <span class="c">#number line</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>nl <span class="c">#number line</span>
 xargs &lt;cmd&gt; <span class="c">#change input to arguments, use with pipe</span>
 sed <span class="c">#stream editor</span>
 pbcopy &lt; &lt;file&gt; <span class="c"># OSX: copy file into clipboard</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="where-command">Where command</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">hash</span> <span class="c"># list command and its path  </span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">hash</span> <span class="c"># list command and its path  </span>
 <span class="gp">$ </span><span class="nb">type</span> -a &lt;cmd&gt; <span class="c"># tell all path of commamd  </span>
 <span class="gp">$ </span>which &lt;cmd&gt; <span class="c"># tell default path of command  </span>
-</code></pre></div>
-<h3 id="redirection"><a href="http://en.wikipedia.org/wiki/Redirection_computing">Redirection</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>cmd &gt; &lt;file&gt; <span class="c"># print output to file (overwrite)  </span>
+</code></pre>
+</div>
+
+<h3 id="redirectionhttpenwikipediaorgwikiredirectioncomputing"><a href="http://en.wikipedia.org/wiki/Redirection_computing">Redirection</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cmd &gt; &lt;file&gt; <span class="c"># print output to file (overwrite)  </span>
 <span class="gp">$ </span>cmd &gt;&gt; &lt;file&gt; <span class="c"># print output to file (append)  </span>
 <span class="gp">$ </span>cmd 2&gt; &lt;file&gt; <span class="c"># print error to file  </span>
 <span class="gp">$ </span>cmd &amp;&gt; &lt;file&gt; <span class="c"># print output &amp; error to file  </span>
@@ -470,27 +527,34 @@ pbcopy &lt; &lt;file&gt; <span class="c"># OSX: copy file into clipboard</span>
 <span class="c"># Redirection output wiht sudo</span>
 <span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"hello"</span> | sudo tee out &gt; /dev/null <span class="c"># eq. echo "hello" &gt; out</span>
 <span class="c"># echo "hello" | sudo tee -a out &gt; /dev/null # eq echo "hello" &gt; out</span>
-</code></pre></div>
-<h3 id="jobs"><a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">Jobs</a> -</h3>
+</code></pre>
+</div>
 
+<h3 id="jobshttpwwwthegeekstuffcom201005unix-background-job--"><a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">Jobs</a> -</h3>
 <p><a href="https://www.youtube.com/watch?v=r4xkCDRnGiw">fg bg Tutorial</a></p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">jobs</span> <span class="c"># list suspended jobs  </span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">jobs</span> <span class="c"># list suspended jobs  </span>
 <span class="gp">$ </span><span class="nb">fg</span> <span class="c"># put the top suspended job in the foreground</span>
 <span class="gp">$ </span><span class="nb">fg</span> %1 <span class="c"># put the suspended job id 1 in the foreground</span>
 Ctrl-z <span class="c"># Suspend a foreground job</span>
 <span class="gp">$ </span><span class="nb">bg</span> <span class="c"># run suspended job in background</span>
 <span class="gp">$ </span><span class="nb">kill</span> <span class="c"># kill job</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="crontab-time-schedule">Crontab Time schedule</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>crontab -e <span class="c">#edit crontab profile</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>crontab -e <span class="c">#edit crontab profile</span>
 <span class="c"># */5 * * * * cmd</span>
 <span class="c"># run cmd every five minutes</span>
 <span class="gp">$ </span>grep CRON /var/log/syslog <span class="c">#see crontablog (debian)</span>
-</code></pre></div>
-<h3 id="zsh-history-expansion">Zsh History expansion</h3>
+</code></pre>
+</div>
 
+<h3 id="zsh-history-expansion">Zsh History expansion</h3>
 <p>should also work with bash.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>man zshexpn <span class="c"># manual for look in-depth  </span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>man zshexpn <span class="c"># manual for look in-depth  </span>
 <span class="gp">$ </span><span class="nb">history</span> <span class="c"># tell history command that keep in ~/.bash_history  </span>
 <span class="gp">$ </span><span class="nb">history</span> -c <span class="c"># clear history  </span>
 ! <span class="c"># previous that can combine with command and argument  </span>
@@ -504,11 +568,13 @@ Ctrl-z <span class="c"># Suspend a foreground job</span>
  :m-n <span class="c"># mth to nth argument  </span>
  <span class="k">*</span> <span class="c"># all argument  </span>
 <span class="gp">$ </span>&lt;space&gt;&lt;cmd&gt; <span class="c"># call command without keep history</span>
-</code></pre></div>
-<h3 id="zsh-basic-editing-bash-shortcuts">Zsh Basic Editing - <a href="http://www.skorks.com/2009/09/bash-shortcuts-for-maximum-productivity/">Bash Shortcuts</a></h3>
+</code></pre>
+</div>
 
+<h3 id="zsh-basic-editing---bash-shortcutshttpwwwskorkscom200909bash-shortcuts-for-maximum-productivity">Zsh Basic Editing - <a href="http://www.skorks.com/2009/09/bash-shortcuts-for-maximum-productivity/">Bash Shortcuts</a></h3>
 <p>should also work with bash.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>bindkey -v <span class="c"># vi mode  </span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bindkey -v <span class="c"># vi mode  </span>
 <span class="gp">$ </span>bindkey -e <span class="c"># emac mode  </span>
 Ctrl + a <span class="c"># moves the cursor to begin of line  </span>
 Ctrl + e <span class="c"># moves the cursor to end of line  </span>
@@ -527,39 +593,59 @@ Esc + t <span class="c"># transpoes two words  </span>
 
 Meta is your Alt key, normally.
 For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; Preferences &gt; Settings &gt; Keyboard, and <span class="nb">enable </span>Use option as meta key.
-</code></pre></div>
-<h3 id="diff-command"><a href="http://linux.about.com/library/cmd/blcmdl1_diff.htm">Diff Command</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>diff --brief &lt;file1&gt; &lt;file2&gt;
-</code></pre></div>
-<h3 id="howto-find-out-my-linux-distribution-name-and-version"><a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>cat /etc/<span class="k">*</span>-release
-</code></pre></div>
-<h3 id="timezone-setting-in-linux"><a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok date
-</code></pre></div>
-<h3 id="how-to-cycle-through-reverse-i-search-in-bash"><a href="http://unix.stackexchange.com/questions/73498/how-to-cycle-through-reverse-i-search-in-bash">How to cycle through reverse-i-search in BASH?</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>Ctrl+R grep Ctrl+R Ctrl+R
-</code></pre></div>
-<h3 id="safeguard-rm"><a href="https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm">safeguard-rm</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># only zsh</span>
+</code></pre>
+</div>
+
+<h3 id="diff-commandhttplinuxaboutcomlibrarycmdblcmdl1diffhtm"><a href="http://linux.about.com/library/cmd/blcmdl1_diff.htm">Diff Command</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>diff --brief &lt;file1&gt; &lt;file2&gt;
+</code></pre>
+</div>
+
+<p>###<a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat /etc/<span class="k">*</span>-release
+</code></pre>
+</div>
+
+<p>###<a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok date
+</code></pre>
+</div>
+
+<h3 id="how-to-cycle-through-reverse-i-search-in-bashhttpunixstackexchangecomquestions73498how-to-cycle-through-reverse-i-search-in-bash"><a href="http://unix.stackexchange.com/questions/73498/how-to-cycle-through-reverse-i-search-in-bash">How to cycle through reverse-i-search in BASH?</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>Ctrl+R grep Ctrl+R Ctrl+R
+</code></pre>
+</div>
+
+<h3 id="safeguard-rmhttpsgithubcomsindresorhusguidesblobmasterhow-not-to-rm-yourselfmdsafeguard-rm"><a href="https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm">safeguard-rm</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># only zsh</span>
 
 <span class="gp">$ </span>setopt noclobber <span class="c"># prevents overwriting an existing file.</span>
 <span class="gp">$ </span>setopt clobber <span class="c"># disable</span>
 
 <span class="gp">$ </span>unsetopt RM_STAR_SILENT <span class="c"># ask before rm with star (*)</span>
 <span class="gp">$ </span>setopt RM_STAR_WAIT <span class="c"># wait 10 sec before exec rm with star</span>
-</code></pre></div>
-<h3 id="mac-style-copy-paste-for-linux-machines"><a href="https://www.youtube.com/watch?v=fKP0FLp3uW0">Mac style copy/paste for linux machines</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># copy/paste for linux machines (Mac style)</span>
+</code></pre>
+</div>
+
+<h3 id="mac-style-copypaste-for-linux-machineshttpswwwyoutubecomwatchvfkp0flp3uw0"><a href="https://www.youtube.com/watch?v=fKP0FLp3uW0">Mac style copy/paste for linux machines</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># copy/paste for linux machines (Mac style)</span>
 <span class="c"># sudo apt-get install xclip</span>
 <span class="gp">$ </span><span class="nb">alias </span><span class="nv">pbcopy</span><span class="o">=</span><span class="s1">'xclip -selection clipboard'</span>
 <span class="gp">$ </span><span class="nb">alias </span><span class="nv">pbpaste</span><span class="o">=</span><span class="s1">'xclip -selection clipboard -o'</span>
 <span class="gp">$ </span><span class="nb">alias </span><span class="nv">pbselect</span><span class="o">=</span><span class="s1">'xclip -selection primary -o'</span>
-</code></pre></div>
-<h3 id="bash">Bash</h3>
+</code></pre>
+</div>
 
-<h3 id="shell-bash-script">Shell/Bash Script</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
+<h3 id="bash">Bash</h3>
+<p>### Shell/Bash Script</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
 VAR <span class="o">=</span> <span class="s2">"hello"</span>
 <span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$VAR</span><span class="s2">"</span> <span class="o">=</span> <span class="s2">"hello"</span> <span class="o">]</span>; <span class="k">then</span>  <span class="c"># use = to equal string not ==</span>
@@ -567,26 +653,37 @@ VAR <span class="o">=</span> <span class="s2">"hello"</span>
 <span class="k">else
   </span><span class="nb">echo</span> <span class="s2">"fasle"</span>
 <span class="k">fi</span>
-</code></pre></div>
-<h3 id="run-script-different-ways-to-execute-a-shell-script">Run Script - <a href="http://unix.stackexchange.com/questions/2976/different-ways-to-execute-a-shell-script">Different ways to execute a shell script</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>./script      <span class="c">#run with using shebang(#) in script ex. #!/usr/bin/python</span>
+</code></pre>
+</div>
+
+<h3 id="run-script---different-ways-to-execute-a-shell-scripthttpunixstackexchangecomquestions2976different-ways-to-execute-a-shell-script">Run Script - <a href="http://unix.stackexchange.com/questions/2976/different-ways-to-execute-a-shell-script">Different ways to execute a shell script</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>./script      <span class="c">#run with using shebang(#) in script ex. #!/usr/bin/python</span>
 <span class="gp">$ </span>. script      <span class="c">#run with shell (work in related bash)</span>
 <span class="gp">$ </span><span class="nb">source </span>script <span class="c">#run with shell (work in both bash and csh)</span>
-</code></pre></div>
-<h3 id="shell-function-passing-argument-to-alias-in-bash">Shell function - <a href="http://stackoverflow.com/questions/4060880/passing-argument-to-alias-in-bash">Passing argument to alias in bash</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span><span class="nb">echo</span> <span class="s1">'rm() { mkdir -p /tmp/rm; /bin/mv "$@" /tmp/rm; }'</span> &gt;&gt; .zshrc
-</code></pre></div>
-<h3 id="execute-combine-multiple-linux-commands-in-one-line"><a href="http://stackoverflow.com/questions/13077241/execute-combine-multiple-linux-commands-in-one-line">Execute combine multiple linux commands in one line</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">cmd1 <span class="o">&amp;&amp;</span> cmd2  <span class="c"># cmd 2 run only if cmd1 successful</span>
-cmd1 ; cmd2  <span class="c"># cmd 2 run whether failed or not</span>
-</code></pre></div>
-<h3 id="parallel-shell-script">Parallel shell script</h3>
+</code></pre>
+</div>
 
+<h3 id="shell-function---passing-argument-to-alias-in-bashhttpstackoverflowcomquestions4060880passing-argument-to-alias-in-bash">Shell function - <a href="http://stackoverflow.com/questions/4060880/passing-argument-to-alias-in-bash">Passing argument to alias in bash</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">echo</span> <span class="s1">'rm() { mkdir -p /tmp/rm; /bin/mv "$@" /tmp/rm; }'</span> &gt;&gt; .zshrc
+</code></pre>
+</div>
+
+<h3 id="execute-combine-multiple-linux-commands-in-one-linehttpstackoverflowcomquestions13077241execute-combine-multiple-linux-commands-in-one-line"><a href="http://stackoverflow.com/questions/13077241/execute-combine-multiple-linux-commands-in-one-line">Execute combine multiple linux commands in one line</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>cmd1 <span class="o">&amp;&amp;</span> cmd2  <span class="c"># cmd 2 run only if cmd1 successful</span>
+cmd1 ; cmd2  <span class="c"># cmd 2 run whether failed or not</span>
+</code></pre>
+</div>
+
+<h3 id="parallel-shell-script">Parallel shell script</h3>
 <ol>
-<li><a href="http://prll.sourceforge.net/shell_parallel.html">Parallel batch processing in the shell</a><br></li>
-<li><a href="http://stackoverflow.com/questions/19543139/bash-script-processing-commands-in-parallel">Bash script processing commands in parallel</a><br></li>
+  <li><a href="http://prll.sourceforge.net/shell_parallel.html">Parallel batch processing in the shell</a></li>
+  <li><a href="http://stackoverflow.com/questions/19543139/bash-script-processing-commands-in-parallel">Bash script processing commands in parallel</a></li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">process1 &amp;
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>process1 &amp;
 process2 &amp;
 process3 &amp;
 process4 &amp;
@@ -596,11 +693,14 @@ process6 &amp;
 process7 &amp;
 process8 &amp;
 <span class="nb">wait</span>  <span class="c"># wait until process5, 6, 7, 8 done</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <ol>
-<li><a href="http://stackoverflow.com/questions/38160/parallelize-bash-script">Parallelize Bash Script</a></li>
+  <li><a href="http://stackoverflow.com/questions/38160/parallelize-bash-script">Parallelize Bash Script</a></li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
 <span class="nv">nproc</span><span class="o">=</span><span class="k">$(($(</span>nproc<span class="k">)</span><span class="o">-</span><span class="m">1</span><span class="k">))</span>  <span class="c"># number of core cpu - 1</span>
 
@@ -611,93 +711,109 @@ waitproc <span class="o">()</span> <span class="o">{</span>
     </span>sleep 0.05
     <span class="nv">jobcnt</span><span class="o">=(</span><span class="k">$(</span>job -p<span class="k">)</span><span class="o">)</span>
   <span class="k">done</span>
-</code></pre></div>
-<h4 id="bash-for-loop-array-iterate-through-array-values"><a href="http://www.cyberciti.biz/faq/bash-for-loop-array/">Bash For Loop Array: Iterate Through Array Values</a></h4>
+</code></pre>
+</div>
+
+<h4 id="bash-for-loop-array-iterate-through-array-valueshttpwwwcybercitibizfaqbash-for-loop-array"><a href="http://www.cyberciti.biz/faq/bash-for-loop-array/">Bash For Loop Array: Iterate Through Array Values</a></h4>
+<ol>
+  <li><a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">Introduction to if</a></li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 0 <span class="o">]</span>
+<span class="k">do
+	</span><span class="nb">echo</span> <span class="s2">"hello"</span>
+<span class="k">done</span>
+</code></pre>
+</div>
 
 <ol>
-<li><a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">Introduction to if</a></li>
+  <li><a href="http://www.unixcl.com/2009/09/linux-seq-command-format-option-example.html">Linux seq command format option example</a></li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 0 <span class="o">]</span>
-<span class="k">do
-    </span><span class="nb">echo</span> <span class="s2">"hello"</span>
-<span class="k">done</span>
-</code></pre></div>
-<ol>
-<li><a href="http://www.unixcl.com/2009/09/linux-seq-command-format-option-example.html">Linux seq command format option example</a></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
 <span class="nv">array</span><span class="o">=(</span> one two three <span class="o">)</span>
 
 <span class="k">for </span>i <span class="k">in</span> <span class="s2">"</span><span class="k">${</span><span class="nv">array</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
 <span class="k">do
-    </span><span class="nb">echo</span> <span class="nv">$i</span>
+	</span><span class="nb">echo</span> <span class="nv">$i</span>
 <span class="k">done</span>
-</code></pre></div>
-<h3 id="get-file-directory-path-from-filepath"><a href="http://stackoverflow.com/questions/6121091/get-file-directory-path-from-filepath#6121114">Get file directory path from filepath</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>dirname <span class="s2">"/home/user/dir/file.py"</span>
+</code></pre>
+</div>
+
+<h3 id="get-file-directory-path-from-filepathhttpstackoverflowcomquestions6121091get-file-directory-path-from-filepath6121114"><a href="http://stackoverflow.com/questions/6121091/get-file-directory-path-from-filepath#6121114">Get file directory path from filepath</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>dirname <span class="s2">"/home/user/dir/file.py"</span>
 /home/user/dir
 <span class="gp">$ </span>basename <span class="s2">"/home/user/dir/file.py"</span>
 file.py
-</code></pre></div>
-<h3 id="how-to-find-out-from-the-logs-what-caused-system-shutdown"><a href="http://unix.stackexchange.com/questions/9819/how-to-find-out-from-the-logs-what-caused-system-shutdown">How to find out from the logs what caused system shutdown?</a></h3>
+</code></pre>
+</div>
 
+<h3 id="how-to-find-out-from-the-logs-what-caused-system-shutdownhttpunixstackexchangecomquestions9819how-to-find-out-from-the-logs-what-caused-system-shutdown"><a href="http://unix.stackexchange.com/questions/9819/how-to-find-out-from-the-logs-what-caused-system-shutdown">How to find out from the logs what caused system shutdown?</a></h3>
 <ul>
-<li><a href="http://unix.stackexchange.com/questions/107501/shutdown-log-linux-username">Shutdown log Linux UserName</a></li>
-<li><a href="http://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html">Linux last Reboot Time and Date Find Out Command</a></li>
+  <li><a href="http://unix.stackexchange.com/questions/107501/shutdown-log-linux-username">Shutdown log Linux UserName</a></li>
+  <li><a href="http://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html">Linux last Reboot Time and Date Find Out Command</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">last reboot | less
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>last reboot | less
 last -x|grep shutdown | head -1
-</code></pre></div>
-<h3 id="zsh">Zsh</h3>
+</code></pre>
+</div>
 
+<h3 id="zsh">Zsh</h3>
 <ul>
-<li><a href="http://blog.patshead.com/2011/04/improve-your-oh-my-zsh-startup-time-maybe.html">Improve Your oh-my-zsh Startup Time (Maybe)</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># check start zsh time</span>
-  /usr/bin/time zsh -i -c <span class="nb">exit</span>
-</code></pre></div>
-<ul>
-<li><a href="http://superuser.com/questions/236953/zsh-starts-incredibly-slowly">zsh starts incredibly slowly</a></li>
+  <li>
+    <p><a href="http://blog.patshead.com/2011/04/improve-your-oh-my-zsh-startup-time-maybe.html">Improve Your oh-my-zsh Startup Time (Maybe)</a></p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># check start zsh time</span>
+/usr/bin/time zsh -i -c <span class="nb">exit</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="http://superuser.com/questions/236953/zsh-starts-incredibly-slowly">zsh starts incredibly slowly</a></p>
+  </li>
 </ul>
 
 <h3 id="bash-references">Bash References:</h3>
-
 <ol>
-<li><a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html">Functions</a></li>
-<li><a href="http://blog.sanctum.geek.nz/bash-shell-expansion/">Bash shell expansion</a></li>
-<li><a href="https://speakerdeck.com/nibalizer/bash-tricks">bash-tricks</a></li>
-<li><a href="http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script">check command exitsts</a></li>
-<li><a href="https://sanctum.geek.nz/arabesque/high-speed-bash/">High-speed Bash</a></li>
+  <li><a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html">Functions</a></li>
+  <li><a href="http://blog.sanctum.geek.nz/bash-shell-expansion/">Bash shell expansion</a></li>
+  <li><a href="https://speakerdeck.com/nibalizer/bash-tricks">bash-tricks</a></li>
+  <li><a href="http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script">check command exitsts</a></li>
+  <li><a href="https://sanctum.geek.nz/arabesque/high-speed-bash/">High-speed Bash</a></li>
 </ol>
 
 <h3 id="etc">ETC</h3>
 
 <ul>
-<li><a href="http://blog.libinpan.com/2009/07/less-is-better-than-tail/">Less is better, than tail</a></li>
+  <li><a href="http://blog.libinpan.com/2009/07/less-is-better-than-tail/">Less is better, than tail</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>less +F log/production.log
-</code></pre></div>
-<h2 id="reference">Reference</h2>
 
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>less +F log/production.log
+</code></pre>
+</div>
+
+<h2 id="reference">Reference</h2>
 <ol>
-<li><a href="http://www.linuxcommand.org/lc3_learning_the_shell.php">learning the shell</a></li>
-<li><a href="http://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/">HowTo: Add Jobs To cron Under Linux or UNIX?</a></li>
-<li><a href="http://www.linuxquestions.org/questions/linux-general-1/how-to-set-cron-job-to-run-every-5-mins-61667/">how to set cron job to run every 5 mins?</a></li>
-<li><a href="https://help.ubuntu.com/community/CronHowto">CronHowto</a></li>
-<li><a href="http://www.sitepoint.com/unix-server-performance/">Checking UNIX Server Performance</a></li>
-<li><a href="http://stackoverflow.com/questions/82256/how-do-i-use-sudo-to-redirect-output-to-a-location-i-dont-have-permission-to-wr">How do I use sudo to redirect output to a location I don&#39;t have permission to write to?</a></li>
-<li><a href="http://www.cyberciti.biz/faq/unix-disk-usage-command-examples/">UNIX Disk Usage Command Examples</a></li>
-<li><a href="http://blog.sanctum.geek.nz/series/unix-as-ide/">Unix as IDE: Introduction</a></li>
-<li><a href="https://leanpub.com/lets_learn_cli_right_now/read">หัดใช้ Command-line Interface เถอะ</a></li>
-<li><a href="http://macfeteria.com/2015/04/18/pimp-my-command-line/">Pimp my command line</a></li>
-<li><a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLu8EoSxDXHP7tXPJp5ZmUpuT7sFvrswzf">Command Line Power User</a></li>
-<li><a href="http://linux.die.net/abs-guide/x15683.html">Here Strings</a></li>
-<li><a href="https://kb.iu.edu/d/admm">what is the find command, and how do I use it to search</a></li>
-<li><a href="https://www.youtube.com/watch?v=ND-W4e-pqMo">Totally Tooling Mini Tip: Command-line Keyboard Shortcuts</a></li>
-<li><a href="http://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html">10 examples of paste command usage in Linux</a></li>
-<li><a href="https://www.youtube.com/watch?v=R5fca6IUxHA">Bang! Previous Command Hotkeys - Linux CLI BASH ZSH</a></li>
+  <li><a href="http://www.linuxcommand.org/lc3_learning_the_shell.php">learning the shell</a></li>
+  <li><a href="http://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/">HowTo: Add Jobs To cron Under Linux or UNIX?</a></li>
+  <li><a href="http://www.linuxquestions.org/questions/linux-general-1/how-to-set-cron-job-to-run-every-5-mins-61667/">how to set cron job to run every 5 mins?</a></li>
+  <li><a href="https://help.ubuntu.com/community/CronHowto">CronHowto</a></li>
+  <li><a href="http://www.sitepoint.com/unix-server-performance/">Checking UNIX Server Performance</a></li>
+  <li><a href="http://stackoverflow.com/questions/82256/how-do-i-use-sudo-to-redirect-output-to-a-location-i-dont-have-permission-to-wr">How do I use sudo to redirect output to a location I don’t have permission to write to?</a></li>
+  <li><a href="http://www.cyberciti.biz/faq/unix-disk-usage-command-examples/">UNIX Disk Usage Command Examples</a></li>
+  <li><a href="http://blog.sanctum.geek.nz/series/unix-as-ide/">Unix as IDE: Introduction</a></li>
+  <li><a href="https://leanpub.com/lets_learn_cli_right_now/read">หัดใช้ Command-line Interface เถอะ</a></li>
+  <li><a href="http://macfeteria.com/2015/04/18/pimp-my-command-line/">Pimp my command line</a></li>
+  <li><a href="https://github.com/jlevy/the-art-of-command-line">The Art of Command Line</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLu8EoSxDXHP7tXPJp5ZmUpuT7sFvrswzf">Command Line Power User</a></li>
+  <li><a href="http://linux.die.net/abs-guide/x15683.html">Here Strings</a></li>
+  <li><a href="https://kb.iu.edu/d/admm">what is the find command, and how do I use it to search</a></li>
+  <li><a href="https://www.youtube.com/watch?v=ND-W4e-pqMo">Totally Tooling Mini Tip: Command-line Keyboard Shortcuts</a></li>
+  <li><a href="http://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html">10 examples of paste command usage in Linux</a></li>
+  <li><a href="https://www.youtube.com/watch?v=R5fca6IUxHA">Bang! Previous Command Hotkeys - Linux CLI BASH ZSH</a></li>
 </ol>
 
     
@@ -721,14 +837,15 @@ last -x|grep shutdown | head -1
 
     
       <h2 id="recover-lost-partition">Recover lost partition</h2>
-
 <p>I used <a href="http://www.cgsecurity.org/wiki/TestDisk">TestDisk</a> to recover my lost NTFS partition that I formatted by accidentally. You can use TestDisk by follow <a href="http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step">TestDisk Step by Step</a>. After recovered I can see my NTFS partition that was formatted but can not access it.</p>
 
 <h2 id="repair-damaged-partition">Repair damaged partition</h2>
+<p>I got my lost partition back but can’t access it. So I use ‘chkdsk /r’ command on Windows to repair damaged partition. Finally after 12 hours, I can got lost partition back and accessible it normally.</p>
 
-<p>I got my lost partition back but can&#39;t access it. So I use &#39;chkdsk /r&#39; command on Windows to repair damaged partition. Finally after 12 hours, I can got lost partition back and accessible it normally.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  chkdsk /r &lt;drive&gt;
-</code></pre></div>
+<p><code class="highlighter-rouge">sh
+  chkdsk /r &lt;drive&gt;
+ </code></p>
+
     
   </div>
   
@@ -750,112 +867,45 @@ last -x|grep shutdown | head -1
 
     
       <h2 id="automatical-way">Automatical Way</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">  http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
-</code></pre></div>
+<p><code class="highlighter-rouge">
+  http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
+ </code></p>
+
 <h2 id="manual-way">Manual Way</h2>
+<ol>
+  <li>get UUID form this command</li>
+</ol>
 
-<ol>
-<li>get UUID form this command<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  diskutil info /Volumes/&lt;drivename&gt; |  grep UUID
-</code></pre></div>
-<ol>
-<li>edit /etc/fstab<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  sudo vim /etc/fstab
-</code></pre></div>
-<ol>
-<li>add this with edit <code>&lt;uuid_drive&gt;</code></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">UUID</span><span class="o">=</span>&lt;uuid_drive&gt; none ntfs rw,auto,nobrowse
-</code></pre></div>
-<ol>
-<li>reject and plug it agian<br></li>
-<li>open hdd with this command<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  open /Volumes
-</code></pre></div>
-<ol>
-<li>If want to remove writable NTFS drive </li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  sudo rm /etc/fstab
-</code></pre></div>
+<p><code class="highlighter-rouge">sh
+  diskutil info /Volumes/&lt;drivename&gt; |  grep UUID
+ </code>
+2. edit /etc/fstab</p>
+
+<p><code class="highlighter-rouge">sh
+  sudo vim /etc/fstab
+ </code>
+3. add this with edit <code class="highlighter-rouge">&lt;uuid_drive&gt;</code></p>
+
+<p><code class="highlighter-rouge">sh
+  UUID=&lt;uuid_drive&gt; none ntfs rw,auto,nobrowse
+ </code>
+4. reject and plug it agian<br />
+5. open hdd with this command</p>
+
+<p><code class="highlighter-rouge">sh
+  open /Volumes
+ </code>
+6. If want to remove writable NTFS drive</p>
+
+<p><code class="highlighter-rouge">sh
+  sudo rm /etc/fstab
+ </code></p>
+
 <h3 id="reference">Reference:</h3>
-
 <ol>
-<li><a href="http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/">http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/</a></li>
-<li><a href="http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/">http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/</a></li>
-<li><a href="http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/">วิธีทำให้ Mac อ่านและเขียนไฟล์ NTFS บน Windows ได้</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/how-to-setup-this-blog/">
-        How to set up this blog
-      </a>
-    </h1>
-
-    <span class="post-date">
-      16 Jun 2014
-      
-        &middot;
-        <a href="/how-to-setup-this-blog/#disqus_thread" data-disqus-identifier="/how-to-setup-this-blog/"></a>
-        
-          &middot;
-          Updated December 26, 2015
-        
-      
-    </span>
-
-    
-      <p>This blog created by <a href="http://jekyllrb.com">Jekyll</a> that is ruby scripts to transforms plain text into static html website and blogs and hosted on <a href="http://page.github.com">Github
-Page</a> that free hosting support Jekyll.This blog use <a href="http://lanyon.getpoole.com">Lanyon</a> theme that based on
-<a href="http://getpoole.com">Poole</a> a minimal style of Jekyll.</p>
-
-<h3 id="set-up-github-page">Set up github page:</h3>
-
-<ol>
-<li><p>Follow setup guilde of <a href="https://pages.github.com">Github page</a>
-for more information about jekyll on github look at  </p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://help.github.com/articles/using-jekyll-with-pages
-</code></pre></div></li>
-<li><p>Clone project from <a href="http://lanyon.getpoole.com">Lanyon</a>  </p>
-<div class="highlight"><pre><code class="language-" data-lang="">  git clone https://github.com/poole/lanyon.git
-</code></pre></div></li>
-<li><p>Configs jekyll in  <code>_config.yml</code>   </p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml">  <span class="c1">#setup</span>
-  <span class="s">title</span><span class="pi">:</span>            <span class="s">botbotbot</span>  
-  <span class="s">tagline</span><span class="pi">:</span>          <span class="s2">"</span><span class="s">'s</span><span class="nv"> </span><span class="s">blog"</span>  
-  <span class="s">description</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">botbotbot's</span><span class="nv"> </span><span class="s">blog"</span>  
-  <span class="s">url</span><span class="pi">:</span>              <span class="s">http://ibotdotout.github.io</span>  
-  <span class="s">paginate</span><span class="pi">:</span>         <span class="s">5</span>  
-</code></pre></div></li>
-<li><p>Make tags.md in root directory copy code from</p>
-<div class="highlight"><pre><code class="language-" data-lang="">https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html
-</code></pre></div></li>
-<li><p>Let blog it.</p></li>
-</ol>
-
-<h3 id="add-feed-in-jekyll">Add Feed in Jekyll</h3>
-
-<ol>
-<li><a href="https://github.com/jekyll/jekyll-feed">Jekyll Feed plugin - Recommend</a></li>
-<li><a href="http://jekyll.tips/tutorials/atom-feed/">Atom Feed in Jekyll</a></li>
-<li><a href="http://jekyll.tips/tutorials/rss-feed/">RSS Feed in Jekyll</a></li>
-<li><a href="http://joelglovier.com/writing/rss-for-jekyll/">RSS for Jekyll blogs</a></li>
-</ol>
-
-<h3 id="references">References:</h3>
-
-<ol>
-<li><a href="http://joshualande.com/jekyll-github-pages-poole/">http://joshualande.com/jekyll-github-pages-poole/</a></li>
-<li><a href="http://stackoverflow.com/questions/16099153/table-not-render-when-use-redcarpet-in-jekyll-github-pages">Table not render when use Redcarpet in Jekyll GitHub Pages?</a></li>
-<li><a href="http://www.jekyll-plugins.com">Jekyll-Plugins</a></li>
-<li><a href="http://jekyll.tips">Jekyll Stater</a></li>
-<li><a href="http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/">Adding Disqus Comment to your Jekyll</a></li>
+  <li><a href="http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/">http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/</a></li>
+  <li><a href="http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/">http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/</a></li>
+  <li><a href="http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/">วิธีทำให้ Mac อ่านและเขียนไฟล์ NTFS บน Windows ได้</a></li>
 </ol>
 
     

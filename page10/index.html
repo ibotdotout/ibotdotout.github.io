@@ -204,6 +204,113 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/ssh/">
+        All about Secure Shell
+      </a>
+    </h1>
+
+    <span class="post-date">
+      06 Apr 2015
+      
+        &middot;
+        <a href="/ssh/#disqus_thread" data-disqus-identifier="/ssh/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="ssh">SSH</h2>
+
+<h3 id="ssh-alias-confighttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">SSH Alias Config</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
+<span class="c"># use $ssh &lt;hostname&gt; to connect</span>
+<span class="c"># Host * //setting for every host</span>
+  Host &lt;hostname&gt;
+  HostName &lt;ip&gt;
+  User	 &lt;username&gt;
+  Port  &lt;port&gt;
+</code></pre>
+</div>
+
+<h3 id="using-ssh-proxycommand-to-tunnel-connectionshttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">Using SSH ProxyCommand to Tunnel Connections</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
+<span class="c">#ProxyCommand ssh someserver -W %h:%p</span>
+<span class="c">#  With the newer versions of openssh-client you can also use the -W option to forward the connection.</span>
+<span class="c">#LocalCommand</span>
+<span class="c">#  Specifies a command to execute on the local machine after successfully connecting to the server</span>
+<span class="c">#DynamicForward</span>
+<span class="c">#  Specifies that a TCP port on the local machine be forwarded over the secure channel, and the application protocol is then used to determine where to connect to from the remote machine.</span>
+<span class="c">#IdentityFile</span>
+<span class="c">#  Specifies a file from which the user's DSA, ECDSA, Ed25519 or RSA authentication identity is read</span>
+
+  Host &lt;proxy&gt;
+  HostName &lt;ip&gt;
+  User &lt;user&gt;
+  ProxyCommand ssh &lt;destination&gt; -W %h:%p 2&gt; /dev/null
+  IdentityFile &lt;ssh_key&gt;
+</code></pre>
+</div>
+
+<h2 id="ssh-login-with-key-based-authenticationhttpwwwlaubenheimernetssh-keysshtml"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Client: generate key</span>
+<span class="gp">$ </span>ssh-keygen -t rsa -b 4096
+
+<span class="c"># Server: put client key</span>
+<span class="c"># copy ~/.ssh/id_rsa.pub into ~/.ssh/authorized_keys in server</span>
+<span class="c"># (option: server denies passed auth)</span>
+<span class="gp">$ </span>sudo vim /etc/ssh/sshd_config
+</code></pre>
+</div>
+
+<h2 id="ssh-login-with-passwordhttpaskubuntucomquestions101670how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># /etc/ssh/sshd_config</span>
+PasswordAuthentication no
+
+Match address 192.0.2.0/24
+    PasswordAuthentication yes
+</code></pre>
+</div>
+
+<h2 id="ssh-proxy-with-socks5httpsthomashunternameblogreally-simple-ssh-proxy-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -N -D 8080 user@server -p 443
+<span class="c"># should using port 443 to avoid blocking port 22</span>
+<span class="c"># setting proxy  on your browser</span>
+<span class="c"># sock host 127.0.0.1 port 8080</span>
+</code></pre>
+</div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
+<span class="c"># use $ssh -N &lt;proxy&gt; -p 443</span>
+Host &lt;proxy&gt;
+  HostName &lt;ip&gt;
+  User &lt;user&gt;
+  DynamicForward 8080
+</code></pre>
+</div>
+
+<h2 id="ssh-skip-knownhosthttpsuperusercomquestions125324how-can-i-avoid-sshs-host-verification-for-known-hosts"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -o <span class="s2">"StrictHostKeyChecking no"</span> user@host
+</code></pre>
+</div>
+
+<h3 id="resources">Resources</h3>
+<ol>
+  <li><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Configuring">Setup and Setting SSH</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLtK75qxsQaMII75AbcuIruao1k2qdxwjg">SSH Crash Course – Fun With Remote Shells, From The Ground Up</a></li>
+  <li><a href="https://blog.0xbadc0de.be/archives/300">SSH: Best practices</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/latex/">
         All about Latex
       </a>
@@ -220,29 +327,37 @@
 
     
       <h3 id="install-latex-osx-mactex">Install Latex OSX (mactex)</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install mactex
-</code></pre></div>
-<h3 id="figures">Figures</h3>
 
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install mactex
+</code></pre>
+</div>
+
+<h3 id="figures">Figures</h3>
 <ul>
-<li><a href="http://tex.stackexchange.com/questions/4129/how-to-avoid-showing-the-filename-when-using-graphicx">How to avoid showing the filename when using graphicx?</a> - Ans: avoid filename with space</li>
-<li><a href="http://tex.stackexchange.com/questions/34063/figure-span-to-one-column-on-double-column-page">figure span to one column on double column page</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/4129/how-to-avoid-showing-the-filename-when-using-graphicx">How to avoid showing the filename when using graphicx?</a> - Ans: avoid filename with space</li>
+  <li><a href="http://tex.stackexchange.com/questions/34063/figure-span-to-one-column-on-double-column-page">figure span to one column on double column page</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
 <span class="nt">\begin{figure*}</span>
   <span class="k">\centering</span> <span class="k">\includegraphics</span><span class="p">{</span>figure<span class="p">}</span>
   <span class="k">\caption</span><span class="p">{</span>This is a figure caption<span class="p">}</span>
 <span class="nt">\end{figure*}</span>
-</code></pre></div>
-<h3 id="label">Label</h3>
+</code></pre>
+</div>
 
+<h3 id="label">Label</h3>
 <ul>
-<li><a href="http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">LaTeX/Labels and Cross-referencing</a></li>
+  <li><a href="http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">LaTeX/Labels and Cross-referencing</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
-</code></pre></div>
-<h3 id="landscape"><a href="http://tex.stackexchange.com/questions/168309/landscape-figure-on-different-page-to-heading">Landscape</a></h3>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
+</code></pre>
+</div>
+
+<h3 id="landscapehttptexstackexchangecomquestions168309landscape-figure-on-different-page-to-heading"><a href="http://tex.stackexchange.com/questions/168309/landscape-figure-on-different-page-to-heading">Landscape</a></h3>
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
 <span class="nt">\begin{landscape}</span>
@@ -251,9 +366,12 @@
 .
 <span class="nt">\end{landscape}</span>
 <span class="nt">\end{document}</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="math-equation">Math Equation</h3>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"># inline equation
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code># inline equation
 <span class="p">$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$</span> #equation
 <span class="p">$$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$$</span> #equation in new line
 
@@ -264,188 +382,204 @@
 # equation array
 <span class="nt">\begin{eqnarray}</span>
 <span class="nt">\end{eqnarray}</span>
-</code></pre></div>
-<ul>
-<li><a href="http://www.clas.kitasato-u.ac.jp/%7Efujiwara/keyNote/equationToKeynote.html">Import equations into Keynote</a></li>
-<li><a href="https://www.youtube.com/watch?v=dgVrj62AiAU">Keynote - How to Math on slide (Video)</a></li>
-<li><a href="https://www.sharelatex.com/learn/Mathematical_expressions">Mathematical expressions</a></li>
-<li><a href="http://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX/Mathematics</a></li>
-<li><a href="https://kogler.wordpress.com/2008/03/21/latex-use-of-math-symbols-formulas-and-equations/">math symbols and equations</a></li>
-<li><a href="http://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf">The Great, Big List of LATEX Symbols</a></li>
-<li><a href="https://kogler.wordpress.com/2008/03/21/latex-multiline-equations-systems-and-matrices/">LaTeX – Multiline equations, systems and matrices</a></li>
-<li><a href="http://tex.stackexchange.com/questions/45001/how-do-i-left-align-entries-in-a-matrix-with-beginmatrix">How do I left-align entries in a matrix with \begin{matrix}?</a></li>
-</ul>
-
-<h3 id="table"><a href="https://www.sharelatex.com/learn/Tables">Table</a></h3>
+</code></pre>
+</div>
 
 <ul>
-<li><a href="http://www.tablesgenerator.com">LaTeX Table Generator</a></li>
-<li><a href="https://www.sharelatex.com/learn/Positioning_images_and_tables">Positioning images and tables</a></li>
-<li><a href="http://www.sascha-frank.com/Faq/tables_six.html">LaTeX table fixed width</a></li>
-<li><a href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a></li>
-<li><a href="http://en.wikibooks.org/wiki/LaTeX/Tables">LaTeX/Tables</a></li>
-<li><a href="http://www.howtotex.com/packages/improve-your-tables-with-booktabs/">Improve your tables with booktabs</a></li>
+  <li><a href="http://www.clas.kitasato-u.ac.jp/~fujiwara/keyNote/equationToKeynote.html">Import equations into Keynote</a></li>
+  <li><a href="https://www.youtube.com/watch?v=dgVrj62AiAU">Keynote - How to Math on slide (Video)</a></li>
+  <li><a href="https://www.sharelatex.com/learn/Mathematical_expressions">Mathematical expressions</a></li>
+  <li><a href="http://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX/Mathematics</a></li>
+  <li><a href="https://kogler.wordpress.com/2008/03/21/latex-use-of-math-symbols-formulas-and-equations/">math symbols and equations</a></li>
+  <li><a href="http://www.rpi.edu/dept/arc/training/latex/LaTeX_symbols.pdf">The Great, Big List of LATEX Symbols</a></li>
+  <li><a href="https://kogler.wordpress.com/2008/03/21/latex-multiline-equations-systems-and-matrices/">LaTeX – Multiline equations, systems and matrices</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/45001/how-do-i-left-align-entries-in-a-matrix-with-beginmatrix">How do I left-align entries in a matrix with \begin{matrix}?</a></li>
 </ul>
 
-<h3 id="spreadtab-calculatable-table-latex">Spreadtab - Calculatable Table latex</h3>
-
+<h3 id="tablehttpswwwsharelatexcomlearntables"><a href="https://www.sharelatex.com/learn/Tables">Table</a></h3>
 <ul>
-<li><a href="http://tex.stackexchange.com/questions/30081/how-can-i-sum-two-values-and-store-the-result-in-other-variable">How can I sum two values and store the result in other variable?</a></li>
-<li><a href="http://tex.stackexchange.com/questions/130942/calculations-in-table-using-spreadtab">Calculations in Table using spreadtab</a></li>
-<li><a href="http://ctan.megagod.net/tex-archive/macros/latex/contrib/spreadtab/spreadtab_doc_en.pdf">Spreadtab User’s manual</a></li>
+  <li><a href="http://www.tablesgenerator.com">LaTeX Table Generator</a></li>
+  <li><a href="https://www.sharelatex.com/learn/Positioning_images_and_tables">Positioning images and tables</a></li>
+  <li><a href="http://www.sascha-frank.com/Faq/tables_six.html">LaTeX table fixed width</a></li>
+  <li><a href="http://texblog.org/2012/12/21/multi-column-and-multi-row-cells-in-latex-tables/">Multi-column and multi-row cells in LaTeX tables</a></li>
+  <li><a href="http://en.wikibooks.org/wiki/LaTeX/Tables">LaTeX/Tables</a></li>
+  <li><a href="http://www.howtotex.com/packages/improve-your-tables-with-booktabs/">Improve your tables with booktabs</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  # read more in document
-  # 2.5 Copy a formula
 
-  <span class="k">\STcopy</span><span class="p">{</span>&gt;x,vy<span class="p">}{</span>formula<span class="p">}</span>
+<h3 id="spreadtab---calculatable-table-latex">Spreadtab - Calculatable Table latex</h3>
+<ul>
+  <li><a href="http://tex.stackexchange.com/questions/30081/how-can-i-sum-two-values-and-store-the-result-in-other-variable">How can I sum two values and store the result in other variable?</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/130942/calculations-in-table-using-spreadtab">Calculations in Table using spreadtab</a></li>
+  <li>
+    <p><a href="http://ctan.megagod.net/tex-archive/macros/latex/contrib/spreadtab/spreadtab_doc_en.pdf">Spreadtab User’s manual</a></p>
 
-  # 3.2 Number formatting and the fp package
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code># read more in document
+# 2.5 Copy a formula
 
-  # foating point numbers are rounded to 2 digits
-  <span class="k">\STautoround</span><span class="p">{</span>2<span class="p">}</span>
-</code></pre></div>
+<span class="k">\STcopy</span><span class="p">{</span>&gt;x,vy<span class="p">}{</span>formula<span class="p">}</span>
+
+# 3.2 Number formatting and the fp package
+
+# foating point numbers are rounded to 2 digits
+<span class="k">\STautoround</span><span class="p">{</span>2<span class="p">}</span>
+</code></pre>
+    </div>
+  </li>
+</ul>
+
 <h3 id="separate-compilation-of-child-documents">Separate compilation of child documents</h3>
-
 <ul>
-<li><p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Subfiles">Subfiles</a></p>
+  <li>
+    <p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Subfiles">Subfiles</a></p>
 
-<blockquote>
-<p>use setting from master latex</p>
-</blockquote></li>
-<li><p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Standalone">Standalone</a></p>
+    <blockquote>
+      <p>use setting from master latex</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><a href="https://en.wikibooks.org/wiki/LaTeX/Modular_Documents#Standalone">Standalone</a></p>
 
-<blockquote>
-<p>have own setting not using from master latex</p>
-</blockquote></li>
+    <blockquote>
+      <p>have own setting not using from master latex</p>
+    </blockquote>
+  </li>
 </ul>
 
 <h3 id="tips">Tips</h3>
 
 <ul>
-<li><a href="http://tex.stackexchange.com/questions/124621/can-i-include-the-page-number-when-using-includepdf">Insert Pdf Page</a></li>
-<li><a href="http://tex.stackexchange.com/questions/185155/is-is-possible-to-not-abbreviate-the-author-name-of-only-one-reference-in-my-bib">Not abbreviate the author name</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/124621/can-i-include-the-page-number-when-using-includepdf">Insert Pdf Page</a></li>
+  <li>
+    <p><a href="http://tex.stackexchange.com/questions/185155/is-is-possible-to-not-abbreviate-the-author-name-of-only-one-reference-in-my-bib">Not abbreviate the author name</a></p>
+
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p><a href="http://ubuntuforums.org/showthread.php?t=1275429">citation treated like one word?</a></p>
+
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
+  # or using <span class="k">\hyphenation</span> to cut all the documents
+  <span class="k">\hyphenation</span><span class="p">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="p">}</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Word Cut</p>
+
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  using <span class="k">\-</span> or &lt; space &gt;
+</code></pre>
+    </div>
+  </li>
+  <li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">    author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
-</code></pre></div>
+
+<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
+</code></pre>
+</div>
+
 <ul>
-<li><a href="http://ubuntuforums.org/showthread.php?t=1275429">citation treated like one word?</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">    Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
-    # or using <span class="k">\hyphenation</span> to cut all the documents
-    <span class="k">\hyphenation</span><span class="p">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="p">}</span>
-</code></pre></div>
-<ul>
-<li>Word Cut</li>
-</ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">    using <span class="k">\-</span> or &lt; space &gt;
-</code></pre></div>
-<ul>
-<li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
-<li><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></li>
-</ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
-</code></pre></div>
-<ul>
-<li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
-<li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
-<li>hidden character</li>
-</ul>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  <span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
-</code></pre></div>
-<ul>
-<li><a href="http://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment">Custom alignment of text in itemized environment</a></li>
+  <li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
+  <li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
+  <li>
+    <p>hidden character</p>
+
+    <div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
+</code></pre>
+    </div>
+  </li>
+  <li><a href="http://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment">Custom alignment of text in itemized environment</a></li>
 </ul>
 
 <h3 id="ieee-paper">IEEE Paper</h3>
 
 <ol>
-<li><a href="https://softhandover.wordpress.com/2014/01/08/how-to-add-the-ieee-copyright-and-publication-id-on-a-ieeetran-conference-tex-file/">How to add the IEEE copyright and publication id on a IEEETran conference .tex file</a></li>
-<li><a href="https://www.youtube.com/watch?v=y0VrXGd_xRc">How to write a conference paper (IEEE, ACM) using Latex</a></li>
-<li><a href="https://www.youtube.com/watch?v=5ifh3NF-k-k">LaTeX tutorial: How to cite references/paper/articles in Latex</a></li>
+  <li><a href="https://softhandover.wordpress.com/2014/01/08/how-to-add-the-ieee-copyright-and-publication-id-on-a-ieeetran-conference-tex-file/">How to add the IEEE copyright and publication id on a IEEETran conference .tex file</a></li>
+  <li><a href="https://www.youtube.com/watch?v=y0VrXGd_xRc">How to write a conference paper (IEEE, ACM) using Latex</a></li>
+  <li><a href="https://www.youtube.com/watch?v=5ifh3NF-k-k">LaTeX tutorial: How to cite references/paper/articles in Latex</a></li>
 </ol>
-<div class="highlight"><pre><code class="language-tex" data-lang="tex">  # cite to bibtex references
-  <span class="k">\usepackage</span><span class="p">{</span>cite<span class="p">}</span>
-  <span class="k">\cite</span><span class="p">{</span>sample1234<span class="p">}</span>
 
-  # referecnes from bibtex
-  <span class="k">\bibliographystyle</span><span class="p">{</span>IEEEtran<span class="p">}</span>
-  <span class="k">\bibliography</span><span class="p">{</span>file<span class="p">_</span>of<span class="p">_</span>bibex<span class="p">}</span>
-</code></pre></div>
+<p>```tex
+  # cite to bibtex references
+  \usepackage{cite}
+  \cite{sample1234}</p>
+
+<p># referecnes from bibtex
+  \bibliographystyle{IEEEtran}
+  \bibliography{file_of_bibex}
+  ```</p>
+
 <h3 id="bibtex">BibTex</h3>
-
 <ul>
-<li><a href="http://www.bibtex.org/Using/">How to use BibTeX</a></li>
-<li><a href="http://tex.stackexchange.com/questions/204291/bibtex-latex-compiling">Bibtex, Latex compiling</a></li>
+  <li><a href="http://www.bibtex.org/Using/">How to use BibTeX</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/204291/bibtex-latex-compiling">Bibtex, Latex compiling</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># build latex + bibtex</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># build latex + bibtex</span>
 <span class="gp">$ </span>pdflatex paper.tex
 <span class="gp">$ </span>bibtex paper <span class="c"># without extension</span>
 <span class="gp">$ </span>pdflatex paper.tex
 <span class="gp">$ </span>pdflatex paper.tex
-</code></pre></div>
-<h3 id="latex-slide-beamer">Latex Slide (Beamer)</h3>
+</code></pre>
+</div>
 
+<h3 id="latex-slide-beamer">Latex Slide (Beamer)</h3>
 <ul>
-<li><a href="https://www.sharelatex.com/blog/2013/08/13/beamer-series-pt1.html">Presentations with Beamer pt 1 - Getting Started</a></li>
-<li><a href="https://www.sharelatex.com/learn/Beamer">Beamer - ShareLatex</a></li>
-<li><a href="http://www.math-linux.com/latex-26/article/how-to-make-a-presentation-with-latex-introduction-to-beamer">How to make a presentation with Latex - Introduction to Beamer</a></li>
-<li><a href="http://tug.org/pracjourn/2005-4/mertz/mertz.pdf">Beamer by Example</a></li>
-<li><a href="http://heather.cs.ucdavis.edu/%7Ematloff/beamer.html">Norm Matloff&#39;s Quick Tutorial on the Beamer Package for Slide Making
+  <li><a href="https://www.sharelatex.com/blog/2013/08/13/beamer-series-pt1.html">Presentations with Beamer pt 1 - Getting Started</a></li>
+  <li><a href="https://www.sharelatex.com/learn/Beamer">Beamer - ShareLatex</a></li>
+  <li><a href="http://www.math-linux.com/latex-26/article/how-to-make-a-presentation-with-latex-introduction-to-beamer">How to make a presentation with Latex - Introduction to Beamer</a></li>
+  <li><a href="http://tug.org/pracjourn/2005-4/mertz/mertz.pdf">Beamer by Example</a></li>
+  <li><a href="http://heather.cs.ucdavis.edu/~matloff/beamer.html">Norm Matloff’s Quick Tutorial on the Beamer Package for Slide Making
 in LaTeX</a></li>
-<li><a href="http://www.latextemplates.com/cat/presentations">Presentations - Latex Templates</a></li>
+  <li><a href="http://www.latextemplates.com/cat/presentations">Presentations - Latex Templates</a></li>
 </ul>
 
 <h4 id="beamer-theme">Beamer Theme</h4>
-
 <ul>
-<li><a href="http://deic.uab.es/%7Eiblanes/beamer_gallery/index_by_theme.html">Beamer theme gallery</a></li>
-<li><a href="http://deic.uab.es/%7Eiblanes/beamer_gallery/individual/Copenhagen-default-default.html">Beamer theme gallery: Copenhagen default default</a></li>
+  <li><a href="http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html">Beamer theme gallery</a></li>
+  <li><a href="http://deic.uab.es/~iblanes/beamer_gallery/individual/Copenhagen-default-default.html">Beamer theme gallery: Copenhagen default default</a></li>
 </ul>
 
 <h3 id="resouces">Resouces</h3>
-
 <ol>
-<li><a href="http://thaitug.daytag.org/">Thai Latex User Group</a></li>
-<li><a href="https://thailatex.wordpress.com">Thai LaTeX and MATLAB</a></li>
-<li><a href="https://www.sharelatex.com/blog/latex-guides/beginners-tutorial.html">ShareLaTeX Blog</a></li>
-<li>Latex Online Editor - <a href="https://www.overleaf.com">Overleaf</a> , <a href="https://www.sharelatex.com">ShareLatex</a></li>
+  <li><a href="http://thaitug.daytag.org/">Thai Latex User Group</a></li>
+  <li><a href="https://thailatex.wordpress.com">Thai LaTeX and MATLAB</a></li>
+  <li><a href="https://www.sharelatex.com/blog/latex-guides/beginners-tutorial.html">ShareLaTeX Blog</a></li>
+  <li>Latex Online Editor - <a href="https://www.overleaf.com">Overleaf</a> , <a href="https://www.sharelatex.com">ShareLatex</a></li>
 </ol>
 
 <h4 id="video">Video</h4>
-
 <ol>
-<li><a href="https://www.youtube.com/playlist?list=PL8D253694FEBEEB72">Techpush LaTex Beginner Tutorial Guide</a></li>
-<li><a href="https://www.overleaf.com/help/category/video_tutorials">Video Tutorials - Overleaf</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PL8D253694FEBEEB72">Techpush LaTex Beginner Tutorial Guide</a></li>
+  <li><a href="https://www.overleaf.com/help/category/video_tutorials">Video Tutorials - Overleaf</a></li>
 </ol>
 
 <h4 id="book">Book</h4>
-
 <ol>
-<li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LATEX2ε</a></li>
-<li><a href="http://www.stdout.org/%7Ewinston/latex/latexsheet-a4.pdf">LATEX2ε Cheat Sheet</a></li>
+  <li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to LATEX2ε</a></li>
+  <li><a href="http://www.stdout.org/~winston/latex/latexsheet-a4.pdf">LATEX2ε Cheat Sheet</a></li>
 </ol>
 
 <h4 id="example">Example</h4>
-
 <ol>
-<li><a href="http://carmaux.cs.gsu.edu/%7Emweeks/latex/">IEEE Example Conf/Journal</a></li>
+  <li><a href="http://carmaux.cs.gsu.edu/~mweeks/latex/">IEEE Example Conf/Journal</a></li>
 </ol>
 
 <h3 id="latex-docker">Latex Docker</h3>
-
 <ul>
-<li><a href="http://xmodulo.com/how-to-install-latex-on-ubuntu-or-debian.html">How to install LaTex on Ubuntu or Debian</a></li>
-<li><a href="https://www.blang.io/posts/2015-04_docker-tooling-latex/">Docker tooling - Latex</a></li>
-<li><a href="https://github.com/blang/latex-docker">Latex docker container</a></li>
+  <li><a href="http://xmodulo.com/how-to-install-latex-on-ubuntu-or-debian.html">How to install LaTex on Ubuntu or Debian</a></li>
+  <li><a href="https://www.blang.io/posts/2015-04_docker-tooling-latex/">Docker tooling - Latex</a></li>
+  <li><a href="https://github.com/blang/latex-docker">Latex docker container</a></li>
 </ul>
 
 <h3 id="etc">ETC.</h3>
-
 <ul>
-<li><a href="http://thep.blogspot.com/2009/07/thailatex-now-supports-utf-8.html">ThaiLaTeX Now Supports UTF-8</a></li>
-<li><a href="http://thep.blogspot.com/2014/09/swath-053.html">swath</a></li>
-<li><a href="http://tex.stackexchange.com/questions/258/what-is-the-difference-between-let-and-def">What is the difference between \let and \def?</a></li>
-<li><a href="http://tex.stackexchange.com/questions/655/what-is-the-difference-between-def-and-newcommand">What is the difference between \def and \newcommand?</a></li>
+  <li><a href="http://thep.blogspot.com/2009/07/thailatex-now-supports-utf-8.html">ThaiLaTeX Now Supports UTF-8</a></li>
+  <li><a href="http://thep.blogspot.com/2014/09/swath-053.html">swath</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/258/what-is-the-difference-between-let-and-def">What is the difference between \let and \def?</a></li>
+  <li><a href="http://tex.stackexchange.com/questions/655/what-is-the-difference-between-def-and-newcommand">What is the difference between \def and \newcommand?</a></li>
 </ul>
 
     
@@ -469,49 +603,44 @@ in LaTeX</a></li>
 
     
       <h3 id="owasp-broken-web-applications-project">OWASP Broken Web Applications Project</h3>
-
 <ul>
-<li>WLAN Security Megaprimer (SecurityTube)<br></li>
-<li>Metasploit Framework Expert (SecurityTube)<br></li>
-<li>Linux Assembly Expert (SecurityTube)<br></li>
-<li>Hack Night (NYU Poly ISIS Lab)<br></li>
-<li>The Life of Binaries (OpenSecurityTraining)<br></li>
+  <li>WLAN Security Megaprimer (SecurityTube)</li>
+  <li>Metasploit Framework Expert (SecurityTube)</li>
+  <li>Linux Assembly Expert (SecurityTube)</li>
+  <li>Hack Night (NYU Poly ISIS Lab)</li>
+  <li>The Life of Binaries (OpenSecurityTraining)</li>
 </ul>
 
 <h3 id="recomment-video">Recomment Video:</h3>
-
 <ol>
-<li><a href="https://www.youtube.com/watch?v=BTq0OO8EFeU">OLX.co.th - XSS to Account Take Over</a></li>
-<li><a href="https://www.youtube.com/watch?v=CbqU51yZH-4">ทดสอบแฮกเว็บง่าย ๆ ด้วย OWASP BWA #1</a></li>
-<li><a href="https://www.youtube.com/watch?v=xh45fBIANpc">how to be a web pentester (white hacker)</a></li>
-<li><a href="https://www.youtube.com/watch?v=BgAiMgDnIDY">อธิบายการทำงานของโปรแกรม traceroute (tracert)</a></li>
-<li><a href="https://www.youtube.com/watch?v=-_Hejoa1ESM">สาธิตการใช้งาน Burp Suite เบื้องต้น (package sniffer)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=BTq0OO8EFeU">OLX.co.th - XSS to Account Take Over</a></li>
+  <li><a href="https://www.youtube.com/watch?v=CbqU51yZH-4">ทดสอบแฮกเว็บง่าย ๆ ด้วย OWASP BWA #1</a></li>
+  <li><a href="https://www.youtube.com/watch?v=xh45fBIANpc">how to be a web pentester (white hacker)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=BgAiMgDnIDY">อธิบายการทำงานของโปรแกรม traceroute (tracert)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=-_Hejoa1ESM">สาธิตการใช้งาน Burp Suite เบื้องต้น (package sniffer)</a></li>
 </ol>
 
 <h3 id="youtube-channel">Youtube Channel:</h3>
-
 <ol>
-<li><a href="https://www.youtube.com/user/2600Thailand/videos">2600Thailand Group</a></li>
-<li><a href="https://www.youtube.com/user/pich4ya/videos">Pichaya Morimoto</a></li>
-<li><a href="https://www.youtube.com/user/yannarak/videos">Yannarak Wannasai</a></li>
-<li><a href="https://www.youtube.com/user/opkwin/videos">ตาเล็ก วินโด้</a></li>
-<li><a href="http://www.cybrary.it/course/ethical-hacking/">Penetration Testing and Ethical Hacking</a></li>
+  <li><a href="https://www.youtube.com/user/2600Thailand/videos">2600Thailand Group</a></li>
+  <li><a href="https://www.youtube.com/user/pich4ya/videos">Pichaya Morimoto</a></li>
+  <li><a href="https://www.youtube.com/user/yannarak/videos">Yannarak Wannasai</a></li>
+  <li><a href="https://www.youtube.com/user/opkwin/videos">ตาเล็ก วินโด้</a></li>
+  <li><a href="http://www.cybrary.it/course/ethical-hacking/">Penetration Testing and Ethical Hacking</a></li>
 </ol>
 
 <h3 id="tranning">Tranning:</h3>
-
 <ol>
-<li><a href="https://www.hackthissite.org">Hack This Site</a></li>
-<li><a href="https://github.com/isislab/Hack-Night">Hack Night is an open weekly training session run by the ISIS lab</a></li>
+  <li><a href="https://www.hackthissite.org">Hack This Site</a></li>
+  <li><a href="https://github.com/isislab/Hack-Night">Hack Night is an open weekly training session run by the ISIS lab</a></li>
 </ol>
 
 <h3 id="penetration-testing-lab">Penetration testing lab</h3>
-
 <ol>
-<li><a href="http://www.amanhardikar.com/mindmaps/Practice.html">PENETRATION TESTING PRACTICE LAB - VULNERABLE APPS / SYSTEMS</a></li>
-<li><a href="https://www.vulnhub.com">Vulnhub</a></li>
-<li><a href="https://lab.pentestit.ru">Pentestit</a></li>
-<li><a href="https://www.pentesterlab.com/exercises/">Pentesterlab exercises</a></li>
+  <li><a href="http://www.amanhardikar.com/mindmaps/Practice.html">PENETRATION TESTING PRACTICE LAB - VULNERABLE APPS / SYSTEMS</a></li>
+  <li><a href="https://www.vulnhub.com">Vulnhub</a></li>
+  <li><a href="https://lab.pentestit.ru">Pentestit</a></li>
+  <li><a href="https://www.pentesterlab.com/exercises/">Pentesterlab exercises</a></li>
 </ol>
 
     
@@ -534,26 +663,33 @@ in LaTeX</a></li>
     </span>
 
     
-      <h3 id="you-need-to-convent-result-of-unix-diff-to-ed-style-to-use-in-vimdiff">You need to convent result of unix diff to ed style to use in vimdiff.</h3>
+      <p>###You need to convent result of unix diff to ed style to use in vimdiff.</p>
 
-<h3 id="example">Example::</h3>
+<p>###Example::</p>
 
 <p>a.txt</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">aaaa
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aaaa
 bbbb
 cccc
 eeee
 eeee
 eeee
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>b.txt</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">aabb
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aabb
 bbbb
 dddd
 cccc
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>diff a.txt b.txt</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">diff --git a/aaa b/bbb
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>diff --git a/aaa b/bbb
 index fc3703c..11629db 100644
 --- a/aaa
 +++ b/bbb
@@ -566,9 +702,12 @@ index fc3703c..11629db 100644
 -eeee
 -eeee
 -eeee
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>ed style of result diff a.txt b.txt</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">1c1
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>1c1
 &lt; aaaa
 ---
 <span class="gp">&gt; </span>aabb
@@ -578,13 +717,15 @@ index fc3703c..11629db 100644
 &lt; eeee
 &lt; eeee
 &lt; eeee
-</code></pre></div>
-<h1 id="code">Code</h1>
+</code></pre>
+</div>
 
-<p>My line by line diff just only change no add or delete, result in ed style to use in vim diff.  </p>
+<p>#Code<br />
+My line by line diff just only change no add or delete, result in ed style to use in vim diff.</p>
 
 <p>my_diff.py</p>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
 
 
 <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">):</span>
@@ -637,19 +778,24 @@ index fc3703c..11629db 100644
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">sys</span>
     <span class="n">diff</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="set-vimdiff-to-use-result-of-my-diff-code">Set vimdiff to use result of my diff code</h3>
 
 <p>.vimrc</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
 <span class="k">function </span>MyDiff<span class="o">()</span>
     silent execute <span class="s2">"!python &lt;your_paht&gt;/my_diff.py "</span> . v:fname_in . <span class="s2">" "</span> . v:fname_new . <span class="s2">" &gt; "</span> . v:fname_out
 endfunction
-</code></pre></div>
-<p>Ref:<br>
-1. <a href="http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html">use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram</a><br>
-2. <a href="https://github.com/neovim/neovim/issues/1466">Use patience diff algorithm for vimdiff #1466</a><br>
-3. <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options">Vim documentation: diff</a><br>
+</code></pre>
+</div>
+
+<p>Ref:<br />
+1. <a href="http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html">use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram</a><br />
+2. <a href="https://github.com/neovim/neovim/issues/1466">Use patience diff algorithm for vimdiff #1466</a><br />
+3. <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options">Vim documentation: diff</a><br />
 4. <a href="http://blog.sanctum.geek.nz/actually-using-ed/">Actually using ed</a>
 5. <a href="http://blog.sanctum.geek.nz/using-more-of-ex/">Using more of ex</a></p>
 
@@ -674,234 +820,94 @@ endfunction
 
     
       <ul>
-<li><p>A magical, better time in the future never comes - <a href="https://www.youtube.com/watch?v=nBtO1UOK9Hs">Nell Shamrell -
+  <li>
+    <p>A magical, better time in the future never comes - <a href="https://www.youtube.com/watch?v=nBtO1UOK9Hs">Nell Shamrell -
 Test Driven Development: A Love Story - Ancient City Ruby
-2013</a></p></li>
-<li><p><img src="https://qph.is.quoracdn.net/main-qimg-4192549704b97fa8e80152d6e463a4c1?convert_to_webp=true" alt="Flow
-Concept"> - <a href="https://www.quora.com/Why-did-I-lose-my-drive-to-learn-more/answer/Shreyas-Saxena-1">Why did I lose my drive to learn
-more?</a></p></li>
-<li><p>You want people to want more rather than wanting less, because if they
-want less then they’re probably not coming back - <a href="http://digital-photography-school.com/10-common-mistakes-made-by-new-photographers/">James Maher - 10 Common Mistakes Made by New Photographers</a></p></li>
-<li><p>Even perfect code cannot explain its own existence. - <a href="http://www.slideshare.net/pirhilton/how-to-name-things-the-hardest-problem-in-programming">How to name
+2013</a></p>
+  </li>
+  <li>
+    <p><img src="https://qph.is.quoracdn.net/main-qimg-4192549704b97fa8e80152d6e463a4c1?convert_to_webp=true" alt="Flow
+Concept" /> - <a href="https://www.quora.com/Why-did-I-lose-my-drive-to-learn-more/answer/Shreyas-Saxena-1">Why did I lose my drive to learn
+more?</a></p>
+  </li>
+  <li>
+    <p>You want people to want more rather than wanting less, because if they
+want less then they’re probably not coming back - <a href="http://digital-photography-school.com/10-common-mistakes-made-by-new-photographers/">James Maher - 10 Common Mistakes Made by New Photographers</a></p>
+  </li>
+  <li>
+    <p>Even perfect code cannot explain its own existence. - <a href="http://www.slideshare.net/pirhilton/how-to-name-things-the-hardest-problem-in-programming">How to name
 things: the hardest problem in
-programming</a></p></li>
-<li><p>Read the source, Luke! - <a href="https://www.cyphar.com/blog/post/getting-into-linux-kernel-development">Getting into Linux Kernel Development</a></p></li>
-<li><p>You can search Google to understand any hot new technology in a few
-minutes, but you can&#39;t search Google to balance individual desire -
-<a href="http://www.thoughtworks.com/insights/blog/tech-not-problem-people-are">Tech is Not the Problem, People Are</a></p></li>
-<li><p>เราไม่ได้เหนื่อยเพราะเรื่องที่จบไปแล้ว แต่เหนื่อยเพราะเรื่องที่ยังเหลือมากกว่า - <a href="https://medium.com/life-as-i-feel-it/%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%B6%E0%B8%81%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A2-c701dac759dc">เมื่อรู้สึกเหนื่อย …</a></p></li>
-<li><p>Like any simple practice, there&#39;s lots of devil in the detail - <a href="http://martinfowler.com/books/duvall.html">Continuous Integration Improving Software Quality and Reducing Risk</a></p></li>
-<li><p>your goal is not to write software. Your goal is to solve problems, and often software is part of the solution. - <a href="http://sicpers.info/2014/01/its-about-solving-problems/">It’s about solving problems</a></p></li>
-<li><p>It’s the small things we do everyday that matter most - <a href="https://www.youtube.com/watch?v=iM9FLxico1I">Jeff Patton - &quot;How Doing the Little Things Well Makes the Big Things Possible&quot;</a></p></li>
-<li><p>เราจะไม่ทำอะไรก็ได้ เราจะทำอะไรที่เป็นเรา คือถ้าเราปล่อยให้ลูกค้าเอาเรฟเฟอเรนซ์มาให้แล้วบอกว่าจะเอาแบบนี้ Eyedropper Fill คงเป็นได้แค่โปรดักชั่นเฮาส์ ซึ่งไม่ได้อยากเป็นแบบนั้น เราอยากเป็นครีเอทีฟ - <a href="http://www.fungjaizine.com/art-cover/2015/10/3/-eyedropper-fill">Eyedropper Fill</a></p></li>
-<li><p>&quot;Five minutes&quot; represented &quot;think&quot;, not react. - <a href="https://signalvnoise.com/posts/3124-give-it-five-minutes">Give it five minutes</a></p></li>
-<li><p>ถ้าคุณไม่สามารถเรียนรู้ได้ทั้งหมด ก็ให้เรียนรู้เท่าที่จําเป็นใน ตอนนั้นแทนสิ - <a href="http://www.somkiat.cc">http://www.somkiat.cc</a></p></li>
-<li><p>Keep your personal emotions out of it. These people invest in results,
-not dreams. - Rise of the Planet of the Apes</p></li>
-<li><p>ความอดทนต่อสถานการณ์ต่างหาก ที่นำอิสรภาพมาให้ - <a href="https://storylog.co/story/55362b8e95099c580df8db1d">ในวันที่เผลอมองว่าชีวิต &quot;ไม่เป็นดังใจ&quot;</a></p></li>
-<li><p>ทำให้มันเสร็จ ทำให้มันดี ทำให้มันเนี้ยบ ทำให้สุด - <a href="https://www.youtube.com/watch?v=YKLXDWiWNCY">Thai Robotics Team - เป็นแชมป์หุ่นยนต์แล้วไปไหน</a></p></li>
-<li><p>Impossible just a little longer - the Lexus hover board</p></li>
-<li><p>“Remember, before you can be great, you’ve got to be good. Before you can be good, you’ve got to be bad. But before you can even be bad, you’ve got to try.” – Art Williamsk - <a href="http://thefullstack.xyz/excellent-javascript-developer/">The Difference Between Excellent, Good and Bad JavaScript Developers</a></p></li>
-<li><p>You can&#39;t optimize what you can&#39;t measure - <a href="https://www.mongodb.com/mongodb-scale">MongoDB at Scale</a></p></li>
-<li><p>เอ้าซอร์สให้ผลลัพธ์ไม่ได้ให้ความรู้ เอ้าซอร์สช่วยประหยัดเวลาไม่ได้ช่วยสร้างประสบการณ์ - <a href="https://medium.com/inspiring-home/outsourcing-work-f269c0233f6f#.lryg8vdxw">Outsourcing Work</a></p></li>
-<li><p>You can&#39;t optimize what you can&#39;t measure -  <a href="https://www.mongodb.com/mongodb-scale">MongoDB at Scale</a></p></li>
-<li><p> Duplication is better than the wrong abstraction - <a href="https://www.youtube.com/watch?v=8bZh5LMaSmE">RailsConf 2014 - All the Little Things by Sandi Metz</a></p></li>
-<li><p><a href="http://www.informit.com/articles/article.aspx?p=1941206">The Best Programming Advice I Ever Got&quot; with Rob Pike</a></p>
-<div class="highlight"><pre><code class="language-" data-lang="">Ken taught me that thinking before debugging is extremely important. If you
-dive into the bug, you tend to fix the local issue in the code, but if you
-think about the bug first, how the bug came to be, you often find and correct a
-higher-level problem in the code that will improve the design and prevent
-further bugs.
-</code></pre></div></li>
+programming</a></p>
+  </li>
+  <li>
+    <p>Read the source, Luke! - <a href="https://www.cyphar.com/blog/post/getting-into-linux-kernel-development">Getting into Linux Kernel Development</a></p>
+  </li>
+  <li>
+    <p>You can search Google to understand any hot new technology in a few
+minutes, but you can’t search Google to balance individual desire -
+<a href="http://www.thoughtworks.com/insights/blog/tech-not-problem-people-are">Tech is Not the Problem, People Are</a></p>
+  </li>
+  <li>
+    <p>เราไม่ได้เหนื่อยเพราะเรื่องที่จบไปแล้ว แต่เหนื่อยเพราะเรื่องที่ยังเหลือมากกว่า - <a href="https://medium.com/life-as-i-feel-it/เมื่อรู้สึกเหนื่อย-c701dac759dc">เมื่อรู้สึกเหนื่อย …</a></p>
+  </li>
+  <li>
+    <p>Like any simple practice, there’s lots of devil in the detail - <a href="http://martinfowler.com/books/duvall.html">Continuous Integration Improving Software Quality and Reducing Risk</a></p>
+  </li>
+  <li>
+    <p>your goal is not to write software. Your goal is to solve problems, and often software is part of the solution. - <a href="http://sicpers.info/2014/01/its-about-solving-problems/">It’s about solving problems</a></p>
+  </li>
+  <li>
+    <p>It’s the small things we do everyday that matter most - <a href="https://www.youtube.com/watch?v=iM9FLxico1I">Jeff Patton - “How Doing the Little Things Well Makes the Big Things Possible”</a></p>
+  </li>
+  <li>
+    <p>เราจะไม่ทำอะไรก็ได้ เราจะทำอะไรที่เป็นเรา คือถ้าเราปล่อยให้ลูกค้าเอาเรฟเฟอเรนซ์มาให้แล้วบอกว่าจะเอาแบบนี้ Eyedropper Fill คงเป็นได้แค่โปรดักชั่นเฮาส์ ซึ่งไม่ได้อยากเป็นแบบนั้น เราอยากเป็นครีเอทีฟ - <a href="http://www.fungjaizine.com/art-cover/2015/10/3/-eyedropper-fill">Eyedropper Fill</a></p>
+  </li>
+  <li>
+    <p>“Five minutes” represented “think”, not react. - <a href="https://signalvnoise.com/posts/3124-give-it-five-minutes">Give it five minutes</a></p>
+  </li>
+  <li>
+    <p>ถ้าคุณไม่สามารถเรียนรู้ได้ทั้งหมด ก็ให้เรียนรู้เท่าที่จําเป็นใน ตอนนั้นแทนสิ - <a href="http://www.somkiat.cc">http://www.somkiat.cc</a></p>
+  </li>
+  <li>
+    <p>Keep your personal emotions out of it. These people invest in results,
+not dreams. - Rise of the Planet of the Apes</p>
+  </li>
+  <li>
+    <p>ความอดทนต่อสถานการณ์ต่างหาก ที่นำอิสรภาพมาให้ - <a href="https://storylog.co/story/55362b8e95099c580df8db1d">ในวันที่เผลอมองว่าชีวิต “ไม่เป็นดังใจ”</a></p>
+  </li>
+  <li>
+    <p>ทำให้มันเสร็จ ทำให้มันดี ทำให้มันเนี้ยบ ทำให้สุด - <a href="https://www.youtube.com/watch?v=YKLXDWiWNCY">Thai Robotics Team - เป็นแชมป์หุ่นยนต์แล้วไปไหน</a></p>
+  </li>
+  <li>
+    <p>Impossible just a little longer - the Lexus hover board</p>
+  </li>
+  <li>
+    <p>“Remember, before you can be great, you’ve got to be good. Before you can be good, you’ve got to be bad. But before you can even be bad, you’ve got to try.” – Art Williamsk - <a href="http://thefullstack.xyz/excellent-javascript-developer/">The Difference Between Excellent, Good and Bad JavaScript Developers</a></p>
+  </li>
+  <li>
+    <p>You can’t optimize what you can’t measure - <a href="https://www.mongodb.com/mongodb-scale">MongoDB at Scale</a></p>
+  </li>
+  <li>
+    <p>เอ้าซอร์สให้ผลลัพธ์ไม่ได้ให้ความรู้ เอ้าซอร์สช่วยประหยัดเวลาไม่ได้ช่วยสร้างประสบการณ์ - <a href="https://medium.com/inspiring-home/outsourcing-work-f269c0233f6f#.lryg8vdxw">Outsourcing Work</a></p>
+  </li>
+  <li>
+    <p>You can’t optimize what you can’t measure -  <a href="https://www.mongodb.com/mongodb-scale">MongoDB at Scale</a></p>
+  </li>
+  <li>
+    <p> Duplication is better than the wrong abstraction - <a href="https://www.youtube.com/watch?v=8bZh5LMaSmE">RailsConf 2014 - All the Little Things by Sandi Metz</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.informit.com/articles/article.aspx?p=1941206">The Best Programming Advice I Ever Got” with Rob Pike</a></p>
+
+    <p><code class="highlighter-rouge">
+  Ken taught me that thinking before debugging is extremely important. If you
+  dive into the bug, you tend to fix the local issue in the code, but if you
+  think about the bug first, how the bug came to be, you often find and correct a
+  higher-level problem in the code that will improve the design and prevent
+  further bugs.
+ </code></p>
+  </li>
 </ul>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/robot-framework/">
-        Robot Framework
-      </a>
-    </h1>
-
-    <span class="post-date">
-      15 Sep 2014
-      
-        &middot;
-        <a href="/robot-framework/#disqus_thread" data-disqus-identifier="/robot-framework/"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="robot-framework-rf-github-repo"><a href="http://robotframework.org/">Robot Framework(RF)</a> - <a href="https://github.com/robotframework/robotframework">Github Repo</a></h2>
-
-<h2 id="robot-framework-template">Robot Framework Template</h2>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
-<span class="n">Documentation</span>     <span class="o">&lt;</span><span class="n">document</span><span class="o">&gt;</span>
-<span class="n">Library</span>           <span class="o">&lt;</span><span class="n">Library</span><span class="o">&gt;</span>
-<span class="n">Library</span>           <span class="o">&lt;</span><span class="n">python</span> <span class="n">pakcage</span><span class="o">&gt;</span>  <span class="n">WITH</span> <span class="n">NAME</span>  <span class="o">&lt;</span><span class="n">ref</span> <span class="n">name</span><span class="o">&gt;</span>
-<span class="n">Resource</span>          <span class="o">&lt;</span><span class="nb">file</span><span class="o">&gt;</span>
-
-<span class="n">Suite</span> <span class="n">Setup</span>       <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
-<span class="n">Suite</span> <span class="n">Teardown</span>    <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
-
-<span class="n">Test</span> <span class="n">Setup</span>        <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
-<span class="n">Test</span> <span class="n">Teardown</span>     <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
-
-<span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
-<span class="o">&lt;</span><span class="n">test</span> <span class="n">name</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span> <span class="ow">or</span> <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
-
-<span class="o">***</span> <span class="n">Keywords</span> <span class="o">***</span>
-<span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>
-  <span class="p">[</span><span class="n">Arguments</span><span class="p">]</span>  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span>
-  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span> <span class="o">=</span>  <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span>
-  <span class="p">[</span><span class="n">Return</span><span class="p">]</span>  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span>
-</code></pre></div>
-<h2 id="handling-whitespace-plain-text-format"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#rules-for-parsing-the-data">Handling whitespace - Plain text format</a></h2>
-
-<ul>
-<li> 1 tab   = 2 space</li>
-<li> 1 space - between command</li>
-<li><p>2+ space - between command and argument (recommend 4 space)</p></li>
-<li><p>Newlines, carriage returns, and tabs are converted to spaces.</p></li>
-</ul>
-
-<h3 id="special-characters-need-escaping-special-characters"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#rules-for-parsing-the-data">Special characters need Escaping special characters</a></h3>
-
-<ul>
-<li> Newlines             - \n</li>
-<li> carriage returns     - \r</li>
-<li> tabs                 - \t</li>
-<li> non-breaking spaces  - \xA0</li>
-</ul>
-
-<h3 id="continue-line-the-previous-line">Continue line the previous line</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># use ellipsis (...) to continue the previous line</span>
-<span class="n">Default</span> <span class="n">Tags</span>    <span class="n">a</span>   <span class="n">b</span>   <span class="n">c</span>
-<span class="o">...</span>           <span class="n">d</span> <span class="n">e</span>   <span class="n">f</span>
-</code></pre></div>
-<h2 id="test-templates-keyword-driven-test-cases-into-data-driven-tests"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-templates">Test templates - keyword-driven test cases into data-driven tests</a></h2>
-
-<h2 id="rf-file-formats">RF file formats:</h2>
-
-<ul>
-<li>HTML format</li>
-<li>TSV format</li>
-<li>Plain text format</li>
-<li>reStructuredText format</li>
-</ul>
-
-<p>support only .html, .xhtml, .htm, .tsv, .txt, .rst, or .rest file in dir</p>
-
-<h2 id="test-case-styles">Test case styles:</h2>
-
-<ul>
-<li>Keyword-driven style</li>
-<li>Data-driven style</li>
-<li>Behavior-driven style ( Give When Then )</li>
-</ul>
-
-<h2 id="rf-variable">RF Variable</h2>
-
-<ul>
-<li>scalars               - ${SCALAR}</li>
-<li>lists                 - @{LIST}</li>
-<li><p>environment variables - %{VARIABLE}</p></li>
-<li><p>all capital letters with global variables -  ${VAR}</p></li>
-<li><p>small letters with local variables        -  ${my_var}</p></li>
-</ul>
-
-<h3 id="number-variables"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#number-variables">Number variables</a></h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="err">$</span><span class="p">{</span><span class="mi">65</span><span class="p">}</span>     <span class="c"># 65 is integer</span>
-<span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="err">$</span><span class="p">{</span><span class="mf">67.25</span><span class="p">}</span>  <span class="c"># 67.25 is float</span>
-<span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="mi">65</span>        <span class="c"># 65 is string</span>
-</code></pre></div>
-<h3 id="boolean-and-none-null-variables"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#boolean-and-none-null-variables">Boolean and None/null variables</a></h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="err">$</span><span class="p">{</span><span class="n">true</span><span class="p">}</span>   <span class="o">-</span> <span class="n">python</span> <span class="bp">True</span>
-<span class="err">$</span><span class="p">{</span><span class="n">false</span><span class="p">}</span>  <span class="o">-</span> <span class="n">python</span> <span class="bp">False</span>
-<span class="err">$</span><span class="p">{</span><span class="bp">None</span><span class="p">}</span>   <span class="o">-</span> <span class="n">python</span> <span class="bp">None</span>
-</code></pre></div>
-<h2 id="selecting-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#selecting-test-cases">Selecting test cases</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">--test example<span class="k">*</span>       <span class="c">#select test</span>
---suite example-??    <span class="c">#select suite</span>
-</code></pre></div>
-<h2 id="tagging-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#tagging-test-cases">Tagging test cases</a></h2>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
-<span class="n">Force</span> <span class="n">Tags</span> <span class="n">FunctionalTest</span>
-<span class="n">Default</span> <span class="n">Tags</span> <span class="n">ValidTest</span>
-
-<span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
-<span class="n">invalid</span> <span class="n">login</span>
-  <span class="p">[</span><span class="n">Tags</span><span class="p">]</span>  <span class="n">InvalidTest</span>
-</code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Tag select</span>
-
-<span class="gp">$ </span>pybot -i InvalidTest login_tests.txt
-<span class="gp">$ </span>pybot --include InvalidTest login_tests.html
-
-<span class="gp">$ </span>pybot -e InvalidTest login_tests.txt
-<span class="gp">$ </span>pybot --exclude InvalidTest login_tests.html
-</code></pre></div>
-<h2 id="test-suites"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-suites">Test suites</a></h2>
-
-<p><strong>init</strong>.txt  - init test suite file</p>
-
-<h2 id="assgin-variable-via-cli">Assgin Variable via CLI</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
-<span class="gp">$ </span>pybot  -d /tmp --variable SERVER:<span class="s2">"192.168.59.103"</span> --variable BROWSER:chrome tests/acceptance/
-</code></pre></div>
-<h2 id="for-loops-tutorial"><a href="http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html#for-loops">For loops</a> - <a href="https://blog.codecentric.de/en/2013/05/robot-framework-tutorial-loops-conditional-execution-and-more/">Tutorial</a></h2>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">:</span><span class="n">FOR</span>    <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>   <span class="n">IN</span>    <span class="err">@</span><span class="p">{</span><span class="nb">list</span><span class="p">}</span>
-\    <span class="n">LOG</span>     <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>
-</code></pre></div>
-<h2 id="selenium-driver">Selenium Driver</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew install chromedriver <span class="c"># chrome driver for osx</span>
-<span class="gp">$ </span>brew install phantomjs <span class="c"># GUI less driver for osx</span>
-<span class="gp">$ </span>apt-get install phatomjs <span class="c"># GUI less driver for ubuntu</span>
-</code></pre></div>
-<h2 id="plugin">Plugin:</h2>
-
-<ol>
-<li><a href="https://github.com/mfukar/robotframework-vim">Vim plugins for development with Robot framework</a></li>
-<li><a href="https://github.com/mkorpela/pabot">Pabot - A parallel executor for Robot Framework tests</a></li>
-</ol>
-
-<h2 id="documents">Documents:</h2>
-
-<ol>
-<li><a href="http://robotframework.googlecode.com/hg/doc/quickstart/quickstart.html">Robot Framework Quick Start Guide</a></li>
-<li><a href="http://www.virtuousprogrammer.com/?p=264">RobotFramework Overview</a></li>
-<li><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html">Robot Framework User Guide</a></li>
-<li><a href="https://code.google.com/p/robotframework/wiki/HowToWriteGoodTestCases">HowToWriteGoodTestCases</a></li>
-</ol>
-
-<h2 id="demo">Demo:</h2>
-
-<ol>
-<li><a href="https://bitbucket.org/robotframework/robotdemo/src/0f996d178905?at=master">RobotDemo - Python Calculator</a></li>
-<li><a href="https://code.google.com/p/atdd-with-robot-framework/">Acceptance Test Driven Development with Robot Framework</a></li>
-<li><a href="https://bitbucket.org/robotframework">Robot Framework Demo</a></li>
-<li><a href="https://www.youtube.com/watch?v=ZPqtGfPHsMA">Using Robot + Selenium for automatic browser testing</a></li>
-</ol>
-
-<h2 id="references">References:</h2>
-
-<ol>
-<li><a href="http://stackoverflow.com/questions/19648439/robot-framework-keywords">Robot Framework Keywords</a></li>
-<li><a href="http://datakurre.pandala.org/2013/08/write-testable-documentation-with-robot.html">Write testable documentation with Robot Framework</a></li>
-<li><a href="http://stackoverflow.com/questions/7580252/how-can-i-return-results-in-robot-framework-keyword">how can I return results in Robot Framework keyword?</a></li>
-<li><a href="http://code.google.com/p/robotframework/source/browse/doc/userguide/src/CreatingTestData/CreatingUserKeywords.txt?r=e35c4cf7591986d212a6f1c015f2f77598fb7ea2">Creating user keywords</a></li>
-<li><a href="http://datakurre.pandala.org/2012/09/getting-started-with-robotframework-and.html">Getting started with Robot Framework and plone.app.testing</a></li>
-<li><a href="http://www.wallix.org/2011/07/26/how-to-use-robotframework-with-the-selenium-library/">RobotFramework with the Selenium Library</a> - <a href="http://www.wallix.org/2011/09/06/how-to-use-robotframework-part-2/">Part2</a></li>
-<li><a href="https://blog.codecentric.de/en/2012/03/robot-framework-tutorial-overview/">Robot Framework Tutorial – Overview</a></li>
-<li><a href="https://bomb0069.wordpress.com/2014/07/08/atdd-code-reviews/">Rule, Workflow and Technical Activity on Code Reviews</a></li>
-<li><a href="http://agilethailand.org/2012/07/14/atdd-by-robot-1/">ATDD by Robot Framework#1 - ATH</a></li>
-<li><a href="http://stackoverflow.com/questions/16692593/how-to-import-python-modules-and-expose-the-methods-in-robot-ride">How to import python modules</a></li>
-<li><a href="http://stackoverflow.com/questions/338768/python-importerror-no-module-named">python ImportError No module named</a></li>
-<li><a href="http://www.somkiat.cc/docker-image-for-robotframework/">Robot Framework สร้าง Image เอาไว้ทดสอบระบบ web ด้วย Docker</a></li>
-</ol>
 
     
   </div>

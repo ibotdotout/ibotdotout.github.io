@@ -212,14 +212,15 @@
   </span>
 
   <h2 id="recover-lost-partition">Recover lost partition</h2>
-
 <p>I used <a href="http://www.cgsecurity.org/wiki/TestDisk">TestDisk</a> to recover my lost NTFS partition that I formatted by accidentally. You can use TestDisk by follow <a href="http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step">TestDisk Step by Step</a>. After recovered I can see my NTFS partition that was formatted but can not access it.</p>
 
 <h2 id="repair-damaged-partition">Repair damaged partition</h2>
+<p>I got my lost partition back but can’t access it. So I use ‘chkdsk /r’ command on Windows to repair damaged partition. Finally after 12 hours, I can got lost partition back and accessible it normally.</p>
 
-<p>I got my lost partition back but can&#39;t access it. So I use &#39;chkdsk /r&#39; command on Windows to repair damaged partition. Finally after 12 hours, I can got lost partition back and accessible it normally.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  chkdsk /r &lt;drive&gt;
-</code></pre></div>
+<p><code class="highlighter-rouge">sh
+  chkdsk /r &lt;drive&gt;
+ </code></p>
+
   
     Tags:
     
@@ -236,6 +237,15 @@
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -248,15 +258,6 @@
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

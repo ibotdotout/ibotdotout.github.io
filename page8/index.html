@@ -204,6 +204,97 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/vim-command/">
+        Vim Command
+      </a>
+    </h1>
+
+    <span class="post-date">
+      07 Sep 2015
+      
+        &middot;
+        <a href="/vim-command/#disqus_thread" data-disqus-identifier="/vim-command/"></a>
+        
+      
+    </span>
+
+    
+      <h3 id="range">Range</h3>
+<p>|[range]|Description|
+|——-|———–|
+|0 | above first line  |
+|1 | first line  |
+|. | mean to current line  |
+|% | all lines  |
+|$ | last line  |
+|{start},{end} | from start to end line  |
+|&lt;,&gt; | start selection to end selection  |</p>
+
+<h3 id="insert">Insert</h3>
+<p>|Command|Description|
+|——-|———–|
+|:[range]print , :p | print line  |
+|:[range]copy{target} , :t | copy line &amp; paste  |
+|:[range]normal {vimkey} | action vim key via command  |
+||ex. :%normal A; - put ‘;’ in end line for each line  |
+|:!&lt;shell command&gt; | run shell command in vim  % mean to current file  |
+|:r&lt;file&gt; ,:r !&lt;shell cmd&gt; | retrieving file after current cursor|</p>
+
+<h3 id="editor">Editor</h3>
+<p>|Command|Description|
+|——-|———–|
+|:e&lt;file&gt; | edit/new file|
+|:new&lt;file&gt; | new file|
+|:vnew&lt;file&gt; | new file in vertical|
+|:w !sudo tee % | <a href="https://www.youtube.com/watch?v=C6xqO4Z1nIo">write file with sudo premission</a>|</p>
+
+<h3 id="number">Number</h3>
+<p>|Command|Description|
+|——-|———–|
+|:set relativenumber | enable relative number  |
+|:set norelativenumber | disable relative number  |</p>
+
+<h3 id="key-mappinghttpvimwikiacomwikimappingkeysinvim-tutorialpart1"><a href="http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)">Key Mapping</a></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:map, :map!</td>
+      <td>show mapping key</td>
+    </tr>
+    <tr>
+      <td>:verbose map &lt;key&gt;</td>
+      <td>show mapping key and where it mapping</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="etc">ETC</h3>
+<p>|Command|Description|
+|——-|———–|
+|:[range]move{target} , :m | move line  |
+|:nohlsearch , :nohls | mute highlight search  |
+|:&lt;stg&gt;C-d&lt;\tab&gt; | command line completion|
+|:redraw | redraw screen (Ctrl + L)|
+|:messages | show history of messages |</p>
+
+<h2 id="references">References:</h2>
+<ol>
+  <li><a href="http://superuser.com/a/547176">How can I view old status messages in Vim?</a></li>
+  <li><a href="http://vim.wikia.com/wiki/Make_echo_seen_when_it_would_otherwise_disappear_and_go_unseen">Make echo seen when it would otherwise disappear and go unseen</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/robot-packtpub/">
         Robot Packtpub
       </a>
@@ -222,12 +313,13 @@
       <p>Automate claim <a href="https://www.packtpub.com/packt/offers/free-learning">free ebook from packtpub</a> to your packtpub account by robotframework script.</p>
 
 <h2 id="robot-script">Robot Script</h2>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/9a567b2c2f90df2d59c5.js"> </script>
 
-<p><noscript><pre>400: Invalid request
-</pre></noscript><script src="https://gist.github.com/9a567b2c2f90df2d59c5.js"> </script></p>
+<h2 id="package-requirements-or-dockerfile-on-robot-packtpub-repohttpsgithubcomibotdotoutrobot-packtpub">Package Requirements or <a href="https://github.com/ibotdotout/robot-packtpub">Dockerfile on Robot-packtpub Repo</a></h2>
 
-<h2 id="package-requirements-or-dockerfile-on-robot-packtpub-repo">Package Requirements or <a href="https://github.com/ibotdotout/robot-packtpub">Dockerfile on Robot-packtpub Repo</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># ubuntu</span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># ubuntu</span>
 <span class="gp">$ </span>apt-get -y update
 <span class="gp">$ </span>apt-get -y install python-dev python-pip
 <span class="gp">$ </span>apt-get install -y phantomjs libicu52 wget
@@ -235,19 +327,29 @@
 
 <span class="gp">$ </span>pip install robotframework
 <span class="gp">$ </span>pip install robotframework-selenium2library
-</code></pre></div>
-<h2 id="how-to-use">How to use</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
-<span class="gp">$ </span>pybot robot-packtpub.txt
-</code></pre></div>
-<h2 id="note">Note</h2>
+</code></pre>
+</div>
 
+<h2 id="how-to-use">How to use</h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
+<span class="gp">$ </span>pybot robot-packtpub.txt
+</code></pre>
+</div>
+
+<h2 id="note">Note</h2>
 <ul>
-<li><p>We use XPath to locate where button and input form are that not flexible,
+  <li>
+    <p>We use XPath to locate where button and input form are that not flexible,
 It may change when Web UI changed (XPath is Best Solution that I found).
-You can find XPath by following this video - <a href="https://www.youtube.com/watch?v=vCNLPHP3E_U">Quick Tip: Getting The XPath In Google Chrome</a>.</p></li>
-<li><p><code>PhantomJS2.0 fixed this issue</code> We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.</p></li>
-<li><p>You can use <a href="https://travis-ci.org">Travis-CI</a> and <a href="https://nightli.es">Nightly Builds</a> to run your script everyday - <a href="https://github.com/ibotdotout/robot-packtpub">See demo here</a>.</p></li>
+You can find XPath by following this video - <a href="https://www.youtube.com/watch?v=vCNLPHP3E_U">Quick Tip: Getting The XPath In Google Chrome</a>.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">PhantomJS2.0 fixed this issue</code> We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.</p>
+  </li>
+  <li>
+    <p>You can use <a href="https://travis-ci.org">Travis-CI</a> and <a href="https://nightli.es">Nightly Builds</a> to run your script everyday - <a href="https://github.com/ibotdotout/robot-packtpub">See demo here</a>.</p>
+  </li>
 </ul>
 
     
@@ -273,83 +375,115 @@ You can find XPath by following this video - <a href="https://www.youtube.com/wa
       <h3 id="package-manager">Package Manager</h3>
 
 <ul>
-<li><a href="http://brew.sh">Homebrew - The missing package manager for OS X</a></li>
+  <li><a href="http://brew.sh">Homebrew - The missing package manager for OS X</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">ruby -e <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>ruby -e <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
+</code></pre>
+</div>
+
 <ul>
-<li><a href="http://caskroom.io">Homebrew Cask - “To install, drag this icon…” no more!</a></li>
+  <li><a href="http://caskroom.io">Homebrew Cask - “To install, drag this icon…” no more!</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew install caskroom/cask/brew-cas
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew install caskroom/cask/brew-cas
+</code></pre>
+</div>
+
 <ul>
-<li><a href="https://github.com/caskroom/homebrew-fonts">Caskroom-fonts</a></li>
+  <li><a href="https://github.com/caskroom/homebrew-fonts">Caskroom-fonts</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew tap caskroom/fonts
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap caskroom/fonts
+</code></pre>
+</div>
+
 <ul>
-<li><a href="https://github.com/beeftornado/homebrew-rmtree">homebrew-rmtree</a> - <a href="http://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies">Uninstall / remove a Homebrew package including all its
+  <li><a href="https://github.com/beeftornado/homebrew-rmtree">homebrew-rmtree</a> - <a href="http://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies">Uninstall / remove a Homebrew package including all its
 dependencies</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew tap beeftornado/rmtree <span class="o">&amp;&amp;</span> brew install brew-rmtree
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap beeftornado/rmtree <span class="o">&amp;&amp;</span> brew install brew-rmtree
 <span class="gp">$ </span>brew rmtree &lt;package&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="developer-tools">Developer Tools</h3>
 
 <ul>
-<li><a href="http://iterm2.com">iTerm2 - Mac OS Terminal Replacement</a></li>
+  <li><a href="http://iterm2.com">iTerm2 - Mac OS Terminal Replacement</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># this is too old version</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># this is too old version</span>
 <span class="gp">$ </span>brew cask install iterm2
 
 <span class="c"># try night build that lastest version</span>
 <span class="gp">$ </span>brew tap caskroom/versions
 <span class="gp">$ </span>brew cask install iterm2-nightly
-</code></pre></div>
+</code></pre>
+</div>
 <ul>
-<li><a href="http://ohmyz.sh">Oh My Zsh - managing your zsh configuration.</a></li>
+  <li><a href="http://ohmyz.sh">Oh My Zsh - managing your zsh configuration.</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+</code></pre>
+</div>
+
 <ul>
-<li><a href="https://kapeli.com/dash">Dash - API Documentation Browser</a></li>
+  <li><a href="https://kapeli.com/dash">Dash - API Documentation Browser</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install dash
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install dash
+</code></pre>
+</div>
+
 <ul>
-<li><a href="https://github.com/MrRio/vtop">vtop</a> - <a href="https://parall.ax/vtop">Intro</a></li>
+  <li><a href="https://github.com/MrRio/vtop">vtop</a> - <a href="https://parall.ax/vtop">Intro</a></li>
 </ul>
 
 <blockquote>
-<p>htop on osx port from linux that five years ago version. It&#39;s very old.</p>
+  <p>htop on osx port from linux that five years ago version. It’s very old.</p>
 </blockquote>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># requried nodejs</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># requried nodejs</span>
 <span class="gp">$ </span>sudo npm install -g vtop
-</code></pre></div>
+</code></pre>
+</div>
+
 <h3 id="window-manager">Window Manager</h3>
 
 <ul>
-<li><a href="http://spectacleapp.com">Spectacle - Move and resize windows with ease</a></li>
+  <li><a href="http://spectacleapp.com">Spectacle - Move and resize windows with ease</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install spectacle
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install spectacle
+</code></pre>
+</div>
+
 <h3 id="etc">Etc</h3>
 
 <ul>
-<li><a href="https://justgetflux.com">f.lux - warm your display color</a></li>
+  <li><a href="https://justgetflux.com">f.lux - warm your display color</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install flux
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install flux
+</code></pre>
+</div>
+
 <ul>
-<li><a href="https://slack.com">Slack: Be less busy</a></li>
+  <li><a href="https://slack.com">Slack: Be less busy</a></li>
 </ul>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>brew cask install slack
-</code></pre></div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install slack
+</code></pre>
+</div>
+
 <ul>
-<li><a href="http://www.iviewapp.net/2012/12/thai-dictionary-mac-os-x-mountain-lion.html">OSX Thai Dictionary</a></li>
-<li><a href="https://gist.github.com/kevin-smets/8568070">iTerm2 + oh my zsh + solarized + Meslo powerline font (OSX)</a></li>
-<li><a href="https://github.com/caskroom/homebrew-versions">homebrew-versions</a></li>
-<li><a href="https://github.com/msanders/cider">Cider - homebrew wrapper</a></li>
+  <li><a href="http://www.iviewapp.net/2012/12/thai-dictionary-mac-os-x-mountain-lion.html">OSX Thai Dictionary</a></li>
+  <li><a href="https://gist.github.com/kevin-smets/8568070">iTerm2 + oh my zsh + solarized + Meslo powerline font (OSX)</a></li>
+  <li><a href="https://github.com/caskroom/homebrew-versions">homebrew-versions</a></li>
+  <li><a href="https://github.com/msanders/cider">Cider - homebrew wrapper</a></li>
 </ul>
 
     
@@ -372,231 +506,254 @@ dependencies</a></li>
     </span>
 
     
-      <h1 id="jenkins-ci-extendable-ci-server"><a href="http://jenkins-ci.org">Jenkins-CI</a> - Extendable CI Server</h1>
+      <h1 id="jenkins-cihttpjenkins-ciorg---extendable-ci-server"><a href="http://jenkins-ci.org">Jenkins-CI</a> - Extendable CI Server</h1>
 
 <h2 id="install-jenkins">Install Jenkins::</h2>
+<p>### Debian
+  <code class="highlighter-rouge">sh
+  # Don't use only apt-get install jenkins that old version
+  $ wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+  $ sudo vim /etc/apt/sources.list
+  # add the following entry
+  # deb http://pkg.jenkins-ci.org/debian binary/
+  $ sudo apt-get update
+  $ sudo apt-get install jenkins
+ </code></p>
 
-<h3 id="debian">Debian</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Don't use only apt-get install jenkins that old version</span>
-  <span class="nv">$ </span>wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
-  <span class="nv">$ </span>sudo vim /etc/apt/sources.list
-  <span class="c"># add the following entry</span>
-  <span class="c"># deb http://pkg.jenkins-ci.org/debian binary/</span>
-  <span class="nv">$ </span>sudo apt-get update
-  <span class="nv">$ </span>sudo apt-get install jenkins
-</code></pre></div>
 <h3 id="osx">OSX</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  brew update
+<p><code class="highlighter-rouge">sh
+  brew update
   brew install jenkins
-</code></pre></div>
-<h3 id="allow-others-to-access-jenkins">Allow others to access jenkins</h3>
+ </code>
+### Allow others to access jenkins
+Original From <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Setting up an Apache Proxy for port 80 -&gt; 8080</a> but it use old version of apache2</p>
 
-<p>Original From <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Setting up an Apache Proxy for port 80 -&gt; 8080</a> but it use old version of apache2</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="nv">$ </span>sudo apt-get install apache2
-    <span class="nv">$ </span>sudo a2enmod proxy
-    <span class="nv">$ </span>sudo a2enmod proxy_http
-    <span class="nv">$ </span>sudo a2dissite 000-default.conf
-</code></pre></div>
-<p>Create &quot;jenfins.conf&quot; in /etc/apache2/sites-available</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  &lt;VirtualHost <span class="k">*</span>:80&gt;
+<p><code class="highlighter-rouge">sh
+    $ sudo apt-get install apache2
+    $ sudo a2enmod proxy
+    $ sudo a2enmod proxy_http
+    $ sudo a2dissite 000-default.conf
+ </code></p>
+
+<p>Create “jenfins.conf” in /etc/apache2/sites-available</p>
+
+<p><code class="highlighter-rouge">sh
+  &lt;VirtualHost *:80&gt;
       ServerAdmin webmaster@localhost
       ServerName ci.company.com
       ServerAlias ci
       ProxyRequests Off
-      &lt;Proxy <span class="k">*</span>&gt;
+      &lt;Proxy *&gt;
             Order deny,Alloww
             Allow from all
       &lt;/Proxy&gt;
       ProxyPreserveHost on
       ProxyPass / http://Proxylocalhost:8080/
   &lt;/VirtualHost&gt;
-</code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>sudo a2ensite jenkins
-  <span class="nv">$ </span>sudo service apache2 restart
-</code></pre></div>
-<h2 id="jenkins-job-workspace">Jenkins Job Workspace::</h2>
+ </code></p>
 
+<p><code class="highlighter-rouge">sh
+  $ sudo a2ensite jenkins
+  $ sudo service apache2 restart
+ </code></p>
+
+<h2 id="jenkins-job-workspace">Jenkins Job Workspace::</h2>
 <ol>
-<li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br></li>
-<li>In Home directory clicks Adanced... Buttons.<br></li>
-<li>look Workspace Root Directory. Normally it is &quot;workspace&quot;.<br></li>
-<li>your job workspace is &lt; jenkins home directory &gt; /jobs/&lt; your jobs &gt; / &lt; workspace &gt;<br></li>
+  <li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory</li>
+  <li>In Home directory clicks Adanced… Buttons.</li>
+  <li>look Workspace Root Directory. Normally it is “workspace”.</li>
+  <li>your job workspace is &lt; jenkins home directory &gt; /jobs/&lt; your jobs &gt; / &lt; workspace &gt;</li>
 </ol>
 
 <h2 id="jenkins-backup-and-import-configure">Jenkins backup and Import Configure::</h2>
+<p>###Backup Job Configure<br />
+  <code class="highlighter-rouge">sh
+  http://yourjenkinsserver/job/&lt;project name&gt;/config.xml
+ </code></p>
 
-<h3 id="backup-job-configure">Backup Job Configure</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/job/&lt;project name&gt;/config.xml
-</code></pre></div>
-<h3 id="import-job-configure">Import Job Configure</h3>
+<p>###Import Job Configure<br />
+1. look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br />
+2. go to &lt; jenkins home directory &gt;/jobs<br />
+3. go to &lt; your jobs directory &gt;<br />
+4. replace your backup config.xml with config.xml<br />
+5. reload jenkins with</p>
 
-<ol>
-<li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br></li>
-<li>go to &lt; jenkins home directory &gt;/jobs<br></li>
-<li>go to &lt; your jobs directory &gt;<br></li>
-<li>replace your backup config.xml with config.xml<br></li>
-<li>reload jenkins with<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/reload
-</code></pre></div>
+<p><code class="highlighter-rouge">sh
+  http://yourjenkinsserver/reload
+ </code></p>
+
 <h2 id="jenkins-trigger-via-git-hook">Jenkins Trigger via git hook::</h2>
+<p>### Setup Configure<br />
+1. Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a><br />
+2. In Job Configure &gt; Source Code Management &gt; Select Git<br />
+3. add your git repository url to Repository URL<br />
+4. Select Poll SCM in Build Triggers and you can leave Schedule as blank<br />
+5. Save Configure</p>
 
-<h3 id="setup-configure">Setup Configure</h3>
-
+<h3 id="git-hook-to-trigger-jenkinshttpswikijenkins-ciorgdisplayjenkinsgitplugingitplugin-pushnotificationfromrepository"><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository">Git Hook to trigger Jenkins</a></h3>
 <ol>
-<li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a><br></li>
-<li>In Job Configure &gt; Source Code Management &gt; Select Git<br></li>
-<li>add your git repository url to Repository URL<br></li>
-<li>Select Poll SCM in Build Triggers and you can leave Schedule as blank<br></li>
-<li>Save Configure<br></li>
+  <li>If you use linux you have to install curl. That was installed osx.</li>
 </ol>
 
-<h3 id="git-hook-to-trigger-jenkins"><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository">Git Hook to trigger Jenkins</a></h3>
+<p><code class="highlighter-rouge">sh
+  $ sudo apt-get install curl
+ </code>
+2. You can trigger jenkins with this url</p>
+
+<p><code class="highlighter-rouge">sh
+  http://yourjenkinsserver/git/notifyCommit?url=&lt;URL of the Git repository&gt;
+ </code></p>
 
 <ol>
-<li>If you use linux you have to install curl. That was installed osx.</li>
+  <li>You can trigger jenkins after git push by</li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>sudo apt-get install curl
-</code></pre></div>
+
+<p><code class="highlighter-rouge">sh
+  # git don't have post-push hook
+  $ git push &amp;&amp; curl http://yourjenkinsserver/git/notifyCommit?url=$(git remote -v | grep -m 1 -oh "git@.*git")
+ </code></p>
+
 <ol>
-<li>You can trigger jenkins with this url</li>
+  <li>You can use git alias to make short cmd by edit .git/config in your git repository</li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span>&lt;URL of the Git repository&gt;
-</code></pre></div>
-<ol>
-<li>You can trigger jenkins after git push by</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># git don't have post-push hook</span>
-  <span class="nv">$ </span>git push <span class="o">&amp;&amp;</span> curl http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
-</code></pre></div>
-<ol>
-<li>You can use git alias to make short cmd by edit .git/config in your git repository</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="o">[</span><span class="nb">alias</span><span class="o">]</span>
-      trig-jenkins <span class="o">=</span> !curl http://yourjenkinsservergit/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
-      push-wt <span class="o">=</span> !git push <span class="o">&amp;&amp;</span> git trig-jenkins
-</code></pre></div>
+
+<p><code class="highlighter-rouge">sh
+    [alias]
+      trig-jenkins = !curl http://yourjenkinsservergit/notifyCommit?url=$(git remote -v | grep -m 1 -oh "git@.*git")
+      push-wt = !git push &amp;&amp; git trig-jenkins
+ </code></p>
+
 <p>call your alias by</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="nv">$ </span>git trig-jenkins
-  <span class="nv">$ </span>git push-wt
-</code></pre></div>
+
+<p><code class="highlighter-rouge">sh
+  $ git trig-jenkins
+  $ git push-wt
+ </code></p>
+
 <h2 id="jenkins-with-python">Jenkins with Python::</h2>
+<p>###Setup
+1. Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin</a><br />
+2. In Manage Jenkins &gt; Configure System &gt; Python clicks “Python installations” button.<br />
+3. Config your python environments<br />
+4. Save</p>
 
-<h3 id="setup">Setup</h3>
+<p>###Configure Job to run with python
+1. In Job Configure &gt; Build &gt; Add build step &gt; {Python Builder, VirtualEnv Builder}<br />
+2. Select your Python version<br />
+3. Nature select shell<br />
+4. In command add your run script</p>
 
-<ol>
-<li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin</a><br></li>
-<li>In Manage Jenkins &gt; Configure System &gt; Python clicks &quot;Python installations&quot; button.<br></li>
-<li>Config your python environments<br></li>
-<li>Save<br></li>
-</ol>
-
-<h3 id="configure-job-to-run-with-python">Configure Job to run with python</h3>
-
-<ol>
-<li>In Job Configure &gt; Build &gt; Add build step &gt; {Python Builder, VirtualEnv Builder}<br></li>
-<li>Select your Python version<br></li>
-<li>Nature select shell<br></li>
-<li>In command add your run script<br></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># example</span>
-  <span class="nb">export </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+<p><code class="highlighter-rouge">sh
+  # example
+  export LANG=en_US.UTF-8
   python setup.py develop
-  nosetests --with-coverage --cover-erase --cover-package<span class="o">=</span>core,bin --cover-html --with-xunit
-</code></pre></div>
-<ol>
-<li><p>(Optional) Publish Test Result Report 
-5.1 Use nosetests to generate xml result in xunit format  </p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"> <span class="nv">$ </span>nosetests --with-xunit  <span class="c"># nosetests.xml is default name of xml</span>
-</code></pre></div>
-<p>5.2 Add post-build action &gt; Publish JUnit test result report<br>
-5.3 Add &quot;nosetests.xml&quot; in Test report XMLs  </p></li>
-<li><p>(Optional) Publish coverage.py HTML reports<br>
-6.1 Use nosetests to run coverage.py  </p></li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">    <span class="nv">$ </span>nosetests --with-coveage --cover-html
-</code></pre></div>
-<p>6.2 Add post-build action &gt; Publish coverage.py HTML reports<br>
-7. (Options) Publish your product<br>
-  7.1 Add post-build action &gt; Archive the artifacts<br>
-  7.2 Add your file name  </p>
+  nosetests --with-coverage --cover-erase --cover-package=core,bin --cover-html --with-xunit
+ </code>
+5. (Optional) Publish Test Result Report 
+  5.1 Use nosetests to generate xml result in xunit format</p>
 
-<h2 id="start-stop-jenkins-that-installed-via-homebrew">Start/Stop Jenkins that installed via Homebrew</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># launchd start jenkins at login:</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>```sh
+ $ nosetests --with-xunit  # nosetests.xml is default name of xml
+```   5.2 Add post-build action &gt; Publish JUnit test result report     5.3 Add "nosetests.xml" in Test report XMLs   6. (Optional) Publish coverage.py HTML reports     6.1 Use nosetests to run coverage.py  
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">sh
+    $ nosetests --with-coveage --cover-html
+ </code>
+  6.2 Add post-build action &gt; Publish coverage.py HTML reports<br />
+7. (Options) Publish your product<br />
+  7.1 Add post-build action &gt; Archive the artifacts<br />
+  7.2 Add your file name</p>
+
+<h2 id="startstop-jenkins-that-installed-via-homebrew">Start/Stop Jenkins that installed via Homebrew</h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># launchd start jenkins at login:</span>
 <span class="gp">$ </span>ln -sfv /usr/local/opt/jenkins/<span class="k">*</span>.plist ~/Library/LaunchAgents
 <span class="c"># start jenkins</span>
 <span class="gp">$ </span>launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 <span class="c"># stop jenkins:</span>
 <span class="gp">$ </span>launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
-</code></pre></div>
-<h3 id="jekins-reset-password"><a href="https://gist.github.com/gmhawash/4043232">Jekins Reset Password</a></h3>
+</code></pre>
+</div>
 
+<h3 id="jekins-reset-passwordhttpsgistgithubcomgmhawash4043232"><a href="https://gist.github.com/gmhawash/4043232">Jekins Reset Password</a></h3>
 <ol>
-<li>Go to Jenkins Home Path<br>
-(debian) /var/lib/jenkins<br></li>
-<li>Edit config.xml<br></li>
-<li>Set &lt; userSecurity&gt; tag to false<br></li>
-<li>Delete &lt; authorizationStrategy&gt; and &lt; securityRealm&gt; tags<br></li>
-<li>Restart Jenkins<br></li>
+  <li>Go to Jenkins Home Path   <br />
+ (debian) /var/lib/jenkins</li>
+  <li>Edit config.xml</li>
+  <li>Set &lt; userSecurity&gt; tag to false</li>
+  <li>Delete &lt; authorizationStrategy&gt; and &lt; securityRealm&gt; tags</li>
+  <li>Restart Jenkins</li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo service jenkins restart
-</code></pre></div>
-<h3 id="ssh-key-on-jenkins"><a href="http://www.uvd.co.uk/blog/labs/configuring-jenkins-continuous-integration-server-to-work-with-git/">SSH Key on Jenkins</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>sudo su - jenkins
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo service jenkins restart
+</code></pre>
+</div>
+
+<h3 id="ssh-key-on-jenkinshttpwwwuvdcoukbloglabsconfiguring-jenkins-continuous-integration-server-to-work-with-git"><a href="http://www.uvd.co.uk/blog/labs/configuring-jenkins-continuous-integration-server-to-work-with-git/">SSH Key on Jenkins</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo su - jenkins
 <span class="gp">$ </span>ssh-keygen -t rsa -C <span class="s2">"your_email@example.com"</span>
 <span class="gp">$ </span>cat ~/.ssh/id_rsa.pub
-</code></pre></div>
-<h3 id="jekins-git-pulling-timeout-after-10-min"><a href="http://stackoverflow.com/questions/22013217/on-building-jenkins-project-timeout-after-10-minute-error-happens">Jekins git pulling timeout after 10 min</a></h3>
+</code></pre>
+</div>
+
+<h3 id="jekins-git-pulling-timeout-after-10-minhttpstackoverflowcomquestions22013217on-building-jenkins-project-timeout-after-10-minute-error-happens"><a href="http://stackoverflow.com/questions/22013217/on-building-jenkins-project-timeout-after-10-minute-error-happens">Jekins git pulling timeout after 10 min</a></h3>
 
 <ol>
-<li>Edit job configuration, In git plugion section</li>
-<li>Click Add &gt; Advanced clone behaviours &gt; Set Timeout</li>
+  <li>Edit job configuration, In git plugion section</li>
+  <li>Click Add &gt; Advanced clone behaviours &gt; Set Timeout</li>
 </ol>
 
-<h2 id="jenkins-running-parallel-scripts"><a href="http://stackoverflow.com/questions/23062933/jenkins-running-parallel-scripts">Jenkins running parallel scripts</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># wokr in any shell</span>
+<h2 id="jenkins-running-parallel-scriptshttpstackoverflowcomquestions23062933jenkins-running-parallel-scripts"><a href="http://stackoverflow.com/questions/23062933/jenkins-running-parallel-scripts">Jenkins running parallel scripts</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># wokr in any shell</span>
 <span class="gp">$ </span>script1.sh &amp;   <span class="c"># run in background (sub-shell)</span>
 <span class="gp">$ </span>script2.sh     <span class="c"># run in foreground (shell)</span>
-</code></pre></div>
-<h3 id="jenkins-with-docker-io">Jenkins with Docker.io</h3>
+</code></pre>
+</div>
 
+<h3 id="jenkins-with-dockerio">Jenkins with Docker.io</h3>
 <ol>
-<li><a href="https://developer.rackspace.com/blog/move-fast-and-dont-break-things-testing-with-jenkins-ansible-and-docker/">Move fast and don’t break things! Testing with Jenkins, Ansible and Docker</a></li>
-<li><a href="https://github.com/orangain/jenkins-docker-sample">jenkins-docker-sample</a></li>
-<li><a href="http://www.therightcode.net/use-docker-jenkins-to-run-github-tests/">Use Docker + Jenkins to run GitHub tests</a></li>
+  <li><a href="https://developer.rackspace.com/blog/move-fast-and-dont-break-things-testing-with-jenkins-ansible-and-docker/">Move fast and don’t break things! Testing with Jenkins, Ansible and Docker</a></li>
+  <li><a href="https://github.com/orangain/jenkins-docker-sample">jenkins-docker-sample</a></li>
+  <li><a href="http://www.therightcode.net/use-docker-jenkins-to-run-github-tests/">Use Docker + Jenkins to run GitHub tests</a></li>
 </ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># add jenkins to docker group</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># add jenkins to docker group</span>
 <span class="gp">$ </span>sudo gpasswd -a jenkins docker <span class="c"># or sudo adduser jenkins docker</span>
 <span class="gp">$ </span>sudo service docker.io restart
 <span class="gp">$ </span>sudo service jenkins restart
-</code></pre></div>
-<h3 id="jenkins-plugins-install-via-terminal">Jenkins Plugins - <a href="http://stackoverflow.com/questions/7709993/how-can-i-update-jenkins-plugins-from-the-terminal">Install via Terminal</a>::</h3>
+</code></pre>
+</div>
 
+<h3 id="jenkins-plugins---install-via-terminalhttpstackoverflowcomquestions7709993how-can-i-update-jenkins-plugins-from-the-terminal">Jenkins Plugins - <a href="http://stackoverflow.com/questions/7709993/how-can-i-update-jenkins-plugins-from-the-terminal">Install via Terminal</a>::</h3>
 <ol>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin - Python support to
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a></li>
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin - Python support to
 Jenkkins</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls">Green Balls</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin">Build Pipeline Plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Monitor+Plugin">Build Monitor Plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Sounds+plugin">Jenkins Sounds plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Robot+Framework+Plugin">Robot Framework Plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Sonar+plugin">Sonar plugin</a></li>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Violations">Violations - generates reports static code violation detectors</a></li>
-<li><a href="http://www.somkiat.cc/jenkins-deploy-over-ssh/">Publish over SSH</a></li>
-<li><a href="https://jenkinsci.github.io/job-dsl-plugin/#">Jenkins Job DSL</a></li>
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls">Green Balls</a></li>
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin">Build Pipeline Plugin</a></li>
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Monitor+Plugin">Build Monitor Plugin</a></li>
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+Sounds+plugin">Jenkins Sounds plugin</a></li>
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Robot+Framework+Plugin">Robot Framework Plugin</a></li>
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Sonar+plugin">Sonar plugin</a></li>
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Violations">Violations - generates reports static code violation detectors</a></li>
+  <li><a href="http://www.somkiat.cc/jenkins-deploy-over-ssh/">Publish over SSH</a></li>
+  <li><a href="https://jenkinsci.github.io/job-dsl-plugin/#">Jenkins Job DSL</a></li>
 </ol>
 
 <h2 id="jenkins-references">Jenkins References::</h2>
-
 <ol>
-<li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Installing Jenkins on Ubuntu</a></li>
-<li><a href="http://pkg.jenkins-ci.org/debian/">Jenkins Debian packages</a></li>
-<li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li>
-<li><a href="http://www.somkiat.cc/jenkins-popular-plugins/">Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557</a></li>
-<li><a href="http://oemden.com/?p=205">Jenkins Setup on Os X server</a></li>
-<li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li>
-<li><a href="http://chrigl.de/blogentries/integration-of-pylint-into-jenkins">Integration of pylint into jenkins</a></li>
-<li><a href="http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/">Running Jenkins in Docker Containers</a></li>
+  <li><a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Installing Jenkins on Ubuntu</a></li>
+  <li><a href="http://pkg.jenkins-ci.org/debian/">Jenkins Debian packages</a></li>
+  <li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li>
+  <li><a href="http://www.somkiat.cc/jenkins-popular-plugins/">Jenkins :: สรุป plugin ยอดฮิตประจำเดือนพฤษภาคม ปี 2557</a></li>
+  <li><a href="http://oemden.com/?p=205">Jenkins Setup on Os X server</a></li>
+  <li><a href="http://www.alexconrad.org/2011/10/jenkins-and-python.html">Jenkins and Python</a></li>
+  <li><a href="http://chrigl.de/blogentries/integration-of-pylint-into-jenkins">Integration of pylint into jenkins</a></li>
+  <li><a href="http://www.catosplace.net/blog/2015/02/11/running-jenkins-in-docker-containers/">Running Jenkins in Docker Containers</a></li>
 </ol>
 
     
@@ -619,113 +776,33 @@ Jenkkins</a></li>
     </span>
 
     
-      <h1 id="travis-ci-test-and-deploy-your-code-with-confidence"><a href="http://travis-ci.org">Travis CI</a> - Test and Deploy Your Code with Confidence</h1>
+      <h1 id="travis-cihttptravis-ciorg---test-and-deploy-your-code-with-confidence"><a href="http://travis-ci.org">Travis CI</a> - Test and Deploy Your Code with Confidence</h1>
 
-<h3 id="travis-with-docker"><a href="http://docs.travis-ci.com/user/docker/">Travis with Docker</a></h3>
-
+<h3 id="travis-with-dockerhttpdocstravis-cicomuserdocker"><a href="http://docs.travis-ci.com/user/docker/">Travis with Docker</a></h3>
 <p>Travis support docker but not fully permission some dependencies that
 try to use OS command ex. kill can make your test error or failed.</p>
 
-<p><noscript><pre>400: Invalid request
-</pre></noscript><script src="https://gist.github.com/47d7fb757eab01fce56b.js"> </script></p>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/47d7fb757eab01fce56b.js"> </script>
 
-<h3 id="travis-with-python"><a href="http://docs.travis-ci.com/user/languages/python/">Travis with Python</a></h3>
+<h3 id="travis-with-pythonhttpdocstravis-cicomuserlanguagespython"><a href="http://docs.travis-ci.com/user/languages/python/">Travis with Python</a></h3>
 
-<p><noscript><pre>400: Invalid request
-</pre></noscript><script src="https://gist.github.com/1faa3e6416306b3b191f.js"> </script></p>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/1faa3e6416306b3b191f.js"> </script>
 
-<h3 id="nightli-es-travis-night-build"><a href="https://nightli.es">Nightli.es Travis Night Build</a></h3>
+<h3 id="nightlies-travis-night-buildhttpsnightlies"><a href="https://nightli.es">Nightli.es Travis Night Build</a></h3>
 
 <p>Third-party web service that use Travis API to automatic build every 24
 hour after last build</p>
 
 <h2 id="references">References</h2>
-
 <ol>
-<li><a href="http://docs.travis-ci.com/user/for-beginners/">Travis CI for Complete Beginners</a></li>
-<li><a href="http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/">Faster Builds with Container-Based Infrastructure and
+  <li><a href="http://docs.travis-ci.com/user/for-beginners/">Travis CI for Complete Beginners</a></li>
+  <li><a href="http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/">Faster Builds with Container-Based Infrastructure and
 Docker</a></li>
-<li><a href="http://docs.travis-ci.com/user/deployment/custom/">Travis Custom Deployment</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/drone-ci/">
-        Drone.io CI
-      </a>
-    </h1>
-
-    <span class="post-date">
-      23 Aug 2015
-      
-        &middot;
-        <a href="/drone-ci/#disqus_thread" data-disqus-identifier="/drone-ci/"></a>
-        
-      
-    </span>
-
-    
-      <h1 id="drone-is-a-continuous-integration-platform-built-on-docker-written-in-go-better-than-drone-io"><a href="https://github.com/drone/drone">Drone is a Continuous Integration platform built on Docker, written in Go</a> -  better than Drone.io</h1>
-
-<ul>
-<li><a href="https://www.youtube.com/watch?v=pP3iRUC6EOM">How to setup your own continuous integration server with Drone</a></li>
-</ul>
-
-<h1 id="drone-io-based-on-drone-simple-ci-server"><a href="https://drone.io">Drone.io based on Drone</a> - Simple CI Server</h1>
-
-<h2 id="private-configuration">Private Configuration:</h2>
-
-<h3 id="can-run-shell-command">Can run shell command</h3>
-
-<ol>
-<li>upload your configuration into gist with secret</li>
-<li>get url of your raw configuration</li>
-<li>add your configuration url in &quot;Environment Variable&quot;</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c"># Example</span>
-  <span class="nv">CONFIG_URL</span><span class="o">=</span><span class="s2">"&lt;your_configuration_url&gt;"</span>
-</code></pre></div>
-<ol>
-<li>in &quot;Commands&quot; download your configurations via wget without display result</li>
-</ol>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">  <span class="c">#!/bin/sh</span>
-  wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/null
-</code></pre></div>
-<h3 id="keep-variables-in-environment">Keep Variables in Environment</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Example</span>
-<span class="c">#!/bin/sh</span>
-<span class="nb">export </span><span class="nv">CLIENT_ID</span><span class="o">=</span>&lt;your id&gt;
-<span class="nb">export </span><span class="nv">TAGS</span><span class="o">=</span>&lt;your tags&gt;
-</code></pre></div><div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="n">tags</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'TAGS'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="dynamic-solution">Dynamic Solution</h3>
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-<span class="kn">import</span> <span class="nn">os</span>
-
-<span class="c"># Configuration from Environment Variables if can't load config.ini</span>
-<span class="c"># you can make you own configuration from config.ini.sample</span>
-
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">"config.ini"</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">configparser</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
-    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">'config.ini'</span><span class="p">)</span>
-    <span class="n">client_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'DEFAULT'</span><span class="p">,</span> <span class="s">'client_id'</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="references">References:</h2>
-
-<ol>
-<li><a href="http://docs.drone.io/quickstart.html">Drone.io Quickstart</a></li>
-<li><a href="http://docs.drone.io/python.html">Drone.io Building Python Projects</a></li>
-<li><a href="http://buddylindsey.com/hosting-your-open-source-project-on-heroku-with-private-configuration/">Hosting Your Open Source Project on Heroku with Private Configuration</a></li>
-<li><a href="http://stackoverflow.com/questions/3176918/how-to-hide-connection-string-user-name-pw-when-using-source-control">How to hide connection string, user name, pw when using source control?</a></li>
+  <li><a href="http://docs.travis-ci.com/user/deployment/custom/">Travis Custom Deployment</a></li>
 </ol>
 
     

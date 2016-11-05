@@ -204,6 +204,60 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/mongo/">
+        All I know about mongo
+      </a>
+    </h1>
+
+    <span class="post-date">
+      29 Mar 2016
+      
+        &middot;
+        <a href="/mongo/#disqus_thread" data-disqus-identifier="/mongo/"></a>
+        
+          &middot;
+          Updated March 29, 2016
+        
+      
+    </span>
+
+    
+      <h1 id="mongo">Mongo</h1>
+
+<h3 id="understand-documents">Understand Documents</h3>
+<ul>
+  <li><a href="https://www.mongodb.com/blog/post/thinking-documents-part-1">Thinking in Documents: Part 1</a></li>
+  <li><a href="https://www.mongodb.com/blog/post/thinking-documents-part-2">Thinking in Documents: Part 2</a></li>
+</ul>
+
+<h3 id="migration">Migration</h3>
+
+<ul>
+  <li><a href="https://www.mongodb.com/post/40602082071/considerations-before-moving-from-rdbms-to-mongodb">Considerations before moving from RDBMS to MongoDB</a></li>
+  <li>
+    <p><a href="https://docs.mongodb.org/manual/reference/sql-comparison/">SQL to MongoDB Mapping Chart</a></p>
+
+    <blockquote>
+      <p>The first question to ask, then, when moving from a relational database to MongoDB is, ‘How will this data be accessed?’ Other important questions include:</p>
+    </blockquote>
+
+    <blockquote>
+      <p>What is the access pattern?
+What are you hoping to show to your customers/users?
+How are you going to write this data?</p>
+    </blockquote>
+  </li>
+</ul>
+
+
+      <div style="text-align:right;">
+        <a href="/mongo/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/dotfile/">
         Dotfile
       </a>
@@ -223,10 +277,10 @@
 
     
       <blockquote>
-<p>A file begins with . that is hidden file on unix based. Mostly use as configuration file ex. <code>.gitconfig</code>, <code>.vimrc</code>, <code>.bashrc</code>  - <a href="https://www.quora.com/What-are-dotfiles">What are dotfiles?</a> </p>
+  <p>A file begins with . that is hidden file on unix based. Mostly use as configuration file ex. <code class="highlighter-rouge">.gitconfig</code>, <code class="highlighter-rouge">.vimrc</code>, <code class="highlighter-rouge">.bashrc</code>  - <a href="https://www.quora.com/What-are-dotfiles">What are dotfiles?</a></p>
 </blockquote>
 
-<p>Keep dotfiles with github like backup yours machine&#39;s setting. Your can move to new machine with same feeling from old one by restore dotfiles backup.</p>
+<p>Keep dotfiles with github like backup yours machine’s setting. Your can move to new machine with same feeling from old one by restore dotfiles backup.</p>
 
 
       <div style="text-align:right;">
@@ -255,12 +309,12 @@
       <p>Colemak</p>
 
 <blockquote>
-<p>Fast typing, Least finger movement than QWERY</p>
+  <p>Fast typing, Least finger movement than QWERY</p>
 </blockquote>
 
 <ul>
-<li><a href="http://colemak.com">colemak layout</a></li>
-<li><a href="http://chetansurpur.com/blog/2012/11/colemak.html">Ditch QWERTY – Your Hands Need Colemak</a></li>
+  <li><a href="http://colemak.com">colemak layout</a></li>
+  <li><a href="http://chetansurpur.com/blog/2012/11/colemak.html">Ditch QWERTY – Your Hands Need Colemak</a></li>
 </ul>
 
 
@@ -290,12 +344,12 @@
     </span>
 
     
-      <p>If you using <code>Dockerfile</code>, you should know about caching for faster builds.
-Sometimes, you need to rebuild without cache. you can run docker <code>build</code> with
-<code>--no-cache</code> option that will disable all layer cache.</p>
+      <p>If you using <code class="highlighter-rouge">Dockerfile</code>, you should know about caching for faster builds.
+Sometimes, you need to rebuild without cache. you can run docker <code class="highlighter-rouge">build</code> with
+<code class="highlighter-rouge">--no-cache</code> option that will disable all layer cache.</p>
 
-<p>There is problem when you should use some <code>Dockerfile</code> commands like <code>ADD</code> or
-<code>COPY</code> to copy file form host to container.</p>
+<p>There is problem when you should use some <code class="highlighter-rouge">Dockerfile</code> commands like <code class="highlighter-rouge">ADD</code> or
+<code class="highlighter-rouge">COPY</code> to copy file form host to container.</p>
 
 
       <div style="text-align:right;">
@@ -327,60 +381,44 @@ Sometimes, you need to rebuild without cache. you can run docker <code>build</co
       <h1 id="intro">Intro</h1>
 
 <ul>
-<li><a href="http://www.datastax.com/wp-content/uploads/2012/08/WP-IntrotoCassandra.pdf">Introduction to Apache Cassandra</a></li>
-</ul>
+  <li>
+    <p><a href="http://www.datastax.com/wp-content/uploads/2012/08/WP-IntrotoCassandra.pdf">Introduction to Apache Cassandra</a></p>
 
-<blockquote>
-<p>Cassandra has a peer-to-peer distributed architecture that is much more elegant, and easy to set up and maintain.
+    <blockquote>
+      <p>Cassandra has a peer-to-peer distributed architecture that is much more elegant, and easy to set up and maintain.
 In Cassandra, all nodes are the same; there is no concept of a master node, with all nodes communicating with each other via a gossip protocol.</p>
+    </blockquote>
 
-<p>There is nothing programmatic that a developer or administrator needs to do or code to distribute data across a cluster.
+    <blockquote>
+      <p>There is nothing programmatic that a developer or administrator needs to do or code to distribute data across a cluster.
 Data is transparently partitioned across all nodes in either a randomized or ordered fashion, with random being the default.</p>
+    </blockquote>
 
-<p>When creating a new Cassandra database (also called a keyspace), a user simply indicates via a single command which data centers and/or cloud providers will hold copies of the new database; everything from that point forward is automatically handled and maintained by Cassandra.</p>
+    <blockquote>
+      <p>When creating a new Cassandra database (also called a keyspace), a user simply indicates via a single command which data centers and/or cloud providers will hold copies of the new database; everything from that point forward is automatically handled and maintained by Cassandra.</p>
+    </blockquote>
 
-<p>If one or more nodes responsible for a particular set of data are down, data is simply written to another node, which temporarily holds the data. Once the node(s) come back online, they automatically bring themselves back up to date from nodes that are holding the data they maintain.</p>
+    <blockquote>
+      <p>If one or more nodes responsible for a particular set of data are down, data is simply written to another node, which temporarily holds the data. Once the node(s) come back online, they automatically bring themselves back up to date from nodes that are holding the data they maintain.</p>
+    </blockquote>
 
-<p>A user requests data from any node (which becomes that user’s coordinator node ), with the user’s query being assembled from one or more nodes holding the necessary data. If a particular node having the required data is down, Cassandra simply requests data from another node holding a replicated copy of that data.</p>
+    <blockquote>
+      <p>A user requests data from any node (which becomes that user’s coordinator node ), with the user’s query being assembled from one or more nodes holding the necessary data. If a particular node having the required data is down, Cassandra simply requests data from another node holding a replicated copy of that data.</p>
+    </blockquote>
 
-<p>While Cassandra is not a transactional database in the same way that legacy RDBMSs offer ACID transactions, it does offer the “AID” portion of ACID, in that data written is atomic, isolated, and durable. The “C” of ACID does not apply to Cassandra, as there is no concept of referential integrity or foreign keys</p>
+    <blockquote>
+      <p>While Cassandra is not a transactional database in the same way that legacy RDBMSs offer ACID transactions, it does offer the “AID” portion of ACID, in that data written is atomic, isolated, and durable. The “C” of ACID does not apply to Cassandra, as there is no concept of referential integrity or foreign keys</p>
+    </blockquote>
 
-<p>Because NoSQL databases like Cassandra do not support operations like SQL joins, data tends to be highly denormalized. While such a thing (wide rows) is normally a problem for an RDBMS, Cassandra provides exceptional performance for objects with many thousands of columns.</p>
-</blockquote>
+    <blockquote>
+      <p>Because NoSQL databases like Cassandra do not support operations like SQL joins, data tends to be highly denormalized. While such a thing (wide rows) is normally a problem for an RDBMS, Cassandra provides exceptional performance for objects with many thousands of columns.</p>
+    </blockquote>
+  </li>
+</ul>
 
 
       <div style="text-align:right;">
         <a href="/cassandra/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/docker-cron/">
-        Crontab on Docker
-      </a>
-    </h1>
-
-    <span class="post-date">
-      04 Mar 2016
-      
-        &middot;
-        <a href="/docker-cron/#disqus_thread" data-disqus-identifier="/docker-cron/"></a>
-        
-          &middot;
-          Updated March 20, 2016
-        
-      
-    </span>
-
-    
-      <p>You can start <code>crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
-just put <code>crontab</code> in <code>/etc/cron.d/</code> and run <code>cron</code> for making it working.</p>
-
-
-      <div style="text-align:right;">
-        <a href="/docker-cron/" style="color:#000;"> Read More </a>
       </div>
     
   </div>

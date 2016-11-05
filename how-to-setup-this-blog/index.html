@@ -219,46 +219,65 @@ Page</a> that free hosting support Jekyll.This blog use <a href="http://lanyon.g
 <a href="http://getpoole.com">Poole</a> a minimal style of Jekyll.</p>
 
 <h3 id="set-up-github-page">Set up github page:</h3>
+<ol>
+  <li>Follow setup guilde of <a href="https://pages.github.com">Github page</a>
+  for more information about jekyll on github look at</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>```
+http://help.github.com/articles/using-jekyll-with-pages
+```   2. Clone project from [Lanyon](http://lanyon.getpoole.com)  
+
+```
+  git clone https://github.com/poole/lanyon.git
+```  
+</code></pre>
+</div>
 
 <ol>
-<li><p>Follow setup guilde of <a href="https://pages.github.com">Github page</a>
-for more information about jekyll on github look at  </p>
-<div class="highlight"><pre><code class="language-" data-lang="">http://help.github.com/articles/using-jekyll-with-pages
-</code></pre></div></li>
-<li><p>Clone project from <a href="http://lanyon.getpoole.com">Lanyon</a>  </p>
-<div class="highlight"><pre><code class="language-" data-lang="">  git clone https://github.com/poole/lanyon.git
-</code></pre></div></li>
-<li><p>Configs jekyll in  <code>_config.yml</code>   </p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml">  <span class="c1">#setup</span>
-  <span class="s">title</span><span class="pi">:</span>            <span class="s">botbotbot</span>  
-  <span class="s">tagline</span><span class="pi">:</span>          <span class="s2">"</span><span class="s">'s</span><span class="nv"> </span><span class="s">blog"</span>  
-  <span class="s">description</span><span class="pi">:</span>      <span class="s2">"</span><span class="s">botbotbot's</span><span class="nv"> </span><span class="s">blog"</span>  
-  <span class="s">url</span><span class="pi">:</span>              <span class="s">http://ibotdotout.github.io</span>  
-  <span class="s">paginate</span><span class="pi">:</span>         <span class="s">5</span>  
-</code></pre></div></li>
-<li><p>Make tags.md in root directory copy code from</p>
-<div class="highlight"><pre><code class="language-" data-lang="">https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html
-</code></pre></div></li>
-<li><p>Let blog it.</p></li>
+  <li>Configs jekyll in  <code class="highlighter-rouge">_config.yml</code></li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>```yaml
+  #setup
+  title:            botbotbot  
+  tagline:          "'s blog"  
+  description:      "botbotbot's blog"  
+  url:              http://ibotdotout.github.io  
+  paginate:         5  
+```
+</code></pre>
+</div>
+
+<ol>
+  <li>Make tags.md in root directory copy code from</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>```
+https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html
+```
+</code></pre>
+</div>
+
+<ol>
+  <li>Let blog it.</li>
 </ol>
 
 <h3 id="add-feed-in-jekyll">Add Feed in Jekyll</h3>
-
 <ol>
-<li><a href="https://github.com/jekyll/jekyll-feed">Jekyll Feed plugin - Recommend</a></li>
-<li><a href="http://jekyll.tips/tutorials/atom-feed/">Atom Feed in Jekyll</a></li>
-<li><a href="http://jekyll.tips/tutorials/rss-feed/">RSS Feed in Jekyll</a></li>
-<li><a href="http://joelglovier.com/writing/rss-for-jekyll/">RSS for Jekyll blogs</a></li>
+  <li><a href="https://github.com/jekyll/jekyll-feed">Jekyll Feed plugin - Recommend</a></li>
+  <li><a href="http://jekyll.tips/tutorials/atom-feed/">Atom Feed in Jekyll</a></li>
+  <li><a href="http://jekyll.tips/tutorials/rss-feed/">RSS Feed in Jekyll</a></li>
+  <li><a href="http://joelglovier.com/writing/rss-for-jekyll/">RSS for Jekyll blogs</a></li>
 </ol>
 
 <h3 id="references">References:</h3>
-
 <ol>
-<li><a href="http://joshualande.com/jekyll-github-pages-poole/">http://joshualande.com/jekyll-github-pages-poole/</a></li>
-<li><a href="http://stackoverflow.com/questions/16099153/table-not-render-when-use-redcarpet-in-jekyll-github-pages">Table not render when use Redcarpet in Jekyll GitHub Pages?</a></li>
-<li><a href="http://www.jekyll-plugins.com">Jekyll-Plugins</a></li>
-<li><a href="http://jekyll.tips">Jekyll Stater</a></li>
-<li><a href="http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/">Adding Disqus Comment to your Jekyll</a></li>
+  <li><a href="http://joshualande.com/jekyll-github-pages-poole/">http://joshualande.com/jekyll-github-pages-poole/</a></li>
+  <li><a href="http://stackoverflow.com/questions/16099153/table-not-render-when-use-redcarpet-in-jekyll-github-pages">Table not render when use Redcarpet in Jekyll GitHub Pages?</a></li>
+  <li><a href="http://www.jekyll-plugins.com">Jekyll-Plugins</a></li>
+  <li><a href="http://jekyll.tips">Jekyll Stater</a></li>
+  <li><a href="http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/">Adding Disqus Comment to your Jekyll</a></li>
 </ol>
 
   
@@ -277,6 +296,15 @@ for more information about jekyll on github look at  </p>
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -289,15 +317,6 @@ for more information about jekyll on github look at  </p>
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

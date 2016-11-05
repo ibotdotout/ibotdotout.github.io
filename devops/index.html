@@ -211,35 +211,44 @@
       
   </span>
 
-  <h2 id="varany-vs-docker"><a href="http://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-io-for-creating-an-isolated-environment">Varany vs. Docker</a></h2>
-
-<p>Vagrant is a tool for managing virtual machines.<br>
+  <h2 id="varany-vs-dockerhttpstackoverflowcomquestions16647069should-i-use-vagrant-or-docker-io-for-creating-an-isolated-environment"><a href="http://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-io-for-creating-an-isolated-environment">Varany vs. Docker</a></h2>
+<p>Vagrant is a tool for managing virtual machines.<br />
 Docker is a tool for building and deploying applications by packaging them into lightweight containers.</p>
 
 <h2 id="nginx-bypass-confixguration">Nginx ByPass Confixguration</h2>
 
 <p>bypass.conf</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">server <span class="o">{</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>server <span class="o">{</span>
     listen 80;
 
     location / <span class="o">{</span>
         proxy_pass http://127.0.0.1:8000;
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># debian</span>
+</code></pre>
+</div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># debian</span>
 <span class="gp">$ </span>sudo apt-get install nginx
 <span class="gp">$ </span>sudo vim /etc/nginx/sites-available/&lt;your&gt;.conf
 <span class="gp">$ </span>sudo rm /etc/ngin/sites-enabled/default.conf
 <span class="gp">$ </span>suo ln -f /etc/nginx/sites-available/&lt;your&gt;.conf /etc/sites-enabled/
 <span class="gp">$ </span>sudo services nginx reload
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="nginx-allow-file-browser-list">Nginx Allow File browser list</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># debain</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># debain</span>
 <span class="gp">$ </span><span class="nb">cd</span> /usr/share/nginx/html
 <span class="gp">$ </span>ln -s &lt;path&gt; &lt;link_name&gt;
-</code></pre></div>
+</code></pre>
+</div>
+
 <p>edit your nginx.conf</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">    location /&lt;url&gt; <span class="o">{</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>    location /&lt;url&gt; <span class="o">{</span>
       <span class="nb">alias</span> /usr/share/nginx/html/&lt;link_name&gt;
       autoindex on;
       autoindex_exact_size off;
@@ -247,45 +256,45 @@ Docker is a tool for building and deploying applications by packaging them into 
       auth_basic <span class="s2">"Restricted"</span>;                <span class="c">#For Basic Auth</span>
       auth_basic_user_file &lt;your .htpasswd&gt;;  <span class="c">#For Basic Auth</span>
     <span class="o">}</span>
-</code></pre></div>
-<h3 id="useful-command">Useful command</h3>
+</code></pre>
+</div>
 
+<h3 id="useful-command">Useful command</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=Vd848ePkM_4">Nethogs - Bandwidth Monitor</a></li>
-<li><a href="https://www.youtube.com/watch?v=39rzNcqNq1E">watch - Execute Command Repeatedly - Linux TUI CLI</a></li>
-<li><a href="https://www.youtube.com/watch?v=sqXZirjvo6c">nohup - Run Commands in the Background - Linux CLI</a></li>
-<li><a href="https://www.youtube.com/watch?v=ZnEDfqr4Rm0">Htop - Task Manager - Linux TUI</a></li>
-<li><a href="https://www.youtube.com/watch?v=a2Kvj9ff8Qk">rsync - Backup and Sync Files - Linux CLI</a></li>
+  <li><a href="https://www.youtube.com/watch?v=Vd848ePkM_4">Nethogs - Bandwidth Monitor</a></li>
+  <li><a href="https://www.youtube.com/watch?v=39rzNcqNq1E">watch - Execute Command Repeatedly - Linux TUI CLI</a></li>
+  <li><a href="https://www.youtube.com/watch?v=sqXZirjvo6c">nohup - Run Commands in the Background - Linux CLI</a></li>
+  <li><a href="https://www.youtube.com/watch?v=ZnEDfqr4Rm0">Htop - Task Manager - Linux TUI</a></li>
+  <li><a href="https://www.youtube.com/watch?v=a2Kvj9ff8Qk">rsync - Backup and Sync Files - Linux CLI</a></li>
 </ul>
 
 <h3 id="rsync">Rsync</h3>
-
 <ol>
-<li><a href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/">How to Backup Linux? 15 rsync Command Examples</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps">How To Use Rsync to Sync Local and Remote Directories on a VPS</a></li>
+  <li><a href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/">How to Backup Linux? 15 rsync Command Examples</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps">How To Use Rsync to Sync Local and Remote Directories on a VPS</a></li>
 </ol>
 
 <h3 id="ref">Ref::</h3>
-
 <ol>
-<li><a href="http://techglimpse.com/enable-directory-listing-mode-nginx/">How to enable file browser mode in Nginx?</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10">How To Set Up HTTP Authentication With Nginx On Ubuntu 12.10</a></li>
-<li><a href="http://www.techsuii.com/2014/08/03/how-to-setup-https-for-nginx/">วิธี setup Nginx ให้บริการ HTTPS</a></li>
-<li><a href="http://www.youtube.com/watch?v=xr5bZ2ZR28w&amp;list=PLjQo0sojbbxUav7I746f0lT4apGX8-iON">DevOps for Developers (Nginx + Ruby)</a> </li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-fabric-to-automate-administration-tasks-and-deployments">How To Use Fabric To Automate Administration Tasks And Deployments</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx">How to Deploy Python WSGI Apps Using Gunicorn HTTP Server Behind Nginx</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-nginx-for-ubuntu-12-04">How To Create a SSL Certificate on nginx for Ubuntu 12.04</a></li>
-<li><a href="http://bryanhelmig.com/auto-reload-gunicorn-on-file-change-event/">Auto Reload Gunicorn On File Change Event</a></li>
-<li><a href="http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html">20 Linux System Monitoring Tools Every SysAdmin Should Know</a></li>
-<li><a href="https://github.com/n1trux/awesome-sysadmin">Awesome Sysadmin</a></li>
-<li><a href="https://serversforhackers.com">Server Admin for Programmers</a></li>
-<li><a href="http://www.opsschool.org/">Ops School Curriculum</a></li>
-<li><a href="http://serverspec.org">serverspec automation testing your configured(Ruby)</a></li>
-<li><a href="http://nginx.com/wp-content/uploads/2015/01/Building_Microservices_Nginx.pdf">Building Microservices Nginx</a></li>
-<li><a href="https://github.com/ansible/ansible">Ansible is a radically simple IT automation platform</a></li>
-<li><a href="https://www.vagrantup.com/docs/getting-started/">Vargrant GETTING STARTED</a></li>
-<li><a href="https://learn.chef.io">LEARN CHEF</a></li>
+  <li><a href="http://techglimpse.com/enable-directory-listing-mode-nginx/">How to enable file browser mode in Nginx?</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10">How To Set Up HTTP Authentication With Nginx On Ubuntu 12.10</a></li>
+  <li><a href="http://www.techsuii.com/2014/08/03/how-to-setup-https-for-nginx/">วิธี setup Nginx ให้บริการ HTTPS</a></li>
+  <li><a href="http://www.youtube.com/watch?v=xr5bZ2ZR28w&amp;list=PLjQo0sojbbxUav7I746f0lT4apGX8-iON">DevOps for Developers (Nginx + Ruby)</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-fabric-to-automate-administration-tasks-and-deployments">How To Use Fabric To Automate Administration Tasks And Deployments</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx">How to Deploy Python WSGI Apps Using Gunicorn HTTP Server Behind Nginx</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-nginx-for-ubuntu-12-04">How To Create a SSL Certificate on nginx for Ubuntu 12.04</a></li>
+  <li><a href="http://bryanhelmig.com/auto-reload-gunicorn-on-file-change-event/">Auto Reload Gunicorn On File Change Event</a></li>
+  <li><a href="http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html">20 Linux System Monitoring Tools Every SysAdmin Should Know</a></li>
+  <li><a href="https://github.com/n1trux/awesome-sysadmin">Awesome Sysadmin</a></li>
+  <li><a href="https://serversforhackers.com">Server Admin for Programmers</a></li>
+  <li><a href="http://www.opsschool.org/">Ops School Curriculum</a></li>
+  <li><a href="http://serverspec.org">serverspec automation testing your configured(Ruby)</a></li>
+  <li><a href="http://nginx.com/wp-content/uploads/2015/01/Building_Microservices_Nginx.pdf">Building Microservices Nginx</a></li>
+  <li><a href="https://github.com/ansible/ansible">Ansible is a radically simple IT automation platform</a></li>
+  <li><a href="https://www.vagrantup.com/docs/getting-started/">Vargrant GETTING STARTED</a></li>
+  <li><a href="https://learn.chef.io">LEARN CHEF</a></li>
 </ol>
+
 
   
     Tags:
@@ -303,6 +312,15 @@ Docker is a tool for building and deploying applications by packaging them into 
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -315,15 +333,6 @@ Docker is a tool for building and deploying applications by packaging them into 
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

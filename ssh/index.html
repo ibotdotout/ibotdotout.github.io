@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="SSHSSH Alias Config# .ssh/config# use $ssh &lt;hostname&gt; to connect# Host * //setting for every host  Host &lt;hostname&gt;  HostName &lt;ip&gt;  User   &..." />
+<meta property="og:description" content="SSHSSH Alias Config# .ssh/config# use $ssh &lt;hostname&gt; to connect# Host * //setting for every host  Host &lt;hostname&gt;  HostName &lt;ip&gt;  User	 &l..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -213,17 +213,21 @@
 
   <h2 id="ssh">SSH</h2>
 
-<h3 id="ssh-alias-config"><a href="http://backdrift.org/transparent-proxy-with-ssh">SSH Alias Config</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># .ssh/config</span>
+<h3 id="ssh-alias-confighttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">SSH Alias Config</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
 <span class="c"># use $ssh &lt;hostname&gt; to connect</span>
 <span class="c"># Host * //setting for every host</span>
   Host &lt;hostname&gt;
   HostName &lt;ip&gt;
-  User   &lt;username&gt;
+  User	 &lt;username&gt;
   Port  &lt;port&gt;
-</code></pre></div>
-<h3 id="using-ssh-proxycommand-to-tunnel-connections"><a href="http://backdrift.org/transparent-proxy-with-ssh">Using SSH ProxyCommand to Tunnel Connections</a></h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># .ssh/config</span>
+</code></pre>
+</div>
+
+<h3 id="using-ssh-proxycommand-to-tunnel-connectionshttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">Using SSH ProxyCommand to Tunnel Connections</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
 <span class="c">#ProxyCommand ssh someserver -W %h:%p</span>
 <span class="c">#  With the newer versions of openssh-client you can also use the -W option to forward the connection.</span>
 <span class="c">#LocalCommand</span>
@@ -238,44 +242,60 @@
   User &lt;user&gt;
   ProxyCommand ssh &lt;destination&gt; -W %h:%p 2&gt; /dev/null
   IdentityFile &lt;ssh_key&gt;
-</code></pre></div>
-<h2 id="ssh-login-with-key-based-authentication"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># Client: generate key</span>
+</code></pre>
+</div>
+
+<h2 id="ssh-login-with-key-based-authenticationhttpwwwlaubenheimernetssh-keysshtml"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Client: generate key</span>
 <span class="gp">$ </span>ssh-keygen -t rsa -b 4096
 
 <span class="c"># Server: put client key</span>
 <span class="c"># copy ~/.ssh/id_rsa.pub into ~/.ssh/authorized_keys in server</span>
 <span class="c"># (option: server denies passed auth)</span>
 <span class="gp">$ </span>sudo vim /etc/ssh/sshd_config
-</code></pre></div>
-<h2 id="ssh-login-with-password"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># /etc/ssh/sshd_config</span>
+</code></pre>
+</div>
+
+<h2 id="ssh-login-with-passwordhttpaskubuntucomquestions101670how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># /etc/ssh/sshd_config</span>
 PasswordAuthentication no
 
 Match address 192.0.2.0/24
     PasswordAuthentication yes
-</code></pre></div>
-<h2 id="ssh-proxy-with-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>ssh -N -D 8080 user@server -p 443
+</code></pre>
+</div>
+
+<h2 id="ssh-proxy-with-socks5httpsthomashunternameblogreally-simple-ssh-proxy-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -N -D 8080 user@server -p 443
 <span class="c"># should using port 443 to avoid blocking port 22</span>
 <span class="c"># setting proxy  on your browser</span>
 <span class="c"># sock host 127.0.0.1 port 8080</span>
-</code></pre></div><div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># .ssh/config</span>
+</code></pre>
+</div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
 <span class="c"># use $ssh -N &lt;proxy&gt; -p 443</span>
 Host &lt;proxy&gt;
   HostName &lt;ip&gt;
   User &lt;user&gt;
   DynamicForward 8080
-</code></pre></div>
-<h2 id="ssh-skip-known_host"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>ssh -o <span class="s2">"StrictHostKeyChecking no"</span> user@host
-</code></pre></div>
-<h3 id="resources">Resources</h3>
+</code></pre>
+</div>
 
+<h2 id="ssh-skip-knownhosthttpsuperusercomquestions125324how-can-i-avoid-sshs-host-verification-for-known-hosts"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -o <span class="s2">"StrictHostKeyChecking no"</span> user@host
+</code></pre>
+</div>
+
+<h3 id="resources">Resources</h3>
 <ol>
-<li><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Configuring">Setup and Setting SSH</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PLtK75qxsQaMII75AbcuIruao1k2qdxwjg">SSH Crash Course -- Fun With Remote Shells, From The Ground Up</a></li>
-<li><a href="https://blog.0xbadc0de.be/archives/300">SSH: Best practices</a></li>
+  <li><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Configuring">Setup and Setting SSH</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLtK75qxsQaMII75AbcuIruao1k2qdxwjg">SSH Crash Course – Fun With Remote Shells, From The Ground Up</a></li>
+  <li><a href="https://blog.0xbadc0de.be/archives/300">SSH: Best practices</a></li>
 </ol>
 
   
@@ -294,6 +314,15 @@ Host &lt;proxy&gt;
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -306,15 +335,6 @@ Host &lt;proxy&gt;
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

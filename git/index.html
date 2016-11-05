@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Git RebaseMichael Crichton said, “Great books aren’t written– they’re rewritten.”fatal: CRLF would be replaced by LF in ...Because there is differenced end o..." />
+<meta property="og:description" content="Git RebaseMichael Crichton said, “Great books aren’t written– they’re rewritten.”fatal: CRLF would be replaced by LF in …Because there is differenced end of ..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -215,78 +215,96 @@
 
 <p>Michael Crichton said, “Great books aren’t written– they’re rewritten.”</p>
 
-<h2 id="fatal-crlf-would-be-replaced-by-lf-in">fatal: CRLF would be replaced by LF in ...</h2>
+<h2 id="fatal-crlf-would-be-replaced-by-lf-in-">fatal: CRLF would be replaced by LF in …</h2>
 
 <p>Because there is differenced end of line in dos and unix.</p>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># open file that error in vim</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># open file that error in vim</span>
 :set noendofline binary
 :wq
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="global-ignore">Global Ignore</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># set where is global gitignore file</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># set where is global gitignore file</span>
 <span class="gp">$ </span>git config --global core.excludesfile ~/.gitignore_global
 <span class="c"># write some ignore file in global gitignore</span>
 <span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"tags"</span> &gt;&gt; ~/.gitignore_global
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="git-stash">Git stash</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">git stash
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>git stash
 git stash pop
 git revert
-</code></pre></div>
+</code></pre>
+</div>
+
 <h2 id="git-alis">Git Alis</h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">git config --global alias.tree <span class="s2">"log --graph --decorate --oneline --abbrev-commit"</span>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>git config --global alias.tree <span class="s2">"log --graph --decorate --oneline --abbrev-commit"</span>
 git config --global alias.hist <span class="s2">"log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"</span>
-</code></pre></div>
-<h2 id="git-taggin"><a href="http://git-scm.com/book/en/v2/Git-Basics-Tagging">Git Taggin</a></h2>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="gp">$ </span>git tag -a &lt;tag name&gt; &lt;commit id&gt; -m “desc<span class="s2">"
+</code></pre>
+</div>
+
+<h2 id="git-tagginhttpgit-scmcombookenv2git-basics-tagging"><a href="http://git-scm.com/book/en/v2/Git-Basics-Tagging">Git Taggin</a></h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git tag -a &lt;tag name&gt; &lt;commit id&gt; -m “desc<span class="s2">"
 </span><span class="nv">$ </span><span class="s2">git push origin —tags
 </span><span class="nv">$ </span><span class="s2">git pull --tags
-</span></code></pre></div>
-<h2 id="keep-file-in-a-git-repo-but-don-39-t-track-changes"><a href="http://stackoverflow.com/questions/9794931/keep-file-in-a-git-repo-but-dont-track-changes">Keep file in a Git repo, but don&#39;t track changes</a></h2>
+</span></code></pre>
+</div>
+
+<h2 id="keep-file-in-a-git-repo-but-dont-track-changeshttpstackoverflowcomquestions9794931keep-file-in-a-git-repo-but-dont-track-changes"><a href="http://stackoverflow.com/questions/9794931/keep-file-in-a-git-repo-but-dont-track-changes">Keep file in a Git repo, but don’t track changes</a></h2>
 
 <p>Should keep database.php.example and config.php.example in the repo.
 Then add config.php and database.php to the .gitignore file.</p>
 
-<h2 id="remove-sensitive-files-and-their-commits-from-git-history-github-answered-exactly-that-question-as-an-faq"><a href="http://stackoverflow.com/questions/872565/remove-sensitive-files-and-their-commits-from-git-history">Remove sensitive files and their commits from Git history</a> - <a href="https://help.github.com/articles/remove-sensitive-data">GitHub answered exactly that question as an FAQ</a></h2>
+<h2 id="remove-sensitive-files-and-their-commits-from-git-historyhttpstackoverflowcomquestions872565remove-sensitive-files-and-their-commits-from-git-history---github-answered-exactly-that-question-as-an-faqhttpshelpgithubcomarticlesremove-sensitive-data"><a href="http://stackoverflow.com/questions/872565/remove-sensitive-files-and-their-commits-from-git-history">Remove sensitive files and their commits from Git history</a> - <a href="https://help.github.com/articles/remove-sensitive-data">GitHub answered exactly that question as an FAQ</a></h2>
 
-<h2 id="pick-out-individual-commits"><a href="http://gitready.com/intermediate/2009/03/04/pick-out-individual-commits.html">pick out individual commits</a></h2>
+<h2 id="pick-out-individual-commitshttpgitreadycomintermediate20090304pick-out-individual-commitshtml"><a href="http://gitready.com/intermediate/2009/03/04/pick-out-individual-commits.html">pick out individual commits</a></h2>
 
-<h2 id="cleaning-up-untracked-files"><a href="http://gitready.com/beginner/2009/01/16/cleaning-up-untracked-files.html">cleaning up untracked files</a></h2>
+<h2 id="cleaning-up-untracked-fileshttpgitreadycombeginner20090116cleaning-up-untracked-fileshtml"><a href="http://gitready.com/beginner/2009/01/16/cleaning-up-untracked-files.html">cleaning up untracked files</a></h2>
 
-<h2 id="http-gitready-com-advanced-2009-02-10-squashing-commits-with-rebase-html"><a href="http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html">http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html</a></h2>
+<h2 id="httpgitreadycomadvanced20090210squashing-commits-with-rebasehtmlhttpgitreadycomadvanced20090210squashing-commits-with-rebasehtml"><a href="http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html">http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html</a></h2>
 
 <h2 id="reference">Reference</h2>
-
 <ol>
-<li><a href="http://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf">git replacing LF with CRLF</a></li>
-<li><a href="https://help.github.com/articles/generating-ssh-keys">Generating SSH Keys</a></li>
-<li><a href="https://adamcod.es/2012/07/03/anatomy-of-a-good-commit-message.html">Anatomy Of A Good Commit Message</a></li>
-<li><a href="https://adamcod.es/2014/12/10/git-pull-correct-workflow.html">Stop using <code>git pull</code>: A better workflow</a></li>
-<li><a href="https://gitignore.io/">gitignore.io - Create Useful .gitignore Files For Your Project</a></li>
-<li><a href="http://devahoy.com/posts/introduction-to-git-and-github/">Git คืออะไร ? + พร้อมสอนใช้งาน Git และ Github</a></li>
-<li><a href="http://git-scm.com/book/en/v2">Git Pro Book</a></li>
-<li><a href="http://gitready.com">Git Ready Tips</a></li>
-<li><a href="https://robots.thoughtbot.com/keeping-a-github-fork-updated">Keeping A GitHub Fork Updated</a></li>
-<li><a href="https://sandofsky.com/blog/git-workflow.html">Understanding the Git Workflow</a></li>
+  <li><a href="http://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf">git replacing LF with CRLF</a></li>
+  <li><a href="https://help.github.com/articles/generating-ssh-keys">Generating SSH Keys</a></li>
+  <li><a href="https://adamcod.es/2012/07/03/anatomy-of-a-good-commit-message.html">Anatomy Of A Good Commit Message</a></li>
+  <li><a href="https://adamcod.es/2014/12/10/git-pull-correct-workflow.html">Stop using <code class="highlighter-rouge">git pull</code>: A better workflow</a></li>
+  <li><a href="https://gitignore.io/">gitignore.io - Create Useful .gitignore Files For Your Project</a></li>
+  <li><a href="http://devahoy.com/posts/introduction-to-git-and-github/">Git คืออะไร ? + พร้อมสอนใช้งาน Git และ Github</a></li>
+  <li><a href="http://git-scm.com/book/en/v2">Git Pro Book</a></li>
+  <li><a href="http://gitready.com">Git Ready Tips</a></li>
+  <li><a href="https://robots.thoughtbot.com/keeping-a-github-fork-updated">Keeping A GitHub Fork Updated</a></li>
+  <li><a href="https://sandofsky.com/blog/git-workflow.html">Understanding the Git Workflow</a></li>
 </ol>
-<div class="highlight"><pre><code class="language-" data-lang="">The intended workflow is:
+
+<div class="highlighter-rouge"><pre class="highlight"><code>The intended workflow is:
 
 Create a private branch off a public branch.
 Regularly commit your work to this private branch.
 Once your code is perfect, clean up its history.
 Merge the cleaned-up branch back into the public branch.
-</code></pre></div>
+</code></pre>
+</div>
+
 <ol>
-<li><a href="http://learngitbranching.js.org/?demo">Learn Git Branching</a></li>
-<li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Linux.conf.au 2013 - Git For Ages 4 And Up</a></li>
-<li><a href="https://speakerdeck.com/schacon/a-tale-of-three-trees">A Tale of Three Trees</a></li>
-<li><a href="https://try.github.io/">Try Git: Git Tutorial</a></li>
-<li><a href="https://wiki.openstack.org/wiki/GitCommitMessages">Git Commit Good Practice - OpenStack</a></li>
-<li><a href="https://www.youtube.com/watch?v=-kVzV6m5_Qg">Becoming a Git Master</a></li>
-<li><a href="https://hackernoon.com/lesser-known-git-commands-151a1918a60">Lesser known Git commands</a></li>
-<li><a href="https://codewords.recurse.com/issues/two/git-from-the-inside-out">Git from the inside out</a></li>
-<li><a href="http://ohshitgit.com">Oh shit, git!</a></li>
+  <li><a href="http://learngitbranching.js.org/?demo">Learn Git Branching</a></li>
+  <li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Linux.conf.au 2013 - Git For Ages 4 And Up</a></li>
+  <li><a href="https://speakerdeck.com/schacon/a-tale-of-three-trees">A Tale of Three Trees</a></li>
+  <li><a href="https://try.github.io/">Try Git: Git Tutorial</a></li>
+  <li><a href="https://wiki.openstack.org/wiki/GitCommitMessages">Git Commit Good Practice - OpenStack</a></li>
+  <li><a href="https://www.youtube.com/watch?v=-kVzV6m5_Qg">Becoming a Git Master</a></li>
+  <li><a href="https://hackernoon.com/lesser-known-git-commands-151a1918a60">Lesser known Git commands</a></li>
+  <li><a href="https://codewords.recurse.com/issues/two/git-from-the-inside-out">Git from the inside out</a></li>
+  <li><a href="http://ohshitgit.com">Oh shit, git!</a></li>
 </ol>
+
 
   
     Tags:
@@ -304,6 +322,15 @@ Merge the cleaned-up branch back into the public branch.
     
       <li>
         <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
@@ -316,15 +343,6 @@ Merge the cleaned-up branch back into the public branch.
           <a href="/git-conflicts/">
             Git conflicts
             <small>02 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>
