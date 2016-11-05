@@ -12,8 +12,9 @@ update_date: 2016-11-03
 
 ## Example: ignore .css in only /src
 
-.gitignore
 ```
+# .gitignore
+
 src/**/*.css
 ```
 
@@ -22,9 +23,9 @@ src/**/*.css
 remove .css that committed in to repo
 
 ```
-git rm -r --cached .
-git add .
-git commit
+$ git rm -r --cached .
+$ git add .
+$ git commit
 ```
 
 ### References:
