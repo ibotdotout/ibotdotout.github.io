@@ -5,9 +5,9 @@ tags: vim
 permalink: vimdiff/
 ---
 
-###You need to convent result of unix diff to ed style to use in vimdiff.  
+### You need to convent result of unix diff to ed style to use in vimdiff.
 
-###Example::  
+### Example::
 
 a.txt
 
@@ -62,8 +62,9 @@ ed style of result diff a.txt b.txt
 < eeee
 ```
 
-#Code  
-My line by line diff just only change no add or delete, result in ed style to use in vim diff.  
+# Code
+
+My line by line diff just only change no add or delete, result in ed style to use in vim diff.
 
 my_diff.py
 
@@ -134,9 +135,9 @@ function MyDiff()
 endfunction
 ```
 
-Ref:  
-1. [use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram](http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html)  
-2. [Use patience diff algorithm for vimdiff #1466](https://github.com/neovim/neovim/issues/1466)  
-3. [Vim documentation: diff](http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options)  
+Ref:
+1. [use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram](http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html)
+2. [Use patience diff algorithm for vimdiff #1466](https://github.com/neovim/neovim/issues/1466)
+3. [Vim documentation: diff](http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options)
 4. [Actually using ed](http://blog.sanctum.geek.nz/actually-using-ed/)
 5. [Using more of ex](http://blog.sanctum.geek.nz/using-more-of-ex/)
