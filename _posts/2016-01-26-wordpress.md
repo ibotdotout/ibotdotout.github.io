@@ -14,6 +14,7 @@ update_date: 2016-01-26
 Guide](https://warun.in.th/64-wordpress-local-development-with-docker-installation-guide)
 
 <!-- more -->
+
 ### Wordpress Guide
 * [Getting Started with WordPress](https://ithemes.com/publishing/getting-started-with-wordpress/)
 * [WP101-102 การใช้งาน WordPress เบื้องต้นทั้งหมด](https://www.skilllane.com/courses/wordpress-for-beginners)
@@ -36,7 +37,7 @@ Guide](https://warun.in.th/64-wordpress-local-development-with-docker-installati
 ### Wordpress Theme
 * [Corporate](https://mythemeshop.com/themes/corporate/)
 * [One page](https://mythemeshop.com/themes/onepage/)
-* [Avada | Responsive Multi-Purpose Theme](http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226>)
+* [Avada - Responsive Multi-Purpose Theme](http://themeforest.net/item/avada-responsive-multipurpose-theme/2833226>)
 * [Jupiter - Multi-Purpose Responsive Theme](http://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775)
 * [Vertex](http://www.elegantthemes.com/demo/?theme=Vertex)
 * [Diamond](http://demo.wpzoom.com/?theme=diamond)
