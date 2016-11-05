@@ -14,13 +14,13 @@ update_date: 2016-06-27
 
 - [The 5 Things  API Must Have](https://blog.newrelic.com/2014/09/08/apipunchlist/)
 
-	```
-	1. Error handling
-	2. Error logging
-	3. Validation
-	4. Authentication and authorization
-	5. Testing
-	```
+```
+1. Error handling
+2. Error logging
+3. Validation
+4. Authentication and authorization
+5. Testing
+```
 
 <!-- more -->
 
