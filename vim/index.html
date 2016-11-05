@@ -249,90 +249,307 @@
 </table>
 
 <h3 id="movements">Movements</h3>
-<p>|Keys|Description|
-|——-|———–|
-|w[ord] | {letters, numbers, underscore}|
-|W[ORD] | {non-blank characters}|
-|g{motion} | work with display line ex. gj down one line, g$ go to end of display line|
-|f{char} | move to next char  |
-|t{char} | move to before next char  |
-|; | repeat last search  |
-|, | repeat last search backward  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>w[ord]</td>
+      <td>{letters, numbers, underscore}</td>
+    </tr>
+    <tr>
+      <td>W[ORD]</td>
+      <td>{non-blank characters}</td>
+    </tr>
+    <tr>
+      <td>g{motion}</td>
+      <td>work with display line ex. gj down one line, g$ go to end of display line</td>
+    </tr>
+    <tr>
+      <td>f{char}</td>
+      <td>move to next char</td>
+    </tr>
+    <tr>
+      <td>t{char}</td>
+      <td>move to before next char</td>
+    </tr>
+    <tr>
+      <td>;</td>
+      <td>repeat last search</td>
+    </tr>
+    <tr>
+      <td>,</td>
+      <td>repeat last search backward</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="jump">Jump</h2>
-<p>|Keys|Description|
-|——-|———–|
-|% | jump between open/close parentheses  |
-|&lt;C-o&gt;, &lt;C-i&gt; | toggle jump position  |
-|{num}|(pipe) | Go to Column  |
-|&lt;number&gt;G | go to line number|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>%</td>
+      <td>jump between open/close parentheses</td>
+    </tr>
+    <tr>
+      <td>&lt;C-o&gt;, &lt;C-i&gt;</td>
+      <td>toggle jump position</td>
+    </tr>
+    <tr>
+      <td>{num}|(pipe)</td>
+      <td>Go to Column</td>
+    </tr>
+    <tr>
+      <td>&lt;number&gt;G</td>
+      <td>go to line number</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="visual">Visual</h3>
-<p>|Keys|Description|
-|——-|———–|
-|v{motion} | visual mode select in line  |
-|V{motion} | visual mode select line  |
-|&lt;C-v&gt;{motion}{cIA} | change/insert/append in multiple lines |
-|&lt;C-v&gt;{motion}: | command with multiple lines|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>v{motion}</td>
+      <td>visual mode select in line</td>
+    </tr>
+    <tr>
+      <td>V{motion}</td>
+      <td>visual mode select line</td>
+    </tr>
+    <tr>
+      <td>&lt;C-v&gt;{motion}{cIA}</td>
+      <td>change/insert/append in multiple lines</td>
+    </tr>
+    <tr>
+      <td>&lt;C-v&gt;{motion}:</td>
+      <td>command with multiple lines</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="indent">Indent</h3>
-<p>|Keys|Description|
-|——-|———–|
-|== | Auto Indent  |
-|= | Auto Indent in selected on visual mode  |
-|J | join the current line and next line together|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>==</td>
+      <td>Auto Indent</td>
+    </tr>
+    <tr>
+      <td>=</td>
+      <td>Auto Indent in selected on visual mode</td>
+    </tr>
+    <tr>
+      <td>J</td>
+      <td>join the current line and next line together</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="edit">Edit</h3>
-<p>|Keys|Description|
-|——-|———–|
-|cw | change word  |
-|gu{motion}, gU{motion} | lower/upper letter|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>cw</td>
+      <td>change word</td>
+    </tr>
+    <tr>
+      <td>gu{motion}, gU{motion}</td>
+      <td>lower/upper letter</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="delete">Delete</h3>
-<p>|Keys|Description|
-|——-|———–|
-|daw | delete a word  |
-|das | delete a sentence  |
-|dap | delete a paragraph  |
-|dW | delete until space  |
-|dG | delete until end of file  |
-|d$ | delete until last of line  |
-|dbw , &lt;C-w&gt; in insert mode | delete back one word  |
-|d^ , &lt;C-u&gt; in insert mode | delete back to start of line  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>daw</td>
+      <td>delete a word</td>
+    </tr>
+    <tr>
+      <td>das</td>
+      <td>delete a sentence</td>
+    </tr>
+    <tr>
+      <td>dap</td>
+      <td>delete a paragraph</td>
+    </tr>
+    <tr>
+      <td>dW</td>
+      <td>delete until space</td>
+    </tr>
+    <tr>
+      <td>dG</td>
+      <td>delete until end of file</td>
+    </tr>
+    <tr>
+      <td>d$</td>
+      <td>delete until last of line</td>
+    </tr>
+    <tr>
+      <td>dbw , &lt;C-w&gt; in insert mode</td>
+      <td>delete back one word</td>
+    </tr>
+    <tr>
+      <td>d^ , &lt;C-u&gt; in insert mode</td>
+      <td>delete back to start of line</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="undo">Undo</h3>
-<p>|Keys|Description|
-|——-|———–|
-|u | redo |
-|&lt;C-r&gt; | Redo |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>u</td>
+      <td>redo</td>
+    </tr>
+    <tr>
+      <td>&lt;C-r&gt;</td>
+      <td>Redo</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="search">Search</h3>
-<p>|Keys|Description|
-|——-|———–|
-|\&lt;word&gt;\c | search word with ignore case|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\&lt;word&gt;\c</td>
+      <td>search word with ignore case</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="repeat">Repeat</h3>
-<p>|Keys|Description|
-|——-|———–|
-|. | repeat last action (not include any move action)  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>.</td>
+      <td>repeat last action (not include any move action)</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="etc">ETC</h3>
-<p>|Keys|Description|
-|——-|———–|
-|* | highlight word  |
-|&lt;C-a&gt;,&lt;C-x&gt; | addition and subtraction on numbers that also find next number automatically if current cursor not a number|
-|&lt;C-I&gt;|  Tab  |
-|&lt;C-[&gt;|  Esc  |
-|&lt;C-M&gt;|  Enter  |
-|&lt;C-H&gt;|  Backspace  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td>highlight word</td>
+    </tr>
+    <tr>
+      <td>&lt;C-a&gt;,&lt;C-x&gt;</td>
+      <td>addition and subtraction on numbers that also find next number automatically if current cursor not a number</td>
+    </tr>
+    <tr>
+      <td>&lt;C-I&gt;</td>
+      <td>Tab</td>
+    </tr>
+    <tr>
+      <td>&lt;C-[&gt;</td>
+      <td>Esc</td>
+    </tr>
+    <tr>
+      <td>&lt;C-M&gt;</td>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>&lt;C-H&gt;</td>
+      <td>Backspace</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="in-insert-mode">In Insert Mode</h2>
-<p>|Keys|Description|
-|——-|———–|
-|&lt;C-r&gt;=55*10&lt;Cr&gt; in insert mode | calculate can print it|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;C-r&gt;=55*10&lt;Cr&gt; in insert mode</td>
+      <td>calculate can print it</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="windows-managements">Windows Managements</h2>
-<p>### Windows Split</p>
+
+<h3 id="windows-split">Windows Split</h3>
 
 <table>
   <thead>
@@ -363,12 +580,12 @@
 
 <p>You split navigations with</p>
 
-<p><code class="highlighter-rouge">sh
-  nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;
-  nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;
-  nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;
-  nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
- </code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;
+nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;
+nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;
+nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
+</code></pre>
+</div>
 
 <h3 id="tab">Tab</h3>
 
@@ -429,29 +646,95 @@
 </table>
 
 <h2 id="repositioning-the-screen">Repositioning the screen</h2>
-<p>|Command|Description|
-|——-|———–|
-|zt | Move current line to top screen|
-|zz | Move current line to mid screen|
-|zb | Move current line to bottom screen|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>zt</td>
+      <td>Move current line to top screen</td>
+    </tr>
+    <tr>
+      <td>zz</td>
+      <td>Move current line to mid screen</td>
+    </tr>
+    <tr>
+      <td>zb</td>
+      <td>Move current line to bottom screen</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="scroll-screen">Scroll Screen</h2>
-<p>|Keys|Description|
-|——-|———–|
-|&lt;C-f&gt; | scroll down one screen  |
-|&lt;C-b&gt; | scroll up one screen  |
-|&lt;C-d&gt; | scroll down half screen  |
-|&lt;C-u&gt; | scroll up half screen  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;C-f&gt;</td>
+      <td>scroll down one screen</td>
+    </tr>
+    <tr>
+      <td>&lt;C-b&gt;</td>
+      <td>scroll up one screen</td>
+    </tr>
+    <tr>
+      <td>&lt;C-d&gt;</td>
+      <td>scroll down half screen</td>
+    </tr>
+    <tr>
+      <td>&lt;C-u&gt;</td>
+      <td>scroll up half screen</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="text-object-need-to-combine-with-cmd">Text object &lt;need to combine with cmd&gt;</h2>
-<p>|Keys|Description|
-|——-|———–|
-|iw/aw | inside/around word  |
-|is/as | inside/around sentences  |
-|ip/ap | inside/around paragraph  |
-|it/at | inside/around tag ex. html tag  |
-|i” | inside double quote  |
-|i) | inside parents  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keys</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iw/aw</td>
+      <td>inside/around word</td>
+    </tr>
+    <tr>
+      <td>is/as</td>
+      <td>inside/around sentences</td>
+    </tr>
+    <tr>
+      <td>ip/ap</td>
+      <td>inside/around paragraph</td>
+    </tr>
+    <tr>
+      <td>it/at</td>
+      <td>inside/around tag ex. html tag</td>
+    </tr>
+    <tr>
+      <td>i”</td>
+      <td>inside double quote</td>
+    </tr>
+    <tr>
+      <td>i)</td>
+      <td>inside parents</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="register">Register</h2>
 
@@ -460,18 +743,40 @@
 <span class="gp">$ </span>brew install reattach-to-user-namespace
 </code></pre>
 </div>
-<p>|Command|Description|
-|——-|———–|
-| :reg[ister] | check buffer register  |
-| “&lt;register&gt;p | paste buffer  |
-| “&lt;register&gt;yy | yank to buffer  |
-| “*yy  | yank to system clipboard  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:reg[ister]</td>
+      <td>check buffer register</td>
+    </tr>
+    <tr>
+      <td>”&lt;register&gt;p</td>
+      <td>paste buffer</td>
+    </tr>
+    <tr>
+      <td>”&lt;register&gt;yy</td>
+      <td>yank to buffer</td>
+    </tr>
+    <tr>
+      <td>”*yy</td>
+      <td>yank to system clipboard</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="vim-commandvim-command"><a href="/vim-command">Vim Command</a></h2>
 
 <h2 id="vim-pluginsvim-plugins"><a href="/vim-plugins">Vim Plugins</a></h2>
 
 <h3 id="vim-script">Vim Script</h3>
+
 <ol>
   <li><a href="http://learnvimscriptthehardway.stevelosh.com/chapters/14.html">autocmd group</a></li>
 </ol>

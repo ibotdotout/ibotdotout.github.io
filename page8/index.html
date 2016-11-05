@@ -220,39 +220,132 @@
 
     
       <h3 id="range">Range</h3>
-<p>|[range]|Description|
-|——-|———–|
-|0 | above first line  |
-|1 | first line  |
-|. | mean to current line  |
-|% | all lines  |
-|$ | last line  |
-|{start},{end} | from start to end line  |
-|&lt;,&gt; | start selection to end selection  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>[range]</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>above first line</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>first line</td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td>mean to current line</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>all lines</td>
+    </tr>
+    <tr>
+      <td>$</td>
+      <td>last line</td>
+    </tr>
+    <tr>
+      <td>{start},{end}</td>
+      <td>from start to end line</td>
+    </tr>
+    <tr>
+      <td>&lt;,&gt;</td>
+      <td>start selection to end selection</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="insert">Insert</h3>
-<p>|Command|Description|
-|——-|———–|
-|:[range]print , :p | print line  |
-|:[range]copy{target} , :t | copy line &amp; paste  |
-|:[range]normal {vimkey} | action vim key via command  |
-||ex. :%normal A; - put ‘;’ in end line for each line  |
-|:!&lt;shell command&gt; | run shell command in vim  % mean to current file  |
-|:r&lt;file&gt; ,:r !&lt;shell cmd&gt; | retrieving file after current cursor|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:[range]print , :p</td>
+      <td>print line</td>
+    </tr>
+    <tr>
+      <td>:[range]copy{target} , :t</td>
+      <td>copy line &amp; paste</td>
+    </tr>
+    <tr>
+      <td>:[range]normal {vimkey}</td>
+      <td>action vim key via command</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>ex. :%normal A; - put ‘;’ in end line for each line</td>
+    </tr>
+    <tr>
+      <td>:!&lt;shell command&gt;</td>
+      <td>run shell command in vim  % mean to current file</td>
+    </tr>
+    <tr>
+      <td>:r&lt;file&gt; ,:r !&lt;shell cmd&gt;</td>
+      <td>retrieving file after current cursor</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="editor">Editor</h3>
-<p>|Command|Description|
-|——-|———–|
-|:e&lt;file&gt; | edit/new file|
-|:new&lt;file&gt; | new file|
-|:vnew&lt;file&gt; | new file in vertical|
-|:w !sudo tee % | <a href="https://www.youtube.com/watch?v=C6xqO4Z1nIo">write file with sudo premission</a>|</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:e&lt;file&gt;</td>
+      <td>edit/new file</td>
+    </tr>
+    <tr>
+      <td>:new&lt;file&gt;</td>
+      <td>new file</td>
+    </tr>
+    <tr>
+      <td>:vnew&lt;file&gt;</td>
+      <td>new file in vertical</td>
+    </tr>
+    <tr>
+      <td>:w !sudo tee %</td>
+      <td><a href="https://www.youtube.com/watch?v=C6xqO4Z1nIo">write file with sudo premission</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="number">Number</h3>
-<p>|Command|Description|
-|——-|———–|
-|:set relativenumber | enable relative number  |
-|:set norelativenumber | disable relative number  |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:set relativenumber</td>
+      <td>enable relative number</td>
+    </tr>
+    <tr>
+      <td>:set norelativenumber</td>
+      <td>disable relative number</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="key-mappinghttpvimwikiacomwikimappingkeysinvim-tutorialpart1"><a href="http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)">Key Mapping</a></h3>
 
@@ -276,13 +369,37 @@
 </table>
 
 <h3 id="etc">ETC</h3>
-<p>|Command|Description|
-|——-|———–|
-|:[range]move{target} , :m | move line  |
-|:nohlsearch , :nohls | mute highlight search  |
-|:&lt;stg&gt;C-d&lt;\tab&gt; | command line completion|
-|:redraw | redraw screen (Ctrl + L)|
-|:messages | show history of messages |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:[range]move{target} , :m</td>
+      <td>move line</td>
+    </tr>
+    <tr>
+      <td>:nohlsearch , :nohls</td>
+      <td>mute highlight search</td>
+    </tr>
+    <tr>
+      <td>:&lt;stg&gt;C-d&lt;\tab&gt;</td>
+      <td>command line completion</td>
+    </tr>
+    <tr>
+      <td>:redraw</td>
+      <td>redraw screen (Ctrl + L)</td>
+    </tr>
+    <tr>
+      <td>:messages</td>
+      <td>show history of messages</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="references">References:</h2>
 <ol>
