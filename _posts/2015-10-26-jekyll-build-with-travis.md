@@ -38,90 +38,90 @@ jekyll and travis]({{url}}/jekyll-with-ci/)
 
 1. Create `jekyll` branch for development
 
-    ```sh
-    $ git branch jekyll
-    ```
+   ```sh
+   $ git branch jekyll
+   ```
 
 2. Clear your `main` or `gh-page` branch to blank
 
-    ```sh
-    $ git rm *
-    ```
+   ```sh
+   $ git rm *
+   ```
 
 3. Enable Travis on your repository on Travis website and turn on `Build
    only if .travis.yml is present` on your travis repository settings.
 4. Checkout `jekyll` branch and create `.travis.yml` then edit `GH_REF`
    and `TARGET_BRANCH` to your own
 
-    ```sh
-    $ git checkout jekyll
-    ```
+   ```sh
+   $ git checkout jekyll
+   ```
 
     .travis.yml
 
-    ```xml
-    sudo: false
+   ```xml
+   sudo: false
 
-    language: ruby
+   language: ruby
 
-    rvm:
-    - 2.2
+   rvm:
+   - 2.2
 
-    branches:
-      only:
-      - jekyll
+   branches:
+     only:
+     - jekyll
 
-    script:
-    - bundle exec jekyll build
-    - bundle exec htmlproofer ./_site --disable-external
+   script:
+   - bundle exec jekyll build
+   - bundle exec htmlproofer ./_site --disable-external
 
-    after_success:
-    - git clone https://$GH_REF
-    - cd $(basename ${GH_REF%.git})
-    - git config user.name "Travis-CI"
-    - git config user.email ${EMAIL}
-    - rsync -az --delete --exclude '.git*' ../_site/ .
-    - touch .nojekyll
-    - git add -A .
-    - git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-    - git push -f "https://${DEPLOY_KEY}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
+   after_success:
+   - git clone https://$GH_REF
+   - cd $(basename ${GH_REF%.git})
+   - git config user.name "Travis-CI"
+   - git config user.email ${EMAIL}
+   - rsync -az --delete --exclude '.git*' ../_site/ .
+   - touch .nojekyll
+   - git add -A .
+   - git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
+   - git push -f "https://${DEPLOY_KEY}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
 
-    env:
-      global:
-      - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-      - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
-      - TARGET_BRANCH: master
-    ```
+   env:
+     global:
+     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+     - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
+     - TARGET_BRANCH: master
+   ```
 
 5. Create your [Github Personal Access Tokens](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) - check only `repo` that enough.
 5. Install Travis Gem on your machine for encryption sensitive data
 
-    ```sh
-    $ gem install travis
-    ```
+   ```sh
+   $ gem install travis
+   ```
 
 6. Encrypt your `EMAIL` and `DEPLOY_KEY`
 
-    ```sh
-    # --add opton will automated add sescure data to your .travis.yml
-    # edit verifiedemail to your github email account
-    $ travis encrypt EMAIL=verifiedemail --add
-    # edit githubtoken to your github personal access tokens
-    $ travis encrpy DEPLOY_KEY=githubtoken --add
-    ```
+   ```sh
+   # --add opton will automated add sescure data to your .travis.yml
+   # edit verifiedemail to your github email account
+   $ travis encrypt EMAIL=verifiedemail --add
+   # edit githubtoken to your github personal access tokens
+   $ travis encrpy DEPLOY_KEY=githubtoken --add
+   ```
 8. Commit `jekyll` branch
 
-    ```sh
-    $ git add -A
-    $ git commit -m "Create Jekyll branch for build jekyll with Travis"
-    ```
+   ```sh
+   $ git add -A
+   $ git commit -m "Create Jekyll branch for build jekyll with Travis"
+   ```
 
 7. Push to `jekyll` branch to Github repository and wait
 
-    ```sh
-    $ git push origin jekyll
-    # Don't care warnning about main/gh-page branch that local repository out of date
-    ```
+   ```sh
+   $ git push origin jekyll
+   # Don't care warnning about main/gh-page branch that local repository out of date
+   ```
 
 8. Look your published site
 
