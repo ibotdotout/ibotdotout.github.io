@@ -13,27 +13,27 @@ update_date: 2016-11-01
 
 * First Way, load files to buffer and run command for each buffers
 
-	```
-	// search keyword on files and load files to buffers
-	:args `rg -l pattern path/`
+```
+// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
 
-	// list buffers
-	:buffers
+// list buffers
+:buffers
 
-	// substitute word for each buffers and save
-	:argdo %s/pattern/newpattern/ge | update
-	```
+// substitute word for each buffers and save
+:argdo %s/pattern/newpattern/ge | update
+```
 
 <!-- more -->
 
 * Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
    Vim and run command for each line on Quickfix
 
-	```
-	//  run the given command to each line of the quickfix list.
-	:Ack! pattern 
-	:cdo %s/pattern/newpattern/ge | w
-	```
+```
+//  run the given command to each line of the quickfix list.
+:Ack! pattern 
+:cdo %s/pattern/newpattern/ge | w
+```
 
 ### Helper Tools & Plugins
 
