@@ -56,3 +56,4 @@ Page](http://page.github.com) that free hosting support Jekyll.This blog use [La
   3. [Jekyll-Plugins](http://www.jekyll-plugins.com)
   4. [Jekyll Stater](http://jekyll.tips)
   5. [Adding Disqus Comment to your Jekyll](http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/)
+  6. [How can I get backtick fenced code blocks working inside lists (with kramdown)?](https://github.com/planetjekyll/quickrefs/blob/master/FAQ.md#q-how-can-i-get-backtick-fenced-code-blocks-eg--working-inside-lists-with-kramdown)
