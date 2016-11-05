@@ -26,6 +26,7 @@ permalink: learning/
 ### [Application Security Learning Resources](https://github.com/paragonie/awesome-appsec)
 
 ### Resources by <http://www.coursesquare.co/>
+
 #### UX TALK ENTERPRISE UX
 - <http://www.coursesquare.co/uxacademy/a/course/courseInfo/UX-Talk-ตอน-E-Commerce-แบบไทยๆ>
 - <http://www.coursesquare.co/course/courseInfo/UX-TALK-Ep02-ENTERPRISE-UX>
