@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-05T04:51:17+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">React</title><link href="http://dev.im-bot.com//react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//react</id><content type="html" xml:base="http://dev.im-bot.com//react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-05T06:04:18+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">React</title><link href="http://dev.im-bot.com//react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//react</id><content type="html" xml:base="http://dev.im-bot.com//react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;Thinking in React&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -127,18 +127,19 @@ React Intro
   Routing React Apps: The Complete Guide
   Presentational and Container Components</summary></entry><entry><title type="html">Git ignore files in sub-directories</title><link href="http://dev.im-bot.com//git-ignore-sub-dir/" rel="alternate" type="text/html" title="Git ignore files in sub-directories" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-ignore-in-sub-dir</id><content type="html" xml:base="http://dev.im-bot.com//git-ignore-sub-dir/">&lt;h2 id=&quot;example-ignore-css-in-only-src&quot;&gt;Example: ignore .css in only /src&lt;/h2&gt;
 
-&lt;p&gt;.gitignore
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# .gitignore
+
 src/**/*.css
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;!-- more --&gt;
 
 &lt;p&gt;remove .css that committed in to repo&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git rm -r --cached .
-git add .
-git commit
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rm -r --cached .
+$ git add .
+$ git commit
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -148,7 +149,7 @@ git commit
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/1139797/6144391&quot;&gt;Ignore files that have already been committed to a Git repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">Example: ignore .css in only /src
 
-.gitignore
+# .gitignore
 
 src/**/*.css</summary></entry><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
 
@@ -156,32 +157,33 @@ src/**/*.css</summary></entry><entry><title type="html">Git conflicts</title><li
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/33569970/6144391&quot;&gt;Resolve Git merge conflicts in favor of their changes during a pull&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-  // In conflicted state
-  $ git checkout --theirs . // use thier code from remote repo
-  $ git checkout --ours . // use our code form local repo
-  $ git add -u . // add file with skip iles that are not under version control
- &lt;/code&gt;&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# In conflicted state
+$ git checkout --theirs . // use thier code from remote repo
+$ git checkout --ours . // use our code form local repo
+$ git add -u . // add file with skip iles that are not under version control
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;!-- more --&gt;
 
 &lt;h3 id=&quot;vim&quot;&gt;Vim&lt;/h3&gt;
+
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/tpope/vim-fugitive&quot;&gt;fugitive.vim: a Git wrapper so awesome&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;[Fugitive.vim - resolving merge conflicts with vimdiff]**(http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/)&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff&quot;&gt;Fugitive.vim - resolving merge conflicts with vimdiff&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-  :Gvdiff
-  :buffers
-  // focus on middle window
-  :diffput 2 // see number on :buffers
-  :diffput 3 // see number on :buffers
-  // ]c next conflict
-  // [c previos conflict
- &lt;/code&gt;&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:Gvdiff
+:buffers
+# focus on middle window
+:diffput 2 // see number on :buffers
+:diffput 3 // see number on :buffers
+# ]c next conflict
+# [c previos conflict
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><category term="vim" /><summary type="html">Git
 
@@ -189,11 +191,10 @@ src/**/*.css</summary></entry><entry><title type="html">Git conflicts</title><li
   
     Resolve Git merge conflicts in favor of their changes during a pull
 
-    
-  // In conflicted state
-  $ git checkout --theirs . // use thier code from remote repo
-  $ git checkout --ours . // use our code form local repo
-  $ git add -u . // add file with skip iles that are not under version control</summary></entry><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ul&gt;
+    # In conflicted state
+$ git checkout --theirs . // use thier code from remote repo
+$ git checkout --ours . // use our code form local repo
+$ git add -u . // add file with skip iles that are not under version control</summary></entry><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;First Way, load files to buffer and run command for each buffers&lt;/p&gt;
 
@@ -475,16 +476,16 @@ db.bokks.find({$text:{$search:&quot;time&quot;}})
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://blog.newrelic.com/2014/09/08/apipunchlist/&quot;&gt;The 5 Things  API Must Have&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-  1. Error handling
-  2. Error logging
-  3. Validation
-  4. Authentication and authorization
-  5. Testing
- &lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Error handling
+2. Error logging
+3. Validation
+4. Authentication and authorization
+5. Testing
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;!-- more --&gt;
 
@@ -561,13 +562,14 @@ If you are augmenting existing API responses choose JSON-LD. If you are keeping 
   
   
     The 5 Things  API Must Have
+  
 
-    
-  1. Error handling
-  2. Error logging
-  3. Validation
-  4. Authentication and authorization
-  5. Testing</summary></entry><entry><title type="html">12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-factor-apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&lt;blockquote&gt;
+
+1. Error handling
+2. Error logging
+3. Validation
+4. Authentication and authorization
+5. Testing</summary></entry><entry><title type="html">12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-factor-apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&lt;blockquote&gt;
   &lt;p&gt;The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - &lt;a href=&quot;http://12factor.net&quot;&gt;The twelve factor app&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 

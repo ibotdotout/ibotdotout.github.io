@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Drone is a Continuous Integration platform built on Docker, written in Go -  better than Drone.io  How to setup your own continuous integration server with D..." />
+<meta property="og:description" content="Drone - Continuous Integration platform built on Docker, written in Go -  better than Drone.io  How to setup your own continuous integration server with Dron..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -211,28 +211,37 @@
       
   </span>
 
-  <h1 id="drone-is-a-continuous-integration-platform-built-on-docker-written-in-gohttpsgithubcomdronedrone----better-than-droneio"><a href="https://github.com/drone/drone">Drone is a Continuous Integration platform built on Docker, written in Go</a> -  better than Drone.io</h1>
+  <h1 id="drone---continuous-integration-platform-built-on-docker-written-in-gohttpsgithubcomdronedrone----better-than-droneio"><a href="https://github.com/drone/drone">Drone - Continuous Integration platform built on Docker, written in Go</a> -  better than Drone.io</h1>
 <ul>
   <li><a href="https://www.youtube.com/watch?v=pP3iRUC6EOM">How to setup your own continuous integration server with Drone</a></li>
 </ul>
 
 <h1 id="droneio-based-on-dronehttpsdroneio---simple-ci-server"><a href="https://drone.io">Drone.io based on Drone</a> - Simple CI Server</h1>
-<p>## Private Configuration:
-### Can run shell command
-1. upload your configuration into gist with secret
-2. get url of your raw configuration
-3. add your configuration url in “Environment Variable”</p>
 
-<p><code class="highlighter-rouge">sh
-  # Example
-  CONFIG_URL="&lt;your_configuration_url&gt;"
- </code>
-4. in “Commands” download your configurations via wget without display result</p>
+<h2 id="private-configuration">Private Configuration:</h2>
 
-<p><code class="highlighter-rouge">sh
-  #!/bin/sh
-  wget $CONFIG_URL -O &lt;config_name&gt; &amp;&gt; /dev/null
- </code></p>
+<h3 id="can-run-shell-command">Can run shell command</h3>
+
+<ol>
+  <li>upload your configuration into gist with secret</li>
+  <li>get url of your raw configuration</li>
+  <li>
+    <p>add your configuration url in “Environment Variable”</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Example</span>
+<span class="nv">CONFIG_URL</span><span class="o">=</span><span class="s2">"&lt;your_configuration_url&gt;"</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>in “Commands” download your configurations via wget without display result</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/null
+</code></pre>
+    </div>
+  </li>
+</ol>
 
 <h3 id="keep-variables-in-environment">Keep Variables in Environment</h3>
 

@@ -509,162 +509,193 @@ dependencies</a></li>
       <h1 id="jenkins-cihttpjenkins-ciorg---extendable-ci-server"><a href="http://jenkins-ci.org">Jenkins-CI</a> - Extendable CI Server</h1>
 
 <h2 id="install-jenkins">Install Jenkins::</h2>
-<p>### Debian
-  <code class="highlighter-rouge">sh
-  # Don't use only apt-get install jenkins that old version
-  $ wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
-  $ sudo vim /etc/apt/sources.list
-  # add the following entry
-  # deb http://pkg.jenkins-ci.org/debian binary/
-  $ sudo apt-get update
-  $ sudo apt-get install jenkins
- </code></p>
+
+<h3 id="debian">Debian</h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Don't use only apt-get install jenkins that old version</span>
+<span class="gp">$ </span>wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+<span class="gp">$ </span>sudo vim /etc/apt/sources.list
+<span class="c"># add the following entry</span>
+<span class="c"># deb http://pkg.jenkins-ci.org/debian binary/</span>
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get install jenkins
+</code></pre>
+</div>
 
 <h3 id="osx">OSX</h3>
-<p><code class="highlighter-rouge">sh
-  brew update
-  brew install jenkins
- </code>
-### Allow others to access jenkins
-Original From <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Setting up an Apache Proxy for port 80 -&gt; 8080</a> but it use old version of apache2</p>
 
-<p><code class="highlighter-rouge">sh
-    $ sudo apt-get install apache2
-    $ sudo a2enmod proxy
-    $ sudo a2enmod proxy_http
-    $ sudo a2dissite 000-default.conf
- </code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew update
+brew install jenkins
+</code></pre>
+</div>
+
+<h3 id="allow-others-to-access-jenkins">Allow others to access jenkins</h3>
+
+<p>Original From <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu">Setting up an Apache Proxy for port 80 -&gt; 8080</a> but it use old version of apache2</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get install apache2
+<span class="gp">$ </span>sudo a2enmod proxy
+<span class="gp">$ </span>sudo a2enmod proxy_http
+<span class="gp">$ </span>sudo a2dissite 000-default.conf
+</code></pre>
+</div>
 
 <p>Create “jenfins.conf” in /etc/apache2/sites-available</p>
 
-<p><code class="highlighter-rouge">sh
-  &lt;VirtualHost *:80&gt;
-      ServerAdmin webmaster@localhost
-      ServerName ci.company.com
-      ServerAlias ci
-      ProxyRequests Off
-      &lt;Proxy *&gt;
-            Order deny,Alloww
-            Allow from all
-      &lt;/Proxy&gt;
-      ProxyPreserveHost on
-      ProxyPass / http://Proxylocalhost:8080/
-  &lt;/VirtualHost&gt;
- </code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>&lt;VirtualHost <span class="k">*</span>:80&gt;
+  ServerAdmin webmaster@localhost
+  ServerName ci.company.com
+  ServerAlias ci
+  ProxyRequests Off
+  &lt;Proxy <span class="k">*</span>&gt;
+		Order deny,Alloww
+		Allow from all
+  &lt;/Proxy&gt;
+  ProxyPreserveHost on
+  ProxyPass / http://Proxylocalhost:8080/
+&lt;/VirtualHost&gt;
+</code></pre>
+</div>
 
-<p><code class="highlighter-rouge">sh
-  $ sudo a2ensite jenkins
-  $ sudo service apache2 restart
- </code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo a2ensite jenkins
+<span class="gp">$ </span>sudo service apache2 restart
+</code></pre>
+</div>
 
 <h2 id="jenkins-job-workspace">Jenkins Job Workspace::</h2>
 <ol>
-  <li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory</li>
-  <li>In Home directory clicks Adanced… Buttons.</li>
-  <li>look Workspace Root Directory. Normally it is “workspace”.</li>
-  <li>your job workspace is &lt; jenkins home directory &gt; /jobs/&lt; your jobs &gt; / &lt; workspace &gt;</li>
+  <li>look jenkins home directory in Manage <code class="highlighter-rouge">Jenkins &gt; Configure System &gt; Home directory  </code></li>
+  <li>In Home directory clicks <code class="highlighter-rouge">Advanced...</code> Buttons.</li>
+  <li>look Workspace Root Directory. Normally it is <code class="highlighter-rouge">workspace</code>.</li>
+  <li>your job workspace is <code class="highlighter-rouge">&lt; jenkins home directory &gt; /jobs/&lt; your jobs &gt; / &lt; workspace &gt;</code></li>
 </ol>
 
 <h2 id="jenkins-backup-and-import-configure">Jenkins backup and Import Configure::</h2>
-<p>###Backup Job Configure<br />
-  <code class="highlighter-rouge">sh
-  http://yourjenkinsserver/job/&lt;project name&gt;/config.xml
- </code></p>
 
-<p>###Import Job Configure<br />
-1. look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory<br />
-2. go to &lt; jenkins home directory &gt;/jobs<br />
-3. go to &lt; your jobs directory &gt;<br />
-4. replace your backup config.xml with config.xml<br />
-5. reload jenkins with</p>
+<h3 id="backup-job-configure">Backup Job Configure</h3>
 
-<p><code class="highlighter-rouge">sh
-  http://yourjenkinsserver/reload
- </code></p>
+<p><code class="highlighter-rouge">http://yourjenkinsserver/job/&lt;project name&gt;/config.xml</code></p>
+
+<h3 id="import-job-configure">Import Job Configure</h3>
+
+<ol>
+  <li>look jenkins home directory in Manage Jenkins &gt; Configure System &gt; Home directory</li>
+  <li>go to &lt; jenkins home directory &gt;/jobs</li>
+  <li>go to &lt; your jobs directory &gt;</li>
+  <li>replace your backup config.xml with config.xml</li>
+  <li>reload jenkins with</li>
+</ol>
+
+<p><code class="highlighter-rouge">http://yourjenkinsserver/reload</code></p>
 
 <h2 id="jenkins-trigger-via-git-hook">Jenkins Trigger via git hook::</h2>
-<p>### Setup Configure<br />
-1. Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a><br />
-2. In Job Configure &gt; Source Code Management &gt; Select Git<br />
-3. add your git repository url to Repository URL<br />
-4. Select Poll SCM in Build Triggers and you can leave Schedule as blank<br />
-5. Save Configure</p>
+
+<h3 id="setup-configure">Setup Configure</h3>
+
+<ol>
+  <li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin">Git Plugin</a></li>
+  <li>In Job Configure &gt; Source Code Management &gt; Select Git</li>
+  <li>add your git repository url to Repository URL</li>
+  <li>Select Poll SCM in Build Triggers and you can leave Schedule as blank</li>
+  <li>Save Configure</li>
+</ol>
 
 <h3 id="git-hook-to-trigger-jenkinshttpswikijenkins-ciorgdisplayjenkinsgitplugingitplugin-pushnotificationfromrepository"><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository">Git Hook to trigger Jenkins</a></h3>
-<ol>
-  <li>If you use linux you have to install curl. That was installed osx.</li>
-</ol>
-
-<p><code class="highlighter-rouge">sh
-  $ sudo apt-get install curl
- </code>
-2. You can trigger jenkins with this url</p>
-
-<p><code class="highlighter-rouge">sh
-  http://yourjenkinsserver/git/notifyCommit?url=&lt;URL of the Git repository&gt;
- </code></p>
 
 <ol>
-  <li>You can trigger jenkins after git push by</li>
+  <li>
+    <p>If you use linux you have to install curl. That was installed osx.</p>
+
+    <p><code class="highlighter-rouge">$ sudo apt-get install curl</code></p>
+  </li>
+  <li>
+    <p>You can trigger jenkins with this url</p>
+
+    <p><code class="highlighter-rouge">http://yourjenkinsserver/git/notifyCommit?url=&lt;URL of the Git repository&gt;</code></p>
+  </li>
+  <li>
+    <p>You can trigger jenkins after git push by</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># git don't have post-push hook</span>
+<span class="gp">$ </span>git push <span class="o">&amp;&amp;</span> curl http://yourjenkinsserver/git/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>You can use git alias to make short cmd by edit .git/config in your git repository</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> <span class="o">[</span><span class="nb">alias</span><span class="o">]</span>
+   trig-jenkins <span class="o">=</span> !curl http://yourjenkinsservergit/notifyCommit?url<span class="o">=</span><span class="k">$(</span>git remote -v | grep -m 1 -oh <span class="s2">"git@.*git"</span><span class="k">)</span>
+   push-wt <span class="o">=</span> !git push <span class="o">&amp;&amp;</span> git trig-jenkins
+</code></pre>
+    </div>
+  </li>
 </ol>
-
-<p><code class="highlighter-rouge">sh
-  # git don't have post-push hook
-  $ git push &amp;&amp; curl http://yourjenkinsserver/git/notifyCommit?url=$(git remote -v | grep -m 1 -oh "git@.*git")
- </code></p>
-
-<ol>
-  <li>You can use git alias to make short cmd by edit .git/config in your git repository</li>
-</ol>
-
-<p><code class="highlighter-rouge">sh
-    [alias]
-      trig-jenkins = !curl http://yourjenkinsservergit/notifyCommit?url=$(git remote -v | grep -m 1 -oh "git@.*git")
-      push-wt = !git push &amp;&amp; git trig-jenkins
- </code></p>
 
 <p>call your alias by</p>
 
 <p><code class="highlighter-rouge">sh
-  $ git trig-jenkins
-  $ git push-wt
- </code></p>
+   $ git trig-jenkins
+   $ git push-wt
+  </code></p>
 
 <h2 id="jenkins-with-python">Jenkins with Python::</h2>
-<p>###Setup
-1. Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin</a><br />
-2. In Manage Jenkins &gt; Configure System &gt; Python clicks “Python installations” button.<br />
-3. Config your python environments<br />
-4. Save</p>
 
-<p>###Configure Job to run with python
-1. In Job Configure &gt; Build &gt; Add build step &gt; {Python Builder, VirtualEnv Builder}<br />
-2. Select your Python version<br />
-3. Nature select shell<br />
-4. In command add your run script</p>
+<h3 id="setup">Setup</h3>
 
-<p><code class="highlighter-rouge">sh
-  # example
-  export LANG=en_US.UTF-8
-  python setup.py develop
-  nosetests --with-coverage --cover-erase --cover-package=core,bin --cover-html --with-xunit
- </code>
-5. (Optional) Publish Test Result Report 
-  5.1 Use nosetests to generate xml result in xunit format</p>
+<ol>
+  <li>Install <a href="https://wiki.jenkins-ci.org/display/JENKINS/ShiningPanda+Plugin">ShiningPanda Plugin</a></li>
+  <li>In Manage Jenkins &gt; Configure System &gt; Python clicks “Python installations” button.</li>
+  <li>Config your python environments</li>
+  <li>Save</li>
+</ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>```sh
- $ nosetests --with-xunit  # nosetests.xml is default name of xml
-```   5.2 Add post-build action &gt; Publish JUnit test result report     5.3 Add "nosetests.xml" in Test report XMLs   6. (Optional) Publish coverage.py HTML reports     6.1 Use nosetests to run coverage.py  
+<h3 id="configure-job-to-run-with-python">Configure Job to run with python</h3>
+
+<ol>
+  <li>In Job Configure &gt; Build &gt; Add build step &gt; {Python Builder, VirtualEnv Builder}</li>
+  <li>Select your Python version</li>
+  <li>Nature select shell</li>
+  <li>
+    <p>In command add your run script</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># example</span>
+<span class="nb">export </span><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8
+python setup.py develop
+nosetests --with-coverage --cover-erase --cover-package<span class="o">=</span>core,bin --cover-html --with-xunit
 </code></pre>
-</div>
+    </div>
+  </li>
+  <li>
+    <p>(Optional) Publish Test Result Report</p>
 
-<p><code class="highlighter-rouge">sh
-    $ nosetests --with-coveage --cover-html
- </code>
-  6.2 Add post-build action &gt; Publish coverage.py HTML reports<br />
-7. (Options) Publish your product<br />
-  7.1 Add post-build action &gt; Archive the artifacts<br />
-  7.2 Add your file name</p>
+    <p>5.1 Use nosetests to generate xml result in xunit format</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nosetests --with-xunit  <span class="c"># nosetests.xml is default name of xml</span>
+</code></pre>
+    </div>
+
+    <p>5.2 Add post-build action &gt; Publish JUnit test result report<br />
+5.3 Add “nosetests.xml” in Test report XMLs</p>
+  </li>
+  <li>
+    <p>(Optional) Publish coverage.py HTML reports</p>
+
+    <p>6.1 Use nosetests to run coverage.py</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nosetests --with-coveage --cover-html
+</code></pre>
+    </div>
+
+    <p>6.2 Add post-build action &gt; Publish coverage.py HTML reports</p>
+  </li>
+  <li>
+    <p>(Options) Publish your product</p>
+
+    <p>7.1 Add post-build action &gt; Archive the artifacts<br />
+7.2 Add your file name</p>
+  </li>
+</ol>
 
 <h2 id="startstop-jenkins-that-installed-via-homebrew">Start/Stop Jenkins that installed via Homebrew</h2>
 
@@ -678,6 +709,7 @@ Original From <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Je
 </div>
 
 <h3 id="jekins-reset-passwordhttpsgistgithubcomgmhawash4043232"><a href="https://gist.github.com/gmhawash/4043232">Jekins Reset Password</a></h3>
+
 <ol>
   <li>Go to Jenkins Home Path   <br />
  (debian) /var/lib/jenkins</li>

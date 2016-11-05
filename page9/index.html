@@ -219,28 +219,37 @@
     </span>
 
     
-      <h1 id="drone-is-a-continuous-integration-platform-built-on-docker-written-in-gohttpsgithubcomdronedrone----better-than-droneio"><a href="https://github.com/drone/drone">Drone is a Continuous Integration platform built on Docker, written in Go</a> -  better than Drone.io</h1>
+      <h1 id="drone---continuous-integration-platform-built-on-docker-written-in-gohttpsgithubcomdronedrone----better-than-droneio"><a href="https://github.com/drone/drone">Drone - Continuous Integration platform built on Docker, written in Go</a> -  better than Drone.io</h1>
 <ul>
   <li><a href="https://www.youtube.com/watch?v=pP3iRUC6EOM">How to setup your own continuous integration server with Drone</a></li>
 </ul>
 
 <h1 id="droneio-based-on-dronehttpsdroneio---simple-ci-server"><a href="https://drone.io">Drone.io based on Drone</a> - Simple CI Server</h1>
-<p>## Private Configuration:
-### Can run shell command
-1. upload your configuration into gist with secret
-2. get url of your raw configuration
-3. add your configuration url in “Environment Variable”</p>
 
-<p><code class="highlighter-rouge">sh
-  # Example
-  CONFIG_URL="&lt;your_configuration_url&gt;"
- </code>
-4. in “Commands” download your configurations via wget without display result</p>
+<h2 id="private-configuration">Private Configuration:</h2>
 
-<p><code class="highlighter-rouge">sh
-  #!/bin/sh
-  wget $CONFIG_URL -O &lt;config_name&gt; &amp;&gt; /dev/null
- </code></p>
+<h3 id="can-run-shell-command">Can run shell command</h3>
+
+<ol>
+  <li>upload your configuration into gist with secret</li>
+  <li>get url of your raw configuration</li>
+  <li>
+    <p>add your configuration url in “Environment Variable”</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Example</span>
+<span class="nv">CONFIG_URL</span><span class="o">=</span><span class="s2">"&lt;your_configuration_url&gt;"</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>in “Commands” download your configurations via wget without display result</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/null
+</code></pre>
+    </div>
+  </li>
+</ol>
 
 <h3 id="keep-variables-in-environment">Keep Variables in Environment</h3>
 
@@ -685,17 +694,19 @@ development: by example”:</p>
   <li><a href="https://www.youtube.com/watch?v=4UM73byPFlA">Coding Dojo - TDD - Lesson 1 (Java)</a></li>
   <li><a href="https://www.youtube.com/watch?v=q5Xd1tmIgec">Understanding Test Driven Development</a></li>
   <li><a href="http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html">TDD is dead. Long live testing.</a></li>
-  <li><a href="https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d#.5bukb49r3">5 Questions Every Unit Test Must Answer</a></li>
-</ol>
+  <li>
+    <p><a href="https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d#.5bukb49r3">5 Questions Every Unit Test Must Answer</a></p>
 
-<blockquote>
-  <p>Next time you write a test, remember to answer all the questions:
+    <blockquote>
+      <p>Next time you write a test, remember to answer all the questions:
 1. What are you testing?
 2. What should it do?
 3. What is the actual output?
 4. What is the expected output?
 5. How can the test be reproduced?</p>
-</blockquote>
+    </blockquote>
+  </li>
+</ol>
 
 <h2 id="testing-story">Testing Story</h2>
 <ol>
@@ -760,19 +771,18 @@ clearer, not how can I test it faster or more isolated. - DHH</p>
   <li><a href="https://medium.com/@mpjme/algorithm-skills-doesnt-make-a-good-programmer-bb467f46c596">Algorithm skills doesn’t make a good programmer.</a></li>
   <li><a href="https://medium.com/humans-create-software/staying-relevant-as-a-programmer-e9f18b1b0e43">Staying relevant as a programmer</a></li>
   <li><a href="http://www.somkiat.cc/developer-should-reduce-code-complexity/">Developer ควรลดความซับซ้อนของ code ลงบ้างนะ</a></li>
-  <li><a href="https://www.linkedin.com/pulse/googling-does-make-you-good-developer-chadchapol-vittavutkarnvej">Googling does not make you a good developer</a></li>
-</ol>
+  <li>
+    <p><a href="https://www.linkedin.com/pulse/googling-does-make-you-good-developer-chadchapol-vittavutkarnvej">Googling does not make you a good developer</a></p>
 
-<blockquote>
-  <p>nowadays, the most important quality of a developer is ability to
+    <blockquote>
+      <p>nowadays, the most important quality of a developer is ability to
 learn new things quickly.</p>
-</blockquote>
+    </blockquote>
 
-<blockquote>
-  <p>It is a pitfall to read everything.</p>
-</blockquote>
-
-<ol>
+    <blockquote>
+      <p>It is a pitfall to read everything.</p>
+    </blockquote>
+  </li>
   <li><a href="http://manifesto.softwarecraftsmanship.org">Manifesto Software Craftsman</a></li>
 </ol>
 
@@ -811,15 +821,15 @@ in other words, it turns developers into code monkeys.</p>
   </li>
   <li>
     <p><a href="http://www.yegor256.com/2015/06/02/how-to-estimate-software-cost.html">How Much For This Software?</a></p>
-  </li>
-</ol>
 
-<blockquote>
-  <p>To summarize, this is wrong (because there is no “there”):
+    <blockquote>
+      <p>To summarize, this is wrong (because there is no “there”):
 Hey driver, how much will it cost to get there?
 And this is right:
 Hey driver, how much do you charge per mile, and do you have a map?</p>
-</blockquote>
+    </blockquote>
+  </li>
+</ol>
 
 <h1 id="make-your-open-sources">Make your open sources</h1>
 <ol>
