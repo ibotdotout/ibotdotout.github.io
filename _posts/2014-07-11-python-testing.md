@@ -7,21 +7,19 @@ permalink: python-testing/
 
 There are difference between 'building it right' and 'building the right thing'. -Python Testing Cookbook by Greg L. Turnquist
 
-
-##Good Test Habits
+## Good Test Habits
 * A few test is better than nothing  
 * Coverage isn't everything  
-  - make working software not a 100% coverage
+   - make working software not a 100% coverage
 * Capturing a bug in an automated test  
-  1. Write Tests for the bug  
-  2. Add it to your test suite  
-  3. Fix the bug  
-  4. Veriry test suite passed  
-  
+    1. Write Tests for the bug  
+    2. Add it to your test suite  
+    3. Fix the bug  
+    4. Veriry test suite passed  
+    
 * Testing Concept
-  1. AAA - Arrange Act Assert  
-  2. BDD - Give When Then  
-
+    1. AAA - Arrange Act Assert  
+    2. BDD - Give When Then  
 
 ## Tips:
 
@@ -49,7 +47,7 @@ There are difference between 'building it right' and 'building the right thing'.
   from nose.tools import set_trace; set_trace()
   ```
   
-##[Nose Multiprocess](http://nose.readthedocs.org/en/latest/plugins/multiprocess.html)
+## [Nose Multiprocess](http://nose.readthedocs.org/en/latest/plugins/multiprocess.html)
 
 You should make unittest run faster with mocking better than using multi processes.  
 There are many problem with nose plugin ex. rednose, coverage, xunit.  
@@ -61,11 +59,12 @@ $ nosetests --processes=NUMBER_OF_PROCESSORS --process-timeout <sec>
 ```
 
 [Plugin Problem](http://www.metaklass.org/nose-accelerating-the-runner/):  
+
 1. Rednose - disable rednose by remove --rednose option and NOSE_REDNOSE in enviorment variable  
 2. coverage - fix by [nose-cov](https://pypi.python.org/pypi/nose-cov)  
 3. xunit - fix by [nose_xunitmp](https://pypi.python.org/pypi/nose_xunitmp/0.2)  
 
-##Test Coverage
+## Test Coverage
 
 Stmts - statements  
 Miss - statements that not executed  
@@ -96,27 +95,28 @@ Cover - (Stmts - Miss)/Stmts * 100
 ## Mock
 
 * mocking pattern  
-  1.record/replay pattern  
-  2.action/assert pattern 
+
+    1.record/replay pattern  
+    2.action/assert pattern 
 * mock tests behavior  
-  - test the method was called or not called by assert_called_with(), etc.  
+    - test the method was called or not called by assert_called_with(), etc.  
 * stubs tests state  
-  - recording method class and its result  
+    - recording method class and its result  
 
 
-##Behavior Driven Development
+## Behavior Driven Development
 
 * BDD - Given, When, and Then
 * BDD Stroy  
-  -Feature  
-  -- Scenario  
-  --- steps  
+    -Feature  
+    -- Scenario  
+    --- steps  
 
 * TDD vs BDD  
-  - setUp   ==  Given  
-  - call unit ==  Then  
-  - assert    ==   When  
-
+    - setUp   ==  Given  
+    - call unit ==  Then  
+    - assert    ==   When  
+  
 * [Lettuce](http://lettuce.it) is a Cucumber-like BDD tool built for Python.
 
 
@@ -133,24 +133,25 @@ Cover - (Stmts - Miss)/Stmts * 100
 
 
 ## Tools:
-  * Unittests: [Nosetests](https://nose.readthedocs.org), [Rednose](https://pypi.python.org/pypi/rednose), [Coverage](https://pypi.python.org/pypi/coverage), [nose-progressive](https://pypi.python.org/pypi/nose-progressive/)
 
-  ```sh
-  pip install nose rednose coverage
-  echo "export NOSE_REDNOSE=1" >> .zshrc #enable rednose
-  ```
-  * [Watchdog](https://github.com/gorakhargosh/watchdog) - 
-  [Watching a directory for file changes](http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html)  
+* Unittests: [Nosetests](https://nose.readthedocs.org), [Rednose](https://pypi.python.org/pypi/rednose), [Coverage](https://pypi.python.org/pypi/coverage), [nose-progressive](https://pypi.python.org/pypi/nose-progressive/)
 
-  ```sh
-  pip install watchdog
-  ```
-  
-  * [Tox](https://testrun.org/tox/latest/) - multiple environments testing
+```sh
+pip install nose rednose coverage
+echo "export NOSE_REDNOSE=1" >> .zshrc #enable rednose
+```
+* [Watchdog](https://github.com/gorakhargosh/watchdog) - 
+[Watching a directory for file changes](http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html)  
 
-  ```sh
-  pip install tox
-  ```
+```sh
+pip install watchdog
+```
+
+* [Tox](https://testrun.org/tox/latest/) - multiple environments testing
+
+```sh
+pip install tox
+```
 
 ## Testing Python
 1. [Python Testing Start Here](http://pythontesting.net/start-here/)
