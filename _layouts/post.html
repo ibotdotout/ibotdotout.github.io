@@ -6,25 +6,25 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">
     {{ page.date | date_to_string }}
+      {% if page.tags %}
+        Tags:
+        {% for tag in page.tags %}
+          <a href="{{ site.baseurl }}tags/#{{ tag }}">
+            {{ tag }}
+          </a>
+        {% endfor %}
+      {% endif %}
       {% if site.disqus_shortname %}
         &middot;
         <a href="{{ page.url }}/index.html#disqus_thread" data-disqus-identifier="{{ page.url }}"></a>
-        {% if page.update_date %}
-          &middot;
-          Updated {{ page.update_date | date: site.date_format }}
-        {% endif %}
+      {% endif %}
+      {% if page.update_date %}
+        &middot;
+        Updated {{ page.update_date | date: site.date_format }}
       {% endif %}
   </span>
 
   {{ content }}
-  {% if page.tags %}
-    Tags:
-    {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}tags/#{{ tag }}">
-  	    {{ tag }}
-      </a>
-    {% endfor %}
-  {% endif %}
 </div>
 
 <div class="related">
