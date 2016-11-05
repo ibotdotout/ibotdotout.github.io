@@ -6,6 +6,7 @@ permalink: vim-command/
 ---
 
 ### Range
+
 |\[range\]|Description|
 |-------|-----------|
 |0 | above first line  |
@@ -17,6 +18,7 @@ permalink: vim-command/
 |\<,\> | start selection to end selection  |
 
 ### Insert
+
 |Command|Description|
 |-------|-----------|
 |:\[range\]print , :p | print line  |
@@ -27,6 +29,7 @@ permalink: vim-command/
 |:r\<file\> ,:r !\<shell cmd\> | retrieving file after current cursor|
 
 ### Editor
+
 |Command|Description|
 |-------|-----------|
 |:e\<file\> | edit/new file|
@@ -35,6 +38,7 @@ permalink: vim-command/
 |:w !sudo tee % | [write file with sudo premission](https://www.youtube.com/watch?v=C6xqO4Z1nIo)|
 
 ### Number
+
 |Command|Description|
 |-------|-----------|
 |:set relativenumber | enable relative number  |
@@ -48,6 +52,7 @@ permalink: vim-command/
 |:verbose map \<key\> | show mapping key and where it mapping|
 
 ### ETC
+
 |Command|Description|
 |-------|-----------|
 |:\[range\]move{target} , :m | move line  |
