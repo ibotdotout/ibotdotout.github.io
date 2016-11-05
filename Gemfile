@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 gem 'github-pages'
-gem 'redcarpet'
+gem 'jekyll-feed'
+gem 'jekyll-paginate'
+gem 'jekyll-gist'
 gem 'html-proofer'
 gem 'jekyll-lunr-js-search'

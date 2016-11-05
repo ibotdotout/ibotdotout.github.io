@@ -25,7 +25,7 @@ title: botbotbot's blog
     </span>
 
     {% if post.content contains  site.excerpt_separator %}
-      {{ post.content | split:site.excerpt_separator | first % }}
+      {{ post.content | split:site.excerpt_separator | first }}
       <div style="text-align:right;">
         <a href="{{ post.url }}" style="color:#000;"> Read More </a>
       </div>

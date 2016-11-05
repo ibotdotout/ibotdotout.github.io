@@ -7,7 +7,7 @@ ENV RUBYOPT "-KU -E utf-8:utf-8"
 
 WORKDIR /src
 ADD Gemfile /src/Gemfile
-ADD Gemfile.lock /src/Gemfile.lock
+# ADD Gemfile.lock /src/Gemfile.lock
 
 RUN bundle install
 
