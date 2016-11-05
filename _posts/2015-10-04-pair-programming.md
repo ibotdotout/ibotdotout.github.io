@@ -64,14 +64,17 @@ allowfullscreen></iframe></center>
 - [Read more about pair programming]({{url}}/coding#pair-programming)
 
 ## Tools:
+
 ### SSH + Wemux (Recommended)
-- [Pair Programming with Wemux](http://blog.rapin.com/pair-programming-with-wemux-and-vim/)
-- [Pair Programming With Tmux Secure pair programming with wemux and Vim](http://martinbrochhaus.com/pair.html)
-- [Simple Remote Pairing with wemux](http://spin.atomicobject.com/2012/04/04/simple-remote-pairing-with-wemux/)
-- [Docker based Paring](https://github.com/dpetersen/dev-container-base)
-- [github-auth - SSH-KEY via GitHub account](https://github.com/chrishunt/github-auth)
+
+* [Pair Programming with Wemux](http://blog.rapin.com/pair-programming-with-wemux-and-vim/)
+* [Pair Programming With Tmux Secure pair programming with wemux and Vim](http://martinbrochhaus.com/pair.html)
+* [Simple Remote Pairing with wemux](http://spin.atomicobject.com/2012/04/04/simple-remote-pairing-with-wemux/)
+* [Docker based Paring](https://github.com/dpetersen/dev-container-base)
+* [github-auth - SSH-KEY via GitHub account](https://github.com/chrishunt/github-auth)
 
 ### Atom Paring (Easier but paring cant' see its result)
+
 - [Atom MotePair](https://atom.io/packages/motepair)
 - [AtomPair](https://atom.io/packages/atom-pair)
 - [Atom Runner](https://atom.io/packages/atom-runner)
