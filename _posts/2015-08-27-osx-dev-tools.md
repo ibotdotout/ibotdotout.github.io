@@ -16,7 +16,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 - [Homebrew Cask - “To install, drag this icon…” no more!](http://caskroom.io)
 
 ```sh
-$ brew install caskroom/cask/brew-cas
+$ brew tap caskroom/cask
 ```
 
 - [Caskroom-fonts](https://github.com/caskroom/homebrew-fonts)
@@ -55,15 +55,6 @@ $ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh 
 
 ```sh
 $ brew cask install dash
-```
-
-- [vtop](https://github.com/MrRio/vtop) - [Intro](https://parall.ax/vtop)
-
-> htop on osx port from linux that five years ago version. It's very old.
-
-```sh
-# requried nodejs
-$ sudo npm install -g vtop
 ```
 
 ### Window Manager
