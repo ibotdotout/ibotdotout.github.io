@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Helper$ ~ $ home user directory  $ ~+ # same as pwd  $ ~- # previous directory  $ ls -1 $PWD/*.txt # list all .txt with full path  $ cd - # cd to previous pa..." />
+<meta property="og:description" content="Helper$ ~ $ home user directory$ ~+ # same as pwd$ ~- # previous directory$ ls -1 $PWD/*.txt # list all .txt with full path$ cd - # cd to previous path$ expo..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -216,10 +216,10 @@
 
   <h3 id="helper">Helper</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>~ <span class="nv">$ </span>home user directory  
-<span class="gp">$ </span>~+ <span class="c"># same as pwd  </span>
-<span class="gp">$ </span>~- <span class="c"># previous directory  </span>
-<span class="gp">$ </span>ls -1 <span class="nv">$PWD</span>/<span class="k">*</span>.txt <span class="c"># list all .txt with full path  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>~ <span class="nv">$ </span>home user directory
+<span class="gp">$ </span>~+ <span class="c"># same as pwd</span>
+<span class="gp">$ </span>~- <span class="c"># previous directory</span>
+<span class="gp">$ </span>ls -1 <span class="nv">$PWD</span>/<span class="k">*</span>.txt <span class="c"># list all .txt with full path</span>
 <span class="gp">$ </span><span class="nb">cd</span> - <span class="c"># cd to previous path</span>
 <span class="gp">$ </span><span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim <span class="c"># set vim as default editor</span>
 <span class="gp">$ </span>groups <span class="c">#list group</span>
@@ -244,31 +244,30 @@ pbcopy &lt; &lt;file&gt; <span class="c"># OSX: copy file into clipboard</span>
 
 <h3 id="where-command">Where command</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">hash</span> <span class="c"># list command and its path  </span>
-<span class="gp">$ </span><span class="nb">type</span> -a &lt;cmd&gt; <span class="c"># tell all path of commamd  </span>
-<span class="gp">$ </span>which &lt;cmd&gt; <span class="c"># tell default path of command  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">hash</span> <span class="c"># list command and its path</span>
+<span class="gp">$ </span><span class="nb">type</span> -a &lt;cmd&gt; <span class="c"># tell all path of commamd</span>
+<span class="gp">$ </span>which &lt;cmd&gt; <span class="c"># tell default path of command</span>
 </code></pre>
 </div>
 
 <h3 id="redirectionhttpenwikipediaorgwikiredirectioncomputing"><a href="http://en.wikipedia.org/wiki/Redirection_computing">Redirection</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cmd &gt; &lt;file&gt; <span class="c"># print output to file (overwrite)  </span>
-<span class="gp">$ </span>cmd &gt;&gt; &lt;file&gt; <span class="c"># print output to file (append)  </span>
-<span class="gp">$ </span>cmd 2&gt; &lt;file&gt; <span class="c"># print error to file  </span>
-<span class="gp">$ </span>cmd &amp;&gt; &lt;file&gt; <span class="c"># print output &amp; error to file  </span>
-<span class="gp">$ </span>cmd &lt; &lt;file&gt; <span class="c"># use file as  input  </span>
-<span class="gp">$ </span>cmd &lt;&lt; &lt;file&gt; <span class="c"># use file as input  </span>
-<span class="gp">$ </span>cmd <span class="o">&lt;&lt;&lt;</span> &lt;any&gt;  <span class="c">#use anyas input (here string not compute any tag)  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cmd &gt; &lt;file&gt; <span class="c"># print output to file (overwrite)</span>
+<span class="gp">$ </span>cmd &gt;&gt; &lt;file&gt; <span class="c"># print output to file (append)</span>
+<span class="gp">$ </span>cmd 2&gt; &lt;file&gt; <span class="c"># print error to file</span>
+<span class="gp">$ </span>cmd &amp;&gt; &lt;file&gt; <span class="c"># print output &amp; error to file</span>
+<span class="gp">$ </span>cmd &lt; &lt;file&gt; <span class="c"># use file as  input</span>
+<span class="gp">$ </span>cmd &lt;&lt; &lt;file&gt; <span class="c"># use file as input</span>
+<span class="gp">$ </span>cmd <span class="o">&lt;&lt;&lt;</span> &lt;any&gt;  <span class="c">#use anyas input (here string not compute any tag)</span>
 <span class="c"># Redirection output wiht sudo</span>
 <span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"hello"</span> | sudo tee out &gt; /dev/null <span class="c"># eq. echo "hello" &gt; out</span>
 <span class="c"># echo "hello" | sudo tee -a out &gt; /dev/null # eq echo "hello" &gt; out</span>
 </code></pre>
 </div>
 
-<h3 id="jobshttpwwwthegeekstuffcom201005unix-background-job--"><a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">Jobs</a> -</h3>
-<p><a href="https://www.youtube.com/watch?v=r4xkCDRnGiw">fg bg Tutorial</a></p>
+<h3 id="jobshttpwwwthegeekstuffcom201005unix-background-job---fg-bg-tutorialhttpswwwyoutubecomwatchvr4xkcdrngiw"><a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">Jobs</a> - <a href="https://www.youtube.com/watch?v=r4xkCDRnGiw">fg bg Tutorial</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">jobs</span> <span class="c"># list suspended jobs  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">jobs</span> <span class="c"># list suspended jobs</span>
 <span class="gp">$ </span><span class="nb">fg</span> <span class="c"># put the top suspended job in the foreground</span>
 <span class="gp">$ </span><span class="nb">fg</span> %1 <span class="c"># put the suspended job id 1 in the foreground</span>
 Ctrl-z <span class="c"># Suspend a foreground job</span>
@@ -289,19 +288,19 @@ Ctrl-z <span class="c"># Suspend a foreground job</span>
 <h3 id="zsh-history-expansion">Zsh History expansion</h3>
 <p>should also work with bash.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>man zshexpn <span class="c"># manual for look in-depth  </span>
-<span class="gp">$ </span><span class="nb">history</span> <span class="c"># tell history command that keep in ~/.bash_history  </span>
-<span class="gp">$ </span><span class="nb">history</span> -c <span class="c"># clear history  </span>
-! <span class="c"># previous that can combine with command and argument  </span>
-<span class="gp">$ </span>!! <span class="c"># call previous command  </span>
-<span class="gp">$ </span>!&lt;str&gt; <span class="c"># call last command that start with str  </span>
-<span class="gp">$ </span>!?&lt;str&gt;[?] <span class="c"># call last command containing str  </span>
-<span class="gp">$ </span>!&lt;hist_number&gt; <span class="c"># call command in nth of history files  </span>
- ^ <span class="c"># first argument  </span>
- <span class="nv">$ </span><span class="c"># last argument  </span>
- :n <span class="c"># nth argument  </span>
- :m-n <span class="c"># mth to nth argument  </span>
- <span class="k">*</span> <span class="c"># all argument  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>man zshexpn <span class="c"># manual for look in-depth</span>
+<span class="gp">$ </span><span class="nb">history</span> <span class="c"># tell history command that keep in ~/.bash_history</span>
+<span class="gp">$ </span><span class="nb">history</span> -c <span class="c"># clear history</span>
+! <span class="c"># previous that can combine with command and argument</span>
+<span class="gp">$ </span>!! <span class="c"># call previous command</span>
+<span class="gp">$ </span>!&lt;str&gt; <span class="c"># call last command that start with str</span>
+<span class="gp">$ </span>!?&lt;str&gt;[?] <span class="c"># call last command containing str</span>
+<span class="gp">$ </span>!&lt;hist_number&gt; <span class="c"># call command in nth of history files</span>
+ ^ <span class="c"># first argument</span>
+ <span class="nv">$ </span><span class="c"># last argument</span>
+ :n <span class="c"># nth argument</span>
+ :m-n <span class="c"># mth to nth argument</span>
+ <span class="k">*</span> <span class="c"># all argument</span>
 <span class="gp">$ </span>&lt;space&gt;&lt;cmd&gt; <span class="c"># call command without keep history</span>
 </code></pre>
 </div>
@@ -309,22 +308,22 @@ Ctrl-z <span class="c"># Suspend a foreground job</span>
 <h3 id="zsh-basic-editing---bash-shortcutshttpwwwskorkscom200909bash-shortcuts-for-maximum-productivity">Zsh Basic Editing - <a href="http://www.skorks.com/2009/09/bash-shortcuts-for-maximum-productivity/">Bash Shortcuts</a></h3>
 <p>should also work with bash.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bindkey -v <span class="c"># vi mode  </span>
-<span class="gp">$ </span>bindkey -e <span class="c"># emac mode  </span>
-Ctrl + a <span class="c"># moves the cursor to begin of line  </span>
-Ctrl + e <span class="c"># moves the cursor to end of line  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bindkey -v <span class="c"># vi mode</span>
+<span class="gp">$ </span>bindkey -e <span class="c"># emac mode</span>
+Ctrl + a <span class="c"># moves the cursor to begin of line</span>
+Ctrl + e <span class="c"># moves the cursor to end of line</span>
 Ctrl + u <span class="c"># delete current to begin of line</span>
-Ctrl + k <span class="c"># delete until end of line  </span>
+Ctrl + k <span class="c"># delete until end of line</span>
 Ctrl + l <span class="c"># clear</span>
-Ctrl + w <span class="c"># delete word backwords  </span>
-Ctrl + d <span class="c"># delete char (moves forward)  </span>
+Ctrl + w <span class="c"># delete word backwords</span>
+Ctrl + d <span class="c"># delete char (moves forward)</span>
 Ctrl + f <span class="c"># move char foreward</span>
 Ctrl + b <span class="c"># move char backward</span>
 Meta + f <span class="c"># move word foreward</span>
 Meata + b <span class="c"># move word backward</span>
-Ctrl + y <span class="c"># yank last delete word  </span>
-Ctrl + t <span class="c"># transpoes two characters  </span>
-Esc + t <span class="c"># transpoes two words  </span>
+Ctrl + y <span class="c"># yank last delete word</span>
+Ctrl + t <span class="c"># transpoes two characters</span>
+Esc + t <span class="c"># transpoes two words</span>
 
 Meta is your Alt key, normally.
 For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; Preferences &gt; Settings &gt; Keyboard, and <span class="nb">enable </span>Use option as meta key.
@@ -337,13 +336,13 @@ For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; 
 </code></pre>
 </div>
 
-<p>###<a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></p>
+<h3 id="howto-find-out-my-linux-distribution-name-and-versionhttpwwwcybercitibizfaqfind-linux-distribution-name-version-number"><a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat /etc/<span class="k">*</span>-release
 </code></pre>
 </div>
 
-<p>###<a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></p>
+<h3 id="timezone-setting-in-linuxhttpwwwthegeekstuffcom201009change-timezone-in-linux"><a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok date
 </code></pre>
@@ -378,7 +377,8 @@ For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; 
 </div>
 
 <h3 id="bash">Bash</h3>
-<p>### Shell/Bash Script</p>
+
+<h3 id="shellbash-script">Shell/Bash Script</h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
@@ -450,20 +450,20 @@ waitproc <span class="o">()</span> <span class="o">{</span>
 </div>
 
 <h4 id="bash-for-loop-array-iterate-through-array-valueshttpwwwcybercitibizfaqbash-for-loop-array"><a href="http://www.cyberciti.biz/faq/bash-for-loop-array/">Bash For Loop Array: Iterate Through Array Values</a></h4>
-<ol>
+<ul>
   <li><a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">Introduction to if</a></li>
-</ol>
+</ul>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 0 <span class="o">]</span>
 <span class="k">do
-	</span><span class="nb">echo</span> <span class="s2">"hello"</span>
+    </span><span class="nb">echo</span> <span class="s2">"hello"</span>
 <span class="k">done</span>
 </code></pre>
 </div>
 
-<ol>
+<ul>
   <li><a href="http://www.unixcl.com/2009/09/linux-seq-command-format-option-example.html">Linux seq command format option example</a></li>
-</ol>
+</ul>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
@@ -471,7 +471,7 @@ waitproc <span class="o">()</span> <span class="o">{</span>
 
 <span class="k">for </span>i <span class="k">in</span> <span class="s2">"</span><span class="k">${</span><span class="nv">array</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
 <span class="k">do
-	</span><span class="nb">echo</span> <span class="nv">$i</span>
+    </span><span class="nb">echo</span> <span class="nv">$i</span>
 <span class="k">done</span>
 </code></pre>
 </div>

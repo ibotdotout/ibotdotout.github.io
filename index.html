@@ -350,21 +350,19 @@ $ git add -u . // add file with skip iles that are not under version control
 
     
       <ul>
-  <li>
-    <p>First Way, load files to buffer and run command for each buffers</p>
-
-    <p>```
-  // search keyword on files and load files to buffers
-  :args <code class="highlighter-rouge">rg -l pattern path/</code></p>
-
-    <p>// list buffers
-  :buffers</p>
-
-    <p>// substitute word for each buffers and save
-  :argdo %s/pattern/newpattern/ge | update
-  ```</p>
-  </li>
+  <li>First Way, load files to buffer and run command for each buffers</li>
 </ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
+
+// list buffers
+:buffers
+
+// substitute word for each buffers and save
+:argdo %s/pattern/newpattern/ge | update
+</code></pre>
+</div>
 
 
       <div style="text-align:right;">

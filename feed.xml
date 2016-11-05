@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-05T06:04:18+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">React</title><link href="http://dev.im-bot.com//react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//react</id><content type="html" xml:base="http://dev.im-bot.com//react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-05T10:17:51+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">React</title><link href="http://dev.im-bot.com//react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//react</id><content type="html" xml:base="http://dev.im-bot.com//react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;Thinking in React&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -195,36 +195,32 @@ $ git add -u . // add file with skip iles that are not under version control
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
 $ git add -u . // add file with skip iles that are not under version control</summary></entry><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;First Way, load files to buffer and run command for each buffers&lt;/p&gt;
-
-    &lt;p&gt;```
-  // search keyword on files and load files to buffers
-  :args &lt;code class=&quot;highlighter-rouge&quot;&gt;rg -l pattern path/&lt;/code&gt;&lt;/p&gt;
-
-    &lt;p&gt;// list buffers
-  :buffers&lt;/p&gt;
-
-    &lt;p&gt;// substitute word for each buffers and save
-  :argdo %s/pattern/newpattern/ge | update
-  ```&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;First Way, load files to buffer and run command for each buffers&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
+
+// list buffers
+:buffers
+
+// substitute word for each buffers and save
+:argdo %s/pattern/newpattern/ge | update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;!-- more --&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
- Vim and run command for each line on Quickfix&lt;/p&gt;
-
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-  //  run the given command to each line of the quickfix list.
-  :Ack! pattern 
-  :cdo %s/pattern/newpattern/ge | w
- &lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
+ Vim and run command for each line on Quickfix&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//  run the given command to each line of the quickfix list.
+:Ack! pattern 
+:cdo %s/pattern/newpattern/ge | w
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;helper-tools--plugins&quot;&gt;Helper Tools &amp;amp; Plugins&lt;/h3&gt;
 
@@ -245,16 +241,15 @@ $ git add -u . // add file with skip iles that are not under version control</su
   &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/&quot;&gt;Vimcast - Using :argdo to change multiple files&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">First Way, load files to buffer and run command for each buffers
 
-    ```
-  // search keyword on files and load files to buffers
-  :args rg -l pattern path/
 
-    // list buffers
-  :buffers
+// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
 
-    // substitute word for each buffers and save
-  :argdo %s/pattern/newpattern/ge | update
-  ```</summary></entry><entry><title type="html">Git Submodule and Git Subtree</title><link href="http://dev.im-bot.com//git-submodule-subtree/" rel="alternate" type="text/html" title="Git Submodule and Git Subtree" /><published>2016-10-25T00:00:00+00:00</published><updated>2016-10-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-submodule-subtree</id><content type="html" xml:base="http://dev.im-bot.com//git-submodule-subtree/">&lt;h1 id=&quot;git-submodule&quot;&gt;git submodule&lt;/h1&gt;
+// list buffers
+:buffers
+
+// substitute word for each buffers and save
+:argdo %s/pattern/newpattern/ge | update</summary></entry><entry><title type="html">Git Submodule and Git Subtree</title><link href="http://dev.im-bot.com//git-submodule-subtree/" rel="alternate" type="text/html" title="Git Submodule and Git Subtree" /><published>2016-10-25T00:00:00+00:00</published><updated>2016-10-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-submodule-subtree</id><content type="html" xml:base="http://dev.im-bot.com//git-submodule-subtree/">&lt;h1 id=&quot;git-submodule&quot;&gt;git submodule&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://gist.github.com/gitaarik/8735255&quot;&gt;Git Submodules basic explanation&lt;/a&gt;&lt;/li&gt;

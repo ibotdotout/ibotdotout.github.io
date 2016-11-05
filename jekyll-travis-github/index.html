@@ -248,16 +248,16 @@ branch</code> on your Github repository settings that will use your
   <li>
     <p>Create <code class="highlighter-rouge">jekyll</code> branch for development</p>
 
-    <p><code class="highlighter-rouge">sh
- $ git branch jekyll
-</code></p>
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git branch jekyll
+</code></pre>
+    </div>
   </li>
   <li>
     <p>Clear your <code class="highlighter-rouge">main</code> or <code class="highlighter-rouge">gh-page</code> branch to blank</p>
 
-    <p><code class="highlighter-rouge">sh
- $ git rm *
-</code></p>
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git rm <span class="k">*</span>
+</code></pre>
+    </div>
   </li>
   <li>Enable Travis on your repository on Travis website and turn on <code class="highlighter-rouge">Build
 only if .travis.yml is present</code> on your travis repository settings.</li>
@@ -265,80 +265,80 @@ only if .travis.yml is present</code> on your travis repository settings.</li>
     <p>Checkout <code class="highlighter-rouge">jekyll</code> branch and create <code class="highlighter-rouge">.travis.yml</code> then edit <code class="highlighter-rouge">GH_REF</code>
 and <code class="highlighter-rouge">TARGET_BRANCH</code> to your own</p>
 
-    <p><code class="highlighter-rouge">sh
- $ git checkout jekyll
-</code></p>
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git checkout jekyll
+</code></pre>
+    </div>
 
     <p>.travis.yml</p>
 
-    <p>```xml
- sudo: false</p>
+    <div class="language-xml highlighter-rouge"><pre class="highlight"><code>sudo: false
 
-    <p>language: ruby</p>
+language: ruby
 
-    <p>rvm:
- - 2.2</p>
+rvm:
+- 2.2
 
-    <p>branches:
-   only:
-   - jekyll</p>
+branches:
+  only:
+  - jekyll
 
-    <p>script:
- - bundle exec jekyll build
- - bundle exec htmlproofer ./_site –disable-external</p>
+script:
+- bundle exec jekyll build
+- bundle exec htmlproofer ./_site --disable-external
 
-    <p>after_success:
- - git clone https://$GH_REF
- - cd $(basename ${GH_REF%.git})
- - git config user.name “Travis-CI”
- - git config user.email ${EMAIL}
- - rsync -az –delete –exclude ‘.git*’ ../_site/ .
- - touch .nojekyll
- - git add -A .
- - git commit -m “Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}”
- - git push -f “https://${DEPLOY_KEY}@${GH_REF}” ${TARGET_BRANCH} &gt; /dev/null 2&gt;&amp;1</p>
+after_success:
+- git clone https://$GH_REF
+- cd $(basename ${GH_REF%.git})
+- git config user.name "Travis-CI"
+- git config user.email ${EMAIL}
+- rsync -az --delete --exclude '.git*' ../_site/ .
+- touch .nojekyll
+- git add -A .
+- git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
+- git push -f "https://${DEPLOY_KEY}@${GH_REF}" ${TARGET_BRANCH} &gt; /dev/null 2&gt;<span class="err">&amp;</span>1
 
-    <p>env:
-   global:
-   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
-   - TARGET_BRANCH: master
- ```</p>
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
+  - TARGET_BRANCH: master
+</code></pre>
+    </div>
   </li>
   <li>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code class="highlighter-rouge">repo</code> that enough.</li>
   <li>
     <p>Install Travis Gem on your machine for encryption sensitive data</p>
 
-    <p><code class="highlighter-rouge">sh
- $ gem install travis
-</code></p>
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gem install travis
+</code></pre>
+    </div>
   </li>
   <li>
     <p>Encrypt your <code class="highlighter-rouge">EMAIL</code> and <code class="highlighter-rouge">DEPLOY_KEY</code></p>
 
-    <p><code class="highlighter-rouge">sh
- # --add opton will automated add sescure data to your .travis.yml
- # edit verifiedemail to your github email account
- $ travis encrypt EMAIL=verifiedemail --add
- # edit githubtoken to your github personal access tokens
- $ travis encrpy DEPLOY_KEY=githubtoken --add
-</code></p>
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># --add opton will automated add sescure data to your .travis.yml</span>
+<span class="c"># edit verifiedemail to your github email account</span>
+<span class="gp">$ </span>travis encrypt <span class="nv">EMAIL</span><span class="o">=</span>verifiedemail --add
+<span class="c"># edit githubtoken to your github personal access tokens</span>
+<span class="gp">$ </span>travis encrpy <span class="nv">DEPLOY_KEY</span><span class="o">=</span>githubtoken --add
+</code></pre>
+    </div>
   </li>
   <li>
     <p>Commit <code class="highlighter-rouge">jekyll</code> branch</p>
 
-    <p><code class="highlighter-rouge">sh
- $ git add -A
- $ git commit -m "Create Jekyll branch for build jekyll with Travis"
-</code></p>
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git add -A
+<span class="gp">$ </span>git commit -m <span class="s2">"Create Jekyll branch for build jekyll with Travis"</span>
+</code></pre>
+    </div>
   </li>
   <li>
     <p>Push to <code class="highlighter-rouge">jekyll</code> branch to Github repository and wait</p>
 
-    <p><code class="highlighter-rouge">sh
- $ git push origin jekyll
- # Don't care warnning about main/gh-page branch that local repository out of date
-</code></p>
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git push origin jekyll
+<span class="c"># Don't care warnning about main/gh-page branch that local repository out of date</span>
+</code></pre>
+    </div>
   </li>
   <li>Look your published site</li>
 </ol>

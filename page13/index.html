@@ -254,17 +254,22 @@
     
       <p>There are difference between ‘building it right’ and ‘building the right thing’. -Python Testing Cookbook by Greg L. Turnquist</p>
 
-<p>##Good Test Habits
-* A few test is better than nothing<br />
-* Coverage isn’t everything<br />
-  - make working software not a 100% coverage
-* Capturing a bug in an automated test<br />
-  1. Write Tests for the bug<br />
-  2. Add it to your test suite<br />
-  3. Fix the bug<br />
-  4. Veriry test suite passed</p>
-
+<h2 id="good-test-habits">Good Test Habits</h2>
 <ul>
+  <li>A few test is better than nothing</li>
+  <li>Coverage isn’t everything
+    <ul>
+      <li>make working software not a 100% coverage</li>
+    </ul>
+  </li>
+  <li>Capturing a bug in an automated test
+    <ol>
+      <li>Write Tests for the bug</li>
+      <li>Add it to your test suite</li>
+      <li>Fix the bug</li>
+      <li>Veriry test suite passed</li>
+    </ol>
+  </li>
   <li>Testing Concept
     <ol>
       <li>AAA - Arrange Act Assert</li>
@@ -309,7 +314,7 @@
   </li>
 </ul>
 
-<p>##<a href="http://nose.readthedocs.org/en/latest/plugins/multiprocess.html">Nose Multiprocess</a></p>
+<h2 id="nose-multiprocesshttpnosereadthedocsorgenlatestpluginsmultiprocesshtml"><a href="http://nose.readthedocs.org/en/latest/plugins/multiprocess.html">Nose Multiprocess</a></h2>
 
 <p>You should make unittest run faster with mocking better than using multi processes.<br />
 There are many problem with nose plugin ex. rednose, coverage, xunit.</p>
@@ -320,12 +325,15 @@ There are many problem with nose plugin ex. rednose, coverage, xunit.</p>
 </code></pre>
 </div>
 
-<p><a href="http://www.metaklass.org/nose-accelerating-the-runner/">Plugin Problem</a>:<br />
-1. Rednose - disable rednose by remove –rednose option and NOSE_REDNOSE in enviorment variable<br />
-2. coverage - fix by <a href="https://pypi.python.org/pypi/nose-cov">nose-cov</a><br />
-3. xunit - fix by <a href="https://pypi.python.org/pypi/nose_xunitmp/0.2">nose_xunitmp</a></p>
+<p><a href="http://www.metaklass.org/nose-accelerating-the-runner/">Plugin Problem</a>:</p>
 
-<p>##Test Coverage</p>
+<ol>
+  <li>Rednose - disable rednose by remove –rednose option and NOSE_REDNOSE in enviorment variable</li>
+  <li>coverage - fix by <a href="https://pypi.python.org/pypi/nose-cov">nose-cov</a></li>
+  <li>xunit - fix by <a href="https://pypi.python.org/pypi/nose_xunitmp/0.2">nose_xunitmp</a></li>
+</ol>
+
+<h2 id="test-coverage">Test Coverage</h2>
 
 <p>Stmts - statements<br />
 Miss - statements that not executed<br />
@@ -364,9 +372,12 @@ nosetests --with-coverage --cover-package<span class="o">=</span><span class="k"
 <h2 id="mock">Mock</h2>
 
 <ul>
-  <li>mocking pattern<br />
-1.record/replay pattern<br />
-2.action/assert pattern</li>
+  <li>
+    <p>mocking pattern</p>
+
+    <p>1.record/replay pattern<br />
+  2.action/assert pattern</p>
+  </li>
   <li>mock tests behavior
     <ul>
       <li>test the method was called or not called by assert_called_with(), etc.</li>
@@ -379,15 +390,15 @@ nosetests --with-coverage --cover-package<span class="o">=</span><span class="k"
   </li>
 </ul>
 
-<p>##Behavior Driven Development</p>
+<h2 id="behavior-driven-development">Behavior Driven Development</h2>
 
 <ul>
   <li>BDD - Given, When, and Then</li>
   <li>
     <p>BDD Stroy<br />
--Feature<br />
-– Scenario<br />
-— steps</p>
+  -Feature<br />
+  – Scenario<br />
+  — steps</p>
   </li>
   <li>TDD vs BDD
     <ul>
@@ -414,28 +425,31 @@ nosetests --with-coverage --cover-package<span class="o">=</span><span class="k"
 </ul>
 
 <h2 id="tools">Tools:</h2>
+
 <ul>
   <li>Unittests: <a href="https://nose.readthedocs.org">Nosetests</a>, <a href="https://pypi.python.org/pypi/rednose">Rednose</a>, <a href="https://pypi.python.org/pypi/coverage">Coverage</a>, <a href="https://pypi.python.org/pypi/nose-progressive/">nose-progressive</a></li>
 </ul>
 
-<p><code class="highlighter-rouge">sh
-  pip install nose rednose coverage
-  echo "export NOSE_REDNOSE=1" &gt;&gt; .zshrc #enable rednose
- </code>
-  * <a href="https://github.com/gorakhargosh/watchdog">Watchdog</a> - 
-  <a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install nose rednose coverage
+<span class="nb">echo</span> <span class="s2">"export NOSE_REDNOSE=1"</span> &gt;&gt; .zshrc <span class="c">#enable rednose</span>
+</code></pre>
+</div>
+<ul>
+  <li><a href="https://github.com/gorakhargosh/watchdog">Watchdog</a> - 
+<a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a></li>
+</ul>
 
-<p><code class="highlighter-rouge">sh
-  pip install watchdog
- </code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install watchdog
+</code></pre>
+</div>
 
 <ul>
   <li><a href="https://testrun.org/tox/latest/">Tox</a> - multiple environments testing</li>
 </ul>
 
-<p><code class="highlighter-rouge">sh
-  pip install tox
- </code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install tox
+</code></pre>
+</div>
 
 <h2 id="testing-python">Testing Python</h2>
 <ol>
@@ -481,10 +495,10 @@ nosetests --with-coverage --cover-package<span class="o">=</span><span class="k"
     
       <h3 id="helper">Helper</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>~ <span class="nv">$ </span>home user directory  
-<span class="gp">$ </span>~+ <span class="c"># same as pwd  </span>
-<span class="gp">$ </span>~- <span class="c"># previous directory  </span>
-<span class="gp">$ </span>ls -1 <span class="nv">$PWD</span>/<span class="k">*</span>.txt <span class="c"># list all .txt with full path  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>~ <span class="nv">$ </span>home user directory
+<span class="gp">$ </span>~+ <span class="c"># same as pwd</span>
+<span class="gp">$ </span>~- <span class="c"># previous directory</span>
+<span class="gp">$ </span>ls -1 <span class="nv">$PWD</span>/<span class="k">*</span>.txt <span class="c"># list all .txt with full path</span>
 <span class="gp">$ </span><span class="nb">cd</span> - <span class="c"># cd to previous path</span>
 <span class="gp">$ </span><span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim <span class="c"># set vim as default editor</span>
 <span class="gp">$ </span>groups <span class="c">#list group</span>
@@ -509,31 +523,30 @@ pbcopy &lt; &lt;file&gt; <span class="c"># OSX: copy file into clipboard</span>
 
 <h3 id="where-command">Where command</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">hash</span> <span class="c"># list command and its path  </span>
-<span class="gp">$ </span><span class="nb">type</span> -a &lt;cmd&gt; <span class="c"># tell all path of commamd  </span>
-<span class="gp">$ </span>which &lt;cmd&gt; <span class="c"># tell default path of command  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">hash</span> <span class="c"># list command and its path</span>
+<span class="gp">$ </span><span class="nb">type</span> -a &lt;cmd&gt; <span class="c"># tell all path of commamd</span>
+<span class="gp">$ </span>which &lt;cmd&gt; <span class="c"># tell default path of command</span>
 </code></pre>
 </div>
 
 <h3 id="redirectionhttpenwikipediaorgwikiredirectioncomputing"><a href="http://en.wikipedia.org/wiki/Redirection_computing">Redirection</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cmd &gt; &lt;file&gt; <span class="c"># print output to file (overwrite)  </span>
-<span class="gp">$ </span>cmd &gt;&gt; &lt;file&gt; <span class="c"># print output to file (append)  </span>
-<span class="gp">$ </span>cmd 2&gt; &lt;file&gt; <span class="c"># print error to file  </span>
-<span class="gp">$ </span>cmd &amp;&gt; &lt;file&gt; <span class="c"># print output &amp; error to file  </span>
-<span class="gp">$ </span>cmd &lt; &lt;file&gt; <span class="c"># use file as  input  </span>
-<span class="gp">$ </span>cmd &lt;&lt; &lt;file&gt; <span class="c"># use file as input  </span>
-<span class="gp">$ </span>cmd <span class="o">&lt;&lt;&lt;</span> &lt;any&gt;  <span class="c">#use anyas input (here string not compute any tag)  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cmd &gt; &lt;file&gt; <span class="c"># print output to file (overwrite)</span>
+<span class="gp">$ </span>cmd &gt;&gt; &lt;file&gt; <span class="c"># print output to file (append)</span>
+<span class="gp">$ </span>cmd 2&gt; &lt;file&gt; <span class="c"># print error to file</span>
+<span class="gp">$ </span>cmd &amp;&gt; &lt;file&gt; <span class="c"># print output &amp; error to file</span>
+<span class="gp">$ </span>cmd &lt; &lt;file&gt; <span class="c"># use file as  input</span>
+<span class="gp">$ </span>cmd &lt;&lt; &lt;file&gt; <span class="c"># use file as input</span>
+<span class="gp">$ </span>cmd <span class="o">&lt;&lt;&lt;</span> &lt;any&gt;  <span class="c">#use anyas input (here string not compute any tag)</span>
 <span class="c"># Redirection output wiht sudo</span>
 <span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"hello"</span> | sudo tee out &gt; /dev/null <span class="c"># eq. echo "hello" &gt; out</span>
 <span class="c"># echo "hello" | sudo tee -a out &gt; /dev/null # eq echo "hello" &gt; out</span>
 </code></pre>
 </div>
 
-<h3 id="jobshttpwwwthegeekstuffcom201005unix-background-job--"><a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">Jobs</a> -</h3>
-<p><a href="https://www.youtube.com/watch?v=r4xkCDRnGiw">fg bg Tutorial</a></p>
+<h3 id="jobshttpwwwthegeekstuffcom201005unix-background-job---fg-bg-tutorialhttpswwwyoutubecomwatchvr4xkcdrngiw"><a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">Jobs</a> - <a href="https://www.youtube.com/watch?v=r4xkCDRnGiw">fg bg Tutorial</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">jobs</span> <span class="c"># list suspended jobs  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">jobs</span> <span class="c"># list suspended jobs</span>
 <span class="gp">$ </span><span class="nb">fg</span> <span class="c"># put the top suspended job in the foreground</span>
 <span class="gp">$ </span><span class="nb">fg</span> %1 <span class="c"># put the suspended job id 1 in the foreground</span>
 Ctrl-z <span class="c"># Suspend a foreground job</span>
@@ -554,19 +567,19 @@ Ctrl-z <span class="c"># Suspend a foreground job</span>
 <h3 id="zsh-history-expansion">Zsh History expansion</h3>
 <p>should also work with bash.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>man zshexpn <span class="c"># manual for look in-depth  </span>
-<span class="gp">$ </span><span class="nb">history</span> <span class="c"># tell history command that keep in ~/.bash_history  </span>
-<span class="gp">$ </span><span class="nb">history</span> -c <span class="c"># clear history  </span>
-! <span class="c"># previous that can combine with command and argument  </span>
-<span class="gp">$ </span>!! <span class="c"># call previous command  </span>
-<span class="gp">$ </span>!&lt;str&gt; <span class="c"># call last command that start with str  </span>
-<span class="gp">$ </span>!?&lt;str&gt;[?] <span class="c"># call last command containing str  </span>
-<span class="gp">$ </span>!&lt;hist_number&gt; <span class="c"># call command in nth of history files  </span>
- ^ <span class="c"># first argument  </span>
- <span class="nv">$ </span><span class="c"># last argument  </span>
- :n <span class="c"># nth argument  </span>
- :m-n <span class="c"># mth to nth argument  </span>
- <span class="k">*</span> <span class="c"># all argument  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>man zshexpn <span class="c"># manual for look in-depth</span>
+<span class="gp">$ </span><span class="nb">history</span> <span class="c"># tell history command that keep in ~/.bash_history</span>
+<span class="gp">$ </span><span class="nb">history</span> -c <span class="c"># clear history</span>
+! <span class="c"># previous that can combine with command and argument</span>
+<span class="gp">$ </span>!! <span class="c"># call previous command</span>
+<span class="gp">$ </span>!&lt;str&gt; <span class="c"># call last command that start with str</span>
+<span class="gp">$ </span>!?&lt;str&gt;[?] <span class="c"># call last command containing str</span>
+<span class="gp">$ </span>!&lt;hist_number&gt; <span class="c"># call command in nth of history files</span>
+ ^ <span class="c"># first argument</span>
+ <span class="nv">$ </span><span class="c"># last argument</span>
+ :n <span class="c"># nth argument</span>
+ :m-n <span class="c"># mth to nth argument</span>
+ <span class="k">*</span> <span class="c"># all argument</span>
 <span class="gp">$ </span>&lt;space&gt;&lt;cmd&gt; <span class="c"># call command without keep history</span>
 </code></pre>
 </div>
@@ -574,22 +587,22 @@ Ctrl-z <span class="c"># Suspend a foreground job</span>
 <h3 id="zsh-basic-editing---bash-shortcutshttpwwwskorkscom200909bash-shortcuts-for-maximum-productivity">Zsh Basic Editing - <a href="http://www.skorks.com/2009/09/bash-shortcuts-for-maximum-productivity/">Bash Shortcuts</a></h3>
 <p>should also work with bash.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bindkey -v <span class="c"># vi mode  </span>
-<span class="gp">$ </span>bindkey -e <span class="c"># emac mode  </span>
-Ctrl + a <span class="c"># moves the cursor to begin of line  </span>
-Ctrl + e <span class="c"># moves the cursor to end of line  </span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>bindkey -v <span class="c"># vi mode</span>
+<span class="gp">$ </span>bindkey -e <span class="c"># emac mode</span>
+Ctrl + a <span class="c"># moves the cursor to begin of line</span>
+Ctrl + e <span class="c"># moves the cursor to end of line</span>
 Ctrl + u <span class="c"># delete current to begin of line</span>
-Ctrl + k <span class="c"># delete until end of line  </span>
+Ctrl + k <span class="c"># delete until end of line</span>
 Ctrl + l <span class="c"># clear</span>
-Ctrl + w <span class="c"># delete word backwords  </span>
-Ctrl + d <span class="c"># delete char (moves forward)  </span>
+Ctrl + w <span class="c"># delete word backwords</span>
+Ctrl + d <span class="c"># delete char (moves forward)</span>
 Ctrl + f <span class="c"># move char foreward</span>
 Ctrl + b <span class="c"># move char backward</span>
 Meta + f <span class="c"># move word foreward</span>
 Meata + b <span class="c"># move word backward</span>
-Ctrl + y <span class="c"># yank last delete word  </span>
-Ctrl + t <span class="c"># transpoes two characters  </span>
-Esc + t <span class="c"># transpoes two words  </span>
+Ctrl + y <span class="c"># yank last delete word</span>
+Ctrl + t <span class="c"># transpoes two characters</span>
+Esc + t <span class="c"># transpoes two words</span>
 
 Meta is your Alt key, normally.
 For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; Preferences &gt; Settings &gt; Keyboard, and <span class="nb">enable </span>Use option as meta key.
@@ -602,13 +615,13 @@ For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; 
 </code></pre>
 </div>
 
-<p>###<a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></p>
+<h3 id="howto-find-out-my-linux-distribution-name-and-versionhttpwwwcybercitibizfaqfind-linux-distribution-name-version-number"><a href="http://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/">HowTo: Find Out My Linux Distribution Name and Version</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat /etc/<span class="k">*</span>-release
 </code></pre>
 </div>
 
-<p>###<a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></p>
+<h3 id="timezone-setting-in-linuxhttpwwwthegeekstuffcom201009change-timezone-in-linux"><a href="http://www.thegeekstuff.com/2010/09/change-timezone-in-linux/">Timezone setting in Linux</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">export </span><span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok date
 </code></pre>
@@ -643,7 +656,8 @@ For Mac OSX user need to <span class="nb">enable </span>it,  Open Terminal &gt; 
 </div>
 
 <h3 id="bash">Bash</h3>
-<p>### Shell/Bash Script</p>
+
+<h3 id="shellbash-script">Shell/Bash Script</h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
@@ -715,20 +729,20 @@ waitproc <span class="o">()</span> <span class="o">{</span>
 </div>
 
 <h4 id="bash-for-loop-array-iterate-through-array-valueshttpwwwcybercitibizfaqbash-for-loop-array"><a href="http://www.cyberciti.biz/faq/bash-for-loop-array/">Bash For Loop Array: Iterate Through Array Values</a></h4>
-<ol>
+<ul>
   <li><a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">Introduction to if</a></li>
-</ol>
+</ul>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq 0 <span class="o">]</span>
 <span class="k">do
-	</span><span class="nb">echo</span> <span class="s2">"hello"</span>
+    </span><span class="nb">echo</span> <span class="s2">"hello"</span>
 <span class="k">done</span>
 </code></pre>
 </div>
 
-<ol>
+<ul>
   <li><a href="http://www.unixcl.com/2009/09/linux-seq-command-format-option-example.html">Linux seq command format option example</a></li>
-</ol>
+</ul>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
@@ -736,7 +750,7 @@ waitproc <span class="o">()</span> <span class="o">{</span>
 
 <span class="k">for </span>i <span class="k">in</span> <span class="s2">"</span><span class="k">${</span><span class="nv">array</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>
 <span class="k">do
-	</span><span class="nb">echo</span> <span class="nv">$i</span>
+    </span><span class="nb">echo</span> <span class="nv">$i</span>
 <span class="k">done</span>
 </code></pre>
 </div>
@@ -867,41 +881,52 @@ last -x|grep shutdown | head -1
 
     
       <h2 id="automatical-way">Automatical Way</h2>
-<p><code class="highlighter-rouge">
-  http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
- </code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
+</code></pre>
+</div>
 
 <h2 id="manual-way">Manual Way</h2>
 <ol>
-  <li>get UUID form this command</li>
+  <li>
+    <p>get UUID form this command</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>diskutil info /Volumes/&lt;drivename&gt; |  grep UUID
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>edit /etc/fstab</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>sudo vim /etc/fstab
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>add this with edit <code class="highlighter-rouge">&lt;uuid_drive&gt;</code></p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">UUID=&lt;uuid_drive&gt; </span>none ntfs rw,auto,nobrowse
+</code></pre>
+    </div>
+  </li>
+  <li>reject and plug it agian</li>
+  <li>
+    <p>open hdd with this command</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>open /Volumes
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>If want to remove writable NTFS drive</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>sudo rm /etc/fstab
+</code></pre>
+    </div>
+  </li>
 </ol>
 
-<p><code class="highlighter-rouge">sh
-  diskutil info /Volumes/&lt;drivename&gt; |  grep UUID
- </code>
-2. edit /etc/fstab</p>
-
-<p><code class="highlighter-rouge">sh
-  sudo vim /etc/fstab
- </code>
-3. add this with edit <code class="highlighter-rouge">&lt;uuid_drive&gt;</code></p>
-
-<p><code class="highlighter-rouge">sh
-  UUID=&lt;uuid_drive&gt; none ntfs rw,auto,nobrowse
- </code>
-4. reject and plug it agian<br />
-5. open hdd with this command</p>
-
-<p><code class="highlighter-rouge">sh
-  open /Volumes
- </code>
-6. If want to remove writable NTFS drive</p>
-
-<p><code class="highlighter-rouge">sh
-  sudo rm /etc/fstab
- </code></p>
-
-<h3 id="reference">Reference:</h3>
+<h3 id="references">References:</h3>
 <ol>
   <li><a href="http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/">http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/</a></li>
   <li><a href="http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/">http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/</a></li>

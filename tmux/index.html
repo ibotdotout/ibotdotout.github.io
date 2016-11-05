@@ -243,8 +243,6 @@ PREFIX z - toggle pane to be fullscreen<br />
 PREFIX {, } - swap panes<br />
 PREFIX ! - turn pane to window</p>
 
-<p>###</p>
-
 <h3 id="copy--paste-to-system-clipboard">Copy &amp; Paste to System Clipboard</h3>
 <p><a href="http://blog.joncairns.com/2013/06/copying-between-tmux-buffers-and-the-system-clipboard/">Copying between tmux buffers and the system clipboard</a><br />
 <a href="http://unix.stackexchange.com/questions/131011/use-system-clipboard-in-vi-copy-mode-in-tmux">Share buffer with system clipboard</a><br />
@@ -259,15 +257,18 @@ setw -g mode-keys vi
 </code></pre>
 </div>
 <ul>
-  <li>Copy to Buffer
+  <li>
+    <p>Copy to Buffer</p>
+
     <ol>
-      <li>PREFIX [ - scroll buffer use arrow key to move around and enter to quit</li>
+      <li><code class="highlighter-rouge">PREFIX [</code> - scroll buffer use arrow key to move around and enter to quit</li>
       <li>v - select word</li>
       <li>y - copy (yank) word</li>
     </ol>
   </li>
-  <li>Paste from buffer<br />
-  PREFIX ]</li>
+  <li>
+    <p>Paste from buffer  <code class="highlighter-rouge">PREFIX ]</code></p>
+  </li>
 </ul>
 
 <h3 id="create-custom-layouthttpswwwyoutubecomwatchvsxw-n5du600"><a href="https://www.youtube.com/watch?v=sxw-n5Du600">Create Custom Layout</a></h3>
@@ -304,7 +305,7 @@ brew install reattach-to-user-namespace
 
 <h3 id="how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmuxhttpsuperusercomquestions493048how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux"><a href="http://superuser.com/questions/493048/how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux">How to convert 2 horizontal panes to vertical panes in tmux?</a></h3>
 
-<p>Prefix + <kbd>space<kbd></kbd></kbd></p>
+<p><code class="highlighter-rouge">Prefix + space</code></p>
 
 <h2 id="reference">Reference:</h2>
 <ol>
