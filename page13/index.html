@@ -154,6 +154,10 @@
         
       
     
+      
+        
+      
+    
 
   <div class="sidebar-item">
     <p>
@@ -201,6 +205,71 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/mock/">
+        Mock
+      </a>
+    </h1>
+
+    <span class="post-date">
+      24 Jul 2014
+      
+        &middot;
+        <a href="/mock/#disqus_thread" data-disqus-identifier="/mock/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="mock---mocking-and-testing-libraryhttpwwwvoidspaceorgukpythonmock"><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></h2>
+<p>If you mock some thing, it can’t be runnable. Don’t forget it just mock object.  </p>
+
+<h3 id="mock-method-that-can-be-runnable">Mock Method that can be runnable</h3>
+
+<p><code>python
+# side_effect will make mock method can be runable  
+# this can be use to reutrn_value in different arguments
+&gt;&gt;&gt; mock_method = mock.Mock()  
+&gt;&gt;&gt; mock_method.side_effect = lambda x: x + 1  
+&gt;&gt;&gt; mock_method(1)
+2
+&gt;&gt;&gt; mock_method(2)
+3
+</code></p>
+
+<h3 id="patch-module-attribute">Patch Module Attribute</h3>
+
+<p>```python
+# Using PropertyMock with return_value argument  </p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>with mock.patch(‘package.module.attribute’,<br />
+                     new_callable=mock.PropertyMock(return_value=3))
+                     as mock_attribute:<br />
+      print(mock_attribte)<br />
+      print(package.module.attribute)<br />
+3<br />
+3<br />
+```</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h3 id="mymockmockcalls">my_mock.mock_calls</h3>
+
+<h3 id="reference">Reference:</h3>
+<ol>
+  <li><a href="http://www.voidspace.org.uk/python/mock/mock.html">The Mock Class</a></li>
+  <li><a href="http://melp.nl/2011/02/enhancing-python-unit-tests-with-more-decorators/">enhancing-python-unit-tests-with-more-decorators</a></li>
+  <li><a href="http://stackoverflow.com/questions/5929107/python-decorators-with-parameters">python-decorators-with-parameters</a></li>
+</ol>
+
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -950,36 +1019,6 @@ $ less +F log/production.log
   <li><a href="http://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html">10 examples of paste command usage in Linux</a></li>
   <li><a href="https://www.youtube.com/watch?v=R5fca6IUxHA">Bang! Previous Command Hotkeys - Linux CLI BASH ZSH</a></li>
 </ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/recover-lost-partition/">
-        Recover lost partition
-      </a>
-    </h1>
-
-    <span class="post-date">
-      22 Jun 2014
-      
-        &middot;
-        <a href="/recover-lost-partition/#disqus_thread" data-disqus-identifier="/recover-lost-partition/"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="recover-lost-partition">Recover lost partition</h2>
-<p>I used <a href="http://www.cgsecurity.org/wiki/TestDisk">TestDisk</a> to recover my lost NTFS partition that I formatted by accidentally. You can use TestDisk by follow <a href="http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step">TestDisk Step by Step</a>. After recovered I can see my NTFS partition that was formatted but can not access it.</p>
-
-<h2 id="repair-damaged-partition">Repair damaged partition</h2>
-<p>I got my lost partition back but can’t access it. So I use ‘chkdsk /r’ command on Windows to repair damaged partition. Finally after 12 hours, I can got lost partition back and accessible it normally.</p>
-
-<p><code>sh
-  chkdsk /r &lt;drive&gt;
- </code></p>
 
     
   </div>

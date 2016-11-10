@@ -154,6 +154,10 @@
         
       
     
+      
+        
+      
+    
 
   <div class="sidebar-item">
     <p>
@@ -201,6 +205,162 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/vimdiff/">
+        Vimdiff Custom
+      </a>
+    </h1>
+
+    <span class="post-date">
+      23 Jan 2015
+      
+        &middot;
+        <a href="/vimdiff/#disqus_thread" data-disqus-identifier="/vimdiff/"></a>
+        
+      
+    </span>
+
+    
+      <h3 id="you-need-to-convent-result-of-unix-diff-to-ed-style-to-use-in-vimdiff">You need to convent result of unix diff to ed style to use in vimdiff.</h3>
+
+<h3 id="example">Example::</h3>
+
+<p>a.txt</p>
+
+<p><code>sh
+aaaa
+bbbb
+cccc
+eeee
+eeee
+eeee
+</code></p>
+
+<p>b.txt</p>
+
+<p><code>sh
+aabb
+bbbb
+dddd
+cccc
+</code></p>
+
+<p>diff a.txt b.txt</p>
+
+<p><code>sh
+diff --git a/aaa b/bbb
+index fc3703c..11629db 100644
+--- a/aaa
++++ b/bbb
+@@ -1,6 +1,4 @@
+-aaaa
++aabb
+ bbbb
++dddd
+ cccc
+-eeee
+-eeee
+-eeee
+</code></p>
+
+<p>ed style of result diff a.txt b.txt</p>
+
+<p><code>sh
+1c1
+&lt; aaaa
+---
+&gt; aabb
+2a3
+&gt; dddd
+4,6d4
+&lt; eeee
+&lt; eeee
+&lt; eeee
+</code></p>
+
+<h1 id="code">Code</h1>
+
+<p>My line by line diff just only change no add or delete, result in ed style to use in vim diff.</p>
+
+<p>my_diff.py</p>
+
+<p>```python
+#!/usr/bin/env python</p>
+
+<p>def diff(file1, file2):</p>
+
+<pre><code>def get_buffer(a, b):
+    res = ""
+    for i in a:
+        res += i
+    res += '---\n'
+    for i in b:
+        res += i
+    return res
+
+def get_action(start, end):
+    res = ""
+    if start == end:
+        res += "{0}c{0}\n".format(start)
+    else:
+        res += "{0},{1}c{0},{1}\n".format(start, end)
+    return res
+
+buffer_a, buffer_b = [], []
+res = ""
+
+with open(file1, 'r') as a, open(file2, 'r') as b:
+
+    a = a.readlines()
+    b = b.readlines()
+
+    start, curr, end = 1, 1, 1
+    for x, y in zip(a, b):
+        if x == y:
+            if buffer_a:
+                res += get_action(start, end)
+                res += get_buffer(buffer_a, buffer_b)
+                buffer_a, buffer_b = [], []
+            start = curr + 1
+        else:
+            end = curr
+            buffer_a.append('&lt; ' + x)
+            buffer_b.append('&gt; ' + y)
+        curr += 1
+
+    res += get_action(start, end)
+    res += get_buffer(buffer_a, buffer_b)
+    buffer_a, buffer_b = [], []
+    print res,
+</code></pre>
+
+<p>if <strong>name</strong> == ‘<strong>main</strong>’:
+    import sys
+    diff(sys.argv[1], sys.argv[2])
+```</p>
+
+<h3 id="set-vimdiff-to-use-result-of-my-diff-code">Set vimdiff to use result of my diff code</h3>
+
+<p>.vimrc</p>
+
+<p><code>sh
+set diffexpr=MyDiff()
+function MyDiff()
+    silent execute "!python &lt;your_paht&gt;/my_diff.py " . v:fname_in . " " . v:fname_new . " &gt; " . v:fname_out
+endfunction
+</code></p>
+
+<p>Ref:
+1. <a href="http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html">use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram</a>
+2. <a href="https://github.com/neovim/neovim/issues/1466">Use patience diff algorithm for vimdiff #1466</a>
+3. <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options">Vim documentation: diff</a>
+4. <a href="http://blog.sanctum.geek.nz/actually-using-ed/">Actually using ed</a>
+5. <a href="http://blog.sanctum.geek.nz/using-more-of-ex/">Using more of ex</a></p>
+
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -1006,33 +1166,6 @@ $ sudo apt-get install exfat-fuse exfat-utils
   <li><a href="http://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/">25 Useful Basic Commands of APT-GET and APT-CACHE for Package Management</a></li>
   <li><a href="https://www.maketecheasier.com/8-ways-to-maintain-a-clean-lean-ubuntu-machine/">8 Ways to Maintain a Clean, Lean Ubuntu Machine</a></li>
 </ul>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/osx-backup/">
-        OSX Backup
-      </a>
-    </h1>
-
-    <span class="post-date">
-      08 Sep 2014
-      
-        &middot;
-        <a href="/osx-backup/#disqus_thread" data-disqus-identifier="/osx-backup/"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="time-machine-backups-on-external-hard-drive">Time Machine Backups on External Hard Drive</h2>
-<ol>
-  <li><a href="http://osxdaily.com/2013/05/01/use-single-hard-drive-time-machine-and-file-storage/">Use a Single External Hard Drive for Time Machine Backups and File Storage</a></li>
-  <li><a href="http://www.imore.com/how-set-and-restore-time-machine-backup">How to easily back up and restore your Mac with Time Machine on OS X Mavericks</a></li>
-  <li><a href="http://support.apple.com/kb/HT1427">Mac Basics: Time Machine backs up your Mac</a></li>
-</ol>
 
     
   </div>

@@ -8,20 +8,20 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="React" />
+  <meta property="og:title" content="Add existed Docker host to docker-machine" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/react//" />
+<meta property="og:url" content="http://dev.im-bot.com/existed-docker-host-tot-docker-machine//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="React  Thinking in ReactExample  Latest ReactJS Examples  React - Examples  a collection of simple demos of React.js  Made with React  TodoMVCReact Intro  Re..." />
+<meta property="og:description" content="Generic Driver - Create machines using an existing VM/Host with SSHsh$ docker-machine create --driver generic \    --generic-ip-address $host_ip \    --gener..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      React &middot; botbotbot
+      Add existed Docker host to docker-machine &middot; botbotbot
     
   </title>
 
@@ -205,144 +205,64 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">React</h1>
+  <h1 class="post-title">Add existed Docker host to docker-machine</h1>
   <span class="post-date">
-    04 Nov 2016
+    11 Nov 2016
       
         Tags:
         
-          <a href="/tags/#react">
-            react
-          </a>
-        
-          <a href="/tags/#js">
-            js
+          <a href="/tags/#docker">
+            docker
           </a>
         
       
       
         &middot;
-        <a href="/react//index.html#disqus_thread" data-disqus-identifier="/react/"></a>
+        <a href="/existed-docker-host-tot-docker-machine//index.html#disqus_thread" data-disqus-identifier="/existed-docker-host-tot-docker-machine/"></a>
       
       
         &middot;
-        Updated November 04, 2016
+        Updated November 11, 2016
       
   </span>
 
-  <h1 id="react">React</h1>
-<ul>
-  <li><a href="https://facebook.github.io/react/docs/thinking-in-react.html">Thinking in React</a></li>
-</ul>
+  <h2 id="generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh"><a href="https://docs.docker.com/machine/drivers/generic/">Generic Driver</a> - Create machines using an existing VM/Host with SSH</h2>
 
-<h3 id="example">Example</h3>
-<ul>
-  <li><a href="https://react.rocks/">Latest ReactJS Examples</a></li>
-  <li><a href="https://github.com/facebook/react/wiki/Examples">React - Examples</a></li>
-  <li><a href="https://github.com/ruanyf/react-demos">a collection of simple demos of React.js</a></li>
-  <li><a href="http://madewithreact.com/">Made with React</a></li>
-  <li><a href="http://todomvc.com/">TodoMVC</a></li>
-</ul>
-
-<h3 id="react-intro">React Intro</h3>
-<ul>
-  <li><a href="https://reactbkk.github.io/1.0.0/">ReactJS Bangkok 1.0.0</a></li>
-  <li><a href="https://scotch.io/tag/react">React - scotch.io</a></li>
-  <li><a href="https://scotch.io/tutorials/learning-react-getting-started-and-concepts">Learning React.js: Getting Started and Concepts</a></li>
-  <li><a href="https://scotch.io/tutorials/routing-react-apps-the-complete-guide">Routing React Apps: The Complete Guide</a></li>
-  <li><a href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0">Presentational and Container Components</a></li>
-</ul>
+<p><code>sh
+$ docker-machine create --driver generic \
+    --generic-ip-address $host_ip \
+    --generic-ssh-user $host_user \
+    $machine_name
+</code></p>
 
 <!-- more -->
 
-<h3 id="react-course">React Course</h3>
+<h2 id="how-to-mount-local-volumes-in-docker-machinehttpstackoverflowcomquestions30040708how-to-mount-local-volumes-in-docker-machine"><a href="http://stackoverflow.com/questions/30040708/how-to-mount-local-volumes-in-docker-machine">How to mount local volumes in docker machine</a></h2>
+
 <ul>
-  <li><a href="https://www.codeschool.com/courses/powering-up-with-react">Powering Up With React</a></li>
-  <li><a href="https://www.codecademy.com/courses/react-101">Learn ReactJS: Part I</a></li>
+  <li>
+    <p>you can’t mount local voumes to <code>remote server</code> but you can upload your files
+with <code>scp</code> or <code>rsync</code></p>
+  </li>
+  <li>
+    <p><code>docker-compose</code> will mount file with the same path in both <code>client</code> and <code>remote
+server</code>, you can check you path <code>$ pwd</code> .</p>
+  </li>
+  <li>
+    <p><a href="https://docs.docker.com/machine/reference/scp/">docker-machine scp</a></p>
+  </li>
 </ul>
 
-<h3 id="react-videos">React Videos</h3>
-<ul>
-  <li><a href="https://facebook.github.io/react/docs/videos.html">Fb - React Videos</a></li>
-</ul>
+<p>```sh
+# download
+$ docker-machine scp $machine:$src $dest</p>
 
-<h3 id="react-testing">React Testing</h3>
-<ul>
-  <li><a href="http://reactkungfu.com/2015/07/approaches-to-testing-react-components-an-overview/">Approaches to testing React components - an overview</a></li>
-  <li><a href="https://medium.com/javascript-inside/testing-in-react-getting-off-the-ground-5f569f3088a">Testing in React: Getting Off The Ground</a></li>
-  <li><a href="https://gist.github.com/busypeoples/d9b878f0ba74786651e4">Testing in React: Basic Examples + Setup</a></li>
-  <li><a href="http://airbnb.io/enzyme/">Enzyme is a JavaScript Testing utility for React</a></li>
-</ul>
+<h1 id="upload">upload</h1>
+<p>$ docker-machine scp $src $machine:$dest
+```</p>
 
-<h3 id="structure-a-react-project">Structure a React Project</h3>
 <ul>
-  <li><a href="https://reactjsnews.com/structuring-react-projects">How to Structure a React Project?</a></li>
-  <li><a href="http://survivejs.com/react/advanced-techniques/structuring-react-projects/">Structuring React Projects</a></li>
-  <li><a href="http://marmelab.com/blog/2015/12/17/react-directory-structure.html">A Better File Structure For React/Redux Applications</a></li>
-</ul>
-
-<h3 id="react-router">React Router</h3>
-<ul>
-  <li><a href="https://github.com/ReactTraining/react-router/blob/latest/docs/Introduction.md">React Router Introduction</a></li>
-  <li><a href="https://medium.com/@dabit3/beginner-s-guide-to-react-router-53094349669">Beginner’s Guide to React Router</a></li>
-  <li><a href="https://github.com/reactjs/react-router-tutorial/">React Router Tutorial</a></li>
-  <li><a href="https://css-tricks.com/learning-react-router/">Leveling Up With React: React Router</a></li>
-</ul>
-
-<h3 id="react-form">React Form</h3>
-<ul>
-  <li><a href="https://facebook.github.io/react/docs/forms.html">React Forms</a></li>
-  <li><a href="http://donavon.js.org/react-forms/">React Form Components</a></li>
-  <li><a href="https://www.lullabot.com/articles/processing-forms-in-react">Processing forms in React</a></li>
-  <li><a href="https://www.viget.com/articles/building-a-multi-step-registration-form-with-react">Building a Multi-Step Registration Form with React</a></li>
-  <li><a href="https://discuss.reactjs.org/t/how-to-pass-in-initial-value-to-form-fields/869/5">How to pass in initial value to form fields?</a></li>
-  <li><a href="http://jamesknelson.com/learn-raw-react-ridiculously-simple-forms/">Learn Raw React: Ridiculously Simple Forms</a></li>
-</ul>
-
-<h3 id="react-ajax">React AJAX</h3>
-<ul>
-  <li><a href="http://andrewhfarmer.com/react-ajax-best-practices/">React AJAX Best Practices</a></li>
-  <li><a href="https://github.com/github/fetch">window.fetch polyfill</a></li>
-  <li><a href="https://github.com/facebookincubator/create-react-app/pull/235">Add Promise and fetch polyfills</a></li>
-</ul>
-
-<h3 id="react-css">React CSS</h3>
-<ul>
-  <li><a href="https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e">Modular CSS with React</a></li>
-  <li><a href="https://speakerdeck.com/vjeux/react-css-in-js">React: CSS in JS</a></li>
-</ul>
-
-<h3 id="react-tools">React Tools</h3>
-<ul>
-  <li><a href="https://getstorybook.io/">React Storybook</a></li>
-  <li><a href="https://github.com/facebook/react-devtools">React Developer Tools</a></li>
-</ul>
-
-<h3 id="etc">ETC.</h3>
-<ul>
-  <li><a href="https://expressjs.com/en/starter/static-files.html">Serving static files in Express</a></li>
-  <li><a href="https://github.com/facebook/react/issues/424">Jade with React ?</a></li>
-  <li><a href="https://github.com/enaqx/awesome-react">Awesome React</a></li>
-</ul>
-
-<h1 id="create-apps-with-no-configuration">Create Apps with No Configuration</h1>
-<ul>
-  <li><a href="https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html">Create Apps with No Configuration</a></li>
-  <li><a href="https://github.com/facebookincubator/create-react-app">Create React App</a></li>
-  <li><a href="https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md">Create React App - README.md</a></li>
-</ul>
-
-<h3 id="create-apps-with-no-configuration-with-sass">Create Apps with No Configuration with SASS</h3>
-<ul>
-  <li><a href="https://github.com/mvarela92/create-react-app-sass">create-react-app-sass</a></li>
-  <li><a href="https://gist.github.com/soska/69238f69a747fe07424f29e7133afae3">How to use SASS with create-react-app</a></li>
-  <li><a href="https://medium.com/@Connorelsea/using-sass-with-create-react-app-7125d6913760">Adding Sass or Scss to Create-React-App</a></li>
-</ul>
-
-<h3 id="fp-with-react">Fp with React</h3>
-<ul>
-  <li><a href="https://medium.com/javascript-inside/why-the-hipsters-recompose-everything-23ac08748198">Why The Hipsters Recompose Everything</a></li>
-  <li><a href="https://github.com/acdlite/recompose">Recompose - A React utility belt for function components and higher-order components</a></li>
+  <li><a href="https://github.com/synack/docker-rsync">docker-rsync</a></li>
 </ul>
 
 </div>
@@ -353,18 +273,18 @@
     
       <li>
         <h3>
-          <a href="/existed-docker-host-tot-docker-machine/">
-            Add existed Docker host to docker-machine
-            <small>11 Nov 2016</small>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/redux/">
-            Redux
-            <small>10 Nov 2016</small>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
           </a>
         </h3>
       </li>
@@ -389,7 +309,7 @@
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/react/";
+      var disqus_identifier = "/existed-docker-host-tot-docker-machine/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

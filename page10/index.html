@@ -154,6 +154,10 @@
         
       
     
+      
+        
+      
+    
 
   <div class="sidebar-item">
     <p>
@@ -201,6 +205,158 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/ocp/">
+        Open/closed principle Example in Python
+      </a>
+    </h1>
+
+    <span class="post-date">
+      01 Jul 2015
+      
+        &middot;
+        <a href="/ocp/#disqus_thread" data-disqus-identifier="/ocp/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="fizzbuzz-problemhttpsenwikipediaorgwikifizzbuzz"><a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz Problem</a></h2>
+<ul>
+  <li>print any number divisible by three with the word “fizz” instead of
+the number.</li>
+  <li>print any number divisible by five with the word “buzz” instead of
+the number.</li>
+  <li>print any number divisible by seven with the word “bang” instead of
+the number.</li>
+</ul>
+
+<h3 id="fizzbuzz-nested-if">FizzBuzz Nested If</h3>
+
+<noscript><pre>x = 105
+
+if x%7 == 0 and x%3 == 0 and x%5 == 0:
+	print(&quot;FizzBuzzBang&quot;)
+elif x%7 == 0 and x%5 == 0:
+	print(&quot;BuzzBang&quot;)
+elif x%7 == 0 and x%3 == 0:
+	print(&quot;FizzBang&quot;)
+elif x%3 == 0 and x%5 == 0:
+	print(&quot;FizzBuzz&quot;)
+elif x%7 == 0:
+	print(&quot;Bang&quot;)
+elif x%5 == 0:
+	print(&quot;Buzz&quot;)
+elif x%3 == 0:
+	print(&quot;Fizz&quot;)
+else:
+	print(x)
+</pre></noscript>
+<script src="https://gist.github.com/ibotdotout/067c8310320d21e7d78a.js"> </script>
+
+<h3 id="fizzbuzz-ocp">FizzBuzz OCP</h3>
+
+<noscript><pre>#Kata with Up1 - Agile Thailand 2014 @ Eng CU
+#Sat 7 June 2014
+
+class FizzBuzzFactory():
+	def create(self):
+		rules = [FizzBuzzBangRule(), BuzzBangRule(), FizzBangRule(), FizzBuzzRule(),
+			 BangRule, BuzzRule(),FizzRule(),NormalRule()]
+		return FizzBuzz(rules)
+
+class FizzBuzz():
+	def __init__(cls,rules):
+		cls.rules = rules
+
+	def say(self,x):
+		for rule in self.rules:
+			if rule.is_handle(x):
+				return rule.say(x)
+
+class Rule():
+	def is_handle(self,x):
+		pass
+
+	def say(self,x):
+		pass
+
+class NormalRule(Rule):
+	def is_handle(self,x):
+		return True
+
+	def say(self,x):
+		return x
+
+class FizzRule(Rule):
+	def is_handle(self,x):
+		return x % 3 == 0
+
+	def say(self,x):
+		return &quot;Fizz&quot;
+
+class BuzzRule(Rule):
+	def is_handle(self,x):
+		return x % 5 == 0
+
+	def say(self,x):
+		return &quot;Buzz&quot;
+		
+class BangRule(Rule):
+	def is_handle(self,x):
+		return x % 7 == 0
+
+	def say(self,x):
+		return &quot;Bang&quot;
+
+class FizzBuzzRule(Rule):
+	def is_handle(self,x):
+		return x % 5 == 0 and x % 3 == 0
+
+	def say(self,x):
+		return &quot;FizzBuzz&quot;
+		
+class FizzBangRule(Rule):
+	def is_handle(self,x):
+		return x % 7 == 0 and x % 3 == 0
+	def say(self,x):
+		return &quot;FizzBang&quot;
+		
+class BuzzBangRule(Rule):
+	def is_handle(self,x):
+		return x % 7 == 0 and x % 5 == 0
+	def say(self,x):
+		return &quot;BuzzBang&quot;
+		
+class FizzBuzzBangRule(Rule):
+	def is_handle(self,x):
+		return x % 7 ==0 and x % 5 == 0 and x % 3 == 0
+ 
+	def say(self,x):
+		return &quot;FizzBuzzBang&quot;
+
+
+if __name__ == &#39;__main__&#39;:
+	l = [1,2,3,6,5,15,20]
+	fizz_buzz = FizzBuzzFactory().create()
+	for x in l:
+		print(fizz_buzz.say(x))
+</pre></noscript>
+<script src="https://gist.github.com/ibotdotout/824ca575b9480f03b3f7.js"> </script>
+
+<h3 id="references">References:</h3>
+<ol>
+  <li><a href="http://www.somkiat.cc/solid-principle-calendar/">แนะนำปฏิทิน SOLID
+Principle</a></li>
+  <li><a href="http://www.slideshare.net/DrTrucho/python-solid">Python SOLID</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Open/closed_principle">Open/closed principle</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Fizz_buzz">Fizz buzz</a></li>
+</ol>
+
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -898,162 +1054,6 @@ in LaTeX</a></li>
   <li><a href="https://lab.pentestit.ru">Pentestit</a></li>
   <li><a href="https://www.pentesterlab.com/exercises/">Pentesterlab exercises</a></li>
 </ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/vimdiff/">
-        Vimdiff Custom
-      </a>
-    </h1>
-
-    <span class="post-date">
-      23 Jan 2015
-      
-        &middot;
-        <a href="/vimdiff/#disqus_thread" data-disqus-identifier="/vimdiff/"></a>
-        
-      
-    </span>
-
-    
-      <h3 id="you-need-to-convent-result-of-unix-diff-to-ed-style-to-use-in-vimdiff">You need to convent result of unix diff to ed style to use in vimdiff.</h3>
-
-<h3 id="example">Example::</h3>
-
-<p>a.txt</p>
-
-<p><code>sh
-aaaa
-bbbb
-cccc
-eeee
-eeee
-eeee
-</code></p>
-
-<p>b.txt</p>
-
-<p><code>sh
-aabb
-bbbb
-dddd
-cccc
-</code></p>
-
-<p>diff a.txt b.txt</p>
-
-<p><code>sh
-diff --git a/aaa b/bbb
-index fc3703c..11629db 100644
---- a/aaa
-+++ b/bbb
-@@ -1,6 +1,4 @@
--aaaa
-+aabb
- bbbb
-+dddd
- cccc
--eeee
--eeee
--eeee
-</code></p>
-
-<p>ed style of result diff a.txt b.txt</p>
-
-<p><code>sh
-1c1
-&lt; aaaa
----
-&gt; aabb
-2a3
-&gt; dddd
-4,6d4
-&lt; eeee
-&lt; eeee
-&lt; eeee
-</code></p>
-
-<h1 id="code">Code</h1>
-
-<p>My line by line diff just only change no add or delete, result in ed style to use in vim diff.</p>
-
-<p>my_diff.py</p>
-
-<p>```python
-#!/usr/bin/env python</p>
-
-<p>def diff(file1, file2):</p>
-
-<pre><code>def get_buffer(a, b):
-    res = ""
-    for i in a:
-        res += i
-    res += '---\n'
-    for i in b:
-        res += i
-    return res
-
-def get_action(start, end):
-    res = ""
-    if start == end:
-        res += "{0}c{0}\n".format(start)
-    else:
-        res += "{0},{1}c{0},{1}\n".format(start, end)
-    return res
-
-buffer_a, buffer_b = [], []
-res = ""
-
-with open(file1, 'r') as a, open(file2, 'r') as b:
-
-    a = a.readlines()
-    b = b.readlines()
-
-    start, curr, end = 1, 1, 1
-    for x, y in zip(a, b):
-        if x == y:
-            if buffer_a:
-                res += get_action(start, end)
-                res += get_buffer(buffer_a, buffer_b)
-                buffer_a, buffer_b = [], []
-            start = curr + 1
-        else:
-            end = curr
-            buffer_a.append('&lt; ' + x)
-            buffer_b.append('&gt; ' + y)
-        curr += 1
-
-    res += get_action(start, end)
-    res += get_buffer(buffer_a, buffer_b)
-    buffer_a, buffer_b = [], []
-    print res,
-</code></pre>
-
-<p>if <strong>name</strong> == ‘<strong>main</strong>’:
-    import sys
-    diff(sys.argv[1], sys.argv[2])
-```</p>
-
-<h3 id="set-vimdiff-to-use-result-of-my-diff-code">Set vimdiff to use result of my diff code</h3>
-
-<p>.vimrc</p>
-
-<p><code>sh
-set diffexpr=MyDiff()
-function MyDiff()
-    silent execute "!python &lt;your_paht&gt;/my_diff.py " . v:fname_in . " " . v:fname_new . " &gt; " . v:fname_out
-endfunction
-</code></p>
-
-<p>Ref:
-1. <a href="http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html">use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram</a>
-2. <a href="https://github.com/neovim/neovim/issues/1466">Use patience diff algorithm for vimdiff #1466</a>
-3. <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options">Vim documentation: diff</a>
-4. <a href="http://blog.sanctum.geek.nz/actually-using-ed/">Actually using ed</a>
-5. <a href="http://blog.sanctum.geek.nz/using-more-of-ex/">Using more of ex</a></p>
 
     
   </div>

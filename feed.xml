@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-10T19:02:52+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Redux</title><link href="http://dev.im-bot.com//redux/" rel="alternate" type="text/html" title="Redux" /><published>2016-11-10T00:00:00+00:00</published><updated>2016-11-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//redux</id><content type="html" xml:base="http://dev.im-bot.com//redux/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-10T19:22:52+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;sh
+$ docker-machine create --driver generic \
+    --generic-ip-address $host_ip \
+    --generic-ssh-user $host_user \
+    $machine_name
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;how-to-mount-local-volumes-in-docker-machinehttpstackoverflowcomquestions30040708how-to-mount-local-volumes-in-docker-machine&quot;&gt;&lt;a href=&quot;http://stackoverflow.com/questions/30040708/how-to-mount-local-volumes-in-docker-machine&quot;&gt;How to mount local volumes in docker machine&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;you can’t mount local voumes to &lt;code&gt;remote server&lt;/code&gt; but you can upload your files
+with &lt;code&gt;scp&lt;/code&gt; or &lt;code&gt;rsync&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;docker-compose&lt;/code&gt; will mount file with the same path in both &lt;code&gt;client&lt;/code&gt; and &lt;code&gt;remote
+server&lt;/code&gt;, you can check you path &lt;code&gt;$ pwd&lt;/code&gt; .&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://docs.docker.com/machine/reference/scp/&quot;&gt;docker-machine scp&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;```sh
+# download
+$ docker-machine scp $machine:$src $dest&lt;/p&gt;
+
+&lt;h1 id=&quot;upload&quot;&gt;upload&lt;/h1&gt;
+&lt;p&gt;$ docker-machine scp $src $machine:$dest
+```&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/synack/docker-rsync&quot;&gt;docker-rsync&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="docker" /><summary type="html">Generic Driver - Create machines using an existing VM/Host with SSH
+
+sh
+$ docker-machine create --driver generic \
+    --generic-ip-address $host_ip \
+    --generic-ssh-user $host_user \
+    $machine_name</summary></entry><entry><title type="html">Redux</title><link href="http://dev.im-bot.com//redux/" rel="alternate" type="text/html" title="Redux" /><published>2016-11-10T00:00:00+00:00</published><updated>2016-11-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//redux</id><content type="html" xml:base="http://dev.im-bot.com//redux/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/introduction/ThreePrinciples.html&quot;&gt;Redux - Three Principles&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.fva82bt27&quot;&gt;A Cartoon intro to Redux&lt;/a&gt;&lt;/li&gt;
@@ -675,33 +718,4 @@ If you are augmenting existing API responses choose JSON-LD. If you are keeping 
 2. Error logging
 3. Validation
 4. Authentication and authorization
-5. Testing</summary></entry><entry><title type="html">12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-Factor-Apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&lt;blockquote&gt;
-  &lt;p&gt;The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - &lt;a href=&quot;http://12factor.net&quot;&gt;The twelve factor app&lt;/a&gt;  &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;official-site&quot;&gt;Official Site&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://12factor.net&quot;&gt;The twelve factor app&lt;/a&gt;   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;article&quot;&gt;Article&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.clearlytech.com/2014/01/04/12-factor-apps-plain-english/&quot;&gt;12-Factor Apps in Plain English&lt;/a&gt;  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jaketrent.com/post/12-factor-app-summary/&quot;&gt;“12-Factor App” Summary&lt;/a&gt;  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.doismellburning.co.uk/twelve-factor-config-misunderstandings-and-advice/&quot;&gt;Twelve-Factor Config: Misunderstandings and Advice&lt;/a&gt;  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.doismellburning.co.uk/talks/django12factor/&quot;&gt;Py - The Twelve-Factor App&lt;/a&gt;  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-1&quot;&gt;How to Build 12 Factor Microservices on Docker - Part 1&lt;/a&gt;  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-2&quot;&gt;How to Build 12 Factor Microservices on Docker - Part 2&lt;/a&gt;  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;talks&quot;&gt;Talks&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QOz1UOf6MdU&quot;&gt;CF &amp;amp; The 12-factor App 101: The Secret Decoder Ring for Operations&lt;/a&gt;  &lt;/li&gt;
-&lt;/ul&gt;</content><category term="article" /><category term="coding" /><summary type="html">The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - The twelve factor app  
-
-
-Official Site
-
-  The twelve factor app</summary></entry></feed>
+5. Testing</summary></entry></feed>
