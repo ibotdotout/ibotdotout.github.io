@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run --rm -v "$PWD:/src" -p 4000:4000 jekyll jekyll build
+docker run -e DISABLE_WHITELIST=true --rm -v "$PWD:/src" -p 4000:4000 jekyll jekyll build

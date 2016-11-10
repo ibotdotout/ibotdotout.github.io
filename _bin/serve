@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run --rm -v "$PWD:/src" -p 4000:4000 jekyll jekyll serve -H 0.0.0.0
+docker run -e DISABLE_WHITELIST=true --rm -v "$PWD:/src" -p 4000:4000 jekyll jekyll serve -H 0.0.0.0

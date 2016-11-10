@@ -27,6 +27,7 @@ after_success:
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - DISABLE_WHITELIST=true
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - TARGET_BRANCH: master
   - secure: MMVRfrturUGNxfYV40euU9JfAK0mFo/afZ0X3MU5jrjw8DHFcLLC5LnEEbMtqX73VgJOskl49+yYShMVHOrMGx/1tf9ZwsT2GpJBrmoIDpjedQD1wUq/nQxa8Y6hebCi1HXiqqc+JoMdbgHSg8jhTNsv1hcTig8tyj7+bl2fxMU=
