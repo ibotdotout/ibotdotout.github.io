@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Package Manager  Homebrew - The missing package manager for OS Xruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  Ho..." />
+<meta property="og:description" content="Package Manager  Homebrew - The missing package manager for OS Xshruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  ..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -225,35 +225,35 @@
   <li><a href="http://brew.sh">Homebrew - The missing package manager for OS X</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>ruby -e <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
-</code></pre>
-</div>
+<p><code>sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></p>
 
 <ul>
   <li><a href="http://caskroom.io">Homebrew Cask - “To install, drag this icon…” no more!</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap caskroom/cask
-</code></pre>
-</div>
+<p><code>sh
+$ brew tap caskroom/cask
+</code></p>
 
 <ul>
   <li><a href="https://github.com/caskroom/homebrew-fonts">Caskroom-fonts</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap caskroom/fonts
-</code></pre>
-</div>
+<p><code>sh
+$ brew tap caskroom/fonts
+</code></p>
 
 <ul>
   <li><a href="https://github.com/beeftornado/homebrew-rmtree">homebrew-rmtree</a> - <a href="http://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies">Uninstall / remove a Homebrew package including all its
 dependencies</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap beeftornado/rmtree <span class="o">&amp;&amp;</span> brew install brew-rmtree
-<span class="gp">$ </span>brew rmtree &lt;package&gt;
-</code></pre>
-</div>
+<p><code>sh
+$ brew tap beeftornado/rmtree &amp;&amp; brew install brew-rmtree
+$ brew rmtree &lt;package&gt;
+</code></p>
 
 <h3 id="developer-tools">Developer Tools</h3>
 
@@ -261,29 +261,27 @@ dependencies</a></li>
   <li><a href="http://iterm2.com">iTerm2 - Mac OS Terminal Replacement</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># this is too old version</span>
-<span class="gp">$ </span>brew cask install iterm2
+<p>```sh
+# this is too old version
+$ brew cask install iterm2</p>
 
-<span class="c"># try night build that lastest version</span>
-<span class="gp">$ </span>brew tap caskroom/versions
-<span class="gp">$ </span>brew cask install iterm2-nightly
-</code></pre>
-</div>
-<ul>
-  <li><a href="http://ohmyz.sh">Oh My Zsh - managing your zsh configuration.</a></li>
-</ul>
+<h1 id="try-night-build-that-lastest-version">try night build that lastest version</h1>
+<p>$ brew tap caskroom/versions
+$ brew cask install iterm2-nightly
+```
+- <a href="http://ohmyz.sh">Oh My Zsh - managing your zsh configuration.</a></p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-</code></pre>
-</div>
+<p><code>sh
+$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+</code></p>
 
 <ul>
   <li><a href="https://kapeli.com/dash">Dash - API Documentation Browser</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install dash
-</code></pre>
-</div>
+<p><code>sh
+$ brew cask install dash
+</code></p>
 
 <h3 id="window-manager">Window Manager</h3>
 
@@ -291,9 +289,9 @@ dependencies</a></li>
   <li><a href="http://spectacleapp.com">Spectacle - Move and resize windows with ease</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install spectacle
-</code></pre>
-</div>
+<p><code>sh
+$ brew cask install spectacle
+</code></p>
 
 <h3 id="etc">Etc</h3>
 
@@ -301,17 +299,17 @@ dependencies</a></li>
   <li><a href="https://justgetflux.com">f.lux - warm your display color</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install flux
-</code></pre>
-</div>
+<p><code>sh
+$ brew cask install flux
+</code></p>
 
 <ul>
   <li><a href="https://slack.com">Slack: Be less busy</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install slack
-</code></pre>
-</div>
+<p><code>sh
+$ brew cask install slack
+</code></p>
 
 <ul>
   <li><a href="http://www.iviewapp.net/2012/12/thai-dictionary-mac-os-x-mountain-lion.html">OSX Thai Dictionary</a></li>
@@ -328,6 +326,15 @@ dependencies</a></li>
     
       <li>
         <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/react/">
             React
             <small>04 Nov 2016</small>
@@ -340,15 +347,6 @@ dependencies</a></li>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>

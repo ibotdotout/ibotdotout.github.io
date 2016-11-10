@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Install Latex OSX (mactex)$ brew cask install mactexFigures  How to avoid showing the filename when using graphicx? - Ans: avoid filename with space      fig..." />
+<meta property="og:description" content="Install Latex OSX (mactex)sh$ brew cask install mactexFigures  How to avoid showing the filename when using graphicx? - Ans: avoid filename with space      f..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -221,9 +221,9 @@
 
   <h3 id="install-latex-osx-mactex">Install Latex OSX (mactex)</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install mactex
-</code></pre>
-</div>
+<p><code>sh
+$ brew cask install mactex
+</code></p>
 
 <h3 id="figures">Figures</h3>
 <ul>
@@ -231,13 +231,13 @@
   <li>
     <p><a href="http://tex.stackexchange.com/questions/34063/figure-span-to-one-column-on-double-column-page">figure span to one column on double column page</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
-<span class="nt">\begin{figure*}</span>
-  <span class="k">\centering</span> <span class="k">\includegraphics</span><span class="p">{</span>figure<span class="p">}</span>
-  <span class="k">\caption</span><span class="p">{</span>This is a figure caption<span class="p">}</span>
-<span class="nt">\end{figure*}</span>
-</code></pre>
-    </div>
+    <p><code>tex
+% In twocolumn mode, the figure* environment stretches over the entire page width
+\begin{figure*}
+  \centering \includegraphics{figure}
+  \caption{This is a figure caption}
+\end{figure*}
+</code></p>
   </li>
 </ul>
 
@@ -246,39 +246,39 @@
   <li><a href="http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">LaTeX/Labels and Cross-referencing</a></li>
 </ul>
 
-<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
-</code></pre>
-</div>
+<p><code>tex
+\caption{Close-up of a gull\label{fig:gull}}
+</code></p>
 
 <h3 id="landscapehttptexstackexchangecomquestions168309landscape-figure-on-different-page-to-heading"><a href="http://tex.stackexchange.com/questions/168309/landscape-figure-on-different-page-to-heading">Landscape</a></h3>
 
-<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
+<p>```tex
+\usepackage{pdflscape}</p>
 
-<span class="nt">\begin{document}</span>
-<span class="nt">\begin{landscape}</span>
+<p>\begin{document}
+\begin{landscape}
 .
 .
 .
-<span class="nt">\end{landscape}</span>
-<span class="nt">\end{document}</span>
-</code></pre>
-</div>
+\end{landscape}
+\end{document}
+```</p>
 
 <h3 id="math-equation">Math Equation</h3>
 
-<div class="language-tex highlighter-rouge"><pre class="highlight"><code># inline equation
-<span class="p">$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$</span> #equation
-<span class="p">$$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$$</span> #equation in new line
+<p>```tex
+# inline equation
+$ a + b $ #equation
+<script type="math/tex"> a + b </script> #equation in new line</p>
 
-# equation
-<span class="nt">\begin{eqaution}</span>
-<span class="nt">\end{eqaution}</span>
+<h1 id="equation">equation</h1>
+<p>\begin{eqaution}
+\end{eqaution}</p>
 
-# equation array
-<span class="nt">\begin{eqnarray}</span>
-<span class="nt">\end{eqnarray}</span>
-</code></pre>
-</div>
+<h1 id="equation-array">equation array</h1>
+<p>\begin{eqnarray}
+\end{eqnarray}
+```</p>
 
 <ul>
   <li><a href="http://www.clas.kitasato-u.ac.jp/~fujiwara/keyNote/equationToKeynote.html">Import equations into Keynote</a></li>
@@ -308,17 +308,17 @@
   <li>
     <p><a href="http://ctan.megagod.net/tex-archive/macros/latex/contrib/spreadtab/spreadtab_doc_en.pdf">Spreadtab User’s manual</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code># read more in document
-# 2.5 Copy a formula
+    <p>```tex
+# read more in document
+# 2.5 Copy a formula</p>
 
-<span class="k">\STcopy</span><span class="p">{</span>&gt;x,vy<span class="p">}{</span>formula<span class="p">}</span>
+    <p>\STcopy{&gt;x,vy}{formula}</p>
 
-# 3.2 Number formatting and the fp package
+    <h1 id="number-formatting-and-the-fp-package">3.2 Number formatting and the fp package</h1>
 
-# foating point numbers are rounded to 2 digits
-<span class="k">\STautoround</span><span class="p">{</span>2<span class="p">}</span>
-</code></pre>
-    </div>
+    <h1 id="foating-point-numbers-are-rounded-to-2-digits">foating point numbers are rounded to 2 digits</h1>
+    <p>\STautoround{2}
+```</p>
   </li>
 </ul>
 
@@ -347,42 +347,42 @@
   <li>
     <p><a href="http://tex.stackexchange.com/questions/185155/is-is-possible-to-not-abbreviate-the-author-name-of-only-one-reference-in-my-bib">Not abbreviate the author name</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
-</code></pre>
-    </div>
+    <p><code>tex
+  author = \{\{\relax World Health Organization\} and others\}
+</code></p>
   </li>
   <li>
     <p><a href="http://ubuntuforums.org/showthread.php?t=1275429">citation treated like one word?</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
-  # or using <span class="k">\hyphenation</span> to cut all the documents
-  <span class="k">\hyphenation</span><span class="p">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="p">}</span>
-</code></pre>
-    </div>
+    <p><code>tex
+  Jim\-inez Mart\-inez, Val\-dez Diaz
+  # or using \hyphenation to cut all the documents
+  \hyphenation{Jim-inez Mart-inez, Val-dez Diaz}
+</code></p>
   </li>
   <li>
     <p>Word Cut</p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  using <span class="k">\-</span> or &lt; space &gt;
-</code></pre>
-    </div>
+    <p><code>tex
+  using \- or &lt; space &gt;
+</code></p>
   </li>
   <li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
   <li>
     <p><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
-</code></pre>
-    </div>
+    <p><code>tex
+\input{table.tex}
+</code></p>
   </li>
   <li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
   <li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
   <li>
     <p>hidden character</p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
-</code></pre>
-    </div>
+    <p><code>tex
+\phantom{-} %hidden character
+</code></p>
   </li>
   <li><a href="http://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment">Custom alignment of text in itemized environment</a></li>
 </ul>
@@ -395,15 +395,15 @@
   <li>
     <p><a href="https://www.youtube.com/watch?v=5ifh3NF-k-k">LaTeX tutorial: How to cite references/paper/articles in Latex</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code># cite to bibtex references
-<span class="k">\usepackage</span><span class="p">{</span>cite<span class="p">}</span>
-<span class="k">\cite</span><span class="p">{</span>sample1234<span class="p">}</span>
-   
-# referecnes from bibtex
-<span class="k">\bibliographystyle</span><span class="p">{</span>IEEEtran<span class="p">}</span>
-<span class="k">\bibliography</span><span class="p">{</span>file<span class="p">_</span>of<span class="p">_</span>bibex<span class="p">}</span>
-</code></pre>
-    </div>
+    <p>```tex
+# cite to bibtex references
+\usepackage{cite}
+\cite{sample1234}</p>
+
+    <h1 id="referecnes-from-bibtex">referecnes from bibtex</h1>
+    <p>\bibliographystyle{IEEEtran}
+\bibliography{file_of_bibex}
+```</p>
   </li>
 </ol>
 
@@ -413,13 +413,13 @@
   <li>
     <p><a href="http://tex.stackexchange.com/questions/204291/bibtex-latex-compiling">Bibtex, Latex compiling</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># build latex + bibtex</span>
-<span class="gp">$ </span>pdflatex paper.tex
-<span class="gp">$ </span>bibtex paper <span class="c"># without extension</span>
-<span class="gp">$ </span>pdflatex paper.tex
-<span class="gp">$ </span>pdflatex paper.tex
-</code></pre>
-    </div>
+    <p><code>sh
+# build latex + bibtex
+$ pdflatex paper.tex
+$ bibtex paper # without extension
+$ pdflatex paper.tex
+$ pdflatex paper.tex
+</code></p>
   </li>
 </ul>
 
@@ -488,6 +488,15 @@ in LaTeX</a></li>
     
       <li>
         <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/react/">
             React
             <small>04 Nov 2016</small>
@@ -500,15 +509,6 @@ in LaTeX</a></li>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>

@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -204,6 +204,79 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/osx-write-ntfs/">
+        Enable NTFS write on OSX
+      </a>
+    </h1>
+
+    <span class="post-date">
+      17 Jun 2014
+      
+        &middot;
+        <a href="/osx-write-ntfs/#disqus_thread" data-disqus-identifier="/osx-write-ntfs/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="automatical-way">Automatical Way</h2>
+
+<p><code>
+http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
+</code></p>
+
+<h2 id="manual-way">Manual Way</h2>
+<ol>
+  <li>
+    <p>get UUID form this command  </p>
+
+    <p><code>sh
+diskutil info /Volumes/&lt;drivename&gt; |  grep UUID
+</code></p>
+  </li>
+  <li>
+    <p>edit /etc/fstab  </p>
+
+    <p><code>sh
+sudo vim /etc/fstab
+</code></p>
+  </li>
+  <li>
+    <p>add this with edit <code>&lt;uuid_drive&gt;</code></p>
+
+    <p><code>sh
+UUID=&lt;uuid_drive&gt; none ntfs rw,auto,nobrowse
+</code></p>
+  </li>
+  <li>reject and plug it agian  </li>
+  <li>
+    <p>open hdd with this command  </p>
+
+    <p><code>sh
+open /Volumes
+</code></p>
+  </li>
+  <li>
+    <p>If want to remove writable NTFS drive </p>
+
+    <p><code>sh
+sudo rm /etc/fstab
+</code></p>
+  </li>
+</ol>
+
+<h3 id="references">References:</h3>
+<ol>
+  <li><a href="http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/">http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/</a></li>
+  <li><a href="http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/">http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/</a></li>
+  <li><a href="http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/">วิธีทำให้ Mac อ่านและเขียนไฟล์ NTFS บน Windows ได้</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/how-to-setup-this-blog/">
         How to set up this blog
       </a>
@@ -229,10 +302,10 @@ Page</a> that free hosting support Jekyll.This blog use <a href="http://lanyon.g
 <h3 id="set-up-github-page">Set up github page:</h3>
 <ol>
   <li>Follow setup guilde of <a href="https://pages.github.com">Github page</a>
-  for more information about jekyll on github look at</li>
+  for more information about jekyll on github look at  </li>
 </ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>```
+<pre><code>```
 http://help.github.com/articles/using-jekyll-with-pages
 ```   2. Clone project from [Lanyon](http://lanyon.getpoole.com)  
 
@@ -240,13 +313,12 @@ http://help.github.com/articles/using-jekyll-with-pages
   git clone https://github.com/poole/lanyon.git
 ```  
 </code></pre>
-</div>
 
 <ol>
-  <li>Configs jekyll in  <code class="highlighter-rouge">_config.yml</code></li>
+  <li>Configs jekyll in  <code>_config.yml</code>   </li>
 </ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>```yaml
+<pre><code>```yaml
   #setup
   title:            botbotbot  
   tagline:          "'s blog"  
@@ -255,17 +327,15 @@ http://help.github.com/articles/using-jekyll-with-pages
   paginate:         5  
 ```
 </code></pre>
-</div>
 
 <ol>
   <li>Make tags.md in root directory copy code from</li>
 </ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>```
+<pre><code>```
 https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html
 ```
 </code></pre>
-</div>
 
 <ol>
   <li>Let blog it.</li>
@@ -311,18 +381,18 @@ https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html
     
       <h2 id="tutorial">Tutorial</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>vimtutor
-</code></pre>
-</div>
+<p><code>sh
+$ vimtutor
+</code></p>
 
 <h2 id="enter-to-vim">Enter to Vim</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>  vim . <span class="c"># open with file browse</span>
-  vim -c <span class="s2">"h quickref | only"</span>
-  vim -O &lt; file1 &gt; &lt; file2 &gt; ... <span class="c"># open in verticle</span>
-  vim -o &lt; file1 &gt; &lt; file2 &gt; ... <span class="c"># open in honzital</span>
-</code></pre>
-</div>
+<p><code>sh
+  vim . # open with file browse
+  vim -c "h quickref | only"
+  vim -O &lt; file1 &gt; &lt; file2 &gt; ... # open in verticle
+  vim -o &lt; file1 &gt; &lt; file2 &gt; ... # open in honzital
+</code></p>
 
 <h2 id="normal-mode">Normal Mode</h2>
 <p>### Save, Exit</p>
@@ -678,12 +748,12 @@ https://github.com/LanyonM/lanyonm.github.io/blob/master/tags.html
 
 <p>You split navigations with</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;
+<p><code>sh
+nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;
 nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;
 nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;
 nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
-</code></pre>
-</div>
+</code></p>
 
 <h3 id="tab">Tab</h3>
 
@@ -836,11 +906,11 @@ nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
 
 <h2 id="register">Register</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># update vim version</span>
-<span class="gp">$ </span>brew install vim
-<span class="gp">$ </span>brew install reattach-to-user-namespace
-</code></pre>
-</div>
+<p><code>sh
+# update vim version
+$ brew install vim
+$ brew install reattach-to-user-namespace
+</code></p>
 
 <table>
   <thead>
@@ -883,15 +953,15 @@ nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
 
 <h4 id="open-vim-without-plugin-no-settings-from-your-vimrc">Open vim without plugin no settings from your .vimrc</h4>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>vim -u NONE -N
-</code></pre>
-</div>
+<p><code>sh
+$ vim -u NONE -N
+</code></p>
 
 <h4 id="open-vim-without-plugin">Open vim without plugin</h4>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>vim --noplugin
-</code></pre>
-</div>
+<p><code>sh
+$ vim --noplugin
+</code></p>
 
 <ul>
   <li><a href="http://vimcasts.org/episodes/profiling-vimscript-performance/">Profiling Vimscript performance</a></li>
@@ -951,16 +1021,16 @@ nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
     
       <h3 id="list-binding-key">list binding key</h3>
 
-<p>PREFIX ? - list keys</p>
+<p>PREFIX ? - list keys  </p>
 
 <h3 id="leaving-and-coming-back-again">Leaving and Coming Back Again</h3>
 
-<p>PREFIX d - leave</p>
+<p>PREFIX d - leave  </p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Come Back</span>
-<span class="gp">$ </span>tmux a
-</code></pre>
-</div>
+<p><code>sh
+# Come Back
+$ tmux a
+</code></p>
 
 <h3 id="windows">windows</h3>
 <p>PREFIX c - create window<br />
@@ -968,7 +1038,7 @@ PREFIX , - rename window<br />
 PREFIX n - next window<br />
 PREFIX p - previous window<br />
 PREFIX {num} - go to {num} window<br />
-PREFIX &amp; - exit window</p>
+PREFIX &amp; - exit window  </p>
 
 <h3 id="panes">panes</h3>
 <p>PREFIX % - split pane in vertically<br />
@@ -979,7 +1049,7 @@ PREFIX q - show pane number and its size<br />
 PREFIX x - kill pane<br />
 PREFIX z - toggle pane to be fullscreen<br />
 PREFIX {, } - swap panes<br />
-PREFIX ! - turn pane to window</p>
+PREFIX ! - turn pane to window  </p>
 
 <h3 id="copy--paste-to-system-clipboard">Copy &amp; Paste to System Clipboard</h3>
 <p><a href="http://blog.joncairns.com/2013/06/copying-between-tmux-buffers-and-the-system-clipboard/">Copying between tmux buffers and the system clipboard</a><br />
@@ -987,63 +1057,59 @@ PREFIX ! - turn pane to window</p>
 <a href="http://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future">tmux Copy &amp; Paste on OS X: A Better Future</a><br />
 <a href="https://www.youtube.com/watch?v=OW-lKJDFOzc">Copy Mode - Linux TMUX Video Tutorial</a></p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .tmux.conf</span>
+<p><code>sh
+# .tmux.conf
 setw -g mode-keys vi
-<span class="nb">bind</span>-key -t vi-copy <span class="s1">'v'</span> begin-selection
-<span class="nb">bind</span>-key -t vi-copy <span class="s1">'y'</span> copy-selection
-<span class="nb">bind</span> -t vi-copy y copy-pipe <span class="s1">'xclip -in -selection clipboard'</span>
-</code></pre>
-</div>
-<ul>
-  <li>
-    <p>Copy to Buffer</p>
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
+bind -t vi-copy y copy-pipe 'xclip -in -selection clipboard'
+</code>
+- Copy to Buffer</p>
 
-    <ol>
-      <li><code class="highlighter-rouge">PREFIX [</code> - scroll buffer use arrow key to move around and enter to quit</li>
-      <li>v - select word</li>
-      <li>y - copy (yank) word</li>
-    </ol>
-  </li>
-  <li>
-    <p>Paste from buffer  <code class="highlighter-rouge">PREFIX ]</code></p>
-  </li>
+<pre><code>1. `PREFIX [` - scroll buffer use arrow key to move around and enter to quit  
+2. v - select word  
+3. y - copy (yank) word  
+</code></pre>
+
+<ul>
+  <li>Paste from buffer  <code>PREFIX ]</code></li>
 </ul>
 
 <h3 id="create-custom-layouthttpswwwyoutubecomwatchvsxw-n5du600"><a href="https://www.youtube.com/watch?v=sxw-n5Du600">Create Custom Layout</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#Window: python dev (Prefix - Meta(Alt) + d)</span>
-<span class="c"># -v = split horizontal</span>
-<span class="nb">bind</span>-key M-d split-window -v -p 30 -t 0 <span class="se">\;</span> <span class="se">\</span>
-         send-keys <span class="s1">'./watchdog_python.py'</span> <span class="s1">'Enter'</span> <span class="se">\;</span> <span class="se">\</span>
-         <span class="k">select</span>-pane -t 0
-</code></pre>
-</div>
+<p><code>sh
+#Window: python dev (Prefix - Meta(Alt) + d)
+# -v = split horizontal
+bind-key M-d split-window -v -p 30 -t 0 \; \
+         send-keys './watchdog_python.py' 'Enter' \; \
+         select-pane -t 0
+</code></p>
 
 <h3 id="tmuxinatorhttpsgithubcomtmuxinatortmuxinator"><a href="https://github.com/tmuxinator/tmuxinator">tmuxinator</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gem install tmuxinator
-<span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim
-</code></pre>
-</div>
+<p><code>sh
+$ gem install tmuxinator
+export EDITOR=vim
+</code></p>
 
 <h3 id="wemuxhttpsgithubcomzolrathwemux"><a href="https://github.com/zolrath/wemux">wemux</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># OSX via Homebrew</span>
-<span class="gp">$ </span>brew install wemux
-</code></pre>
-</div>
+<p><code>sh
+# OSX via Homebrew
+$ brew install wemux
+</code></p>
 
 <h3 id="unable-to-use-open-command-in-osx-tmuxhttpwwwelmundioosx20150710open-command-in-osx-tmux"><a href="http://www.elmund.io/osx/2015/07/10/open-command-in-osx-tmux/">Unable to use ‘open’ command in OSX tmux</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew update
+<p><code>sh
+brew update
 brew install reattach-to-user-namespace
-<span class="nb">echo</span> <span class="s2">"set -g default-command </span><span class="se">\"</span><span class="s2">reattach-to-user-namespace -l </span><span class="k">${</span><span class="nv">SHELL</span><span class="k">}</span><span class="se">\"</span><span class="s2">"</span> &gt;&gt; ~/.tmux.conf
-</code></pre>
-</div>
+echo "set -g default-command \"reattach-to-user-namespace -l ${SHELL}\"" &gt;&gt; ~/.tmux.conf
+</code></p>
 
 <h3 id="how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmuxhttpsuperusercomquestions493048how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux"><a href="http://superuser.com/questions/493048/how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux">How to convert 2 horizontal panes to vertical panes in tmux?</a></h3>
 
-<p><code class="highlighter-rouge">Prefix + space</code></p>
+<p><code>Prefix + space</code></p>
 
 <h2 id="reference">Reference:</h2>
 <ol>
@@ -1087,129 +1153,130 @@ brew install reattach-to-user-namespace
   <li>
     <p>Flattened list of list</p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> <span class="p">,[]</span> <span class="p">,[]</span> <span class="p">,[</span><span class="mi">9</span><span class="p">]]</span>
-<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">9</span><span class="p">]]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="p">[])</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">]</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-</code></pre>
-    </div>
+    <p><code>python
+&gt;&gt;&gt; l = [[1,5,6], [4,5,9,7] ,[] ,[] ,[9]]
+[[1, 5, 6], [4, 5, 9, 7], [], [], [9]]
+&gt;&gt;&gt; sum(l, [])
+[1, 5, 6, 4, 5, 9, 7, 9]
+&gt;&gt;&gt; [i for x in l for i in x if type(x) is list]
+[1, 5, 6, 4, 5, 9, 7, 9]
+</code></p>
   </li>
   <li>
     <p>Else with for loop</p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)):</span>
-<span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="n">i</span><span class="p">,</span>
-<span class="o">&gt;&gt;</span> <span class="k">else</span><span class="p">:</span>
-<span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="mi">10</span>
-<span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
-</code></pre>
-    </div>
+    <p><code>python
+&gt;&gt; for i, v in enumerate(range(10)):
+&gt;&gt;   print i,
+&gt;&gt; else:
+&gt;&gt;   print 10
+1 2 3 4 5 6 7 8 9 10
+</code></p>
   </li>
   <li>
     <p>Zen of Python :: run this command in python console</p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">this</span>
-</code></pre>
-    </div>
+    <p><code>python
+import this
+</code></p>
   </li>
   <li>
     <p>Virtualenv with system package</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> virtualenv --system-site-packages &lt;env_name&gt;
-</code></pre>
-    </div>
+    <p><code>sh
+ virtualenv --system-site-packages &lt;env_name&gt;
+</code></p>
   </li>
   <li>
     <p>Virtualenv with python3</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>virtualenv --python<span class="o">=</span><span class="k">$(</span>which python3<span class="k">)</span> &lt;env_name&gt;
-</code></pre>
-    </div>
+    <p><code>sh
+virtualenv --python=$(which python3) &lt;env_name&gt;
+</code></p>
   </li>
   <li>
     <p>Virtualenv can’t move. You must edit environment path in</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>&lt;your_env&gt;/bin/activate
-&lt;your_env&gt;/bin/activate.csh
-&lt;your_env&gt;/bin/activate.finsh
-</code></pre>
-    </div>
+    <p>```sh</p>
+    <your_env>/bin/activate
+<your_env>/bin/activate.csh
+<your_env>/bin/activate.finsh
+```
+</your_env></your_env></your_env>
   </li>
   <li>
     <p>Install py package into python2</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install &lt;package&gt;
-</code></pre>
-    </div>
+    <p><code>sh
+pip install &lt;package&gt;
+</code></p>
   </li>
   <li>
     <p>Install py package into python3</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip3 install &lt;package&gt;
-</code></pre>
-    </div>
+    <p><code>sh
+pip3 install &lt;package&gt;
+</code></p>
   </li>
   <li>
     <p>Pip upgrade</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install &lt;package&gt; --upgrade
-</code></pre>
-    </div>
+    <p><code>sh
+pip install &lt;package&gt; --upgrade
+</code></p>
 
     <p>or you can use <a href="https://github.com/nvie/pip-tools">pip-tool</a> to review all pip-package to upgrade</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install pip-tools
+    <p><code>sh
+pip install pip-tools
 pip-review
 pip-dump
-</code></pre>
-    </div>
+</code></p>
   </li>
   <li>
     <p>Install Project as develop via pip</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># same as 'python setup.py develope'</span>
+    <p><code>sh
+# same as 'python setup.py develope'
 pip install --use-mirrors --editable .
-</code></pre>
-    </div>
+</code></p>
   </li>
   <li>
     <p><a href="http://stackoverflow.com/questions/493386/how-to-print-in-python-without-newline-or-space">Print without newline or spaces</a></p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+    <p>```python
+import sys</p>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-</code></pre>
-    </div>
+    <p>for i in xrange(0,10):
+    sys.stdout.write(“.”)
+    sys.stdout.flush()
+```</p>
   </li>
   <li>
     <p><a href="http://stackoverflow.com/questions/1027714/how-to-execute-a-file-within-the-python-interpreter">How to execute a file within the python interpreter?</a></p>
   </li>
 </ul>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">execfile</span><span class="p">(</span><span class="s">'filename.py'</span><span class="p">)</span>
-</code></pre>
-</div>
+<p><code>python
+&gt;&gt;&gt; execfile('filename.py')
+</code></p>
 
 <ul>
   <li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported</a></li>
 </ul>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">X</span>
-<span class="nb">reload</span><span class="p">(</span> <span class="n">X</span> <span class="p">)</span>
-</code></pre>
-</div>
+<p><code>python
+import X
+reload( X )
+</code></p>
 
 <ul>
   <li><a href="http://stackoverflow.com/questions/7300321/how-to-use-pythons-pip-to-download-and-keep-the-zipped-files-for-a-package">How to use Python’s pip to download and keep the zipped files for a package?</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>pip install --download-cache<span class="o">=</span><span class="s2">"/pth/to/downloaded/files"</span> package
-</code></pre>
-</div>
+<p><code>sh
+$ pip install --download-cache="/pth/to/downloaded/files" package
+</code></p>
 
 <ul>
   <li><a href="http://bhfsteve.blogspot.se/2014/07/embedding-python-in-bash-scripts.html">Embedding python in bash scripts</a>
@@ -1218,31 +1285,31 @@ pip install --use-mirrors --editable .
       <li>
         <p><a href="https://gist.github.com/jiaaro/5452675">Embed Python in a bash script</a></p>
 
-        <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="k">function </span>line <span class="o">{</span>
-<span class="nv">PYTHON_ARG</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> python - <span class="sh">&lt;&lt;END
+        <p><code>sh
+function line {
+PYTHON_ARG="$1" python - &lt;&lt;END
 import os
 line_len = int(os.environ['PYTHON_ARG'])
 print '-' * line_len
 END
-</span><span class="o">}</span>
-</code></pre>
-        </div>
+}
+</code></p>
       </li>
       <li>
         <p><a href="http://stackoverflow.com/questions/2119702/calling-a-python-function-from-bash-script">Calling a python function from bash script</a></p>
 
-        <div class="language-sh highlighter-rouge"><pre class="highlight"><code>python -c<span class="s1">'import themodule; themodule.thefunction("boo!")'</span>
-</code></pre>
-        </div>
+        <p><code>sh
+python -c'import themodule; themodule.thefunction("boo!")'
+</code></p>
       </li>
     </ul>
   </li>
   <li>
     <p><a href="http://stackoverflow.com/questions/5574702/how-to-print-to-stderr-in-python">How to print to stderr in Python?</a></p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s">'word'</span>
-</code></pre>
-    </div>
+    <p><code>python
+print &gt;&gt; sys.stderr, 'word'
+</code></p>
   </li>
 </ul>
 
@@ -1252,61 +1319,61 @@ END
     <p><a href="http://virtualenv.readthedocs.org">Virtualenv</a>
 <a href="http://code.tutsplus.com/articles/python-power-tools-virtualenv--net-31560">Python Power Tools: virtualenv</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install virtualenv
-</code></pre>
-    </div>
+    <p><code>sh
+pip install virtualenv
+</code></p>
 
     <p>Or</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew install pyenv-virtualenv
-</code></pre>
-    </div>
+    <p><code>sh
+brew install pyenv-virtualenv
+</code></p>
   </li>
   <li>
     <p><a href="http://virtualenvwrapper.readthedocs.org">VirtualenvWrapper</a> -  <a href="http://code.tutsplus.com/articles/python-power-tools-virtualenvwrapper--net-31569">Python Power Tools: virtualenvwrapper</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install virtualenvwrapper
-</code></pre>
-    </div>
-    <p>add this into your .bashrc/.zshrc</p>
+    <p><code>sh
+pip install virtualenvwrapper
+</code>
+add this into your .bashrc/.zshrc</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span>&lt;env_path&gt;
-<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
-</code></pre>
-    </div>
+    <p><code>sh
+export WORKON_HOME=&lt;env_path&gt;
+source /usr/local/bin/virtualenvwrapper.sh
+</code></p>
   </li>
   <li>
     <p><a href="https://github.com/kennethreitz/autoenv">AutoEnv</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew install autoenv
-<span class="nb">echo</span> <span class="s1">'source /usr/local/opt/autoenv/activate.sh'</span> &gt;&gt; ~/.zshrc
-</code></pre>
-    </div>
+    <p><code>sh
+brew install autoenv
+echo 'source /usr/local/opt/autoenv/activate.sh' &gt;&gt; ~/.zshrc
+</code></p>
   </li>
   <li>
     <p><a href="https://github.com/hhatto/autopep8">AutoPEP8</a></p>
   </li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># install</span>
-<span class="gp">$ </span>pip install --upgrade autopep8
-<span class="c"># usage</span>
-<span class="gp">$ </span>autopep8 --in-place --aggressive --aggressive &lt;filename&gt;
-</code></pre>
-</div>
+<p><code>sh
+# install
+$ pip install --upgrade autopep8
+# usage
+$ autopep8 --in-place --aggressive --aggressive &lt;filename&gt;
+</code></p>
 
 <ul>
   <li><a href="https://www.logilab.org/blogentry/6883">Pyreverse : UML Diagrams for Python</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># install</span>
-<span class="gp">$ </span>pip install pylint
-<span class="gp">$ </span>apt-get install graphviz
+<p>```sh
+# install
+$ pip install pylint
+$ apt-get install graphviz</p>
 
-<span class="c"># usage</span>
-pyreverse -o png &lt;code&gt;
-</code></pre>
-</div>
+<h1 id="usage">usage</h1>
+<p>pyreverse -o png <code>
+```</code></p>
 
 <ul>
   <li><a href="http://aboumrad.info/essential-python-tools-quality.html">Essential python tools - Quality</a></li>

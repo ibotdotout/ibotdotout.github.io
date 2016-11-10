@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -286,7 +286,7 @@ Second biggest impact is from lack of indexes or wrong indexes or way too many i
 </blockquote>
 
 <blockquote>
-  <p>Sharding too early may be a premature optimization. Not every MongoDB deployment requires sharding.</p>
+  <p>Sharding too early may be a premature optimization. Not every MongoDB deployment requires sharding. </p>
 </blockquote>
 
 <blockquote>
@@ -316,7 +316,7 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 </ul>
 
 <blockquote>
-  <p>You should carefully amalyze all options before selecting the shard key since it can significantly affect your system performance and it cannot be changed after data is inserted in MongoDB.</p>
+  <p>You should carefully amalyze all options before selecting the shard key since it can significantly affect your system performance and it cannot be changed after data is inserted in MongoDB. </p>
 </blockquote>
 
 <blockquote>
@@ -439,7 +439,7 @@ Choosing a shard key is hard, but there are really only two options. If you can�
 <h3 id="the-three-most-important-considerations-in-selecting-a-mongodb-shard-keyhttpswwwmorpheusdatacomblog2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key"><a href="https://www.morpheusdata.com/blog/2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key">The Three Most Important Considerations in Selecting a MongoDB Shard Key</a></h3>
 
 <blockquote>
-  <p>The efficient operation of your MongoDB database depends on which field in the documents you designate as the shard key. Since you have to select the shard key up front and can’t change it later, you need to give the choice due consideration.</p>
+  <p>The efficient operation of your MongoDB database depends on which field in the documents you designate as the shard key. Since you have to select the shard key up front and can’t change it later, you need to give the choice due consideration. </p>
 </blockquote>
 
 <blockquote>
@@ -512,10 +512,10 @@ guarantee sufficient query isolation  or appropriate write scaling .</p>
 
 <h3 id="enable-mongo-cmd-in-replicate">Enable Mongo Cmd in Replicate</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># mongo shell
+<p><code>
+# mongo shell
 $ rs.slaveOk()
-</code></pre>
-</div>
+</code></p>
 
 <h3 id="index">Index</h3>
 
@@ -523,38 +523,38 @@ $ rs.slaveOk()
   <li><a href="http://www.slideshare.net/mongodb/indexing-with-mongodb">Indexing with MongoDB</a></li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># mongo
+<p><code>
+# mongo
 $ db.user.ensureIndex( { _id : "hashed" } )
 $ sh.shardCollection("facebook.user", { "_id": "hashed" } )
 $ db.user.getShardDistribution()
-</code></pre>
-</div>
+</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>### Set Sharding chunk size
+<p>```
+### Set Sharding chunk size
 use config
-db.settings.save( { _id:"chunksize", value: 8 } )
+db.settings.save( { _id:”chunksize”, value: 8 } )</p>
 
-### Set Shard Key &amp; Index Key
+<h3 id="set-shard-key--index-key">Set Shard Key &amp; Index Key</h3>
 
-mongo --host mongo_router_1:27017 &lt;&lt;EOF
+<p>mongo –host mongo_router_1:27017 «EOF
 use prod;
-sh.enableSharding("prod");
+sh.enableSharding(“prod”);
 db.user.ensureIndex( { slug : 1 } );
-sh.shardCollection("prod.user", { "_id": 1 } );
-EOF
+sh.shardCollection(“prod.user”, { “_id”: 1 } );
+EOF</p>
 
-##  check nscanned
-db.user.find({slug: '8PwobE4O'}).explain("executionStats")
+<h2 id="check-nscanned">check nscanned</h2>
+<p>db.user.find({slug: ‘8PwobE4O’}).explain(“executionStats”)</p>
 
-## Ensure Index 
+<h2 id="ensure-index">Ensure Index</h2>
 
-db.user.getIndexes()
-db.user.dropIndexes()
+<p>db.user.getIndexes()
+db.user.dropIndexes()</p>
 
-db.user.ensureIndex( { slug : 1 }, { unique: true, backgroud: true })
-db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
-</code></pre>
-</div>
+<p>db.user.ensureIndex( { slug : 1 }, { unique: true, backgroud: true })
+db.user.ensureIndex( { slug : “hashed”  }, { backgroud: true } )
+```</p>
 
 <h3 id="query-performance">Query Performance</h3>
 <ul>
@@ -571,6 +571,15 @@ db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
     
       <li>
         <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/react/">
             React
             <small>04 Nov 2016</small>
@@ -583,15 +592,6 @@ db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>

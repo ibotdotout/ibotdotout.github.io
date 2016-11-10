@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -236,54 +236,54 @@
   <li>
     <p>add your configuration url in “Environment Variable”</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Example</span>
-<span class="nv">CONFIG_URL</span><span class="o">=</span><span class="s2">"&lt;your_configuration_url&gt;"</span>
-</code></pre>
-    </div>
+    <p><code>sh
+# Example
+CONFIG_URL="&lt;your_configuration_url&gt;"
+</code></p>
   </li>
   <li>
     <p>in “Commands” download your configurations via wget without display result</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
-wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/null
-</code></pre>
-    </div>
+    <p><code>sh
+#!/bin/sh
+wget $CONFIG_URL -O &lt;config_name&gt; &amp;&gt; /dev/null
+</code></p>
   </li>
 </ol>
 
 <h3 id="keep-variables-in-environment">Keep Variables in Environment</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Example</span>
-<span class="c">#!/bin/sh</span>
-<span class="nb">export </span><span class="nv">CLIENT_ID</span><span class="o">=</span>&lt;your id&gt;
-<span class="nb">export </span><span class="nv">TAGS</span><span class="o">=</span>&lt;your tags&gt;
-</code></pre>
-</div>
+<p><code>sh
+# Example
+#!/bin/sh
+export CLIENT_ID=&lt;your id&gt;
+export TAGS=&lt;your tags&gt;
+</code></p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="n">tags</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'TAGS'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-</div>
+<p><code>python
+#!/usr/bin/env python
+import os
+client_id = os.environ.get('CLIENT_ID',&lt;default value&gt;)
+tags = os.environ.get('TAGS',&lt;default value&gt;)
+</code></p>
 
 <h3 id="dynamic-solution">Dynamic Solution</h3>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<p>```python
+#!/usr/bin/env python
+import os</p>
 
-<span class="c"># Configuration from Environment Variables if can't load config.ini</span>
-<span class="c"># you can make you own configuration from config.ini.sample</span>
+<h1 id="configuration-from-environment-variables-if-cant-load-configini">Configuration from Environment Variables if can’t load config.ini</h1>
+<p># you can make you own configuration from config.ini.sample</p>
 
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">"config.ini"</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">configparser</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
-    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">'config.ini'</span><span class="p">)</span>
-    <span class="n">client_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'DEFAULT'</span><span class="p">,</span> <span class="s">'client_id'</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-</div>
+<p>if os.path.isfile(“config.ini”):
+    import configparser
+    config = configparser.ConfigParser()
+    config.read(‘config.ini’)
+    client_id = config.get(‘DEFAULT’, ‘client_id’)
+else:
+    client_id = os.environ.get(‘CLIENT_ID’, <default value="">)
+```</default></p>
 
 <h2 id="references">References:</h2>
 <ol>
@@ -301,6 +301,15 @@ wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/n
     
       <li>
         <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/react/">
             React
             <small>04 Nov 2016</small>
@@ -313,15 +322,6 @@ wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/n
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>

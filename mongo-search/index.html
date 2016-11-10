@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -235,9 +235,9 @@
 
 <h1 id="regex">Regex</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
-</code></pre>
-</div>
+<p><code>
+db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
+</code></p>
 
 <ul>
   <li>
@@ -261,11 +261,11 @@
 
 <h1 id="fulltext-search">Fulltext search</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>db.books.ensureIndex({title:"text"})
+<p><code>
+db.books.ensureIndex({title:"text"})
 db.books.reIndex()
 db.bokks.find({$text:{$search:"time"}})
-</code></pre>
-</div>
+</code></p>
 
 <ul>
   <li>
@@ -293,6 +293,15 @@ db.bokks.find({$text:{$search:"time"}})
     
       <li>
         <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/react/">
             React
             <small>04 Nov 2016</small>
@@ -305,15 +314,6 @@ db.bokks.find({$text:{$search:"time"}})
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>

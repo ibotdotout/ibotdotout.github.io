@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Docker Support Only 64-bit System  docker-engine not docker.io anymoredocker.io is old nameDocker try it! - Interactive TutorialInstallInstall on Debian# Deb..." />
+<meta property="og:description" content="Docker Support Only 64-bit System  docker-engine not docker.io anymoredocker.io is old nameDocker try it! - Interactive TutorialInstallInstall on Debiansh# D..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -235,100 +235,98 @@ docker.io is old name</p>
 
 <h4 id="install-on-debianhttpsdocsdockercomengineinstallationdebiandebian-wheezy-stable-7-x-64-bit"><a href="https://docs.docker.com/engine/installation/debian/#debian-wheezy-stable-7-x-64-bit">Install on Debian</a></h4>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Debian Jessie 8.0 (64-bit) or unstable packages</span>
-<span class="gp">$ </span>sudo apt-get update
-<span class="gp">$ </span>sudo apt-get install docker-engine
-</code></pre>
-</div>
-<ul>
-  <li><a href="http://linuxconfig.org/package-docker-io-has-no-installation-candidate-debian-jessie">Package ‘docker.io’ has no installation candidate - Debian
-Jessie</a></li>
-</ul>
+<p><code>sh
+# Debian Jessie 8.0 (64-bit) or unstable packages
+$ sudo apt-get update
+$ sudo apt-get install docker-engine
+</code>
+- <a href="http://linuxconfig.org/package-docker-io-has-no-installation-candidate-debian-jessie">Package ‘docker.io’ has no installation candidate - Debian
+Jessie</a></p>
 
 <h4 id="install-on-osxhttpdocsdockercominstallationmac---homebrew-caskhttpcaskroomio"><a href="http://docs.docker.com/installation/mac/">Install on OSX</a> - <a href="http://caskroom.io">Homebrew-Cask</a></h4>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># if virtualbox not installed, install via homebrew cask</span>
-http://docs.docker.com/installation/mac/#from-your-shell
+<p>```sh
+# if virtualbox not installed, install via homebrew cask
+http://docs.docker.com/installation/mac/#from-your-shell</p>
 
-<span class="gp">$ </span>brew install caskroom/cask/brew-cask
-<span class="gp">$ </span>brew cask install dockertoolbox
+<p>$ brew install caskroom/cask/brew-cask
+$ brew cask install dockertoolbox</p>
 
-<span class="c"># start docker engine</span>
-<span class="gp">$ </span>docker-machine create
-<span class="gp">$ </span><span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>docker-machine env default<span class="k">)</span><span class="s2">"</span>
-</code></pre>
-</div>
+<h1 id="start-docker-engine">start docker engine</h1>
+<p>$ docker-machine create
+$ eval “$(docker-machine env default)”
+```</p>
 
 <h3 id="run-docker-without-sudohttpsdocsdockercominstallationdebiangiving-non-root-access"><a href="https://docs.docker.com/installation/debian/#giving-non-root-access">Run Docker without sudo</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#debian</span>
-<span class="gp">$ </span>sudo groupadd docker
-<span class="gp">$ </span>sudo gpasswd -a <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker <span class="c"># or sudo adduser ${USER} docker</span>
-<span class="gp">$ </span>sudo service docker restart
-</code></pre>
-</div>
+<p><code>sh
+#debian
+$ sudo groupadd docker
+$ sudo gpasswd -a ${USER} docker # or sudo adduser ${USER} docker
+$ sudo service docker restart
+</code></p>
 
 <h3 id="command-tips">Command Tips:</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker images --tree <span class="c">#list images in tree structure ('--tree' is deprecated)</span>
-<span class="gp">$ </span>docker ps -a <span class="c">#List all containers</span>
-<span class="gp">$ </span>docker ps -l <span class="c">#List lastest containers</span>
-<span class="gp">$ </span>docker ps -q <span class="c">#List containers display on IDs (quiet)</span>
-</code></pre>
-</div>
+<p><code>sh
+$ docker images --tree #list images in tree structure ('--tree' is deprecated)
+$ docker ps -a #List all containers
+$ docker ps -l #List lastest containers
+$ docker ps -q #List containers display on IDs (quiet)
+</code></p>
 
 <h3 id="command-by-yourself-in-containers---working-with-containershttpsdocsdockercomuserguideusingdocker">Command by yourself in containers - <a href="https://docs.docker.com/userguide/usingdocker/">Working with Containers</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker run -i -t &lt;image&gt; /bin/bash
-</code></pre>
-</div>
+<p><code>sh
+$ docker run -i -t &lt;image&gt; /bin/bash
+</code></p>
 
 <h3 id="how-to-continue-a-docker-which-is-exitedhttpstackoverflowcomquestions21928691how-to-continue-a-docker-which-is-exited"><a href="http://stackoverflow.com/questions/21928691/how-to-continue-a-docker-which-is-exited">How to continue a docker which is exited</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>docker start <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># restart it in the background</span>
-docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># reattach the terminal &amp; stdin</span>
-</code></pre>
-</div>
+<p><code>sh
+docker start `docker ps -q -l` # restart it in the background
+docker attach `docker ps -q -l` # reattach the terminal &amp; stdin
+</code></p>
 
 <h3 id="clean-up---remove-docker-after-exitedhttpsdocsdockercomreferencerunclean-up-rm"><a href="https://docs.docker.com/reference/run/#clean-up-rm">Clean Up - Remove Docker after exited</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker run --rm &lt;imamge&gt;
-</code></pre>
-</div>
+<p><code>sh
+$ docker run --rm &lt;imamge&gt;
+</code></p>
 
 <h3 id="docker-remove-all-exited-containers-by-filippo-valsordahttpscoderwallcompzguzw"><a href="https://coderwall.com/p/zguz_w">Docker: remove all Exited containers by Filippo Valsorda</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker ps -a | grep Exit | cut -d <span class="s1">' '</span> -f 1 | xargs sudo docker rm
-</code></pre>
-</div>
+<p><code>sh
+$ sudo docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
+</code></p>
 
 <h3 id="remove--none--images">Remove &lt; none &gt; images</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># if space full in docker engine</span>
-<span class="gp">$ </span>docker rmi <span class="k">$(</span>docker images | grep <span class="s1">'&lt;none&gt;'</span> | tr -s <span class="s1">' '</span> | cut -d <span class="s1">' '</span> -f 3<span class="k">)</span>
-<span class="c"># or</span>
-<span class="gp">$ </span>docker images -a | grep none | awk <span class="s1">'{print $3}'</span> | xargs docker rmi -f
-</code></pre>
-</div>
+<p><code>sh
+# if space full in docker engine
+$ docker rmi $(docker images | grep '&lt;none&gt;' | tr -s ' ' | cut -d ' ' -f 3)
+# or
+$ docker images -a | grep none | awk '{print $3}' | xargs docker rmi -f
+</code></p>
 
 <h3 id="fix-repositoryalready-being-pulled">Fix Repositoryalready being pulled</h3>
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># $ dokcer pull &lt;images&gt;</span>
-<span class="c"># Fix Repository debian already being pulled by another client. Waiting.</span>
-<span class="gp">$ </span>sudo service docker restart
-</code></pre>
-</div>
+<p><code>sh
+# $ dokcer pull &lt;images&gt;
+# Fix Repository debian already being pulled by another client. Waiting.
+$ sudo service docker restart
+</code></p>
 
 <h3 id="mount-directory-to-container---managing-data-in-containershttpsdocsdockercomuserguidedockervolumes">Mount directory to container - <a href="https://docs.docker.com/userguide/dockervolumes/">Managing data in containers</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># docker run option</span>
-<span class="c"># -v, --volume=[] create a volume</span>
-<span class="c"># -v host:container mount host directory to container</span>
-<span class="c">#   ex. -v $PWD:/app , mount current path to /app in container</span>
-<span class="c"># -w, --workdir="" Working directory inside the container</span>
+<p>```sh
+# docker run option
+# -v, –volume=[] create a volume
+# -v host:container mount host directory to container
+#   ex. -v $PWD:/app , mount current path to /app in container
+# -w, –workdir=”” Working directory inside the container</p>
 
-<span class="gp">$ </span>docker run -v &lt;host_dir_path&gt;:&lt;container_dir_path&gt; -w &lt;workdir_path&gt; &lt;image&gt; &lt;cmd&gt;
-</code></pre>
-</div>
+<p>$ docker run -v <host_dir_path>:<container_dir_path> -w <workdir_path> <image> <cmd>
+```</cmd></image></workdir_path></container_dir_path></host_dir_path></p>
 
 <h3 id="docker-daemon-on-debian-not-start-automatically---bash-scripting-wait-for-wireless-connection-execute-programhttpsbbsarchlinuxorgviewtopicphpid51939">Docker daemon on Debian: not start automatically - <a href="https://bbs.archlinux.org/viewtopic.php?id=51939">Bash Scripting: Wait for wireless connection, execute program</a></h3>
 
@@ -336,24 +334,24 @@ docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> 
   <li>write this script and add it into crontab ($ sudo crontab -e)</li>
 </ol>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<p>```sh
+#!/bin/bash</p>
 
-<span class="nv">Q</span><span class="o">=</span><span class="s2">"0"</span>
-<span class="k">while</span> <span class="o">[</span> <span class="nv">$Q</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">]</span>; <span class="k">do
-   </span><span class="nv">Q</span><span class="o">=</span><span class="k">$(</span>ping -c1 www.google.com 2&gt; /dev/null | grep -c google<span class="k">)</span>;
-<span class="k">done
-</span><span class="nb">echo </span>Connected!
+<p>Q=”0”
+while [ $Q = “0” ]; do
+   Q=$(ping -c1 www.google.com 2&gt; /dev/null | grep -c google);
+done
+echo Connected!</p>
 
-sudo service docker restart
-</code></pre>
-</div>
+<p>sudo service docker restart
+```</p>
 
 <h3 id="run-multiple-command-in-docker">Run multiple command in docker</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker <span class="nb">exec</span> &lt;image&gt; sh -c ‘&lt;cmd&gt;’
-<span class="gp">$ </span>docker run &lt;image&gt; bash -c ‘&lt;cmd&gt;’
-</code></pre>
-</div>
+<p><code>sh
+$ docker exec &lt;image&gt; sh -c ‘&lt;cmd&gt;’
+$ docker run &lt;image&gt; bash -c ‘&lt;cmd&gt;’
+</code></p>
 
 <h3 id="crontab-in-dockerhttpwwwekitofrpeoplerun-a-cron-job-with-docker"><a href="http://www.ekito.fr/people/run-a-cron-job-with-docker/">Crontab in Docker</a></h3>
 
@@ -361,96 +359,114 @@ sudo service docker restart
 
 <p>Dockerfile</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Docker env don't pass though cron jobs, you need to save env to file and load it in cron jobs.</span>
-<span class="c"># save Docker envoirment to file with command "env &gt; &lt;file&gt;"</span>
+<p>```sh
+# Docker env don’t pass though cron jobs, you need to save env to file and load it in cron jobs.
+# save Docker envoirment to file with command “env &gt; <file>"</file></p>
 
-<span class="c"># To debug crontab see to run "rsyslogd" and see logs at "/var/log/syslo"</span>
-<span class="c"># CMD rsyslogd &amp;&amp; &amp;&amp; env &gt; /root/env.sh &amp;&amp; tail -f /var/log/cron.log</span>
+<h1 id="to-debug-crontab-see-to-run-rsyslogd-and-see-logs-at-varlogsyslo">To debug crontab see to run “rsyslogd” and see logs at “/var/log/syslo”</h1>
+<p># CMD rsyslogd &amp;&amp; &amp;&amp; env &gt; /root/env.sh &amp;&amp; tail -f /var/log/cron.log</p>
 
-CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o">&amp;&amp;</span> tail -f /var/log/cron.log
-</code></pre>
-</div>
+<p>CMD cron &amp;&amp; env &gt; /root/env.sh &amp;&amp; tail -f /var/log/cron.log
+```</p>
 
 <p>cron_task.sh</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>env - <span class="sb">`</span>cat /root/env.sh<span class="sb">`</span> <span class="nv">$1</span>
-</code></pre>
-</div>
+<p><code>sh
+env - `cat /root/env.sh` $1
+</code></p>
 
 <p>crontab</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># always need ot &gt;&gt; to some where to avoid “(CRON) info (No MTA installed, discarding output)” error in the syslog</span>
-<span class="c"># http://askubuntu.com/questions/222512/cron-info-no-mta-installed-discarding-output-error-in-the-syslog</span>
+<p>```sh
+# always need ot » to some where to avoid “(CRON) info (No MTA installed, discarding output)” error in the syslog
+# http://askubuntu.com/questions/222512/cron-info-no-mta-installed-discarding-output-error-in-the-syslog</p>
 
-<span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> root crontab_task.sh “&lt;your <span class="nb">command</span>&gt;<span class="s2">" &gt;&gt; /var/log/cron.log 2&gt;&amp;1
+<ul>
+  <li>
+    <ul>
+      <li>
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <ul>
+                  <li>root crontab_task.sh “<your command="">" &gt;&gt; /var/log/cron.log 2&gt;&amp;1
 #An empty line is required at the end of this file for a valid cron file.
-</span></code></pre>
-</div>
+```</your></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="docker-error-client-and-server-dont-have-same-version">docker Error: client and server don’t have same version</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker-machine upgrade &lt;machine&gt;
-</code></pre>
-</div>
+<p><code>sh
+$ docker-machine upgrade &lt;machine&gt;
+</code></p>
 
 <h3 id="set-time-zone-in-dockerfilehttptedwisecom20150502setting-the-timezone-in-a-docker-image"><a href="http://tedwise.com/2015/05/02/setting-the-timezone-in-a-docker-image">Set time zone in Dockerfile</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure -f noninteractive tzdata
-</code></pre>
-</div>
+<p><code>sh
+$ echo "Asia/Bangkok" &gt; /etc/timezone &amp;&amp; dpkg-reconfigure -f noninteractive tzdata
+</code></p>
 
 <h3 id="push-docker-to-registry">Push docker to registry</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker login
-<span class="c"># docker tag &lt;image&gt; &lt;username/image:version&gt;</span>
-<span class="gp">$ </span>docker tag viau10-app ibotdotout/viau10-app:latest
-<span class="c"># docker push &lt;username/image&gt;</span>
-<span class="gp">$ </span>docker push ibotdotout/viau10-app
+<p>```sh
+$ docker login
+# docker tag <image> &lt;username/image:version&gt;
+$ docker tag viau10-app ibotdotout/viau10-app:latest
+# docker push &lt;username/image&gt;
+$ docker push ibotdotout/viau10-app</image></p>
 
-<span class="c"># private registry</span>
-<span class="gp">$ </span>docker tag &lt;contrainer_id&gt; &lt;your_registry_domain&gt;/&lt;image&gt;
-<span class="gp">$ </span>docker push &lt;your_registry_domain&gt;/&lt;image&gt;
-</code></pre>
-</div>
+<h1 id="private-registry">private registry</h1>
+<p>$ docker tag <contrainer_id> <your_registry_domain>/<image>
+$ docker push <your_registry_domain>/<image>
+```</image></your_registry_domain></image></your_registry_domain></contrainer_id></p>
 
 <h3 id="force-clean-build-of-an-image-without-cachehttpsgithubcomdockerdockerissues1326"><a href="https://github.com/docker/docker/issues/1326">Force clean build of an image (without cache)</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker build --no-cache .
-</code></pre>
-</div>
+<p><code>sh
+$ docker build --no-cache .
+</code></p>
 
 <h3 id="graphdriver-prior-storage-driver-aufs-failed-invalid-argument-httpsgithubcomdockerdockerissues14026-by-kelindar"><a href="https://github.com/docker/docker/issues/14026">graphdriver prior storage driver “aufs” failed: invalid argument </a> by @Kelindar</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo rm -rf /var/lib/docker/aufs
-</code></pre>
-</div>
+<p><code>sh
+$ sudo rm -rf /var/lib/docker/aufs
+</code></p>
 
 <h3 id="to-see-the-file-size-of-your-containershttpstackoverflowcoma33344280"><a href="http://stackoverflow.com/a/33344280">To see the file size of your containers</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker ps -s
-</code></pre>
-</div>
+<p><code>sh
+$ docker ps -s
+</code></p>
 
 <h3 id="ssh-to-docker-machinehttpstackoverflowcoma33350931"><a href="http://stackoverflow.com/a/33350931">SSH to docker machine</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># you can use `docker-machine ssh &lt; machine &gt; instead this</span>
-<span class="c"># 192.168.99.100 this is ip for &lt; machine &gt;</span>
-<span class="c"># that can check via `docker-machine ip &lt; machine &gt;</span>
-<span class="gp">$ </span>ssh docker@192.168.99.100
-<span class="c"># password: tcuser</span>
-</code></pre>
-</div>
+<p><code>sh
+# you can use `docker-machine ssh &lt; machine &gt; instead this
+# 192.168.99.100 this is ip for &lt; machine &gt;
+# that can check via `docker-machine ip &lt; machine &gt;
+$ ssh docker@192.168.99.100
+# password: tcuser
+</code></p>
 
 <h3 id="fix-no-space-left-on-device-in-default-machinehttpsgithubcomdockermachineissues1779"><a href="https://github.com/docker/machine/issues/1779">Fix No space left on device in default machine</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># clean your mapping volume on host that was copied to docker machine</span>
-<span class="gp">$ </span>docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -v /var/lib/
-</code></pre>
-</div>
+<p><code>sh
+# clean your mapping volume on host that was copied to docker machine
+$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -v /var/lib/
+</code></p>
 
 <h3 id="install-docker-compose-aka-fig">Install Docker-compose aka Fig</h3>
 
-<p><code class="highlighter-rouge">sh
+<p><code>sh
 $ apt-get update &amp;&amp; apt-get upgrade -y
 $ apt-get install -y python-pip
 $ pip install -U docker-compose
@@ -458,10 +474,10 @@ $ pip install -U docker-compose
 
 <h3 id="docker-compose-production">Docker-Compose Production</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># https://docs.docker.com/compose/extends/</span>
-<span class="gp">$ </span>docker-compose -f production.yml
-</code></pre>
-</div>
+<p><code>sh
+# https://docs.docker.com/compose/extends/
+$ docker-compose -f production.yml
+</code></p>
 
 <h3 id="dockerfile">Dockerfile</h3>
 <ol>
@@ -473,7 +489,7 @@ $ pip install -U docker-compose
   <li><a href="http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/">Refactoring a Dockerfile for image size</a></li>
 </ol>
 
-<p><code class="highlighter-rouge">sh
+<p><code>sh
   $ apt-get install -y --no-install-recommends &lt;packages&gt;
  </code></p>
 
@@ -533,6 +549,15 @@ $ pip install -U docker-compose
     
       <li>
         <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/react/">
             React
             <small>04 Nov 2016</small>
@@ -545,15 +570,6 @@ $ pip install -U docker-compose
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>

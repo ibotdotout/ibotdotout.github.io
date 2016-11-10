@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -201,6 +201,40 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/avoid-git-commit-m/">
+        Avoid git commit -m
+      </a>
+    </h1>
+
+    <span class="post-date">
+      25 Dec 2015
+      
+        &middot;
+        <a href="/avoid-git-commit-m/#disqus_thread" data-disqus-identifier="/avoid-git-commit-m/"></a>
+        
+      
+    </span>
+
+    
+      <p>Most of Git tutorial even <a href="http://try.github.io">Try Git</a> guide you
+about git commit with this</p>
+
+<p><code>sh
+$ git commit -m "hello world"
+</code></p>
+
+<p>That’s OK.
+But It better to use any option without -m.</p>
+
+
+      <div style="text-align:right;">
+        <a href="/avoid-git-commit-m/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -277,15 +311,15 @@
     
       <blockquote>
   <p>Github Pages Tips:<br />
-Github Pages always complie jekyll with <code class="highlighter-rouge">--safe</code> option that will<br />
+Github Pages always complie jekyll with <code>--safe</code> option that will<br />
 disable plugins but some plugin can work with Github Pages.<br />
-<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a></p>
+<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a>  </p>
 </blockquote>
 
-<p>To avoid this <code class="highlighter-rouge">--safe</code> option to be powerful jekyll, you need to build your jelyll somewhere else and commit your static page to <code class="highlighter-rouge">main</code> or <code class="highlighter-rouge">gh-page</code> branch.
+<p>To avoid this <code>--safe</code> option to be powerful jekyll, you need to build your jelyll somewhere else and commit your static page to <code>main</code> or <code>gh-page</code> branch.
 We can automate build jekyll with <a href="https://travis-ci.org">Travis-CI</a>
-that store your jekyll file in <code class="highlighter-rouge">jekyll</code> branch when push to github that
-will trig to Travis to build and deploy static page back to your <code class="highlighter-rouge">main</code>
+that store your jekyll file in <code>jekyll</code> branch when push to github that
+will trig to Travis to build and deploy static page back to your <code>main</code>
 branch to publish your contents. you should read previous <a href="/jekyll-with-ci/">blog about
 jekyll and travis</a></p>
 
@@ -357,43 +391,6 @@ jekyll and travis</a></p>
 
       <div style="text-align:right;">
         <a href="/get-job/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/osx-convert-encoding/">
-        Convert File Encoding in OSX
-      </a>
-    </h1>
-
-    <span class="post-date">
-      19 Oct 2015
-      
-        &middot;
-        <a href="/osx-convert-encoding/#disqus_thread" data-disqus-identifier="/osx-convert-encoding/"></a>
-        
-      
-    </span>
-
-    
-      <p>Sometime, you download file from Internet specially file that in local language
-which not encode with UTF-8 that unreadable on OSX. Your should guess
-what encode that file using and convert it in to UTF-8.</p>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># convert tis-620 to utf-8 encoding</span>
-<span class="nv">$iconv</span> -f tis-620 -t utf-8 source.xml &gt; destination.xml
-</code></pre>
-</div>
-
-<p>Example. Thai language on Windows system normally encode with TIS-620 when
-open it in OSX that will display with some symbol char that unreadable.
-You should convert that file from tis-620 to utf-8 which make it readable on osx.</p>
-
-
-      <div style="text-align:right;">
-        <a href="/osx-convert-encoding/" style="color:#000;"> Read More </a>
       </div>
     
   </div>

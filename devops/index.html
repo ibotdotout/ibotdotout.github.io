@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -227,45 +227,44 @@ Docker is a tool for building and deploying applications by packaging them into 
 
 <p>bypass.conf</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>server <span class="o">{</span>
-    listen 80;
+<p>```sh
+server {
+    listen 80;</p>
 
-    location / <span class="o">{</span>
-        proxy_pass http://127.0.0.1:8000;
-    <span class="o">}</span>
-<span class="o">}</span>
+<pre><code>location / {
+    proxy_pass http://127.0.0.1:8000;
+} } ```
 </code></pre>
-</div>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># debian</span>
-<span class="gp">$ </span>sudo apt-get install nginx
-<span class="gp">$ </span>sudo vim /etc/nginx/sites-available/&lt;your&gt;.conf
-<span class="gp">$ </span>sudo rm /etc/ngin/sites-enabled/default.conf
-<span class="gp">$ </span>suo ln -f /etc/nginx/sites-available/&lt;your&gt;.conf /etc/sites-enabled/
-<span class="gp">$ </span>sudo services nginx reload
-</code></pre>
-</div>
+<p><code>sh
+# debian
+$ sudo apt-get install nginx
+$ sudo vim /etc/nginx/sites-available/&lt;your&gt;.conf
+$ sudo rm /etc/ngin/sites-enabled/default.conf
+$ suo ln -f /etc/nginx/sites-available/&lt;your&gt;.conf /etc/sites-enabled/
+$ sudo services nginx reload
+</code></p>
 
 <h2 id="nginx-allow-file-browser-list">Nginx Allow File browser list</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># debain</span>
-<span class="gp">$ </span><span class="nb">cd</span> /usr/share/nginx/html
-<span class="gp">$ </span>ln -s &lt;path&gt; &lt;link_name&gt;
-</code></pre>
-</div>
+<p><code>sh
+# debain
+$ cd /usr/share/nginx/html
+$ ln -s &lt;path&gt; &lt;link_name&gt;
+</code></p>
 
 <p>edit your nginx.conf</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>    location /&lt;url&gt; <span class="o">{</span>
-      <span class="nb">alias</span> /usr/share/nginx/html/&lt;link_name&gt;
+<p><code>sh
+    location /&lt;url&gt; {
+      alias /usr/share/nginx/html/&lt;link_name&gt;
       autoindex on;
       autoindex_exact_size off;
       autoindex_localtime on;
-      auth_basic <span class="s2">"Restricted"</span>;                <span class="c">#For Basic Auth</span>
-      auth_basic_user_file &lt;your .htpasswd&gt;;  <span class="c">#For Basic Auth</span>
-    <span class="o">}</span>
-</code></pre>
-</div>
+      auth_basic "Restricted";                #For Basic Auth
+      auth_basic_user_file &lt;your .htpasswd&gt;;  #For Basic Auth
+    }
+</code></p>
 
 <h3 id="useful-command">Useful command</h3>
 <ul>
@@ -287,7 +286,7 @@ Docker is a tool for building and deploying applications by packaging them into 
   <li><a href="http://techglimpse.com/enable-directory-listing-mode-nginx/">How to enable file browser mode in Nginx?</a></li>
   <li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-http-authentication-with-nginx-on-ubuntu-12-10">How To Set Up HTTP Authentication With Nginx On Ubuntu 12.10</a></li>
   <li><a href="http://www.techsuii.com/2014/08/03/how-to-setup-https-for-nginx/">วิธี setup Nginx ให้บริการ HTTPS</a></li>
-  <li><a href="http://www.youtube.com/watch?v=xr5bZ2ZR28w&amp;list=PLjQo0sojbbxUav7I746f0lT4apGX8-iON">DevOps for Developers (Nginx + Ruby)</a></li>
+  <li><a href="http://www.youtube.com/watch?v=xr5bZ2ZR28w&amp;list=PLjQo0sojbbxUav7I746f0lT4apGX8-iON">DevOps for Developers (Nginx + Ruby)</a> </li>
   <li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-fabric-to-automate-administration-tasks-and-deployments">How To Use Fabric To Automate Administration Tasks And Deployments</a></li>
   <li><a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx">How to Deploy Python WSGI Apps Using Gunicorn HTTP Server Behind Nginx</a></li>
   <li><a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-nginx-for-ubuntu-12-04">How To Create a SSL Certificate on nginx for Ubuntu 12.04</a></li>
@@ -312,6 +311,15 @@ Docker is a tool for building and deploying applications by packaging them into 
     
       <li>
         <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/react/">
             React
             <small>04 Nov 2016</small>
@@ -324,15 +332,6 @@ Docker is a tool for building and deploying applications by packaging them into 
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>

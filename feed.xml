@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-05T17:49:25+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">React</title><link href="http://dev.im-bot.com//react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//react</id><content type="html" xml:base="http://dev.im-bot.com//react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-10T19:02:52+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Redux</title><link href="http://dev.im-bot.com//redux/" rel="alternate" type="text/html" title="Redux" /><published>2016-11-10T00:00:00+00:00</published><updated>2016-11-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//redux</id><content type="html" xml:base="http://dev.im-bot.com//redux/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/introduction/ThreePrinciples.html&quot;&gt;Redux - Three Principles&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.fva82bt27&quot;&gt;A Cartoon intro to Redux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://css-tricks.com/learning-react-redux/&quot;&gt;Leveling Up with React: Redux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.youhavetolearncomputers.com/blog/2015/9/15/a-conceptual-overview-of-redux-or-how-i-fell-in-love-with-a-javascript-state-container&quot;&gt;Understanding Redux (or, How I Fell in Love with a JavaScript State Container)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/basics/&quot;&gt;Redux - Basics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://scotch.io/bar-talk/getting-started-with-redux-an-intro&quot;&gt;Getting Started with Redux: An Intro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/chrisui/real-world-redux&quot;&gt;Real World Redux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h1 id=&quot;articles&quot;&gt;Articles&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367#.ndjin7wwj&quot;&gt;You Might Not Need Redux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/advanced/&quot;&gt;Redux - Advanced&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/advanced/Middleware.html&quot;&gt;Redux - Middleware&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/FAQ.html&quot;&gt;Redux FAQ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/recipes/ReducingBoilerplate.html&quot;&gt;Redux Reducing Boilerplate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;step-by-step&quot;&gt;Step by Step&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@rajaraodv/step-by-step-guide-to-building-react-redux-apps-using-mocks-48ca0f47f9a&quot;&gt;Step by Step Guide To Building React Redux Apps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@rajaraodv/a-guide-for-building-a-react-redux-crud-app-7fe0b8943d0f&quot;&gt;A Guide For Building A React Redux CRUD App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@rajaraodv/the-anatomy-of-a-react-redux-app-759282368c5a&quot;&gt;The Anatomy Of A React Redux App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@rajaraodv/adding-a-robust-form-validation-to-react-redux-apps-616ca240c124&quot;&gt;Adding A Robust Form Validation To React Redux Apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;redux-au10&quot;&gt;Redux Au10&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@rajaraodv/securing-react-redux-apps-with-jwt-tokens-fcfe81356ea0&quot;&gt;Securing React Redux Apps With JWT Tokens&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/secure-your-react-and-redux-app-with-jwt-authentication/&quot;&gt;Secure Your React and Redux App with JWT Authentication&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/auth0-blog/redux-auth&quot;&gt;Redux JWT Authentication Sample&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@MattiaManzati/tips-to-handle-authentication-in-redux-2-introducing-redux-saga-130d6872fbe7&quot;&gt;Tips to handle Authentication in Redux #2 introducing redux-saga&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/joshgeller/react-redux-jwt-auth-example&quot;&gt;react-redux-jwt-auth-example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;screencast&quot;&gt;Screencast&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://egghead.io/series/getting-started-with-redux&quot;&gt;Getting Started with Redux&lt;/a&gt; - &lt;a href=&quot;https://github.com/tayiorbeii/egghead.io_redux_course_notes&quot;&gt;note&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://egghead.io/courses/building-react-applications-with-idiomatic-redux&quot;&gt;Building React Applications with Idiomatic Redux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;redux-api-service&quot;&gt;Redux API Service&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sohamkamani.com/blog/2016/06/05/redux-apis/&quot;&gt;A simplified approach to calling APIs with redux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/redux/tree/master/examples/real-world&quot;&gt;Redux Real World Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gothinkster/react-redux-realworld-example-app&quot;&gt;Redux codebase containing real world examples&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Versent/redux-crud&quot;&gt;Redux CRUD&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/redux/issues/291#issuecomment-123010379&quot;&gt;Redux API Call&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://engineering.thetrainline.com/2016/09/06/handling-api-calls-in-redux-with-redux-api-middleware/&quot;&gt;Handling API calls in Redux with Redux API middleware&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/agraboso/redux-api-middleware&quot;&gt;redux-api-middleware&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;redux-form&quot;&gt;Redux Form&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=jvrPbUyS3kg&quot;&gt;Simplify your forms with Redux-Form&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux-form.com/6.2.0/examples/initializeFromState/&quot;&gt;ReduxForm - Initialize From State&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux-form.com/6.2.0/examples/submitValidation/&quot;&gt;ReduxForm - Submit Validation Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux-form.com/6.2.0/examples/syncValidation/&quot;&gt;ReduxForm - Synchronous Validation Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux-form.com/6.2.0/examples/asyncValidation/&quot;&gt;ReduxForm - Async Blur Validation Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tylercollier/redux-form-test&quot;&gt;Redux-Form Test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;resources&quot;&gt;Resources&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/introduction/Ecosystem.html&quot;&gt;Redux Ecosystem&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;tools&quot;&gt;Tools&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gaearon/redux-devtools&quot;&gt;Redux DevTools&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/zalmoxisus/redux-devtools-extension&quot;&gt;Redux DevTools Extension&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;middleware&quot;&gt;Middleware&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/evgenyrodionov/redux-logger&quot;&gt;Logger for Redux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gaearon/redux-thunk&quot;&gt;Redux Thunk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;example&quot;&gt;Example&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/markerikson/redux-ecosystem-links/blob/master/apps-and-examples.md&quot;&gt;Redux Applications and Examples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;testing&quot;&gt;Testing&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md&quot;&gt;Redux - Writing Tests&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="redux" /><category term="js" /><summary type="html">Intro
+
+  Redux - Three Principles
+  A Cartoon intro to Redux
+  Leveling Up with React: Redux
+  Understanding Redux (or, How I Fell in Love with a JavaScript State Container)
+  Redux - Basics
+  Getting Started with Redux: An Intro
+  Real World Redux</summary></entry><entry><title type="html">React</title><link href="http://dev.im-bot.com//react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//react</id><content type="html" xml:base="http://dev.im-bot.com//react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;Thinking in React&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -111,7 +210,7 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-inside/why-the-hipsters-recompose-everything-23ac08748198&quot;&gt;Why The Hipsters Recompose Everything&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/acdlite/recompose&quot;&gt;Recompose - A React utility belt for function components and higher-order components&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="react" /><summary type="html">React
+&lt;/ul&gt;</content><category term="react" /><category term="js" /><summary type="html">React
 
   Thinking in React
 
@@ -133,42 +232,44 @@ React Intro
   Routing React Apps: The Complete Guide
   Presentational and Container Components</summary></entry><entry><title type="html">Git ignore files in sub-directories</title><link href="http://dev.im-bot.com//git-ignore-sub-dir/" rel="alternate" type="text/html" title="Git ignore files in sub-directories" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-ignore-in-sub-dir</id><content type="html" xml:base="http://dev.im-bot.com//git-ignore-sub-dir/">&lt;h2 id=&quot;example-ignore-css-in-only-src&quot;&gt;Example: ignore .css in only /src&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# .gitignore
+&lt;p&gt;```
+# .gitignore&lt;/p&gt;
 
-src/**/*.css
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;src/&lt;em&gt;*/&lt;/em&gt;.css
+```&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
 &lt;p&gt;remove .css that committed in to repo&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rm -r --cached .
+&lt;p&gt;&lt;code&gt;
+$ git rm -r --cached .
 $ git add .
 $ git commit
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/6794737/6144391&quot;&gt;Git-ignore certain files in sub-directories, but not all&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/1139797/6144391&quot;&gt;Ignore files that have already been committed to a Git repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">Example: ignore .css in only /src
+&lt;/ul&gt;</content><category term="git" /><summary type="html">Example: ignore .css in only /src
 
+```
 # .gitignore
 
-src/**/*.css</summary></entry><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+src/*/.css
+```</summary></entry><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/33569970/6144391&quot;&gt;Resolve Git merge conflicts in favor of their changes during a pull&lt;/a&gt;&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# In conflicted state
+    &lt;p&gt;&lt;code&gt;
+# In conflicted state
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
 $ git add -u . // add file with skip iles that are not under version control
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
+&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -181,39 +282,40 @@ $ git add -u . // add file with skip iles that are not under version control
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff&quot;&gt;Fugitive.vim - resolving merge conflicts with vimdiff&lt;/a&gt;&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:Gvdiff
+    &lt;p&gt;&lt;code&gt;
+:Gvdiff
 :buffers
 # focus on middle window
 :diffput 2 // see number on :buffers
 :diffput 3 // see number on :buffers
 # ]c next conflict
 # [c previos conflict
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
+&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><category term="vim" /><summary type="html">Git
+&lt;/ul&gt;</content><category term="git" /><category term="vim" /><summary type="html">Git
 
 
   
     Resolve Git merge conflicts in favor of their changes during a pull
 
-    # In conflicted state
+    
+# In conflicted state
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
 $ git add -u . // add file with skip iles that are not under version control</summary></entry><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ul&gt;
   &lt;li&gt;First Way, load files to buffer and run command for each buffers&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// search keyword on files and load files to buffers
-:args `rg -l pattern path/`
+&lt;p&gt;```
+// search keyword on files and load files to buffers
+:args &lt;code&gt;rg -l pattern path/&lt;/code&gt;&lt;/p&gt;
 
-// list buffers
-:buffers
+&lt;p&gt;// list buffers
+:buffers&lt;/p&gt;
 
-// substitute word for each buffers and save
+&lt;p&gt;// substitute word for each buffers and save
 :argdo %s/pattern/newpattern/ge | update
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+```&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -222,18 +324,18 @@ $ git add -u . // add file with skip iles that are not under version control</su
  Vim and run command for each line on Quickfix&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//  run the given command to each line of the quickfix list.
+&lt;p&gt;&lt;code&gt;
+//  run the given command to each line of the quickfix list.
 :Ack! pattern 
 :cdo %s/pattern/newpattern/ge | w
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;helper-tools--plugins&quot;&gt;Helper Tools &amp;amp; Plugins&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/mileszs/ack.vim&quot;&gt;Ack.vim&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://blog.burntsushi.net/ripgrep/&quot;&gt;ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/BurntSushi/ripgrep&quot;&gt;ripgrep (rg)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/BurntSushi/ripgrep&quot;&gt;ripgrep (rg)&lt;/a&gt; &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.wezm.net/technical/2016/09/ripgrep-with-vim/&quot;&gt;Using ripgrep With Vim&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -245,17 +347,19 @@ $ git add -u . // add file with skip iles that are not under version control</su
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/15729568&quot;&gt;argdo - How to do search &amp;amp; replace with ack in vim?&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://usevim.com/2012/04/06/search-and-replace-files/&quot;&gt;Vim 101: Search and Replace on Multiple Files&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/&quot;&gt;Vimcast - Using :argdo to change multiple files&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">First Way, load files to buffer and run command for each buffers
+&lt;/ul&gt;</content><category term="vim" /><summary type="html">First Way, load files to buffer and run command for each buffers
 
 
+```
 // search keyword on files and load files to buffers
-:args `rg -l pattern path/`
+:args rg -l pattern path/
 
 // list buffers
 :buffers
 
 // substitute word for each buffers and save
-:argdo %s/pattern/newpattern/ge | update</summary></entry><entry><title type="html">Git Submodule and Git Subtree</title><link href="http://dev.im-bot.com//git-submodule-subtree/" rel="alternate" type="text/html" title="Git Submodule and Git Subtree" /><published>2016-10-25T00:00:00+00:00</published><updated>2016-10-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-submodule-subtree</id><content type="html" xml:base="http://dev.im-bot.com//git-submodule-subtree/">&lt;h1 id=&quot;git-submodule&quot;&gt;git submodule&lt;/h1&gt;
+:argdo %s/pattern/newpattern/ge | update
+```</summary></entry><entry><title type="html">Git Submodule and Git Subtree</title><link href="http://dev.im-bot.com//git-submodule-subtree/" rel="alternate" type="text/html" title="Git Submodule and Git Subtree" /><published>2016-10-25T00:00:00+00:00</published><updated>2016-10-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-submodule-subtree</id><content type="html" xml:base="http://dev.im-bot.com//git-submodule-subtree/">&lt;h1 id=&quot;git-submodule&quot;&gt;git submodule&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://gist.github.com/gitaarik/8735255&quot;&gt;Git Submodules basic explanation&lt;/a&gt;&lt;/li&gt;
@@ -289,7 +393,7 @@ $ git add -u . // add file with skip iles that are not under version control</su
 &lt;h2 id=&quot;recap&quot;&gt;recap&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://andrey.nering.com.br/2016/git-submodules-vs-subtrees/&quot;&gt;Git: submodules vs. subtrees&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">git submodule
+&lt;/ul&gt;</content><category term="git" /><summary type="html">git submodule
 
 
   Git Submodules basic explanation
@@ -397,7 +501,7 @@ $ git add -u . // add file with skip iles that are not under version control</su
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://medium.com/@bird.praphan/อย่าเพิ่งสร้าง-apis-ถ้ายังไม่รู้จัก-swagger-f32514c7d729#.8muq43pvk&quot;&gt;อย่าเพิ่งสร้าง APIs ถ้ายังไม่รู้จัก Swagger&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary type="html">API Blueprint
+&lt;/ul&gt;</content><category term="API" /><summary type="html">API Blueprint
 
 
   
@@ -420,9 +524,9 @@ $ git add -u . // add file with skip iles that are not under version control</su
 
 &lt;h1 id=&quot;regex&quot;&gt;Regex&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;
+db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
+&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -446,11 +550,11 @@ $ git add -u . // add file with skip iles that are not under version control</su
 
 &lt;h1 id=&quot;fulltext-search&quot;&gt;Fulltext search&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.books.ensureIndex({title:&quot;text&quot;})
+&lt;p&gt;&lt;code&gt;
+db.books.ensureIndex({title:&quot;text&quot;})
 db.books.reIndex()
 db.bokks.find({$text:{$search:&quot;time&quot;}})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -468,7 +572,7 @@ db.bokks.find({$text:{$search:&quot;time&quot;}})
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/operator/query/text/&quot;&gt;$text&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><summary type="html">MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS
+&lt;/ul&gt;</content><category term="mongo" /><summary type="html">MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS
   
   
     mongoDB prefix wildcard: fulltext-search ($text) find part with search-string</summary></entry><entry><title type="html">RESTful API</title><link href="http://dev.im-bot.com//restful-api/" rel="alternate" type="text/html" title="RESTful API" /><published>2016-06-26T00:00:00+00:00</published><updated>2016-06-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//restful-api</id><content type="html" xml:base="http://dev.im-bot.com//restful-api/">&lt;ul&gt;
@@ -480,13 +584,13 @@ db.bokks.find({$text:{$search:&quot;time&quot;}})
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Error handling
+&lt;p&gt;&lt;code&gt;
+1. Error handling
 2. Error logging
 3. Validation
 4. Authentication and authorization
 5. Testing
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -559,54 +663,45 @@ If you are augmenting existing API responses choose JSON-LD. If you are keeping 
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qCdpTji8nxo&quot;&gt;How to Design Great APIs - Parse Developer Day 2013&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary type="html">Essential learning for people building APIs
+&lt;/ul&gt;</content><category term="API" /><summary type="html">Essential learning for people building APIs
   
   
     The 5 Things  API Must Have
   
 
 
+
 1. Error handling
 2. Error logging
 3. Validation
 4. Authentication and authorization
-5. Testing</summary></entry><entry><title type="html">12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-factor-apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&lt;blockquote&gt;
-  &lt;p&gt;The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - &lt;a href=&quot;http://12factor.net&quot;&gt;The twelve factor app&lt;/a&gt;&lt;/p&gt;
+5. Testing</summary></entry><entry><title type="html">12 Factor Apps</title><link href="http://dev.im-bot.com//12-factor-apps/" rel="alternate" type="text/html" title="12 Factor Apps" /><published>2016-06-16T00:00:00+00:00</published><updated>2016-06-16T00:00:00+00:00</updated><id>http://dev.im-bot.com//12-Factor-Apps</id><content type="html" xml:base="http://dev.im-bot.com//12-factor-apps/">&lt;blockquote&gt;
+  &lt;p&gt;The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - &lt;a href=&quot;http://12factor.net&quot;&gt;The twelve factor app&lt;/a&gt;  &lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;official-site&quot;&gt;Official Site&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://12factor.net&quot;&gt;The twelve factor app&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://12factor.net&quot;&gt;The twelve factor app&lt;/a&gt;   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;!-- more --&gt;
 
 &lt;h2 id=&quot;article&quot;&gt;Article&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.clearlytech.com/2014/01/04/12-factor-apps-plain-english/&quot;&gt;12-Factor Apps in Plain English&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jaketrent.com/post/12-factor-app-summary/&quot;&gt;“12-Factor App” Summary&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.doismellburning.co.uk/twelve-factor-config-misunderstandings-and-advice/&quot;&gt;Twelve-Factor Config: Misunderstandings and Advice&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.doismellburning.co.uk/talks/django12factor/&quot;&gt;Py - The Twelve-Factor App&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-1&quot;&gt;How to Build 12 Factor Microservices on Docker - Part 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-2&quot;&gt;How to Build 12 Factor Microservices on Docker - Part 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.clearlytech.com/2014/01/04/12-factor-apps-plain-english/&quot;&gt;12-Factor Apps in Plain English&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jaketrent.com/post/12-factor-app-summary/&quot;&gt;“12-Factor App” Summary&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.doismellburning.co.uk/twelve-factor-config-misunderstandings-and-advice/&quot;&gt;Twelve-Factor Config: Misunderstandings and Advice&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.doismellburning.co.uk/talks/django12factor/&quot;&gt;Py - The Twelve-Factor App&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-1&quot;&gt;How to Build 12 Factor Microservices on Docker - Part 1&lt;/a&gt;  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-2&quot;&gt;How to Build 12 Factor Microservices on Docker - Part 2&lt;/a&gt;  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;talks&quot;&gt;Talks&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QOz1UOf6MdU&quot;&gt;CF &amp;amp; The 12-factor App 101: The Secret Decoder Ring for Operations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="article" /><category term="coding" /><summary type="html">The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - The twelve factor app
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QOz1UOf6MdU&quot;&gt;CF &amp;amp; The 12-factor App 101: The Secret Decoder Ring for Operations&lt;/a&gt;  &lt;/li&gt;
+&lt;/ul&gt;</content><category term="article" /><category term="coding" /><summary type="html">The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - The twelve factor app  
 
 
 Official Site
 
-  The twelve factor app</summary></entry><entry><title type="html">Git Bisect</title><link href="http://dev.im-bot.com//git-bisect/" rel="alternate" type="text/html" title="Git Bisect" /><published>2016-06-14T00:00:00+00:00</published><updated>2016-06-14T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-bisect</id><content type="html" xml:base="http://dev.im-bot.com//git-bisect/">&lt;p&gt;Git Bisect is useful for debugging something is work in past but not now (Regression).&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;The better way to debug regression is find first commit that make error happen to reduce scope of the cause.
-Instead of search each one by one commit that is linear search, you can apply binary search to help you find the commit that is cause of bug.
-binay search will reduce the number of commits to  &lt;code class=&quot;highlighter-rouge&quot;&gt;log n + 1&lt;/code&gt; that is worst case of it.
-&lt;code class=&quot;highlighter-rouge&quot;&gt;git bisect&lt;/code&gt; is the command that apply this concept you dont have to do it with your own.&lt;/p&gt;
-
-&lt;h1 id=&quot;demo--use-case-of-git-bisect&quot;&gt;Demo &amp;amp; Use case of Git Bisect&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/ibotdotout/demo-git-bisect&quot;&gt;ibotdotout/demo-git-bisect&lt;/a&gt;&lt;/p&gt;</content><author><name>botbotbot</name></author><category term="article" /><category term="git" /><summary type="html">Git Bisect is useful for debugging something is work in past but not now (Regression).</summary></entry></feed>
+  The twelve factor app</summary></entry></feed>

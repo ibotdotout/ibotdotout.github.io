@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -232,12 +232,12 @@
   <li>
     <p><a href="http://stackoverflow.com/a/33569970/6144391">Resolve Git merge conflicts in favor of their changes during a pull</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code># In conflicted state
+    <p><code>
+# In conflicted state
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
 $ git add -u . // add file with skip iles that are not under version control
-</code></pre>
-    </div>
+</code></p>
   </li>
 </ul>
 
@@ -250,15 +250,15 @@ $ git add -u . // add file with skip iles that are not under version control
   <li>
     <p><a href="http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff">Fugitive.vim - resolving merge conflicts with vimdiff</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>:Gvdiff
+    <p><code>
+:Gvdiff
 :buffers
 # focus on middle window
 :diffput 2 // see number on :buffers
 :diffput 3 // see number on :buffers
 # ]c next conflict
 # [c previos conflict
-</code></pre>
-    </div>
+</code></p>
   </li>
 </ul>
 
@@ -267,6 +267,15 @@ $ git add -u . // add file with skip iles that are not under version control
 <div class="related">
   <h2>Latest Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -282,15 +291,6 @@ $ git add -u . // add file with skip iles that are not under version control
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vim-change-multiple-files/">
-            Vim Change Multiple files
-            <small>01 Nov 2016</small>
           </a>
         </h3>
       </li>

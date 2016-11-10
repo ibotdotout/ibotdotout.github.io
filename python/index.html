@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Tips:      Flattened list of list    &gt;&gt;&gt; l = [[1,5,6], [4,5,9,7] ,[] ,[] ,[9]][[1, 5, 6], [4, 5, 9, 7], [], [], [9]]&gt;&gt;&gt; sum(l, [])[1, 5, 6,..." />
+<meta property="og:description" content="Tips:      Flattened list of list    python&gt;&gt;&gt; l = [[1,5,6], [4,5,9,7] ,[] ,[] ,[9]][[1, 5, 6], [4, 5, 9, 7], [], [], [9]]&gt;&gt;&gt; sum(l, [])[1,..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -224,129 +224,130 @@
   <li>
     <p>Flattened list of list</p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> <span class="p">,[]</span> <span class="p">,[]</span> <span class="p">,[</span><span class="mi">9</span><span class="p">]]</span>
-<span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">9</span><span class="p">]]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">sum</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="p">[])</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">]</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-</code></pre>
-    </div>
+    <p><code>python
+&gt;&gt;&gt; l = [[1,5,6], [4,5,9,7] ,[] ,[] ,[9]]
+[[1, 5, 6], [4, 5, 9, 7], [], [], [9]]
+&gt;&gt;&gt; sum(l, [])
+[1, 5, 6, 4, 5, 9, 7, 9]
+&gt;&gt;&gt; [i for x in l for i in x if type(x) is list]
+[1, 5, 6, 4, 5, 9, 7, 9]
+</code></p>
   </li>
   <li>
     <p>Else with for loop</p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)):</span>
-<span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="n">i</span><span class="p">,</span>
-<span class="o">&gt;&gt;</span> <span class="k">else</span><span class="p">:</span>
-<span class="o">&gt;&gt;</span>   <span class="k">print</span> <span class="mi">10</span>
-<span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span>
-</code></pre>
-    </div>
+    <p><code>python
+&gt;&gt; for i, v in enumerate(range(10)):
+&gt;&gt;   print i,
+&gt;&gt; else:
+&gt;&gt;   print 10
+1 2 3 4 5 6 7 8 9 10
+</code></p>
   </li>
   <li>
     <p>Zen of Python :: run this command in python console</p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">this</span>
-</code></pre>
-    </div>
+    <p><code>python
+import this
+</code></p>
   </li>
   <li>
     <p>Virtualenv with system package</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code> virtualenv --system-site-packages &lt;env_name&gt;
-</code></pre>
-    </div>
+    <p><code>sh
+ virtualenv --system-site-packages &lt;env_name&gt;
+</code></p>
   </li>
   <li>
     <p>Virtualenv with python3</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>virtualenv --python<span class="o">=</span><span class="k">$(</span>which python3<span class="k">)</span> &lt;env_name&gt;
-</code></pre>
-    </div>
+    <p><code>sh
+virtualenv --python=$(which python3) &lt;env_name&gt;
+</code></p>
   </li>
   <li>
     <p>Virtualenv can’t move. You must edit environment path in</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>&lt;your_env&gt;/bin/activate
-&lt;your_env&gt;/bin/activate.csh
-&lt;your_env&gt;/bin/activate.finsh
-</code></pre>
-    </div>
+    <p>```sh</p>
+    <your_env>/bin/activate
+<your_env>/bin/activate.csh
+<your_env>/bin/activate.finsh
+```
+</your_env></your_env></your_env>
   </li>
   <li>
     <p>Install py package into python2</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install &lt;package&gt;
-</code></pre>
-    </div>
+    <p><code>sh
+pip install &lt;package&gt;
+</code></p>
   </li>
   <li>
     <p>Install py package into python3</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip3 install &lt;package&gt;
-</code></pre>
-    </div>
+    <p><code>sh
+pip3 install &lt;package&gt;
+</code></p>
   </li>
   <li>
     <p>Pip upgrade</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install &lt;package&gt; --upgrade
-</code></pre>
-    </div>
+    <p><code>sh
+pip install &lt;package&gt; --upgrade
+</code></p>
 
     <p>or you can use <a href="https://github.com/nvie/pip-tools">pip-tool</a> to review all pip-package to upgrade</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install pip-tools
+    <p><code>sh
+pip install pip-tools
 pip-review
 pip-dump
-</code></pre>
-    </div>
+</code></p>
   </li>
   <li>
     <p>Install Project as develop via pip</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># same as 'python setup.py develope'</span>
+    <p><code>sh
+# same as 'python setup.py develope'
 pip install --use-mirrors --editable .
-</code></pre>
-    </div>
+</code></p>
   </li>
   <li>
     <p><a href="http://stackoverflow.com/questions/493386/how-to-print-in-python-without-newline-or-space">Print without newline or spaces</a></p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+    <p>```python
+import sys</p>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-</code></pre>
-    </div>
+    <p>for i in xrange(0,10):
+    sys.stdout.write(“.”)
+    sys.stdout.flush()
+```</p>
   </li>
   <li>
     <p><a href="http://stackoverflow.com/questions/1027714/how-to-execute-a-file-within-the-python-interpreter">How to execute a file within the python interpreter?</a></p>
   </li>
 </ul>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">execfile</span><span class="p">(</span><span class="s">'filename.py'</span><span class="p">)</span>
-</code></pre>
-</div>
+<p><code>python
+&gt;&gt;&gt; execfile('filename.py')
+</code></p>
 
 <ul>
   <li><a href="http://stackoverflow.com/questions/5516783/how-to-reload-python-module-imported-using-from-module-import">How to reload python module imported</a></li>
 </ul>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">X</span>
-<span class="nb">reload</span><span class="p">(</span> <span class="n">X</span> <span class="p">)</span>
-</code></pre>
-</div>
+<p><code>python
+import X
+reload( X )
+</code></p>
 
 <ul>
   <li><a href="http://stackoverflow.com/questions/7300321/how-to-use-pythons-pip-to-download-and-keep-the-zipped-files-for-a-package">How to use Python’s pip to download and keep the zipped files for a package?</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>pip install --download-cache<span class="o">=</span><span class="s2">"/pth/to/downloaded/files"</span> package
-</code></pre>
-</div>
+<p><code>sh
+$ pip install --download-cache="/pth/to/downloaded/files" package
+</code></p>
 
 <ul>
   <li><a href="http://bhfsteve.blogspot.se/2014/07/embedding-python-in-bash-scripts.html">Embedding python in bash scripts</a>
@@ -355,31 +356,31 @@ pip install --use-mirrors --editable .
       <li>
         <p><a href="https://gist.github.com/jiaaro/5452675">Embed Python in a bash script</a></p>
 
-        <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="k">function </span>line <span class="o">{</span>
-<span class="nv">PYTHON_ARG</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> python - <span class="sh">&lt;&lt;END
+        <p><code>sh
+function line {
+PYTHON_ARG="$1" python - &lt;&lt;END
 import os
 line_len = int(os.environ['PYTHON_ARG'])
 print '-' * line_len
 END
-</span><span class="o">}</span>
-</code></pre>
-        </div>
+}
+</code></p>
       </li>
       <li>
         <p><a href="http://stackoverflow.com/questions/2119702/calling-a-python-function-from-bash-script">Calling a python function from bash script</a></p>
 
-        <div class="language-sh highlighter-rouge"><pre class="highlight"><code>python -c<span class="s1">'import themodule; themodule.thefunction("boo!")'</span>
-</code></pre>
-        </div>
+        <p><code>sh
+python -c'import themodule; themodule.thefunction("boo!")'
+</code></p>
       </li>
     </ul>
   </li>
   <li>
     <p><a href="http://stackoverflow.com/questions/5574702/how-to-print-to-stderr-in-python">How to print to stderr in Python?</a></p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span> <span class="o">&gt;&gt;</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">,</span> <span class="s">'word'</span>
-</code></pre>
-    </div>
+    <p><code>python
+print &gt;&gt; sys.stderr, 'word'
+</code></p>
   </li>
 </ul>
 
@@ -389,61 +390,61 @@ END
     <p><a href="http://virtualenv.readthedocs.org">Virtualenv</a>
 <a href="http://code.tutsplus.com/articles/python-power-tools-virtualenv--net-31560">Python Power Tools: virtualenv</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install virtualenv
-</code></pre>
-    </div>
+    <p><code>sh
+pip install virtualenv
+</code></p>
 
     <p>Or</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew install pyenv-virtualenv
-</code></pre>
-    </div>
+    <p><code>sh
+brew install pyenv-virtualenv
+</code></p>
   </li>
   <li>
     <p><a href="http://virtualenvwrapper.readthedocs.org">VirtualenvWrapper</a> -  <a href="http://code.tutsplus.com/articles/python-power-tools-virtualenvwrapper--net-31569">Python Power Tools: virtualenvwrapper</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install virtualenvwrapper
-</code></pre>
-    </div>
-    <p>add this into your .bashrc/.zshrc</p>
+    <p><code>sh
+pip install virtualenvwrapper
+</code>
+add this into your .bashrc/.zshrc</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span>&lt;env_path&gt;
-<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
-</code></pre>
-    </div>
+    <p><code>sh
+export WORKON_HOME=&lt;env_path&gt;
+source /usr/local/bin/virtualenvwrapper.sh
+</code></p>
   </li>
   <li>
     <p><a href="https://github.com/kennethreitz/autoenv">AutoEnv</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew install autoenv
-<span class="nb">echo</span> <span class="s1">'source /usr/local/opt/autoenv/activate.sh'</span> &gt;&gt; ~/.zshrc
-</code></pre>
-    </div>
+    <p><code>sh
+brew install autoenv
+echo 'source /usr/local/opt/autoenv/activate.sh' &gt;&gt; ~/.zshrc
+</code></p>
   </li>
   <li>
     <p><a href="https://github.com/hhatto/autopep8">AutoPEP8</a></p>
   </li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># install</span>
-<span class="gp">$ </span>pip install --upgrade autopep8
-<span class="c"># usage</span>
-<span class="gp">$ </span>autopep8 --in-place --aggressive --aggressive &lt;filename&gt;
-</code></pre>
-</div>
+<p><code>sh
+# install
+$ pip install --upgrade autopep8
+# usage
+$ autopep8 --in-place --aggressive --aggressive &lt;filename&gt;
+</code></p>
 
 <ul>
   <li><a href="https://www.logilab.org/blogentry/6883">Pyreverse : UML Diagrams for Python</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># install</span>
-<span class="gp">$ </span>pip install pylint
-<span class="gp">$ </span>apt-get install graphviz
+<p>```sh
+# install
+$ pip install pylint
+$ apt-get install graphviz</p>
 
-<span class="c"># usage</span>
-pyreverse -o png &lt;code&gt;
-</code></pre>
-</div>
+<h1 id="usage">usage</h1>
+<p>pyreverse -o png <code>
+```</code></p>
 
 <ul>
   <li><a href="http://aboumrad.info/essential-python-tools-quality.html">Essential python tools - Quality</a></li>
@@ -565,6 +566,15 @@ take?</a></li>
     
       <li>
         <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/react/">
             React
             <small>04 Nov 2016</small>
@@ -577,15 +587,6 @@ take?</a></li>
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>

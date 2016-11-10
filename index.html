@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -201,6 +201,44 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/redux/">
+        Redux
+      </a>
+    </h1>
+
+    <span class="post-date">
+      10 Nov 2016
+      
+        &middot;
+        <a href="/redux/#disqus_thread" data-disqus-identifier="/redux/"></a>
+        
+          &middot;
+          Updated November 10, 2016
+        
+      
+    </span>
+
+    
+      <h1 id="intro">Intro</h1>
+<ul>
+  <li><a href="http://redux.js.org/docs/introduction/ThreePrinciples.html">Redux - Three Principles</a></li>
+  <li><a href="https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.fva82bt27">A Cartoon intro to Redux</a></li>
+  <li><a href="https://css-tricks.com/learning-react-redux/">Leveling Up with React: Redux</a></li>
+  <li><a href="http://www.youhavetolearncomputers.com/blog/2015/9/15/a-conceptual-overview-of-redux-or-how-i-fell-in-love-with-a-javascript-state-container">Understanding Redux (or, How I Fell in Love with a JavaScript State Container)</a></li>
+  <li><a href="http://redux.js.org/docs/basics/">Redux - Basics</a></li>
+  <li><a href="https://scotch.io/bar-talk/getting-started-with-redux-an-intro">Getting Started with Redux: An Intro</a></li>
+  <li><a href="https://speakerdeck.com/chrisui/real-world-redux">Real World Redux</a></li>
+</ul>
+
+
+      <div style="text-align:right;">
+        <a href="/redux/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -274,11 +312,11 @@
     
       <h2 id="example-ignore-css-in-only-src">Example: ignore .css in only /src</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># .gitignore
+<p>```
+# .gitignore</p>
 
-src/**/*.css
-</code></pre>
-</div>
+<p>src/<em>*/</em>.css
+```</p>
 
 
       <div style="text-align:right;">
@@ -313,12 +351,12 @@ src/**/*.css
   <li>
     <p><a href="http://stackoverflow.com/a/33569970/6144391">Resolve Git merge conflicts in favor of their changes during a pull</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code># In conflicted state
+    <p><code>
+# In conflicted state
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
 $ git add -u . // add file with skip iles that are not under version control
-</code></pre>
-    </div>
+</code></p>
   </li>
 </ul>
 
@@ -353,60 +391,20 @@ $ git add -u . // add file with skip iles that are not under version control
   <li>First Way, load files to buffer and run command for each buffers</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// search keyword on files and load files to buffers
-:args `rg -l pattern path/`
+<p>```
+// search keyword on files and load files to buffers
+:args <code>rg -l pattern path/</code></p>
 
-// list buffers
-:buffers
+<p>// list buffers
+:buffers</p>
 
-// substitute word for each buffers and save
+<p>// substitute word for each buffers and save
 :argdo %s/pattern/newpattern/ge | update
-</code></pre>
-</div>
+```</p>
 
 
       <div style="text-align:right;">
         <a href="/vim-change-multiple-files/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/git-submodule-subtree/">
-        Git Submodule and Git Subtree
-      </a>
-    </h1>
-
-    <span class="post-date">
-      25 Oct 2016
-      
-        &middot;
-        <a href="/git-submodule-subtree/#disqus_thread" data-disqus-identifier="/git-submodule-subtree/"></a>
-        
-          &middot;
-          Updated October 26, 2016
-        
-      
-    </span>
-
-    
-      <h1 id="git-submodule">git submodule</h1>
-
-<ul>
-  <li><a href="https://gist.github.com/gitaarik/8735255">Git Submodules basic explanation</a></li>
-  <li><a href="https://github.com/blog/2104-working-with-submodules">Working with submodules</a></li>
-  <li><a href="https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/">Splitting a subfolder out into a new repository</a></li>
-  <li><a href="http://www.speirs.org/blog/2009/5/11/understanding-git-submodules.html">Understanding Git Submodules</a></li>
-  <li><a href="http://blogs.atlassian.com/2013/03/git-submodules-workflows-tips/">Git Submodules: Core concept, workflows and tips</a></li>
-  <li><a href="https://blog.jacius.info/git-submodule-cheat-sheet/">Git Submodules Cheat Sheet</a></li>
-  <li><a href="http://blog.joncairns.com/2011/10/how-to-use-git-submodules/">How to use Git submodules</a></li>
-  <li><a href="https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407">Mastering Git submodules</a></li>
-</ul>
-
-
-      <div style="text-align:right;">
-        <a href="/git-submodule-subtree/" style="color:#000;"> Read More </a>
       </div>
     
   </div>

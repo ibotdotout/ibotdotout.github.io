@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -221,51 +221,51 @@
 
   <blockquote>
   <p>Github Pages Tips:<br />
-Github Pages always complie jekyll with <code class="highlighter-rouge">--safe</code> option that will<br />
+Github Pages always complie jekyll with <code>--safe</code> option that will<br />
 disable plugins but some plugin can work with Github Pages.<br />
-<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a></p>
+<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a>  </p>
 </blockquote>
 
 <blockquote>
   <p>Easy ways: using <a href="http://jekyllrb.com/docs/posts/#post-excerpts">excerpt option of &gt; jekyll</a><br />
-<a href="http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll">Customized excerpt separator in &gt; Jekyll</a></p>
+<a href="http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll">Customized excerpt separator in &gt; Jekyll</a>  </p>
 </blockquote>
 
-<p>Just using <code class="highlighter-rouge">truncate</code> they not checking html tag that make your site look
+<p>Just using <code>truncate</code> they not checking html tag that make your site look
 terrible and Github Pages not support custom ruby script that place in
-<code class="highlighter-rouge">_plugins</code>. The better way is using split with custom tags.</p>
+<code>_plugins</code>. The better way is using split with custom tags.</p>
 
-<p>Replace `` in <code class="highlighter-rouge">index.html</code> in jekyll directory with</p>
+<p>Replace `` in <code>index.html</code> in jekyll directory with</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>    
-    <span class="p">{</span><span class="sx">% if </span><span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="n">contains</span> <span class="s2">"&lt;!-- more --&gt;"</span> <span class="o">%</span><span class="p">}</span>
-      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="nb">split</span><span class="ss">:"&lt;!-- more --&gt;"</span> <span class="o">|</span> <span class="n">first</span> <span class="o">%</span> <span class="p">}}</span>
-      <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"text-align:right;"</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"{{ post.url }}"</span> <span class="n">style</span><span class="o">=</span><span class="s2">"color:#000;"</span><span class="o">&gt;</span> <span class="no">Read</span> <span class="no">More</span> <span class="o">&lt;</span><span class="sr">/a&gt;
-      &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-    <span class="p">{</span><span class="sx">% else </span><span class="o">%</span><span class="p">}</span>
-      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="p">}}</span>
-    <span class="p">{</span><span class="sx">% endif </span><span class="o">%</span><span class="p">}</span>
-    
+<p>```ruby</p>
+
+<pre><code>{% if post.content contains "&lt;!-- more --&gt;" %}
+  {{ post.content | split:"&lt;!-- more --&gt;" | first % }}
+  &lt;div style="text-align:right;"&gt;
+    &lt;a href="{{ post.url }}" style="color:#000;"&gt; Read More &lt;/a&gt;
+  &lt;/div&gt;
+{% else %}
+  {{ post.content }}
+{% endif %}
 </code></pre>
-</div>
+
+<p>```</p>
 
 <!-- more -->
 
-<p>In your contents add <code class="highlighter-rouge">&lt;!-- more --&gt;</code></p>
+<p>In your contents add <code>&lt;!-- more --&gt;</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>---
-layout: post
+<h2 id="section">```</h2>
+<p>layout: post
 title: Read more feature on jekyll
 tags: [jekyll]
----
-Hello, world
+—
+Hello, world</p>
 
-&lt;!-- more --&gt;
+<!-- more -->
 
-You can't see this message via index.html
-</code></pre>
-</div>
+<p>You can’t see this message via index.html
+```</p>
 
 <h3 id="references">References:</h3>
 <ol>
@@ -282,6 +282,15 @@ You can't see this message via index.html
     
       <li>
         <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/react/">
             React
             <small>04 Nov 2016</small>
@@ -294,15 +303,6 @@ You can't see this message via index.html
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>

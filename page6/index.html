@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -204,6 +204,43 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/osx-convert-encoding/">
+        Convert File Encoding in OSX
+      </a>
+    </h1>
+
+    <span class="post-date">
+      19 Oct 2015
+      
+        &middot;
+        <a href="/osx-convert-encoding/#disqus_thread" data-disqus-identifier="/osx-convert-encoding/"></a>
+        
+      
+    </span>
+
+    
+      <p>Sometime, you download file from Internet specially file that in local language
+which not encode with UTF-8 that unreadable on OSX. Your should guess
+what encode that file using and convert it in to UTF-8.</p>
+
+<p><code>sh
+# convert tis-620 to utf-8 encoding
+$iconv -f tis-620 -t utf-8 source.xml &gt; destination.xml
+</code></p>
+
+<p>Example. Thai language on Windows system normally encode with TIS-620 when
+open it in OSX that will display with some symbol char that unreadable.
+You should convert that file from tis-620 to utf-8 which make it readable on osx.</p>
+
+
+      <div style="text-align:right;">
+        <a href="/osx-convert-encoding/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/read-more-jekyll/">
         Read more feature on jekyll
       </a>
@@ -221,34 +258,35 @@
     
       <blockquote>
   <p>Github Pages Tips:<br />
-Github Pages always complie jekyll with <code class="highlighter-rouge">--safe</code> option that will<br />
+Github Pages always complie jekyll with <code>--safe</code> option that will<br />
 disable plugins but some plugin can work with Github Pages.<br />
-<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a></p>
+<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a>  </p>
 </blockquote>
 
 <blockquote>
   <p>Easy ways: using <a href="http://jekyllrb.com/docs/posts/#post-excerpts">excerpt option of &gt; jekyll</a><br />
-<a href="http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll">Customized excerpt separator in &gt; Jekyll</a></p>
+<a href="http://snippetrepo.com/snippets/customized-excerpt-separator-in-jekyll">Customized excerpt separator in &gt; Jekyll</a>  </p>
 </blockquote>
 
-<p>Just using <code class="highlighter-rouge">truncate</code> they not checking html tag that make your site look
+<p>Just using <code>truncate</code> they not checking html tag that make your site look
 terrible and Github Pages not support custom ruby script that place in
-<code class="highlighter-rouge">_plugins</code>. The better way is using split with custom tags.</p>
+<code>_plugins</code>. The better way is using split with custom tags.</p>
 
-<p>Replace `` in <code class="highlighter-rouge">index.html</code> in jekyll directory with</p>
+<p>Replace `` in <code>index.html</code> in jekyll directory with</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>    
-    <span class="p">{</span><span class="sx">% if </span><span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="n">contains</span> <span class="s2">"&lt;!-- more --&gt;"</span> <span class="o">%</span><span class="p">}</span>
-      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="nb">split</span><span class="ss">:"&lt;!-- more --&gt;"</span> <span class="o">|</span> <span class="n">first</span> <span class="o">%</span> <span class="p">}}</span>
-      <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"text-align:right;"</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"{{ post.url }}"</span> <span class="n">style</span><span class="o">=</span><span class="s2">"color:#000;"</span><span class="o">&gt;</span> <span class="no">Read</span> <span class="no">More</span> <span class="o">&lt;</span><span class="sr">/a&gt;
-      &lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-    <span class="p">{</span><span class="sx">% else </span><span class="o">%</span><span class="p">}</span>
-      <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="p">}}</span>
-    <span class="p">{</span><span class="sx">% endif </span><span class="o">%</span><span class="p">}</span>
-    
+<p>```ruby</p>
+
+<pre><code>{% if post.content contains "&lt;!-- more --&gt;" %}
+  {{ post.content | split:"&lt;!-- more --&gt;" | first % }}
+  &lt;div style="text-align:right;"&gt;
+    &lt;a href="{{ post.url }}" style="color:#000;"&gt; Read More &lt;/a&gt;
+  &lt;/div&gt;
+{% else %}
+  {{ post.content }}
+{% endif %}
 </code></pre>
-</div>
+
+<p>```</p>
 
 
       <div style="text-align:right;">
@@ -283,18 +321,18 @@ terrible and Github Pages not support custom ruby script that place in
 
 <blockquote>
   <p>Trip:<br />
-<code class="highlighter-rouge">sed</code> in OSX may not working as example. You should try <code class="highlighter-rouge">gsed</code>.<br />
-<code class="highlighter-rouge">gsed</code> can install via brew and call <code class="highlighter-rouge">gsed</code> instead of <code class="highlighter-rouge">sed</code></p>
+<code>sed</code> in OSX may not working as example. You should try <code>gsed</code>.<br />
+<code>gsed</code> can install via brew and call <code>gsed</code> instead of <code>sed</code>  </p>
 </blockquote>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
-</span>1234 5678 9101 1234  
+<p><code>sh
+$ cat in
+1234 5678 9101 1234  
 2999 5178 9101 2234  
-<span class="gp">$ </span>sed -re <span class="s1">'s/([0-9]{4}\s){3}/**** **** **** /'</span> <span class="k">in</span>
-<span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 1234  
-<span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 2234  
-</code></pre>
-</div>
+$ sed -re 's/([0-9]{4}\s){3}/**** **** **** /' in
+**** **** **** 1234  
+**** **** **** 2234  
+</code></p>
 
 
       <div style="text-align:right;">
@@ -322,17 +360,17 @@ terrible and Github Pages not support custom ruby script that place in
     
       <p><img src="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" alt="sharing with open graph" /></p>
 
-<p>Add this meta data to your <code class="highlighter-rouge">html page</code> between <code class="highlighter-rouge">&lt;head&gt; ... &lt;/head&gt;</code></p>
+<p>Add this meta data to your <code>html page</code> between <code>&lt;head&gt; ... &lt;/head&gt;</code></p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Markdown Slide"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/slide/"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/opengraph_logo.png"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Remark.js - easy and simple slide"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
- <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
-</code></pre>
-</div>
+<p><code>html
+ &lt;meta property="og:title" content="Markdown Slide" /&gt;
+ &lt;meta property="og:type" content="article" /&gt;
+ &lt;meta property="og:url" content="http://dev.im-bot.com/slide/" /&gt;
+ &lt;meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" /&gt;
+ &lt;meta property="og:description" content="Remark.js - easy and simple slide" /&gt;
+ &lt;meta property="og:site_name" content="botbotbot" /&gt;
+ &lt;meta property="og:locale" content="th_TH" /&gt;
+</code></p>
 
 <p>Then using <a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a> to look what it look like when shared.</p>
 
@@ -368,12 +406,12 @@ terrible and Github Pages not support custom ruby script that place in
   <li><a href="https://github.com/derickfay/key2txt/blob/master/k2remark.applescript">Keynote to Remark.js</a></li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>1. Open a Keynote presentation
+<p><code>
+1. Open a Keynote presentation
 2. Run the script.
 3. Select output destination
 4. Got rough remark.js slide
-</code></pre>
-</div>
+</code></p>
 
 <h2 id="other-markdown-slide">Other Markdown slide</h2>
 <ul>
@@ -384,55 +422,6 @@ terrible and Github Pages not support custom ruby script that place in
 
       <div style="text-align:right;">
         <a href="/slide/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/pair-programming/">
-        Pair Programming
-      </a>
-    </h1>
-
-    <span class="post-date">
-      04 Oct 2015
-      
-        &middot;
-        <a href="/pair-programming/#disqus_thread" data-disqus-identifier="/pair-programming/"></a>
-        
-          &middot;
-          Updated January 09, 2016
-        
-      
-    </span>
-
-    
-      <blockquote>
-  <p>My mind to your mind. My thoughts to your thoughts… – MrSpock</p>
-</blockquote>
-
-<h2 id="all-i-really-need-to-know-about-pair-programming-i-learned-in-kindergartenhttpwwwcsriceedumgrickenteaching40209-springreadingseverythingpdf"><a href="http://www.cs.rice.edu/~mgricken/teaching/402/09-spring/readings/Everything.pdf">All I really need to know about pair programming I learned in kindergarten</a></h2>
-
-<blockquote>
-  <p>When it comes to programming practices,
-studies show two heads are almost always better than one.</p>
-</blockquote>
-
-<blockquote>
-  <p>The pair can solve problems they couldn’t solve alone and can help
-improve each other’s skills.</p>
-</blockquote>
-
-<blockquote>
-  <p>If you think about something long enough, the brain will consider it a
-truth.  If you tell yourself something negative, such as “I’m a terrible
-programmer,” soon your brain will believe you.</p>
-</blockquote>
-
-
-      <div style="text-align:right;">
-        <a href="/pair-programming/" style="color:#000;"> Read More </a>
       </div>
     
   </div>

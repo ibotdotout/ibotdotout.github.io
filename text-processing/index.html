@@ -99,6 +99,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -148,10 +152,6 @@
     
       
         
-      
-    
-      
-    
       
     
 
@@ -228,53 +228,53 @@
 
 <blockquote>
   <p>Trip:<br />
-<code class="highlighter-rouge">sed</code> in OSX may not working as example. You should try <code class="highlighter-rouge">gsed</code>.<br />
-<code class="highlighter-rouge">gsed</code> can install via brew and call <code class="highlighter-rouge">gsed</code> instead of <code class="highlighter-rouge">sed</code></p>
+<code>sed</code> in OSX may not working as example. You should try <code>gsed</code>.<br />
+<code>gsed</code> can install via brew and call <code>gsed</code> instead of <code>sed</code>  </p>
 </blockquote>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
-</span>1234 5678 9101 1234  
+<p><code>sh
+$ cat in
+1234 5678 9101 1234  
 2999 5178 9101 2234  
-<span class="gp">$ </span>sed -re <span class="s1">'s/([0-9]{4}\s){3}/**** **** **** /'</span> <span class="k">in</span>
-<span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 1234  
-<span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 2234  
-</code></pre>
-</div>
+$ sed -re 's/([0-9]{4}\s){3}/**** **** **** /' in
+**** **** **** 1234  
+**** **** **** 2234  
+</code></p>
 
 <!-- more -->
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
-</span>1234 5678 9101 1234  
+<p><code>sh
+$ cat in
+1234 5678 9101 1234  
 2999 5178 9101 2234  
-<span class="gp">$ </span>sed -r <span class="s1">'s/([0-9]{4}\s?)([0-9]{4}\s?)([0-9]{4}\s?)([0-9]{4})/\4
-\3\2\1/'</span> <span class="k">in
-</span>1234 9101 5678 1234  
+$ sed -r 's/([0-9]{4}\s?)([0-9]{4}\s?)([0-9]{4}\s?)([0-9]{4})/\4
+\3\2\1/' in
+1234 9101 5678 1234  
 2234 9101 5178 2999  
-</code></pre>
-</div>
+</code></p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
-</span>hello cat meow meow Cat Cat caT love cAt
-<span class="gp">$ </span>sed -e <span class="s1">'s/cat/{\0}/gi'</span> <span class="k">in
-</span>hello <span class="o">{</span>cat<span class="o">}</span> meow meow <span class="o">{</span>Cat<span class="o">}</span> <span class="o">{</span>Cat<span class="o">}</span> <span class="o">{</span>caT<span class="o">}</span> love <span class="o">{</span>cAt<span class="o">}</span>
-</code></pre>
-</div>
+<p><code>sh
+$ cat in
+hello cat meow meow Cat Cat caT love cAt
+$ sed -e 's/cat/{\0}/gi' in
+hello {cat} meow meow {Cat} {Cat} {caT} love {cAt}
+</code></p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
-</span>hello cat meow meow Cat Cat caT love cAt
-<span class="gp">$ </span>sed -e <span class="s1">'s/cat/dog/gi'</span> <span class="k">in
-</span>hello dog meow meow dog dog dog love dog
-</code></pre>
-</div>
+<p><code>sh
+$ cat in
+hello cat meow meow Cat Cat caT love cAt
+$ sed -e 's/cat/dog/gi' in
+hello dog meow meow dog dog dog love dog
+</code></p>
 
 <h3 id="reference">Reference:</h3>
 <ol>
-  <li><a href="http://www.grymoire.com/Unix/Sed.html">Sed - An Introduction and Tutorial by Bruce Barnett</a></li>
-  <li><a href="http://tldp.org/LDP/abs/html/x23170.html">Advanced Bash-Scripting Guide: Sed</a></li>
-  <li><a href="http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html">Sed Command in Unix and Linux Examples</a></li>
-  <li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Unix Sed Tutorial: Advanced Sed Substitution Examples</a></li>
-  <li><a href="http://stackoverflow.com/questions/2232200/regular-expression-in-sed-for-masking-credit-card">regular expression in sed for masking credit card</a></li>
-  <li><a href="https://www.gnu.org/software/sed/manual/sed.html">sed, a stream editor</a></li>
+  <li><a href="http://www.grymoire.com/Unix/Sed.html">Sed - An Introduction and Tutorial by Bruce Barnett</a>  </li>
+  <li><a href="http://tldp.org/LDP/abs/html/x23170.html">Advanced Bash-Scripting Guide: Sed</a>  </li>
+  <li><a href="http://www.folkstalk.com/2012/01/sed-command-in-unix-examples.html">Sed Command in Unix and Linux Examples</a>  </li>
+  <li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Unix Sed Tutorial: Advanced Sed Substitution Examples</a>  </li>
+  <li><a href="http://stackoverflow.com/questions/2232200/regular-expression-in-sed-for-masking-credit-card">regular expression in sed for masking credit card</a>  </li>
+  <li><a href="https://www.gnu.org/software/sed/manual/sed.html">sed, a stream editor</a>  </li>
   <li><a href="https://www.digitalocean.com/community/tutorials/the-basics-of-using-the-sed-stream-editor-to-manipulate-text-in-linux">The Basics of Using the Sed Stream Editor to Manipulate Text in Linux</a></li>
   <li><a href="https://www.digitalocean.com/community/articles/intermediate-sed-manipulating-streams-of-text-in-a-linux-environment">Intermediate Sed: Manipulating Streams of Text in a Linux Environment</a></li>
   <li><a href="http://www.tutorialspoint.com/unix/unix-regular-expressions.htm">Unix - Regular Expressions with SED</a></li>
@@ -287,50 +287,50 @@
 
 <h2 id="awk">Awk</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
-</span>A 25 27 50  
+<p><code>sh
+$ cat in
+A 25 27 50  
 B 35 75  
 C 75 78  
 D 99 88 76  
-<span class="gp">$ </span>awk <span class="s1">'{ if ($4 =="") print "Not all scores are available for",$1; }'</span> <span class="k">in
-</span>Not all scores are available <span class="k">for </span>B
-Not all scores are available <span class="k">for </span>C
-</code></pre>
-</div>
+$ awk '{ if ($4 =="") print "Not all scores are available for",$1; }' in
+Not all scores are available for B
+Not all scores are available for C
+</code></p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
-</span>B 35 37 75  
+<p><code>sh
+$ cat in
+B 35 37 75  
 C 75 78 80  
-<span class="gp">$ </span>awk <span class="s1">'{print $1,":",($4 &gt;= 50 &amp;&amp; $2 &gt;= 50 &amp;&amp; $3 &gt;= 50)?"Pass":"Fail"}'</span> <span class="k">in
-</span>B : Fail
+$ awk '{print $1,":",($4 &gt;= 50 &amp;&amp; $2 &gt;= 50 &amp;&amp; $3 &gt;= 50)?"Pass":"Fail"}' in
+B : Fail
 C : Pass
-</code></pre>
-</div>
+</code></p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
-</span>B 35 37 75  
+<p><code>sh
+$ cat in
+B 35 37 75  
 C 75 78 80  
-<span class="gp">$ </span>awk <span class="s1">'{ score=($2+$3+$3)/3; \
+$ awk '{ score=($2+$3+$3)/3; \
 if (score &gt;= 80) grade = "A"; \
 else if (score &gt;= 60) grade = "B"; \
 else if(score &gt;= 50) grade= "C"; \
 else grade = "FAIL "; \
-print $0,":",grade }'</span>
+print $0,":",grade }'
 B 35 37 75 : FAIL
 C 75 78 80 : B
-</code></pre>
-</div>
+</code></p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
-</span>A 25 27 50  
+<p><code>sh
+$ cat in
+A 25 27 50  
 B 35 37 75  
 C 75 78 80  
 D 99 88 76  
-<span class="gp">$ </span>awk <span class="s1">'ORS=NR%2?";":"\n"'</span> <span class="k">in
-</span>A 25 27 50;B 35 37 75  
+$ awk 'ORS=NR%2?";":"\n"' in
+A 25 27 50;B 35 37 75  
 C 75 78 80;D 99 88 76  
-</code></pre>
-</div>
+</code></p>
 
 <h3 id="reference-1">Reference:</h3>
 <ol>
@@ -343,9 +343,9 @@ C 75 78 80;D 99 88 76
 
 <h2 id="grep">Grep</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>grep -o text <span class="c"># show only match</span>
-</code></pre>
-</div>
+<p><code>sh
+$ grep -o text # show only match
+</code></p>
 
 <h3 id="reference-2">Reference:</h3>
 <ol>
@@ -357,12 +357,12 @@ C 75 78 80;D 99 88 76
 
 <h2 id="paste">Paste</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>paste file1 file2
-<span class="gp">$ </span>paste -d, file1 file2
-<span class="gp">$ </span>paste -s file1
-</code></pre>
-</div>
-<p>### Reference:<br />
+<p><code>sh
+$ paste file1 file2
+$ paste -d, file1 file2
+$ paste -s file1
+</code>
+### Reference:<br />
 1. <a href="http://stackoverflow.com/questions/12361977/how-to-join-columns-of-two-files-in-unix-system">How to join columns of two files in unix system</a>
 2. <a href="http://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html">10 examples of paste command usage in
    Linux</a>
@@ -370,12 +370,12 @@ C 75 78 80;D 99 88 76
 
 <h3 id="bash-substring">Bash Substring</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># $ {var::-1}</span>
-<span class="gp">$ </span><span class="nv">a</span><span class="o">=</span>123
-<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">a</span>::-1<span class="k">}</span><span class="s2">"</span>
+<p><code>sh
+# $ {var::-1}
+$ a=123
+$ echo "${a::-1}"
 12
-</code></pre>
-</div>
+</code></p>
 
 <h3 id="reference-3">Reference:</h3>
 <ol>
@@ -387,6 +387,15 @@ C 75 78 80;D 99 88 76
 <div class="related">
   <h2>Latest Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -402,15 +411,6 @@ C 75 78 80;D 99 88 76
           <a href="/git-ignore-sub-dir/">
             Git ignore files in sub-directories
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/git-conflicts/">
-            Git conflicts
-            <small>02 Nov 2016</small>
           </a>
         </h3>
       </li>
