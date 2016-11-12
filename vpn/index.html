@@ -8,20 +8,20 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="All about Security" />
+  <meta property="og:title" content="Open VPN" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/Security//" />
+<meta property="og:url" content="http://dev.im-bot.com/vpn//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="OWASP Broken Web Applications Project  WLAN Security Megaprimer (SecurityTube)  Metasploit Framework Expert (SecurityTube)  Linux Assembly Expert (SecurityTu..." />
+<meta property="og:description" content="  openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS" />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      All about Security &middot; botbotbot
+      Open VPN &middot; botbotbot
     
   </title>
 
@@ -205,79 +205,57 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">All about Security</h1>
+  <h1 class="post-title">Open VPN</h1>
   <span class="post-date">
-    05 Feb 2015
+    12 Nov 2016
       
         Tags:
         
-          <a href="/tags/#security">
-            security
+          <a href="/tags/#vpn">
+            vpn
           </a>
         
       
       
         &middot;
-        <a href="/Security//index.html#disqus_thread" data-disqus-identifier="/Security/"></a>
+        <a href="/vpn//index.html#disqus_thread" data-disqus-identifier="/vpn/"></a>
       
+      
+        &middot;
+        Updated November 12, 2016
       
   </span>
 
-  <h3 id="owasp-broken-web-applications-project">OWASP Broken Web Applications Project</h3>
-<ul>
-  <li>WLAN Security Megaprimer (SecurityTube)</li>
-  <li>Metasploit Framework Expert (SecurityTube)</li>
-  <li>Linux Assembly Expert (SecurityTube)</li>
-  <li>Hack Night (NYU Poly ISIS Lab)</li>
-  <li>The Life of Binaries (OpenSecurityTraining)</li>
+  <ul>
+  <li><a href="https://github.com/Nyr/openvpn-install">openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS</a></li>
 </ul>
 
-<h3 id="recomment-video">Recomment Video:</h3>
-<ol>
-  <li><a href="https://www.youtube.com/watch?v=BTq0OO8EFeU">OLX.co.th - XSS to Account Take Over</a></li>
-  <li><a href="https://www.youtube.com/watch?v=CbqU51yZH-4">ทดสอบแฮกเว็บง่าย ๆ ด้วย OWASP BWA #1</a></li>
-  <li><a href="https://www.youtube.com/watch?v=xh45fBIANpc">how to be a web pentester (white hacker)</a></li>
-  <li><a href="https://www.youtube.com/watch?v=BgAiMgDnIDY">อธิบายการทำงานของโปรแกรม traceroute (tracert)</a></li>
-  <li><a href="https://www.youtube.com/watch?v=-_Hejoa1ESM">สาธิตการใช้งาน Burp Suite เบื้องต้น (package sniffer)</a></li>
-</ol>
+<!-- more -->
 
-<h3 id="youtube-channel">Youtube Channel:</h3>
-<ol>
-  <li><a href="https://www.youtube.com/user/2600Thailand/videos">2600Thailand Group</a></li>
-  <li><a href="https://www.youtube.com/user/pich4ya/videos">Pichaya Morimoto</a></li>
-  <li><a href="https://www.youtube.com/user/yannarak/videos">Yannarak Wannasai</a></li>
-  <li><a href="https://www.youtube.com/user/opkwin/videos">ตาเล็ก วินโด้</a></li>
-  <li><a href="http://www.cybrary.it/course/ethical-hacking/">Penetration Testing and Ethical Hacking</a></li>
-</ol>
+<h2 id="openvpn-only-route-a-specific-ip-addresses-through-vpn">OpenVPN: Only route a specific IP addresses through VPN</h2>
 
-<h3 id="tranning">Tranning:</h3>
-<ol>
-  <li><a href="https://www.hackthissite.org">Hack This Site</a></li>
-  <li><a href="https://github.com/isislab/Hack-Night">Hack Night is an open weekly training session run by the ISIS lab</a></li>
-</ol>
+<p>edit your <code class="highlighter-rouge">client.opvn</code> file</p>
 
-<h3 id="penetration-testing-lab">Penetration testing lab</h3>
-<ol>
-  <li><a href="http://www.amanhardikar.com/mindmaps/Practice.html">PENETRATION TESTING PRACTICE LAB - VULNERABLE APPS / SYSTEMS</a></li>
-  <li><a href="https://www.vulnhub.com">Vulnhub</a></li>
-  <li><a href="https://lab.pentestit.ru">Pentestit</a></li>
-  <li><a href="https://www.pentesterlab.com/exercises/">Pentesterlab exercises</a></li>
-</ol>
+<div class="highlighter-rouge"><pre class="highlight"><code># reject all route from server config
+route-nopull
+
+# route ip range to through via VPN
+route 192.168.0.0 255.255.0.0
+</code></pre>
+</div>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://community.openvpn.net/openvpn/wiki/IgnoreRedirectGateway">Ignoring redirect-gateway</a></li>
+  <li><a href="http://serverfault.com/questions/631037/how-to-route-only-specific-openvpn-traffic-through-a-openvpn-based-on-ip-filteri/631048#631048">How to route only specific openVPN traffic through a openVPN based on IP filtering of the destination?</a></li>
+  <li><a href="http://superuser.com/questions/457020/openvpn-only-route-a-specific-ip-addresses-through-vpn/628488#628488">OpenVPN: Only route a specific IP addresses through VPN?</a></li>
+</ul>
 
 </div>
 
 <div class="related">
   <h2>Latest Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/vpn/">
-            Open VPN
-            <small>12 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -297,6 +275,15 @@
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/react/">
+            React
+            <small>04 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -308,7 +295,7 @@
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/Security/";
+      var disqus_identifier = "/vpn/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

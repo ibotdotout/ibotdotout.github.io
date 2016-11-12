@@ -208,6 +208,57 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/jekyll-with-ci/">
+        Jekyll with Continuous Integration
+      </a>
+    </h1>
+
+    <span class="post-date">
+      23 Sep 2015
+      
+        &middot;
+        <a href="/jekyll-with-ci/#disqus_thread" data-disqus-identifier="/jekyll-with-ci/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="travisyml">.travis.yml</h2>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/96c3b980cdecef2c7ee4.js"> </script>
+
+<h2 id="tips">Tips:</h2>
+
+<ul>
+  <li>Jekyll + Travis with Docker not work well - <a href="https://travis-ci.org/ibotdotout/ibotdotout.github.io/builds/81637869">Error:  Permission denied</a></li>
+</ul>
+
+<p>Travis support docker but not fully permission some dependencies that
+try to use OS command ex. kill can make your test error or failed.</p>
+
+<ul>
+  <li>htmlproofer external</li>
+</ul>
+
+<p>link that not start with http will be claim as internal link</p>
+
+<h2 id="references">References:</h2>
+<ol>
+  <li><a href="https://jekyllrb.com/docs/continuous-integration/">Jekyll with Continuous Integration</a></li>
+  <li><a href="http://www.jacobtomlinson.co.uk/jekyll/2015/02/18/test-you-jekyll-blog-with-travis-ci/">Test your Jekyll blog with Travis CI</a></li>
+  <li><a href="https://hub.docker.com/r/grahamc/jekyll/">Simple Docker Container for Jekyll Work</a></li>
+  <li><a href="http://stackoverflow.com/questions/28788109/automatic-merge-branch-into-master-on-sucessful-build-in-travis">Automatic merge branch into master on sucessful build in
+travis</a></li>
+  <li><a href="http://docs.travis-ci.com/user/deployment/custom/">TravisCI Custom Deployment</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/pomodoro/">
         Pomodoro Technique
       </a>
@@ -665,127 +716,6 @@ You can find XPath by following this video - <a href="https://www.youtube.com/wa
   <li>
     <p>You can use <a href="https://travis-ci.org">Travis-CI</a> and <a href="https://nightli.es">Nightly Builds</a> to run your script everyday - <a href="https://github.com/ibotdotout/robot-packtpub">See demo here</a>.</p>
   </li>
-</ul>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/dev-tools/">
-        OSX Dev Tools
-      </a>
-    </h1>
-
-    <span class="post-date">
-      27 Aug 2015
-      
-        &middot;
-        <a href="/dev-tools/#disqus_thread" data-disqus-identifier="/dev-tools/"></a>
-        
-      
-    </span>
-
-    
-      <h3 id="package-manager">Package Manager</h3>
-
-<ul>
-  <li><a href="http://brew.sh">Homebrew - The missing package manager for OS X</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>ruby -e <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
-</code></pre>
-</div>
-
-<ul>
-  <li><a href="http://caskroom.io">Homebrew Cask - “To install, drag this icon…” no more!</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap caskroom/cask
-</code></pre>
-</div>
-
-<ul>
-  <li><a href="https://github.com/caskroom/homebrew-fonts">Caskroom-fonts</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap caskroom/fonts
-</code></pre>
-</div>
-
-<ul>
-  <li><a href="https://github.com/beeftornado/homebrew-rmtree">homebrew-rmtree</a> - <a href="http://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies">Uninstall / remove a Homebrew package including all its
-dependencies</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap beeftornado/rmtree <span class="o">&amp;&amp;</span> brew install brew-rmtree
-<span class="gp">$ </span>brew rmtree &lt;package&gt;
-</code></pre>
-</div>
-
-<h3 id="developer-tools">Developer Tools</h3>
-
-<ul>
-  <li><a href="http://iterm2.com">iTerm2 - Mac OS Terminal Replacement</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># this is too old version</span>
-<span class="gp">$ </span>brew cask install iterm2
-
-<span class="c"># try night build that lastest version</span>
-<span class="gp">$ </span>brew tap caskroom/versions
-<span class="gp">$ </span>brew cask install iterm2-nightly
-</code></pre>
-</div>
-<ul>
-  <li><a href="http://ohmyz.sh">Oh My Zsh - managing your zsh configuration.</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-</code></pre>
-</div>
-
-<ul>
-  <li><a href="https://kapeli.com/dash">Dash - API Documentation Browser</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install dash
-</code></pre>
-</div>
-
-<h3 id="window-manager">Window Manager</h3>
-
-<ul>
-  <li><a href="http://spectacleapp.com">Spectacle - Move and resize windows with ease</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install spectacle
-</code></pre>
-</div>
-
-<h3 id="etc">Etc</h3>
-
-<ul>
-  <li><a href="https://justgetflux.com">f.lux - warm your display color</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install flux
-</code></pre>
-</div>
-
-<ul>
-  <li><a href="https://slack.com">Slack: Be less busy</a></li>
-</ul>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install slack
-</code></pre>
-</div>
-
-<ul>
-  <li><a href="http://www.iviewapp.net/2012/12/thai-dictionary-mac-os-x-mountain-lion.html">OSX Thai Dictionary</a></li>
-  <li><a href="https://gist.github.com/kevin-smets/8568070">iTerm2 + oh my zsh + solarized + Meslo powerline font (OSX)</a></li>
-  <li><a href="https://github.com/caskroom/homebrew-versions">homebrew-versions</a></li>
-  <li><a href="https://github.com/msanders/cider">Cider - homebrew wrapper</a></li>
 </ul>
 
     

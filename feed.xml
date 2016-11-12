@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-12T03:57:14+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-12T04:14:12+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com//vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//open-vpn</id><content type="html" xml:base="http://dev.im-bot.com//vpn/">&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Nyr/openvpn-install&quot;&gt;openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;openvpn-only-route-a-specific-ip-addresses-through-vpn&quot;&gt;OpenVPN: Only route a specific IP addresses through VPN&lt;/h2&gt;
+
+&lt;p&gt;edit your &lt;code class=&quot;highlighter-rouge&quot;&gt;client.opvn&lt;/code&gt; file&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# reject all route from server config
+route-nopull
+
+# route ip range to through via VPN
+route 192.168.0.0 255.255.0.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://community.openvpn.net/openvpn/wiki/IgnoreRedirectGateway&quot;&gt;Ignoring redirect-gateway&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://serverfault.com/questions/631037/how-to-route-only-specific-openvpn-traffic-through-a-openvpn-based-on-ip-filteri/631048#631048&quot;&gt;How to route only specific openVPN traffic through a openVPN based on IP filtering of the destination?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://superuser.com/questions/457020/openvpn-only-route-a-specific-ip-addresses-through-vpn/628488#628488&quot;&gt;OpenVPN: Only route a specific IP addresses through VPN?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vpn" /><summary type="html">openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS</summary></entry><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
 
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine create --driver generic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
     --generic-ip-address &lt;span class=&quot;nv&quot;&gt;$host_ip&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -645,103 +668,4 @@ db.bokks.find({$text:{$search:&quot;time&quot;}})
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><summary type="html">MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS
   
   
-    mongoDB prefix wildcard: fulltext-search ($text) find part with search-string</summary></entry><entry><title type="html">RESTful API</title><link href="http://dev.im-bot.com//restful-api/" rel="alternate" type="text/html" title="RESTful API" /><published>2016-06-26T00:00:00+00:00</published><updated>2016-06-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//restful-api</id><content type="html" xml:base="http://dev.im-bot.com//restful-api/">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/dwyl/learn-api-design&quot;&gt;Essential learning for people building APIs&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://blog.newrelic.com/2014/09/08/apipunchlist/&quot;&gt;The 5 Things  API Must Have&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Error handling
-2. Error logging
-3. Validation
-4. Authentication and authorization
-5. Testing
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blogs.mulesoft.com/dev/api-best-practices-series-intro/&quot;&gt;New Series: API Design Best Practices&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.ploeh.dk/2013/04/29/rest-lessons-learned/&quot;&gt;REST lessons learned by Mark Seemann&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.restapitutorial.com/httpstatuscodes.html&quot;&gt;HTTP Status Codes&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://codeplanet.io/principles-good-restful-api-design/&quot;&gt;Principles of good RESTful API Design&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.restapitutorial.com&quot;&gt;Learn REST: A RESTful Tutorial&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/RestCheatSheet/api-cheat-sheet#api-design-cheat-sheet&quot;&gt;API Design Cheat Sheet&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.octo.com/en/design-a-rest-api/&quot;&gt;How to design a REST API&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/&quot;&gt;10 Best Practices for Better RESTful API&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://restcookbook.com&quot;&gt;REST CookBook&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://codeplanet.io/principles-good-restful-api-design/&quot;&gt;Principles of good RESTful API Design&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://speakerdeck.com/jaytaph/rest-in-practice-froscon-2012&quot;&gt;REST in practice - FrOSCon 2012&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api&quot;&gt;Best Practices for Designing a Pragmatic RESTful API&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;rest-hypermedia-standard&quot;&gt;REST Hypermedia Standard&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://sookocheff.com/post/api/on-choosing-a-hypermedia-format/&quot;&gt;On choosing a hypermedia type for your API - HAL, JSON-LD, Collection+JSON, SIREN, Oh My!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;And the winner is?
-Unfortunately, there is no clear winner. It depends on the contraints in place on your API. However, I will offer some suggestions.
-If you are augmenting existing API responses choose JSON-LD. If you are keeping it simple choose HAL. If you are looking for a full ?&amp;gt; featured media type choose Collection+JSON&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://jsonapi.org&quot;&gt;JSON-API&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://stateless.co/hal_specification.html&quot;&gt;HAL - Hypertext Application Language&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;video&quot;&gt;Video&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=heh4OeB9A-c&quot;&gt;How To Design A Good API and Why it Matters&lt;/a&gt; - &lt;a href=&quot;http://landawn.com/How%20to%20Design%20a%20Good%20API%20and%20Why%20it%20Matters.pdf&quot;&gt;slide&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qCdpTji8nxo&quot;&gt;How to Design Great APIs - Parse Developer Day 2013&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary type="html">Essential learning for people building APIs
-  
-  
-    The 5 Things  API Must Have
-  
-
-
-1. Error handling
-2. Error logging
-3. Validation
-4. Authentication and authorization
-5. Testing</summary></entry></feed>
+    mongoDB prefix wildcard: fulltext-search ($text) find part with search-string</summary></entry></feed>
