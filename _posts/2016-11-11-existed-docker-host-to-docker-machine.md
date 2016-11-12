@@ -23,7 +23,7 @@ $ docker-machine create --driver generic \
 
 ## [How to mount local volumes in docker machine](http://stackoverflow.com/questions/30040708/how-to-mount-local-volumes-in-docker-machine)
 
-* you can't mount local voumes to `remote server` but you can upload your files
+* you can't mount local volumes to `remote server` but you can upload your files
   with `scp` or `rsync`
 
 * `docker-compose` will mount file with the same path in both `client` and `remote
