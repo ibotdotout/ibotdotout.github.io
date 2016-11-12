@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -245,16 +245,16 @@
   <li>
     <p><a href="http://www.tomighty.org">Tomighty - Simpler</a> - <a href="https://github.com/ccidral/tomighty">Source</a></p>
 
-    <p>```sh
-# osx
-$ brew cask install tomighty</p>
-
-    <h1 id="if-use-dark-theme-need-to-build-with-youself">if use dark theme need to build with youself</h1>
-    <p># issuse - https://github.com/ccidral/tomighty-osx/pull/16
-# https://github.com/mrknmc/tomighty-osx
-# notification version
-# https://github.com/eduardonunesp/tomighty-osx
-```</p>
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># osx</span>
+<span class="gp">$ </span>brew cask install tomighty
+   
+<span class="c"># if use dark theme need to build with youself</span>
+<span class="c"># issuse - https://github.com/ccidral/tomighty-osx/pull/16</span>
+<span class="c"># https://github.com/mrknmc/tomighty-osx</span>
+<span class="c"># notification version</span>
+<span class="c"># https://github.com/eduardonunesp/tomighty-osx</span>
+</code></pre>
+    </div>
   </li>
   <li>
     <p><a href="http://tomato-timer.com">TomatoTimer - WebApp</a></p>
@@ -294,10 +294,10 @@ $ brew cask install tomighty</p>
 
 <h3 id="janushttpsgithubcomcarlhudajanus"><a href="https://github.com/carlhuda/janus">Janus</a></h3>
 
-<p><code>sh
-# update vim version to support all plugin in janus
-$ brew install vim
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># update vim version to support all plugin in janus</span>
+<span class="gp">$ </span>brew install vim
+</code></pre>
+</div>
 
 <table>
   <thead>
@@ -347,10 +347,10 @@ m-&gt;a in NERDTree - create file/folder</p>
 
 <h3 id="ctags">Ctags</h3>
 
-<p><code>sh
-$ brew install ctags
-$ ctags -R # generate tags
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew install ctags
+<span class="gp">$ </span>ctags -R <span class="c"># generate tags</span>
+</code></pre>
+</div>
 
 <table>
   <thead>
@@ -373,19 +373,19 @@ $ ctags -R # generate tags
 
 <h3 id="vim-trailing-whitespacehttpsgithubcombronsonvim-trailing-whitespace"><a href="https://github.com/bronson/vim-trailing-whitespace">vim-trailing-whitespace</a></h3>
 
-<p><code>sh
-:FixWhitespace
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>:FixWhitespace
+</code></pre>
+</div>
 
 <h3 id="vimdeck---presentation-in-vimhttpsgithubcomtybenzvimdeck"><a href="https://github.com/tybenz/vimdeck">VimDeck - Presentation in Vim</a></h3>
 
-<p><code>sh
-# osx not support ascii-art
-$ brew install imagemagick
-$ sudo gem install rmagick
-# gem install vimdeck
-$ sudo gem install vimdeck-without-ascii-art
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># osx not support ascii-art</span>
+<span class="gp">$ </span>brew install imagemagick
+<span class="gp">$ </span>sudo gem install rmagick
+<span class="c"># gem install vimdeck</span>
+<span class="gp">$ </span>sudo gem install vimdeck-without-ascii-art
+</code></pre>
+</div>
 
 <h2 id="reference">Reference:</h2>
 <ol>
@@ -634,23 +634,23 @@ $ sudo gem install vimdeck-without-ascii-art
 
 <h2 id="package-requirements-or-dockerfile-on-robot-packtpub-repohttpsgithubcomibotdotoutrobot-packtpub">Package Requirements or <a href="https://github.com/ibotdotout/robot-packtpub">Dockerfile on Robot-packtpub Repo</a></h2>
 
-<p>```sh
-# ubuntu
-$ apt-get -y update
-$ apt-get -y install python-dev python-pip
-$ apt-get install -y phantomjs libicu52 wget
-$ wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs -O /usr/bin/phantomjs &amp;&amp; chmod +x /usr/bin/phantomjs</p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># ubuntu</span>
+<span class="gp">$ </span>apt-get -y update
+<span class="gp">$ </span>apt-get -y install python-dev python-pip
+<span class="gp">$ </span>apt-get install -y phantomjs libicu52 wget
+<span class="gp">$ </span>wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs -O /usr/bin/phantomjs <span class="o">&amp;&amp;</span> chmod +x /usr/bin/phantomjs
 
-<p>$ pip install robotframework
-$ pip install robotframework-selenium2library
-```</p>
+<span class="gp">$ </span>pip install robotframework
+<span class="gp">$ </span>pip install robotframework-selenium2library
+</code></pre>
+</div>
 
 <h2 id="how-to-use">How to use</h2>
 
-<p><code>sh
-# Edit {USER} and {PASSWORD} first !!!
-$ pybot robot-packtpub.txt
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
+<span class="gp">$ </span>pybot robot-packtpub.txt
+</code></pre>
+</div>
 
 <h2 id="note">Note</h2>
 <ul>
@@ -660,7 +660,7 @@ It may change when Web UI changed (XPath is Best Solution that I found).
 You can find XPath by following this video - <a href="https://www.youtube.com/watch?v=vCNLPHP3E_U">Quick Tip: Getting The XPath In Google Chrome</a>.</p>
   </li>
   <li>
-    <p><code>PhantomJS2.0 fixed this issue</code> We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.</p>
+    <p><code class="highlighter-rouge">PhantomJS2.0 fixed this issue</code> We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.</p>
   </li>
   <li>
     <p>You can use <a href="https://travis-ci.org">Travis-CI</a> and <a href="https://nightli.es">Nightly Builds</a> to run your script everyday - <a href="https://github.com/ibotdotout/robot-packtpub">See demo here</a>.</p>
@@ -693,35 +693,35 @@ You can find XPath by following this video - <a href="https://www.youtube.com/wa
   <li><a href="http://brew.sh">Homebrew - The missing package manager for OS X</a></li>
 </ul>
 
-<p><code>sh
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>ruby -e <span class="s2">"</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
+</code></pre>
+</div>
 
 <ul>
   <li><a href="http://caskroom.io">Homebrew Cask - “To install, drag this icon…” no more!</a></li>
 </ul>
 
-<p><code>sh
-$ brew tap caskroom/cask
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap caskroom/cask
+</code></pre>
+</div>
 
 <ul>
   <li><a href="https://github.com/caskroom/homebrew-fonts">Caskroom-fonts</a></li>
 </ul>
 
-<p><code>sh
-$ brew tap caskroom/fonts
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap caskroom/fonts
+</code></pre>
+</div>
 
 <ul>
   <li><a href="https://github.com/beeftornado/homebrew-rmtree">homebrew-rmtree</a> - <a href="http://stackoverflow.com/questions/7323261/uninstall-remove-a-homebrew-package-including-all-its-dependencies">Uninstall / remove a Homebrew package including all its
 dependencies</a></li>
 </ul>
 
-<p><code>sh
-$ brew tap beeftornado/rmtree &amp;&amp; brew install brew-rmtree
-$ brew rmtree &lt;package&gt;
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew tap beeftornado/rmtree <span class="o">&amp;&amp;</span> brew install brew-rmtree
+<span class="gp">$ </span>brew rmtree &lt;package&gt;
+</code></pre>
+</div>
 
 <h3 id="developer-tools">Developer Tools</h3>
 
@@ -729,27 +729,29 @@ $ brew rmtree &lt;package&gt;
   <li><a href="http://iterm2.com">iTerm2 - Mac OS Terminal Replacement</a></li>
 </ul>
 
-<p>```sh
-# this is too old version
-$ brew cask install iterm2</p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># this is too old version</span>
+<span class="gp">$ </span>brew cask install iterm2
 
-<h1 id="try-night-build-that-lastest-version">try night build that lastest version</h1>
-<p>$ brew tap caskroom/versions
-$ brew cask install iterm2-nightly
-```
-- <a href="http://ohmyz.sh">Oh My Zsh - managing your zsh configuration.</a></p>
+<span class="c"># try night build that lastest version</span>
+<span class="gp">$ </span>brew tap caskroom/versions
+<span class="gp">$ </span>brew cask install iterm2-nightly
+</code></pre>
+</div>
+<ul>
+  <li><a href="http://ohmyz.sh">Oh My Zsh - managing your zsh configuration.</a></li>
+</ul>
 
-<p><code>sh
-$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+</code></pre>
+</div>
 
 <ul>
   <li><a href="https://kapeli.com/dash">Dash - API Documentation Browser</a></li>
 </ul>
 
-<p><code>sh
-$ brew cask install dash
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install dash
+</code></pre>
+</div>
 
 <h3 id="window-manager">Window Manager</h3>
 
@@ -757,9 +759,9 @@ $ brew cask install dash
   <li><a href="http://spectacleapp.com">Spectacle - Move and resize windows with ease</a></li>
 </ul>
 
-<p><code>sh
-$ brew cask install spectacle
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install spectacle
+</code></pre>
+</div>
 
 <h3 id="etc">Etc</h3>
 
@@ -767,17 +769,17 @@ $ brew cask install spectacle
   <li><a href="https://justgetflux.com">f.lux - warm your display color</a></li>
 </ul>
 
-<p><code>sh
-$ brew cask install flux
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install flux
+</code></pre>
+</div>
 
 <ul>
   <li><a href="https://slack.com">Slack: Be less busy</a></li>
 </ul>
 
-<p><code>sh
-$ brew cask install slack
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install slack
+</code></pre>
+</div>
 
 <ul>
   <li><a href="http://www.iviewapp.net/2012/12/thai-dictionary-mac-os-x-mountain-lion.html">OSX Thai Dictionary</a></li>

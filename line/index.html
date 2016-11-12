@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Line API requirement - Line API Documentation  Line API  Python2 (not 3 because Thrift not support yet)  Apache ThriftInstall Thrift on Ubuntush$ apt-get ins..." />
+<meta property="og:description" content="Line API requirement - Line API Documentation  Line API  Python2 (not 3 because Thrift not support yet)  Apache ThriftInstall Thrift on Ubuntu$ apt-get insta..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -233,28 +233,28 @@
 
 <h2 id="install-thrift-on-ubuntuhttpwwwsaltycranecomblog201106install-thrift-ubuntu-1010-maverick"><a href="http://www.saltycrane.com/blog/2011/06/install-thrift-ubuntu-1010-maverick">Install Thrift on Ubuntu</a></h2>
 
-<p><code>sh
-$ apt-get install -y automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git debhelper cmake
-$ cd /tmp
-$ curl http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz | tar zx
-$ cd /tmp/thrift-0.9.1
-$ ./configure
-$ make &amp;&amp; make install
-$ rm -rf /tmp/thrift-0.9.1
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>apt-get install -y automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git debhelper cmake
+<span class="gp">$ </span><span class="nb">cd</span> /tmp
+<span class="gp">$ </span>curl http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz | tar zx
+<span class="gp">$ </span><span class="nb">cd</span> /tmp/thrift-0.9.1
+<span class="gp">$ </span>./configure
+<span class="gp">$ </span>make <span class="o">&amp;&amp;</span> make install
+<span class="gp">$ </span>rm -rf /tmp/thrift-0.9.1
+</code></pre>
+</div>
 
 <h2 id="fix-login-with-email-and-password-failedhttpswwwyoutubecomwatchvvab1zzv7uxy"><a href="https://www.youtube.com/watch?v=vaB1ZzV7UxY">Fix login with email and password failed</a></h2>
 
-<p><code>sh
-# installl line and remove first that tricky don't know why
-$ pip install line &amp;&amp; pip uninstall -y line
-$ git clone https://github.com/carpedm20/LINE.git
-$ cd LINE/line
-$ wget https://gist.github.com/windows98SE/b739038218b6fe4d423f/raw/5f68cf3d9a2a88576b739810a6bd6fcaa0c5e940/api.py.patch
-$ patch api.py &lt; api.py.patch
-$ python config.py
-$ python setup.py install
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># installl line and remove first that tricky don't know why</span>
+<span class="gp">$ </span>pip install line <span class="o">&amp;&amp;</span> pip uninstall -y line
+<span class="gp">$ </span>git clone https://github.com/carpedm20/LINE.git
+<span class="gp">$ </span><span class="nb">cd </span>LINE/line
+<span class="gp">$ </span>wget https://gist.github.com/windows98SE/b739038218b6fe4d423f/raw/5f68cf3d9a2a88576b739810a6bd6fcaa0c5e940/api.py.patch
+<span class="gp">$ </span>patch api.py &lt; api.py.patch
+<span class="gp">$ </span>python config.py
+<span class="gp">$ </span>python setup.py install
+</code></pre>
+</div>
 
 <h2 id="sample-bot">Sample Bot</h2>
 

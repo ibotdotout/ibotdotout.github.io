@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -239,9 +239,9 @@
 
 <h1 id="regex">Regex</h1>
 
-<p><code>
-db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
+</code></pre>
+</div>
 
 <ul>
   <li>
@@ -265,11 +265,11 @@ db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
 
 <h1 id="fulltext-search">Fulltext search</h1>
 
-<p><code>
-db.books.ensureIndex({title:"text"})
+<div class="highlighter-rouge"><pre class="highlight"><code>db.books.ensureIndex({title:"text"})
 db.books.reIndex()
 db.bokks.find({$text:{$search:"time"}})
-</code></p>
+</code></pre>
+</div>
 
 <ul>
   <li>

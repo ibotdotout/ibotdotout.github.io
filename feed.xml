@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-10T19:22:52+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot&#39;s blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-12T03:38:14+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;sh
-$ docker-machine create --driver generic \
-    --generic-ip-address $host_ip \
-    --generic-ssh-user $host_user \
-    $machine_name
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine create --driver generic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    --generic-ip-address &lt;span class=&quot;nv&quot;&gt;$host_ip&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    --generic-ssh-user &lt;span class=&quot;nv&quot;&gt;$host_user&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$machine_name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;!-- more --&gt;
 
@@ -13,31 +13,30 @@ $ docker-machine create --driver generic \
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;you can’t mount local voumes to &lt;code&gt;remote server&lt;/code&gt; but you can upload your files
-with &lt;code&gt;scp&lt;/code&gt; or &lt;code&gt;rsync&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;you can’t mount local voumes to &lt;code class=&quot;highlighter-rouge&quot;&gt;remote server&lt;/code&gt; but you can upload your files
+with &lt;code class=&quot;highlighter-rouge&quot;&gt;scp&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;rsync&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;docker-compose&lt;/code&gt; will mount file with the same path in both &lt;code&gt;client&lt;/code&gt; and &lt;code&gt;remote
-server&lt;/code&gt;, you can check you path &lt;code&gt;$ pwd&lt;/code&gt; .&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose&lt;/code&gt; will mount file with the same path in both &lt;code class=&quot;highlighter-rouge&quot;&gt;client&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;remote
+server&lt;/code&gt;, you can check you path &lt;code class=&quot;highlighter-rouge&quot;&gt;$ pwd&lt;/code&gt; .&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://docs.docker.com/machine/reference/scp/&quot;&gt;docker-machine scp&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;```sh
-# download
-$ docker-machine scp $machine:$src $dest&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# download&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine scp &lt;span class=&quot;nv&quot;&gt;$machine&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;
 
-&lt;h1 id=&quot;upload&quot;&gt;upload&lt;/h1&gt;
-&lt;p&gt;$ docker-machine scp $src $machine:$dest
-```&lt;/p&gt;
+&lt;span class=&quot;c&quot;&gt;# upload&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine scp &lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$machine&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/synack/docker-rsync&quot;&gt;docker-rsync&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="docker" /><summary type="html">Generic Driver - Create machines using an existing VM/Host with SSH
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary type="html">Generic Driver - Create machines using an existing VM/Host with SSH
 
-sh
 $ docker-machine create --driver generic \
     --generic-ip-address $host_ip \
     --generic-ssh-user $host_user \
@@ -132,7 +131,7 @@ $ docker-machine create --driver generic \
 &lt;h1 id=&quot;testing&quot;&gt;Testing&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md&quot;&gt;Redux - Writing Tests&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="redux" /><category term="js" /><summary type="html">Intro
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="redux" /><category term="js" /><summary type="html">Intro
 
   Redux - Three Principles
   A Cartoon intro to Redux
@@ -253,7 +252,7 @@ $ docker-machine create --driver generic \
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-inside/why-the-hipsters-recompose-everything-23ac08748198&quot;&gt;Why The Hipsters Recompose Everything&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/acdlite/recompose&quot;&gt;Recompose - A React utility belt for function components and higher-order components&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="react" /><category term="js" /><summary type="html">React
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="react" /><category term="js" /><summary type="html">React
 
   Thinking in React
 
@@ -275,44 +274,42 @@ React Intro
   Routing React Apps: The Complete Guide
   Presentational and Container Components</summary></entry><entry><title type="html">Git ignore files in sub-directories</title><link href="http://dev.im-bot.com//git-ignore-sub-dir/" rel="alternate" type="text/html" title="Git ignore files in sub-directories" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-ignore-in-sub-dir</id><content type="html" xml:base="http://dev.im-bot.com//git-ignore-sub-dir/">&lt;h2 id=&quot;example-ignore-css-in-only-src&quot;&gt;Example: ignore .css in only /src&lt;/h2&gt;
 
-&lt;p&gt;```
-# .gitignore&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# .gitignore
 
-&lt;p&gt;src/&lt;em&gt;*/&lt;/em&gt;.css
-```&lt;/p&gt;
+src/**/*.css
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;!-- more --&gt;
 
 &lt;p&gt;remove .css that committed in to repo&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-$ git rm -r --cached .
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rm -r --cached .
 $ git add .
 $ git commit
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/6794737/6144391&quot;&gt;Git-ignore certain files in sub-directories, but not all&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/1139797/6144391&quot;&gt;Ignore files that have already been committed to a Git repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="git" /><summary type="html">Example: ignore .css in only /src
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">Example: ignore .css in only /src
 
-```
 # .gitignore
 
-src/*/.css
-```</summary></entry><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+src/**/*.css</summary></entry><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/33569970/6144391&quot;&gt;Resolve Git merge conflicts in favor of their changes during a pull&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;code&gt;
-# In conflicted state
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# In conflicted state
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
 $ git add -u . // add file with skip iles that are not under version control
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -325,40 +322,39 @@ $ git add -u . // add file with skip iles that are not under version control
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff&quot;&gt;Fugitive.vim - resolving merge conflicts with vimdiff&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;code&gt;
-:Gvdiff
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:Gvdiff
 :buffers
 # focus on middle window
 :diffput 2 // see number on :buffers
 :diffput 3 // see number on :buffers
 # ]c next conflict
 # [c previos conflict
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><category term="git" /><category term="vim" /><summary type="html">Git
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><category term="vim" /><summary type="html">Git
 
 
   
     Resolve Git merge conflicts in favor of their changes during a pull
 
-    
-# In conflicted state
+    # In conflicted state
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
 $ git add -u . // add file with skip iles that are not under version control</summary></entry><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ul&gt;
   &lt;li&gt;First Way, load files to buffer and run command for each buffers&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;```
-// search keyword on files and load files to buffers
-:args &lt;code&gt;rg -l pattern path/&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
 
-&lt;p&gt;// list buffers
-:buffers&lt;/p&gt;
+// list buffers
+:buffers
 
-&lt;p&gt;// substitute word for each buffers and save
+// substitute word for each buffers and save
 :argdo %s/pattern/newpattern/ge | update
-```&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;!-- more --&gt;
 
@@ -367,18 +363,18 @@ $ git add -u . // add file with skip iles that are not under version control</su
  Vim and run command for each line on Quickfix&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-//  run the given command to each line of the quickfix list.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//  run the given command to each line of the quickfix list.
 :Ack! pattern 
 :cdo %s/pattern/newpattern/ge | w
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;helper-tools--plugins&quot;&gt;Helper Tools &amp;amp; Plugins&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/mileszs/ack.vim&quot;&gt;Ack.vim&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://blog.burntsushi.net/ripgrep/&quot;&gt;ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/BurntSushi/ripgrep&quot;&gt;ripgrep (rg)&lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/BurntSushi/ripgrep&quot;&gt;ripgrep (rg)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.wezm.net/technical/2016/09/ripgrep-with-vim/&quot;&gt;Using ripgrep With Vim&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -390,19 +386,17 @@ $ git add -u . // add file with skip iles that are not under version control</su
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/15729568&quot;&gt;argdo - How to do search &amp;amp; replace with ack in vim?&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://usevim.com/2012/04/06/search-and-replace-files/&quot;&gt;Vim 101: Search and Replace on Multiple Files&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/&quot;&gt;Vimcast - Using :argdo to change multiple files&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="vim" /><summary type="html">First Way, load files to buffer and run command for each buffers
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">First Way, load files to buffer and run command for each buffers
 
 
-```
 // search keyword on files and load files to buffers
-:args rg -l pattern path/
+:args `rg -l pattern path/`
 
 // list buffers
 :buffers
 
 // substitute word for each buffers and save
-:argdo %s/pattern/newpattern/ge | update
-```</summary></entry><entry><title type="html">Git Submodule and Git Subtree</title><link href="http://dev.im-bot.com//git-submodule-subtree/" rel="alternate" type="text/html" title="Git Submodule and Git Subtree" /><published>2016-10-25T00:00:00+00:00</published><updated>2016-10-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-submodule-subtree</id><content type="html" xml:base="http://dev.im-bot.com//git-submodule-subtree/">&lt;h1 id=&quot;git-submodule&quot;&gt;git submodule&lt;/h1&gt;
+:argdo %s/pattern/newpattern/ge | update</summary></entry><entry><title type="html">Git Submodule and Git Subtree</title><link href="http://dev.im-bot.com//git-submodule-subtree/" rel="alternate" type="text/html" title="Git Submodule and Git Subtree" /><published>2016-10-25T00:00:00+00:00</published><updated>2016-10-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-submodule-subtree</id><content type="html" xml:base="http://dev.im-bot.com//git-submodule-subtree/">&lt;h1 id=&quot;git-submodule&quot;&gt;git submodule&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://gist.github.com/gitaarik/8735255&quot;&gt;Git Submodules basic explanation&lt;/a&gt;&lt;/li&gt;
@@ -436,7 +430,7 @@ $ git add -u . // add file with skip iles that are not under version control</su
 &lt;h2 id=&quot;recap&quot;&gt;recap&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://andrey.nering.com.br/2016/git-submodules-vs-subtrees/&quot;&gt;Git: submodules vs. subtrees&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="git" /><summary type="html">git submodule
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">git submodule
 
 
   Git Submodules basic explanation
@@ -544,7 +538,7 @@ $ git add -u . // add file with skip iles that are not under version control</su
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://medium.com/@bird.praphan/อย่าเพิ่งสร้าง-apis-ถ้ายังไม่รู้จัก-swagger-f32514c7d729#.8muq43pvk&quot;&gt;อย่าเพิ่งสร้าง APIs ถ้ายังไม่รู้จัก Swagger&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><category term="API" /><summary type="html">API Blueprint
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary type="html">API Blueprint
 
 
   
@@ -567,9 +561,9 @@ $ git add -u . // add file with skip iles that are not under version control</su
 
 &lt;h1 id=&quot;regex&quot;&gt;Regex&lt;/h1&gt;
 
-&lt;p&gt;&lt;code&gt;
-db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -593,11 +587,11 @@ db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
 
 &lt;h1 id=&quot;fulltext-search&quot;&gt;Fulltext search&lt;/h1&gt;
 
-&lt;p&gt;&lt;code&gt;
-db.books.ensureIndex({title:&quot;text&quot;})
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.books.ensureIndex({title:&quot;text&quot;})
 db.books.reIndex()
 db.bokks.find({$text:{$search:&quot;time&quot;}})
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -615,7 +609,7 @@ db.bokks.find({$text:{$search:&quot;time&quot;}})
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/operator/query/text/&quot;&gt;$text&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><category term="mongo" /><summary type="html">MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><summary type="html">MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS
   
   
     mongoDB prefix wildcard: fulltext-search ($text) find part with search-string</summary></entry><entry><title type="html">RESTful API</title><link href="http://dev.im-bot.com//restful-api/" rel="alternate" type="text/html" title="RESTful API" /><published>2016-06-26T00:00:00+00:00</published><updated>2016-06-26T00:00:00+00:00</updated><id>http://dev.im-bot.com//restful-api</id><content type="html" xml:base="http://dev.im-bot.com//restful-api/">&lt;ul&gt;
@@ -627,13 +621,13 @@ db.bokks.find({$text:{$search:&quot;time&quot;}})
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;code&gt;
-1. Error handling
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Error handling
 2. Error logging
 3. Validation
 4. Authentication and authorization
 5. Testing
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;!-- more --&gt;
 
@@ -706,12 +700,11 @@ If you are augmenting existing API responses choose JSON-LD. If you are keeping 
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qCdpTji8nxo&quot;&gt;How to Design Great APIs - Parse Developer Day 2013&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><category term="API" /><summary type="html">Essential learning for people building APIs
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary type="html">Essential learning for people building APIs
   
   
     The 5 Things  API Must Have
   
-
 
 
 1. Error handling

@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -290,7 +290,7 @@ Second biggest impact is from lack of indexes or wrong indexes or way too many i
 </blockquote>
 
 <blockquote>
-  <p>Sharding too early may be a premature optimization. Not every MongoDB deployment requires sharding. </p>
+  <p>Sharding too early may be a premature optimization. Not every MongoDB deployment requires sharding.</p>
 </blockquote>
 
 <blockquote>
@@ -307,12 +307,14 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 </ul>
 
 <blockquote>
-  <p>Good Shard Key<br />
-- Cardinality<br />
-- Write Distribution<br />
-- Query Isolation<br />
-- Reliability<br />
-- Index Locality</p>
+  <p>Good Shard Key</p>
+  <ul>
+    <li>Cardinality</li>
+    <li>Write Distribution</li>
+    <li>Query Isolation</li>
+    <li>Reliability</li>
+    <li>Index Locality</li>
+  </ul>
 </blockquote>
 
 <ul>
@@ -320,7 +322,7 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 </ul>
 
 <blockquote>
-  <p>You should carefully amalyze all options before selecting the shard key since it can significantly affect your system performance and it cannot be changed after data is inserted in MongoDB. </p>
+  <p>You should carefully amalyze all options before selecting the shard key since it can significantly affect your system performance and it cannot be changed after data is inserted in MongoDB.</p>
 </blockquote>
 
 <blockquote>
@@ -328,10 +330,12 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 </blockquote>
 
 <blockquote>
-  <p>MongoDB supports three types of sharding:
-- Range-based sharding
-- Hash-based sharding
-- Tag-aware sharding</p>
+  <p>MongoDB supports three types of sharding:</p>
+  <ul>
+    <li>Range-based sharding</li>
+    <li>Hash-based sharding</li>
+    <li>Tag-aware sharding</li>
+  </ul>
 </blockquote>
 
 <blockquote>
@@ -347,11 +351,13 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 </blockquote>
 
 <blockquote>
-  <p>In order to select an optimal shard key for query isolation you must take into consideration the following:
- - Analyze what query operations are most performance dependent;
- - Determine which fields are used the most in these operations and include them in the shard key;
- - Make sure that the selected shard key enable even (balanced) distribution of data across shards;
- - A high cardinality field is preferable. Low cardinality fields tend to group documents on a small number of shards what would require frequent rebalancing of the chunks.</p>
+  <p>In order to select an optimal shard key for query isolation you must take into consideration the following:</p>
+  <ul>
+    <li>Analyze what query operations are most performance dependent;</li>
+    <li>Determine which fields are used the most in these operations and include them in the shard key;</li>
+    <li>Make sure that the selected shard key enable even (balanced) distribution of data across shards;</li>
+    <li>A high cardinality field is preferable. Low cardinality fields tend to group documents on a small number of shards what would require frequent rebalancing of the chunks.</li>
+  </ul>
 </blockquote>
 
 <blockquote>
@@ -378,12 +384,14 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
 
 <blockquote>
   <p>Shard Key Considerations
-With that said, there are five criteria for a good shard key. They are:
-- Cardinality
-- Write Distribution
-- Read Distribution
-- Read Targeting
-- Read Locality</p>
+With that said, there are five criteria for a good shard key. They are:</p>
+  <ul>
+    <li>Cardinality</li>
+    <li>Write Distribution</li>
+    <li>Read Distribution</li>
+    <li>Read Targeting</li>
+    <li>Read Locality</li>
+  </ul>
 </blockquote>
 
 <blockquote>
@@ -443,7 +451,7 @@ Choosing a shard key is hard, but there are really only two options. If you can�
 <h3 id="the-three-most-important-considerations-in-selecting-a-mongodb-shard-keyhttpswwwmorpheusdatacomblog2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key"><a href="https://www.morpheusdata.com/blog/2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key">The Three Most Important Considerations in Selecting a MongoDB Shard Key</a></h3>
 
 <blockquote>
-  <p>The efficient operation of your MongoDB database depends on which field in the documents you designate as the shard key. Since you have to select the shard key up front and can’t change it later, you need to give the choice due consideration. </p>
+  <p>The efficient operation of your MongoDB database depends on which field in the documents you designate as the shard key. Since you have to select the shard key up front and can’t change it later, you need to give the choice due consideration.</p>
 </blockquote>
 
 <blockquote>
@@ -516,10 +524,10 @@ guarantee sufficient query isolation  or appropriate write scaling .</p>
 
 <h3 id="enable-mongo-cmd-in-replicate">Enable Mongo Cmd in Replicate</h3>
 
-<p><code>
-# mongo shell
+<div class="highlighter-rouge"><pre class="highlight"><code># mongo shell
 $ rs.slaveOk()
-</code></p>
+</code></pre>
+</div>
 
 <h3 id="index">Index</h3>
 
@@ -527,38 +535,38 @@ $ rs.slaveOk()
   <li><a href="http://www.slideshare.net/mongodb/indexing-with-mongodb">Indexing with MongoDB</a></li>
 </ul>
 
-<p><code>
-# mongo
+<div class="highlighter-rouge"><pre class="highlight"><code># mongo
 $ db.user.ensureIndex( { _id : "hashed" } )
 $ sh.shardCollection("facebook.user", { "_id": "hashed" } )
 $ db.user.getShardDistribution()
-</code></p>
+</code></pre>
+</div>
 
-<p>```
-### Set Sharding chunk size
+<div class="highlighter-rouge"><pre class="highlight"><code>### Set Sharding chunk size
 use config
-db.settings.save( { _id:”chunksize”, value: 8 } )</p>
+db.settings.save( { _id:"chunksize", value: 8 } )
 
-<h3 id="set-shard-key--index-key">Set Shard Key &amp; Index Key</h3>
+### Set Shard Key &amp; Index Key
 
-<p>mongo –host mongo_router_1:27017 «EOF
+mongo --host mongo_router_1:27017 &lt;&lt;EOF
 use prod;
-sh.enableSharding(“prod”);
+sh.enableSharding("prod");
 db.user.ensureIndex( { slug : 1 } );
-sh.shardCollection(“prod.user”, { “_id”: 1 } );
-EOF</p>
+sh.shardCollection("prod.user", { "_id": 1 } );
+EOF
 
-<h2 id="check-nscanned">check nscanned</h2>
-<p>db.user.find({slug: ‘8PwobE4O’}).explain(“executionStats”)</p>
+##  check nscanned
+db.user.find({slug: '8PwobE4O'}).explain("executionStats")
 
-<h2 id="ensure-index">Ensure Index</h2>
+## Ensure Index 
 
-<p>db.user.getIndexes()
-db.user.dropIndexes()</p>
+db.user.getIndexes()
+db.user.dropIndexes()
 
-<p>db.user.ensureIndex( { slug : 1 }, { unique: true, backgroud: true })
-db.user.ensureIndex( { slug : “hashed”  }, { backgroud: true } )
-```</p>
+db.user.ensureIndex( { slug : 1 }, { unique: true, backgroud: true })
+db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
+</code></pre>
+</div>
 
 <h3 id="query-performance">Query Performance</h3>
 <ul>

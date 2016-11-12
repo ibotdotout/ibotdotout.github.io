@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -236,12 +236,12 @@
   <li>
     <p><a href="http://stackoverflow.com/a/33569970/6144391">Resolve Git merge conflicts in favor of their changes during a pull</a></p>
 
-    <p><code>
-# In conflicted state
+    <div class="highlighter-rouge"><pre class="highlight"><code># In conflicted state
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
 $ git add -u . // add file with skip iles that are not under version control
-</code></p>
+</code></pre>
+    </div>
   </li>
 </ul>
 
@@ -254,15 +254,15 @@ $ git add -u . // add file with skip iles that are not under version control
   <li>
     <p><a href="http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff">Fugitive.vim - resolving merge conflicts with vimdiff</a></p>
 
-    <p><code>
-:Gvdiff
+    <div class="highlighter-rouge"><pre class="highlight"><code>:Gvdiff
 :buffers
 # focus on middle window
 :diffput 2 // see number on :buffers
 :diffput 3 // see number on :buffers
 # ]c next conflict
 # [c previos conflict
-</code></p>
+</code></pre>
+    </div>
   </li>
 </ul>
 

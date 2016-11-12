@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -255,9 +255,9 @@
       <p>Most of Git tutorial even <a href="http://try.github.io">Try Git</a> guide you
 about git commit with this</p>
 
-<p><code>sh
-$ git commit -m "hello world"
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git commit -m <span class="s2">"hello world"</span>
+</code></pre>
+</div>
 
 <p>That’s OK.
 But It better to use any option without -m.</p>
@@ -344,15 +344,15 @@ But It better to use any option without -m.</p>
     
       <blockquote>
   <p>Github Pages Tips:<br />
-Github Pages always complie jekyll with <code>--safe</code> option that will<br />
+Github Pages always complie jekyll with <code class="highlighter-rouge">--safe</code> option that will<br />
 disable plugins but some plugin can work with Github Pages.<br />
-<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a>  </p>
+<a href="https://help.github.com/articles/using-jekyll-plugins-with-github-pages/">List of Jekyll Plguins that working on Github &gt; Pages</a></p>
 </blockquote>
 
-<p>To avoid this <code>--safe</code> option to be powerful jekyll, you need to build your jelyll somewhere else and commit your static page to <code>main</code> or <code>gh-page</code> branch.
+<p>To avoid this <code class="highlighter-rouge">--safe</code> option to be powerful jekyll, you need to build your jelyll somewhere else and commit your static page to <code class="highlighter-rouge">main</code> or <code class="highlighter-rouge">gh-page</code> branch.
 We can automate build jekyll with <a href="https://travis-ci.org">Travis-CI</a>
-that store your jekyll file in <code>jekyll</code> branch when push to github that
-will trig to Travis to build and deploy static page back to your <code>main</code>
+that store your jekyll file in <code class="highlighter-rouge">jekyll</code> branch when push to github that
+will trig to Travis to build and deploy static page back to your <code class="highlighter-rouge">main</code>
 branch to publish your contents. you should read previous <a href="/jekyll-with-ci/">blog about
 jekyll and travis</a></p>
 

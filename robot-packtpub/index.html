@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -232,23 +232,23 @@
 
 <h2 id="package-requirements-or-dockerfile-on-robot-packtpub-repohttpsgithubcomibotdotoutrobot-packtpub">Package Requirements or <a href="https://github.com/ibotdotout/robot-packtpub">Dockerfile on Robot-packtpub Repo</a></h2>
 
-<p>```sh
-# ubuntu
-$ apt-get -y update
-$ apt-get -y install python-dev python-pip
-$ apt-get install -y phantomjs libicu52 wget
-$ wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs -O /usr/bin/phantomjs &amp;&amp; chmod +x /usr/bin/phantomjs</p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># ubuntu</span>
+<span class="gp">$ </span>apt-get -y update
+<span class="gp">$ </span>apt-get -y install python-dev python-pip
+<span class="gp">$ </span>apt-get install -y phantomjs libicu52 wget
+<span class="gp">$ </span>wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs -O /usr/bin/phantomjs <span class="o">&amp;&amp;</span> chmod +x /usr/bin/phantomjs
 
-<p>$ pip install robotframework
-$ pip install robotframework-selenium2library
-```</p>
+<span class="gp">$ </span>pip install robotframework
+<span class="gp">$ </span>pip install robotframework-selenium2library
+</code></pre>
+</div>
 
 <h2 id="how-to-use">How to use</h2>
 
-<p><code>sh
-# Edit {USER} and {PASSWORD} first !!!
-$ pybot robot-packtpub.txt
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
+<span class="gp">$ </span>pybot robot-packtpub.txt
+</code></pre>
+</div>
 
 <h2 id="note">Note</h2>
 <ul>
@@ -258,7 +258,7 @@ It may change when Web UI changed (XPath is Best Solution that I found).
 You can find XPath by following this video - <a href="https://www.youtube.com/watch?v=vCNLPHP3E_U">Quick Tip: Getting The XPath In Google Chrome</a>.</p>
   </li>
   <li>
-    <p><code>PhantomJS2.0 fixed this issue</code> We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.</p>
+    <p><code class="highlighter-rouge">PhantomJS2.0 fixed this issue</code> We use Xvfb Firefox for headless browser instead of PhantomJS that have some problem on docker in this case.</p>
   </li>
   <li>
     <p>You can use <a href="https://travis-ci.org">Travis-CI</a> and <a href="https://nightli.es">Nightly Builds</a> to run your script everyday - <a href="https://github.com/ibotdotout/robot-packtpub">See demo here</a>.</p>

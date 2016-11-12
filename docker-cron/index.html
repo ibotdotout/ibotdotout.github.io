@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -226,45 +226,46 @@
       
   </span>
 
-  <p>You can start <code>crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
-just put <code>crontab</code> in <code>/etc/cron.d/</code> and run <code>cron</code> for making it working.</p>
+  <p>You can start <code class="highlighter-rouge">crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
+just put <code class="highlighter-rouge">crontab</code> in <code class="highlighter-rouge">/etc/cron.d/</code> and run <code class="highlighter-rouge">cron</code> for making it working.</p>
 
 <!-- more -->
 
-<p>However when you try something that complex than <code>echo "hello world"</code> sometimes it just not working and you don’t know why!!!
+<p>However when you try something that complex than <code class="highlighter-rouge">echo "hello world"</code> sometimes it just not working and you don’t know why!!!
 You had alreay tried to run your script that working on your linux but no idea why not working on your docker.</p>
 
 <p><a href="http://stackoverflow.com/a/26958348">rozkosz</a> said:</p>
 
-<pre><code> Several issues that I faced while trying to get a cron job running in a docker container were:
+<div class="highlighter-rouge"><pre class="highlight"><code> Several issues that I faced while trying to get a cron job running in a docker container were:
  1. time in the docker container is in UTC not local time;
  2. the docker environment is not passed to cron;
  3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
 </code></pre>
+</div>
 
-<p>I think the problem that most people face is <code>cron</code> not run your script with same environment as your docker in terminal.
-You need to export your Docker environment to your <code>cron</code> that I found solution from <a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/~/dockerfile/">postgres-s3-backup Dockerfile</a>.
+<p>I think the problem that most people face is <code class="highlighter-rouge">cron</code> not run your script with same environment as your docker in terminal.
+You need to export your Docker environment to your <code class="highlighter-rouge">cron</code> that I found solution from <a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/~/dockerfile/">postgres-s3-backup Dockerfile</a>.
 You can following this for simple solution:</p>
 
 <ol>
-  <li>In <code>Dockerfile</code>, export Docker environment to /root/env.txt</li>
+  <li>In <code class="highlighter-rouge">Dockerfile</code>, export Docker environment to /root/env.txt</li>
 </ol>
 
-<p><code>sh
+<p><code class="highlighter-rouge">sh
   CMD env &gt; /root/env.txt &amp;&amp; cron &amp;&amp; your_init_script
  </code></p>
 
 <ol>
-  <li>In your <code>crontab</code> file, You need to to import your Docker environment before run your script</li>
+  <li>In your <code class="highlighter-rouge">crontab</code> file, You need to to import your Docker environment before run your script</li>
 </ol>
 
-<p><code>sh
+<p><code class="highlighter-rouge">sh
   */5 * * * *  root env - `cat /root/env.txt`  your_scipt  &gt;&gt; /var/log/cron.log 2&gt;&amp;1
   # An empty line is required at the end of this file for a valid cron file.
  </code></p>
 
 <ol>
-  <li>Test it. Your should put <code>date</code> in your script for debug and then <code>cat /var/log/cron.log</code> to see your results.</li>
+  <li>Test it. Your should put <code class="highlighter-rouge">date</code> in your script for debug and then <code class="highlighter-rouge">cat /var/log/cron.log</code> to see your results.</li>
 </ol>
 
 <p>For the local timezone problem your can setup your Dockerfile following this</p>
@@ -273,7 +274,7 @@ You can following this for simple solution:</p>
   <li>
     <p>Debian/Linux Setting timezone</p>
 
-    <p><code>sh
+    <p><code class="highlighter-rouge">sh
    # Set the time zone to the local time zone
    RUN echo "Asia/Bangkok" &gt; /etc/timezone &amp;&amp; dpkg-reconfigure --frontend noninteractive tzdata
   </code></p>
@@ -300,7 +301,7 @@ You can following this for simple solution:</p>
   <li>
     <p><a href="http://stackoverflow.com/a/25130291">Will docker container auto sync time with the host machine?</a></p>
 
-    <p><code>sh
+    <p><code class="highlighter-rouge">sh
   $ docker run -it -v /etc/localtime:/etc/localtime:ro &lt; image &gt;
  </code></p>
   </li>

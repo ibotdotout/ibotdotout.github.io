@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="You need to convent result of unix diff to ed style to use in vimdiff.Example::a.txtshaaaabbbbcccceeeeeeeeeeeeb.txtshaabbbbbbddddccccdiff a.txt b.txtshdiff -..." />
+<meta property="og:description" content="You need to convent result of unix diff to ed style to use in vimdiff.Example::a.txtaaaabbbbcccceeeeeeeeeeeeb.txtaabbbbbbddddccccdiff a.txt b.txtdiff --git a..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -229,28 +229,27 @@
 
 <p>a.txt</p>
 
-<p><code>sh
-aaaa
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aaaa
 bbbb
 cccc
 eeee
 eeee
 eeee
-</code></p>
+</code></pre>
+</div>
 
 <p>b.txt</p>
 
-<p><code>sh
-aabb
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aabb
 bbbb
 dddd
 cccc
-</code></p>
+</code></pre>
+</div>
 
 <p>diff a.txt b.txt</p>
 
-<p><code>sh
-diff --git a/aaa b/bbb
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>diff --git a/aaa b/bbb
 index fc3703c..11629db 100644
 --- a/aaa
 +++ b/bbb
@@ -263,22 +262,23 @@ index fc3703c..11629db 100644
 -eeee
 -eeee
 -eeee
-</code></p>
+</code></pre>
+</div>
 
 <p>ed style of result diff a.txt b.txt</p>
 
-<p><code>sh
-1c1
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>1c1
 &lt; aaaa
 ---
-&gt; aabb
+<span class="gp">&gt; </span>aabb
 2a3
-&gt; dddd
+<span class="gp">&gt; </span>dddd
 4,6d4
 &lt; eeee
 &lt; eeee
 &lt; eeee
-</code></p>
+</code></pre>
+</div>
 
 <h1 id="code">Code</h1>
 
@@ -286,78 +286,81 @@ index fc3703c..11629db 100644
 
 <p>my_diff.py</p>
 
-<p>```python
-#!/usr/bin/env python</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
 
-<p>def diff(file1, file2):</p>
 
-<pre><code>def get_buffer(a, b):
-    res = ""
-    for i in a:
-        res += i
-    res += '---\n'
-    for i in b:
-        res += i
-    return res
+<span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">):</span>
 
-def get_action(start, end):
-    res = ""
-    if start == end:
-        res += "{0}c{0}\n".format(start)
-    else:
-        res += "{0},{1}c{0},{1}\n".format(start, end)
-    return res
+    <span class="k">def</span> <span class="nf">get_buffer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="s">'---</span><span class="se">\n</span><span class="s">'</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="k">return</span> <span class="n">res</span>
 
-buffer_a, buffer_b = [], []
-res = ""
+    <span class="k">def</span> <span class="nf">get_action</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s">"{0}c{0}</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s">"{0},{1}c{0},{1}</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
 
-with open(file1, 'r') as a, open(file2, 'r') as b:
+    <span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
 
-    a = a.readlines()
-    b = b.readlines()
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">a</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">file2</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">b</span><span class="p">:</span>
 
-    start, curr, end = 1, 1, 1
-    for x, y in zip(a, b):
-        if x == y:
-            if buffer_a:
-                res += get_action(start, end)
-                res += get_buffer(buffer_a, buffer_b)
-                buffer_a, buffer_b = [], []
-            start = curr + 1
-        else:
-            end = curr
-            buffer_a.append('&lt; ' + x)
-            buffer_b.append('&gt; ' + y)
-        curr += 1
+        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
 
-    res += get_action(start, end)
-    res += get_buffer(buffer_a, buffer_b)
-    buffer_a, buffer_b = [], []
-    print res,
+        <span class="n">start</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">buffer_a</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="n">get_action</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span><span class="p">)</span>
+                    <span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="n">curr</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">end</span> <span class="o">=</span> <span class="n">curr</span>
+                <span class="n">buffer_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'&lt; '</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
+                <span class="n">buffer_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'&gt; '</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+            <span class="n">curr</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">res</span> <span class="o">+=</span> <span class="n">get_action</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span><span class="p">)</span>
+        <span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">print</span> <span class="n">res</span><span class="p">,</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="n">diff</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </code></pre>
-
-<p>if <strong>name</strong> == ‘<strong>main</strong>’:
-    import sys
-    diff(sys.argv[1], sys.argv[2])
-```</p>
+</div>
 
 <h3 id="set-vimdiff-to-use-result-of-my-diff-code">Set vimdiff to use result of my diff code</h3>
 
 <p>.vimrc</p>
 
-<p><code>sh
-set diffexpr=MyDiff()
-function MyDiff()
-    silent execute "!python &lt;your_paht&gt;/my_diff.py " . v:fname_in . " " . v:fname_new . " &gt; " . v:fname_out
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
+<span class="k">function </span>MyDiff<span class="o">()</span>
+    silent execute <span class="s2">"!python &lt;your_paht&gt;/my_diff.py "</span> . v:fname_in . <span class="s2">" "</span> . v:fname_new . <span class="s2">" &gt; "</span> . v:fname_out
 endfunction
-</code></p>
+</code></pre>
+</div>
 
-<p>Ref:
-1. <a href="http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html">use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram</a>
-2. <a href="https://github.com/neovim/neovim/issues/1466">Use patience diff algorithm for vimdiff #1466</a>
-3. <a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options">Vim documentation: diff</a>
-4. <a href="http://blog.sanctum.geek.nz/actually-using-ed/">Actually using ed</a>
-5. <a href="http://blog.sanctum.geek.nz/using-more-of-ex/">Using more of ex</a></p>
+<p>Ref:</p>
+<ol>
+  <li><a href="http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html">use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram</a></li>
+  <li><a href="https://github.com/neovim/neovim/issues/1466">Use patience diff algorithm for vimdiff #1466</a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options">Vim documentation: diff</a></li>
+  <li><a href="http://blog.sanctum.geek.nz/actually-using-ed/">Actually using ed</a></li>
+  <li><a href="http://blog.sanctum.geek.nz/using-more-of-ex/">Using more of ex</a></li>
+</ol>
 
 </div>
 

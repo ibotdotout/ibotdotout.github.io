@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Mock - Mocking and Testing LibraryIf you mock some thing, it can’t be runnable. Don’t forget it just mock object.  Mock Method that can be runnablepython# si..." />
+<meta property="og:description" content="Mock - Mocking and Testing LibraryIf you mock some thing, it can’t be runnable. Don’t forget it just mock object.Mock Method that can be runnable# side_effec..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -224,40 +224,34 @@
   </span>
 
   <h2 id="mock---mocking-and-testing-libraryhttpwwwvoidspaceorgukpythonmock"><a href="http://www.voidspace.org.uk/python/mock/">Mock - Mocking and Testing Library</a></h2>
-<p>If you mock some thing, it can’t be runnable. Don’t forget it just mock object.  </p>
+<p>If you mock some thing, it can’t be runnable. Don’t forget it just mock object.</p>
 
 <h3 id="mock-method-that-can-be-runnable">Mock Method that can be runnable</h3>
 
-<p><code>python
-# side_effect will make mock method can be runable  
-# this can be use to reutrn_value in different arguments
-&gt;&gt;&gt; mock_method = mock.Mock()  
-&gt;&gt;&gt; mock_method.side_effect = lambda x: x + 1  
-&gt;&gt;&gt; mock_method(1)
-2
-&gt;&gt;&gt; mock_method(2)
-3
-</code></p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># side_effect will make mock method can be runable  </span>
+<span class="c"># this can be use to reutrn_value in different arguments</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>  
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>  
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">3</span>
+</code></pre>
+</div>
 
 <h3 id="patch-module-attribute">Patch Module Attribute</h3>
 
-<p>```python
-# Using PropertyMock with return_value argument  </p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Using PropertyMock with return_value argument  </span>
 
-<blockquote>
-  <blockquote>
-    <blockquote>
-      <p>with mock.patch(‘package.module.attribute’,<br />
-                     new_callable=mock.PropertyMock(return_value=3))
-                     as mock_attribute:<br />
-      print(mock_attribte)<br />
-      print(package.module.attribute)<br />
-3<br />
-3<br />
-```</p>
-    </blockquote>
-  </blockquote>
-</blockquote>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">'package.module.attribute'</span><span class="p">,</span>  
+                     <span class="n">new_callable</span><span class="o">=</span><span class="n">mock</span><span class="o">.</span><span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+                     <span class="k">as</span> <span class="n">mock_attribute</span><span class="p">:</span>  
+<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">mock_attribte</span><span class="p">)</span>  
+<span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span>  
+<span class="mi">3</span>  
+<span class="mi">3</span>  
+</code></pre>
+</div>
 
 <h3 id="mymockmockcalls">my_mock.mock_calls</h3>
 

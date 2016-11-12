@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Generic Driver - Create machines using an existing VM/Host with SSHsh$ docker-machine create --driver generic \    --generic-ip-address $host_ip \    --gener..." />
+<meta property="og:description" content="Generic Driver - Create machines using an existing VM/Host with SSH$ docker-machine create --driver generic \    --generic-ip-address $host_ip \    --generic..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -228,12 +228,12 @@
 
   <h2 id="generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh"><a href="https://docs.docker.com/machine/drivers/generic/">Generic Driver</a> - Create machines using an existing VM/Host with SSH</h2>
 
-<p><code>sh
-$ docker-machine create --driver generic \
-    --generic-ip-address $host_ip \
-    --generic-ssh-user $host_user \
-    $machine_name
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker-machine create --driver generic <span class="se">\</span>
+    --generic-ip-address <span class="nv">$host_ip</span> <span class="se">\</span>
+    --generic-ssh-user <span class="nv">$host_user</span> <span class="se">\</span>
+    <span class="nv">$machine_name</span>
+</code></pre>
+</div>
 
 <!-- more -->
 
@@ -241,25 +241,25 @@ $ docker-machine create --driver generic \
 
 <ul>
   <li>
-    <p>you can’t mount local voumes to <code>remote server</code> but you can upload your files
-with <code>scp</code> or <code>rsync</code></p>
+    <p>you can’t mount local voumes to <code class="highlighter-rouge">remote server</code> but you can upload your files
+with <code class="highlighter-rouge">scp</code> or <code class="highlighter-rouge">rsync</code></p>
   </li>
   <li>
-    <p><code>docker-compose</code> will mount file with the same path in both <code>client</code> and <code>remote
-server</code>, you can check you path <code>$ pwd</code> .</p>
+    <p><code class="highlighter-rouge">docker-compose</code> will mount file with the same path in both <code class="highlighter-rouge">client</code> and <code class="highlighter-rouge">remote
+server</code>, you can check you path <code class="highlighter-rouge">$ pwd</code> .</p>
   </li>
   <li>
     <p><a href="https://docs.docker.com/machine/reference/scp/">docker-machine scp</a></p>
   </li>
 </ul>
 
-<p>```sh
-# download
-$ docker-machine scp $machine:$src $dest</p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># download</span>
+<span class="gp">$ </span>docker-machine scp <span class="nv">$machine</span>:<span class="nv">$src</span> <span class="nv">$dest</span>
 
-<h1 id="upload">upload</h1>
-<p>$ docker-machine scp $src $machine:$dest
-```</p>
+<span class="c"># upload</span>
+<span class="gp">$ </span>docker-machine scp <span class="nv">$src</span> <span class="nv">$machine</span>:<span class="nv">$dest</span>
+</code></pre>
+</div>
 
 <ul>
   <li><a href="https://github.com/synack/docker-rsync">docker-rsync</a></li>

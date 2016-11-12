@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -228,12 +228,12 @@
     
       <h2 id="generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh"><a href="https://docs.docker.com/machine/drivers/generic/">Generic Driver</a> - Create machines using an existing VM/Host with SSH</h2>
 
-<p><code>sh
-$ docker-machine create --driver generic \
-    --generic-ip-address $host_ip \
-    --generic-ssh-user $host_user \
-    $machine_name
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker-machine create --driver generic <span class="se">\</span>
+    --generic-ip-address <span class="nv">$host_ip</span> <span class="se">\</span>
+    --generic-ssh-user <span class="nv">$host_user</span> <span class="se">\</span>
+    <span class="nv">$machine_name</span>
+</code></pre>
+</div>
 
 
       <div style="text-align:right;">
@@ -352,11 +352,11 @@ $ docker-machine create --driver generic \
     
       <h2 id="example-ignore-css-in-only-src">Example: ignore .css in only /src</h2>
 
-<p>```
-# .gitignore</p>
+<div class="highlighter-rouge"><pre class="highlight"><code># .gitignore
 
-<p>src/<em>*/</em>.css
-```</p>
+src/**/*.css
+</code></pre>
+</div>
 
 
       <div style="text-align:right;">
@@ -391,12 +391,12 @@ $ docker-machine create --driver generic \
   <li>
     <p><a href="http://stackoverflow.com/a/33569970/6144391">Resolve Git merge conflicts in favor of their changes during a pull</a></p>
 
-    <p><code>
-# In conflicted state
+    <div class="highlighter-rouge"><pre class="highlight"><code># In conflicted state
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
 $ git add -u . // add file with skip iles that are not under version control
-</code></p>
+</code></pre>
+    </div>
   </li>
 </ul>
 

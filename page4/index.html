@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -226,12 +226,12 @@
     </span>
 
     
-      <p>If you using <code>Dockerfile</code>, you should know about caching for faster builds.
-Sometimes, you need to rebuild without cache. you can run docker <code>build</code> with
-<code>--no-cache</code> option that will disable all layer cache.</p>
+      <p>If you using <code class="highlighter-rouge">Dockerfile</code>, you should know about caching for faster builds.
+Sometimes, you need to rebuild without cache. you can run docker <code class="highlighter-rouge">build</code> with
+<code class="highlighter-rouge">--no-cache</code> option that will disable all layer cache.</p>
 
-<p>There is problem when you should use some <code>Dockerfile</code> commands like <code>ADD</code> or
-<code>COPY</code> to copy file form host to container.</p>
+<p>There is problem when you should use some <code class="highlighter-rouge">Dockerfile</code> commands like <code class="highlighter-rouge">ADD</code> or
+<code class="highlighter-rouge">COPY</code> to copy file form host to container.</p>
 
 
       <div style="text-align:right;">
@@ -325,8 +325,8 @@ Data is transparently partitioned across all nodes in either a randomized or ord
     </span>
 
     
-      <p>You can start <code>crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
-just put <code>crontab</code> in <code>/etc/cron.d/</code> and run <code>cron</code> for making it working.</p>
+      <p>You can start <code class="highlighter-rouge">crontab</code> following <a href="https://www.ekito.fr/people/run-a-cron-job-with-docker/">Run a cron job with Docker</a>
+just put <code class="highlighter-rouge">crontab</code> in <code class="highlighter-rouge">/etc/cron.d/</code> and run <code class="highlighter-rouge">cron</code> for making it working.</p>
 
 
       <div style="text-align:right;">
@@ -360,7 +360,7 @@ across network, save bandwidth and storage, faster to scale.</p>
 
 <h2 id="using-alpinehttpshubdockercomalpine-base-image-when-possible">1. Using <a href="https://hub.docker.com/_/alpine/">alpine</a> base image when possible</h2>
 <p>It is minimal Docker image based on Alpine Linux that only 5 MB.
-You can install packages with <code>apk add --update &lt;pakckages&gt;</code> and
+You can install packages with <code class="highlighter-rouge">apk add --update &lt;pakckages&gt;</code> and
 you can check packages that avaible on <a href="https://pkgs.alpinelinux.org/packages">alpine packages</a>.</p>
 
 <h3 id="debianubuntu-vs-alpine">Debian/Ubuntu vs Alpine</h3>

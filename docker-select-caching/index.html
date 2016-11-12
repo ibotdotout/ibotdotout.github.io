@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -226,44 +226,44 @@
       
   </span>
 
-  <p>If you using <code>Dockerfile</code>, you should know about caching for faster builds.
-Sometimes, you need to rebuild without cache. you can run docker <code>build</code> with
-<code>--no-cache</code> option that will disable all layer cache.</p>
+  <p>If you using <code class="highlighter-rouge">Dockerfile</code>, you should know about caching for faster builds.
+Sometimes, you need to rebuild without cache. you can run docker <code class="highlighter-rouge">build</code> with
+<code class="highlighter-rouge">--no-cache</code> option that will disable all layer cache.</p>
 
-<p>There is problem when you should use some <code>Dockerfile</code> commands like <code>ADD</code> or
-<code>COPY</code> to copy file form host to container.</p>
+<p>There is problem when you should use some <code class="highlighter-rouge">Dockerfile</code> commands like <code class="highlighter-rouge">ADD</code> or
+<code class="highlighter-rouge">COPY</code> to copy file form host to container.</p>
 
 <!-- more -->
 
 <p>You need to copy new file to container then rebuild again without change any
-line of <code>Dockerfile</code> but the new file not was copy to container.
+line of <code class="highlighter-rouge">Dockerfile</code> but the new file not was copy to container.
 The last build using layer cache that contain old file instead of rebuild with new
-file. So this problem can solve easily by using <code>--no-cache</code> buuild option that
+file. So this problem can solve easily by using <code class="highlighter-rouge">--no-cache</code> buuild option that
 disable all layer cache.</p>
 
 <p>Sometimes, you need to rebuild only some layer not all layer.
 For this case, there is not native solution for Docker but there is some trick
-about <code>ARG</code> command in <code>Dockerfile</code> and <code>--build-arg</code> build option that I found
+about <code class="highlighter-rouge">ARG</code> command in <code class="highlighter-rouge">Dockerfile</code> and <code class="highlighter-rouge">--build-arg</code> build option that I found
 on <a href="https://github.com/docker/docker/issues/1996#issuecomment-172606763">New feature request: Selectively disable caching for specific RUN commands
 in Dockerfile</a>
 for more detail you should look at <a href="https://github.com/docker/docker/issues/1996#issuecomment-185872769">solution description</a>
 and <a href="https://docs.docker.com/engine/reference/builder/#arg">Dockerfile - ARG</a></p>
 
-<p>add <code>ARG</code> command to your <code>Dockerfile</code></p>
+<p>add <code class="highlighter-rouge">ARG</code> command to your <code class="highlighter-rouge">Dockerfile</code></p>
 
-<p><code>sh
-# Dockerfile
-# add this and below command will run without cache
-ARG CACHEBUST=1
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Dockerfile</span>
+<span class="c"># add this and below command will run without cache</span>
+ARG <span class="nv">CACHEBUST</span><span class="o">=</span>1
+</code></pre>
+</div>
 
-<p>when you need to rebuild with selected cache, run it with <code>--build-arg</code> option</p>
+<p>when you need to rebuild with selected cache, run it with <code class="highlighter-rouge">--build-arg</code> option</p>
 
-<p><code>sh
-$ docker build -t your-image --build-arg CACHEBUST=$(date +%s) .
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker build -t your-image --build-arg <span class="nv">CACHEBUST</span><span class="o">=</span><span class="k">$(</span>date +%s<span class="k">)</span> .
+</code></pre>
+</div>
 
-<p>then only layer below <code>ARG</code> command in <code>Dockerfile</code> will rebuild.</p>
+<p>then only layer below <code class="highlighter-rouge">ARG</code> command in <code class="highlighter-rouge">Dockerfile</code> will rebuild.</p>
 
 <h1 id="references">References:</h1>
 <ul>

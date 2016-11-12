@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -229,17 +229,17 @@
 
   <p><img src="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" alt="sharing with open graph" /></p>
 
-<p>Add this meta data to your <code>html page</code> between <code>&lt;head&gt; ... &lt;/head&gt;</code></p>
+<p>Add this meta data to your <code class="highlighter-rouge">html page</code> between <code class="highlighter-rouge">&lt;head&gt; ... &lt;/head&gt;</code></p>
 
-<p><code>html
- &lt;meta property="og:title" content="Markdown Slide" /&gt;
- &lt;meta property="og:type" content="article" /&gt;
- &lt;meta property="og:url" content="http://dev.im-bot.com/slide/" /&gt;
- &lt;meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" /&gt;
- &lt;meta property="og:description" content="Remark.js - easy and simple slide" /&gt;
- &lt;meta property="og:site_name" content="botbotbot" /&gt;
- &lt;meta property="og:locale" content="th_TH" /&gt;
-</code></p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code> <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Markdown Slide"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/slide/"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/opengraph_logo.png"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Remark.js - easy and simple slide"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
 
 <p>Then using <a href="https://developers.facebook.com/tools/debug/og/object/">Open Graph Object Debugger</a> to look what it look like when shared.</p>
 
@@ -247,52 +247,53 @@
 
 <h3 id="tips">Tips:</h3>
 <ul>
-  <li><code>og:image</code> always cache in fb server. you should change your image url to force fb reload your image.</li>
+  <li><code class="highlighter-rouge">og:image</code> always cache in fb server. you should change your image url to force fb reload your image.</li>
 </ul>
 
 <h1 id="jekyll-integrate-open-graph">Jekyll Integrate Open Graph</h1>
 
-<p>Add this line in your <code>_includes/head.html</code> between <code>&lt;head&gt; ... &lt;/head&gt;</code></p>
+<p>Add this line in your <code class="highlighter-rouge">_includes/head.html</code> between <code class="highlighter-rouge">&lt;head&gt; ... &lt;/head&gt;</code></p>
 
-<p>```html
-<meta property="og:title" content="Sharing with Open Graph" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/opengraph//" />
-<meta property="og:image" content="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" />
-<meta property="og:image:width" content="862" />
-<meta property="og:image:height" content="453" />
-<meta property="og:description" content="Make your site look pretty when sharing on facebook." />
-<meta property="og:site_name" content="botbotbot" />
-<meta property="og:locale" content="th_TH" /></p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Sharing with Open Graph"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/opengraph//"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/img/open-graph-thumbnail.png"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image:width"</span> <span class="na">content=</span><span class="s">"862"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image:height"</span> <span class="na">content=</span><span class="s">"453"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Make your site look pretty when sharing on facebook."</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
 
-<p>```</p>
+</code></pre>
+</div>
 
-<p>Create <code>_includes/opengraph.html</code></p>
+<p>Create <code class="highlighter-rouge">_includes/opengraph.html</code></p>
 
-<p><code>html
-&lt;meta property="og:title" content="Sharing with Open Graph" /&gt;
-&lt;meta property="og:type" content="article" /&gt;
-&lt;meta property="og:url" content="http://dev.im-bot.com/opengraph//" /&gt;
-&lt;meta property="og:image" content="http://dev.im-bot.com/public/img/open-graph-thumbnail.png" /&gt;
-&lt;meta property="og:description" content="Make your site look pretty when sharing on facebook." /&gt;
-&lt;meta property="og:site_name" content="botbotbot" /&gt;
-&lt;meta property="og:locale" content="th_TH" /&gt;
-</code></p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Sharing with Open Graph"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/opengraph//"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:image"</span> <span class="na">content=</span><span class="s">"http://dev.im-bot.com/public/img/open-graph-thumbnail.png"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Make your site look pretty when sharing on facebook."</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"botbotbot"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"th_TH"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
 
-<p>Update <code>_config.yml</code></p>
+<p>Update <code class="highlighter-rouge">_config.yml</code></p>
 
-<p><code>yaml
-logo: /public/logo.png
-locale: th_TH
-</code></p>
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">logo</span><span class="pi">:</span> <span class="s">/public/logo.png</span>
+<span class="s">locale</span><span class="pi">:</span> <span class="s">th_TH</span>
+</code></pre>
+</div>
 
 <p>Custom Post</p>
 
-<h2 id="section">```</h2>
-<p>excerpt: summary
+<div class="highlighter-rouge"><pre class="highlight"><code>----
+excerpt: summary
 thumbnail: /public/thumbnail_for_your_post.png
-—-
-```</p>
+----
+</code></pre>
+</div>
 
 <ul>
   <li><a href="http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/">Adding Open Graph Tags to Jekyll</a></li>

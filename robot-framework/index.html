@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Robot Framework(RF) - Github RepoRobot Framework Template```python** Settings **Documentation     Library           Library             WITH NAME  Resource  ..." />
+<meta property="og:description" content="Robot Framework(RF) - Github RepoRobot Framework Template*** Settings ***Documentation     &lt;document&gt;Library           &lt;Library&gt;Library          ..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -226,31 +226,29 @@
   <h2 id="robot-frameworkrfhttprobotframeworkorg---github-repohttpsgithubcomrobotframeworkrobotframework"><a href="http://robotframework.org/">Robot Framework(RF)</a> - <a href="https://github.com/robotframework/robotframework">Github Repo</a></h2>
 
 <h2 id="robot-framework-template">Robot Framework Template</h2>
-<p>```python
-<em>** Settings **</em>
-Documentation     <document>
-Library           <library>
-Library           <python pakcage="">  WITH NAME  <ref name="">
-Resource          <file></file></ref></python></library></document></p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
+<span class="n">Documentation</span>     <span class="o">&lt;</span><span class="n">document</span><span class="o">&gt;</span>
+<span class="n">Library</span>           <span class="o">&lt;</span><span class="n">Library</span><span class="o">&gt;</span>
+<span class="n">Library</span>           <span class="o">&lt;</span><span class="n">python</span> <span class="n">pakcage</span><span class="o">&gt;</span>  <span class="n">WITH</span> <span class="n">NAME</span>  <span class="o">&lt;</span><span class="n">ref</span> <span class="n">name</span><span class="o">&gt;</span>
+<span class="n">Resource</span>          <span class="o">&lt;</span><span class="nb">file</span><span class="o">&gt;</span>
 
-<p>Suite Setup       <keyword>
-Suite Teardown    <keyword></keyword></keyword></p>
+<span class="n">Suite</span> <span class="n">Setup</span>       <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
+<span class="n">Suite</span> <span class="n">Teardown</span>    <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
 
-<p>Test Setup        <keyword>
-Test Teardown     <keyword></keyword></keyword></p>
+<span class="n">Test</span> <span class="n">Setup</span>        <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
+<span class="n">Test</span> <span class="n">Teardown</span>     <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
 
-<p><em>** Test Cases **</em>
-<test name=""></test></p>
-<command />
-<p>or <keyword></keyword></p>
+<span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
+<span class="o">&lt;</span><span class="n">test</span> <span class="n">name</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span> <span class="ow">or</span> <span class="o">&lt;</span><span class="n">keyword</span><span class="o">&gt;</span>
 
-<p><em>** Keywords **</em></p>
-<command />
-
-<p>[Arguments]  ${variable}
-  ${variable} =  <command />  ${variable}
-  [Return]  ${variable}
-```</p>
+<span class="o">***</span> <span class="n">Keywords</span> <span class="o">***</span>
+<span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>
+  <span class="p">[</span><span class="n">Arguments</span><span class="p">]</span>  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span>
+  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span> <span class="o">=</span>  <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span>
+  <span class="p">[</span><span class="n">Return</span><span class="p">]</span>  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span>
+</code></pre>
+</div>
 
 <h2 id="handling-whitespace---plain-text-formathttprobotframeworkorgrobotframeworklatestrobotframeworkuserguidehtmlrules-for-parsing-the-data"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#rules-for-parsing-the-data">Handling whitespace - Plain text format</a></h2>
 <ul>
@@ -272,11 +270,11 @@ Test Teardown     <keyword></keyword></keyword></p>
 
 <h3 id="continue-line-the-previous-line">Continue line the previous line</h3>
 
-<p><code>python
-# use ellipsis (...) to continue the previous line
-Default Tags	a	b	c
-...	          d	e	f
-</code></p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># use ellipsis (...) to continue the previous line</span>
+<span class="n">Default</span> <span class="n">Tags</span>	<span class="n">a</span>	<span class="n">b</span>	<span class="n">c</span>
+<span class="o">...</span>	          <span class="n">d</span>	<span class="n">e</span>	<span class="n">f</span>
+</code></pre>
+</div>
 
 <h2 id="test-templates---keyword-driven-test-cases-into-data-driven-testshttprobotframeworkorgrobotframeworklatestrobotframeworkuserguidehtmltest-templates"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-templates">Test templates - keyword-driven test cases into data-driven tests</a></h2>
 
@@ -310,48 +308,48 @@ Default Tags	a	b	c
 
 <h3 id="number-variableshttprobotframeworkorgrobotframeworklatestrobotframeworkuserguidehtmlnumber-variables"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#number-variables">Number variables</a></h3>
 
-<p><code>python
-${THRESHOLD}      ${65}     # 65 is integer
-${THRESHOLD}      ${67.25}  # 67.25 is float
-${THRESHOLD}      65        # 65 is string
-</code></p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="err">$</span><span class="p">{</span><span class="mi">65</span><span class="p">}</span>     <span class="c"># 65 is integer</span>
+<span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="err">$</span><span class="p">{</span><span class="mf">67.25</span><span class="p">}</span>  <span class="c"># 67.25 is float</span>
+<span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="mi">65</span>        <span class="c"># 65 is string</span>
+</code></pre>
+</div>
 
 <h3 id="boolean-and-nonenull-variableshttprobotframeworkorgrobotframeworklatestrobotframeworkuserguidehtmlboolean-and-none-null-variables"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#boolean-and-none-null-variables">Boolean and None/null variables</a></h3>
 
-<p><code>python
-${true}   - python True
-${false}  - python False
-${None}   - python None
-</code></p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="err">$</span><span class="p">{</span><span class="n">true</span><span class="p">}</span>   <span class="o">-</span> <span class="n">python</span> <span class="bp">True</span>
+<span class="err">$</span><span class="p">{</span><span class="n">false</span><span class="p">}</span>  <span class="o">-</span> <span class="n">python</span> <span class="bp">False</span>
+<span class="err">$</span><span class="p">{</span><span class="bp">None</span><span class="p">}</span>   <span class="o">-</span> <span class="n">python</span> <span class="bp">None</span>
+</code></pre>
+</div>
 
 <h2 id="selecting-test-caseshttprobotframeworkorgrobotframeworklatestrobotframeworkuserguidehtmlselecting-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#selecting-test-cases">Selecting test cases</a></h2>
 
-<p><code>sh
---test example*       #select test
---suite example-??    #select suite
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>--test example<span class="k">*</span>       <span class="c">#select test</span>
+--suite example-??    <span class="c">#select suite</span>
+</code></pre>
+</div>
 
 <h2 id="tagging-test-caseshttprobotframeworkorgrobotframeworklatestrobotframeworkuserguidehtmltagging-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#tagging-test-cases">Tagging test cases</a></h2>
 
-<p>```python
-<em>** Settings **</em>
-Force Tags FunctionalTest
-Default Tags ValidTest</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
+<span class="n">Force</span> <span class="n">Tags</span> <span class="n">FunctionalTest</span>
+<span class="n">Default</span> <span class="n">Tags</span> <span class="n">ValidTest</span>
 
-<p><em>** Test Cases **</em>
-invalid login
-  [Tags]  InvalidTest
-```</p>
+<span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
+<span class="n">invalid</span> <span class="n">login</span>
+  <span class="p">[</span><span class="n">Tags</span><span class="p">]</span>  <span class="n">InvalidTest</span>
+</code></pre>
+</div>
 
-<p>```sh
-# Tag select</p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Tag select</span>
 
-<p>$ pybot -i InvalidTest login_tests.txt
-$ pybot –include InvalidTest login_tests.html</p>
+<span class="gp">$ </span>pybot -i InvalidTest login_tests.txt
+<span class="gp">$ </span>pybot --include InvalidTest login_tests.html
 
-<p>$ pybot -e InvalidTest login_tests.txt
-$ pybot –exclude InvalidTest login_tests.html
-```</p>
+<span class="gp">$ </span>pybot -e InvalidTest login_tests.txt
+<span class="gp">$ </span>pybot --exclude InvalidTest login_tests.html
+</code></pre>
+</div>
 
 <h2 id="test-suiteshttprobotframeworkorgrobotframeworklatestrobotframeworkuserguidehtmlcreating-test-suites"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-suites">Test suites</a></h2>
 
@@ -359,25 +357,25 @@ $ pybot –exclude InvalidTest login_tests.html
 
 <h2 id="assgin-variable-via-cli">Assgin Variable via CLI</h2>
 
-<p><code>sh
-$ pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
-$ pybot  -d /tmp --variable SERVER:"192.168.59.103" --variable BROWSER:chrome tests/acceptance/
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
+<span class="gp">$ </span>pybot  -d /tmp --variable SERVER:<span class="s2">"192.168.59.103"</span> --variable BROWSER:chrome tests/acceptance/
+</code></pre>
+</div>
 
 <h2 id="for-loopshttprobotframeworkgooglecodecomsvntrunkdocuserguiderobotframeworkuserguidehtmlfor-loops---tutorialhttpsblogcodecentricdeen201305robot-framework-tutorial-loops-conditional-execution-and-more"><a href="http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html#for-loops">For loops</a> - <a href="https://blog.codecentric.de/en/2013/05/robot-framework-tutorial-loops-conditional-execution-and-more/">Tutorial</a></h2>
 
-<p><code>python
-:FOR    ${elem}   IN    @{list}
-\    LOG     ${elem}
-</code></p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="p">:</span><span class="n">FOR</span>    <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>   <span class="n">IN</span>    <span class="err">@</span><span class="p">{</span><span class="nb">list</span><span class="p">}</span>
+\    <span class="n">LOG</span>     <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>
+</code></pre>
+</div>
 
 <h2 id="selenium-driver">Selenium Driver</h2>
 
-<p><code>sh
-$ brew install chromedriver # chrome driver for osx
-$ brew install phantomjs # GUI less driver for osx
-$ apt-get install phatomjs # GUI less driver for ubuntu
-</code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew install chromedriver <span class="c"># chrome driver for osx</span>
+<span class="gp">$ </span>brew install phantomjs <span class="c"># GUI less driver for osx</span>
+<span class="gp">$ </span>apt-get install phatomjs <span class="c"># GUI less driver for ubuntu</span>
+</code></pre>
+</div>
 
 <h2 id="plugin">Plugin:</h2>
 <ol>

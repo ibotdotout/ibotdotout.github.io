@@ -14,7 +14,7 @@
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="  First Way, load files to buffer and run command for each buffers```// search keyword on files and load files to buffers:args rg -l pattern path/// list buf..." />
+<meta property="og:description" content="  First Way, load files to buffer and run command for each buffers// search keyword on files and load files to buffers:args `rg -l pattern path/`// list buff..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
@@ -99,10 +99,6 @@
       
     
       
-    
-      
-    
-      
         
       
     
@@ -156,6 +152,10 @@
     
       
         
+      
+    
+      
+    
       
     
 
@@ -230,16 +230,16 @@
   <li>First Way, load files to buffer and run command for each buffers</li>
 </ul>
 
-<p>```
-// search keyword on files and load files to buffers
-:args <code>rg -l pattern path/</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
 
-<p>// list buffers
-:buffers</p>
+// list buffers
+:buffers
 
-<p>// substitute word for each buffers and save
+// substitute word for each buffers and save
 :argdo %s/pattern/newpattern/ge | update
-```</p>
+</code></pre>
+</div>
 
 <!-- more -->
 
@@ -248,18 +248,18 @@
  Vim and run command for each line on Quickfix</li>
 </ul>
 
-<p><code>
-//  run the given command to each line of the quickfix list.
+<div class="highlighter-rouge"><pre class="highlight"><code>//  run the given command to each line of the quickfix list.
 :Ack! pattern 
 :cdo %s/pattern/newpattern/ge | w
-</code></p>
+</code></pre>
+</div>
 
 <h3 id="helper-tools--plugins">Helper Tools &amp; Plugins</h3>
 
 <ul>
   <li><a href="https://github.com/mileszs/ack.vim">Ack.vim</a></li>
   <li><a href="http://blog.burntsushi.net/ripgrep/">ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}</a></li>
-  <li><a href="https://github.com/BurntSushi/ripgrep">ripgrep (rg)</a> </li>
+  <li><a href="https://github.com/BurntSushi/ripgrep">ripgrep (rg)</a></li>
   <li><a href="http://www.wezm.net/technical/2016/09/ripgrep-with-vim/">Using ripgrep With Vim</a></li>
 </ul>
 
