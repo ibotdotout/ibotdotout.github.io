@@ -39,5 +39,36 @@ $ docker-machine scp $machine:$src $dest
 $ docker-machine scp $src $machine:$dest
 ```
 
+* [Rsync](http://www.computerhope.com/unix/rsync.htm) - [option](http://ss64.com/bash/rsync_options.html)
 
-* [docker-rsync](https://github.com/synack/docker-rsync)
+```sh
+# sync and delete file remote that not existed on local
+rsync -rvzahe 'docker-machine ssh $machine' --delete --progress $src :$dest
+
+# ignore .git directory
+rsync -rvzahe 'docker-machine ssh $machine' --delete --progress --exclude='.git' $src :$dest"
+```
+
+```sh
+# alias
+
+export machine=digitalocean
+# rsync for mount volume on remote docker host
+
+# sync
+alias dsync="rsync -rvzahe 'docker-machine ssh \$machine' --delete --progress --exclude='.git' . :\$PWD"
+
+# remove file on server !!! danger
+alias dclean="docker-machine ssh \$machine \"cd \$PWD && rm -r *\""
+
+# need confirm before delete
+alias dclean="echo \"cd $PWD && rm -r *\" | xargs -p docker-machine ssh \$machine"
+
+# list dir on remote host
+alias dlist="docker-machine ssh \$machine \"cd \$PWD && ls\""
+```
+
+## References:
+* [Passing variables in remote ssh command](http://stackoverflow.com/questions/3314660/passing-variables-in-remote-ssh-command/3314678#3314678)
+* [In Bash, how to add Are you sure Y/n? to any command or alias?](http://stackoverflow.com/questions/3231804/in-bash-how-to-add-are-you-sure-y-n-to-any-command-or-alias/3400809#3400809)
+
