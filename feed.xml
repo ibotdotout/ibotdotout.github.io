@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-12T03:38:14+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-12T03:52:46+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
 
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine create --driver generic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
     --generic-ip-address &lt;span class=&quot;nv&quot;&gt;$host_ip&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -34,7 +34,40 @@ server&lt;/code&gt;, you can check you path &lt;code class=&quot;highlighter-rou
 &lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/synack/docker-rsync&quot;&gt;docker-rsync&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.computerhope.com/unix/rsync.htm&quot;&gt;Rsync&lt;/a&gt; - &lt;a href=&quot;http://ss64.com/bash/rsync_options.html&quot;&gt;option&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# sync and delete file remote that not existed on local&lt;/span&gt;
+rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;/span&gt; --delete --progress &lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; :&lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# ignore .git directory&lt;/span&gt;
+rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;/span&gt; --delete --progress --exclude&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.git'&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; :&lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# alias&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;machine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;digitalocean
+&lt;span class=&quot;c&quot;&gt;# rsync for mount volume on remote docker host&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# sync&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dsync&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rsync -rvzahe 'docker-machine ssh &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;machine' --delete --progress --exclude='.git' . :&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;PWD&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# remove file on server !!! danger&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dclean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;docker-machine ssh &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;machine &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cd &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;PWD &amp;amp;&amp;amp; rm -r *&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# need confirm before delete&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dclean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;echo &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cd &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;amp;&amp;amp; rm -r *&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; | xargs -p docker-machine ssh &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;machine&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# list dir on remote host&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;docker-machine ssh &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;machine &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cd &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;PWD &amp;amp;&amp;amp; ls&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3314660/passing-variables-in-remote-ssh-command/3314678#3314678&quot;&gt;Passing variables in remote ssh command&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3231804/in-bash-how-to-add-are-you-sure-y-n-to-any-command-or-alias/3400809#3400809&quot;&gt;In Bash, how to add Are you sure Y/n? to any command or alias?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary type="html">Generic Driver - Create machines using an existing VM/Host with SSH
 
 $ docker-machine create --driver generic \

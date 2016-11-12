@@ -262,8 +262,42 @@ server</code>, you can check you path <code class="highlighter-rouge">$ pwd</cod
 </div>
 
 <ul>
-  <li><a href="https://github.com/synack/docker-rsync">docker-rsync</a></li>
+  <li><a href="http://www.computerhope.com/unix/rsync.htm">Rsync</a> - <a href="http://ss64.com/bash/rsync_options.html">option</a></li>
 </ul>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># sync and delete file remote that not existed on local</span>
+rsync -rvzahe <span class="s1">'docker-machine ssh $machine'</span> --delete --progress <span class="nv">$src</span> :<span class="nv">$dest</span>
+
+<span class="c"># ignore .git directory</span>
+rsync -rvzahe <span class="s1">'docker-machine ssh $machine'</span> --delete --progress --exclude<span class="o">=</span><span class="s1">'.git'</span> <span class="nv">$src</span> :<span class="nv">$dest</span><span class="s2">"
+</span></code></pre>
+</div>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># alias</span>
+
+<span class="nb">export </span><span class="nv">machine</span><span class="o">=</span>digitalocean
+<span class="c"># rsync for mount volume on remote docker host</span>
+
+<span class="c"># sync</span>
+<span class="nb">alias </span><span class="nv">dsync</span><span class="o">=</span><span class="s2">"rsync -rvzahe 'docker-machine ssh </span><span class="se">\$</span><span class="s2">machine' --delete --progress --exclude='.git' . :</span><span class="se">\$</span><span class="s2">PWD"</span>
+
+<span class="c"># remove file on server !!! danger</span>
+<span class="nb">alias </span><span class="nv">dclean</span><span class="o">=</span><span class="s2">"docker-machine ssh </span><span class="se">\$</span><span class="s2">machine </span><span class="se">\"</span><span class="s2">cd </span><span class="se">\$</span><span class="s2">PWD &amp;&amp; rm -r *</span><span class="se">\"</span><span class="s2">"</span>
+
+<span class="c"># need confirm before delete</span>
+<span class="nb">alias </span><span class="nv">dclean</span><span class="o">=</span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">cd </span><span class="nv">$PWD</span><span class="s2"> &amp;&amp; rm -r *</span><span class="se">\"</span><span class="s2"> | xargs -p docker-machine ssh </span><span class="se">\$</span><span class="s2">machine"</span>
+
+<span class="c"># list dir on remote host</span>
+<span class="nb">alias </span><span class="nv">dlist</span><span class="o">=</span><span class="s2">"docker-machine ssh </span><span class="se">\$</span><span class="s2">machine </span><span class="se">\"</span><span class="s2">cd </span><span class="se">\$</span><span class="s2">PWD &amp;&amp; ls</span><span class="se">\"</span><span class="s2">"</span>
+</code></pre>
+</div>
+
+<h2 id="references">References:</h2>
+<ul>
+  <li><a href="http://stackoverflow.com/questions/3314660/passing-variables-in-remote-ssh-command/3314678#3314678">Passing variables in remote ssh command</a></li>
+  <li><a href="http://stackoverflow.com/questions/3231804/in-bash-how-to-add-are-you-sure-y-n-to-any-command-or-alias/3400809#3400809">In Bash, how to add Are you sure Y/n? to any command or alias?</a></li>
+</ul>
+
 
 </div>
 
