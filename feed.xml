@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-13T11:04:07+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Async Await</title><link href="http://dev.im-bot.com//async-await/" rel="alternate" type="text/html" title="Async Await" /><published>2016-11-13T00:00:00+00:00</published><updated>2016-11-13T00:00:00+00:00</updated><id>http://dev.im-bot.com//async-await</id><content type="html" xml:base="http://dev.im-bot.com//async-await/">&lt;p&gt;Async/Await is the part of ES7 that currently draft version new standard of
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-13T11:19:30+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Async Await</title><link href="http://dev.im-bot.com//async-await/" rel="alternate" type="text/html" title="Async Await" /><published>2016-11-13T00:00:00+00:00</published><updated>2016-11-13T00:00:00+00:00</updated><id>http://dev.im-bot.com//async-await</id><content type="html" xml:base="http://dev.im-bot.com//async-await/">&lt;p&gt;Async/Await is the part of ES7 that currently draft version new standard of
 javascript. It is pattern for solving &lt;a href=&quot;http://callbackhell.com&quot;&gt;Callback Hell&lt;/a&gt;
 problem that nowaday is solve by &lt;a href=&quot;http://www.datchley.name/es6-promises/&quot;&gt;ES6 Promises&lt;/a&gt;.
 Async/Await is wrapper of Promises pattern that make you can program in
 synchronous style without blocking the thread. To use ES7 for your project
 today, you need to use &lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; to compile your ES7 to ES5
 that can run in client side with browser and server side with nodeJS&lt;/p&gt;
+
+&lt;!-- more --&gt;
 
 &lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
 
@@ -16,30 +18,37 @@ that can run in client side with browser and server side with nodeJS&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://masnun.com/2015/11/11/using-es7-asyncawait-today-with-babel.html&quot;&gt;USING ES7 ASYNC/AWAIT TODAY WITH BABEL&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;!-- more --&gt;
-
 &lt;h1 id=&quot;depth&quot;&gt;Depth&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Communicating_sequential_processes&quot;&gt;JavaScript Promises: an Introduction&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/getting-started/primers/async-functions&quot;&gt;Async functions - making promises friendly&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://thomashunter.name/blog/the-long-road-to-asyncawait-in-javascript/&quot;&gt;The long road to Async/Await in JavaScript&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="es7" /><category term="js" /><summary type="html">Async/Await is the part of ES7 that currently draft version new standard of
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;testing&quot;&gt;Testing&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/chaijs/chai/issues/415#issuecomment-255548802&quot;&gt;Mocha assert.throws not work with async/await&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let err = {};
+
+try {
+  await someFn();
+} catch (e) {
+  err = e;
+}
+
+expect(err.message).to.equal(&quot;some error message&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>botbotbot</name></author><category term="es7" /><category term="js" /><summary type="html">Async/Await is the part of ES7 that currently draft version new standard of
 javascript. It is pattern for solving Callback Hell
 problem that nowaday is solve by ES6 Promises.
 Async/Await is wrapper of Promises pattern that make you can program in
 synchronous style without blocking the thread. To use ES7 for your project
 today, you need to use Babel to compile your ES7 to ES5
-that can run in client side with browser and server side with nodeJS
-
-Intro
-
-
-  ES7 Async/Await - Overview
-  ES7 async functions
-  Simplifying Asynchronous Coding with ES7 Async Functions
-  Understanding JavaScript’s async await
-  USING ES7 ASYNC/AWAIT TODAY WITH BABEL</summary></entry><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com//vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//open-vpn</id><content type="html" xml:base="http://dev.im-bot.com//vpn/">&lt;ul&gt;
+that can run in client side with browser and server side with nodeJS</summary></entry><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com//vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//open-vpn</id><content type="html" xml:base="http://dev.im-bot.com//vpn/">&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/Nyr/openvpn-install&quot;&gt;openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 

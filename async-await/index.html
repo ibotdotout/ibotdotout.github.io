@@ -238,6 +238,8 @@ synchronous style without blocking the thread. To use ES7 for your project
 today, you need to use <a href="https://babeljs.io">Babel</a> to compile your ES7 to ES5
 that can run in client side with browser and server side with nodeJS</p>
 
+<!-- more -->
+
 <h1 id="intro">Intro</h1>
 
 <ul>
@@ -248,8 +250,6 @@ that can run in client side with browser and server side with nodeJS</p>
   <li><a href="http://masnun.com/2015/11/11/using-es7-asyncawait-today-with-babel.html">USING ES7 ASYNC/AWAIT TODAY WITH BABEL</a></li>
 </ul>
 
-<!-- more -->
-
 <h1 id="depth">Depth</h1>
 
 <ul>
@@ -258,6 +258,23 @@ that can run in client side with browser and server side with nodeJS</p>
   <li><a href="https://thomashunter.name/blog/the-long-road-to-asyncawait-in-javascript/">The long road to Async/Await in JavaScript</a></li>
 </ul>
 
+<h1 id="testing">Testing</h1>
+
+<ul>
+  <li><a href="https://github.com/chaijs/chai/issues/415#issuecomment-255548802">Mocha assert.throws not work with async/await</a></li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>let err = {};
+
+try {
+  await someFn();
+} catch (e) {
+  err = e;
+}
+
+expect(err.message).to.equal("some error message");
+</code></pre>
+</div>
 
 </div>
 
