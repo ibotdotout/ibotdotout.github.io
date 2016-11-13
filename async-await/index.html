@@ -8,20 +8,20 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="All about Secure Shell" />
+  <meta property="og:title" content="Async Await" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/ssh//" />
+<meta property="og:url" content="http://dev.im-bot.com/async-await//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="SSHSSH Alias Config# .ssh/config# use $ssh &lt;hostname&gt; to connect# Host * //setting for every host  Host &lt;hostname&gt;  HostName &lt;ip&gt;  User	 &l..." />
+<meta property="og:description" content="Async/Await is the part of ES7 that currently draft version new standard ofjavascript. It is pattern for solving Callback Hellproblem that nowaday is solve b..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      All about Secure Shell &middot; botbotbot
+      Async Await &middot; botbotbot
     
   </title>
 
@@ -205,125 +205,65 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">All about Secure Shell</h1>
+  <h1 class="post-title">Async Await</h1>
   <span class="post-date">
-    06 Apr 2015
+    13 Nov 2016
       
         Tags:
         
-          <a href="/tags/#ssh">
-            ssh
+          <a href="/tags/#es7">
+            es7
+          </a>
+        
+          <a href="/tags/#js">
+            js
           </a>
         
       
       
         &middot;
-        <a href="/ssh//index.html#disqus_thread" data-disqus-identifier="/ssh/"></a>
+        <a href="/async-await//index.html#disqus_thread" data-disqus-identifier="/async-await/"></a>
       
+      
+        &middot;
+        Updated November 13, 2016
       
   </span>
 
-  <h2 id="ssh">SSH</h2>
+  <p>Async/Await is the part of ES7 that currently draft version new standard of
+javascript. It is pattern for solving <a href="http://callbackhell.com">Callback Hell</a>
+problem that nowaday is solve by <a href="http://www.datchley.name/es6-promises/">ES6 Promises</a>.
+Async/Await is wrapper of Promises pattern that make you can program in
+synchronous style without blocking the thread. To use ES7 for your project
+today, you need to use <a href="https://babeljs.io">Babel</a> to compile your ES7 to ES5
+that can run in client side with browser and server side with nodeJS</p>
 
-<h3 id="ssh-alias-confighttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">SSH Alias Config</a></h3>
+<h1 id="intro">Intro</h1>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
-<span class="c"># use $ssh &lt;hostname&gt; to connect</span>
-<span class="c"># Host * //setting for every host</span>
-  Host &lt;hostname&gt;
-  HostName &lt;ip&gt;
-  User	 &lt;username&gt;
-  Port  &lt;port&gt;
-</code></pre>
-</div>
+<ul>
+  <li><a href="http://rossboucher.com/await/#/">ES7 Async/Await - Overview</a></li>
+  <li><a href="https://jakearchibald.com/2014/es7-async-functions/">ES7 async functions</a></li>
+  <li><a href="https://www.sitepoint.com/simplifying-asynchronous-coding-es7-async-functions/">Simplifying Asynchronous Coding with ES7 Async Functions</a></li>
+  <li><a href="https://ponyfoo.com/articles/understanding-javascript-async-await">Understanding JavaScript’s async await</a></li>
+  <li><a href="http://masnun.com/2015/11/11/using-es7-asyncawait-today-with-babel.html">USING ES7 ASYNC/AWAIT TODAY WITH BABEL</a></li>
+</ul>
 
-<h3 id="using-ssh-proxycommand-to-tunnel-connectionshttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">Using SSH ProxyCommand to Tunnel Connections</a></h3>
+<!-- more -->
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
-<span class="c">#ProxyCommand ssh someserver -W %h:%p</span>
-<span class="c">#  With the newer versions of openssh-client you can also use the -W option to forward the connection.</span>
-<span class="c">#LocalCommand</span>
-<span class="c">#  Specifies a command to execute on the local machine after successfully connecting to the server</span>
-<span class="c">#DynamicForward</span>
-<span class="c">#  Specifies that a TCP port on the local machine be forwarded over the secure channel, and the application protocol is then used to determine where to connect to from the remote machine.</span>
-<span class="c">#IdentityFile</span>
-<span class="c">#  Specifies a file from which the user's DSA, ECDSA, Ed25519 or RSA authentication identity is read</span>
+<h1 id="depth">Depth</h1>
 
-  Host &lt;proxy&gt;
-  HostName &lt;ip&gt;
-  User &lt;user&gt;
-  ProxyCommand ssh &lt;destination&gt; -W %h:%p 2&gt; /dev/null
-  IdentityFile &lt;ssh_key&gt;
-</code></pre>
-</div>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Communicating_sequential_processes">JavaScript Promises: an Introduction</a></li>
+  <li><a href="https://developers.google.com/web/fundamentals/getting-started/primers/async-functions">Async functions - making promises friendly</a></li>
+  <li><a href="https://thomashunter.name/blog/the-long-road-to-asyncawait-in-javascript/">The long road to Async/Await in JavaScript</a></li>
+</ul>
 
-<h2 id="ssh-login-with-key-based-authenticationhttpwwwlaubenheimernetssh-keysshtml"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Client: generate key</span>
-<span class="gp">$ </span>ssh-keygen -t rsa -b 4096
-
-<span class="c"># Server: put client key</span>
-<span class="c"># copy ~/.ssh/id_rsa.pub into ~/.ssh/authorized_keys in server</span>
-<span class="c"># (option: server denies passed auth)</span>
-<span class="gp">$ </span>sudo vim /etc/ssh/sshd_config
-</code></pre>
-</div>
-
-<h2 id="ssh-login-with-passwordhttpaskubuntucomquestions101670how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># /etc/ssh/sshd_config</span>
-PasswordAuthentication no
-
-Match address 192.0.2.0/24
-    PasswordAuthentication yes
-</code></pre>
-</div>
-
-<h2 id="ssh-proxy-with-socks5httpsthomashunternameblogreally-simple-ssh-proxy-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -N -D 8080 user@server -p 443
-<span class="c"># should using port 443 to avoid blocking port 22</span>
-<span class="c"># setting proxy  on your browser</span>
-<span class="c"># sock host 127.0.0.1 port 8080</span>
-</code></pre>
-</div>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
-<span class="c"># use $ssh -N &lt;proxy&gt; -p 443</span>
-Host &lt;proxy&gt;
-  HostName &lt;ip&gt;
-  User &lt;user&gt;
-  DynamicForward 8080
-</code></pre>
-</div>
-
-<h2 id="ssh-skip-knownhosthttpsuperusercomquestions125324how-can-i-avoid-sshs-host-verification-for-known-hosts"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -o <span class="s2">"StrictHostKeyChecking no"</span> user@host
-</code></pre>
-</div>
-
-<h3 id="resources">Resources</h3>
-<ol>
-  <li><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Configuring">Setup and Setting SSH</a></li>
-  <li><a href="https://www.youtube.com/playlist?list=PLtK75qxsQaMII75AbcuIruao1k2qdxwjg">SSH Crash Course – Fun With Remote Shells, From The Ground Up</a></li>
-  <li><a href="https://blog.0xbadc0de.be/archives/300">SSH: Best practices</a></li>
-</ol>
 
 </div>
 
 <div class="related">
   <h2>Latest Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/async-await/">
-            Async Await
-            <small>13 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -343,6 +283,15 @@ Host &lt;proxy&gt;
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/redux/">
+            Redux
+            <small>10 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -354,7 +303,7 @@ Host &lt;proxy&gt;
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/ssh/";
+      var disqus_identifier = "/async-await/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

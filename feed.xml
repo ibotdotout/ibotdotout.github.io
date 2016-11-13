@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-12T04:30:16+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com//vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//open-vpn</id><content type="html" xml:base="http://dev.im-bot.com//vpn/">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-13T11:04:07+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Async Await</title><link href="http://dev.im-bot.com//async-await/" rel="alternate" type="text/html" title="Async Await" /><published>2016-11-13T00:00:00+00:00</published><updated>2016-11-13T00:00:00+00:00</updated><id>http://dev.im-bot.com//async-await</id><content type="html" xml:base="http://dev.im-bot.com//async-await/">&lt;p&gt;Async/Await is the part of ES7 that currently draft version new standard of
+javascript. It is pattern for solving &lt;a href=&quot;http://callbackhell.com&quot;&gt;Callback Hell&lt;/a&gt;
+problem that nowaday is solve by &lt;a href=&quot;http://www.datchley.name/es6-promises/&quot;&gt;ES6 Promises&lt;/a&gt;.
+Async/Await is wrapper of Promises pattern that make you can program in
+synchronous style without blocking the thread. To use ES7 for your project
+today, you need to use &lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; to compile your ES7 to ES5
+that can run in client side with browser and server side with nodeJS&lt;/p&gt;
+
+&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://rossboucher.com/await/#/&quot;&gt;ES7 Async/Await - Overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jakearchibald.com/2014/es7-async-functions/&quot;&gt;ES7 async functions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sitepoint.com/simplifying-asynchronous-coding-es7-async-functions/&quot;&gt;Simplifying Asynchronous Coding with ES7 Async Functions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ponyfoo.com/articles/understanding-javascript-async-await&quot;&gt;Understanding JavaScript’s async await&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://masnun.com/2015/11/11/using-es7-asyncawait-today-with-babel.html&quot;&gt;USING ES7 ASYNC/AWAIT TODAY WITH BABEL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h1 id=&quot;depth&quot;&gt;Depth&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Communicating_sequential_processes&quot;&gt;JavaScript Promises: an Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/fundamentals/getting-started/primers/async-functions&quot;&gt;Async functions - making promises friendly&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thomashunter.name/blog/the-long-road-to-asyncawait-in-javascript/&quot;&gt;The long road to Async/Await in JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="es7" /><category term="js" /><summary type="html">Async/Await is the part of ES7 that currently draft version new standard of
+javascript. It is pattern for solving Callback Hell
+problem that nowaday is solve by ES6 Promises.
+Async/Await is wrapper of Promises pattern that make you can program in
+synchronous style without blocking the thread. To use ES7 for your project
+today, you need to use Babel to compile your ES7 to ES5
+that can run in client side with browser and server side with nodeJS
+
+Intro
+
+
+  ES7 Async/Await - Overview
+  ES7 async functions
+  Simplifying Asynchronous Coding with ES7 Async Functions
+  Understanding JavaScript’s async await
+  USING ES7 ASYNC/AWAIT TODAY WITH BABEL</summary></entry><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com//vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//open-vpn</id><content type="html" xml:base="http://dev.im-bot.com//vpn/">&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/Nyr/openvpn-install&quot;&gt;openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -604,68 +645,4 @@ $ git add -u . // add file with skip iles that are not under version control</su
     You’ll never guess which API documentation tools we use
   
   
-    API Code Generation</summary></entry><entry><title type="html">Mongo Search</title><link href="http://dev.im-bot.com//mongo-search/" rel="alternate" type="text/html" title="Mongo Search" /><published>2016-06-28T00:00:00+00:00</published><updated>2016-06-28T00:00:00+00:00</updated><id>http://dev.im-bot.com//mongo-search</id><content type="html" xml:base="http://dev.im-bot.com//mongo-search/">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://comsysto.com/blog-post/mongodb-full-text-search-vs-regular-expressions&quot;&gt;MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24343156/mongodb-prefix-wildcard-fulltext-search-text-find-part-with-search-string&quot;&gt;mongoDB prefix wildcard: fulltext-search ($text) find part with search-string&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h1 id=&quot;regex&quot;&gt;Regex&lt;/h1&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.books.find({title: /สวัสดี/i}, {title: 1}).pretty()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://snipref.com/mongoose-js/mongoose-js-find-with-regex/&quot;&gt;Mongoose.js find with regex&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/operator/query/regex/&quot;&gt;Mongo $regex&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/operator/query/regex/#index-use&quot;&gt;Mongo $regex - Index Use&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;For case sensitive regular expression queries, if an index exists for the field, then MongoDB matches the regular expression against the values in the index, which can be faster than a collection scan.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;For case insensitive regular expression queries, these queries generally cannot use indexes effectively.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;fulltext-search&quot;&gt;Fulltext search&lt;/h1&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.books.ensureIndex({title:&quot;text&quot;})
-db.books.reIndex()
-db.bokks.find({$text:{$search:&quot;time&quot;}})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://snipref.com/mongoose-js/mongoose-js-find-with-full-text-search/&quot;&gt;Mongoose.js Search With Full Text Search&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.tutorialspoint.com/mongodb/mongodb_text_search.htm&quot;&gt;MongoDB - Text Search&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.compose.io/articles/full-text-search-with-mongodb-and-node-js/&quot;&gt;Full Text Search with MongoDB &amp;amp; Node.js&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://code.tutsplus.com/tutorials/full-text-search-in-mongodb--cms-24835&quot;&gt;Full-Text Search in MongoDB&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://docs.mongodb.com/manual/reference/operator/query/text/&quot;&gt;$text&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="mongo" /><summary type="html">MONGODB FULL TEXT SEARCH VS. REGULAR EXPRESSIONS
-  
-  
-    mongoDB prefix wildcard: fulltext-search ($text) find part with search-string</summary></entry></feed>
+    API Code Generation</summary></entry></feed>
