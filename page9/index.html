@@ -208,6 +208,214 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/vim-command/">
+        Vim Command
+      </a>
+    </h1>
+
+    <span class="post-date">
+      07 Sep 2015
+      
+        &middot;
+        <a href="/vim-command/#disqus_thread" data-disqus-identifier="/vim-command/"></a>
+        
+      
+    </span>
+
+    
+      <h3 id="range">Range</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>[range]</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>above first line</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>first line</td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td>mean to current line</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>all lines</td>
+    </tr>
+    <tr>
+      <td>$</td>
+      <td>last line</td>
+    </tr>
+    <tr>
+      <td>{start},{end}</td>
+      <td>from start to end line</td>
+    </tr>
+    <tr>
+      <td>&lt;,&gt;</td>
+      <td>start selection to end selection</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="insert">Insert</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:[range]print , :p</td>
+      <td>print line</td>
+    </tr>
+    <tr>
+      <td>:[range]copy{target} , :t</td>
+      <td>copy line &amp; paste</td>
+    </tr>
+    <tr>
+      <td>:[range]normal {vimkey}</td>
+      <td>action vim key via command</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>ex. :%normal A; - put ‘;’ in end line for each line</td>
+    </tr>
+    <tr>
+      <td>:!&lt;shell command&gt;</td>
+      <td>run shell command in vim  % mean to current file</td>
+    </tr>
+    <tr>
+      <td>:r&lt;file&gt; ,:r !&lt;shell cmd&gt;</td>
+      <td>retrieving file after current cursor</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="editor">Editor</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:e&lt;file&gt;</td>
+      <td>edit/new file</td>
+    </tr>
+    <tr>
+      <td>:new&lt;file&gt;</td>
+      <td>new file</td>
+    </tr>
+    <tr>
+      <td>:vnew&lt;file&gt;</td>
+      <td>new file in vertical</td>
+    </tr>
+    <tr>
+      <td>:w !sudo tee %</td>
+      <td><a href="https://www.youtube.com/watch?v=C6xqO4Z1nIo">write file with sudo premission</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="number">Number</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:set relativenumber</td>
+      <td>enable relative number</td>
+    </tr>
+    <tr>
+      <td>:set norelativenumber</td>
+      <td>disable relative number</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="key-mappinghttpvimwikiacomwikimappingkeysinvim-tutorialpart1"><a href="http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)">Key Mapping</a></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:map, :map!</td>
+      <td>show mapping key</td>
+    </tr>
+    <tr>
+      <td>:verbose map &lt;key&gt;</td>
+      <td>show mapping key and where it mapping</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="etc">ETC</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>:[range]move{target} , :m</td>
+      <td>move line</td>
+    </tr>
+    <tr>
+      <td>:nohlsearch , :nohls</td>
+      <td>mute highlight search</td>
+    </tr>
+    <tr>
+      <td>:&lt;stg&gt;C-d&lt;\tab&gt;</td>
+      <td>command line completion</td>
+    </tr>
+    <tr>
+      <td>:redraw</td>
+      <td>redraw screen (Ctrl + L)</td>
+    </tr>
+    <tr>
+      <td>:messages</td>
+      <td>show history of messages</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="references">References:</h2>
+<ol>
+  <li><a href="http://superuser.com/a/547176">How can I view old status messages in Vim?</a></li>
+  <li><a href="http://vim.wikia.com/wiki/Make_echo_seen_when_it_would_otherwise_disappear_and_go_unseen">Make echo seen when it would otherwise disappear and go unseen</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/robot-packtpub/">
         Robot Packtpub
       </a>
@@ -735,100 +943,6 @@ hour after last build</p>
   <li><a href="http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/">Faster Builds with Container-Based Infrastructure and
 Docker</a></li>
   <li><a href="http://docs.travis-ci.com/user/deployment/custom/">Travis Custom Deployment</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/drone-ci/">
-        Drone.io CI
-      </a>
-    </h1>
-
-    <span class="post-date">
-      23 Aug 2015
-      
-        &middot;
-        <a href="/drone-ci/#disqus_thread" data-disqus-identifier="/drone-ci/"></a>
-        
-      
-    </span>
-
-    
-      <h1 id="drone---continuous-integration-platform-built-on-docker-written-in-gohttpsgithubcomdronedrone----better-than-droneio"><a href="https://github.com/drone/drone">Drone - Continuous Integration platform built on Docker, written in Go</a> -  better than Drone.io</h1>
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=pP3iRUC6EOM">How to setup your own continuous integration server with Drone</a></li>
-</ul>
-
-<h1 id="droneio-based-on-dronehttpsdroneio---simple-ci-server"><a href="https://drone.io">Drone.io based on Drone</a> - Simple CI Server</h1>
-
-<h2 id="private-configuration">Private Configuration:</h2>
-
-<h3 id="can-run-shell-command">Can run shell command</h3>
-
-<ol>
-  <li>upload your configuration into gist with secret</li>
-  <li>get url of your raw configuration</li>
-  <li>
-    <p>add your configuration url in “Environment Variable”</p>
-
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Example</span>
-<span class="nv">CONFIG_URL</span><span class="o">=</span><span class="s2">"&lt;your_configuration_url&gt;"</span>
-</code></pre>
-    </div>
-  </li>
-  <li>
-    <p>in “Commands” download your configurations via wget without display result</p>
-
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
-wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/null
-</code></pre>
-    </div>
-  </li>
-</ol>
-
-<h3 id="keep-variables-in-environment">Keep Variables in Environment</h3>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Example</span>
-<span class="c">#!/bin/sh</span>
-<span class="nb">export </span><span class="nv">CLIENT_ID</span><span class="o">=</span>&lt;your id&gt;
-<span class="nb">export </span><span class="nv">TAGS</span><span class="o">=</span>&lt;your tags&gt;
-</code></pre>
-</div>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-<span class="n">tags</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'TAGS'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h3 id="dynamic-solution">Dynamic Solution</h3>
-
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
-<span class="kn">import</span> <span class="nn">os</span>
-
-<span class="c"># Configuration from Environment Variables if can't load config.ini</span>
-<span class="c"># you can make you own configuration from config.ini.sample</span>
-
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">"config.ini"</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">configparser</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
-    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">'config.ini'</span><span class="p">)</span>
-    <span class="n">client_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'DEFAULT'</span><span class="p">,</span> <span class="s">'client_id'</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-</div>
-
-<h2 id="references">References:</h2>
-<ol>
-  <li><a href="http://docs.drone.io/quickstart.html">Drone.io Quickstart</a></li>
-  <li><a href="http://docs.drone.io/python.html">Drone.io Building Python Projects</a></li>
-  <li><a href="http://buddylindsey.com/hosting-your-open-source-project-on-heroku-with-private-configuration/">Hosting Your Open Source Project on Heroku with Private Configuration</a></li>
-  <li><a href="http://stackoverflow.com/questions/3176918/how-to-hide-connection-string-user-name-pw-when-using-source-control">How to hide connection string, user name, pw when using source control?</a></li>
 </ol>
 
     

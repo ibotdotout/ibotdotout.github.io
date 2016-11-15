@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-14T20:40:05+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Async Await</title><link href="http://dev.im-bot.com//async-await/" rel="alternate" type="text/html" title="Async Await" /><published>2016-11-13T00:00:00+00:00</published><updated>2016-11-13T00:00:00+00:00</updated><id>http://dev.im-bot.com//async-await</id><content type="html" xml:base="http://dev.im-bot.com//async-await/">&lt;p&gt;Async/Await is the part of ES7 that currently draft version new standard of
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-15T02:47:42+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Babel</title><link href="http://dev.im-bot.com//babel/" rel="alternate" type="text/html" title="Babel" /><published>2016-11-15T00:00:00+00:00</published><updated>2016-11-15T00:00:00+00:00</updated><id>http://dev.im-bot.com//babel</id><content type="html" xml:base="http://dev.im-bot.com//babel/">&lt;p&gt;&lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; is a JavaScript compiler. Use next generation JavaScript, today.
+That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://babeljs.io/docs/usage/cli/&quot;&gt;babel - How to use the CLI tools.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://babeljs.io/docs/plugins/#presets&quot;&gt;babel - present&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://babeljs.io/docs/usage/babelrc/&quot;&gt;babel - How to use the babelrc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;babel-with-nodejs&quot;&gt;Babel with NodeJs&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jsrocks.org/2016/01/configuring-babel-6-for-node-js/&quot;&gt;CONFIGURING BABEL 6 FOR NODE.JS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/babel/example-node-server&quot;&gt;Example Node Server w/ Babel&lt;/a&gt; - support watch build, mocha&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/chrisza4/generator-node-es7-backend&quot;&gt;generator-node-es7-backend&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/src ---&amp;gt; Put your code here
+/dist ----&amp;gt; Where real node code will be built by babel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;coverage-with-babel&quot;&gt;Coverage with Babel&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/35976233&quot;&gt;Running Mocha + Istanbul + Babel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/35010781&quot;&gt;No coverage information was collected, exit without writing coverage information, istanbul coverage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# packages.js
+&quot;test:coverage&quot;: &quot;babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha ./src/**/__tests__/*.js&quot;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;commonjs-with-babel&quot;&gt;CommonJS with Babel&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/branneman/8048520&quot;&gt;Better local require() paths for Node.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://calculist.org/blog/2012/06/29/static-module-resolution/&quot;&gt;Static module resolution&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://babeljs.io/docs/plugins/transform-es2015-modules-commonjs/&quot;&gt;ES2015 modules to CommonJS transform&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/michaelzoidl/babel-root-import&quot;&gt;Babel Root Import&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jshanson7/babel-plugin-resolver&quot;&gt;Babel Resolver Plugin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;asyncawait-with-babel&quot;&gt;Async/Await with Babel&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://babeljs.io/docs/plugins/preset-es2017/&quot;&gt;ES2017 preset&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;object-rest-spread-transform&quot;&gt;Object rest spread transform&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://babeljs.io/docs/plugins/transform-object-rest-spread/&quot;&gt;Object rest spread transform&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;etc&quot;&gt;ETC&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;[babel CLI copy nonjs files](http://stackoverflow.com/questions/32642685/babel-cli-copy-nonjs-files/35033177#35033177&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="babel" /><category term="js" /><summary type="html">Babel is a JavaScript compiler. Use next generation JavaScript, today.
+That make you can use ES6, even ES7 with ES5 javascript engine.
+
+
+  babel - How to use the CLI tools.
+  babel - present
+  babel - How to use the babelrc</summary></entry><entry><title type="html">Async Await</title><link href="http://dev.im-bot.com//async-await/" rel="alternate" type="text/html" title="Async Await" /><published>2016-11-13T00:00:00+00:00</published><updated>2016-11-13T00:00:00+00:00</updated><id>http://dev.im-bot.com//async-await</id><content type="html" xml:base="http://dev.im-bot.com//async-await/">&lt;p&gt;Async/Await is the part of ES7 that currently draft version new standard of
 javascript. It is pattern for solving &lt;a href=&quot;http://callbackhell.com&quot;&gt;Callback Hell&lt;/a&gt;
 problem that nowaday is solve by &lt;a href=&quot;http://www.datchley.name/es6-promises/&quot;&gt;ES6 Promises&lt;/a&gt;.
 Async/Await is wrapper of Promises pattern that make you can program in
@@ -546,112 +610,4 @@ $ git add -u . // add file with skip iles that are not under version control</su
   Git Submodules: Core concept, workflows and tips
   Git Submodules Cheat Sheet
   How to use Git submodules
-  Mastering Git submodules</summary></entry><entry><title type="html">API Documents</title><link href="http://dev.im-bot.com//api-docs/" rel="alternate" type="text/html" title="API Documents" /><published>2016-07-10T00:00:00+00:00</published><updated>2016-07-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//api-docs</id><content type="html" xml:base="http://dev.im-bot.com//api-docs/">&lt;h1 id=&quot;api-blueprint&quot;&gt;API Blueprint&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://apiblueprint.org/&quot;&gt;API Blueprint. A powerful high-level API description language for web APIs.&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://blog.lateral.io/2015/06/youll-never-guess-which-api-documentation-tools-we-use/&quot;&gt;You’ll never guess which API documentation tools we use&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/bpedro/api-code-generation&quot;&gt;API Code Generation&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h3 id=&quot;tools&quot;&gt;Tools&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/danielgtaylor/aglio&quot;&gt;Agilo - An API Blueprint renderer with theme support that outputs static HTML&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/thecopy/apiary2postman&quot;&gt;apiary2postman&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/kminami/apib2swagger&quot;&gt;apib2swagger&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/apiaryio/dredd&quot;&gt;dredd - Language-agnostic HTTP API Testing Framework&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mson----api-blueprint-syntax&quot;&gt;MSON  - API Blueprint Syntax&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/apiaryio/mson&quot;&gt;MSON - Markdown Syntax for Object Notation&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apiaryio/api-blueprint/tree/master/examples&quot;&gt;api-blueprint/examples/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://raw.githubusercontent.com/danielgtaylor/aglio/master/example.apib&quot;&gt;aglio-example&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://gist.github.com/zdne/5f8295642af18aff27ec&quot;&gt;Working with multiple blueprint files&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/apiaryio/api-blueprint/issues/236&quot;&gt;Ability to reference repeated data &lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/30082903/aglio-does-not-allow-parameters-in-the-body-to-be-defined-as-parameters&quot;&gt;Aglio does not allow parameters in the body to be defined as parameters&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/24207495/how-do-i-document-a-multipart-request-with-apiary&quot;&gt;How do I document a multipart request with apiary?&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/apiaryio/dredd/issues/74&quot;&gt;Multipart form requests &lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/zdne/6267785&quot;&gt;zdne/mutlipart-example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dreed&quot;&gt;Dreed&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/apiaryio/dredd&quot;&gt;dredd - Language-agnostic HTTP API Testing Framework&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://philsturgeon.uk/api/2015/01/28/dredd-api-testing-documentation/&quot;&gt;Dredd: Do Your HTTP API Justice&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/apiaryio/dredd/issues/133&quot;&gt;dredd - Oauth&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://dredd.readthedocs.io/en/latest/hooks-nodejs/&quot;&gt;Writing Dredd Hooks In Node.js&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;swagger&quot;&gt;Swagger&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/swagger-api/swagger-node&quot;&gt;Swagger module for node.js&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/whitlockjc/building-apis-with-nodejs-and-swagger&quot;&gt;Building APIs with Node.js and Swagger&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xggucT_xl5U&quot;&gt;Swagger: How to Create an API Documentation&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://scotch.io/tutorials/speed-up-your-restful-api-development-in-node-js-with-swagger&quot;&gt;Speed up your RESTful API development in Node.js with Swagger&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://blog.risingstack.com/swagger-nodejs/&quot;&gt;Swagger for Node.js HTTP API Design&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/lucybot/api-spec-converter&quot;&gt;api-spec-converter - any thing to swagger&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://medium.com/@bird.praphan/อย่าเพิ่งสร้าง-apis-ถ้ายังไม่รู้จัก-swagger-f32514c7d729#.8muq43pvk&quot;&gt;อย่าเพิ่งสร้าง APIs ถ้ายังไม่รู้จัก Swagger&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="API" /><summary type="html">API Blueprint
-
-
-  
-    API Blueprint. A powerful high-level API description language for web APIs.
-  
-  
-    You’ll never guess which API documentation tools we use
-  
-  
-    API Code Generation</summary></entry></feed>
+  Mastering Git submodules</summary></entry></feed>

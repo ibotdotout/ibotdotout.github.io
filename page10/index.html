@@ -208,6 +208,100 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/drone-ci/">
+        Drone.io CI
+      </a>
+    </h1>
+
+    <span class="post-date">
+      23 Aug 2015
+      
+        &middot;
+        <a href="/drone-ci/#disqus_thread" data-disqus-identifier="/drone-ci/"></a>
+        
+      
+    </span>
+
+    
+      <h1 id="drone---continuous-integration-platform-built-on-docker-written-in-gohttpsgithubcomdronedrone----better-than-droneio"><a href="https://github.com/drone/drone">Drone - Continuous Integration platform built on Docker, written in Go</a> -  better than Drone.io</h1>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=pP3iRUC6EOM">How to setup your own continuous integration server with Drone</a></li>
+</ul>
+
+<h1 id="droneio-based-on-dronehttpsdroneio---simple-ci-server"><a href="https://drone.io">Drone.io based on Drone</a> - Simple CI Server</h1>
+
+<h2 id="private-configuration">Private Configuration:</h2>
+
+<h3 id="can-run-shell-command">Can run shell command</h3>
+
+<ol>
+  <li>upload your configuration into gist with secret</li>
+  <li>get url of your raw configuration</li>
+  <li>
+    <p>add your configuration url in “Environment Variable”</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Example</span>
+<span class="nv">CONFIG_URL</span><span class="o">=</span><span class="s2">"&lt;your_configuration_url&gt;"</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>in “Commands” download your configurations via wget without display result</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+wget <span class="nv">$CONFIG_URL</span> -O &lt;config_name&gt; &amp;&gt; /dev/null
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h3 id="keep-variables-in-environment">Keep Variables in Environment</h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Example</span>
+<span class="c">#!/bin/sh</span>
+<span class="nb">export </span><span class="nv">CLIENT_ID</span><span class="o">=</span>&lt;your id&gt;
+<span class="nb">export </span><span class="nv">TAGS</span><span class="o">=</span>&lt;your tags&gt;
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">tags</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'TAGS'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="dynamic-solution">Dynamic Solution</h3>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c"># Configuration from Environment Variables if can't load config.ini</span>
+<span class="c"># you can make you own configuration from config.ini.sample</span>
+
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s">"config.ini"</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">configparser</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">'config.ini'</span><span class="p">)</span>
+    <span class="n">client_id</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'DEFAULT'</span><span class="p">,</span> <span class="s">'client_id'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">client_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CLIENT_ID'</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">default</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h2 id="references">References:</h2>
+<ol>
+  <li><a href="http://docs.drone.io/quickstart.html">Drone.io Quickstart</a></li>
+  <li><a href="http://docs.drone.io/python.html">Drone.io Building Python Projects</a></li>
+  <li><a href="http://buddylindsey.com/hosting-your-open-source-project-on-heroku-with-private-configuration/">Hosting Your Open Source Project on Heroku with Private Configuration</a></li>
+  <li><a href="http://stackoverflow.com/questions/3176918/how-to-hide-connection-string-user-name-pw-when-using-source-control">How to hide connection string, user name, pw when using source control?</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/line/">
         Python Line API
       </a>
@@ -779,113 +873,6 @@ Technician: Tools &amp; Tactics</p>
   <li><a href="https://www.youtube.com/watch?v=pB0WvcxTbCA">WATCH THIS IF YOU WANT TO BECOME A WEB DEVELOPER! - Web Development Career advice</a></li>
   <li><a href="http://www.laurencegellert.com/2012/08/what-is-a-full-stack-developer/">What is a Full Stack developer?</a></li>
   <li><a href="https://pattrawoots.wordpress.com/2016/01/18/challenges-in-building-a-wongnai-like-website-part-1/">สร้างเว็บอย่าง Wongnai กับโจทย์ล้านแปดที่ต้องแก้ (ตอนที่ 1)</a></li>
-</ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/ssh/">
-        All about Secure Shell
-      </a>
-    </h1>
-
-    <span class="post-date">
-      06 Apr 2015
-      
-        &middot;
-        <a href="/ssh/#disqus_thread" data-disqus-identifier="/ssh/"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="ssh">SSH</h2>
-
-<h3 id="ssh-alias-confighttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">SSH Alias Config</a></h3>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
-<span class="c"># use $ssh &lt;hostname&gt; to connect</span>
-<span class="c"># Host * //setting for every host</span>
-  Host &lt;hostname&gt;
-  HostName &lt;ip&gt;
-  User	 &lt;username&gt;
-  Port  &lt;port&gt;
-</code></pre>
-</div>
-
-<h3 id="using-ssh-proxycommand-to-tunnel-connectionshttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">Using SSH ProxyCommand to Tunnel Connections</a></h3>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
-<span class="c">#ProxyCommand ssh someserver -W %h:%p</span>
-<span class="c">#  With the newer versions of openssh-client you can also use the -W option to forward the connection.</span>
-<span class="c">#LocalCommand</span>
-<span class="c">#  Specifies a command to execute on the local machine after successfully connecting to the server</span>
-<span class="c">#DynamicForward</span>
-<span class="c">#  Specifies that a TCP port on the local machine be forwarded over the secure channel, and the application protocol is then used to determine where to connect to from the remote machine.</span>
-<span class="c">#IdentityFile</span>
-<span class="c">#  Specifies a file from which the user's DSA, ECDSA, Ed25519 or RSA authentication identity is read</span>
-
-  Host &lt;proxy&gt;
-  HostName &lt;ip&gt;
-  User &lt;user&gt;
-  ProxyCommand ssh &lt;destination&gt; -W %h:%p 2&gt; /dev/null
-  IdentityFile &lt;ssh_key&gt;
-</code></pre>
-</div>
-
-<h2 id="ssh-login-with-key-based-authenticationhttpwwwlaubenheimernetssh-keysshtml"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Client: generate key</span>
-<span class="gp">$ </span>ssh-keygen -t rsa -b 4096
-
-<span class="c"># Server: put client key</span>
-<span class="c"># copy ~/.ssh/id_rsa.pub into ~/.ssh/authorized_keys in server</span>
-<span class="c"># (option: server denies passed auth)</span>
-<span class="gp">$ </span>sudo vim /etc/ssh/sshd_config
-</code></pre>
-</div>
-
-<h2 id="ssh-login-with-passwordhttpaskubuntucomquestions101670how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># /etc/ssh/sshd_config</span>
-PasswordAuthentication no
-
-Match address 192.0.2.0/24
-    PasswordAuthentication yes
-</code></pre>
-</div>
-
-<h2 id="ssh-proxy-with-socks5httpsthomashunternameblogreally-simple-ssh-proxy-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -N -D 8080 user@server -p 443
-<span class="c"># should using port 443 to avoid blocking port 22</span>
-<span class="c"># setting proxy  on your browser</span>
-<span class="c"># sock host 127.0.0.1 port 8080</span>
-</code></pre>
-</div>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
-<span class="c"># use $ssh -N &lt;proxy&gt; -p 443</span>
-Host &lt;proxy&gt;
-  HostName &lt;ip&gt;
-  User &lt;user&gt;
-  DynamicForward 8080
-</code></pre>
-</div>
-
-<h2 id="ssh-skip-knownhosthttpsuperusercomquestions125324how-can-i-avoid-sshs-host-verification-for-known-hosts"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -o <span class="s2">"StrictHostKeyChecking no"</span> user@host
-</code></pre>
-</div>
-
-<h3 id="resources">Resources</h3>
-<ol>
-  <li><a href="https://help.ubuntu.com/community/SSH/OpenSSH/Configuring">Setup and Setting SSH</a></li>
-  <li><a href="https://www.youtube.com/playlist?list=PLtK75qxsQaMII75AbcuIruao1k2qdxwjg">SSH Crash Course – Fun With Remote Shells, From The Ground Up</a></li>
-  <li><a href="https://blog.0xbadc0de.be/archives/300">SSH: Best practices</a></li>
 </ol>
 
     

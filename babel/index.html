@@ -8,20 +8,20 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Add existed Docker host to docker-machine" />
+  <meta property="og:title" content="Babel" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/existed-docker-host-tot-docker-machine//" />
+<meta property="og:url" content="http://dev.im-bot.com/babel//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Generic Driver - Create machines using an existing VM/Host with SSH$ docker-machine create --driver generic \    --generic-ip-address $host_ip \    --generic..." />
+<meta property="og:description" content="Babel is a JavaScript compiler. Use next generation JavaScript, today.That make you can use ES6, even ES7 with ES5 javascript engine.  babel - How to use the..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Add existed Docker host to docker-machine &middot; botbotbot
+      Babel &middot; botbotbot
     
   </title>
 
@@ -205,114 +205,96 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Add existed Docker host to docker-machine</h1>
+  <h1 class="post-title">Babel</h1>
   <span class="post-date">
-    11 Nov 2016
+    15 Nov 2016
       
         Tags:
         
-          <a href="/tags/#docker">
-            docker
+          <a href="/tags/#babel">
+            babel
+          </a>
+        
+          <a href="/tags/#js">
+            js
           </a>
         
       
       
         &middot;
-        <a href="/existed-docker-host-tot-docker-machine//index.html#disqus_thread" data-disqus-identifier="/existed-docker-host-tot-docker-machine/"></a>
+        <a href="/babel//index.html#disqus_thread" data-disqus-identifier="/babel/"></a>
       
       
         &middot;
-        Updated November 11, 2016
+        Updated November 15, 2016
       
   </span>
 
-  <h2 id="generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh"><a href="https://docs.docker.com/machine/drivers/generic/">Generic Driver</a> - Create machines using an existing VM/Host with SSH</h2>
+  <p><a href="https://babeljs.io">Babel</a> is a JavaScript compiler. Use next generation JavaScript, today.
+That make you can use ES6, even ES7 with ES5 javascript engine.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker-machine create --driver generic <span class="se">\</span>
-    --generic-ip-address <span class="nv">$host_ip</span> <span class="se">\</span>
-    --generic-ssh-user <span class="nv">$host_user</span> <span class="se">\</span>
-    <span class="nv">$machine_name</span>
-</code></pre>
-</div>
+<ul>
+  <li><a href="https://babeljs.io/docs/usage/cli/">babel - How to use the CLI tools.</a></li>
+  <li><a href="https://babeljs.io/docs/plugins/#presets">babel - present</a></li>
+  <li><a href="https://babeljs.io/docs/usage/babelrc/">babel - How to use the babelrc</a></li>
+</ul>
 
 <!-- more -->
 
-<h2 id="how-to-mount-local-volumes-in-docker-machinehttpstackoverflowcomquestions30040708how-to-mount-local-volumes-in-docker-machine"><a href="http://stackoverflow.com/questions/30040708/how-to-mount-local-volumes-in-docker-machine">How to mount local volumes in docker machine</a></h2>
-
+<h2 id="babel-with-nodejs">Babel with NodeJs</h2>
 <ul>
-  <li>
-    <p>you can’t mount local volumes to <code class="highlighter-rouge">remote server</code> but you can upload your files
-with <code class="highlighter-rouge">scp</code> or <code class="highlighter-rouge">rsync</code></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">docker-compose</code> will mount file with the same path in both <code class="highlighter-rouge">client</code> and <code class="highlighter-rouge">remote
-server</code>, you can check you path <code class="highlighter-rouge">$ pwd</code> .</p>
-  </li>
-  <li>
-    <p><a href="https://docs.docker.com/machine/reference/scp/">docker-machine scp</a></p>
-  </li>
+  <li><a href="http://jsrocks.org/2016/01/configuring-babel-6-for-node-js/">CONFIGURING BABEL 6 FOR NODE.JS</a></li>
+  <li><a href="https://github.com/babel/example-node-server">Example Node Server w/ Babel</a> - support watch build, mocha</li>
+  <li><a href="https://github.com/chrisza4/generator-node-es7-backend">generator-node-es7-backend</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># download</span>
-<span class="gp">$ </span>docker-machine scp <span class="nv">$machine</span>:<span class="nv">$src</span> <span class="nv">$dest</span>
-
-<span class="c"># upload</span>
-<span class="gp">$ </span>docker-machine scp <span class="nv">$src</span> <span class="nv">$machine</span>:<span class="nv">$dest</span>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>/src ---&gt; Put your code here
+/dist ----&gt; Where real node code will be built by babel
 </code></pre>
 </div>
 
+<h3 id="coverage-with-babel">Coverage with Babel</h3>
+
 <ul>
-  <li><a href="http://www.computerhope.com/unix/rsync.htm">Rsync</a> - <a href="http://ss64.com/bash/rsync_options.html">option</a></li>
+  <li><a href="http://stackoverflow.com/a/35976233">Running Mocha + Istanbul + Babel</a></li>
+  <li><a href="http://stackoverflow.com/a/35010781">No coverage information was collected, exit without writing coverage information, istanbul coverage</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># sync and delete file remote that not existed on local</span>
-rsync -rvzahe <span class="s1">'docker-machine ssh $machine'</span> --delete --progress <span class="nv">$src</span> :<span class="nv">$dest</span>
-
-<span class="c"># ignore .git directory</span>
-rsync -rvzahe <span class="s1">'docker-machine ssh $machine'</span> --delete --progress --exclude<span class="o">=</span><span class="s1">'.git'</span> <span class="nv">$src</span> :<span class="nv">$dest</span><span class="s2">"
-</span></code></pre>
-</div>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># alias</span>
-
-<span class="nb">export </span><span class="nv">machine</span><span class="o">=</span>digitalocean
-<span class="c"># rsync for mount volume on remote docker host</span>
-
-<span class="c"># sync</span>
-<span class="nb">alias </span><span class="nv">dsync</span><span class="o">=</span><span class="s2">"rsync -rvzahe 'docker-machine ssh </span><span class="se">\$</span><span class="s2">machine' --delete --progress --exclude='.git' . :</span><span class="se">\$</span><span class="s2">PWD"</span>
-
-<span class="c"># remove file on server !!! danger</span>
-<span class="nb">alias </span><span class="nv">dclean</span><span class="o">=</span><span class="s2">"docker-machine ssh </span><span class="se">\$</span><span class="s2">machine </span><span class="se">\"</span><span class="s2">cd </span><span class="se">\$</span><span class="s2">PWD &amp;&amp; rm -r *</span><span class="se">\"</span><span class="s2">"</span>
-
-<span class="c"># need confirm before delete</span>
-<span class="nb">alias </span><span class="nv">dclean</span><span class="o">=</span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">cd </span><span class="nv">$PWD</span><span class="s2"> &amp;&amp; rm -r *</span><span class="se">\"</span><span class="s2"> | xargs -p docker-machine ssh </span><span class="se">\$</span><span class="s2">machine"</span>
-
-<span class="c"># list dir on remote host</span>
-<span class="nb">alias </span><span class="nv">dlist</span><span class="o">=</span><span class="s2">"docker-machine ssh </span><span class="se">\$</span><span class="s2">machine </span><span class="se">\"</span><span class="s2">cd </span><span class="se">\$</span><span class="s2">PWD &amp;&amp; ls</span><span class="se">\"</span><span class="s2">"</span>
+<div class="highlighter-rouge"><pre class="highlight"><code># packages.js
+"test:coverage": "babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha ./src/**/__tests__/*.js",
 </code></pre>
 </div>
 
-<h2 id="references">References:</h2>
+<h3 id="commonjs-with-babel">CommonJS with Babel</h3>
 <ul>
-  <li><a href="http://stackoverflow.com/questions/3314660/passing-variables-in-remote-ssh-command/3314678#3314678">Passing variables in remote ssh command</a></li>
-  <li><a href="http://stackoverflow.com/questions/3231804/in-bash-how-to-add-are-you-sure-y-n-to-any-command-or-alias/3400809#3400809">In Bash, how to add Are you sure Y/n? to any command or alias?</a></li>
+  <li><a href="https://gist.github.com/branneman/8048520">Better local require() paths for Node.js</a></li>
+  <li><a href="http://calculist.org/blog/2012/06/29/static-module-resolution/">Static module resolution</a></li>
+  <li><a href="http://babeljs.io/docs/plugins/transform-es2015-modules-commonjs/">ES2015 modules to CommonJS transform</a></li>
+  <li><a href="https://github.com/michaelzoidl/babel-root-import">Babel Root Import</a></li>
+  <li><a href="https://github.com/jshanson7/babel-plugin-resolver">Babel Resolver Plugin</a></li>
 </ul>
 
+<h3 id="asyncawait-with-babel">Async/Await with Babel</h3>
+<ul>
+  <li><a href="https://babeljs.io/docs/plugins/preset-es2017/">ES2017 preset</a></li>
+</ul>
+
+<h3 id="object-rest-spread-transform">Object rest spread transform</h3>
+
+<ul>
+  <li><a href="https://babeljs.io/docs/plugins/transform-object-rest-spread/">Object rest spread transform</a></li>
+</ul>
+
+<h3 id="etc">ETC</h3>
+<ul>
+  <li>[babel CLI copy nonjs files](http://stackoverflow.com/questions/32642685/babel-cli-copy-nonjs-files/35033177#35033177</li>
+</ul>
 
 </div>
 
 <div class="related">
   <h2>Latest Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/babel/">
-            Babel
-            <small>15 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -332,6 +314,15 @@ rsync -rvzahe <span class="s1">'docker-machine ssh $machine'</span> --delete --p
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/existed-docker-host-tot-docker-machine/">
+            Add existed Docker host to docker-machine
+            <small>11 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -343,7 +334,7 @@ rsync -rvzahe <span class="s1">'docker-machine ssh $machine'</span> --delete --p
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/existed-docker-host-tot-docker-machine/";
+      var disqus_identifier = "/babel/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
