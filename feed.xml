@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-15T02:47:42+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Babel</title><link href="http://dev.im-bot.com//babel/" rel="alternate" type="text/html" title="Babel" /><published>2016-11-15T00:00:00+00:00</published><updated>2016-11-15T00:00:00+00:00</updated><id>http://dev.im-bot.com//babel</id><content type="html" xml:base="http://dev.im-bot.com//babel/">&lt;p&gt;&lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; is a JavaScript compiler. Use next generation JavaScript, today.
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-15T02:52:08+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Babel</title><link href="http://dev.im-bot.com//babel/" rel="alternate" type="text/html" title="Babel" /><published>2016-11-15T00:00:00+00:00</published><updated>2016-11-15T00:00:00+00:00</updated><id>http://dev.im-bot.com//babel</id><content type="html" xml:base="http://dev.im-bot.com//babel/">&lt;p&gt;&lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; is a JavaScript compiler. Use next generation JavaScript, today.
 That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -28,8 +28,7 @@ That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/35010781&quot;&gt;No coverage information was collected, exit without writing coverage information, istanbul coverage&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# packages.js
-&quot;test:coverage&quot;: &quot;babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha ./src/**/__tests__/*.js&quot;,
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha ./src/**/__tests__/*.js
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -55,7 +54,7 @@ That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
 
 &lt;h3 id=&quot;etc&quot;&gt;ETC&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;[babel CLI copy nonjs files](http://stackoverflow.com/questions/32642685/babel-cli-copy-nonjs-files/35033177#35033177&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/32642685/babel-cli-copy-nonjs-files/35033177#35033177&quot;&gt;babel CLI copy nonjs files&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="babel" /><category term="js" /><summary type="html">Babel is a JavaScript compiler. Use next generation JavaScript, today.
 That make you can use ES6, even ES7 with ES5 javascript engine.
 
