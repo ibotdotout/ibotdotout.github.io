@@ -208,6 +208,79 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/osx-write-ntfs/">
+        Enable NTFS write on OSX
+      </a>
+    </h1>
+
+    <span class="post-date">
+      17 Jun 2014
+      
+        &middot;
+        <a href="/osx-write-ntfs/#disqus_thread" data-disqus-identifier="/osx-write-ntfs/"></a>
+        
+      
+    </span>
+
+    
+      <h2 id="automatical-way">Automatical Way</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
+</code></pre>
+</div>
+
+<h2 id="manual-way">Manual Way</h2>
+<ol>
+  <li>
+    <p>get UUID form this command</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>diskutil info /Volumes/&lt;drivename&gt; |  grep UUID
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>edit /etc/fstab</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>sudo vim /etc/fstab
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>add this with edit <code class="highlighter-rouge">&lt;uuid_drive&gt;</code></p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">UUID=&lt;uuid_drive&gt; </span>none ntfs rw,auto,nobrowse
+</code></pre>
+    </div>
+  </li>
+  <li>reject and plug it agian</li>
+  <li>
+    <p>open hdd with this command</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>open /Volumes
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>If want to remove writable NTFS drive</p>
+
+    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>sudo rm /etc/fstab
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h3 id="references">References:</h3>
+<ol>
+  <li><a href="http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/">http://coolestguidesontheplanet.com/how-to-write-to-a-ntfs-drive-from-os-x-mavericks/</a></li>
+  <li><a href="http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/">http://learnaholic.me/2013/11/11/enable-ntfs-write-on-mac-os-x-mavericks/</a></li>
+  <li><a href="http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/">วิธีทำให้ Mac อ่านและเขียนไฟล์ NTFS บน Windows ได้</a></li>
+</ol>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/how-to-setup-this-blog/">
         How to set up this blog
       </a>
@@ -873,9 +946,9 @@ nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
   </tbody>
 </table>
 
-<h2 id="vim-commandvim-command"><a href="/vim-command">Vim Command</a></h2>
+<h2 id="vim-command"><a href="/vim-command">Vim Command</a></h2>
 
-<h2 id="vim-pluginsvim-plugins"><a href="/vim-plugins">Vim Plugins</a></h2>
+<h2 id="vim-plugins"><a href="/vim-plugins">Vim Plugins</a></h2>
 
 <h3 id="vim-script">Vim Script</h3>
 
@@ -1013,7 +1086,7 @@ setw -g mode-keys vi
   </li>
 </ul>
 
-<h3 id="create-custom-layouthttpswwwyoutubecomwatchvsxw-n5du600"><a href="https://www.youtube.com/watch?v=sxw-n5Du600">Create Custom Layout</a></h3>
+<h3 id="create-custom-layout"><a href="https://www.youtube.com/watch?v=sxw-n5Du600">Create Custom Layout</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#Window: python dev (Prefix - Meta(Alt) + d)</span>
 <span class="c"># -v = split horizontal</span>
@@ -1023,21 +1096,21 @@ setw -g mode-keys vi
 </code></pre>
 </div>
 
-<h3 id="tmuxinatorhttpsgithubcomtmuxinatortmuxinator"><a href="https://github.com/tmuxinator/tmuxinator">tmuxinator</a></h3>
+<h3 id="tmuxinator"><a href="https://github.com/tmuxinator/tmuxinator">tmuxinator</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gem install tmuxinator
 <span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim
 </code></pre>
 </div>
 
-<h3 id="wemuxhttpsgithubcomzolrathwemux"><a href="https://github.com/zolrath/wemux">wemux</a></h3>
+<h3 id="wemux"><a href="https://github.com/zolrath/wemux">wemux</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># OSX via Homebrew</span>
 <span class="gp">$ </span>brew install wemux
 </code></pre>
 </div>
 
-<h3 id="unable-to-use-open-command-in-osx-tmuxhttpwwwelmundioosx20150710open-command-in-osx-tmux"><a href="http://www.elmund.io/osx/2015/07/10/open-command-in-osx-tmux/">Unable to use ‘open’ command in OSX tmux</a></h3>
+<h3 id="unable-to-use-open-command-in-osx-tmux"><a href="http://www.elmund.io/osx/2015/07/10/open-command-in-osx-tmux/">Unable to use ‘open’ command in OSX tmux</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew update
 brew install reattach-to-user-namespace
@@ -1045,7 +1118,7 @@ brew install reattach-to-user-namespace
 </code></pre>
 </div>
 
-<h3 id="how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmuxhttpsuperusercomquestions493048how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux"><a href="http://superuser.com/questions/493048/how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux">How to convert 2 horizontal panes to vertical panes in tmux?</a></h3>
+<h3 id="how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux"><a href="http://superuser.com/questions/493048/how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux">How to convert 2 horizontal panes to vertical panes in tmux?</a></h3>
 
 <p><code class="highlighter-rouge">Prefix + space</code></p>
 
@@ -1410,7 +1483,7 @@ pyreverse -o png &lt;code&gt;
   <li><a href="http://pyvideo.org">pyvideo.org</a></li>
 </ol>
 
-<h2 id="python-testingpython-testing"><a href="/python-testing">Python Testing</a></h2>
+<h2 id="python-testing"><a href="/python-testing">Python Testing</a></h2>
 
 <h2 id="etc">ETC.</h2>
 <ol>

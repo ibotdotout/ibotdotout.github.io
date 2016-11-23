@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-15T02:52:08+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Babel</title><link href="http://dev.im-bot.com//babel/" rel="alternate" type="text/html" title="Babel" /><published>2016-11-15T00:00:00+00:00</published><updated>2016-11-15T00:00:00+00:00</updated><id>http://dev.im-bot.com//babel</id><content type="html" xml:base="http://dev.im-bot.com//babel/">&lt;p&gt;&lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; is a JavaScript compiler. Use next generation JavaScript, today.
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-23T10:05:20+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Code Review</title><link href="http://dev.im-bot.com//code-review/" rel="alternate" type="text/html" title="Code Review" /><published>2016-11-23T00:00:00+00:00</published><updated>2016-11-23T00:00:00+00:00</updated><id>http://dev.im-bot.com//code-review</id><content type="html" xml:base="http://dev.im-bot.com//code-review/">&lt;blockquote&gt;
+  &lt;p&gt;10 lines of code = 10 issues.&lt;br /&gt;
+500 lines of code = “looks fine.”&lt;br /&gt;
+Code reviews. - &lt;a href=&quot;https://twitter.com/iamdevloper/status/397664295875805184&quot;&gt;@iamdevloper&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/thoughtbot/guides/tree/master/code-review&quot;&gt;Code Reviewed&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/lyst/MakingLyst/tree/master/code-reviews&quot;&gt;Guidelines for code reviews&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://codeahoy.com/2016/04/03/effective-code-reviews/&quot;&gt;Effective Code Reviews&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/rational/library/11-proven-practices-for-peer-review/&quot;&gt;11 proven practices for more effective, efficient peer code review&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.jetbrains.com/upsource/2015/07/23/what-to-look-for-in-a-code-review/&quot;&gt;What to look for in a Code Review - Code Review series.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://leanpub.com/whattolookforinacodereview&quot;&gt;What to Look for in a Code Review - Book&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html&quot;&gt;Code Review Best Practices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PJjmw9TRB7s&quot;&gt;RailsConf 2015 - Implementing a Strong Code-Review Culture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=npIk9Zi4lnQ&quot;&gt;Openstack Summit - Effective Code Review&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="coding" /><summary type="html">10 lines of code = 10 issues.
+500 lines of code = “looks fine.”
+Code reviews. - @iamdevloper</summary></entry><entry><title type="html">Babel</title><link href="http://dev.im-bot.com//babel/" rel="alternate" type="text/html" title="Babel" /><published>2016-11-15T00:00:00+00:00</published><updated>2016-11-15T00:00:00+00:00</updated><id>http://dev.im-bot.com//babel</id><content type="html" xml:base="http://dev.im-bot.com//babel/">&lt;p&gt;&lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; is a JavaScript compiler. Use next generation JavaScript, today.
 That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -134,7 +154,7 @@ route 192.168.0.0 255.255.0.0
   &lt;li&gt;&lt;a href=&quot;https://community.openvpn.net/openvpn/wiki/IgnoreRedirectGateway&quot;&gt;Ignoring redirect-gateway&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://serverfault.com/questions/631037/how-to-route-only-specific-openvpn-traffic-through-a-openvpn-based-on-ip-filteri/631048#631048&quot;&gt;How to route only specific openVPN traffic through a openVPN based on IP filtering of the destination?&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://superuser.com/questions/457020/openvpn-only-route-a-specific-ip-addresses-through-vpn/628488#628488&quot;&gt;OpenVPN: Only route a specific IP addresses through VPN?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vpn" /><summary type="html">openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS</summary></entry><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driverhttpsdocsdockercommachinedriversgeneric---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vpn" /><summary type="html">openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS</summary></entry><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driver---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
 
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine create --driver generic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
     --generic-ip-address &lt;span class=&quot;nv&quot;&gt;$host_ip&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -145,7 +165,7 @@ route 192.168.0.0 255.255.0.0
 
 &lt;!-- more --&gt;
 
-&lt;h2 id=&quot;how-to-mount-local-volumes-in-docker-machinehttpstackoverflowcomquestions30040708how-to-mount-local-volumes-in-docker-machine&quot;&gt;&lt;a href=&quot;http://stackoverflow.com/questions/30040708/how-to-mount-local-volumes-in-docker-machine&quot;&gt;How to mount local volumes in docker machine&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;how-to-mount-local-volumes-in-docker-machine&quot;&gt;&lt;a href=&quot;http://stackoverflow.com/questions/30040708/how-to-mount-local-volumes-in-docker-machine&quot;&gt;How to mount local volumes in docker machine&lt;/a&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -565,48 +585,4 @@ $ git add -u . // add file with skip iles that are not under version control</su
 :buffers
 
 // substitute word for each buffers and save
-:argdo %s/pattern/newpattern/ge | update</summary></entry><entry><title type="html">Git Submodule and Git Subtree</title><link href="http://dev.im-bot.com//git-submodule-subtree/" rel="alternate" type="text/html" title="Git Submodule and Git Subtree" /><published>2016-10-25T00:00:00+00:00</published><updated>2016-10-25T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-submodule-subtree</id><content type="html" xml:base="http://dev.im-bot.com//git-submodule-subtree/">&lt;h1 id=&quot;git-submodule&quot;&gt;git submodule&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/gitaarik/8735255&quot;&gt;Git Submodules basic explanation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/blog/2104-working-with-submodules&quot;&gt;Working with submodules&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/splitting-a-subfolder-out-into-a-new-repository/&quot;&gt;Splitting a subfolder out into a new repository&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.speirs.org/blog/2009/5/11/understanding-git-submodules.html&quot;&gt;Understanding Git Submodules&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.atlassian.com/2013/03/git-submodules-workflows-tips/&quot;&gt;Git Submodules: Core concept, workflows and tips&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.jacius.info/git-submodule-cheat-sheet/&quot;&gt;Git Submodules Cheat Sheet&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.joncairns.com/2011/10/how-to-use-git-submodules/&quot;&gt;How to use Git submodules&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407&quot;&gt;Mastering Git submodules&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h3 id=&quot;should-avoid-git-submodules-&quot;&gt;should avoid git submodules ?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://codingkilledthecat.wordpress.com/2012/04/28/why-your-company-shouldnt-use-git-submodules/&quot;&gt;Why your company shouldn’t use Git submodules&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://somethingsinistral.net/blog/git-submodules-are-probably-not-the-answer/&quot;&gt;Git submodules are probably not the answer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;git-subtree&quot;&gt;git subtree&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/&quot;&gt;Alternatives To Git Submodule: Git Subtree&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/&quot;&gt;The power of Git subtree&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/kvnsmth/4688345&quot;&gt;A real world usage for git subtrees.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://alistra.ghost.io/2014/11/30/git-subtree-a-better-alternative-to-git-submodule/&quot;&gt;git subtree - a better alternative to git submodule&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hpc.uni.lu/blog/2014/understanding-git-subtree/&quot;&gt;Understanding Git Subtree&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec&quot;&gt;Mastering Git subtrees&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;recap&quot;&gt;recap&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://andrey.nering.com.br/2016/git-submodules-vs-subtrees/&quot;&gt;Git: submodules vs. subtrees&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">git submodule
-
-
-  Git Submodules basic explanation
-  Working with submodules
-  Splitting a subfolder out into a new repository
-  Understanding Git Submodules
-  Git Submodules: Core concept, workflows and tips
-  Git Submodules Cheat Sheet
-  How to use Git submodules
-  Mastering Git submodules</summary></entry></feed>
+:argdo %s/pattern/newpattern/ge | update</summary></entry></feed>

@@ -225,7 +225,7 @@
 
   <h2 id="ssh">SSH</h2>
 
-<h3 id="ssh-alias-confighttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">SSH Alias Config</a></h3>
+<h3 id="ssh-alias-config"><a href="http://backdrift.org/transparent-proxy-with-ssh">SSH Alias Config</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
 <span class="c"># use $ssh &lt;hostname&gt; to connect</span>
@@ -237,7 +237,7 @@
 </code></pre>
 </div>
 
-<h3 id="using-ssh-proxycommand-to-tunnel-connectionshttpbackdriftorgtransparent-proxy-with-ssh"><a href="http://backdrift.org/transparent-proxy-with-ssh">Using SSH ProxyCommand to Tunnel Connections</a></h3>
+<h3 id="using-ssh-proxycommand-to-tunnel-connections"><a href="http://backdrift.org/transparent-proxy-with-ssh">Using SSH ProxyCommand to Tunnel Connections</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
 <span class="c">#ProxyCommand ssh someserver -W %h:%p</span>
@@ -257,7 +257,7 @@
 </code></pre>
 </div>
 
-<h2 id="ssh-login-with-key-based-authenticationhttpwwwlaubenheimernetssh-keysshtml"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
+<h2 id="ssh-login-with-key-based-authentication"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Client: generate key</span>
 <span class="gp">$ </span>ssh-keygen -t rsa -b 4096
@@ -269,7 +269,7 @@
 </code></pre>
 </div>
 
-<h2 id="ssh-login-with-passwordhttpaskubuntucomquestions101670how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
+<h2 id="ssh-login-with-password"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># /etc/ssh/sshd_config</span>
 PasswordAuthentication no
@@ -279,7 +279,7 @@ Match address 192.0.2.0/24
 </code></pre>
 </div>
 
-<h2 id="ssh-proxy-with-socks5httpsthomashunternameblogreally-simple-ssh-proxy-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
+<h2 id="ssh-proxy-with-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -N -D 8080 user@server -p 443
 <span class="c"># should using port 443 to avoid blocking port 22</span>
@@ -297,7 +297,7 @@ Host &lt;proxy&gt;
 </code></pre>
 </div>
 
-<h2 id="ssh-skip-knownhosthttpsuperusercomquestions125324how-can-i-avoid-sshs-host-verification-for-known-hosts"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
+<h2 id="ssh-skip-known_host"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -o <span class="s2">"StrictHostKeyChecking no"</span> user@host
 </code></pre>
@@ -318,6 +318,15 @@ Host &lt;proxy&gt;
     
       <li>
         <h3>
+          <a href="/code-review/">
+            Code Review
+            <small>23 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/babel/">
             Babel
             <small>15 Nov 2016</small>
@@ -330,15 +339,6 @@ Host &lt;proxy&gt;
           <a href="/async-await/">
             Async Await
             <small>13 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vpn/">
-            Open VPN
-            <small>12 Nov 2016</small>
           </a>
         </h3>
       </li>

@@ -380,7 +380,7 @@ Sharding is appropriate when a specific resource becomes a bottleneck on a singl
   <p>high  Query isolation / Write scaling - high  A shard key enabling mid-high randomness and relatively even distribution of data.  A compound shard keys are usually good candidates.</p>
 </blockquote>
 
-<h3 id="on-selecting-a-shard-key-for-mongodbhttpswwwmongodbcomblogposton-selecting-a-shard-key-for-mongodb"><a href="https://www.mongodb.com/blog/post/on-selecting-a-shard-key-for-mongodb">On Selecting a Shard Key for MongoDB</a></h3>
+<h3 id="on-selecting-a-shard-key-for-mongodb"><a href="https://www.mongodb.com/blog/post/on-selecting-a-shard-key-for-mongodb">On Selecting a Shard Key for MongoDB</a></h3>
 
 <blockquote>
   <p>Shard Key Considerations
@@ -418,7 +418,7 @@ With that said, there are five criteria for a good shard key. They are:</p>
   <p>the only reasonable way to approach MongoDB shard key selection is the way that you approach any other part of MongoDB schema design: you have to carefully consider the requirements arising from all of the different operations your application will perform</p>
 </blockquote>
 
-<h3 id="how-to-choose-a-shard-key-for-mongodbhttpblogbugsnagcommongo-shard-key"><a href="http://blog.bugsnag.com/mongo-shard-key">How to choose a shard key for MongoDB</a></h3>
+<h3 id="how-to-choose-a-shard-key-for-mongodb"><a href="http://blog.bugsnag.com/mongo-shard-key">How to choose a shard key for MongoDB</a></h3>
 <blockquote>
   <p>Hashed id :
 This will distribute reads and writes evenly, and it will ensure that each document has a different shard key so chunks can be fine-grained and small.</p>
@@ -438,7 +438,7 @@ If you want to beat the hashed _id scheme, you need to come up with way of group
 Choosing a shard key is hard, but there are really only two options. If you canâ€™t find a good grouping key for your application, hash the _id. If you can, then go with that grouping key and add the _id to avoid jumbo chunks. Remember that whichever grouping key you use, it needs to also distribute reads and writes evenly to get the most out of each node in your cluster.</p>
 </blockquote>
 
-<h3 id="how-to-choose-a-shard-key-the-card-gamehttpwwwkchodorowcomblog20110104how-to-choose-a-shard-key-the-card-game---demohttpwwwkchodorowcomshardcarksstrategyphp"><a href="http://www.kchodorow.com/blog/2011/01/04/how-to-choose-a-shard-key-the-card-game/">How to Choose a Shard Key: The Card Game</a> - <a href="http://www.kchodorow.com/shardcarks/strategy.php">Demo</a></h3>
+<h3 id="how-to-choose-a-shard-key-the-card-game---demo"><a href="http://www.kchodorow.com/blog/2011/01/04/how-to-choose-a-shard-key-the-card-game/">How to Choose a Shard Key: The Card Game</a> - <a href="http://www.kchodorow.com/shardcarks/strategy.php">Demo</a></h3>
 
 <blockquote>
   <p>Ascending shard keys are equivalent to this strategy: ObjectIds, dates, timestamps, auto-incrementing primary keys.</p>
@@ -448,7 +448,7 @@ Choosing a shard key is hard, but there are really only two options. If you canâ
   <p>Random Sharding keys : MD5 hashes, UUIDs. If you shard on a random key, you lose data locality benefits.</p>
 </blockquote>
 
-<h3 id="the-three-most-important-considerations-in-selecting-a-mongodb-shard-keyhttpswwwmorpheusdatacomblog2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key"><a href="https://www.morpheusdata.com/blog/2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key">The Three Most Important Considerations in Selecting a MongoDB Shard Key</a></h3>
+<h3 id="the-three-most-important-considerations-in-selecting-a-mongodb-shard-key"><a href="https://www.morpheusdata.com/blog/2015-01-26-the-three-most-important-considerations-in-selecting-a-mongodb-shard-key">The Three Most Important Considerations in Selecting a MongoDB Shard Key</a></h3>
 
 <blockquote>
   <p>The efficient operation of your MongoDB database depends on which field in the documents you designate as the shard key. Since you have to select the shard key up front and canâ€™t change it later, you need to give the choice due consideration.</p>
@@ -470,7 +470,7 @@ Choosing a shard key is hard, but there are really only two options. If you canâ
   <p>Choice of shard key depends on the nature of the collection</p>
 </blockquote>
 
-<h3 id="sharding-and-mongodb-release-321httpsdocsmongodborgmastermongodb-sharding-guide-masterpdf"><a href="https://docs.mongodb.org/master/MongoDB-sharding-guide-master.pdf">Sharding and MongoDB Release 3.2.1</a></h3>
+<h3 id="sharding-and-mongodb-release-321"><a href="https://docs.mongodb.org/master/MongoDB-sharding-guide-master.pdf">Sharding and MongoDB Release 3.2.1</a></h3>
 <blockquote>
   <p>The field you choose as your hashed shard key should have a good cardinality, or large number of different values. Hashed keys work well with fields that increase monotonically like ObjectId values or timestamps.</p>
 </blockquote>
@@ -583,6 +583,15 @@ db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
     
       <li>
         <h3>
+          <a href="/code-review/">
+            Code Review
+            <small>23 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/babel/">
             Babel
             <small>15 Nov 2016</small>
@@ -595,15 +604,6 @@ db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
           <a href="/async-await/">
             Async Await
             <small>13 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vpn/">
-            Open VPN
-            <small>12 Nov 2016</small>
           </a>
         </h3>
       </li>

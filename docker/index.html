@@ -233,11 +233,11 @@
 docker.io is old name</p>
 </blockquote>
 
-<h3 id="docker-try-it---interactive-tutorialhttpswwwdockercomtryit"><a href="https://www.docker.com/tryit/">Docker try it! - Interactive Tutorial</a></h3>
+<h3 id="docker-try-it---interactive-tutorial"><a href="https://www.docker.com/tryit/">Docker try it! - Interactive Tutorial</a></h3>
 
 <h3 id="install">Install</h3>
 
-<h4 id="install-on-debianhttpsdocsdockercomengineinstallationdebiandebian-wheezy-stable-7-x-64-bit"><a href="https://docs.docker.com/engine/installation/debian/#debian-wheezy-stable-7-x-64-bit">Install on Debian</a></h4>
+<h4 id="install-on-debian"><a href="https://docs.docker.com/engine/installation/debian/#debian-wheezy-stable-7-x-64-bit">Install on Debian</a></h4>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Debian Jessie 8.0 (64-bit) or unstable packages</span>
 <span class="gp">$ </span>sudo apt-get update
@@ -249,7 +249,7 @@ docker.io is old name</p>
 Jessie</a></li>
 </ul>
 
-<h4 id="install-on-osxhttpdocsdockercominstallationmac---homebrew-caskhttpcaskroomio"><a href="http://docs.docker.com/installation/mac/">Install on OSX</a> - <a href="http://caskroom.io">Homebrew-Cask</a></h4>
+<h4 id="install-on-osx---homebrew-cask"><a href="http://docs.docker.com/installation/mac/">Install on OSX</a> - <a href="http://caskroom.io">Homebrew-Cask</a></h4>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># if virtualbox not installed, install via homebrew cask</span>
 http://docs.docker.com/installation/mac/#from-your-shell
@@ -263,7 +263,7 @@ http://docs.docker.com/installation/mac/#from-your-shell
 </code></pre>
 </div>
 
-<h3 id="run-docker-without-sudohttpsdocsdockercominstallationdebiangiving-non-root-access"><a href="https://docs.docker.com/installation/debian/#giving-non-root-access">Run Docker without sudo</a></h3>
+<h3 id="run-docker-without-sudo"><a href="https://docs.docker.com/installation/debian/#giving-non-root-access">Run Docker without sudo</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#debian</span>
 <span class="gp">$ </span>sudo groupadd docker
@@ -281,26 +281,26 @@ http://docs.docker.com/installation/mac/#from-your-shell
 </code></pre>
 </div>
 
-<h3 id="command-by-yourself-in-containers---working-with-containershttpsdocsdockercomuserguideusingdocker">Command by yourself in containers - <a href="https://docs.docker.com/userguide/usingdocker/">Working with Containers</a></h3>
+<h3 id="command-by-yourself-in-containers---working-with-containers">Command by yourself in containers - <a href="https://docs.docker.com/userguide/usingdocker/">Working with Containers</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker run -i -t &lt;image&gt; /bin/bash
 </code></pre>
 </div>
 
-<h3 id="how-to-continue-a-docker-which-is-exitedhttpstackoverflowcomquestions21928691how-to-continue-a-docker-which-is-exited"><a href="http://stackoverflow.com/questions/21928691/how-to-continue-a-docker-which-is-exited">How to continue a docker which is exited</a></h3>
+<h3 id="how-to-continue-a-docker-which-is-exited"><a href="http://stackoverflow.com/questions/21928691/how-to-continue-a-docker-which-is-exited">How to continue a docker which is exited</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code>docker start <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># restart it in the background</span>
 docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># reattach the terminal &amp; stdin</span>
 </code></pre>
 </div>
 
-<h3 id="clean-up---remove-docker-after-exitedhttpsdocsdockercomreferencerunclean-up-rm"><a href="https://docs.docker.com/reference/run/#clean-up-rm">Clean Up - Remove Docker after exited</a></h3>
+<h3 id="clean-up---remove-docker-after-exited"><a href="https://docs.docker.com/reference/run/#clean-up-rm">Clean Up - Remove Docker after exited</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker run --rm &lt;imamge&gt;
 </code></pre>
 </div>
 
-<h3 id="docker-remove-all-exited-containers-by-filippo-valsordahttpscoderwallcompzguzw"><a href="https://coderwall.com/p/zguz_w">Docker: remove all Exited containers by Filippo Valsorda</a></h3>
+<h3 id="docker-remove-all-exited-containers-by-filippo-valsorda"><a href="https://coderwall.com/p/zguz_w">Docker: remove all Exited containers by Filippo Valsorda</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker ps -a | grep Exit | cut -d <span class="s1">' '</span> -f 1 | xargs sudo docker rm
 </code></pre>
@@ -322,7 +322,7 @@ docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> 
 </code></pre>
 </div>
 
-<h3 id="mount-directory-to-container---managing-data-in-containershttpsdocsdockercomuserguidedockervolumes">Mount directory to container - <a href="https://docs.docker.com/userguide/dockervolumes/">Managing data in containers</a></h3>
+<h3 id="mount-directory-to-container---managing-data-in-containers">Mount directory to container - <a href="https://docs.docker.com/userguide/dockervolumes/">Managing data in containers</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># docker run option</span>
 <span class="c"># -v, --volume=[] create a volume</span>
@@ -334,7 +334,7 @@ docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> 
 </code></pre>
 </div>
 
-<h3 id="docker-daemon-on-debian-not-start-automatically---bash-scripting-wait-for-wireless-connection-execute-programhttpsbbsarchlinuxorgviewtopicphpid51939">Docker daemon on Debian: not start automatically - <a href="https://bbs.archlinux.org/viewtopic.php?id=51939">Bash Scripting: Wait for wireless connection, execute program</a></h3>
+<h3 id="docker-daemon-on-debian-not-start-automatically---bash-scripting-wait-for-wireless-connection-execute-program">Docker daemon on Debian: not start automatically - <a href="https://bbs.archlinux.org/viewtopic.php?id=51939">Bash Scripting: Wait for wireless connection, execute program</a></h3>
 
 <ol>
   <li>write this script and add it into crontab ($ sudo crontab -e)</li>
@@ -359,9 +359,9 @@ sudo service docker restart
 </code></pre>
 </div>
 
-<h3 id="crontab-in-dockerhttpwwwekitofrpeoplerun-a-cron-job-with-docker"><a href="http://www.ekito.fr/people/run-a-cron-job-with-docker/">Crontab in Docker</a></h3>
+<h3 id="crontab-in-docker"><a href="http://www.ekito.fr/people/run-a-cron-job-with-docker/">Crontab in Docker</a></h3>
 
-<h4 id="crontab-with-docker-enviormenthttpsregistryhubdockercomudraffenspergerpostgres-s3-backupdockerfile---sample-projecthttpsgithubcomdraffenspergerpostgres-s3-backup"><a href="https://registry.hub.docker.com/u/draffensperger/postgres-s3-backup/dockerfile/">Crontab with Docker enviorment</a> - <a href="https://github.com/draffensperger/postgres-s3-backup">Sample Project</a></h4>
+<h4 id="crontab-with-docker-enviorment---sample-project"><a href="https://registry.hub.docker.com/u/draffensperger/postgres-s3-backup/dockerfile/">Crontab with Docker enviorment</a> - <a href="https://github.com/draffensperger/postgres-s3-backup">Sample Project</a></h4>
 
 <p>Dockerfile</p>
 
@@ -397,7 +397,7 @@ CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o"
 </code></pre>
 </div>
 
-<h3 id="set-time-zone-in-dockerfilehttptedwisecom20150502setting-the-timezone-in-a-docker-image"><a href="http://tedwise.com/2015/05/02/setting-the-timezone-in-a-docker-image">Set time zone in Dockerfile</a></h3>
+<h3 id="set-time-zone-in-dockerfile"><a href="http://tedwise.com/2015/05/02/setting-the-timezone-in-a-docker-image">Set time zone in Dockerfile</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure -f noninteractive tzdata
 </code></pre>
@@ -417,25 +417,25 @@ CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o"
 </code></pre>
 </div>
 
-<h3 id="force-clean-build-of-an-image-without-cachehttpsgithubcomdockerdockerissues1326"><a href="https://github.com/docker/docker/issues/1326">Force clean build of an image (without cache)</a></h3>
+<h3 id="force-clean-build-of-an-image-without-cache"><a href="https://github.com/docker/docker/issues/1326">Force clean build of an image (without cache)</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker build --no-cache .
 </code></pre>
 </div>
 
-<h3 id="graphdriver-prior-storage-driver-aufs-failed-invalid-argument-httpsgithubcomdockerdockerissues14026-by-kelindar"><a href="https://github.com/docker/docker/issues/14026">graphdriver prior storage driver “aufs” failed: invalid argument </a> by @Kelindar</h3>
+<h3 id="graphdriver-prior-storage-driver-aufs-failed-invalid-argument--by-kelindar"><a href="https://github.com/docker/docker/issues/14026">graphdriver prior storage driver “aufs” failed: invalid argument </a> by @Kelindar</h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo rm -rf /var/lib/docker/aufs
 </code></pre>
 </div>
 
-<h3 id="to-see-the-file-size-of-your-containershttpstackoverflowcoma33344280"><a href="http://stackoverflow.com/a/33344280">To see the file size of your containers</a></h3>
+<h3 id="to-see-the-file-size-of-your-containers"><a href="http://stackoverflow.com/a/33344280">To see the file size of your containers</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker ps -s
 </code></pre>
 </div>
 
-<h3 id="ssh-to-docker-machinehttpstackoverflowcoma33350931"><a href="http://stackoverflow.com/a/33350931">SSH to docker machine</a></h3>
+<h3 id="ssh-to-docker-machine"><a href="http://stackoverflow.com/a/33350931">SSH to docker machine</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># you can use `docker-machine ssh &lt; machine &gt; instead this</span>
 <span class="c"># 192.168.99.100 this is ip for &lt; machine &gt;</span>
@@ -445,7 +445,7 @@ CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o"
 </code></pre>
 </div>
 
-<h3 id="fix-no-space-left-on-device-in-default-machinehttpsgithubcomdockermachineissues1779"><a href="https://github.com/docker/machine/issues/1779">Fix No space left on device in default machine</a></h3>
+<h3 id="fix-no-space-left-on-device-in-default-machine"><a href="https://github.com/docker/machine/issues/1779">Fix No space left on device in default machine</a></h3>
 
 <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># clean your mapping volume on host that was copied to docker machine</span>
 <span class="gp">$ </span>docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -v /var/lib/
@@ -477,11 +477,11 @@ $ docker-compose -f production.yml
   <li><a href="http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/">Refactoring a Dockerfile for image size</a></li>
 </ol>
 
-<p><code class="highlighter-rouge">sh
-  $ apt-get install -y --no-install-recommends &lt;packages&gt;
- </code></p>
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>  <span class="nv">$ </span>apt-get install -y --no-install-recommends &lt;packages&gt;
+</code></pre>
+</div>
 
-<h3 id="tdd-for-dockerfile---serverspechttpserverspecorg">TDD for Dockerfile - <a href="http://serverspec.org">ServerSpec</a></h3>
+<h3 id="tdd-for-dockerfile---serverspec">TDD for Dockerfile - <a href="http://serverspec.org">ServerSpec</a></h3>
 <ol>
   <li><a href="https://coderwall.com/p/5xylsg/tdd-for-dockerfile-by-rspec-severspec">TDD for Dockerfile by RSpec (severspec)</a></li>
 </ol>
@@ -537,6 +537,15 @@ $ docker-compose -f production.yml
     
       <li>
         <h3>
+          <a href="/code-review/">
+            Code Review
+            <small>23 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/babel/">
             Babel
             <small>15 Nov 2016</small>
@@ -549,15 +558,6 @@ $ docker-compose -f production.yml
           <a href="/async-await/">
             Async Await
             <small>13 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/vpn/">
-            Open VPN
-            <small>12 Nov 2016</small>
           </a>
         </h3>
       </li>

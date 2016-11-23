@@ -208,6 +208,71 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/cassandra/">
+        What I know about Apache Cassandra
+      </a>
+    </h1>
+
+    <span class="post-date">
+      24 Mar 2016
+      
+        &middot;
+        <a href="/cassandra/#disqus_thread" data-disqus-identifier="/cassandra/"></a>
+        
+          &middot;
+          Updated March 24, 2016
+        
+      
+    </span>
+
+    
+      <h1 id="intro">Intro</h1>
+
+<ul>
+  <li>
+    <p><a href="http://www.datastax.com/wp-content/uploads/2012/08/WP-IntrotoCassandra.pdf">Introduction to Apache Cassandra</a></p>
+
+    <blockquote>
+      <p>Cassandra has a peer-to-peer distributed architecture that is much more elegant, and easy to set up and maintain.
+In Cassandra, all nodes are the same; there is no concept of a master node, with all nodes communicating with each other via a gossip protocol.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>There is nothing programmatic that a developer or administrator needs to do or code to distribute data across a cluster.
+Data is transparently partitioned across all nodes in either a randomized or ordered fashion, with random being the default.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>When creating a new Cassandra database (also called a keyspace), a user simply indicates via a single command which data centers and/or cloud providers will hold copies of the new database; everything from that point forward is automatically handled and maintained by Cassandra.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>If one or more nodes responsible for a particular set of data are down, data is simply written to another node, which temporarily holds the data. Once the node(s) come back online, they automatically bring themselves back up to date from nodes that are holding the data they maintain.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>A user requests data from any node (which becomes that user’s coordinator node ), with the user’s query being assembled from one or more nodes holding the necessary data. If a particular node having the required data is down, Cassandra simply requests data from another node holding a replicated copy of that data.</p>
+    </blockquote>
+
+    <blockquote>
+      <p>While Cassandra is not a transactional database in the same way that legacy RDBMSs offer ACID transactions, it does offer the “AID” portion of ACID, in that data written is atomic, isolated, and durable. The “C” of ACID does not apply to Cassandra, as there is no concept of referential integrity or foreign keys</p>
+    </blockquote>
+
+    <blockquote>
+      <p>Because NoSQL databases like Cassandra do not support operations like SQL joins, data tends to be highly denormalized. While such a thing (wide rows) is normally a problem for an RDBMS, Cassandra provides exceptional performance for objects with many thousands of columns.</p>
+    </blockquote>
+  </li>
+</ul>
+
+
+      <div style="text-align:right;">
+        <a href="/cassandra/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/docker-cron/">
         Crontab on Docker
       </a>
@@ -259,7 +324,7 @@ just put <code class="highlighter-rouge">crontab</code> in <code class="highligh
       <p>Reduce Docker image size can help your to portable your contain
 across network, save bandwidth and storage, faster to scale.</p>
 
-<h2 id="using-alpinehttpshubdockercomalpine-base-image-when-possible">1. Using <a href="https://hub.docker.com/_/alpine/">alpine</a> base image when possible</h2>
+<h2 id="1-using-alpine-base-image-when-possible">1. Using <a href="https://hub.docker.com/_/alpine/">alpine</a> base image when possible</h2>
 <p>It is minimal Docker image based on Alpine Linux that only 5 MB.
 You can install packages with <code class="highlighter-rouge">apk add --update &lt;pakckages&gt;</code> and
 you can check packages that avaible on <a href="https://pkgs.alpinelinux.org/packages">alpine packages</a>.</p>
@@ -342,40 +407,6 @@ Guide</a></li>
 
       <div style="text-align:right;">
         <a href="/password-manager/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/avoid-git-commit-m/">
-        Avoid git commit -m
-      </a>
-    </h1>
-
-    <span class="post-date">
-      25 Dec 2015
-      
-        &middot;
-        <a href="/avoid-git-commit-m/#disqus_thread" data-disqus-identifier="/avoid-git-commit-m/"></a>
-        
-      
-    </span>
-
-    
-      <p>Most of Git tutorial even <a href="http://try.github.io">Try Git</a> guide you
-about git commit with this</p>
-
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git commit -m <span class="s2">"hello world"</span>
-</code></pre>
-</div>
-
-<p>That’s OK.
-But It better to use any option without -m.</p>
-
-
-      <div style="text-align:right;">
-        <a href="/avoid-git-commit-m/" style="color:#000;"> Read More </a>
       </div>
     
   </div>
