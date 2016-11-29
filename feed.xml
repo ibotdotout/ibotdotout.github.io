@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-23T10:55:23+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Code Review</title><link href="http://dev.im-bot.com//code-review/" rel="alternate" type="text/html" title="Code Review" /><published>2016-11-23T00:00:00+00:00</published><updated>2016-11-23T00:00:00+00:00</updated><id>http://dev.im-bot.com//code-review</id><content type="html" xml:base="http://dev.im-bot.com//code-review/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2016-11-29T20:01:36+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Vim Grep then Substitute</title><link href="http://dev.im-bot.com//vim-grep-then-substitute/" rel="alternate" type="text/html" title="Vim Grep then Substitute" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-grep-then-substitute</id><content type="html" xml:base="http://dev.im-bot.com//vim-grep-then-substitute/">&lt;p&gt;Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor,
+You need to use &lt;code class=&quot;highlighter-rouge&quot;&gt;ed syntax&lt;/code&gt; to edit your text file.
+If you know &lt;code class=&quot;highlighter-rouge&quot;&gt;sed&lt;/code&gt;, It is stream ed.&lt;/p&gt;
+
+&lt;p&gt;Vim is based on &lt;code class=&quot;highlighter-rouge&quot;&gt;ed&lt;/code&gt;, Example substitue synax &lt;code class=&quot;highlighter-rouge&quot;&gt;:s/old/new&lt;/code&gt; is come form &lt;code class=&quot;highlighter-rouge&quot;&gt;ed syntax&lt;/code&gt;.
+You should learn &lt;code class=&quot;highlighter-rouge&quot;&gt;ed&lt;/code&gt; to empower your vim skill.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Input
+var path = require('path');
+var mongo = require('mongo');
+var express = require('express');
+
+var x = 2;
+var y = 3;
+var z = 4;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;want to change &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; only in line that contain &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;find line that &lt;code class=&quot;highlighter-rouge&quot;&gt;has&lt;/code&gt; &amp;lt; contain word &amp;gt; then replace &amp;lt; word &amp;gt; to &amp;lt; new  word &amp;gt; on that line&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:g/&amp;lt; contain word &amp;gt;/s/&amp;lt; word &amp;gt;/ &amp;lt; new word &amp;gt;/g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# vim command
+:g/require/s/var/const/g
+
+# Output
+const path = require('path');
+const mongo = require('mongo');
+const express = require('express');
+
+var x = 2;
+var y = 3;
+var z = 4;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;find line that &lt;code class=&quot;highlighter-rouge&quot;&gt;not has&lt;/code&gt; &amp;lt; contain word &amp;gt; then replace &amp;lt; word &amp;gt; to &amp;lt; new  word &amp;gt; on that line&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:v/&amp;lt; contain word &amp;gt;/s/&amp;lt; word &amp;gt;/ &amp;lt; new word &amp;gt;/g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Vim command
+:v/require/s/var/let/g
+
+# Output
+var path = require('path');
+var mongo = require('mongo');
+var express = require('express');
+
+let x = 2;
+let y = 3;
+let z = 4;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118&quot;&gt;Your problem with Vim is that you don’t grok vi.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://usevim.com/2012/09/28/vim101-history/&quot;&gt;Vim 101: ed and ex&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sanctum.geek.nz/arabesque/actually-using-ed/&quot;&gt;Actually using ed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor,
+You need to use ed syntax to edit your text file.
+If you know sed, It is stream ed.
+
+Vim is based on ed, Example substitue synax :s/old/new is come form ed syntax.
+You should learn ed to empower your vim skill.</summary></entry><entry><title type="html">Code Review</title><link href="http://dev.im-bot.com//code-review/" rel="alternate" type="text/html" title="Code Review" /><published>2016-11-23T00:00:00+00:00</published><updated>2016-11-23T00:00:00+00:00</updated><id>http://dev.im-bot.com//code-review</id><content type="html" xml:base="http://dev.im-bot.com//code-review/">&lt;blockquote&gt;
   &lt;p&gt;Ask a programmer to review 10 lines of code, he’ll find 10 issues. Ask him to do 500 lines and he’ll say it looks good. - &lt;a href=&quot;https://twitter.com/girayozil/status/306836785739210752&quot;&gt;@girayozil&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -541,59 +613,4 @@ $ git add -u . // add file with skip iles that are not under version control
     # In conflicted state
 $ git checkout --theirs . // use thier code from remote repo
 $ git checkout --ours . // use our code form local repo
-$ git add -u . // add file with skip iles that are not under version control</summary></entry><entry><title type="html">Vim Change Multiple files</title><link href="http://dev.im-bot.com//vim-change-multiple-files/" rel="alternate" type="text/html" title="Vim Change Multiple files" /><published>2016-11-01T00:00:00+00:00</published><updated>2016-11-01T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-change-multi-files</id><content type="html" xml:base="http://dev.im-bot.com//vim-change-multiple-files/">&lt;ul&gt;
-  &lt;li&gt;First Way, load files to buffer and run command for each buffers&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// search keyword on files and load files to buffers
-:args `rg -l pattern path/`
-
-// list buffers
-:buffers
-
-// substitute word for each buffers and save
-:argdo %s/pattern/newpattern/ge | update
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Second Way (Easier), Using Ack.vim to search and list files in Quickfix on
- Vim and run command for each line on Quickfix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//  run the given command to each line of the quickfix list.
-:Ack! pattern 
-:cdo %s/pattern/newpattern/ge | w
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;helper-tools--plugins&quot;&gt;Helper Tools &amp;amp; Plugins&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/mileszs/ack.vim&quot;&gt;Ack.vim&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.burntsushi.net/ripgrep/&quot;&gt;ripgrep is faster than {grep, ag, git grep, ucg, pt, sift}&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/BurntSushi/ripgrep&quot;&gt;ripgrep (rg)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.wezm.net/technical/2016/09/ripgrep-with-vim/&quot;&gt;Using ripgrep With Vim&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/39119158&quot;&gt;cdo - How to do search &amp;amp; replace with ack in vim?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/episodes/project-wide-find-and-replace/&quot;&gt;Project-wide find and replace&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/15729568&quot;&gt;argdo - How to do search &amp;amp; replace with ack in vim?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://usevim.com/2012/04/06/search-and-replace-files/&quot;&gt;Vim 101: Search and Replace on Multiple Files&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/&quot;&gt;Vimcast - Using :argdo to change multiple files&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">First Way, load files to buffer and run command for each buffers
-
-
-// search keyword on files and load files to buffers
-:args `rg -l pattern path/`
-
-// list buffers
-:buffers
-
-// substitute word for each buffers and save
-:argdo %s/pattern/newpattern/ge | update</summary></entry></feed>
+$ git add -u . // add file with skip iles that are not under version control</summary></entry></feed>

@@ -155,6 +155,10 @@
       
     
       
+        
+      
+    
+      
     
       
     
@@ -205,6 +209,165 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/vimdiff/">
+        Vimdiff Custom
+      </a>
+    </h1>
+
+    <span class="post-date">
+      23 Jan 2015
+      
+        &middot;
+        <a href="/vimdiff/#disqus_thread" data-disqus-identifier="/vimdiff/"></a>
+        
+      
+    </span>
+
+    
+      <h3 id="you-need-to-convent-result-of-unix-diff-to-ed-style-to-use-in-vimdiff">You need to convent result of unix diff to ed style to use in vimdiff.</h3>
+
+<h3 id="example">Example::</h3>
+
+<p>a.txt</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aaaa
+bbbb
+cccc
+eeee
+eeee
+eeee
+</code></pre>
+</div>
+
+<p>b.txt</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aabb
+bbbb
+dddd
+cccc
+</code></pre>
+</div>
+
+<p>diff a.txt b.txt</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>diff --git a/aaa b/bbb
+index fc3703c..11629db 100644
+--- a/aaa
++++ b/bbb
+@@ -1,6 +1,4 @@
+-aaaa
++aabb
+ bbbb
++dddd
+ cccc
+-eeee
+-eeee
+-eeee
+</code></pre>
+</div>
+
+<p>ed style of result diff a.txt b.txt</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>1c1
+&lt; aaaa
+---
+<span class="gp">&gt; </span>aabb
+2a3
+<span class="gp">&gt; </span>dddd
+4,6d4
+&lt; eeee
+&lt; eeee
+&lt; eeee
+</code></pre>
+</div>
+
+<h1 id="code">Code</h1>
+
+<p>My line by line diff just only change no add or delete, result in ed style to use in vim diff.</p>
+
+<p>my_diff.py</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+
+
+<span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">get_buffer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="s">'---</span><span class="se">\n</span><span class="s">'</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="n">i</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span> <span class="nf">get_action</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="o">==</span> <span class="n">end</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s">"{0}c{0}</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s">"{0},{1}c{0},{1}</span><span class="se">\n</span><span class="s">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">a</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">file2</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">b</span><span class="p">:</span>
+
+        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+        <span class="n">start</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">buffer_a</span><span class="p">:</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="n">get_action</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+                    <span class="n">res</span> <span class="o">+=</span> <span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span><span class="p">)</span>
+                    <span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="n">curr</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">end</span> <span class="o">=</span> <span class="n">curr</span>
+                <span class="n">buffer_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'&lt; '</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
+                <span class="n">buffer_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'&gt; '</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+            <span class="n">curr</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">res</span> <span class="o">+=</span> <span class="n">get_action</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="n">get_buffer</span><span class="p">(</span><span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span><span class="p">)</span>
+        <span class="n">buffer_a</span><span class="p">,</span> <span class="n">buffer_b</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">print</span> <span class="n">res</span><span class="p">,</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="n">diff</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<h3 id="set-vimdiff-to-use-result-of-my-diff-code">Set vimdiff to use result of my diff code</h3>
+
+<p>.vimrc</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
+<span class="k">function </span>MyDiff<span class="o">()</span>
+    silent execute <span class="s2">"!python &lt;your_paht&gt;/my_diff.py "</span> . v:fname_in . <span class="s2">" "</span> . v:fname_new . <span class="s2">" &gt; "</span> . v:fname_out
+endfunction
+</code></pre>
+</div>
+
+<p>Ref:</p>
+<ol>
+  <li><a href="http://takaaki-kasai-tech.blogspot.com/2014/07/use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram.html">use-smarter-algorithm-for-vimdiff-such-as-patience-or-histogram</a></li>
+  <li><a href="https://github.com/neovim/neovim/issues/1466">Use patience diff algorithm for vimdiff #1466</a></li>
+  <li><a href="http://vimdoc.sourceforge.net/htmldoc/diff.html#diff-options">Vim documentation: diff</a></li>
+  <li><a href="http://blog.sanctum.geek.nz/actually-using-ed/">Actually using ed</a></li>
+  <li><a href="http://blog.sanctum.geek.nz/using-more-of-ex/">Using more of ex</a></li>
+</ol>
+
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -994,33 +1157,6 @@ $ docker-compose -f production.yml
   <li><a href="http://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/">25 Useful Basic Commands of APT-GET and APT-CACHE for Package Management</a></li>
   <li><a href="https://www.maketecheasier.com/8-ways-to-maintain-a-clean-lean-ubuntu-machine/">8 Ways to Maintain a Clean, Lean Ubuntu Machine</a></li>
 </ul>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/osx-backup/">
-        OSX Backup
-      </a>
-    </h1>
-
-    <span class="post-date">
-      08 Sep 2014
-      
-        &middot;
-        <a href="/osx-backup/#disqus_thread" data-disqus-identifier="/osx-backup/"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="time-machine-backups-on-external-hard-drive">Time Machine Backups on External Hard Drive</h2>
-<ol>
-  <li><a href="http://osxdaily.com/2013/05/01/use-single-hard-drive-time-machine-and-file-storage/">Use a Single External Hard Drive for Time Machine Backups and File Storage</a></li>
-  <li><a href="http://www.imore.com/how-set-and-restore-time-machine-backup">How to easily back up and restore your Mac with Time Machine on OS X Mavericks</a></li>
-  <li><a href="http://support.apple.com/kb/HT1427">Mac Basics: Time Machine backs up your Mac</a></li>
-</ol>
 
     
   </div>

@@ -155,6 +155,10 @@
       
     
       
+        
+      
+    
+      
     
       
     
@@ -205,6 +209,42 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/existed-docker-host-tot-docker-machine/">
+        Add existed Docker host to docker-machine
+      </a>
+    </h1>
+
+    <span class="post-date">
+      11 Nov 2016
+      
+        &middot;
+        <a href="/existed-docker-host-tot-docker-machine/#disqus_thread" data-disqus-identifier="/existed-docker-host-tot-docker-machine/"></a>
+        
+          &middot;
+          Updated November 11, 2016
+        
+      
+    </span>
+
+    
+      <h2 id="generic-driver---create-machines-using-an-existing-vmhost-with-ssh"><a href="https://docs.docker.com/machine/drivers/generic/">Generic Driver</a> - Create machines using an existing VM/Host with SSH</h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker-machine create --driver generic <span class="se">\</span>
+    --generic-ip-address <span class="nv">$host_ip</span> <span class="se">\</span>
+    --generic-ssh-user <span class="nv">$host_user</span> <span class="se">\</span>
+    <span class="nv">$machine_name</span>
+</code></pre>
+</div>
+
+
+      <div style="text-align:right;">
+        <a href="/existed-docker-host-tot-docker-machine/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -367,48 +407,6 @@ $ git add -u . // add file with skip iles that are not under version control
 
       <div style="text-align:right;">
         <a href="/git-conflicts/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/vim-change-multiple-files/">
-        Vim Change Multiple files
-      </a>
-    </h1>
-
-    <span class="post-date">
-      01 Nov 2016
-      
-        &middot;
-        <a href="/vim-change-multiple-files/#disqus_thread" data-disqus-identifier="/vim-change-multiple-files/"></a>
-        
-          &middot;
-          Updated November 01, 2016
-        
-      
-    </span>
-
-    
-      <ul>
-  <li>First Way, load files to buffer and run command for each buffers</li>
-</ul>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>// search keyword on files and load files to buffers
-:args `rg -l pattern path/`
-
-// list buffers
-:buffers
-
-// substitute word for each buffers and save
-:argdo %s/pattern/newpattern/ge | update
-</code></pre>
-</div>
-
-
-      <div style="text-align:right;">
-        <a href="/vim-change-multiple-files/" style="color:#000;"> Read More </a>
       </div>
     
   </div>

@@ -155,6 +155,10 @@
       
     
       
+        
+      
+    
+      
     
       
     
@@ -205,6 +209,48 @@
 
       <div class="container content">
         <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/vim-change-multiple-files/">
+        Vim Change Multiple files
+      </a>
+    </h1>
+
+    <span class="post-date">
+      01 Nov 2016
+      
+        &middot;
+        <a href="/vim-change-multiple-files/#disqus_thread" data-disqus-identifier="/vim-change-multiple-files/"></a>
+        
+          &middot;
+          Updated November 01, 2016
+        
+      
+    </span>
+
+    
+      <ul>
+  <li>First Way, load files to buffer and run command for each buffers</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// search keyword on files and load files to buffers
+:args `rg -l pattern path/`
+
+// list buffers
+:buffers
+
+// substitute word for each buffers and save
+:argdo %s/pattern/newpattern/ge | update
+</code></pre>
+</div>
+
+
+      <div style="text-align:right;">
+        <a href="/vim-change-multiple-files/" style="color:#000;"> Read More </a>
+      </div>
+    
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -363,42 +409,6 @@
 
       <div style="text-align:right;">
         <a href="/restful-api/" style="color:#000;"> Read More </a>
-      </div>
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/12-factor-apps/">
-        12 Factor Apps
-      </a>
-    </h1>
-
-    <span class="post-date">
-      16 Jun 2016
-      
-        &middot;
-        <a href="/12-factor-apps/#disqus_thread" data-disqus-identifier="/12-factor-apps/"></a>
-        
-          &middot;
-          Updated June 16, 2016
-        
-      
-    </span>
-
-    
-      <blockquote>
-  <p>The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc). - <a href="http://12factor.net">The twelve factor app</a></p>
-</blockquote>
-
-<h2 id="official-site">Official Site</h2>
-<ul>
-  <li><a href="http://12factor.net">The twelve factor app</a></li>
-</ul>
-
-
-      <div style="text-align:right;">
-        <a href="/12-factor-apps/" style="color:#000;"> Read More </a>
       </div>
     
   </div>
