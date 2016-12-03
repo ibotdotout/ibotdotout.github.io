@@ -65,3 +65,8 @@ update_date: 2016-06-27
 - [How To Design A Good API and Why it Matters](https://www.youtube.com/watch?v=heh4OeB9A-c) - [slide](http://landawn.com/How%20to%20Design%20a%20Good%20API%20and%20Why%20it%20Matters.pdf)
 
 - [How to Design Great APIs - Parse Developer Day 2013](https://www.youtube.com/watch?v=qCdpTji8nxo)
+
+### Security
+
+- [nonce, Signature และ https สามข้อพื้นฐานของการทำ API ฝั่ง Server](https://nuuneoi.com/blog/blog.php?read_id=767)
+- [พื้นฐานความปลอดภัยในการเก็บข้อมูลและรับส่งข้อมูลบนแอพฯมือถือ](https://nuuneoi.com/blog/blog.php?read_id=770)
