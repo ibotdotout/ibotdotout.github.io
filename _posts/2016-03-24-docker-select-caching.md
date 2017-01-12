@@ -48,5 +48,5 @@ then only layer below `ARG` command in `Dockerfile` will rebuild.
 # References:
 * [Build Cache - Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/#build-cache)
 * [Dockerfile - ARG](https://docs.docker.com/engine/reference/builder/#arg)
-* [Temporary Solution - Selectively disable caching for specific RUN commands in Dockerfile] (https://github.com/docker/docker/issues/1996#issuecomment-172606763) - [An
+* [Temporary Solution - Selectively disable caching for specific RUN commands in Dockerfile](https://github.com/docker/docker/issues/1996#issuecomment-172606763) - [An
   additional description ](https://github.com/docker/docker/issues/1996#issuecomment-185872769))
