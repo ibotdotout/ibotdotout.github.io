@@ -48,6 +48,8 @@ update_date: 2016-06-27
 
 - [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 
+- [HTTP API Design Guide](https://geemus.gitbooks.io/http-api-design/content/en/)
+
 ### REST Hypermedia Standard
 
 - [On choosing a hypermedia type for your API - HAL, JSON-LD, Collection+JSON, SIREN, Oh My!](http://sookocheff.com/post/api/on-choosing-a-hypermedia-format/)
