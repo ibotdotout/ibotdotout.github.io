@@ -34,3 +34,5 @@ update_date: 2016-11-23
 * [10 Tips for Effective Code Review - Atlassian Summit 2016](https://www.youtube.com/watch?v=fatTnX8_ZRk)
 * [RailsConf 2015 - Implementing a Strong Code-Review Culture](https://www.youtube.com/watch?v=PJjmw9TRB7s)
 * [Openstack Summit - Effective Code Review](https://www.youtube.com/watch?v=npIk9Zi4lnQ)
+* [เพิ่มประสิทธิภาพให้ code review (ตอน
+  1)](https://medium.com/@lusiaskolonie/เพิ่มประสิทธิภาพให้-code-review-ตอน-1-82f8f0a19e74)
