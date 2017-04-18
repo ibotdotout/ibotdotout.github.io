@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://dev.im-bot.com//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2017-01-12T02:15:07+00:00</updated><id>http://dev.im-bot.com///</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Vim Grep then Substitute</title><link href="http://dev.im-bot.com//vim-grep-then-substitute/" rel="alternate" type="text/html" title="Vim Grep then Substitute" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-grep-then-substitute</id><content type="html" xml:base="http://dev.im-bot.com//vim-grep-then-substitute/">&lt;p&gt;Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2017-04-18T00:56:03+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Vim Grep then Substitute</title><link href="http://dev.im-bot.com//vim-grep-then-substitute/" rel="alternate" type="text/html" title="Vim Grep then Substitute" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-grep-then-substitute</id><content type="html" xml:base="http://dev.im-bot.com//vim-grep-then-substitute/">&lt;p&gt;Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor,
 You need to use &lt;code class=&quot;highlighter-rouge&quot;&gt;ed syntax&lt;/code&gt; to edit your text file.
 If you know &lt;code class=&quot;highlighter-rouge&quot;&gt;sed&lt;/code&gt;, It is stream ed.&lt;/p&gt;
 
@@ -65,12 +65,7 @@ let z = 4;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118&quot;&gt;Your problem with Vim is that you don’t grok vi.&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://usevim.com/2012/09/28/vim101-history/&quot;&gt;Vim 101: ed and ex&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://sanctum.geek.nz/arabesque/actually-using-ed/&quot;&gt;Actually using ed&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor,
-You need to use ed syntax to edit your text file.
-If you know sed, It is stream ed.
-
-Vim is based on ed, Example substitue synax :s/old/new is come form ed syntax.
-You should learn ed to empower your vim skill.</summary></entry><entry><title type="html">Code Review</title><link href="http://dev.im-bot.com//code-review/" rel="alternate" type="text/html" title="Code Review" /><published>2016-11-23T00:00:00+00:00</published><updated>2016-11-23T00:00:00+00:00</updated><id>http://dev.im-bot.com//code-review</id><content type="html" xml:base="http://dev.im-bot.com//code-review/">&lt;blockquote&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor, You need to use ed syntax to edit your text file. If you know sed, It is stream ed. Vim is based on ed, Example substitue synax :s/old/new is come form ed syntax. You should learn ed to empower your vim skill.</summary></entry><entry><title type="html">Code Review</title><link href="http://dev.im-bot.com//code-review/" rel="alternate" type="text/html" title="Code Review" /><published>2016-11-23T00:00:00+00:00</published><updated>2016-11-23T00:00:00+00:00</updated><id>http://dev.im-bot.com//code-review</id><content type="html" xml:base="http://dev.im-bot.com//code-review/">&lt;blockquote&gt;
   &lt;p&gt;Ask a programmer to review 10 lines of code, he’ll find 10 issues. Ask him to do 500 lines and he’ll say it looks good. - &lt;a href=&quot;https://twitter.com/girayozil/status/306836785739210752&quot;&gt;@girayozil&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -101,6 +96,8 @@ You should learn ed to empower your vim skill.</summary></entry><entry><title ty
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=fatTnX8_ZRk&quot;&gt;10 Tips for Effective Code Review - Atlassian Summit 2016&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PJjmw9TRB7s&quot;&gt;RailsConf 2015 - Implementing a Strong Code-Review Culture&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=npIk9Zi4lnQ&quot;&gt;Openstack Summit - Effective Code Review&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@lusiaskolonie/เพิ่มประสิทธิภาพให้-code-review-ตอน-1-82f8f0a19e74&quot;&gt;เพิ่มประสิทธิภาพให้ code review (ตอน
+1)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="coding" /><summary type="html">Ask a programmer to review 10 lines of code, he’ll find 10 issues. Ask him to do 500 lines and he’ll say it looks good. - @girayozil</summary></entry><entry><title type="html">Babel</title><link href="http://dev.im-bot.com//babel/" rel="alternate" type="text/html" title="Babel" /><published>2016-11-15T00:00:00+00:00</published><updated>2016-11-15T00:00:00+00:00</updated><id>http://dev.im-bot.com//babel</id><content type="html" xml:base="http://dev.im-bot.com//babel/">&lt;p&gt;&lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; is a JavaScript compiler. Use next generation JavaScript, today.
 That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
 
@@ -158,13 +155,7 @@ That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
 &lt;h3 id=&quot;etc&quot;&gt;ETC&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/32642685/babel-cli-copy-nonjs-files/35033177#35033177&quot;&gt;babel CLI copy nonjs files&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="babel" /><category term="js" /><summary type="html">Babel is a JavaScript compiler. Use next generation JavaScript, today.
-That make you can use ES6, even ES7 with ES5 javascript engine.
-
-
-  babel - How to use the CLI tools.
-  babel - present
-  babel - How to use the babelrc</summary></entry><entry><title type="html">Async Await</title><link href="http://dev.im-bot.com//async-await/" rel="alternate" type="text/html" title="Async Await" /><published>2016-11-13T00:00:00+00:00</published><updated>2016-11-13T00:00:00+00:00</updated><id>http://dev.im-bot.com//async-await</id><content type="html" xml:base="http://dev.im-bot.com//async-await/">&lt;p&gt;Async/Await is the part of ES7 that currently draft version new standard of
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="babel" /><category term="js" /><summary type="html">Babel is a JavaScript compiler. Use next generation JavaScript, today. That make you can use ES6, even ES7 with ES5 javascript engine. babel - How to use the CLI tools. babel - present babel - How to use the babelrc</summary></entry><entry><title type="html">Async Await</title><link href="http://dev.im-bot.com//async-await/" rel="alternate" type="text/html" title="Async Await" /><published>2016-11-13T00:00:00+00:00</published><updated>2016-11-13T00:00:00+00:00</updated><id>http://dev.im-bot.com//async-await</id><content type="html" xml:base="http://dev.im-bot.com//async-await/">&lt;p&gt;Async/Await is the part of ES7 that currently draft version new standard of
 javascript. It is pattern for solving &lt;a href=&quot;http://callbackhell.com&quot;&gt;Callback Hell&lt;/a&gt;
 problem that nowaday is solve by &lt;a href=&quot;http://www.datchley.name/es6-promises/&quot;&gt;ES6 Promises&lt;/a&gt;.
 Async/Await is wrapper of Promises pattern that make you can program in
@@ -208,13 +199,7 @@ try {
 
 expect(err.message).to.equal(&quot;some error message&quot;);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name>botbotbot</name></author><category term="es7" /><category term="js" /><summary type="html">Async/Await is the part of ES7 that currently draft version new standard of
-javascript. It is pattern for solving Callback Hell
-problem that nowaday is solve by ES6 Promises.
-Async/Await is wrapper of Promises pattern that make you can program in
-synchronous style without blocking the thread. To use ES7 for your project
-today, you need to use Babel to compile your ES7 to ES5
-that can run in client side with browser and server side with nodeJS</summary></entry><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com//vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//open-vpn</id><content type="html" xml:base="http://dev.im-bot.com//vpn/">&lt;ul&gt;
+&lt;/div&gt;</content><author><name>botbotbot</name></author><category term="es7" /><category term="js" /><summary type="html">Async/Await is the part of ES7 that currently draft version new standard of javascript. It is pattern for solving Callback Hell problem that nowaday is solve by ES6 Promises. Async/Await is wrapper of Promises pattern that make you can program in synchronous style without blocking the thread. To use ES7 for your project today, you need to use Babel to compile your ES7 to ES5 that can run in client side with browser and server side with nodeJS</summary></entry><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com//vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//open-vpn</id><content type="html" xml:base="http://dev.im-bot.com//vpn/">&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/Nyr/openvpn-install&quot;&gt;openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -307,12 +292,7 @@ rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3314660/passing-variables-in-remote-ssh-command/3314678#3314678&quot;&gt;Passing variables in remote ssh command&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3231804/in-bash-how-to-add-are-you-sure-y-n-to-any-command-or-alias/3400809#3400809&quot;&gt;In Bash, how to add Are you sure Y/n? to any command or alias?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary type="html">Generic Driver - Create machines using an existing VM/Host with SSH
-
-$ docker-machine create --driver generic \
-    --generic-ip-address $host_ip \
-    --generic-ssh-user $host_user \
-    $machine_name</summary></entry><entry><title type="html">Redux</title><link href="http://dev.im-bot.com//redux/" rel="alternate" type="text/html" title="Redux" /><published>2016-11-10T00:00:00+00:00</published><updated>2016-11-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//redux</id><content type="html" xml:base="http://dev.im-bot.com//redux/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary type="html">Generic Driver - Create machines using an existing VM/Host with SSH $ docker-machine create --driver generic \ --generic-ip-address $host_ip \ --generic-ssh-user $host_user \ $machine_name</summary></entry><entry><title type="html">Redux</title><link href="http://dev.im-bot.com//redux/" rel="alternate" type="text/html" title="Redux" /><published>2016-11-10T00:00:00+00:00</published><updated>2016-11-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//redux</id><content type="html" xml:base="http://dev.im-bot.com//redux/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/introduction/ThreePrinciples.html&quot;&gt;Redux - Three Principles&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.fva82bt27&quot;&gt;A Cartoon intro to Redux&lt;/a&gt;&lt;/li&gt;
@@ -403,15 +383,7 @@ $ docker-machine create --driver generic \
 &lt;h1 id=&quot;testing&quot;&gt;Testing&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md&quot;&gt;Redux - Writing Tests&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="redux" /><category term="js" /><summary type="html">Intro
-
-  Redux - Three Principles
-  A Cartoon intro to Redux
-  Leveling Up with React: Redux
-  Understanding Redux (or, How I Fell in Love with a JavaScript State Container)
-  Redux - Basics
-  Getting Started with Redux: An Intro
-  Real World Redux</summary></entry><entry><title type="html">React</title><link href="http://dev.im-bot.com//react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//react</id><content type="html" xml:base="http://dev.im-bot.com//react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="redux" /><category term="js" /><summary type="html">Intro Redux - Three Principles A Cartoon intro to Redux Leveling Up with React: Redux Understanding Redux (or, How I Fell in Love with a JavaScript State Container) Redux - Basics Getting Started with Redux: An Intro Real World Redux</summary></entry><entry><title type="html">React</title><link href="http://dev.im-bot.com//react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//react</id><content type="html" xml:base="http://dev.im-bot.com//react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;Thinking in React&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -524,27 +496,7 @@ $ docker-machine create --driver generic \
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-inside/why-the-hipsters-recompose-everything-23ac08748198&quot;&gt;Why The Hipsters Recompose Everything&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/acdlite/recompose&quot;&gt;Recompose - A React utility belt for function components and higher-order components&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="react" /><category term="js" /><summary type="html">React
-
-  Thinking in React
-
-
-Example
-
-  Latest ReactJS Examples
-  React - Examples
-  a collection of simple demos of React.js
-  Made with React
-  TodoMVC
-
-
-React Intro
-
-  ReactJS Bangkok 1.0.0
-  React - scotch.io
-  Learning React.js: Getting Started and Concepts
-  Routing React Apps: The Complete Guide
-  Presentational and Container Components</summary></entry><entry><title type="html">Git ignore files in sub-directories</title><link href="http://dev.im-bot.com//git-ignore-sub-dir/" rel="alternate" type="text/html" title="Git ignore files in sub-directories" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-ignore-in-sub-dir</id><content type="html" xml:base="http://dev.im-bot.com//git-ignore-sub-dir/">&lt;h2 id=&quot;example-ignore-css-in-only-src&quot;&gt;Example: ignore .css in only /src&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="react" /><category term="js" /><summary type="html">React Thinking in React Example Latest ReactJS Examples React - Examples a collection of simple demos of React.js Made with React TodoMVC React Intro ReactJS Bangkok 1.0.0 React - scotch.io Learning React.js: Getting Started and Concepts Routing React Apps: The Complete Guide Presentational and Container Components</summary></entry><entry><title type="html">Git ignore files in sub-directories</title><link href="http://dev.im-bot.com//git-ignore-sub-dir/" rel="alternate" type="text/html" title="Git ignore files in sub-directories" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-ignore-in-sub-dir</id><content type="html" xml:base="http://dev.im-bot.com//git-ignore-sub-dir/">&lt;h2 id=&quot;example-ignore-css-in-only-src&quot;&gt;Example: ignore .css in only /src&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# .gitignore
 
@@ -566,11 +518,7 @@ $ git commit
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/6794737/6144391&quot;&gt;Git-ignore certain files in sub-directories, but not all&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/1139797/6144391&quot;&gt;Ignore files that have already been committed to a Git repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">Example: ignore .css in only /src
-
-# .gitignore
-
-src/**/*.css</summary></entry><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">Example: ignore .css in only /src # .gitignore src/**/*.css</summary></entry><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -604,13 +552,4 @@ $ git add -u . // add file with skip iles that are not under version control
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><category term="vim" /><summary type="html">Git
-
-
-  
-    Resolve Git merge conflicts in favor of their changes during a pull
-
-    # In conflicted state
-$ git checkout --theirs . // use thier code from remote repo
-$ git checkout --ours . // use our code form local repo
-$ git add -u . // add file with skip iles that are not under version control</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><category term="vim" /><summary type="html">Git Resolve Git merge conflicts in favor of their changes during a pull # In conflicted state $ git checkout --theirs . // use thier code from remote repo $ git checkout --ours . // use our code form local repo $ git add -u . // add file with skip iles that are not under version control</summary></entry></feed>
