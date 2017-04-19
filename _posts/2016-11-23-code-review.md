@@ -36,3 +36,4 @@ update_date: 2016-11-23
 * [Openstack Summit - Effective Code Review](https://www.youtube.com/watch?v=npIk9Zi4lnQ)
 * [เพิ่มประสิทธิภาพให้ code review (ตอน
   1)](https://medium.com/@lusiaskolonie/เพิ่มประสิทธิภาพให้-code-review-ตอน-1-82f8f0a19e74)
+* [เพิ่มประสิทธิภาพให้ code review (ตอน 2)](https://medium.com/@lusiaskolonie/เพิ่มประสิทธิภาพให้-code-review-ตอน-2-7a1452c66ac2)
