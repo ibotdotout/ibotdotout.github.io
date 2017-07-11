@@ -8,20 +8,20 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <meta property="og:title" content="Recover lost partition" />
+  <meta property="og:title" content="JWT" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://dev.im-bot.com/recover-lost-partition//" />
+<meta property="og:url" content="http://dev.im-bot.com/jwt//" />
 <meta property="og:image" content="http://dev.im-bot.com/public/opengraph_logo.png" />
 <meta property="og:image:width" content="862" />
 <meta property="og:image:height" content="453" />
-<meta property="og:description" content="Recover lost partitionI used TestDisk to recover my lost NTFS partition that I formatted by accidentally. You can use TestDisk by follow TestDisk Step by Ste..." />
+<meta property="og:description" content="Intro  Introduction to JSON Web Tokens  JWT 101 Webinar Video– learn more about JSON Web Tokens  JWT Handbook  Stateless Authentication with JSON Web TokensG..." />
 <meta property="og:site_name" content="botbotbot" />
 <meta property="og:locale" content="th_TH" />
 
 
   <title>
     
-      Recover lost partition &middot; botbotbot
+      JWT &middot; botbotbot
     
   </title>
 
@@ -207,48 +207,106 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Recover lost partition</h1>
+  <h1 class="post-title">JWT</h1>
   <span class="post-date">
-    22 Jun 2014
+    30 Nov 2016
       
         Tags:
         
-          <a href="/tags/#testdisk">
-            testdisk
+          <a href="/tags/#auth">
+            auth
+          </a>
+        
+          <a href="/tags/#jwt">
+            jwt
           </a>
         
       
       
         &middot;
-        <a href="/recover-lost-partition//index.html#disqus_thread" data-disqus-identifier="/recover-lost-partition/"></a>
+        <a href="/jwt//index.html#disqus_thread" data-disqus-identifier="/jwt/"></a>
       
+      
+        &middot;
+        Updated November 30, 2015
       
   </span>
 
-  <h2 id="recover-lost-partition">Recover lost partition</h2>
-<p>I used <a href="http://www.cgsecurity.org/wiki/TestDisk">TestDisk</a> to recover my lost NTFS partition that I formatted by accidentally. You can use TestDisk by follow <a href="http://www.cgsecurity.org/wiki/TestDisk_Step_By_Step">TestDisk Step by Step</a>. After recovered I can see my NTFS partition that was formatted but can not access it.</p>
+  <h2 id="intro">Intro</h2>
 
-<h2 id="repair-damaged-partition">Repair damaged partition</h2>
-<p>I got my lost partition back but can’t access it. So I use ‘chkdsk /r’ command on Windows to repair damaged partition. Finally after 12 hours, I can got lost partition back and accessible it normally.</p>
+<ul>
+  <li><a href="https://jwt.io/introduction/">Introduction to JSON Web Tokens</a></li>
+  <li><a href="https://auth0.com/blog/jwt-101-webinar-video-learn-more-about-json-web-tokens/">JWT 101 Webinar Video– learn more about JSON Web Tokens</a></li>
+  <li><a href="https://auth0.com/e-books/jwt-handbook">JWT Handbook</a></li>
+  <li><a href="http://yos.io/2016/01/07/stateless-authentication-with-json-web-tokens/">Stateless Authentication with JSON Web Tokens</a></li>
+</ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>  chkdsk /r &lt;drive&gt;
-</code></pre>
-</div>
+<h2 id="good-start">Good Start</h2>
+<ul>
+  <li><a href="https://scotch.io/tutorials/the-anatomy-of-a-json-web-token">The Anatomy of a JSON Web Token</a></li>
+  <li><a href="https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication">The Ins and Outs of Token Based Authentication</a></li>
+  <li><a href="https://www.youtube.com/watch?v=xgkNe6R4Un0">Token-Based Architecture Design</a></li>
+  <li><a href="https://auth0.com/blog/2014/01/27/ten-things-you-should-know-about-tokens-and-cookies/">10 Things You Should Know about Tokens</a></li>
+  <li><a href="https://auth0.com/blog/2014/12/02/using-json-web-tokens-as-api-keys/">Using JSON Web Tokens as API Keys</a></li>
+  <li><a href="https://github.com/dwyl/learn-json-web-tokens">Learn how to use JSON Web Token (JWT) to secure your next Web App! (Example with Tests!!)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=eWUkxzyB1Rk">MNUG 2014.08.13 - Lightning talk: JWT: JSON Web Token</a></li>
+  <li><a href="https://www.facebook.com/notes/สอนแฮกเว็บแบบแมวๆ/jwt-กับความปลอดภัย-101/1721901928064587">JWT กับความปลอดภัย 101</a></li>
+  <li><a href="https://auth0.com/blog/json-web-token-signing-algorithms-overview/">JSON Web Token (JWT) Signing Algorithms Overview</a></li>
+</ul>
+
+<!-- more -->
+
+<h2 id="articles">Articles</h2>
+
+<ul>
+  <li><a href="https://www.toptal.com/web/cookie-free-authentication-with-json-web-tokens-an-example-in-laravel-and-angularjs">JSON Web Token Tutorial: An Example in Laravel and AngularJS</a></li>
+  <li><a href="http://odino.org/securing-your-http-api-with-javascript-object-signing-and-encryption/">Securing your HTTP API with JavaScript Object Signing and Encryption</a></li>
+  <li><a href="https://stormpath.com/blog/jwt-the-right-way">Use JWT The Right Way!</a></li>
+  <li><a href="http://www.slideshare.net/alvarosanchezmariscal/stateless-authentication-for-microservices">Stateless authentication for microservices</a></li>
+  <li><a href="https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens">Authenticate a Node.js API with JSON Web Tokens</a></li>
+  <li><a href="http://jonatan.nilsson.is/stateless-tokens-with-jwt/">Stateless tokens with JWT</a></li>
+  <li><a href="https://auth0.com/blog/stateless-auth-for-stateful-minds/https://auth0.com/blog/stateless-auth-for-stateful-minds/">Stateless Sessions for Stateful Minds: JWTs Explained and How You Can Make The Switch</a></li>
+  <li><a href="https://stormpath.com/blog/nodejs-jwt-create-verify/">Create and Verify JWTs With Node.js</a></li>
+  <li><a href="http://code.tutsplus.com/tutorials/token-based-authentication-with-angularjs-nodejs--cms-22543">Token-Based Authentication With AngularJS &amp; NodeJS</a></li>
+  <li><a href="http://www.slideshare.net/stormpath/building-secure-user-interfaces-with-jwts">Building Secure User Interfaces With JWTs (JSON Web Tokens)</a></li>
+</ul>
+
+<h2 id="security">Security</h2>
+
+<ul>
+  <li><a href="https://www.facebook.com/thegeekceo/posts/216308308764039">6 เทคนิคเบื้องต้น ป้องกัน App โดน Hack</a></li>
+  <li><a href="http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-sessions/">Stop using JWT for sessions</a></li>
+  <li><a href="http://cryto.net/~joepie91/blog/2016/06/19/stop-using-jwt-for-sessions-part-2-why-your-solution-doesnt-work/">Stop using JWT for sessions, part 2: Why your solution doesn’t work</a></li>
+</ul>
+
+<h2 id="refersh-token--revoke-token">Refersh Token / Revoke Token</h2>
+
+<p><img src="https://cdn.auth0.com/blog/refresh-token/diag2.png" alt="auth refresh token" /></p>
+
+<ul>
+  <li><a href="https://auth0.com/blog/2015/10/07/refresh-tokens-what-are-they-and-when-to-use-them/">The Refresh Token</a></li>
+  <li><a href="https://auth0.com/blog/2015/10/07/refresh-tokens-what-are-they-and-when-to-use-them/">Refresh Tokens: When to Use Them and How They Interact with JWTs</a></li>
+  <li><a href="http://stackoverflow.com/a/26834685">refresh token feature</a></li>
+  <li><a href="https://auth0.com/blog/2015/03/10/blacklist-json-web-token-api-keys/">Blacklisting/Revoke JSON Web Token API Keys</a></li>
+  <li><a href="https://www.dinochiesa.net/?p=1388">I don’t see the point in Revoking or Blacklisting JWT</a></li>
+</ul>
+
+<h2 id="tutorials">Tutorials</h2>
+
+<ul>
+  <li><a href="https://github.com/auth0-blog/blog-refresh-tokens-sample">auth0-blog/blog-refresh-tokens-sample</a></li>
+  <li><a href="http://devahoy.com/posts/understanding-token-and-jwt-create-authentication-with-hapijs/">Token และ JWT คืออะไร? + ทำ JWT Authentication ด้วย Hapi.js</a></li>
+  <li><a href="https://acoshift.me/token-based-authentication-golang-307f18b03dc3#.243gl6tv7">มาทำ Token-based Authentication แบบง่าย ๆ กันเถอะ</a></li>
+  <li><a href="https://acoshift.me/token-based-authentication-golang-part-2-45b6580647d#.dstnqypxt">มาทำ Token-based Authentication แบบง่าย ๆ กันเถอะ (ตอนที่ 2)</a></li>
+  <li><a href="https://github.com/auth0/auth0-angular/blob/master/docs/refresh-token.md">Using Refresh Tokens in Mobile Applications</a></li>
+  <li><a href="https://gist.github.com/Mirodil/952e5932c284a2d205db">AngularJs: OAuth 2.0 Refresh Token</a></li>
+</ul>
 
 </div>
 
 <div class="related">
   <h2>Latest Posts</h2>
   <ul class="related-posts">
-    
-      <li>
-        <h3>
-          <a href="/jwt/">
-            JWT
-            <small>30 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
     
       <li>
         <h3>
@@ -268,6 +326,15 @@
         </h3>
       </li>
     
+      <li>
+        <h3>
+          <a href="/babel/">
+            Babel
+            <small>15 Nov 2016</small>
+          </a>
+        </h3>
+      </li>
+    
   </ul>
 </div>
 
@@ -279,7 +346,7 @@
       <script>
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'im-bot';
-      var disqus_identifier = "/recover-lost-partition/";
+      var disqus_identifier = "/jwt/";
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

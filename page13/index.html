@@ -210,6 +210,150 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/debian/">
+        Debian frist boot
+      </a>
+    </h1>
+
+    <span class="post-date">
+      10 Sep 2014
+      
+        &middot;
+        <a href="/debian/#disqus_thread" data-disqus-identifier="/debian/"></a>
+        
+      
+    </span>
+
+    
+      <h3 id="make-user-can-use-sudo-command">Make user can use Sudo command</h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>su <span class="c"># aceess to root  </span>
+<span class="gp">$ </span>apt-get install sudo  
+<span class="gp">$ </span>adduser &lt;username&gt; sudo  
+<span class="gp">$ </span>reboot <span class="c"># or logout  </span>
+</code></pre>
+</div>
+<p>Ref:</p>
+<ol>
+  <li><a href="http://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line">How can I add a new user as sudoer using the command line?</a></li>
+  <li><a href="http://www.debianhelp.co.uk/sudo.htm">Sudo Configuration in Debian</a></li>
+</ol>
+
+<h3 id="upgrade-debian-to-unstablesid"><a href="https://www.digitalocean.com/community/tutorials/upgrading-debian-to-unstable">Upgrade Debian to Unstable(Sid)</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo vi /etc/apt/sources.list
+<span class="c"># edit all 'squeeze' that's version codename </span>
+<span class="c"># to 'sid' that's unstable codename</span>
+<span class="c"># ex. deb http://ftp.us.debian.org/debian squeeze main </span>
+<span class="c"># to deb http://ftp.us.debian.org/debian sid main</span>
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get dist-upgrade
+<span class="gp">$ </span>sudo reboot
+</code></pre>
+</div>
+
+<h3 id="using-lastest-package-on-debian-testing-package">Using Lastest Package on Debian (Testing Package)</h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo vim /etc/apt/sources.list
+<span class="c"># add "deb     http://http.debian.net/debian testing         main"</span>
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get install &lt;your package&gt;
+<span class="c"># don't call sudo apt-get upgrade if your don't want to upgrade your all system to lastest packages</span>
+</code></pre>
+</div>
+
+<h3 id="check-version-debian">Check Version Debian</h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>lsb_release -a <span class="c">#check debian version</span>
+<span class="gp">$ </span>uname -a <span class="c">#check linux version</span>
+</code></pre>
+</div>
+
+<h3 id="how-to-switch-between-users-on-one-terminal"><a href="http://unix.stackexchange.com/questions/3568/how-to-switch-between-users-on-one-terminal">How to switch between users on one terminal?</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>su - &lt;user&gt;
+</code></pre>
+</div>
+
+<h3 id="how-to-find-fastest-mirror-lists-with-netselect-apt-on-debian"><a href="http://www.unixmen.com/how-to-find-fastest-official-mirror-lists-with-netselect-apt-on-debian/">How To Find Fastest Mirror Lists With ‘Netselect-apt’ On Debian</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># choose set your region to your local frist</span>
+<span class="gp">$ </span>sudo apt-get install netselect-apt
+<span class="gp">$ </span>sudo netselect-apt
+</code></pre>
+</div>
+
+<h3 id="debian-linux-install-openssh-sshd-server"><a href="http://www.cyberciti.biz/faq/debian-linux-install-openssh-sshd-server/">Debian Linux Install OpenSSH SSHD Server</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># install</span>
+<span class="gp">$ </span>sudo apt-get update
+<span class="gp">$ </span>sudo apt-get install openssh-server
+
+<span class="c"># control ssh-server</span>
+<span class="gp">$ </span>sudo service ssh stop
+<span class="gp">$ </span>sudo service ssh start
+<span class="gp">$ </span>sudo service ssh restart
+<span class="gp">$ </span>sudo service ssh status
+</code></pre>
+</div>
+
+<h3 id="set-bash-color-on-ssh"><a href="http://ubuntuforums.org/showthread.php?t=1733664">Set Bash Color on SSH</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># In your ssh server</span>
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"source your .bashrc"</span> &gt;&gt; .bash_profile
+<span class="c"># or you can try this [[ -f ~/.bashrc ]] &amp;&amp; . ~/.bashrc</span>
+</code></pre>
+</div>
+
+<h3 id="extended-monitor"><a href="http://unix.stackexchange.com/questions/101283/extended-monitor-scroll-right-to-access-left-screen">Extended monitor</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>xrandr --output VGA-1 --auto --primary --output DVI-I-1 --auto --left-of VGA-1
+</code></pre>
+</div>
+
+<h2 id="install-locals-to-support-many-languages">Install locals to support many languages</h2>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># debian</span>
+<span class="gp">$ </span>sudo apt-get install locales
+<span class="gp">$ </span>sudo dpkg-reconfigure locales
+</code></pre>
+</div>
+
+<h3 id="clean-uninstall">Clean Uninstall</h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get remove --purge &lt;packagename&gt; <span class="c"># --purge delete all data and config</span>
+<span class="gp">$ </span>sudo apt-get autoremove --purge
+<span class="gp">$ </span>sudo apt-get clean
+<span class="gp">$ </span>locate &lt;packagename&gt; <span class="c"># manual delete</span>
+</code></pre>
+</div>
+
+<h3 id="show-hidden-file-in-gui"><a href="http://ubuntuforums.org/showthread.php?t=1108528">Show hidden file in GUI</a></h3>
+
+<p><code class="highlighter-rouge">Ctrl + H</code></p>
+
+<h3 id="keyboard-shortcut-for-pasting-on-the-gnome-terminal"><a href="http://askubuntu.com/questions/202459/keyboard-shortcut-for-pasting-on-the-gnome-terminal">keyboard shortcut for pasting on the Gnome Terminal</a></h3>
+
+<p><code class="highlighter-rouge">Ctrl+Shift+V</code> - paste <br />
+<code class="highlighter-rouge">Ctrl+Shift+C</code> - copy</p>
+
+<h3 id="install-and-mount-an-exfat-partition"><a href="http://askubuntu.com/questions/100278/how-do-i-install-and-mount-an-exfat-partition">install and mount an exFAT partition</a></h3>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get install exfat-fuse exfat-utils
+</code></pre>
+</div>
+
+<h3 id="etc">ETC.</h3>
+<ul>
+  <li><a href="http://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/">25 Useful Basic Commands of APT-GET and APT-CACHE for Package Management</a></li>
+  <li><a href="https://www.maketecheasier.com/8-ways-to-maintain-a-clean-lean-ubuntu-machine/">8 Ways to Maintain a Clean, Lean Ubuntu Machine</a></li>
+</ul>
+
+    
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/osx-backup/">
         OSX Backup
       </a>
@@ -479,42 +623,6 @@ Merge the cleaned-up branch back into the public branch.
   <li>Selected “Enable”</li>
   <li>Done</li>
 </ol>
-
-    
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/compute-engine/">
-        Google Compute Engine
-      </a>
-    </h1>
-
-    <span class="post-date">
-      28 Jul 2014
-      
-        &middot;
-        <a href="/compute-engine/#disqus_thread" data-disqus-identifier="/compute-engine/"></a>
-        
-      
-    </span>
-
-    
-      <h2 id="open-port-on-google-compute-engine"><a href="http://stackoverflow.com/questions/21065922/how-to-open-a-specific-port-such-as-9090-in-google-compute-engine">Open Port On Google Compute Engine</a></h2>
-
-<ol>
-  <li>Go to cloud.google.com</li>
-  <li>Go to my Console</li>
-  <li>Choose you Project.</li>
-  <li>Choose “Compute Engine”</li>
-  <li>Choose “Networks”</li>
-  <li>Choose the interface for you Instances.</li>
-  <li>In firewalls section, Go to Create New.</li>
-  <li>Create your rule, in this case “Protocols &amp; Ports” would be “tcp:9090” i guess.</li>
-  <li>Save.</li>
-</ol>
-
-<h2 id="attach-disk"><a href="https://developers.google.com/compute/docs/disks#attachdiskcreation">Attach Disk</a></h2>
 
     
   </div>

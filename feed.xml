@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://dev.im-bot.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com//" rel="alternate" type="text/html" /><updated>2017-04-19T13:16:46+00:00</updated><id>http://dev.im-bot.com//</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">Vim Grep then Substitute</title><link href="http://dev.im-bot.com//vim-grep-then-substitute/" rel="alternate" type="text/html" title="Vim Grep then Substitute" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://dev.im-bot.com//vim-grep-then-substitute</id><content type="html" xml:base="http://dev.im-bot.com//vim-grep-then-substitute/">&lt;p&gt;Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://dev.im-bot.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com/" rel="alternate" type="text/html" /><updated>2017-07-11T13:49:11+00:00</updated><id>http://dev.im-bot.com/</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">JWT</title><link href="http://dev.im-bot.com/jwt/" rel="alternate" type="text/html" title="JWT" /><published>2016-11-30T00:00:00+00:00</published><updated>2016-11-30T00:00:00+00:00</updated><id>http://dev.im-bot.com/jwt</id><content type="html" xml:base="http://dev.im-bot.com/jwt/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jwt.io/introduction/&quot;&gt;Introduction to JSON Web Tokens&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/jwt-101-webinar-video-learn-more-about-json-web-tokens/&quot;&gt;JWT 101 Webinar Video– learn more about JSON Web Tokens&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/e-books/jwt-handbook&quot;&gt;JWT Handbook&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://yos.io/2016/01/07/stateless-authentication-with-json-web-tokens/&quot;&gt;Stateless Authentication with JSON Web Tokens&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;good-start&quot;&gt;Good Start&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://scotch.io/tutorials/the-anatomy-of-a-json-web-token&quot;&gt;The Anatomy of a JSON Web Token&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication&quot;&gt;The Ins and Outs of Token Based Authentication&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xgkNe6R4Un0&quot;&gt;Token-Based Architecture Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/2014/01/27/ten-things-you-should-know-about-tokens-and-cookies/&quot;&gt;10 Things You Should Know about Tokens&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/2014/12/02/using-json-web-tokens-as-api-keys/&quot;&gt;Using JSON Web Tokens as API Keys&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/dwyl/learn-json-web-tokens&quot;&gt;Learn how to use JSON Web Token (JWT) to secure your next Web App! (Example with Tests!!)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=eWUkxzyB1Rk&quot;&gt;MNUG 2014.08.13 - Lightning talk: JWT: JSON Web Token&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.facebook.com/notes/สอนแฮกเว็บแบบแมวๆ/jwt-กับความปลอดภัย-101/1721901928064587&quot;&gt;JWT กับความปลอดภัย 101&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/json-web-token-signing-algorithms-overview/&quot;&gt;JSON Web Token (JWT) Signing Algorithms Overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;articles&quot;&gt;Articles&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.toptal.com/web/cookie-free-authentication-with-json-web-tokens-an-example-in-laravel-and-angularjs&quot;&gt;JSON Web Token Tutorial: An Example in Laravel and AngularJS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://odino.org/securing-your-http-api-with-javascript-object-signing-and-encryption/&quot;&gt;Securing your HTTP API with JavaScript Object Signing and Encryption&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stormpath.com/blog/jwt-the-right-way&quot;&gt;Use JWT The Right Way!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/alvarosanchezmariscal/stateless-authentication-for-microservices&quot;&gt;Stateless authentication for microservices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens&quot;&gt;Authenticate a Node.js API with JSON Web Tokens&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jonatan.nilsson.is/stateless-tokens-with-jwt/&quot;&gt;Stateless tokens with JWT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/stateless-auth-for-stateful-minds/https://auth0.com/blog/stateless-auth-for-stateful-minds/&quot;&gt;Stateless Sessions for Stateful Minds: JWTs Explained and How You Can Make The Switch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stormpath.com/blog/nodejs-jwt-create-verify/&quot;&gt;Create and Verify JWTs With Node.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://code.tutsplus.com/tutorials/token-based-authentication-with-angularjs-nodejs--cms-22543&quot;&gt;Token-Based Authentication With AngularJS &amp;amp; NodeJS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/stormpath/building-secure-user-interfaces-with-jwts&quot;&gt;Building Secure User Interfaces With JWTs (JSON Web Tokens)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;security&quot;&gt;Security&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.facebook.com/thegeekceo/posts/216308308764039&quot;&gt;6 เทคนิคเบื้องต้น ป้องกัน App โดน Hack&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-sessions/&quot;&gt;Stop using JWT for sessions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cryto.net/~joepie91/blog/2016/06/19/stop-using-jwt-for-sessions-part-2-why-your-solution-doesnt-work/&quot;&gt;Stop using JWT for sessions, part 2: Why your solution doesn’t work&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;refersh-token--revoke-token&quot;&gt;Refersh Token / Revoke Token&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.auth0.com/blog/refresh-token/diag2.png&quot; alt=&quot;auth refresh token&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/2015/10/07/refresh-tokens-what-are-they-and-when-to-use-them/&quot;&gt;The Refresh Token&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/2015/10/07/refresh-tokens-what-are-they-and-when-to-use-them/&quot;&gt;Refresh Tokens: When to Use Them and How They Interact with JWTs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/26834685&quot;&gt;refresh token feature&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://auth0.com/blog/2015/03/10/blacklist-json-web-token-api-keys/&quot;&gt;Blacklisting/Revoke JSON Web Token API Keys&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.dinochiesa.net/?p=1388&quot;&gt;I don’t see the point in Revoking or Blacklisting JWT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tutorials&quot;&gt;Tutorials&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/auth0-blog/blog-refresh-tokens-sample&quot;&gt;auth0-blog/blog-refresh-tokens-sample&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://devahoy.com/posts/understanding-token-and-jwt-create-authentication-with-hapijs/&quot;&gt;Token และ JWT คืออะไร? + ทำ JWT Authentication ด้วย Hapi.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://acoshift.me/token-based-authentication-golang-307f18b03dc3#.243gl6tv7&quot;&gt;มาทำ Token-based Authentication แบบง่าย ๆ กันเถอะ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://acoshift.me/token-based-authentication-golang-part-2-45b6580647d#.dstnqypxt&quot;&gt;มาทำ Token-based Authentication แบบง่าย ๆ กันเถอะ (ตอนที่ 2)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/auth0/auth0-angular/blob/master/docs/refresh-token.md&quot;&gt;Using Refresh Tokens in Mobile Applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/Mirodil/952e5932c284a2d205db&quot;&gt;AngularJs: OAuth 2.0 Refresh Token&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="auth" /><category term="jwt" /><summary type="html">Intro Introduction to JSON Web Tokens JWT 101 Webinar Video– learn more about JSON Web Tokens JWT Handbook Stateless Authentication with JSON Web Tokens Good Start The Anatomy of a JSON Web Token The Ins and Outs of Token Based Authentication Token-Based Architecture Design 10 Things You Should Know about Tokens Using JSON Web Tokens as API Keys Learn how to use JSON Web Token (JWT) to secure your next Web App! (Example with Tests!!) MNUG 2014.08.13 - Lightning talk: JWT: JSON Web Token JWT กับความปลอดภัย 101 JSON Web Token (JWT) Signing Algorithms Overview</summary></entry><entry><title type="html">Vim Grep then Substitute</title><link href="http://dev.im-bot.com/vim-grep-then-substitute/" rel="alternate" type="text/html" title="Vim Grep then Substitute" /><published>2016-11-29T00:00:00+00:00</published><updated>2016-11-29T00:00:00+00:00</updated><id>http://dev.im-bot.com/vim-grep-then-substitute</id><content type="html" xml:base="http://dev.im-bot.com/vim-grep-then-substitute/">&lt;p&gt;Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor,
 You need to use &lt;code class=&quot;highlighter-rouge&quot;&gt;ed syntax&lt;/code&gt; to edit your text file.
 If you know &lt;code class=&quot;highlighter-rouge&quot;&gt;sed&lt;/code&gt;, It is stream ed.&lt;/p&gt;
 
@@ -65,7 +133,7 @@ let z = 4;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118&quot;&gt;Your problem with Vim is that you don’t grok vi.&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://usevim.com/2012/09/28/vim101-history/&quot;&gt;Vim 101: ed and ex&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://sanctum.geek.nz/arabesque/actually-using-ed/&quot;&gt;Actually using ed&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor, You need to use ed syntax to edit your text file. If you know sed, It is stream ed. Vim is based on ed, Example substitue synax :s/old/new is come form ed syntax. You should learn ed to empower your vim skill.</summary></entry><entry><title type="html">Code Review</title><link href="http://dev.im-bot.com//code-review/" rel="alternate" type="text/html" title="Code Review" /><published>2016-11-23T00:00:00+00:00</published><updated>2016-11-23T00:00:00+00:00</updated><id>http://dev.im-bot.com//code-review</id><content type="html" xml:base="http://dev.im-bot.com//code-review/">&lt;blockquote&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vim" /><summary type="html">Ed/Ex is text editor, old text editor on that day didn’t have WYSIWYG text editor, You need to use ed syntax to edit your text file. If you know sed, It is stream ed. Vim is based on ed, Example substitue synax :s/old/new is come form ed syntax. You should learn ed to empower your vim skill.</summary></entry><entry><title type="html">Code Review</title><link href="http://dev.im-bot.com/code-review/" rel="alternate" type="text/html" title="Code Review" /><published>2016-11-23T00:00:00+00:00</published><updated>2016-11-23T00:00:00+00:00</updated><id>http://dev.im-bot.com/code-review</id><content type="html" xml:base="http://dev.im-bot.com/code-review/">&lt;blockquote&gt;
   &lt;p&gt;Ask a programmer to review 10 lines of code, he’ll find 10 issues. Ask him to do 500 lines and he’ll say it looks good. - &lt;a href=&quot;https://twitter.com/girayozil/status/306836785739210752&quot;&gt;@girayozil&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -99,7 +167,7 @@ let z = 4;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/@lusiaskolonie/เพิ่มประสิทธิภาพให้-code-review-ตอน-1-82f8f0a19e74&quot;&gt;เพิ่มประสิทธิภาพให้ code review (ตอน
 1)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/@lusiaskolonie/เพิ่มประสิทธิภาพให้-code-review-ตอน-2-7a1452c66ac2&quot;&gt;เพิ่มประสิทธิภาพให้ code review (ตอน 2)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="coding" /><summary type="html">Ask a programmer to review 10 lines of code, he’ll find 10 issues. Ask him to do 500 lines and he’ll say it looks good. - @girayozil</summary></entry><entry><title type="html">Babel</title><link href="http://dev.im-bot.com//babel/" rel="alternate" type="text/html" title="Babel" /><published>2016-11-15T00:00:00+00:00</published><updated>2016-11-15T00:00:00+00:00</updated><id>http://dev.im-bot.com//babel</id><content type="html" xml:base="http://dev.im-bot.com//babel/">&lt;p&gt;&lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; is a JavaScript compiler. Use next generation JavaScript, today.
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="coding" /><summary type="html">Ask a programmer to review 10 lines of code, he’ll find 10 issues. Ask him to do 500 lines and he’ll say it looks good. - @girayozil</summary></entry><entry><title type="html">Babel</title><link href="http://dev.im-bot.com/babel/" rel="alternate" type="text/html" title="Babel" /><published>2016-11-15T00:00:00+00:00</published><updated>2016-11-15T00:00:00+00:00</updated><id>http://dev.im-bot.com/babel</id><content type="html" xml:base="http://dev.im-bot.com/babel/">&lt;p&gt;&lt;a href=&quot;https://babeljs.io&quot;&gt;Babel&lt;/a&gt; is a JavaScript compiler. Use next generation JavaScript, today.
 That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -156,7 +224,7 @@ That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
 &lt;h3 id=&quot;etc&quot;&gt;ETC&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/32642685/babel-cli-copy-nonjs-files/35033177#35033177&quot;&gt;babel CLI copy nonjs files&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="babel" /><category term="js" /><summary type="html">Babel is a JavaScript compiler. Use next generation JavaScript, today. That make you can use ES6, even ES7 with ES5 javascript engine. babel - How to use the CLI tools. babel - present babel - How to use the babelrc</summary></entry><entry><title type="html">Async Await</title><link href="http://dev.im-bot.com//async-await/" rel="alternate" type="text/html" title="Async Await" /><published>2016-11-13T00:00:00+00:00</published><updated>2016-11-13T00:00:00+00:00</updated><id>http://dev.im-bot.com//async-await</id><content type="html" xml:base="http://dev.im-bot.com//async-await/">&lt;p&gt;Async/Await is the part of ES7 that currently draft version new standard of
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="babel" /><category term="js" /><summary type="html">Babel is a JavaScript compiler. Use next generation JavaScript, today. That make you can use ES6, even ES7 with ES5 javascript engine. babel - How to use the CLI tools. babel - present babel - How to use the babelrc</summary></entry><entry><title type="html">Async Await</title><link href="http://dev.im-bot.com/async-await/" rel="alternate" type="text/html" title="Async Await" /><published>2016-11-13T00:00:00+00:00</published><updated>2016-11-13T00:00:00+00:00</updated><id>http://dev.im-bot.com/async-await</id><content type="html" xml:base="http://dev.im-bot.com/async-await/">&lt;p&gt;Async/Await is the part of ES7 that currently draft version new standard of
 javascript. It is pattern for solving &lt;a href=&quot;http://callbackhell.com&quot;&gt;Callback Hell&lt;/a&gt;
 problem that nowaday is solve by &lt;a href=&quot;http://www.datchley.name/es6-promises/&quot;&gt;ES6 Promises&lt;/a&gt;.
 Async/Await is wrapper of Promises pattern that make you can program in
@@ -200,7 +268,7 @@ try {
 
 expect(err.message).to.equal(&quot;some error message&quot;);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name>botbotbot</name></author><category term="es7" /><category term="js" /><summary type="html">Async/Await is the part of ES7 that currently draft version new standard of javascript. It is pattern for solving Callback Hell problem that nowaday is solve by ES6 Promises. Async/Await is wrapper of Promises pattern that make you can program in synchronous style without blocking the thread. To use ES7 for your project today, you need to use Babel to compile your ES7 to ES5 that can run in client side with browser and server side with nodeJS</summary></entry><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com//vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com//open-vpn</id><content type="html" xml:base="http://dev.im-bot.com//vpn/">&lt;ul&gt;
+&lt;/div&gt;</content><author><name>botbotbot</name></author><category term="es7" /><category term="js" /><summary type="html">Async/Await is the part of ES7 that currently draft version new standard of javascript. It is pattern for solving Callback Hell problem that nowaday is solve by ES6 Promises. Async/Await is wrapper of Promises pattern that make you can program in synchronous style without blocking the thread. To use ES7 for your project today, you need to use Babel to compile your ES7 to ES5 that can run in client side with browser and server side with nodeJS</summary></entry><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com/vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com/open-vpn</id><content type="html" xml:base="http://dev.im-bot.com/vpn/">&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/Nyr/openvpn-install&quot;&gt;openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -223,7 +291,7 @@ route 192.168.0.0 255.255.0.0
   &lt;li&gt;&lt;a href=&quot;https://community.openvpn.net/openvpn/wiki/IgnoreRedirectGateway&quot;&gt;Ignoring redirect-gateway&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://serverfault.com/questions/631037/how-to-route-only-specific-openvpn-traffic-through-a-openvpn-based-on-ip-filteri/631048#631048&quot;&gt;How to route only specific openVPN traffic through a openVPN based on IP filtering of the destination?&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://superuser.com/questions/457020/openvpn-only-route-a-specific-ip-addresses-through-vpn/628488#628488&quot;&gt;OpenVPN: Only route a specific IP addresses through VPN?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vpn" /><summary type="html">openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS</summary></entry><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com//existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com//existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driver---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vpn" /><summary type="html">openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS</summary></entry><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com/existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com/existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com/existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driver---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
 
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine create --driver generic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
     --generic-ip-address &lt;span class=&quot;nv&quot;&gt;$host_ip&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -293,7 +361,7 @@ rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3314660/passing-variables-in-remote-ssh-command/3314678#3314678&quot;&gt;Passing variables in remote ssh command&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/3231804/in-bash-how-to-add-are-you-sure-y-n-to-any-command-or-alias/3400809#3400809&quot;&gt;In Bash, how to add Are you sure Y/n? to any command or alias?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary type="html">Generic Driver - Create machines using an existing VM/Host with SSH $ docker-machine create --driver generic \ --generic-ip-address $host_ip \ --generic-ssh-user $host_user \ $machine_name</summary></entry><entry><title type="html">Redux</title><link href="http://dev.im-bot.com//redux/" rel="alternate" type="text/html" title="Redux" /><published>2016-11-10T00:00:00+00:00</published><updated>2016-11-10T00:00:00+00:00</updated><id>http://dev.im-bot.com//redux</id><content type="html" xml:base="http://dev.im-bot.com//redux/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="docker" /><summary type="html">Generic Driver - Create machines using an existing VM/Host with SSH $ docker-machine create --driver generic \ --generic-ip-address $host_ip \ --generic-ssh-user $host_user \ $machine_name</summary></entry><entry><title type="html">Redux</title><link href="http://dev.im-bot.com/redux/" rel="alternate" type="text/html" title="Redux" /><published>2016-11-10T00:00:00+00:00</published><updated>2016-11-10T00:00:00+00:00</updated><id>http://dev.im-bot.com/redux</id><content type="html" xml:base="http://dev.im-bot.com/redux/">&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://redux.js.org/docs/introduction/ThreePrinciples.html&quot;&gt;Redux - Three Principles&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.fva82bt27&quot;&gt;A Cartoon intro to Redux&lt;/a&gt;&lt;/li&gt;
@@ -384,7 +452,7 @@ rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;
 &lt;h1 id=&quot;testing&quot;&gt;Testing&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md&quot;&gt;Redux - Writing Tests&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="redux" /><category term="js" /><summary type="html">Intro Redux - Three Principles A Cartoon intro to Redux Leveling Up with React: Redux Understanding Redux (or, How I Fell in Love with a JavaScript State Container) Redux - Basics Getting Started with Redux: An Intro Real World Redux</summary></entry><entry><title type="html">React</title><link href="http://dev.im-bot.com//react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com//react</id><content type="html" xml:base="http://dev.im-bot.com//react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="redux" /><category term="js" /><summary type="html">Intro Redux - Three Principles A Cartoon intro to Redux Leveling Up with React: Redux Understanding Redux (or, How I Fell in Love with a JavaScript State Container) Redux - Basics Getting Started with Redux: An Intro Real World Redux</summary></entry><entry><title type="html">React</title><link href="http://dev.im-bot.com/react/" rel="alternate" type="text/html" title="React" /><published>2016-11-04T00:00:00+00:00</published><updated>2016-11-04T00:00:00+00:00</updated><id>http://dev.im-bot.com/react</id><content type="html" xml:base="http://dev.im-bot.com/react/">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/docs/thinking-in-react.html&quot;&gt;Thinking in React&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -497,7 +565,7 @@ rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-inside/why-the-hipsters-recompose-everything-23ac08748198&quot;&gt;Why The Hipsters Recompose Everything&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/acdlite/recompose&quot;&gt;Recompose - A React utility belt for function components and higher-order components&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="react" /><category term="js" /><summary type="html">React Thinking in React Example Latest ReactJS Examples React - Examples a collection of simple demos of React.js Made with React TodoMVC React Intro ReactJS Bangkok 1.0.0 React - scotch.io Learning React.js: Getting Started and Concepts Routing React Apps: The Complete Guide Presentational and Container Components</summary></entry><entry><title type="html">Git ignore files in sub-directories</title><link href="http://dev.im-bot.com//git-ignore-sub-dir/" rel="alternate" type="text/html" title="Git ignore files in sub-directories" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-ignore-in-sub-dir</id><content type="html" xml:base="http://dev.im-bot.com//git-ignore-sub-dir/">&lt;h2 id=&quot;example-ignore-css-in-only-src&quot;&gt;Example: ignore .css in only /src&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="react" /><category term="js" /><summary type="html">React Thinking in React Example Latest ReactJS Examples React - Examples a collection of simple demos of React.js Made with React TodoMVC React Intro ReactJS Bangkok 1.0.0 React - scotch.io Learning React.js: Getting Started and Concepts Routing React Apps: The Complete Guide Presentational and Container Components</summary></entry><entry><title type="html">Git ignore files in sub-directories</title><link href="http://dev.im-bot.com/git-ignore-sub-dir/" rel="alternate" type="text/html" title="Git ignore files in sub-directories" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://dev.im-bot.com/git-ignore-in-sub-dir</id><content type="html" xml:base="http://dev.im-bot.com/git-ignore-sub-dir/">&lt;h2 id=&quot;example-ignore-css-in-only-src&quot;&gt;Example: ignore .css in only /src&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# .gitignore
 
@@ -519,38 +587,4 @@ $ git commit
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/6794737/6144391&quot;&gt;Git-ignore certain files in sub-directories, but not all&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/1139797/6144391&quot;&gt;Ignore files that have already been committed to a Git repository&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">Example: ignore .css in only /src # .gitignore src/**/*.css</summary></entry><entry><title type="html">Git conflicts</title><link href="http://dev.im-bot.com//git-conflicts/" rel="alternate" type="text/html" title="Git conflicts" /><published>2016-11-02T00:00:00+00:00</published><updated>2016-11-02T00:00:00+00:00</updated><id>http://dev.im-bot.com//git-conflicts</id><content type="html" xml:base="http://dev.im-bot.com//git-conflicts/">&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/a/33569970/6144391&quot;&gt;Resolve Git merge conflicts in favor of their changes during a pull&lt;/a&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# In conflicted state
-$ git checkout --theirs . // use thier code from remote repo
-$ git checkout --ours . // use our code form local repo
-$ git add -u . // add file with skip iles that are not under version control
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h3 id=&quot;vim&quot;&gt;Vim&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/tpope/vim-fugitive&quot;&gt;fugitive.vim: a Git wrapper so awesome&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff&quot;&gt;Fugitive.vim - resolving merge conflicts with vimdiff&lt;/a&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:Gvdiff
-:buffers
-# focus on middle window
-:diffput 2 // see number on :buffers
-:diffput 3 // see number on :buffers
-# ]c next conflict
-# [c previos conflict
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><category term="vim" /><summary type="html">Git Resolve Git merge conflicts in favor of their changes during a pull # In conflicted state $ git checkout --theirs . // use thier code from remote repo $ git checkout --ours . // use our code form local repo $ git add -u . // add file with skip iles that are not under version control</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="git" /><summary type="html">Example: ignore .css in only /src # .gitignore src/**/*.css</summary></entry></feed>
