@@ -68,10 +68,13 @@ update_date: 2017-08-26
 * [How to Become a Great Front-End Engineer - PHILIP WALTON](https://philipwalton.com/articles/how-to-become-a-great-front-end-engineer)
 
    ```
-   I realize that what separates the good people from the really good people isn’t what they know;
-   it’s how they think. Obviously knowledge is important—critical in some cases—but in a field that changes so quickly,
-   how you go about acquiring that knowledge is always going to be more important (at least in the long term) than what you know at any given time.
-   And perhaps most important of all: how you use that knowledge to solve everyday problems.
+   I realize that what separates the good people from the really good people
+   isn’t what they know; it’s how they think. Obviously knowledge is
+   important—critical in some cases—but in a field that changes so quickly,
+   how you go about acquiring that knowledge is always going to be more
+   important (at least in the long term) than what you know at any given time.
+   And perhaps most important of all: how you use that knowledge to solve
+   everyday problems.
    ```
 
 * If you’re working on a big, popular application like Word or Facebook for
@@ -83,9 +86,10 @@ update_date: 2017-08-26
 
     ```
     Remember that I’m hiring you to build products not write software.
-    It’s a very important distinction.
-    You’ll make hundreds of micro decisions every day about what and how to build products
-    and I want to know that you understand our business and will put that as your first priority.
+    It’s a very important distinction.  You’ll make hundreds of micro
+    decisions every day about what and how to build products and
+    I want to know that you understand our business and will put that
+    as your first priority.
     ```
 
 * Every design decision involves tradeoffs - [Great Design: What is Design?  (First Draft) - Joel on Software](http://new.joelonsoftware.com/design/1stDraft/01.html)
@@ -204,3 +208,5 @@ update_date: 2017-08-26
 * Perfectionism, I see this as one of the biggest barriers for a programmer to deliver things fast - [antirez](http://www.antirez.com/news/112)
 
 *  The biggest issue on software teams is making sure everyone understands what everyone else is doing -  [Martin Fowler](https://martinfowler.com/bliki/CheaperTalentHypothesis.html)
+
+* “เมื่อเราอยากจะดีขึ้นกว่าที่เราเคยเป็น ทุกอย่างรอบตัวเราจะดีขึ้นเช่นกัน” - [10 คำพูดทรงพลังสอนบทเรียนชีวิตจากหนังสือ The Alchemist](https://www.skilllane.com/blog/10-quotes-from-the-alchemist)
