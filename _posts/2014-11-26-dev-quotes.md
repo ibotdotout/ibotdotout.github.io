@@ -210,3 +210,38 @@ update_date: 2017-08-26
 *  The biggest issue on software teams is making sure everyone understands what everyone else is doing -  [Martin Fowler](https://martinfowler.com/bliki/CheaperTalentHypothesis.html)
 
 * “เมื่อเราอยากจะดีขึ้นกว่าที่เราเคยเป็น ทุกอย่างรอบตัวเราจะดีขึ้นเช่นกัน” - [10 คำพูดทรงพลังสอนบทเรียนชีวิตจากหนังสือ The Alchemist](https://www.skilllane.com/blog/10-quotes-from-the-alchemist)
+
+* You are not the customer - [Developing Good Operations Tools](https://www.slideshare.net/jamtur01/developing-good-operations-tools/)
+
+* If somebody offers you an amazing opportunity but you are not sure you can do it, say yes — then learn how to do it later!  Richard Branson
+
+* Building a software product is a lot like taking a trip between point A and B without really knowing what’s in the middle. - [Stop building car boats — tech debt 101 - Ben Longstaff](https://hackernoon.com/stop-building-car-boats-tech-debt-101-bc0b08312fa)
+
+* [How not to start a startup - Bram Krommenhoek](https://medium.com/the-mission/how-not-to-start-a-startup-e87c5b344909)
+
+    ```
+    But I’m going to take up Sheryl Sandberg’s advice here:
+
+    There is no perfect fit when you’re looking for the next big thing to do.
+    You have to take opportunities and make an opportunity fit for you,
+    rather than the other way around. The ability to learn is the most
+    important quality a leader can have.
+    ```
+
+* Companies are slowly shifting from a state where most employees have an operational or project mindset to a customer-facing or product mindset - [Why managers shouldn’t measure individual performance in the digital age](https://www.techinasia.com/talk/managers-should-not-measure-individual-performance)
+
+* Failures are great opportunities to learn. But when you are out of your depth, you won’t even know why you failed. You need to understand the failure to actually learn from it. Failure that you can’t understand also leads to more dissatisfaction. - [Lakshmi Mani](https://uxdesign.cc/up-up-and-away-finding-jobs-that-maximize-learning-5520cff15f24)
+
+* การมีความรับผิดชอบอย่างสูงสุด (Full Accountability) นั้นคือความรับผิดชอบต่อคนในทีม ต่อเพื่อนมนุษย์ด้วยกัน ไม่ใช่ต่อตัวเลข KPI บ้าบอนั่น - [Piyorot](https://medium.com/the-way-it-should-be/kpi-vs-accountability-1103c6a533c5)
+
+* สำหรับการรับพนักงานใหม่ หนึ่งในคุณสมบัติที่เราต้องการคือคนที่มีความเป็นมนุษย์เยอะๆ มีความเห็นอกเห็นใจ เอาใจเขามาใส่ใจเรา ค้นหาคนแบบนี้มาร่วมงานกับเราให้ได้ อย่าให้ความสำคัญเฉพาะคำโฆษณาในเรซูเม่ (empty) - [Piyorot](https://medium.com/the-way-it-should-be/kpi-vs-accountability-1103c6a533c5)
+
+* general on what is considered to be “hot”, rather than solid research and any serious consideration of expected impact on their projects. I call this trend Hype Driven Development - [Hype Driven Development](https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22) - [more](https://www.slideshare.net/danmckinley/choose-boring-technology)
+
+* A free man sells results, not time - [Yegor Bugayenko](http://www.yegor256.com/2015/07/21/hourly-pay-modern-slavery.html)
+
+* " A senior developer understands that you cannot do everything yourself, Thier primary role is to help their team get better..." - Matt Briggr
+
+* Your tests may run faster or have more reusable code, but does that make you more or less confident in what is actually being tested? Always remember: There are no points for clever tests. - [Testing Essentials](http://thenodeway.io/posts/testing-essentials/)
+
+* ชีวิตมีทางเลือกไม่จำกัด แต่มีเวลาจำกัด - [Kittichai Jirasukhanon](https://jirasukhanon.com/อย่าให้การตั้งราคา-product-ถูกๆ-เพียงเพื่อให้ขายง่าย-เป็นตัวตัดอนาคตธุรกิจคุณ-602dc5a7e77d)
