@@ -245,3 +245,5 @@ update_date: 2017-08-26
 * Your tests may run faster or have more reusable code, but does that make you more or less confident in what is actually being tested? Always remember: There are no points for clever tests. - [Testing Essentials](http://thenodeway.io/posts/testing-essentials/)
 
 * ชีวิตมีทางเลือกไม่จำกัด แต่มีเวลาจำกัด - [Kittichai Jirasukhanon](https://jirasukhanon.com/อย่าให้การตั้งราคา-product-ถูกๆ-เพียงเพื่อให้ขายง่าย-เป็นตัวตัดอนาคตธุรกิจคุณ-602dc5a7e77d)
+
+* Partnership ช่วยเราโตในช่วงเวลาหนึ่ง แต่ก็ทำให้เรา lost focus ในช่วงเวลานั้นเหมือนกัน - [Yaron Zeidman, Agoda CTO](https://www.facebook.com/aemavat/posts/10209200314180104)
