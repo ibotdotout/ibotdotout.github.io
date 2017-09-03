@@ -249,3 +249,11 @@ update_date: 2017-08-26
 * Partnership ช่วยเราโตในช่วงเวลาหนึ่ง แต่ก็ทำให้เรา lost focus ในช่วงเวลานั้นเหมือนกัน - [Yaron Zeidman, Agoda CTO](https://www.facebook.com/aemavat/posts/10209200314180104)
 
 * First-time Founders : ความผิดพลาดของ Startup ... เรามักจะคิดว่า "ไอเดีย" ที่เราจะเริ่มทำนั้นต้องดูยิ่งใหญ่ ต้องเปลี่ยนแปลงอะไรซักอย่างของโลกให้ได้ นั่นเป็นความผิดพลาดที่เกิดขึ้นบ่อยครั้งของ First time founders ที่ไม่รู้จักเริ่มเล็ก ๆ ในสิ่งที่คุณทำให้เกิดได้ด้วยทีมที่มี, ในตลาดที่คุณรู้จัก, ในงบประมาณที่คุณควบคุมได้ -- [Sam Altman : Y Combinator](https://www.facebook.com/shakrit/posts/10207929504212961)
+
+* Complain and Propose - [Kent beck](https://www.facebook.com/notes/kent-beck/complain-and-propose/799641466735386)
+
+* View problems as parts of an overall system. My problem is not always the System's problem. - [Roasted Pigs and Digital Transformation](https://www.thoughtworks.com/insights/blog/roasted-pigs-and-digital-transformation)
+
+* A CTO has to be the person who gets the job done. - [CTO ?](https://www.quora.com/What-does-a-CTO-need-to-know-to-be-a-CTO-It-seems-that-its-just-a-summation-of-experience-over-time-and-in-some-cases-a-CTO-may-have-no-idea-how-something-works-unless-they-do-some-work-afterwards-to-learn/answer/Jim-Brashear-1?srid=8ri6)
+
+* If every thing is under control, you are going too slow! - Mario Andrelti
