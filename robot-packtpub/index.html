@@ -234,23 +234,21 @@
 
 <h2 id="package-requirements-or-dockerfile-on-robot-packtpub-repo">Package Requirements or <a href="https://github.com/ibotdotout/robot-packtpub">Dockerfile on Robot-packtpub Repo</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># ubuntu</span>
-<span class="gp">$ </span>apt-get -y update
-<span class="gp">$ </span>apt-get -y install python-dev python-pip
-<span class="gp">$ </span>apt-get install -y phantomjs libicu52 wget
-<span class="gp">$ </span>wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs -O /usr/bin/phantomjs <span class="o">&amp;&amp;</span> chmod +x /usr/bin/phantomjs
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ubuntu</span>
+<span class="nv">$ </span>apt-get <span class="nt">-y</span> update
+<span class="nv">$ </span>apt-get <span class="nt">-y</span> install python-dev python-pip
+<span class="nv">$ </span>apt-get install <span class="nt">-y</span> phantomjs libicu52 wget
+<span class="nv">$ </span>wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs <span class="nt">-O</span> /usr/bin/phantomjs <span class="o">&amp;&amp;</span> chmod +x /usr/bin/phantomjs
 
-<span class="gp">$ </span>pip install robotframework
-<span class="gp">$ </span>pip install robotframework-selenium2library
-</code></pre>
-</div>
+<span class="nv">$ </span>pip install robotframework
+<span class="nv">$ </span>pip install robotframework-selenium2library
+</code></pre></div></div>
 
 <h2 id="how-to-use">How to use</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
-<span class="gp">$ </span>pybot robot-packtpub.txt
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
+<span class="nv">$ </span>pybot robot-packtpub.txt
+</code></pre></div></div>
 
 <h2 id="note">Note</h2>
 <ul>

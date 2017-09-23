@@ -261,12 +261,11 @@
     
       <h2 id="generic-driver---create-machines-using-an-existing-vmhost-with-ssh"><a href="https://docs.docker.com/machine/drivers/generic/">Generic Driver</a> - Create machines using an existing VM/Host with SSH</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker-machine create --driver generic <span class="se">\</span>
-    --generic-ip-address <span class="nv">$host_ip</span> <span class="se">\</span>
-    --generic-ssh-user <span class="nv">$host_user</span> <span class="se">\</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker-machine create <span class="nt">--driver</span> generic <span class="se">\</span>
+    <span class="nt">--generic-ip-address</span> <span class="nv">$host_ip</span> <span class="se">\</span>
+    <span class="nt">--generic-ssh-user</span> <span class="nv">$host_user</span> <span class="se">\</span>
     <span class="nv">$machine_name</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
       <div style="text-align:right;">
@@ -385,11 +384,10 @@
     
       <h2 id="example-ignore-css-in-only-src">Example: ignore .css in only /src</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># .gitignore
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># .gitignore
 
 src/**/*.css
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
       <div style="text-align:right;">

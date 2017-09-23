@@ -266,7 +266,7 @@
 
 <h3 id="mock-method-that-can-be-runnable">Mock Method that can be runnable</h3>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># side_effect will make mock method can be runable  </span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># side_effect will make mock method can be runable  </span>
 <span class="c"># this can be use to reutrn_value in different arguments</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>  
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>  
@@ -274,12 +274,11 @@
 <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mock_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="mi">3</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="patch-module-attribute">Patch Module Attribute</h3>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Using PropertyMock with return_value argument  </span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Using PropertyMock with return_value argument  </span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">'package.module.attribute'</span><span class="p">,</span>  
                      <span class="n">new_callable</span><span class="o">=</span><span class="n">mock</span><span class="o">.</span><span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
@@ -288,8 +287,7 @@
 <span class="o">&gt;&gt;&gt;</span>       <span class="k">print</span><span class="p">(</span><span class="n">package</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span>  
 <span class="mi">3</span>  
 <span class="mi">3</span>  
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="my_mockmock_calls">my_mock.mock_calls</h3>
 
@@ -323,9 +321,8 @@
       <h3 id="watchdog"><a href="https://github.com/gorakhargosh/watchdog">Watchdog</a></h3>
 <p>Python API and shell utilities to monitor file system events.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install watchdog
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install watchdog
+</code></pre></div></div>
 
 <h3 id="watching-python-file-changes">Watching python file changes</h3>
 
@@ -410,10 +407,9 @@ if __name__ == &#39;__main__&#39;:
 
 <h3 id="watchdog-over-docker-vm-via-polling---ref">Watchdog over Docker (VM) via polling - <a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Ref</a></h3>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">watchdog.observers.polling</span> <span class="kn">import</span> <span class="n">PollingObserver</span> <span class="k">as</span> <span class="n">Observer</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">watchdog.observers.polling</span> <span class="kn">import</span> <span class="n">PollingObserver</span> <span class="k">as</span> <span class="n">Observer</span>
 <span class="n">Observer</span><span class="p">()</span> <span class="c">#polling every 1 second</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="references">References:</h3>
 <ol>
@@ -508,21 +504,19 @@ if __name__ == &#39;__main__&#39;:
   <li>
     <p>Run All unittest in module:</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>python -m unittest discover &lt;test_module&gt;
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> unittest discover &lt;test_module&gt;
+</code></pre></div>    </div>
   </li>
   <li>Run nosetests with python3.
     <ul>
       <li>Install nose into python3 package with pip3 then you can run nosetests with python3 via nosetests-3.x ex. nosetests-3.4 if your python3 is version 3.4</li>
     </ul>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># ubuntu install python3-pip first</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ubuntu install python3-pip first</span>
 <span class="c"># $ sudo apt-get install python3-ip</span>
-<span class="gp">$ </span>pip3 install nose
-<span class="gp">$ </span>nosetests-3.x
-</code></pre>
-    </div>
+<span class="nv">$ </span>pip3 install nose
+<span class="nv">$ </span>nosetests-3.x
+</code></pre></div>    </div>
   </li>
   <li>
     <p><a href="http://stackoverflow.com/questions/864956/problems-using-nose-in-a-virtualenv">Problems using nose in a virtualenv</a></p>
@@ -532,9 +526,8 @@ if __name__ == &#39;__main__&#39;:
   <li>
     <p>Run PDB with nosetest:</p>
 
-    <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">set_trace</span><span class="p">;</span> <span class="n">set_trace</span><span class="p">()</span>
-</code></pre>
-    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">nose.tools</span> <span class="kn">import</span> <span class="n">set_trace</span><span class="p">;</span> <span class="n">set_trace</span><span class="p">()</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -545,9 +538,8 @@ There are many problem with nose plugin ex. rednose, coverage, xunit.</p>
 
 <p>In worst case more processeses can make your tests slower depends on your tests.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>nosetests --processes<span class="o">=</span>NUMBER_OF_PROCESSORS --process-timeout &lt;sec&gt;
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>nosetests <span class="nt">--processes</span><span class="o">=</span>NUMBER_OF_PROCESSORS <span class="nt">--process-timeout</span> &lt;sec&gt;
+</code></pre></div></div>
 
 <p><a href="http://www.metaklass.org/nose-accelerating-the-runner/">Plugin Problem</a>:</p>
 
@@ -570,26 +562,23 @@ Cover - (Stmts - Miss)/Stmts * 100</p>
       <li>powerful way to visually inspect the code and see the lines that missing</li>
     </ul>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>nosetests --with-coverage --cover-html 
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nosetests <span class="nt">--with-coverage</span> <span class="nt">--cover-html</span> 
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Coverage erase</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>coverage erase
-coverage -e
-nosetests --with-coverage --cover-erase
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>coverage erase
+coverage <span class="nt">-e</span>
+nosetests <span class="nt">--with-coverage</span> <span class="nt">--cover-erase</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Coverage with filter Third-party Libraries out</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>nosetests --with-coverage --cover-package<span class="o">=</span>&lt;package,package2&gt;
-nosetests --with-coverage --cover-package<span class="o">=</span><span class="k">$(</span>ls | grep <span class="s1">'.py$'</span> | sed <span class="s1">'s/[.]py$//'</span> | xargs | sed <span class="s1">'s/[\ ]/,/g'</span><span class="k">)</span>
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nosetests <span class="nt">--with-coverage</span> <span class="nt">--cover-package</span><span class="o">=</span>&lt;package,package2&gt;
+nosetests <span class="nt">--with-coverage</span> <span class="nt">--cover-package</span><span class="o">=</span><span class="k">$(</span><span class="nb">ls</span> | <span class="nb">grep</span> <span class="s1">'.py$'</span> | sed <span class="s1">'s/[.]py$//'</span> | xargs | sed <span class="s1">'s/[\ ]/,/g'</span><span class="k">)</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -654,26 +643,23 @@ nosetests --with-coverage --cover-package<span class="o">=</span><span class="k"
   <li>Unittests: <a href="https://nose.readthedocs.org">Nosetests</a>, <a href="https://pypi.python.org/pypi/rednose">Rednose</a>, <a href="https://pypi.python.org/pypi/coverage">Coverage</a>, <a href="https://pypi.python.org/pypi/nose-progressive/">nose-progressive</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install nose rednose coverage
-<span class="nb">echo</span> <span class="s2">"export NOSE_REDNOSE=1"</span> &gt;&gt; .zshrc <span class="c">#enable rednose</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install nose rednose coverage
+<span class="nb">echo</span> <span class="s2">"export NOSE_REDNOSE=1"</span> <span class="o">&gt;&gt;</span> .zshrc <span class="c">#enable rednose</span>
+</code></pre></div></div>
 <ul>
   <li><a href="https://github.com/gorakhargosh/watchdog">Watchdog</a> - 
 <a href="http://brunorocha.org/python/watching-a-directory-for-file-changes-with-python.html">Watching a directory for file changes</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install watchdog
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install watchdog
+</code></pre></div></div>
 
 <ul>
   <li><a href="https://testrun.org/tox/latest/">Tox</a> - multiple environments testing</li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install tox
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install tox
+</code></pre></div></div>
 
 <h2 id="testing-python">Testing Python</h2>
 <ol>

@@ -232,7 +232,7 @@
   <li>First Way, load files to buffer and run command for each buffers</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// search keyword on files and load files to buffers
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// search keyword on files and load files to buffers
 :args `rg -l pattern path/`
 
 // list buffers
@@ -240,8 +240,7 @@
 
 // substitute word for each buffers and save
 :argdo %s/pattern/newpattern/ge | update
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <!-- more -->
 
@@ -250,11 +249,10 @@
  Vim and run command for each line on Quickfix</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>//  run the given command to each line of the quickfix list.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//  run the given command to each line of the quickfix list.
 :Ack! pattern 
 :cdo %s/pattern/newpattern/ge | w
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="helper-tools--plugins">Helper Tools &amp; Plugins</h3>
 

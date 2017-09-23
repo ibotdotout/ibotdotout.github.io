@@ -243,7 +243,7 @@ terrible and Github Pages not support custom ruby script that place in
 
 <p>Replace `` in <code class="highlighter-rouge">index.html</code> in jekyll directory with</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>    
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    
     <span class="p">{</span><span class="sx">% if </span><span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="n">contains</span> <span class="s2">"&lt;!-- more --&gt;"</span> <span class="o">%</span><span class="p">}</span>
       <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="nb">split</span><span class="ss">:"&lt;!-- more --&gt;"</span> <span class="o">|</span> <span class="n">first</span> <span class="o">%</span> <span class="p">}}</span>
       <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"text-align:right;"</span><span class="o">&gt;</span>
@@ -253,14 +253,13 @@ terrible and Github Pages not support custom ruby script that place in
       <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="p">}}</span>
     <span class="p">{</span><span class="sx">% endif </span><span class="o">%</span><span class="p">}</span>
     
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <!-- more -->
 
 <p>In your contents add <code class="highlighter-rouge">&lt;!-- more --&gt;</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>---
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 layout: post
 title: Read more feature on jekyll
 tags: [jekyll]
@@ -270,8 +269,7 @@ Hello, world
 &lt;!-- more --&gt;
 
 You can't see this message via index.html
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="references">References:</h3>
 <ol>

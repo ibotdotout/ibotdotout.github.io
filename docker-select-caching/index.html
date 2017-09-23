@@ -253,17 +253,15 @@ and <a href="https://docs.docker.com/engine/reference/builder/#arg">Dockerfile -
 
 <p>add <code class="highlighter-rouge">ARG</code> command to your <code class="highlighter-rouge">Dockerfile</code></p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Dockerfile</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Dockerfile</span>
 <span class="c"># add this and below command will run without cache</span>
 ARG <span class="nv">CACHEBUST</span><span class="o">=</span>1
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>when you need to rebuild with selected cache, run it with <code class="highlighter-rouge">--build-arg</code> option</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker build -t your-image --build-arg <span class="nv">CACHEBUST</span><span class="o">=</span><span class="k">$(</span>date +%s<span class="k">)</span> .
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker build <span class="nt">-t</span> your-image <span class="nt">--build-arg</span> <span class="nv">CACHEBUST</span><span class="o">=</span><span class="k">$(</span>date +%s<span class="k">)</span> <span class="nb">.</span>
+</code></pre></div></div>
 
 <p>then only layer below <code class="highlighter-rouge">ARG</code> command in <code class="highlighter-rouge">Dockerfile</code> will rebuild.</p>
 

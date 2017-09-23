@@ -230,12 +230,11 @@
 
   <h2 id="generic-driver---create-machines-using-an-existing-vmhost-with-ssh"><a href="https://docs.docker.com/machine/drivers/generic/">Generic Driver</a> - Create machines using an existing VM/Host with SSH</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker-machine create --driver generic <span class="se">\</span>
-    --generic-ip-address <span class="nv">$host_ip</span> <span class="se">\</span>
-    --generic-ssh-user <span class="nv">$host_user</span> <span class="se">\</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker-machine create <span class="nt">--driver</span> generic <span class="se">\</span>
+    <span class="nt">--generic-ip-address</span> <span class="nv">$host_ip</span> <span class="se">\</span>
+    <span class="nt">--generic-ssh-user</span> <span class="nv">$host_user</span> <span class="se">\</span>
     <span class="nv">$machine_name</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <!-- more -->
 
@@ -255,27 +254,25 @@ server</code>, you can check you path <code class="highlighter-rouge">$ pwd</cod
   </li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># download</span>
-<span class="gp">$ </span>docker-machine scp <span class="nv">$machine</span>:<span class="nv">$src</span> <span class="nv">$dest</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># download</span>
+<span class="nv">$ </span>docker-machine scp <span class="nv">$machine</span>:<span class="nv">$src</span> <span class="nv">$dest</span>
 
 <span class="c"># upload</span>
-<span class="gp">$ </span>docker-machine scp <span class="nv">$src</span> <span class="nv">$machine</span>:<span class="nv">$dest</span>
-</code></pre>
-</div>
+<span class="nv">$ </span>docker-machine scp <span class="nv">$src</span> <span class="nv">$machine</span>:<span class="nv">$dest</span>
+</code></pre></div></div>
 
 <ul>
   <li><a href="http://www.computerhope.com/unix/rsync.htm">Rsync</a> - <a href="http://ss64.com/bash/rsync_options.html">option</a></li>
 </ul>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># sync and delete file remote that not existed on local</span>
-rsync -rvzahe <span class="s1">'docker-machine ssh $machine'</span> --delete --progress <span class="nv">$src</span> :<span class="nv">$dest</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># sync and delete file remote that not existed on local</span>
+rsync <span class="nt">-rvzahe</span> <span class="s1">'docker-machine ssh $machine'</span> <span class="nt">--delete</span> <span class="nt">--progress</span> <span class="nv">$src</span> :<span class="nv">$dest</span>
 
 <span class="c"># ignore .git directory</span>
-rsync -rvzahe <span class="s1">'docker-machine ssh $machine'</span> --delete --progress --exclude<span class="o">=</span><span class="s1">'.git'</span> <span class="nv">$src</span> :<span class="nv">$dest</span><span class="s2">"
-</span></code></pre>
-</div>
+rsync <span class="nt">-rvzahe</span> <span class="s1">'docker-machine ssh $machine'</span> <span class="nt">--delete</span> <span class="nt">--progress</span> <span class="nt">--exclude</span><span class="o">=</span><span class="s1">'.git'</span> <span class="nv">$src</span> :<span class="nv">$dest</span><span class="s2">"
+</span></code></pre></div></div>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># alias</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># alias</span>
 
 <span class="nb">export </span><span class="nv">machine</span><span class="o">=</span>digitalocean
 <span class="c"># rsync for mount volume on remote docker host</span>
@@ -291,8 +288,7 @@ rsync -rvzahe <span class="s1">'docker-machine ssh $machine'</span> --delete --p
 
 <span class="c"># list dir on remote host</span>
 <span class="nb">alias </span><span class="nv">dlist</span><span class="o">=</span><span class="s2">"docker-machine ssh </span><span class="se">\$</span><span class="s2">machine </span><span class="se">\"</span><span class="s2">cd </span><span class="se">\$</span><span class="s2">PWD &amp;&amp; ls</span><span class="se">\"</span><span class="s2">"</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="references">References:</h2>
 <ul>

@@ -256,27 +256,24 @@ and I can save ~700MB by using this technique and combine commands on
 <a href="https://github.com/ibotdotout/docker-predictionio/blob/master/Dockerfile">docker-predictionio</a>
 that based on <a href="https://github.com/sphereie/docker-predictionio/blob/master/Dockerfile">sphereio/docker-predictionio</a>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>RUN apt-get install -y --no-install-recommends &lt;packages&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RUN apt-get install -y --no-install-recommends &lt;packages&gt;
+</code></pre></div></div>
 
 <h2 id="3-combine-commands-to-reduce-layers">3. Combine commands to reduce layers</h2>
 
 <p>Example your <code class="highlighter-rouge">Dockfile</code> look like</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>RUN apt-get update
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RUN apt-get update
 RUN apt-get install -y python-pip
 RUN pip install predictionio
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>should combile commands like this</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>RUN apt-get update \
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RUN apt-get update \
     &amp;&amp; apt-get install -y python-pip \
     &amp;&amp; pip install predictionio
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>that reduce image layer and image size.
 However your should do this when your sure with <code class="highlighter-rouge">Dockerfile</code>
@@ -294,13 +291,12 @@ installation.</p>
 image size.</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>RUN apt-get install -y python-pip pyhton-dev \
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RUN apt-get install -y python-pip pyhton-dev \
     &amp;&amp; pip install predictionio \
     &amp;&amp; apt-get remove -y python-pip \
     &amp;&amp; ap-get clean \
     &amp;&amp; rm -rf /var/lib/apt/lists/*
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="5-using-docker-squash-to-make-them-smaller">5. Using <a href="https://github.com/jwilder/docker-squash">docker-squash</a> to make them smaller</h3>
 

@@ -233,10 +233,9 @@
 
 <p>PREFIX d - leave</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Come Back</span>
-<span class="gp">$ </span>tmux a
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Come Back</span>
+<span class="nv">$ </span>tmux a
+</code></pre></div></div>
 
 <h3 id="windows">windows</h3>
 <p>PREFIX c - create window<br />
@@ -263,13 +262,12 @@ PREFIX ! - turn pane to window</p>
 <a href="http://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future">tmux Copy &amp; Paste on OS X: A Better Future</a><br />
 <a href="https://www.youtube.com/watch?v=OW-lKJDFOzc">Copy Mode - Linux TMUX Video Tutorial</a></p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .tmux.conf</span>
-setw -g mode-keys vi
-<span class="nb">bind</span>-key -t vi-copy <span class="s1">'v'</span> begin-selection
-<span class="nb">bind</span>-key -t vi-copy <span class="s1">'y'</span> copy-selection
-<span class="nb">bind</span> -t vi-copy y copy-pipe <span class="s1">'xclip -in -selection clipboard'</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># .tmux.conf</span>
+setw <span class="nt">-g</span> mode-keys vi
+bind-key <span class="nt">-t</span> vi-copy <span class="s1">'v'</span> begin-selection
+bind-key <span class="nt">-t</span> vi-copy <span class="s1">'y'</span> copy-selection
+<span class="nb">bind</span> <span class="nt">-t</span> vi-copy y copy-pipe <span class="s1">'xclip -in -selection clipboard'</span>
+</code></pre></div></div>
 <ul>
   <li>
     <p>Copy to Buffer</p>
@@ -287,35 +285,31 @@ setw -g mode-keys vi
 
 <h3 id="create-custom-layout"><a href="https://www.youtube.com/watch?v=sxw-n5Du600">Create Custom Layout</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#Window: python dev (Prefix - Meta(Alt) + d)</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Window: python dev (Prefix - Meta(Alt) + d)</span>
 <span class="c"># -v = split horizontal</span>
-<span class="nb">bind</span>-key M-d split-window -v -p 30 -t 0 <span class="se">\;</span> <span class="se">\</span>
+bind-key M-d split-window <span class="nt">-v</span> <span class="nt">-p</span> 30 <span class="nt">-t</span> 0 <span class="se">\;</span> <span class="se">\</span>
          send-keys <span class="s1">'./watchdog_python.py'</span> <span class="s1">'Enter'</span> <span class="se">\;</span> <span class="se">\</span>
-         <span class="k">select</span>-pane -t 0
-</code></pre>
-</div>
+         <span class="k">select</span><span class="nt">-pane</span> <span class="nt">-t</span> 0
+</code></pre></div></div>
 
 <h3 id="tmuxinator"><a href="https://github.com/tmuxinator/tmuxinator">tmuxinator</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gem install tmuxinator
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem install tmuxinator
 <span class="nb">export </span><span class="nv">EDITOR</span><span class="o">=</span>vim
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="wemux"><a href="https://github.com/zolrath/wemux">wemux</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># OSX via Homebrew</span>
-<span class="gp">$ </span>brew install wemux
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># OSX via Homebrew</span>
+<span class="nv">$ </span>brew install wemux
+</code></pre></div></div>
 
 <h3 id="unable-to-use-open-command-in-osx-tmux"><a href="http://www.elmund.io/osx/2015/07/10/open-command-in-osx-tmux/">Unable to use ‘open’ command in OSX tmux</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>brew update
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew update
 brew install reattach-to-user-namespace
-<span class="nb">echo</span> <span class="s2">"set -g default-command </span><span class="se">\"</span><span class="s2">reattach-to-user-namespace -l </span><span class="k">${</span><span class="nv">SHELL</span><span class="k">}</span><span class="se">\"</span><span class="s2">"</span> &gt;&gt; ~/.tmux.conf
-</code></pre>
-</div>
+<span class="nb">echo</span> <span class="s2">"set -g default-command </span><span class="se">\"</span><span class="s2">reattach-to-user-namespace -l </span><span class="k">${</span><span class="nv">SHELL</span><span class="k">}</span><span class="se">\"</span><span class="s2">"</span> <span class="o">&gt;&gt;</span> ~/.tmux.conf
+</code></pre></div></div>
 
 <h3 id="how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux"><a href="http://superuser.com/questions/493048/how-to-convert-2-horizontal-panes-to-vertical-panes-in-tmux">How to convert 2 horizontal panes to vertical panes in tmux?</a></h3>
 

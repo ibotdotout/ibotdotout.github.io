@@ -229,10 +229,9 @@
 which not encode with UTF-8 that unreadable on OSX. Your should guess
 what encode that file using and convert it in to UTF-8.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># convert tis-620 to utf-8 encoding</span>
-<span class="nv">$iconv</span> -f tis-620 -t utf-8 source.xml &gt; destination.xml
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># convert tis-620 to utf-8 encoding</span>
+<span class="nv">$iconv</span> <span class="nt">-f</span> tis-620 <span class="nt">-t</span> utf-8 source.xml <span class="o">&gt;</span> destination.xml
+</code></pre></div></div>
 
 <p>Example. Thai language on Windows system normally encode with TIS-620 when
 open it in OSX that will display with some symbol char that unreadable.

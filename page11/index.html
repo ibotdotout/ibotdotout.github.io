@@ -667,19 +667,18 @@ Technician: Tools &amp; Tactics</p>
 
 <h3 id="ssh-alias-config"><a href="http://backdrift.org/transparent-proxy-with-ssh">SSH Alias Config</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># .ssh/config</span>
 <span class="c"># use $ssh &lt;hostname&gt; to connect</span>
 <span class="c"># Host * //setting for every host</span>
   Host &lt;hostname&gt;
   HostName &lt;ip&gt;
   User	 &lt;username&gt;
   Port  &lt;port&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="using-ssh-proxycommand-to-tunnel-connections"><a href="http://backdrift.org/transparent-proxy-with-ssh">Using SSH ProxyCommand to Tunnel Connections</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># .ssh/config</span>
 <span class="c">#ProxyCommand ssh someserver -W %h:%p</span>
 <span class="c">#  With the newer versions of openssh-client you can also use the -W option to forward the connection.</span>
 <span class="c">#LocalCommand</span>
@@ -692,56 +691,50 @@ Technician: Tools &amp; Tactics</p>
   Host &lt;proxy&gt;
   HostName &lt;ip&gt;
   User &lt;user&gt;
-  ProxyCommand ssh &lt;destination&gt; -W %h:%p 2&gt; /dev/null
+  ProxyCommand ssh &lt;destination&gt; <span class="nt">-W</span> %h:%p 2&gt; /dev/null
   IdentityFile &lt;ssh_key&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="ssh-login-with-key-based-authentication"><a href="http://www.laubenheimer.net/ssh-keys.shtml">SSH login with key-based authentication</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Client: generate key</span>
-<span class="gp">$ </span>ssh-keygen -t rsa -b 4096
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Client: generate key</span>
+<span class="nv">$ </span>ssh-keygen <span class="nt">-t</span> rsa <span class="nt">-b</span> 4096
 
 <span class="c"># Server: put client key</span>
 <span class="c"># copy ~/.ssh/id_rsa.pub into ~/.ssh/authorized_keys in server</span>
 <span class="c"># (option: server denies passed auth)</span>
-<span class="gp">$ </span>sudo vim /etc/ssh/sshd_config
-</code></pre>
-</div>
+<span class="nv">$ </span><span class="nb">sudo </span>vim /etc/ssh/sshd_config
+</code></pre></div></div>
 
 <h2 id="ssh-login-with-password"><a href="http://askubuntu.com/questions/101670/how-can-i-allow-ssh-password-authentication-from-only-certain-ip-addresses">SSH Login with Password</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># /etc/ssh/sshd_config</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># /etc/ssh/sshd_config</span>
 PasswordAuthentication no
 
 Match address 192.0.2.0/24
     PasswordAuthentication yes
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="ssh-proxy-with-socks5"><a href="https://thomashunter.name/blog/really-simple-ssh-proxy-socks5/">SSH Proxy with SOCKS5</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -N -D 8080 user@server -p 443
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ssh <span class="nt">-N</span> <span class="nt">-D</span> 8080 user@server <span class="nt">-p</span> 443
 <span class="c"># should using port 443 to avoid blocking port 22</span>
 <span class="c"># setting proxy  on your browser</span>
 <span class="c"># sock host 127.0.0.1 port 8080</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># .ssh/config</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># .ssh/config</span>
 <span class="c"># use $ssh -N &lt;proxy&gt; -p 443</span>
 Host &lt;proxy&gt;
   HostName &lt;ip&gt;
   User &lt;user&gt;
   DynamicForward 8080
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="ssh-skip-known_host"><a href="http://superuser.com/questions/125324/how-can-i-avoid-sshs-host-verification-for-known-hosts">SSH Skip known_host</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ssh -o <span class="s2">"StrictHostKeyChecking no"</span> user@host
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ssh <span class="nt">-o</span> <span class="s2">"StrictHostKeyChecking no"</span> user@host
+</code></pre></div></div>
 
 <h3 id="resources">Resources</h3>
 <ol>
@@ -772,9 +765,8 @@ Host &lt;proxy&gt;
     
       <h3 id="install-latex-osx-mactex">Install Latex OSX (mactex)</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew cask install mactex
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew cask install mactex
+</code></pre></div></div>
 
 <h3 id="figures">Figures</h3>
 <ul>
@@ -782,13 +774,12 @@ Host &lt;proxy&gt;
   <li>
     <p><a href="http://tex.stackexchange.com/questions/34063/figure-span-to-one-column-on-double-column-page">figure span to one column on double column page</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
+    <div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% In twocolumn mode, the figure* environment stretches over the entire page width</span>
 <span class="nt">\begin{figure*}</span>
   <span class="k">\centering</span> <span class="k">\includegraphics</span><span class="p">{</span>figure<span class="p">}</span>
   <span class="k">\caption</span><span class="p">{</span>This is a figure caption<span class="p">}</span>
 <span class="nt">\end{figure*}</span>
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -797,13 +788,12 @@ Host &lt;proxy&gt;
   <li><a href="http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing">LaTeX/Labels and Cross-referencing</a></li>
 </ul>
 
-<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
-</code></pre>
-</div>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\caption</span><span class="p">{</span>Close-up of a gull<span class="k">\label</span><span class="p">{</span>fig:gull<span class="p">}}</span>
+</code></pre></div></div>
 
 <h3 id="landscape"><a href="http://tex.stackexchange.com/questions/168309/landscape-figure-on-different-page-to-heading">Landscape</a></h3>
 
-<div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="p">{</span>pdflscape<span class="p">}</span>
 
 <span class="nt">\begin{document}</span>
 <span class="nt">\begin{landscape}</span>
@@ -812,12 +802,11 @@ Host &lt;proxy&gt;
 .
 <span class="nt">\end{landscape}</span>
 <span class="nt">\end{document}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="math-equation">Math Equation</h3>
 
-<div class="language-tex highlighter-rouge"><pre class="highlight"><code># inline equation
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code># inline equation
 <span class="p">$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$</span> #equation
 <span class="p">$$</span><span class="nb"> a </span><span class="o">+</span><span class="nb"> b </span><span class="p">$$</span> #equation in new line
 
@@ -828,8 +817,7 @@ Host &lt;proxy&gt;
 # equation array
 <span class="nt">\begin{eqnarray}</span>
 <span class="nt">\end{eqnarray}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li><a href="http://www.clas.kitasato-u.ac.jp/~fujiwara/keyNote/equationToKeynote.html">Import equations into Keynote</a></li>
@@ -859,7 +847,7 @@ Host &lt;proxy&gt;
   <li>
     <p><a href="http://ctan.megagod.net/tex-archive/macros/latex/contrib/spreadtab/spreadtab_doc_en.pdf">Spreadtab User’s manual</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code># read more in document
+    <div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code># read more in document
 # 2.5 Copy a formula
 
 <span class="k">\STcopy</span><span class="p">{</span>&gt;x,vy<span class="p">}{</span>formula<span class="p">}</span>
@@ -868,8 +856,7 @@ Host &lt;proxy&gt;
 
 # foating point numbers are rounded to 2 digits
 <span class="k">\STautoround</span><span class="p">{</span>2<span class="p">}</span>
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -898,42 +885,37 @@ Host &lt;proxy&gt;
   <li>
     <p><a href="http://tex.stackexchange.com/questions/185155/is-is-possible-to-not-abbreviate-the-author-name-of-only-one-reference-in-my-bib">Not abbreviate the author name</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
-</code></pre>
-    </div>
+    <div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  author = <span class="k">\{\{\relax</span> World Health Organization<span class="k">\}</span> and others<span class="k">\}</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><a href="http://ubuntuforums.org/showthread.php?t=1275429">citation treated like one word?</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
+    <div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Jim<span class="k">\-</span>inez Mart<span class="k">\-</span>inez, Val<span class="k">\-</span>dez Diaz
   # or using <span class="k">\hyphenation</span> to cut all the documents
   <span class="k">\hyphenation</span><span class="p">{</span>Jim-inez Mart-inez, Val-dez Diaz<span class="p">}</span>
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Word Cut</p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code>  using <span class="k">\-</span> or &lt; space &gt;
-</code></pre>
-    </div>
+    <div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  using <span class="k">\-</span> or &lt; space &gt;
+</code></pre></div>    </div>
   </li>
   <li><a href="https://gist.github.com/dougalsutherland/266983/9c88f1ca1cf1420af03166dcfccb9cb10a21c110">A bash script to clean latex temp files</a></li>
   <li>
     <p><a href="http://tex.stackexchange.com/questions/150829/save-table-on-a-separate-file">save table on a separate file</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
-</code></pre>
-    </div>
+    <div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\input</span><span class="p">{</span>table.tex<span class="p">}</span>
+</code></pre></div>    </div>
   </li>
   <li>Defining your own commands - <a href="https://www.sharelatex.com/learn/Defining_your_own_commands">Commands</a>, <a href="https://www.sharelatex.com/learn/Environments">Environments</a></li>
   <li><a href="https://www.sharelatex.com/learn/Bold,_italics_and_underlining">Text Style</a></li>
   <li>
     <p>hidden character</p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code><span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
-</code></pre>
-    </div>
+    <div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\phantom</span><span class="p">{</span>-<span class="p">}</span> <span class="c">%hidden character</span>
+</code></pre></div>    </div>
   </li>
   <li><a href="http://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment">Custom alignment of text in itemized environment</a></li>
 </ul>
@@ -946,15 +928,14 @@ Host &lt;proxy&gt;
   <li>
     <p><a href="https://www.youtube.com/watch?v=5ifh3NF-k-k">LaTeX tutorial: How to cite references/paper/articles in Latex</a></p>
 
-    <div class="language-tex highlighter-rouge"><pre class="highlight"><code># cite to bibtex references
+    <div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code># cite to bibtex references
 <span class="k">\usepackage</span><span class="p">{</span>cite<span class="p">}</span>
 <span class="k">\cite</span><span class="p">{</span>sample1234<span class="p">}</span>
    
 # referecnes from bibtex
 <span class="k">\bibliographystyle</span><span class="p">{</span>IEEEtran<span class="p">}</span>
 <span class="k">\bibliography</span><span class="p">{</span>file<span class="p">_</span>of<span class="p">_</span>bibex<span class="p">}</span>
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ol>
 
@@ -964,13 +945,12 @@ Host &lt;proxy&gt;
   <li>
     <p><a href="http://tex.stackexchange.com/questions/204291/bibtex-latex-compiling">Bibtex, Latex compiling</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># build latex + bibtex</span>
-<span class="gp">$ </span>pdflatex paper.tex
-<span class="gp">$ </span>bibtex paper <span class="c"># without extension</span>
-<span class="gp">$ </span>pdflatex paper.tex
-<span class="gp">$ </span>pdflatex paper.tex
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># build latex + bibtex</span>
+<span class="nv">$ </span>pdflatex paper.tex
+<span class="nv">$ </span>bibtex paper <span class="c"># without extension</span>
+<span class="nv">$ </span>pdflatex paper.tex
+<span class="nv">$ </span>pdflatex paper.tex
+</code></pre></div>    </div>
   </li>
 </ul>
 

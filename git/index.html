@@ -233,43 +233,38 @@
 
 <p>Because there is differenced end of line in dos and unix.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># open file that error in vim</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># open file that error in vim</span>
 :set noendofline binary
 :wq
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="global-ignore">Global Ignore</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># set where is global gitignore file</span>
-<span class="gp">$ </span>git config --global core.excludesfile ~/.gitignore_global
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># set where is global gitignore file</span>
+<span class="nv">$ </span>git config <span class="nt">--global</span> core.excludesfile ~/.gitignore_global
 <span class="c"># write some ignore file in global gitignore</span>
-<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"tags"</span> &gt;&gt; ~/.gitignore_global
-</code></pre>
-</div>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"tags"</span> <span class="o">&gt;&gt;</span> ~/.gitignore_global
+</code></pre></div></div>
 
 <h2 id="git-stash">Git stash</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>git stash
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git stash
 git stash pop
 git revert
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="git-alis">Git Alis</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>git config --global alias.tree <span class="s2">"log --graph --decorate --oneline --abbrev-commit"</span>
-git config --global alias.hist <span class="s2">"log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> alias.tree <span class="s2">"log --graph --decorate --oneline --abbrev-commit"</span>
+git config <span class="nt">--global</span> alias.hist <span class="s2">"log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"</span>
+</code></pre></div></div>
 
 <h2 id="git-taggin"><a href="http://git-scm.com/book/en/v2/Git-Basics-Tagging">Git Taggin</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git tag -a &lt;tag name&gt; &lt;commit id&gt; -m “desc<span class="s2">"
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git tag <span class="nt">-a</span> &lt;tag name&gt; &lt;commit id&gt; <span class="nt">-m</span> “desc<span class="s2">"
 </span><span class="nv">$ </span><span class="s2">git push origin —tags
 </span><span class="nv">$ </span><span class="s2">git pull --tags
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <h2 id="keep-file-in-a-git-repo-but-dont-track-changes"><a href="http://stackoverflow.com/questions/9794931/keep-file-in-a-git-repo-but-dont-track-changes">Keep file in a Git repo, but don’t track changes</a></h2>
 
@@ -298,14 +293,13 @@ Then add config.php and database.php to the .gitignore file.</p>
   <li><a href="https://sandofsky.com/blog/git-workflow.html">Understanding the Git Workflow</a></li>
 </ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>The intended workflow is:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The intended workflow is:
 
 Create a private branch off a public branch.
 Regularly commit your work to this private branch.
 Once your code is perfect, clean up its history.
 Merge the cleaned-up branch back into the public branch.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ol>
   <li><a href="http://learngitbranching.js.org/?demo">Learn Git Branching</a></li>

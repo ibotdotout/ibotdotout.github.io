@@ -231,56 +231,52 @@
 
 <p>a.txt</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aaaa
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aaaa
 bbbb
 cccc
 eeee
 eeee
 eeee
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>b.txt</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aabb
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aabb
 bbbb
 dddd
 cccc
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>diff a.txt b.txt</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>diff --git a/aaa b/bbb
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diff <span class="nt">--git</span> a/aaa b/bbb
 index fc3703c..11629db 100644
---- a/aaa
+<span class="nt">---</span> a/aaa
 +++ b/bbb
-@@ -1,6 +1,4 @@
--aaaa
+@@ <span class="nt">-1</span>,6 +1,4 @@
+<span class="nt">-aaaa</span>
 +aabb
  bbbb
 +dddd
  cccc
--eeee
--eeee
--eeee
-</code></pre>
-</div>
+<span class="nt">-eeee</span>
+<span class="nt">-eeee</span>
+<span class="nt">-eeee</span>
+</code></pre></div></div>
 
 <p>ed style of result diff a.txt b.txt</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>1c1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1c1
 &lt; aaaa
----
-<span class="gp">&gt; </span>aabb
+<span class="nt">---</span>
+<span class="o">&gt;</span> aabb
 2a3
-<span class="gp">&gt; </span>dddd
+<span class="o">&gt;</span> dddd
 4,6d4
 &lt; eeee
 &lt; eeee
 &lt; eeee
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="code">Code</h1>
 
@@ -288,7 +284,7 @@ index fc3703c..11629db 100644
 
 <p>my_diff.py</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
 
 
 <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">):</span>
@@ -341,19 +337,17 @@ index fc3703c..11629db 100644
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">sys</span>
     <span class="n">diff</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="set-vimdiff-to-use-result-of-my-diff-code">Set vimdiff to use result of my diff code</h3>
 
 <p>.vimrc</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
 <span class="k">function </span>MyDiff<span class="o">()</span>
-    silent execute <span class="s2">"!python &lt;your_paht&gt;/my_diff.py "</span> . v:fname_in . <span class="s2">" "</span> . v:fname_new . <span class="s2">" &gt; "</span> . v:fname_out
+    silent execute <span class="s2">"!python &lt;your_paht&gt;/my_diff.py "</span> <span class="nb">.</span> v:fname_in <span class="nb">.</span> <span class="s2">" "</span> <span class="nb">.</span> v:fname_new <span class="nb">.</span> <span class="s2">" &gt; "</span> <span class="nb">.</span> v:fname_out
 endfunction
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Ref:</p>
 <ol>

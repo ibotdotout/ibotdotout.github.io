@@ -227,12 +227,11 @@
     
       <h3 id="make-user-can-use-sudo-command">Make user can use Sudo command</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>su <span class="c"># aceess to root  </span>
-<span class="gp">$ </span>apt-get install sudo  
-<span class="gp">$ </span>adduser &lt;username&gt; sudo  
-<span class="gp">$ </span>reboot <span class="c"># or logout  </span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>su <span class="c"># aceess to root  </span>
+<span class="nv">$ </span>apt-get install <span class="nb">sudo</span>  
+<span class="nv">$ </span>adduser &lt;username&gt; <span class="nb">sudo</span>  
+<span class="nv">$ </span>reboot <span class="c"># or logout  </span>
+</code></pre></div></div>
 <p>Ref:</p>
 <ol>
   <li><a href="http://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line">How can I add a new user as sudoer using the command line?</a></li>
@@ -241,92 +240,82 @@
 
 <h3 id="upgrade-debian-to-unstablesid"><a href="https://www.digitalocean.com/community/tutorials/upgrading-debian-to-unstable">Upgrade Debian to Unstable(Sid)</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo vi /etc/apt/sources.list
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>vi /etc/apt/sources.list
 <span class="c"># edit all 'squeeze' that's version codename </span>
 <span class="c"># to 'sid' that's unstable codename</span>
 <span class="c"># ex. deb http://ftp.us.debian.org/debian squeeze main </span>
 <span class="c"># to deb http://ftp.us.debian.org/debian sid main</span>
-<span class="gp">$ </span>sudo apt-get update
-<span class="gp">$ </span>sudo apt-get dist-upgrade
-<span class="gp">$ </span>sudo reboot
-</code></pre>
-</div>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get dist-upgrade
+<span class="nv">$ </span><span class="nb">sudo </span>reboot
+</code></pre></div></div>
 
 <h3 id="using-lastest-package-on-debian-testing-package">Using Lastest Package on Debian (Testing Package)</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo vim /etc/apt/sources.list
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>vim /etc/apt/sources.list
 <span class="c"># add "deb     http://http.debian.net/debian testing         main"</span>
-<span class="gp">$ </span>sudo apt-get update
-<span class="gp">$ </span>sudo apt-get install &lt;your package&gt;
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get install &lt;your package&gt;
 <span class="c"># don't call sudo apt-get upgrade if your don't want to upgrade your all system to lastest packages</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="check-version-debian">Check Version Debian</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>lsb_release -a <span class="c">#check debian version</span>
-<span class="gp">$ </span>uname -a <span class="c">#check linux version</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>lsb_release <span class="nt">-a</span> <span class="c">#check debian version</span>
+<span class="nv">$ </span>uname <span class="nt">-a</span> <span class="c">#check linux version</span>
+</code></pre></div></div>
 
 <h3 id="how-to-switch-between-users-on-one-terminal"><a href="http://unix.stackexchange.com/questions/3568/how-to-switch-between-users-on-one-terminal">How to switch between users on one terminal?</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>su - &lt;user&gt;
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>su - &lt;user&gt;
+</code></pre></div></div>
 
 <h3 id="how-to-find-fastest-mirror-lists-with-netselect-apt-on-debian"><a href="http://www.unixmen.com/how-to-find-fastest-official-mirror-lists-with-netselect-apt-on-debian/">How To Find Fastest Mirror Lists With ‘Netselect-apt’ On Debian</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># choose set your region to your local frist</span>
-<span class="gp">$ </span>sudo apt-get install netselect-apt
-<span class="gp">$ </span>sudo netselect-apt
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># choose set your region to your local frist</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get install netselect-apt
+<span class="nv">$ </span><span class="nb">sudo </span>netselect-apt
+</code></pre></div></div>
 
 <h3 id="debian-linux-install-openssh-sshd-server"><a href="http://www.cyberciti.biz/faq/debian-linux-install-openssh-sshd-server/">Debian Linux Install OpenSSH SSHD Server</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># install</span>
-<span class="gp">$ </span>sudo apt-get update
-<span class="gp">$ </span>sudo apt-get install openssh-server
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># install</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get install openssh-server
 
 <span class="c"># control ssh-server</span>
-<span class="gp">$ </span>sudo service ssh stop
-<span class="gp">$ </span>sudo service ssh start
-<span class="gp">$ </span>sudo service ssh restart
-<span class="gp">$ </span>sudo service ssh status
-</code></pre>
-</div>
+<span class="nv">$ </span><span class="nb">sudo </span>service ssh stop
+<span class="nv">$ </span><span class="nb">sudo </span>service ssh start
+<span class="nv">$ </span><span class="nb">sudo </span>service ssh restart
+<span class="nv">$ </span><span class="nb">sudo </span>service ssh status
+</code></pre></div></div>
 
 <h3 id="set-bash-color-on-ssh"><a href="http://ubuntuforums.org/showthread.php?t=1733664">Set Bash Color on SSH</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># In your ssh server</span>
-<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"source your .bashrc"</span> &gt;&gt; .bash_profile
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># In your ssh server</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"source your .bashrc"</span> <span class="o">&gt;&gt;</span> .bash_profile
 <span class="c"># or you can try this [[ -f ~/.bashrc ]] &amp;&amp; . ~/.bashrc</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="extended-monitor"><a href="http://unix.stackexchange.com/questions/101283/extended-monitor-scroll-right-to-access-left-screen">Extended monitor</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>xrandr --output VGA-1 --auto --primary --output DVI-I-1 --auto --left-of VGA-1
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xrandr <span class="nt">--output</span> VGA-1 <span class="nt">--auto</span> <span class="nt">--primary</span> <span class="nt">--output</span> DVI-I-1 <span class="nt">--auto</span> <span class="nt">--left-of</span> VGA-1
+</code></pre></div></div>
 
 <h2 id="install-locals-to-support-many-languages">Install locals to support many languages</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># debian</span>
-<span class="gp">$ </span>sudo apt-get install locales
-<span class="gp">$ </span>sudo dpkg-reconfigure locales
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># debian</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get install locales
+<span class="nv">$ </span><span class="nb">sudo </span>dpkg-reconfigure locales
+</code></pre></div></div>
 
 <h3 id="clean-uninstall">Clean Uninstall</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get remove --purge &lt;packagename&gt; <span class="c"># --purge delete all data and config</span>
-<span class="gp">$ </span>sudo apt-get autoremove --purge
-<span class="gp">$ </span>sudo apt-get clean
-<span class="gp">$ </span>locate &lt;packagename&gt; <span class="c"># manual delete</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get remove <span class="nt">--purge</span> &lt;packagename&gt; <span class="c"># --purge delete all data and config</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get autoremove <span class="nt">--purge</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get clean
+<span class="nv">$ </span>locate &lt;packagename&gt; <span class="c"># manual delete</span>
+</code></pre></div></div>
 
 <h3 id="show-hidden-file-in-gui"><a href="http://ubuntuforums.org/showthread.php?t=1108528">Show hidden file in GUI</a></h3>
 
@@ -339,9 +328,8 @@
 
 <h3 id="install-and-mount-an-exfat-partition"><a href="http://askubuntu.com/questions/100278/how-do-i-install-and-mount-an-exfat-partition">install and mount an exFAT partition</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get install exfat-fuse exfat-utils
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get install exfat-fuse exfat-utils
+</code></pre></div></div>
 
 <h3 id="etc">ETC.</h3>
 <ul>
@@ -404,45 +392,41 @@ Docker is a tool for building and deploying applications by packaging them into 
 
 <p>bypass.conf</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>server <span class="o">{</span>
-    listen 80;
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server <span class="o">{</span>
+    listen 80<span class="p">;</span>
 
     location / <span class="o">{</span>
-        proxy_pass http://127.0.0.1:8000;
+        proxy_pass http://127.0.0.1:8000<span class="p">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># debian</span>
-<span class="gp">$ </span>sudo apt-get install nginx
-<span class="gp">$ </span>sudo vim /etc/nginx/sites-available/&lt;your&gt;.conf
-<span class="gp">$ </span>sudo rm /etc/ngin/sites-enabled/default.conf
-<span class="gp">$ </span>suo ln -f /etc/nginx/sites-available/&lt;your&gt;.conf /etc/sites-enabled/
-<span class="gp">$ </span>sudo services nginx reload
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># debian</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get install nginx
+<span class="nv">$ </span><span class="nb">sudo </span>vim /etc/nginx/sites-available/&lt;your&gt;.conf
+<span class="nv">$ </span><span class="nb">sudo </span>rm /etc/ngin/sites-enabled/default.conf
+<span class="nv">$ </span>suo ln <span class="nt">-f</span> /etc/nginx/sites-available/&lt;your&gt;.conf /etc/sites-enabled/
+<span class="nv">$ </span><span class="nb">sudo </span>services nginx reload
+</code></pre></div></div>
 
 <h2 id="nginx-allow-file-browser-list">Nginx Allow File browser list</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># debain</span>
-<span class="gp">$ </span><span class="nb">cd</span> /usr/share/nginx/html
-<span class="gp">$ </span>ln -s &lt;path&gt; &lt;link_name&gt;
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># debain</span>
+<span class="nv">$ </span><span class="nb">cd</span> /usr/share/nginx/html
+<span class="nv">$ </span>ln <span class="nt">-s</span> &lt;path&gt; &lt;link_name&gt;
+</code></pre></div></div>
 
 <p>edit your nginx.conf</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>    location /&lt;url&gt; <span class="o">{</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    location /&lt;url&gt; <span class="o">{</span>
       <span class="nb">alias</span> /usr/share/nginx/html/&lt;link_name&gt;
-      autoindex on;
-      autoindex_exact_size off;
-      autoindex_localtime on;
-      auth_basic <span class="s2">"Restricted"</span>;                <span class="c">#For Basic Auth</span>
-      auth_basic_user_file &lt;your .htpasswd&gt;;  <span class="c">#For Basic Auth</span>
+      autoindex on<span class="p">;</span>
+      autoindex_exact_size off<span class="p">;</span>
+      autoindex_localtime on<span class="p">;</span>
+      auth_basic <span class="s2">"Restricted"</span><span class="p">;</span>                <span class="c">#For Basic Auth</span>
+      auth_basic_user_file &lt;your .htpasswd&gt;<span class="p">;</span>  <span class="c">#For Basic Auth</span>
     <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="useful-command">Useful command</h3>
 <ul>
@@ -509,43 +493,38 @@ Docker is a tool for building and deploying applications by packaging them into 
 
 <p>Because there is differenced end of line in dos and unix.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># open file that error in vim</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># open file that error in vim</span>
 :set noendofline binary
 :wq
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="global-ignore">Global Ignore</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># set where is global gitignore file</span>
-<span class="gp">$ </span>git config --global core.excludesfile ~/.gitignore_global
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># set where is global gitignore file</span>
+<span class="nv">$ </span>git config <span class="nt">--global</span> core.excludesfile ~/.gitignore_global
 <span class="c"># write some ignore file in global gitignore</span>
-<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"tags"</span> &gt;&gt; ~/.gitignore_global
-</code></pre>
-</div>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"tags"</span> <span class="o">&gt;&gt;</span> ~/.gitignore_global
+</code></pre></div></div>
 
 <h2 id="git-stash">Git stash</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>git stash
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git stash
 git stash pop
 git revert
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="git-alis">Git Alis</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>git config --global alias.tree <span class="s2">"log --graph --decorate --oneline --abbrev-commit"</span>
-git config --global alias.hist <span class="s2">"log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> alias.tree <span class="s2">"log --graph --decorate --oneline --abbrev-commit"</span>
+git config <span class="nt">--global</span> alias.hist <span class="s2">"log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"</span>
+</code></pre></div></div>
 
 <h2 id="git-taggin"><a href="http://git-scm.com/book/en/v2/Git-Basics-Tagging">Git Taggin</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git tag -a &lt;tag name&gt; &lt;commit id&gt; -m “desc<span class="s2">"
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git tag <span class="nt">-a</span> &lt;tag name&gt; &lt;commit id&gt; <span class="nt">-m</span> “desc<span class="s2">"
 </span><span class="nv">$ </span><span class="s2">git push origin —tags
 </span><span class="nv">$ </span><span class="s2">git pull --tags
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <h2 id="keep-file-in-a-git-repo-but-dont-track-changes"><a href="http://stackoverflow.com/questions/9794931/keep-file-in-a-git-repo-but-dont-track-changes">Keep file in a Git repo, but don’t track changes</a></h2>
 
@@ -574,14 +553,13 @@ Then add config.php and database.php to the .gitignore file.</p>
   <li><a href="https://sandofsky.com/blog/git-workflow.html">Understanding the Git Workflow</a></li>
 </ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>The intended workflow is:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The intended workflow is:
 
 Create a private branch off a public branch.
 Regularly commit your work to this private branch.
 Once your code is perfect, clean up its history.
 Merge the cleaned-up branch back into the public branch.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ol>
   <li><a href="http://learngitbranching.js.org/?demo">Learn Git Branching</a></li>

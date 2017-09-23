@@ -235,28 +235,26 @@
 
 <h2 id="install-thrift-on-ubuntu"><a href="http://www.saltycrane.com/blog/2011/06/install-thrift-ubuntu-1010-maverick">Install Thrift on Ubuntu</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>apt-get install -y automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git debhelper cmake
-<span class="gp">$ </span><span class="nb">cd</span> /tmp
-<span class="gp">$ </span>curl http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz | tar zx
-<span class="gp">$ </span><span class="nb">cd</span> /tmp/thrift-0.9.1
-<span class="gp">$ </span>./configure
-<span class="gp">$ </span>make <span class="o">&amp;&amp;</span> make install
-<span class="gp">$ </span>rm -rf /tmp/thrift-0.9.1
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>apt-get install <span class="nt">-y</span> automake libtool flex bison pkg-config g++ libssl-dev make libqt4-dev git debhelper cmake
+<span class="nv">$ </span><span class="nb">cd</span> /tmp
+<span class="nv">$ </span>curl http://archive.apache.org/dist/thrift/0.9.1/thrift-0.9.1.tar.gz | <span class="nb">tar </span>zx
+<span class="nv">$ </span><span class="nb">cd</span> /tmp/thrift-0.9.1
+<span class="nv">$ </span>./configure
+<span class="nv">$ </span>make <span class="o">&amp;&amp;</span> make install
+<span class="nv">$ </span>rm <span class="nt">-rf</span> /tmp/thrift-0.9.1
+</code></pre></div></div>
 
 <h2 id="fix-login-with-email-and-password-failed"><a href="https://www.youtube.com/watch?v=vaB1ZzV7UxY">Fix login with email and password failed</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># installl line and remove first that tricky don't know why</span>
-<span class="gp">$ </span>pip install line <span class="o">&amp;&amp;</span> pip uninstall -y line
-<span class="gp">$ </span>git clone https://github.com/carpedm20/LINE.git
-<span class="gp">$ </span><span class="nb">cd </span>LINE/line
-<span class="gp">$ </span>wget https://gist.github.com/windows98SE/b739038218b6fe4d423f/raw/5f68cf3d9a2a88576b739810a6bd6fcaa0c5e940/api.py.patch
-<span class="gp">$ </span>patch api.py &lt; api.py.patch
-<span class="gp">$ </span>python config.py
-<span class="gp">$ </span>python setup.py install
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># installl line and remove first that tricky don't know why</span>
+<span class="nv">$ </span>pip install line <span class="o">&amp;&amp;</span> pip uninstall <span class="nt">-y</span> line
+<span class="nv">$ </span>git clone https://github.com/carpedm20/LINE.git
+<span class="nv">$ </span><span class="nb">cd </span>LINE/line
+<span class="nv">$ </span>wget https://gist.github.com/windows98SE/b739038218b6fe4d423f/raw/5f68cf3d9a2a88576b739810a6bd6fcaa0c5e940/api.py.patch
+<span class="nv">$ </span>patch api.py &lt; api.py.patch
+<span class="nv">$ </span>python config.py
+<span class="nv">$ </span>python setup.py install
+</code></pre></div></div>
 
 <h2 id="sample-bot">Sample Bot</h2>
 

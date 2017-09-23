@@ -237,7 +237,7 @@ You should learn <code class="highlighter-rouge">ed</code> to empower your vim s
 
 <!-- more -->
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Input
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Input
 var path = require('path');
 var mongo = require('mongo');
 var express = require('express');
@@ -245,18 +245,16 @@ var express = require('express');
 var x = 2;
 var y = 3;
 var z = 4;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>want to change <code class="highlighter-rouge">var</code> to <code class="highlighter-rouge">const</code> only in line that contain <code class="highlighter-rouge">require</code></p>
 
 <p>find line that <code class="highlighter-rouge">has</code> &lt; contain word &gt; then replace &lt; word &gt; to &lt; new  word &gt; on that line</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>:g/&lt; contain word &gt;/s/&lt; word &gt;/ &lt; new word &gt;/g
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:g/&lt; contain word &gt;/s/&lt; word &gt;/ &lt; new word &gt;/g
+</code></pre></div></div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># vim command
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># vim command
 :g/require/s/var/const/g
 
 # Output
@@ -267,16 +265,14 @@ const express = require('express');
 var x = 2;
 var y = 3;
 var z = 4;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>find line that <code class="highlighter-rouge">not has</code> &lt; contain word &gt; then replace &lt; word &gt; to &lt; new  word &gt; on that line</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>:v/&lt; contain word &gt;/s/&lt; word &gt;/ &lt; new word &gt;/g
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:v/&lt; contain word &gt;/s/&lt; word &gt;/ &lt; new word &gt;/g
+</code></pre></div></div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Vim command
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Vim command
 :v/require/s/var/let/g
 
 # Output
@@ -287,8 +283,7 @@ var express = require('express');
 let x = 2;
 let y = 3;
 let z = 4;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="references">References</h3>
 <ul>

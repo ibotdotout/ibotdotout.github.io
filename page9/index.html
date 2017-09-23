@@ -298,16 +298,15 @@ travis</a></li>
   <li>
     <p><a href="http://www.tomighty.org">Tomighty - Simpler</a> - <a href="https://github.com/ccidral/tomighty">Source</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># osx</span>
-<span class="gp">$ </span>brew cask install tomighty
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># osx</span>
+<span class="nv">$ </span>brew cask install tomighty
    
 <span class="c"># if use dark theme need to build with youself</span>
 <span class="c"># issuse - https://github.com/ccidral/tomighty-osx/pull/16</span>
 <span class="c"># https://github.com/mrknmc/tomighty-osx</span>
 <span class="c"># notification version</span>
 <span class="c"># https://github.com/eduardonunesp/tomighty-osx</span>
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><a href="http://tomato-timer.com">TomatoTimer - WebApp</a></p>
@@ -347,10 +346,9 @@ travis</a></li>
 
 <h3 id="janus"><a href="https://github.com/carlhuda/janus">Janus</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># update vim version to support all plugin in janus</span>
-<span class="gp">$ </span>brew install vim
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># update vim version to support all plugin in janus</span>
+<span class="nv">$ </span>brew install vim
+</code></pre></div></div>
 
 <table>
   <thead>
@@ -400,10 +398,9 @@ m-&gt;a in NERDTree - create file/folder</p>
 
 <h3 id="ctags">Ctags</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew install ctags
-<span class="gp">$ </span>ctags -R <span class="c"># generate tags</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew install ctags
+<span class="nv">$ </span>ctags <span class="nt">-R</span> <span class="c"># generate tags</span>
+</code></pre></div></div>
 
 <table>
   <thead>
@@ -426,19 +423,17 @@ m-&gt;a in NERDTree - create file/folder</p>
 
 <h3 id="vim-trailing-whitespace"><a href="https://github.com/bronson/vim-trailing-whitespace">vim-trailing-whitespace</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>:FixWhitespace
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:FixWhitespace
+</code></pre></div></div>
 
 <h3 id="vimdeck---presentation-in-vim"><a href="https://github.com/tybenz/vimdeck">VimDeck - Presentation in Vim</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># osx not support ascii-art</span>
-<span class="gp">$ </span>brew install imagemagick
-<span class="gp">$ </span>sudo gem install rmagick
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># osx not support ascii-art</span>
+<span class="nv">$ </span>brew install imagemagick
+<span class="nv">$ </span><span class="nb">sudo </span>gem install rmagick
 <span class="c"># gem install vimdeck</span>
-<span class="gp">$ </span>sudo gem install vimdeck-without-ascii-art
-</code></pre>
-</div>
+<span class="nv">$ </span><span class="nb">sudo </span>gem install vimdeck-without-ascii-art
+</code></pre></div></div>
 
 <h2 id="reference">Reference:</h2>
 <ol>
@@ -687,23 +682,21 @@ m-&gt;a in NERDTree - create file/folder</p>
 
 <h2 id="package-requirements-or-dockerfile-on-robot-packtpub-repo">Package Requirements or <a href="https://github.com/ibotdotout/robot-packtpub">Dockerfile on Robot-packtpub Repo</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># ubuntu</span>
-<span class="gp">$ </span>apt-get -y update
-<span class="gp">$ </span>apt-get -y install python-dev python-pip
-<span class="gp">$ </span>apt-get install -y phantomjs libicu52 wget
-<span class="gp">$ </span>wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs -O /usr/bin/phantomjs <span class="o">&amp;&amp;</span> chmod +x /usr/bin/phantomjs
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ubuntu</span>
+<span class="nv">$ </span>apt-get <span class="nt">-y</span> update
+<span class="nv">$ </span>apt-get <span class="nt">-y</span> install python-dev python-pip
+<span class="nv">$ </span>apt-get install <span class="nt">-y</span> phantomjs libicu52 wget
+<span class="nv">$ </span>wget https://raw.githubusercontent.com/Pyppe/phantomjs2.0-ubuntu14.04x64/master/bin/phantomjs <span class="nt">-O</span> /usr/bin/phantomjs <span class="o">&amp;&amp;</span> chmod +x /usr/bin/phantomjs
 
-<span class="gp">$ </span>pip install robotframework
-<span class="gp">$ </span>pip install robotframework-selenium2library
-</code></pre>
-</div>
+<span class="nv">$ </span>pip install robotframework
+<span class="nv">$ </span>pip install robotframework-selenium2library
+</code></pre></div></div>
 
 <h2 id="how-to-use">How to use</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
-<span class="gp">$ </span>pybot robot-packtpub.txt
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Edit {USER} and {PASSWORD} first !!!</span>
+<span class="nv">$ </span>pybot robot-packtpub.txt
+</code></pre></div></div>
 
 <h2 id="note">Note</h2>
 <ul>

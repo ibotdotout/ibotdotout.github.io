@@ -332,10 +332,9 @@ jekyll and travis</a></p>
 which not encode with UTF-8 that unreadable on OSX. Your should guess
 what encode that file using and convert it in to UTF-8.</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># convert tis-620 to utf-8 encoding</span>
-<span class="nv">$iconv</span> -f tis-620 -t utf-8 source.xml &gt; destination.xml
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># convert tis-620 to utf-8 encoding</span>
+<span class="nv">$iconv</span> <span class="nt">-f</span> tis-620 <span class="nt">-t</span> utf-8 source.xml <span class="o">&gt;</span> destination.xml
+</code></pre></div></div>
 
 <p>Example. Thai language on Windows system normally encode with TIS-620 when
 open it in OSX that will display with some symbol char that unreadable.
@@ -383,7 +382,7 @@ terrible and Github Pages not support custom ruby script that place in
 
 <p>Replace `` in <code class="highlighter-rouge">index.html</code> in jekyll directory with</p>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>    
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    
     <span class="p">{</span><span class="sx">% if </span><span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="n">contains</span> <span class="s2">"&lt;!-- more --&gt;"</span> <span class="o">%</span><span class="p">}</span>
       <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="o">|</span> <span class="nb">split</span><span class="ss">:"&lt;!-- more --&gt;"</span> <span class="o">|</span> <span class="n">first</span> <span class="o">%</span> <span class="p">}}</span>
       <span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">"text-align:right;"</span><span class="o">&gt;</span>
@@ -393,8 +392,7 @@ terrible and Github Pages not support custom ruby script that place in
       <span class="p">{{</span> <span class="n">post</span><span class="p">.</span><span class="nf">content</span> <span class="p">}}</span>
     <span class="p">{</span><span class="sx">% endif </span><span class="o">%</span><span class="p">}</span>
     
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
       <div style="text-align:right;">
@@ -433,14 +431,13 @@ terrible and Github Pages not support custom ruby script that place in
 <code class="highlighter-rouge">gsed</code> can install via brew and call <code class="highlighter-rouge">gsed</code> instead of <code class="highlighter-rouge">sed</code></p>
 </blockquote>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>cat <span class="k">in
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span><span class="k">in
 </span>1234 5678 9101 1234  
 2999 5178 9101 2234  
-<span class="gp">$ </span>sed -re <span class="s1">'s/([0-9]{4}\s){3}/**** **** **** /'</span> <span class="k">in</span>
+<span class="nv">$ </span>sed <span class="nt">-re</span> <span class="s1">'s/([0-9]{4}\s){3}/**** **** **** /'</span> <span class="k">in</span>
 <span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 1234  
 <span class="k">****</span> <span class="k">****</span> <span class="k">****</span> 2234  
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
       <div style="text-align:right;">

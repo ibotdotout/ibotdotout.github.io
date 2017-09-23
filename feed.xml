@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://dev.im-bot.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com/" rel="alternate" type="text/html" /><updated>2017-09-03T10:44:56+00:00</updated><id>http://dev.im-bot.com/</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">JWT</title><link href="http://dev.im-bot.com/jwt/" rel="alternate" type="text/html" title="JWT" /><published>2016-11-30T00:00:00+00:00</published><updated>2016-11-30T00:00:00+00:00</updated><id>http://dev.im-bot.com/jwt</id><content type="html" xml:base="http://dev.im-bot.com/jwt/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.0">Jekyll</generator><link href="http://dev.im-bot.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com/" rel="alternate" type="text/html" /><updated>2017-09-23T09:27:08+00:00</updated><id>http://dev.im-bot.com/</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">JWT</title><link href="http://dev.im-bot.com/jwt/" rel="alternate" type="text/html" title="JWT" /><published>2016-11-30T00:00:00+00:00</published><updated>2016-11-30T00:00:00+00:00</updated><id>http://dev.im-bot.com/jwt</id><content type="html" xml:base="http://dev.im-bot.com/jwt/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://jwt.io/introduction/&quot;&gt;Introduction to JSON Web Tokens&lt;/a&gt;&lt;/li&gt;
@@ -75,7 +75,7 @@ You should learn &lt;code class=&quot;highlighter-rouge&quot;&gt;ed&lt;/code&gt;
 
 &lt;!-- more --&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Input
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Input
 var path = require('path');
 var mongo = require('mongo');
 var express = require('express');
@@ -83,18 +83,16 @@ var express = require('express');
 var x = 2;
 var y = 3;
 var z = 4;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;want to change &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; only in line that contain &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;find line that &lt;code class=&quot;highlighter-rouge&quot;&gt;has&lt;/code&gt; &amp;lt; contain word &amp;gt; then replace &amp;lt; word &amp;gt; to &amp;lt; new  word &amp;gt; on that line&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:g/&amp;lt; contain word &amp;gt;/s/&amp;lt; word &amp;gt;/ &amp;lt; new word &amp;gt;/g
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:g/&amp;lt; contain word &amp;gt;/s/&amp;lt; word &amp;gt;/ &amp;lt; new word &amp;gt;/g
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# vim command
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# vim command
 :g/require/s/var/const/g
 
 # Output
@@ -105,16 +103,14 @@ const express = require('express');
 var x = 2;
 var y = 3;
 var z = 4;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;find line that &lt;code class=&quot;highlighter-rouge&quot;&gt;not has&lt;/code&gt; &amp;lt; contain word &amp;gt; then replace &amp;lt; word &amp;gt; to &amp;lt; new  word &amp;gt; on that line&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:v/&amp;lt; contain word &amp;gt;/s/&amp;lt; word &amp;gt;/ &amp;lt; new word &amp;gt;/g
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:v/&amp;lt; contain word &amp;gt;/s/&amp;lt; word &amp;gt;/ &amp;lt; new word &amp;gt;/g
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Vim command
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Vim command
 :v/require/s/var/let/g
 
 # Output
@@ -125,8 +121,7 @@ var express = require('express');
 let x = 2;
 let y = 3;
 let z = 4;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
@@ -185,10 +180,9 @@ That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/chrisza4/generator-node-es7-backend&quot;&gt;generator-node-es7-backend&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/src ---&amp;gt; Put your code here
-/dist ----&amp;gt; Where real node code will be built by babel
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/src &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Put your code here
+/dist &lt;span class=&quot;nt&quot;&gt;----&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Where real node code will be built by babel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;coverage-with-babel&quot;&gt;Coverage with Babel&lt;/h3&gt;
 
@@ -197,9 +191,8 @@ That make you can use ES6, even ES7 with ES5 javascript engine.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/a/35010781&quot;&gt;No coverage information was collected, exit without writing coverage information, istanbul coverage&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha ./src/**/__tests__/*.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha ./src/**/__tests__/*.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;commonjs-with-babel&quot;&gt;CommonJS with Babel&lt;/h3&gt;
 &lt;ul&gt;
@@ -258,7 +251,7 @@ that can run in client side with browser and server side with nodeJS&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/chaijs/chai/issues/415#issuecomment-255548802&quot;&gt;Mocha assert.throws not work with async/await&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let err = {};
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let err = {};
 
 try {
   await someFn();
@@ -267,8 +260,7 @@ try {
 }
 
 expect(err.message).to.equal(&quot;some error message&quot;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name>botbotbot</name></author><category term="es7" /><category term="js" /><summary type="html">Async/Await is the part of ES7 that currently draft version new standard of javascript. It is pattern for solving Callback Hell problem that nowaday is solve by ES6 Promises. Async/Await is wrapper of Promises pattern that make you can program in synchronous style without blocking the thread. To use ES7 for your project today, you need to use Babel to compile your ES7 to ES5 that can run in client side with browser and server side with nodeJS</summary></entry><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com/vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com/open-vpn</id><content type="html" xml:base="http://dev.im-bot.com/vpn/">&lt;ul&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>botbotbot</name></author><category term="es7" /><category term="js" /><summary type="html">Async/Await is the part of ES7 that currently draft version new standard of javascript. It is pattern for solving Callback Hell problem that nowaday is solve by ES6 Promises. Async/Await is wrapper of Promises pattern that make you can program in synchronous style without blocking the thread. To use ES7 for your project today, you need to use Babel to compile your ES7 to ES5 that can run in client side with browser and server side with nodeJS</summary></entry><entry><title type="html">Open VPN</title><link href="http://dev.im-bot.com/vpn/" rel="alternate" type="text/html" title="Open VPN" /><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><id>http://dev.im-bot.com/open-vpn</id><content type="html" xml:base="http://dev.im-bot.com/vpn/">&lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/Nyr/openvpn-install&quot;&gt;openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -278,13 +270,12 @@ expect(err.message).to.equal(&quot;some error message&quot;);
 
 &lt;p&gt;edit your &lt;code class=&quot;highlighter-rouge&quot;&gt;client.opvn&lt;/code&gt; file&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# reject all route from server config
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# reject all route from server config
 route-nopull
 
 # route ip range to through via VPN
 route 192.168.0.0 255.255.0.0
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
@@ -293,12 +284,11 @@ route 192.168.0.0 255.255.0.0
   &lt;li&gt;&lt;a href=&quot;http://superuser.com/questions/457020/openvpn-only-route-a-specific-ip-addresses-through-vpn/628488#628488&quot;&gt;OpenVPN: Only route a specific IP addresses through VPN?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="vpn" /><summary type="html">openvpn-install - OpenVPN road warrior installer for Debian, Ubuntu and CentOS</summary></entry><entry><title type="html">Add existed Docker host to docker-machine</title><link href="http://dev.im-bot.com/existed-docker-host-tot-docker-machine/" rel="alternate" type="text/html" title="Add existed Docker host to docker-machine" /><published>2016-11-11T00:00:00+00:00</published><updated>2016-11-11T00:00:00+00:00</updated><id>http://dev.im-bot.com/existed-docker-host-to-docker-machine</id><content type="html" xml:base="http://dev.im-bot.com/existed-docker-host-tot-docker-machine/">&lt;h2 id=&quot;generic-driver---create-machines-using-an-existing-vmhost-with-ssh&quot;&gt;&lt;a href=&quot;https://docs.docker.com/machine/drivers/generic/&quot;&gt;Generic Driver&lt;/a&gt; - Create machines using an existing VM/Host with SSH&lt;/h2&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine create --driver generic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    --generic-ip-address &lt;span class=&quot;nv&quot;&gt;$host_ip&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    --generic-ssh-user &lt;span class=&quot;nv&quot;&gt;$host_user&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker-machine create &lt;span class=&quot;nt&quot;&gt;--driver&lt;/span&gt; generic &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;--generic-ip-address&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$host_ip&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;--generic-ssh-user&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$host_user&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
     &lt;span class=&quot;nv&quot;&gt;$machine_name&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;!-- more --&gt;
 
@@ -318,27 +308,25 @@ server&lt;/code&gt;, you can check you path &lt;code class=&quot;highlighter-rou
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# download&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine scp &lt;span class=&quot;nv&quot;&gt;$machine&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# download&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker-machine scp &lt;span class=&quot;nv&quot;&gt;$machine&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# upload&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;docker-machine scp &lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$machine&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker-machine scp &lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$machine&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.computerhope.com/unix/rsync.htm&quot;&gt;Rsync&lt;/a&gt; - &lt;a href=&quot;http://ss64.com/bash/rsync_options.html&quot;&gt;option&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# sync and delete file remote that not existed on local&lt;/span&gt;
-rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;/span&gt; --delete --progress &lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; :&lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# sync and delete file remote that not existed on local&lt;/span&gt;
+rsync &lt;span class=&quot;nt&quot;&gt;-rvzahe&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--delete&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--progress&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; :&lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# ignore .git directory&lt;/span&gt;
-rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;/span&gt; --delete --progress --exclude&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.git'&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; :&lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+rsync &lt;span class=&quot;nt&quot;&gt;-rvzahe&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--delete&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--progress&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--exclude&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.git'&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$src&lt;/span&gt; :&lt;span class=&quot;nv&quot;&gt;$dest&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# alias&lt;/span&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# alias&lt;/span&gt;
 
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;machine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;digitalocean
 &lt;span class=&quot;c&quot;&gt;# rsync for mount volume on remote docker host&lt;/span&gt;
@@ -354,8 +342,7 @@ rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;
 
 &lt;span class=&quot;c&quot;&gt;# list dir on remote host&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;docker-machine ssh &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;machine &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cd &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;PWD &amp;amp;&amp;amp; ls&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
 &lt;ul&gt;
@@ -567,21 +554,19 @@ rsync -rvzahe &lt;span class=&quot;s1&quot;&gt;'docker-machine ssh $machine'&lt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/acdlite/recompose&quot;&gt;Recompose - A React utility belt for function components and higher-order components&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>botbotbot</name></author><category term="react" /><category term="js" /><summary type="html">React Thinking in React Example Latest ReactJS Examples React - Examples a collection of simple demos of React.js Made with React TodoMVC React Intro ReactJS Bangkok 1.0.0 React - scotch.io Learning React.js: Getting Started and Concepts Routing React Apps: The Complete Guide Presentational and Container Components</summary></entry><entry><title type="html">Git ignore files in sub-directories</title><link href="http://dev.im-bot.com/git-ignore-sub-dir/" rel="alternate" type="text/html" title="Git ignore files in sub-directories" /><published>2016-11-03T00:00:00+00:00</published><updated>2016-11-03T00:00:00+00:00</updated><id>http://dev.im-bot.com/git-ignore-in-sub-dir</id><content type="html" xml:base="http://dev.im-bot.com/git-ignore-sub-dir/">&lt;h2 id=&quot;example-ignore-css-in-only-src&quot;&gt;Example: ignore .css in only /src&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# .gitignore
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# .gitignore
 
 src/**/*.css
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;!-- more --&gt;
 
 &lt;p&gt;remove .css that committed in to repo&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rm -r --cached .
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rm -r --cached .
 $ git add .
 $ git commit
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;references&quot;&gt;References:&lt;/h3&gt;
 &lt;ul&gt;

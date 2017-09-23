@@ -292,56 +292,52 @@
 
 <p>a.txt</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aaaa
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aaaa
 bbbb
 cccc
 eeee
 eeee
 eeee
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>b.txt</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>aabb
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aabb
 bbbb
 dddd
 cccc
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>diff a.txt b.txt</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>diff --git a/aaa b/bbb
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diff <span class="nt">--git</span> a/aaa b/bbb
 index fc3703c..11629db 100644
---- a/aaa
+<span class="nt">---</span> a/aaa
 +++ b/bbb
-@@ -1,6 +1,4 @@
--aaaa
+@@ <span class="nt">-1</span>,6 +1,4 @@
+<span class="nt">-aaaa</span>
 +aabb
  bbbb
 +dddd
  cccc
--eeee
--eeee
--eeee
-</code></pre>
-</div>
+<span class="nt">-eeee</span>
+<span class="nt">-eeee</span>
+<span class="nt">-eeee</span>
+</code></pre></div></div>
 
 <p>ed style of result diff a.txt b.txt</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>1c1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1c1
 &lt; aaaa
----
-<span class="gp">&gt; </span>aabb
+<span class="nt">---</span>
+<span class="o">&gt;</span> aabb
 2a3
-<span class="gp">&gt; </span>dddd
+<span class="o">&gt;</span> dddd
 4,6d4
 &lt; eeee
 &lt; eeee
 &lt; eeee
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="code">Code</h1>
 
@@ -349,7 +345,7 @@ index fc3703c..11629db 100644
 
 <p>my_diff.py</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env python</span>
 
 
 <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="n">file1</span><span class="p">,</span> <span class="n">file2</span><span class="p">):</span>
@@ -402,19 +398,17 @@ index fc3703c..11629db 100644
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">sys</span>
     <span class="n">diff</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="set-vimdiff-to-use-result-of-my-diff-code">Set vimdiff to use result of my diff code</h3>
 
 <p>.vimrc</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">set </span><span class="nv">diffexpr</span><span class="o">=</span>MyDiff<span class="o">()</span>
 <span class="k">function </span>MyDiff<span class="o">()</span>
-    silent execute <span class="s2">"!python &lt;your_paht&gt;/my_diff.py "</span> . v:fname_in . <span class="s2">" "</span> . v:fname_new . <span class="s2">" &gt; "</span> . v:fname_out
+    silent execute <span class="s2">"!python &lt;your_paht&gt;/my_diff.py "</span> <span class="nb">.</span> v:fname_in <span class="nb">.</span> <span class="s2">" "</span> <span class="nb">.</span> v:fname_new <span class="nb">.</span> <span class="s2">" &gt; "</span> <span class="nb">.</span> v:fname_out
 endfunction
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Ref:</p>
 <ol>
@@ -516,13 +510,12 @@ endfunction
   <li>
     <p><a href="http://www.informit.com/articles/article.aspx?p=1941206">The Best Programming Advice I Ever Got” with Rob Pike</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  Ken taught me that thinking before debugging is extremely important. If you
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Ken taught me that thinking before debugging is extremely important. If you
   dive into the bug, you tend to fix the local issue in the code, but if you
   think about the bug first, how the bug came to be, you often find and correct a
   higher-level problem in the code that will improve the design and prevent
   further bugs.
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>If you don’t know where you are going, you’ll end up someplace else - <a href="https://medium.com/@geoffbourne/the-marriage-of-lean-scrum-and-extreme-programming-xp-98a7d5df06b1">Yogi Berra</a></p>
@@ -536,15 +529,14 @@ endfunction
   <li>
     <p><a href="https://philipwalton.com/articles/how-to-become-a-great-front-end-engineer">How to Become a Great Front-End Engineer - PHILIP WALTON</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> I realize that what separates the good people from the really good people
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> I realize that what separates the good people from the really good people
  isn’t what they know; it’s how they think. Obviously knowledge is
  important—critical in some cases—but in a field that changes so quickly,
  how you go about acquiring that knowledge is always going to be more
  important (at least in the long term) than what you know at any given time.
  And perhaps most important of all: how you use that knowledge to solve
  everyday problems.
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>If you’re working on a big, popular application like Word or Facebook for
@@ -555,13 +547,12 @@ that application’s user base, but it’s still an application. - <a href="http
     <p><a href="https://medium.com/lightspeed-venture-partners/most-tech-interviews-suck-the-only-4-questions-that-matter-1a71181ef4d4">Most Tech Interviews Suck — The Only 4 Questions That Matter - Aaron
 Batalion</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  Remember that I’m hiring you to build products not write software.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Remember that I’m hiring you to build products not write software.
   It’s a very important distinction.  You’ll make hundreds of micro
   decisions every day about what and how to build products and
   I want to know that you understand our business and will put that
   as your first priority.
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Every design decision involves tradeoffs - <a href="http://new.joelonsoftware.com/design/1stDraft/01.html">Great Design: What is Design?  (First Draft) - Joel on Software</a></p>
@@ -587,7 +578,7 @@ Batalion</a></p>
   <li>
     <p><a href="https://mdmstudios.wordpress.com/2011/02/27/learning-programming-languages-faster/">Learning Programming Languages Faster</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> they’re missing the point clearly.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> they’re missing the point clearly.
  It’s not the learning languages that is important, its the learning how to program.
  Its learning how to problem solve.
 
@@ -598,8 +589,7 @@ Batalion</a></p>
 
   The secret to becoming a better programmer isn’t in learning the most languages,
   its learning to program the best.
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Sometimes it’s important to go back to the basics and remember what we love about programming; sometimes it’s important to remember that programming is an art form; a form of expression as much as a science. - <a href="https://mdmstudios.wordpress.com/2011/04/06/programming-as-an-art/">Programming as an Art</a></p>
@@ -621,11 +611,10 @@ Batalion</a></p>
     <p><a href="http://xp123.com/articles/small-scalable-stories-in-the-invest-model/">Small – Scalable – Stories in the INVEST Model - Bill
 Wake</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  John Gall said, “A complex system that works is invariably found to have evolved from a simple system that worked.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  John Gall said, “A complex system that works is invariably found to have evolved from a simple system that worked.
   A complex system designed from scratch never works and cannot be patched up to make it work.
   ou have to start over with a working simple system.”
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>“TDD is not dead or alive. TDD is subject to tradeoffs, including risk of API changes, skill of practitioner and existing design” — <a href="https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22">Kent Beck</a></p>
@@ -678,14 +667,13 @@ Wake</a></p>
   <li>
     <p><a href="https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/">Things You Should Never Do, Part I - JOEL ON SOFTWARE</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  There’s a subtle reason that programmers always want to throw away the code and start over.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  There’s a subtle reason that programmers always want to throw away the code and start over.
   The reason is that they think the old code is a mess. And here is the interesting observation:
   they are probably wrong.
   The reason that they think the old code is a mess is because of a cardinal, fundamental law of programming:
 
   It’s harder to read code than to write it.
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>One thing programmers pay close attention to in the day of interviewing is the people they meet. Are they nice? More importantly: are they smart? - <a href="https://www.joelonsoftware.com/2006/09/07/a-field-guide-to-developers/">JOEL ON SOFTWARE</a></p>
@@ -738,14 +726,13 @@ Wake</a></p>
   <li>
     <p><a href="https://medium.com/the-mission/how-not-to-start-a-startup-e87c5b344909">How not to start a startup - Bram Krommenhoek</a></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  But I’m going to take up Sheryl Sandberg’s advice here:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  But I’m going to take up Sheryl Sandberg’s advice here:
 
   There is no perfect fit when you’re looking for the next big thing to do.
   You have to take opportunities and make an opportunity fit for you,
   rather than the other way around. The ability to learn is the most
   important quality a leader can have.
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Companies are slowly shifting from a state where most employees have an operational or project mindset to a customer-facing or product mindset - <a href="https://www.techinasia.com/talk/managers-should-not-measure-individual-performance">Why managers shouldn’t measure individual performance in the digital age</a></p>
@@ -789,7 +776,12 @@ Wake</a></p>
   <li>
     <p>A CTO has to be the person who gets the job done. - <a href="https://www.quora.com/What-does-a-CTO-need-to-know-to-be-a-CTO-It-seems-that-its-just-a-summation-of-experience-over-time-and-in-some-cases-a-CTO-may-have-no-idea-how-something-works-unless-they-do-some-work-afterwards-to-learn/answer/Jim-Brashear-1?srid=8ri6">CTO ?</a></p>
   </li>
-  <li>If every thing is under control, you are going too slow! - Mario Andrelti</li>
+  <li>
+    <p>If every thing is under control, you are going too slow! - Mario Andrelti</p>
+  </li>
+  <li>We care so much about things that we can not change, and it ruins our
+happiness. If you are unhappy about something, and you can change it, then do
+it. But if you can’t change it, stop giving a fuck. - <a href="https://www.quora.com/If-you-can-give-me-only-one-tip-to-improve-my-life-what-would-it-be/answer/Mads-Olsen-3?srid=8ri6">Mads Olsen</a></li>
 </ul>
 
     
@@ -815,7 +807,7 @@ Wake</a></p>
       <h2 id="robot-frameworkrf---github-repo"><a href="http://robotframework.org/">Robot Framework(RF)</a> - <a href="https://github.com/robotframework/robotframework">Github Repo</a></h2>
 
 <h2 id="robot-framework-template">Robot Framework Template</h2>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
 <span class="n">Documentation</span>     <span class="o">&lt;</span><span class="n">document</span><span class="o">&gt;</span>
 <span class="n">Library</span>           <span class="o">&lt;</span><span class="n">Library</span><span class="o">&gt;</span>
 <span class="n">Library</span>           <span class="o">&lt;</span><span class="n">python</span> <span class="n">pakcage</span><span class="o">&gt;</span>  <span class="n">WITH</span> <span class="n">NAME</span>  <span class="o">&lt;</span><span class="n">ref</span> <span class="n">name</span><span class="o">&gt;</span>
@@ -836,8 +828,7 @@ Wake</a></p>
   <span class="p">[</span><span class="n">Arguments</span><span class="p">]</span>  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span>
   <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span> <span class="o">=</span>  <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span>
   <span class="p">[</span><span class="n">Return</span><span class="p">]</span>  <span class="err">$</span><span class="p">{</span><span class="n">variable</span><span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="handling-whitespace---plain-text-format"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#rules-for-parsing-the-data">Handling whitespace - Plain text format</a></h2>
 <ul>
@@ -859,11 +850,10 @@ Wake</a></p>
 
 <h3 id="continue-line-the-previous-line">Continue line the previous line</h3>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># use ellipsis (...) to continue the previous line</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># use ellipsis (...) to continue the previous line</span>
 <span class="n">Default</span> <span class="n">Tags</span>	<span class="n">a</span>	<span class="n">b</span>	<span class="n">c</span>
 <span class="o">...</span>	          <span class="n">d</span>	<span class="n">e</span>	<span class="n">f</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="test-templates---keyword-driven-test-cases-into-data-driven-tests"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-templates">Test templates - keyword-driven test cases into data-driven tests</a></h2>
 
@@ -897,48 +887,43 @@ Wake</a></p>
 
 <h3 id="number-variables"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#number-variables">Number variables</a></h3>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="err">$</span><span class="p">{</span><span class="mi">65</span><span class="p">}</span>     <span class="c"># 65 is integer</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="err">$</span><span class="p">{</span><span class="mi">65</span><span class="p">}</span>     <span class="c"># 65 is integer</span>
 <span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="err">$</span><span class="p">{</span><span class="mf">67.25</span><span class="p">}</span>  <span class="c"># 67.25 is float</span>
 <span class="err">$</span><span class="p">{</span><span class="n">THRESHOLD</span><span class="p">}</span>      <span class="mi">65</span>        <span class="c"># 65 is string</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="boolean-and-nonenull-variables"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#boolean-and-none-null-variables">Boolean and None/null variables</a></h3>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="err">$</span><span class="p">{</span><span class="n">true</span><span class="p">}</span>   <span class="o">-</span> <span class="n">python</span> <span class="bp">True</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span><span class="p">{</span><span class="n">true</span><span class="p">}</span>   <span class="o">-</span> <span class="n">python</span> <span class="bp">True</span>
 <span class="err">$</span><span class="p">{</span><span class="n">false</span><span class="p">}</span>  <span class="o">-</span> <span class="n">python</span> <span class="bp">False</span>
 <span class="err">$</span><span class="p">{</span><span class="bp">None</span><span class="p">}</span>   <span class="o">-</span> <span class="n">python</span> <span class="bp">None</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="selecting-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#selecting-test-cases">Selecting test cases</a></h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>--test example<span class="k">*</span>       <span class="c">#select test</span>
---suite example-??    <span class="c">#select suite</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">--test</span> example<span class="k">*</span>       <span class="c">#select test</span>
+<span class="nt">--suite</span> example-??    <span class="c">#select suite</span>
+</code></pre></div></div>
 
 <h2 id="tagging-test-cases"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#tagging-test-cases">Tagging test cases</a></h2>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">***</span> <span class="n">Settings</span> <span class="o">***</span>
 <span class="n">Force</span> <span class="n">Tags</span> <span class="n">FunctionalTest</span>
 <span class="n">Default</span> <span class="n">Tags</span> <span class="n">ValidTest</span>
 
 <span class="o">***</span> <span class="n">Test</span> <span class="n">Cases</span> <span class="o">***</span>
 <span class="n">invalid</span> <span class="n">login</span>
   <span class="p">[</span><span class="n">Tags</span><span class="p">]</span>  <span class="n">InvalidTest</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Tag select</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Tag select</span>
 
-<span class="gp">$ </span>pybot -i InvalidTest login_tests.txt
-<span class="gp">$ </span>pybot --include InvalidTest login_tests.html
+<span class="nv">$ </span>pybot <span class="nt">-i</span> InvalidTest login_tests.txt
+<span class="nv">$ </span>pybot <span class="nt">--include</span> InvalidTest login_tests.html
 
-<span class="gp">$ </span>pybot -e InvalidTest login_tests.txt
-<span class="gp">$ </span>pybot --exclude InvalidTest login_tests.html
-</code></pre>
-</div>
+<span class="nv">$ </span>pybot <span class="nt">-e</span> InvalidTest login_tests.txt
+<span class="nv">$ </span>pybot <span class="nt">--exclude</span> InvalidTest login_tests.html
+</code></pre></div></div>
 
 <h2 id="test-suites"><a href="http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-test-suites">Test suites</a></h2>
 
@@ -946,25 +931,22 @@ Wake</a></p>
 
 <h2 id="assgin-variable-via-cli">Assgin Variable via CLI</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>pybot --variable USERNAME:botbot --variable PASSWORD:ibot login_tests.html
-<span class="gp">$ </span>pybot  -d /tmp --variable SERVER:<span class="s2">"192.168.59.103"</span> --variable BROWSER:chrome tests/acceptance/
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pybot <span class="nt">--variable</span> USERNAME:botbot <span class="nt">--variable</span> PASSWORD:ibot login_tests.html
+<span class="nv">$ </span>pybot  <span class="nt">-d</span> /tmp <span class="nt">--variable</span> SERVER:<span class="s2">"192.168.59.103"</span> <span class="nt">--variable</span> BROWSER:chrome tests/acceptance/
+</code></pre></div></div>
 
 <h2 id="for-loops---tutorial"><a href="http://robotframework.googlecode.com/svn/trunk/doc/userguide/RobotFrameworkUserGuide.html#for-loops">For loops</a> - <a href="https://blog.codecentric.de/en/2013/05/robot-framework-tutorial-loops-conditional-execution-and-more/">Tutorial</a></h2>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="p">:</span><span class="n">FOR</span>    <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>   <span class="n">IN</span>    <span class="err">@</span><span class="p">{</span><span class="nb">list</span><span class="p">}</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">:</span><span class="n">FOR</span>    <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>   <span class="n">IN</span>    <span class="err">@</span><span class="p">{</span><span class="nb">list</span><span class="p">}</span>
 \    <span class="n">LOG</span>     <span class="err">$</span><span class="p">{</span><span class="n">elem</span><span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="selenium-driver">Selenium Driver</h2>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew install chromedriver <span class="c"># chrome driver for osx</span>
-<span class="gp">$ </span>brew install phantomjs <span class="c"># GUI less driver for osx</span>
-<span class="gp">$ </span>apt-get install phatomjs <span class="c"># GUI less driver for ubuntu</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew install chromedriver <span class="c"># chrome driver for osx</span>
+<span class="nv">$ </span>brew install phantomjs <span class="c"># GUI less driver for osx</span>
+<span class="nv">$ </span>apt-get install phatomjs <span class="c"># GUI less driver for ubuntu</span>
+</code></pre></div></div>
 
 <h2 id="plugin">Plugin:</h2>
 <ol>
@@ -1040,11 +1022,10 @@ docker.io is old name</p>
 
 <h4 id="install-on-debian"><a href="https://docs.docker.com/engine/installation/debian/#debian-wheezy-stable-7-x-64-bit">Install on Debian</a></h4>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Debian Jessie 8.0 (64-bit) or unstable packages</span>
-<span class="gp">$ </span>sudo apt-get update
-<span class="gp">$ </span>sudo apt-get install docker-engine
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Debian Jessie 8.0 (64-bit) or unstable packages</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get install docker-engine
+</code></pre></div></div>
 <ul>
   <li><a href="http://linuxconfig.org/package-docker-io-has-no-installation-candidate-debian-jessie">Package ‘docker.io’ has no installation candidate - Debian
 Jessie</a></li>
@@ -1052,88 +1033,78 @@ Jessie</a></li>
 
 <h4 id="install-on-osx---homebrew-cask"><a href="http://docs.docker.com/installation/mac/">Install on OSX</a> - <a href="http://caskroom.io">Homebrew-Cask</a></h4>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># if virtualbox not installed, install via homebrew cask</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># if virtualbox not installed, install via homebrew cask</span>
 http://docs.docker.com/installation/mac/#from-your-shell
 
-<span class="gp">$ </span>brew install caskroom/cask/brew-cask
-<span class="gp">$ </span>brew cask install dockertoolbox
+<span class="nv">$ </span>brew install caskroom/cask/brew-cask
+<span class="nv">$ </span>brew cask install dockertoolbox
 
 <span class="c"># start docker engine</span>
-<span class="gp">$ </span>docker-machine create
-<span class="gp">$ </span><span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>docker-machine env default<span class="k">)</span><span class="s2">"</span>
-</code></pre>
-</div>
+<span class="nv">$ </span>docker-machine create
+<span class="nv">$ </span><span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>docker-machine env default<span class="k">)</span><span class="s2">"</span>
+</code></pre></div></div>
 
 <h3 id="run-docker-without-sudo"><a href="https://docs.docker.com/installation/debian/#giving-non-root-access">Run Docker without sudo</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#debian</span>
-<span class="gp">$ </span>sudo groupadd docker
-<span class="gp">$ </span>sudo gpasswd -a <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker <span class="c"># or sudo adduser ${USER} docker</span>
-<span class="gp">$ </span>sudo service docker restart
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#debian</span>
+<span class="nv">$ </span><span class="nb">sudo </span>groupadd docker
+<span class="nv">$ </span><span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker <span class="c"># or sudo adduser ${USER} docker</span>
+<span class="nv">$ </span><span class="nb">sudo </span>service docker restart
+</code></pre></div></div>
 
 <h3 id="command-tips">Command Tips:</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker images --tree <span class="c">#list images in tree structure ('--tree' is deprecated)</span>
-<span class="gp">$ </span>docker ps -a <span class="c">#List all containers</span>
-<span class="gp">$ </span>docker ps -l <span class="c">#List lastest containers</span>
-<span class="gp">$ </span>docker ps -q <span class="c">#List containers display on IDs (quiet)</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker images <span class="nt">--tree</span> <span class="c">#list images in tree structure ('--tree' is deprecated)</span>
+<span class="nv">$ </span>docker ps <span class="nt">-a</span> <span class="c">#List all containers</span>
+<span class="nv">$ </span>docker ps <span class="nt">-l</span> <span class="c">#List lastest containers</span>
+<span class="nv">$ </span>docker ps <span class="nt">-q</span> <span class="c">#List containers display on IDs (quiet)</span>
+</code></pre></div></div>
 
 <h3 id="command-by-yourself-in-containers---working-with-containers">Command by yourself in containers - <a href="https://docs.docker.com/userguide/usingdocker/">Working with Containers</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker run -i -t &lt;image&gt; /bin/bash
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker run <span class="nt">-i</span> <span class="nt">-t</span> &lt;image&gt; /bin/bash
+</code></pre></div></div>
 
 <h3 id="how-to-continue-a-docker-which-is-exited"><a href="http://stackoverflow.com/questions/21928691/how-to-continue-a-docker-which-is-exited">How to continue a docker which is exited</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>docker start <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># restart it in the background</span>
-docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> <span class="c"># reattach the terminal &amp; stdin</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker start <span class="sb">`</span>docker ps <span class="nt">-q</span> <span class="nt">-l</span><span class="sb">`</span> <span class="c"># restart it in the background</span>
+docker attach <span class="sb">`</span>docker ps <span class="nt">-q</span> <span class="nt">-l</span><span class="sb">`</span> <span class="c"># reattach the terminal &amp; stdin</span>
+</code></pre></div></div>
 
 <h3 id="clean-up---remove-docker-after-exited"><a href="https://docs.docker.com/reference/run/#clean-up-rm">Clean Up - Remove Docker after exited</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker run --rm &lt;imamge&gt;
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker run <span class="nt">--rm</span> &lt;imamge&gt;
+</code></pre></div></div>
 
 <h3 id="docker-remove-all-exited-containers-by-filippo-valsorda"><a href="https://coderwall.com/p/zguz_w">Docker: remove all Exited containers by Filippo Valsorda</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo docker ps -a | grep Exit | cut -d <span class="s1">' '</span> -f 1 | xargs sudo docker rm
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker ps <span class="nt">-a</span> | <span class="nb">grep </span>Exit | cut <span class="nt">-d</span> <span class="s1">' '</span> <span class="nt">-f</span> 1 | xargs <span class="nb">sudo </span>docker rm
+</code></pre></div></div>
 
 <h3 id="remove--none--images">Remove &lt; none &gt; images</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># if space full in docker engine</span>
-<span class="gp">$ </span>docker rmi <span class="k">$(</span>docker images | grep <span class="s1">'&lt;none&gt;'</span> | tr -s <span class="s1">' '</span> | cut -d <span class="s1">' '</span> -f 3<span class="k">)</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># if space full in docker engine</span>
+<span class="nv">$ </span>docker rmi <span class="k">$(</span>docker images | <span class="nb">grep</span> <span class="s1">'&lt;none&gt;'</span> | tr <span class="nt">-s</span> <span class="s1">' '</span> | cut <span class="nt">-d</span> <span class="s1">' '</span> <span class="nt">-f</span> 3<span class="k">)</span>
 <span class="c"># or</span>
-<span class="gp">$ </span>docker images -a | grep none | awk <span class="s1">'{print $3}'</span> | xargs docker rmi -f
-</code></pre>
-</div>
+<span class="nv">$ </span>docker images <span class="nt">-a</span> | <span class="nb">grep </span>none | awk <span class="s1">'{print $3}'</span> | xargs docker rmi <span class="nt">-f</span>
+</code></pre></div></div>
 
 <h3 id="fix-repositoryalready-being-pulled">Fix Repositoryalready being pulled</h3>
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># $ dokcer pull &lt;images&gt;</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># $ dokcer pull &lt;images&gt;</span>
 <span class="c"># Fix Repository debian already being pulled by another client. Waiting.</span>
-<span class="gp">$ </span>sudo service docker restart
-</code></pre>
-</div>
+<span class="nv">$ </span><span class="nb">sudo </span>service docker restart
+</code></pre></div></div>
 
 <h3 id="mount-directory-to-container---managing-data-in-containers">Mount directory to container - <a href="https://docs.docker.com/userguide/dockervolumes/">Managing data in containers</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># docker run option</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># docker run option</span>
 <span class="c"># -v, --volume=[] create a volume</span>
 <span class="c"># -v host:container mount host directory to container</span>
 <span class="c">#   ex. -v $PWD:/app , mount current path to /app in container</span>
 <span class="c"># -w, --workdir="" Working directory inside the container</span>
 
-<span class="gp">$ </span>docker run -v &lt;host_dir_path&gt;:&lt;container_dir_path&gt; -w &lt;workdir_path&gt; &lt;image&gt; &lt;cmd&gt;
-</code></pre>
-</div>
+<span class="nv">$ </span>docker run <span class="nt">-v</span> &lt;host_dir_path&gt;:&lt;container_dir_path&gt; <span class="nt">-w</span> &lt;workdir_path&gt; &lt;image&gt; &lt;cmd&gt;
+</code></pre></div></div>
 
 <h3 id="docker-daemon-on-debian-not-start-automatically---bash-scripting-wait-for-wireless-connection-execute-program">Docker daemon on Debian: not start automatically - <a href="https://bbs.archlinux.org/viewtopic.php?id=51939">Bash Scripting: Wait for wireless connection, execute program</a></h3>
 
@@ -1141,24 +1112,22 @@ docker attach <span class="sb">`</span>docker ps -q -l<span class="sb">`</span> 
   <li>write this script and add it into crontab ($ sudo crontab -e)</li>
 </ol>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 
 <span class="nv">Q</span><span class="o">=</span><span class="s2">"0"</span>
-<span class="k">while</span> <span class="o">[</span> <span class="nv">$Q</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">]</span>; <span class="k">do
-   </span><span class="nv">Q</span><span class="o">=</span><span class="k">$(</span>ping -c1 www.google.com 2&gt; /dev/null | grep -c google<span class="k">)</span>;
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$Q</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">]</span><span class="p">;</span> <span class="k">do
+   </span><span class="nv">Q</span><span class="o">=</span><span class="k">$(</span>ping <span class="nt">-c1</span> www.google.com 2&gt; /dev/null | <span class="nb">grep</span> <span class="nt">-c</span> google<span class="k">)</span><span class="p">;</span>
 <span class="k">done
 </span><span class="nb">echo </span>Connected!
 
-sudo service docker restart
-</code></pre>
-</div>
+<span class="nb">sudo </span>service docker restart
+</code></pre></div></div>
 
 <h3 id="run-multiple-command-in-docker">Run multiple command in docker</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker <span class="nb">exec</span> &lt;image&gt; sh -c ‘&lt;cmd&gt;’
-<span class="gp">$ </span>docker run &lt;image&gt; bash -c ‘&lt;cmd&gt;’
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker <span class="nb">exec</span> &lt;image&gt; sh <span class="nt">-c</span> ‘&lt;cmd&gt;’
+<span class="nv">$ </span>docker run &lt;image&gt; bash <span class="nt">-c</span> ‘&lt;cmd&gt;’
+</code></pre></div></div>
 
 <h3 id="crontab-in-docker"><a href="http://www.ekito.fr/people/run-a-cron-job-with-docker/">Crontab in Docker</a></h3>
 
@@ -1166,92 +1135,81 @@ sudo service docker restart
 
 <p>Dockerfile</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># Docker env don't pass though cron jobs, you need to save env to file and load it in cron jobs.</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Docker env don't pass though cron jobs, you need to save env to file and load it in cron jobs.</span>
 <span class="c"># save Docker envoirment to file with command "env &gt; &lt;file&gt;"</span>
 
 <span class="c"># To debug crontab see to run "rsyslogd" and see logs at "/var/log/syslo"</span>
 <span class="c"># CMD rsyslogd &amp;&amp; &amp;&amp; env &gt; /root/env.sh &amp;&amp; tail -f /var/log/cron.log</span>
 
-CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o">&amp;&amp;</span> tail -f /var/log/cron.log
-</code></pre>
-</div>
+CMD cron <span class="o">&amp;&amp;</span> env <span class="o">&gt;</span> /root/env.sh <span class="o">&amp;&amp;</span> tail <span class="nt">-f</span> /var/log/cron.log
+</code></pre></div></div>
 
 <p>cron_task.sh</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>env - <span class="sb">`</span>cat /root/env.sh<span class="sb">`</span> <span class="nv">$1</span>
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>env - <span class="sb">`</span><span class="nb">cat</span> /root/env.sh<span class="sb">`</span> <span class="nv">$1</span>
+</code></pre></div></div>
 
 <p>crontab</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># always need ot &gt;&gt; to some where to avoid “(CRON) info (No MTA installed, discarding output)” error in the syslog</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># always need ot &gt;&gt; to some where to avoid “(CRON) info (No MTA installed, discarding output)” error in the syslog</span>
 <span class="c"># http://askubuntu.com/questions/222512/cron-info-no-mta-installed-discarding-output-error-in-the-syslog</span>
 
-<span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> root crontab_task.sh “&lt;your <span class="nb">command</span>&gt;<span class="s2">" &gt;&gt; /var/log/cron.log 2&gt;&amp;1
+<span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> root crontab_task.sh “&lt;your <span class="nb">command</span><span class="o">&gt;</span><span class="s2">" &gt;&gt; /var/log/cron.log 2&gt;&amp;1
 #An empty line is required at the end of this file for a valid cron file.
-</span></code></pre>
-</div>
+</span></code></pre></div></div>
 
 <h3 id="docker-error-client-and-server-dont-have-same-version">docker Error: client and server don’t have same version</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker-machine upgrade &lt;machine&gt;
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker-machine upgrade &lt;machine&gt;
+</code></pre></div></div>
 
 <h3 id="set-time-zone-in-dockerfile"><a href="http://tedwise.com/2015/05/02/setting-the-timezone-in-a-docker-image">Set time zone in Dockerfile</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure -f noninteractive tzdata
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> <span class="o">&gt;</span> /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure <span class="nt">-f</span> noninteractive tzdata
+</code></pre></div></div>
 
 <h3 id="push-docker-to-registry">Push docker to registry</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker login
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker login
 <span class="c"># docker tag &lt;image&gt; &lt;username/image:version&gt;</span>
-<span class="gp">$ </span>docker tag viau10-app ibotdotout/viau10-app:latest
+<span class="nv">$ </span>docker tag viau10-app ibotdotout/viau10-app:latest
 <span class="c"># docker push &lt;username/image&gt;</span>
-<span class="gp">$ </span>docker push ibotdotout/viau10-app
+<span class="nv">$ </span>docker push ibotdotout/viau10-app
 
 <span class="c"># private registry</span>
-<span class="gp">$ </span>docker tag &lt;contrainer_id&gt; &lt;your_registry_domain&gt;/&lt;image&gt;
-<span class="gp">$ </span>docker push &lt;your_registry_domain&gt;/&lt;image&gt;
-</code></pre>
-</div>
+<span class="nv">$ </span>docker tag &lt;contrainer_id&gt; &lt;your_registry_domain&gt;/&lt;image&gt;
+<span class="nv">$ </span>docker push &lt;your_registry_domain&gt;/&lt;image&gt;
+</code></pre></div></div>
 
 <h3 id="force-clean-build-of-an-image-without-cache"><a href="https://github.com/docker/docker/issues/1326">Force clean build of an image (without cache)</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker build --no-cache .
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker build <span class="nt">--no-cache</span> <span class="nb">.</span>
+</code></pre></div></div>
 
 <h3 id="graphdriver-prior-storage-driver-aufs-failed-invalid-argument--by-kelindar"><a href="https://github.com/docker/docker/issues/14026">graphdriver prior storage driver “aufs” failed: invalid argument </a> by @Kelindar</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo rm -rf /var/lib/docker/aufs
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>rm <span class="nt">-rf</span> /var/lib/docker/aufs
+</code></pre></div></div>
 
 <h3 id="to-see-the-file-size-of-your-containers"><a href="http://stackoverflow.com/a/33344280">To see the file size of your containers</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>docker ps -s
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker ps <span class="nt">-s</span>
+</code></pre></div></div>
 
 <h3 id="ssh-to-docker-machine"><a href="http://stackoverflow.com/a/33350931">SSH to docker machine</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># you can use `docker-machine ssh &lt; machine &gt; instead this</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># you can use `docker-machine ssh &lt; machine &gt; instead this</span>
 <span class="c"># 192.168.99.100 this is ip for &lt; machine &gt;</span>
 <span class="c"># that can check via `docker-machine ip &lt; machine &gt;</span>
-<span class="gp">$ </span>ssh docker@192.168.99.100
+<span class="nv">$ </span>ssh docker@192.168.99.100
 <span class="c"># password: tcuser</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="fix-no-space-left-on-device-in-default-machine"><a href="https://github.com/docker/machine/issues/1779">Fix No space left on device in default machine</a></h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># clean your mapping volume on host that was copied to docker machine</span>
-<span class="gp">$ </span>docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro -v /var/lib/
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># clean your mapping volume on host that was copied to docker machine</span>
+<span class="nv">$ </span>docker run <span class="nt">--rm</span> <span class="nt">-v</span> /var/run/docker.sock:/var/run/docker.sock:ro <span class="nt">-v</span> /var/lib/
+</code></pre></div></div>
 
 <h3 id="install-docker-compose-aka-fig">Install Docker-compose aka Fig</h3>
 
@@ -1259,14 +1217,13 @@ CMD cron <span class="o">&amp;&amp;</span> env &gt; /root/env.sh <span class="o"
 $ apt-get update &amp;&amp; apt-get upgrade -y
 $ apt-get install -y python-pip
 $ pip install -U docker-compose</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ### Docker-Compose Production
 
 ```sh
 # https://docs.docker.com/compose/extends/
 $ docker-compose -f production.yml
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="dockerfile">Dockerfile</h3>
 <ol>
@@ -1278,9 +1235,8 @@ $ docker-compose -f production.yml
   <li><a href="http://blog.replicated.com/2016/02/05/refactoring-a-dockerfile-for-image-size/">Refactoring a Dockerfile for image size</a></li>
 </ol>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>  <span class="nv">$ </span>apt-get install -y --no-install-recommends &lt;packages&gt;
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>apt-get install <span class="nt">-y</span> <span class="nt">--no-install-recommends</span> &lt;packages&gt;
+</code></pre></div></div>
 
 <h3 id="tdd-for-dockerfile---serverspec">TDD for Dockerfile - <a href="http://serverspec.org">ServerSpec</a></h3>
 <ol>

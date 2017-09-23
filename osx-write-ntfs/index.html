@@ -227,47 +227,41 @@
 
   <h2 id="automatical-way">Automatical Way</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://www.macthai.com/2012/06/06/how-to-mac-read-write-ntfs-fat32-file-osx/
+</code></pre></div></div>
 
 <h2 id="manual-way">Manual Way</h2>
 <ol>
   <li>
     <p>get UUID form this command</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>diskutil info /Volumes/&lt;drivename&gt; |  grep UUID
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diskutil info /Volumes/&lt;drivename&gt; |  <span class="nb">grep </span>UUID
+</code></pre></div>    </div>
   </li>
   <li>
     <p>edit /etc/fstab</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>sudo vim /etc/fstab
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>vim /etc/fstab
+</code></pre></div>    </div>
   </li>
   <li>
     <p>add this with edit <code class="highlighter-rouge">&lt;uuid_drive&gt;</code></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">UUID=&lt;uuid_drive&gt; </span>none ntfs rw,auto,nobrowse
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">UUID</span><span class="o">=</span>&lt;uuid_drive&gt; none ntfs rw,auto,nobrowse
+</code></pre></div>    </div>
   </li>
   <li>reject and plug it agian</li>
   <li>
     <p>open hdd with this command</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>open /Volumes
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>open /Volumes
+</code></pre></div>    </div>
   </li>
   <li>
     <p>If want to remove writable NTFS drive</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>sudo rm /etc/fstab
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>rm /etc/fstab
+</code></pre></div>    </div>
   </li>
 </ol>
 

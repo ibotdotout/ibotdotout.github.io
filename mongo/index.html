@@ -526,10 +526,9 @@ guarantee sufficient query isolation  or appropriate write scaling .</p>
 
 <h3 id="enable-mongo-cmd-in-replicate">Enable Mongo Cmd in Replicate</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># mongo shell
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mongo shell
 $ rs.slaveOk()
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="index">Index</h3>
 
@@ -537,14 +536,13 @@ $ rs.slaveOk()
   <li><a href="http://www.slideshare.net/mongodb/indexing-with-mongodb">Indexing with MongoDB</a></li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># mongo
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mongo
 $ db.user.ensureIndex( { _id : "hashed" } )
 $ sh.shardCollection("facebook.user", { "_id": "hashed" } )
 $ db.user.getShardDistribution()
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>### Set Sharding chunk size
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### Set Sharding chunk size
 use config
 db.settings.save( { _id:"chunksize", value: 8 } )
 
@@ -567,8 +565,7 @@ db.user.dropIndexes()
 
 db.user.ensureIndex( { slug : 1 }, { unique: true, backgroud: true })
 db.user.ensureIndex( { slug : "hashed"  }, { backgroud: true } )
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="query-performance">Query Performance</h3>
 <ul>

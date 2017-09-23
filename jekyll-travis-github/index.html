@@ -262,16 +262,14 @@ branch</code> on your Github repository settings that will use your
   <li>
     <p>Create <code class="highlighter-rouge">jekyll</code> branch for development</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git branch jekyll
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git branch jekyll
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Clear your <code class="highlighter-rouge">main</code> or <code class="highlighter-rouge">gh-page</code> branch to blank</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git rm <span class="k">*</span>
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git rm <span class="k">*</span>
+</code></pre></div>    </div>
   </li>
   <li>Enable Travis on your repository on Travis website and turn on <code class="highlighter-rouge">Build
 only if .travis.yml is present</code> on your travis repository settings.</li>
@@ -279,13 +277,12 @@ only if .travis.yml is present</code> on your travis repository settings.</li>
     <p>Checkout <code class="highlighter-rouge">jekyll</code> branch and create <code class="highlighter-rouge">.travis.yml</code> then edit <code class="highlighter-rouge">GH_REF</code>
 and <code class="highlighter-rouge">TARGET_BRANCH</code> to your own</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git checkout jekyll
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout jekyll
+</code></pre></div>    </div>
 
     <p>.travis.yml</p>
 
-    <div class="language-xml highlighter-rouge"><pre class="highlight"><code>sudo: false
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo: false
 
 language: ruby
 
@@ -316,43 +313,38 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_REF: github.com/ibotdotout/ibotdotout.github.io.git
   - TARGET_BRANCH: master
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>Create your <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">Github Personal Access Tokens</a> - check only <code class="highlighter-rouge">repo</code> that enough.</li>
   <li>
     <p>Install Travis Gem on your machine for encryption sensitive data</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gem install travis
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem install travis
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Encrypt your <code class="highlighter-rouge">EMAIL</code> and <code class="highlighter-rouge">DEPLOY_KEY</code></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># --add opton will automated add sescure data to your .travis.yml</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># --add opton will automated add sescure data to your .travis.yml</span>
 <span class="c"># edit verifiedemail to your github email account</span>
-<span class="gp">$ </span>travis encrypt <span class="nv">EMAIL</span><span class="o">=</span>verifiedemail --add
+<span class="nv">$ </span>travis encrypt <span class="nv">EMAIL</span><span class="o">=</span>verifiedemail <span class="nt">--add</span>
 <span class="c"># edit githubtoken to your github personal access tokens</span>
-<span class="gp">$ </span>travis encrpy <span class="nv">DEPLOY_KEY</span><span class="o">=</span>githubtoken --add
-</code></pre>
-    </div>
+<span class="nv">$ </span>travis encrpy <span class="nv">DEPLOY_KEY</span><span class="o">=</span>githubtoken <span class="nt">--add</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Commit <code class="highlighter-rouge">jekyll</code> branch</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git add -A
-<span class="gp">$ </span>git commit -m <span class="s2">"Create Jekyll branch for build jekyll with Travis"</span>
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add <span class="nt">-A</span>
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"Create Jekyll branch for build jekyll with Travis"</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>Push to <code class="highlighter-rouge">jekyll</code> branch to Github repository and wait</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git push origin jekyll
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git push origin jekyll
 <span class="c"># Don't care warnning about main/gh-page branch that local repository out of date</span>
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>Look your published site</li>
 </ol>
@@ -362,10 +354,9 @@ env:
 
 <h3 id="tips">Tips:</h3>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c"># config local git repo to push only current active branch</span>
-<span class="gp">$ </span>git config push.default simple
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># config local git repo to push only current active branch</span>
+<span class="nv">$ </span>git config push.default simple
+</code></pre></div></div>
 
 <h2 id="references">References:</h2>
 <ol>

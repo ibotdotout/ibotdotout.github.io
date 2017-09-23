@@ -238,12 +238,11 @@ You had alreay tried to run your script that working on your linux but no idea w
 
 <p><a href="http://stackoverflow.com/a/26958348">rozkosz</a> said:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code> Several issues that I faced while trying to get a cron job running in a docker container were:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Several issues that I faced while trying to get a cron job running in a docker container were:
  1. time in the docker container is in UTC not local time;
  2. the docker environment is not passed to cron;
  3. as Thomas noted, cron logging leaves a lot to be desired and accessing it through docker requires a docker-based solution.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>I think the problem that most people face is <code class="highlighter-rouge">cron</code> not run your script with same environment as your docker in terminal.
 You need to export your Docker environment to your <code class="highlighter-rouge">cron</code> that I found solution from <a href="https://hub.docker.com/r/draffensperger/postgres-s3-backup/~/dockerfile/">postgres-s3-backup Dockerfile</a>.
@@ -253,18 +252,16 @@ You can following this for simple solution:</p>
   <li>In <code class="highlighter-rouge">Dockerfile</code>, export Docker environment to /root/env.txt</li>
 </ol>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>  CMD env &gt; /root/env.txt <span class="o">&amp;&amp;</span> cron <span class="o">&amp;&amp;</span> your_init_script
-</code></pre>
-</div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  CMD env <span class="o">&gt;</span> /root/env.txt <span class="o">&amp;&amp;</span> cron <span class="o">&amp;&amp;</span> your_init_script
+</code></pre></div></div>
 
 <ol>
   <li>In your <code class="highlighter-rouge">crontab</code> file, You need to to import your Docker environment before run your script</li>
 </ol>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code>  <span class="k">*</span>/5 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span>  root env - <span class="sb">`</span>cat /root/env.txt<span class="sb">`</span>  your_scipt  &gt;&gt; /var/log/cron.log 2&gt;&amp;1
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">*</span>/5 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="k">*</span>  root env - <span class="sb">`</span><span class="nb">cat</span> /root/env.txt<span class="sb">`</span>  your_scipt  <span class="o">&gt;&gt;</span> /var/log/cron.log 2&gt;&amp;1
   <span class="c"># An empty line is required at the end of this file for a valid cron file.</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ol>
   <li>Test it. Your should put <code class="highlighter-rouge">date</code> in your script for debug and then <code class="highlighter-rouge">cat /var/log/cron.log</code> to see your results.</li>
@@ -276,36 +273,33 @@ You can following this for simple solution:</p>
   <li>
     <p>Debian/Linux Setting timezone</p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>   <span class="c"># Set the time zone to the local time zone</span>
-   RUN <span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt; /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure --frontend noninteractive tzdata
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># Set the time zone to the local time zone</span>
+   RUN <span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> <span class="o">&gt;</span> /etc/timezone <span class="o">&amp;&amp;</span> dpkg-reconfigure <span class="nt">--frontend</span> noninteractive tzdata
+</code></pre></div>    </div>
   </li>
   <li>
     <p><a href="http://wiki.alpinelinux.org/wiki/Setting_the_timezone">Alpine Setting the timezone</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>  <span class="c"># Alpine Linux</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c"># Alpine Linux</span>
   <span class="c"># set bangkok time</span>
   USEo root
-  RUN apk add --update tzdata <span class="se">\</span>
+  RUN apk add <span class="nt">--update</span> tzdata <span class="se">\</span>
   <span class="o">&amp;&amp;</span> cp /usr/share/zoneinfo/Asia/Bangkok /etc/localtime <span class="se">\</span>
-  <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> &gt;  /etc/timezone <span class="se">\</span>
+  <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"Asia/Bangkok"</span> <span class="o">&gt;</span>  /etc/timezone <span class="se">\</span>
   <span class="o">&amp;&amp;</span> apk del tzdata <span class="se">\</span>
   <span class="o">&amp;&amp;</span> mv /etc/localtime /usr/share/zoneinfo/Asia/Bangkok
 
   <span class="c"># or</span>
   USER root
-  RUN apk add --update tzdata
+  RUN apk add <span class="nt">--update</span> tzdata
   ENV <span class="nv">TZ</span><span class="o">=</span>Asia/Bangkok
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p><a href="http://stackoverflow.com/a/25130291">Will docker container auto sync time with the host machine?</a></p>
 
-    <div class="language-sh highlighter-rouge"><pre class="highlight"><code>  <span class="nv">$ </span>docker run -it -v /etc/localtime:/etc/localtime:ro &lt; image &gt;
-</code></pre>
-    </div>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>docker run <span class="nt">-it</span> <span class="nt">-v</span> /etc/localtime:/etc/localtime:ro &lt; image <span class="o">&gt;</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
