@@ -257,3 +257,7 @@ update_date: 2017-08-26
 * A CTO has to be the person who gets the job done. - [CTO ?](https://www.quora.com/What-does-a-CTO-need-to-know-to-be-a-CTO-It-seems-that-its-just-a-summation-of-experience-over-time-and-in-some-cases-a-CTO-may-have-no-idea-how-something-works-unless-they-do-some-work-afterwards-to-learn/answer/Jim-Brashear-1?srid=8ri6)
 
 * If every thing is under control, you are going too slow! - Mario Andrelti
+
+* We care so much about things that we can not change, and it ruins our
+  happiness. If you are unhappy about something, and you can change it, then do
+  it. But if you can’t change it, stop giving a fuck. - [Mads Olsen](https://www.quora.com/If-you-can-give-me-only-one-tip-to-improve-my-life-what-would-it-be/answer/Mads-Olsen-3?srid=8ri6)
