@@ -3,7 +3,7 @@ layout: post
 title: Dev Qutoes
 tags: qutoes
 permalink: quotes/
-update_date: 2017-08-26
+update_date: 2017-10-19
 ---
 
 * A magical, better time in the future never comes - [Nell Shamrell - Test Driven Development: A Love Story - Ancient City Ruby 2013](https://www.youtube.com/watch?v=nBtO1UOK9Hs)
@@ -261,3 +261,9 @@ update_date: 2017-08-26
 * We care so much about things that we can not change, and it ruins our
   happiness. If you are unhappy about something, and you can change it, then do
   it. But if you can’t change it, stop giving a fuck. - [Mads Olsen](https://www.quora.com/If-you-can-give-me-only-one-tip-to-improve-my-life-what-would-it-be/answer/Mads-Olsen-3?srid=8ri6)
+
+* When we lose our principles, we intive chaos. - Mr.Robot S3E1
+
+* You can do anything but not everythin - Python Course on Code Academy
+
+* ไม่มีสิ่งใดดีที่สุด แต่มีเหมาะสมที่สุด - อ.ธเนศ
