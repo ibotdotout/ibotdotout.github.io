@@ -126,6 +126,7 @@ update_date: 2016-03-24
   > An important observation is that in larger distributed-scale systems, network partitions are a given; therefore, consistency and availability cannot be achieved at the same time. This means that there are two choices on what to drop: relaxing consistency will allow the system to remain highly available under the partitionable conditions, whereas making consistency a priority means that under certain conditions the system will not be available.
 
 * [Cassandra Query Patterns: Not using the “in” query for multiple partitions.](https://lostechies.com/ryansvihla/2014/09/22/cassandra-query-patterns-not-using-the-in-query-for-multiple-partitions/)
+* [Hey Relational Developer, Let's Go Crazy (Patrick McFadin, DataStax) | Cassandra Summit 2016](https://www.youtube.com/watch?v=KFCmxrmnkt8) - [Silde](https://www.slideshare.net/DataStax/hey-relational-developer-lets-go-crazy-patrick-mcfadin-datastax-cassandra-summit-2016)
 
 # Driver
 
