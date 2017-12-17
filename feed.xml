@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://dev.im-bot.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com/" rel="alternate" type="text/html" /><updated>2017-12-06T15:01:27+00:00</updated><id>http://dev.im-bot.com/</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">JWT</title><link href="http://dev.im-bot.com/jwt/" rel="alternate" type="text/html" title="JWT" /><published>2016-11-30T00:00:00+00:00</published><updated>2016-11-30T00:00:00+00:00</updated><id>http://dev.im-bot.com/jwt</id><content type="html" xml:base="http://dev.im-bot.com/jwt/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://dev.im-bot.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dev.im-bot.com/" rel="alternate" type="text/html" /><updated>2017-12-17T13:00:10+00:00</updated><id>http://dev.im-bot.com/</id><title type="html">botbotbot</title><subtitle>botbotbot's blog</subtitle><author><name>botbotbot</name></author><entry><title type="html">JWT</title><link href="http://dev.im-bot.com/jwt/" rel="alternate" type="text/html" title="JWT" /><published>2016-11-30T00:00:00+00:00</published><updated>2016-11-30T00:00:00+00:00</updated><id>http://dev.im-bot.com/jwt</id><content type="html" xml:base="http://dev.im-bot.com/jwt/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://jwt.io/introduction/&quot;&gt;Introduction to JSON Web Tokens&lt;/a&gt;&lt;/li&gt;
@@ -35,6 +35,7 @@
   &lt;li&gt;&lt;a href=&quot;https://stormpath.com/blog/nodejs-jwt-create-verify/&quot;&gt;Create and Verify JWTs With Node.js&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://code.tutsplus.com/tutorials/token-based-authentication-with-angularjs-nodejs--cms-22543&quot;&gt;Token-Based Authentication With AngularJS &amp;amp; NodeJS&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.slideshare.net/stormpath/building-secure-user-interfaces-with-jwts&quot;&gt;Building Secure User Interfaces With JWTs (JSON Web Tokens)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@jittagornp/best-practice-ในการทำ-oauth2-access-token-refresh-token-457ae3bee4b7&quot;&gt;แนวทางปฏิบัติที่ดี ในการทำ OAuth 2.0 Access Token &amp;amp; Refresh Token เพื่อความปลอดภัย&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;security&quot;&gt;Security&lt;/h2&gt;
