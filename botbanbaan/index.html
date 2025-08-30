@@ -40,6 +40,14 @@
             box-shadow: 0 2px 10px rgba(56, 151, 240, 0.3);
         }
         
+        #head-banner .subtitle {
+            font-size: 0.7rem;
+            font-weight: normal;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+        
         .container {
             width: 100%;
             max-width: 600px;
@@ -57,6 +65,57 @@
             justify-content: center;
         }
         
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: nowrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .filter-checkbox {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .filter-checkbox input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .filter-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            border: 2px solid #3897f0;
+            border-radius: 25px;
+            background: transparent;
+            color: #3897f0;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            width: 130px;
+            text-align: center;
+            user-select: none;
+        }
+        
+        .filter-btn:hover {
+            background: #3897f0;
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        
+        .filter-checkbox input[type="checkbox"]:checked + .filter-btn {
+            background: #3897f0;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(56, 151, 240, 0.4);
+        }
+
         #random-btn {
             padding: 14px 28px;
             border: none;
@@ -112,8 +171,26 @@
                 letter-spacing: 0.5px;
             }
             
+            #head-banner .subtitle {
+                font-size: 0.6rem;
+                margin-top: 2px;
+            }
+            
             .container {
                 padding: 0 12px;
+            }
+            
+            .filter-buttons {
+                gap: 8px;
+                margin-bottom: 16px;
+                max-width: 100%;
+                flex-wrap: nowrap;
+            }
+            
+            .filter-btn {
+                padding: 8px 12px;
+                font-size: 13px;
+                width: 115px;
             }
             
             #single-instagram-post {
@@ -139,8 +216,25 @@
                 padding: 14px 8px 10px 8px;
             }
             
+            #head-banner .subtitle {
+                font-size: 0.55rem;
+                margin-top: 1px;
+            }
+            
             .container {
                 padding: 0 8px;
+            }
+            
+            .filter-buttons {
+                gap: 6px;
+                margin-bottom: 12px;
+                flex-wrap: nowrap;
+            }
+            
+            .filter-btn {
+                padding: 6px 8px;
+                font-size: 12px;
+                width: 100px;
             }
             
             #random-btn {
@@ -245,18 +339,44 @@
     </style>
 </head>
 <body>
-    <div id="head-banner">botbanbaan</div>
+    <div id="head-banner">
+        <div>Kin rai Dee</div>
+        <div class="subtitle">by botbanbaan</div>
+    </div>
 
     <div class="container">
+        <div class="filter-buttons">
+            <label class="filter-checkbox">
+                <input type="checkbox" data-filter="breakfast" checked>
+                <span class="filter-btn">Breakfast</span>
+            </label>
+            <label class="filter-checkbox">
+                <input type="checkbox" data-filter="lunch" checked>
+                <span class="filter-btn">Lunch</span>
+            </label>
+            <label class="filter-checkbox">
+                <input type="checkbox" data-filter="dinner" checked>
+                <span class="filter-btn">Dinner</span>
+            </label>
+        </div>
         <div id="single-instagram-post"></div>
-        <button id="random-btn">Random Post</button>
+        <button id="random-btn">Random</button>
         <div class="last-updated">
-        Last updated: 2025-08-28 00:35:41
+        Last updated: 2025-08-30 20:42:12
         </div>
     </div>
     <script>
         // Post IDs loaded from all_posts_codes.txt
         const postIds = [
+            "DNuo95-ZPjC",
+            "DNuo6cVZBRb",
+            "DNuo39c5KVH",
+            "DNpSnnQS0LP",
+            "DNpSj6jyymb",
+            "DNpShmgS7LT",
+            "DNaBNVjx3QN",
+            "DNaA_DvRvMQ",
+            "DNHdtVVPVyZ",
             "DNHdqRZvcH6",
             "DNHdj2TPTow",
             "DNAKRkjRWjJ",
@@ -1574,23 +1694,32 @@
             "CDnmBFkgDkS",
             "CDnh9DzgYNM",
             "CDnhwaDggww",
-            "DN1zuGdZEb4",
-            "DN1zrQYZHYP",
             "DN1zo8R5N9z",
-            "DNuo95-ZPjC",
-            "DNuo6cVZBRb",
-            "DNuo39c5KVH",
-            "DNHdtVVPVyZ",
-            "DNaA_DvRvMQ",
-            "DNaBNVjx3QN",
-            "DNpShmgS7LT",
-            "DNpSj6jyymb",
-            "DNpSnnQS0LP"
+            "DN1zrQYZHYP",
+            "DN1zuGdZEb4",
+            "DN5rxQLkqyu",
+            "DN-mPGrknxU",
+            "DN5ruBQEks8",
+            "DN5rny1EklG",
+            "DN-mRpgktsR",
+            "DN-mMg4kg65"
         ];
         
-        const posts = postIds.map(id => ({
-            permalink: `https://www.instagram.com/p/${id}/?utm_source=ig_embed&amp;utm_campaign=loading`
+        const posts = postIds.map((id, index) => ({
+            id: id,
+            permalink: `https://www.instagram.com/p/${id}/?utm_source=ig_embed&amp;utm_campaign=loading`,
+            category: getRandomCategory() // Assign random categories for demo
         }));
+
+        // Since we don't have actual categorization data, we'll randomly assign categories
+        // In a real implementation, this would come from your data source
+        function getRandomCategory() {
+            const categories = ['breakfast', 'lunch', 'dinner'];
+            return categories[Math.floor(Math.random() * categories.length)];
+        }
+
+        let selectedCategories = ['breakfast', 'lunch', 'dinner']; // All checked by default
+        let filteredPosts = posts;
 
         const staticUser = "botbanbaan";
         const staticCaption = "A post shared by botbanbaan (@botbanbaan)";
@@ -1612,17 +1741,45 @@
             `;
         }
 
+        function updateFilteredPosts() {
+            if (selectedCategories.length === 0) {
+                filteredPosts = posts; // Show all if nothing selected
+            } else {
+                filteredPosts = posts.filter(post => selectedCategories.includes(post.category));
+            }
+            
+            // Show a random post from the filtered results
+            showRandomPost();
+        }
+
         function showRandomPost() {
-            if (posts.length === 0) {
-                console.log('No posts available');
+            if (filteredPosts.length === 0) {
+                document.getElementById('single-instagram-post').innerHTML = '<p>No posts available for the selected filters.</p>';
                 return;
             }
-            const randomIndex = Math.floor(Math.random() * posts.length);
-            document.getElementById('single-instagram-post').innerHTML = createInstagramBlock(posts[randomIndex]);
+            const randomIndex = Math.floor(Math.random() * filteredPosts.length);
+            document.getElementById('single-instagram-post').innerHTML = createInstagramBlock(filteredPosts[randomIndex]);
             if (window.instgrm) {
                 window.instgrm.Embeds.process();
             }
         }
+
+        // Add event listeners for filter checkboxes
+        document.querySelectorAll('.filter-checkbox input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const category = checkbox.dataset.filter;
+                
+                if (checkbox.checked) {
+                    if (!selectedCategories.includes(category)) {
+                        selectedCategories.push(category);
+                    }
+                } else {
+                    selectedCategories = selectedCategories.filter(cat => cat !== category);
+                }
+                
+                updateFilteredPosts();
+            });
+        });
 
         document.getElementById('random-btn').addEventListener('click', showRandomPost);
 
