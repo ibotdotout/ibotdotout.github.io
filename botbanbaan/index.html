@@ -8,14 +8,14 @@
         * {
             box-sizing: border-box;
         }
-        
+
         :root {
             --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             --primary-blue: #3897f0;
             --text-gray: #8e8e93;
             --background: #fafafa;
         }
-        
+
         html, body {
             min-height: 100vh;
             margin: 0;
@@ -25,7 +25,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        
+
         body {
             display: flex;
             flex-direction: column;
@@ -33,7 +33,7 @@
             width: 100%;
             overflow-x: hidden;
         }
-        
+
         #head-banner {
             width: 100%;
             background: linear-gradient(45deg, #3897f0, #5b51d8);
@@ -46,7 +46,7 @@
             margin-bottom: 24px;
             box-shadow: 0 2px 10px rgba(56, 151, 240, 0.3);
         }
-        
+
         #head-banner .subtitle {
             font-size: 0.7rem;
             font-weight: normal;
@@ -54,7 +54,7 @@
             margin-top: 4px;
             letter-spacing: 0.5px;
         }
-        
+
         .container {
             width: 100%;
             max-width: 600px;
@@ -64,14 +64,14 @@
             align-items: center;
             flex: 1;
         }
-        
+
         #single-instagram-post {
             width: 100%;
             margin-bottom: 24px;
             display: flex;
             justify-content: center;
         }
-        
+
         .filter-buttons {
             display: flex;
             gap: 12px;
@@ -81,18 +81,18 @@
             width: 100%;
             max-width: 450px;
         }
-        
+
         .filter-checkbox {
             position: relative;
             display: inline-block;
         }
-        
+
         .filter-checkbox input[type="checkbox"] {
             position: absolute;
             opacity: 0;
             cursor: pointer;
         }
-        
+
         .filter-btn {
             display: inline-block;
             padding: 10px 15px;
@@ -110,13 +110,13 @@
             text-align: center;
             user-select: none;
         }
-        
+
         .filter-btn:hover {
             background: var(--primary-blue);
             color: #fff;
             transform: translateY(-1px);
         }
-        
+
         .filter-checkbox input[type="checkbox"]:checked + .filter-btn {
             background: var(--primary-blue);
             color: #fff;
@@ -140,17 +140,17 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         #random-btn:hover, #random-btn:focus {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(56, 151, 240, 0.6);
             outline: none;
         }
-        
+
         #random-btn:active {
             transform: translateY(0);
         }
-        
+
         footer {
             width: 100%;
             margin-top: auto;
@@ -161,14 +161,14 @@
             border-top: 1px solid #e1e1e6;
             background: #f8f9fa;
         }
-        
+
         /* Instagram embed responsive adjustments */
         .instagram-media {
             margin: 0 auto !important;
             max-width: 100% !important;
             min-width: unset !important;
         }
-        
+
         /* Mobile-specific styles */
         @media (max-width: 768px) {
             #head-banner {
@@ -177,93 +177,93 @@
                 margin-bottom: 16px;
                 letter-spacing: 0.5px;
             }
-            
+
             #head-banner .subtitle {
                 font-size: 0.6rem;
                 margin-top: 2px;
             }
-            
+
             .container {
                 padding: 0 12px;
             }
-            
+
             .filter-buttons {
                 gap: 8px;
                 margin-bottom: 16px;
                 max-width: 100%;
             }
-            
+
             .filter-btn {
                 padding: 8px 12px;
                 font-size: 13px;
                 width: 115px;
             }
-            
+
             #single-instagram-post {
                 margin-bottom: 20px;
             }
-            
+
             #random-btn {
                 padding: 12px 24px;
                 font-size: 15px;
                 max-width: 100%;
                 margin-bottom: 24px;
             }
-            
+
             footer {
                 padding: 16px 12px;
                 font-size: 11px;
             }
         }
-        
+
         @media (max-width: 480px) {
             #head-banner {
                 font-size: 1.2rem;
                 padding: 14px 8px 10px 8px;
             }
-            
+
             #head-banner .subtitle {
                 font-size: 0.55rem;
                 margin-top: 1px;
             }
-            
+
             .container {
                 padding: 0 8px;
             }
-            
+
             .filter-buttons {
                 gap: 6px;
                 margin-bottom: 12px;
             }
-            
+
             .filter-btn {
                 padding: 6px 8px;
                 font-size: 12px;
                 width: 100px;
             }
-            
+
             #random-btn {
                 padding: 10px 20px;
                 font-size: 14px;
             }
-            
+
             /* Ensure Instagram embeds fit on very small screens */
             .instagram-media {
                 width: 100% !important;
                 max-width: 100% !important;
             }
         }
-        
+
         /* Loading animation for better UX */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
+
         #single-instagram-post .instagram-media {
             animation: fadeIn 0.5s ease-out;
         }
-        
+
         /* Improve touch targets for mobile */
         @media (hover: none) and (pointer: coarse) {
             #random-btn {
@@ -271,7 +271,7 @@
                 font-size: 16px;
             }
         }
-        
+
         /* Last updated text styling */
         .last-updated {
             color: #8e8e93;
@@ -279,7 +279,7 @@
             margin-bottom: 8px;
             text-align: center;
         }
-        
+
         /* Instagram embed custom styling */
         .instagram-blockquote {
             background: #FFF;
@@ -291,11 +291,11 @@
             padding: 0;
             width: 100%;
         }
-        
+
         .instagram-content {
             padding: 16px;
         }
-        
+
         .instagram-link {
             background: #FFFFFF;
             line-height: 0;
@@ -304,11 +304,11 @@
             text-decoration: none;
             width: 100%;
         }
-        
+
         .instagram-link-wrapper {
             padding-top: 8px;
         }
-        
+
         .instagram-view-text {
             color: var(--primary-blue);
             font-family: var(--font-family);
@@ -317,7 +317,7 @@
             font-weight: 600;
             line-height: 18px;
         }
-        
+
         .instagram-caption {
             color: var(--text-gray);
             font-family: var(--font-family);
@@ -331,7 +331,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-        
+
         .instagram-caption-link {
             color: var(--text-gray);
             font-family: var(--font-family);
@@ -367,7 +367,7 @@
         <div id="single-instagram-post"></div>
         <button id="random-btn">Random</button>
         <div class="last-updated">
-        Last updated: 2025-08-30 21:27:46
+        Last updated: 2025-08-31 00:21:28
         </div>
     </div>
     <script>
@@ -377,11 +377,10 @@
             username: "botbanbaan",
             caption: "A post shared by botbanbaan (@botbanbaan)"
         };
-        
+
         // Post IDs loaded from all_posts_codes.txt
         const postIds = [
-            "DNuo95-ZPjC",
-            "DNuo6cVZBRb",
+            "",
             "DNuo39c5KVH",
             "DNpSnnQS0LP",
             "DNpSj6jyymb",
@@ -1716,7 +1715,7 @@
             "DN-mRpgktsR",
             "DN-mMg4kg65"
         ];
-        
+
         // Create posts with random categories
         const posts = postIds.map(id => ({
             id,
@@ -1750,7 +1749,7 @@
             } else {
                 filteredPosts = posts.filter(post => selectedCategories.includes(post.category));
             }
-            
+
             // Show a random post from the filtered results
             showRandomPost();
         }
@@ -1771,7 +1770,7 @@
         document.querySelectorAll('.filter-checkbox input[type="checkbox"]').forEach(checkbox => {
             checkbox.addEventListener('change', () => {
                 const category = checkbox.dataset.filter;
-                
+
                 if (checkbox.checked) {
                     if (!selectedCategories.includes(category)) {
                         selectedCategories.push(category);
@@ -1779,7 +1778,7 @@
                 } else {
                     selectedCategories = selectedCategories.filter(cat => cat !== category);
                 }
-                
+
                 updateFilteredPosts();
             });
         });
