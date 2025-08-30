@@ -9,12 +9,19 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --primary-blue: #3897f0;
+            --text-gray: #8e8e93;
+            --background: #fafafa;
+        }
+        
         html, body {
             min-height: 100vh;
             margin: 0;
             padding: 0;
-            background: #fafafa;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--background);
+            font-family: var(--font-family);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -89,10 +96,10 @@
         .filter-btn {
             display: inline-block;
             padding: 10px 15px;
-            border: 2px solid #3897f0;
+            border: 2px solid var(--primary-blue);
             border-radius: 25px;
             background: transparent;
-            color: #3897f0;
+            color: var(--primary-blue);
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
@@ -105,13 +112,13 @@
         }
         
         .filter-btn:hover {
-            background: #3897f0;
+            background: var(--primary-blue);
             color: #fff;
             transform: translateY(-1px);
         }
         
         .filter-checkbox input[type="checkbox"]:checked + .filter-btn {
-            background: #3897f0;
+            background: var(--primary-blue);
             color: #fff;
             box-shadow: 0 4px 15px rgba(56, 151, 240, 0.4);
         }
@@ -120,7 +127,7 @@
             padding: 14px 28px;
             border: none;
             border-radius: 8px;
-            background: linear-gradient(45deg, #3897f0, #5b51d8);
+            background: linear-gradient(45deg, var(--primary-blue), #5b51d8);
             color: #fff;
             font-size: 16px;
             font-weight: 600;
@@ -184,7 +191,6 @@
                 gap: 8px;
                 margin-bottom: 16px;
                 max-width: 100%;
-                flex-wrap: nowrap;
             }
             
             .filter-btn {
@@ -228,7 +234,6 @@
             .filter-buttons {
                 gap: 6px;
                 margin-bottom: 12px;
-                flex-wrap: nowrap;
             }
             
             .filter-btn {
@@ -305,8 +310,8 @@
         }
         
         .instagram-view-text {
-            color: #3897f0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--primary-blue);
+            font-family: var(--font-family);
             font-size: 14px;
             font-style: normal;
             font-weight: 600;
@@ -314,8 +319,8 @@
         }
         
         .instagram-caption {
-            color: #8e8e93;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-gray);
+            font-family: var(--font-family);
             font-size: 14px;
             line-height: 17px;
             margin-bottom: 0;
@@ -328,8 +333,8 @@
         }
         
         .instagram-caption-link {
-            color: #8e8e93;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-gray);
+            font-family: var(--font-family);
             font-size: 14px;
             font-style: normal;
             font-weight: normal;
@@ -362,10 +367,17 @@
         <div id="single-instagram-post"></div>
         <button id="random-btn">Random</button>
         <div class="last-updated">
-        Last updated: 2025-08-30 20:42:12
+        Last updated: 2025-08-30 21:27:46
         </div>
     </div>
     <script>
+        // Configuration
+        const CATEGORIES = ['breakfast', 'lunch', 'dinner'];
+        const USER_INFO = {
+            username: "botbanbaan",
+            caption: "A post shared by botbanbaan (@botbanbaan)"
+        };
+        
         // Post IDs loaded from all_posts_codes.txt
         const postIds = [
             "DNuo95-ZPjC",
@@ -1705,24 +1717,15 @@
             "DN-mMg4kg65"
         ];
         
-        const posts = postIds.map((id, index) => ({
-            id: id,
+        // Create posts with random categories
+        const posts = postIds.map(id => ({
+            id,
             permalink: `https://www.instagram.com/p/${id}/?utm_source=ig_embed&amp;utm_campaign=loading`,
-            category: getRandomCategory() // Assign random categories for demo
+            category: CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)]
         }));
 
-        // Since we don't have actual categorization data, we'll randomly assign categories
-        // In a real implementation, this would come from your data source
-        function getRandomCategory() {
-            const categories = ['breakfast', 'lunch', 'dinner'];
-            return categories[Math.floor(Math.random() * categories.length)];
-        }
-
-        let selectedCategories = ['breakfast', 'lunch', 'dinner']; // All checked by default
+        let selectedCategories = [...CATEGORIES]; // All checked by default
         let filteredPosts = posts;
-
-        const staticUser = "botbanbaan";
-        const staticCaption = "A post shared by botbanbaan (@botbanbaan)";
 
         function createInstagramBlock(post) {
             return `
@@ -1734,7 +1737,7 @@
                             </div>
                         </a>
                         <p class="instagram-caption">
-                            <a href="${post.permalink}" class="instagram-caption-link" target="_blank">${staticCaption}</a>
+                            <a href="${post.permalink}" class="instagram-caption-link" target="_blank">${USER_INFO.caption}</a>
                         </p>
                     </div>
                 </blockquote>
